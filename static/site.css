@@ -214,15 +214,27 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .nav__link--active { color: var(--accent); }
 
 .nav__theme-btn {
-    width: 36px; height: 36px; display: flex; align-items: center;
-    justify-content: center; border-radius: 50%;
-    transition: background 150ms;
+    width: 36px; height: 36px;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 8px;
+    color: var(--text-muted);
+    transition: color 150ms ease, background 150ms ease;
+    border: 1px solid transparent;
 }
-.nav__theme-btn:hover { background: var(--surface); }
-.nav__theme-btn .theme-icon { transition: opacity 150ms; }
+.nav__theme-btn:hover {
+    color: var(--text);
+    background: var(--surface);
+    border-color: var(--border);
+}
+.nav__theme-btn svg {
+    display: block;
+    stroke: currentColor;
+    flex-shrink: 0;
+}
 .theme--sun { display: none; }
-.theme--moon { display: inline; }
-[data-theme="light"] .theme--sun { display: inline; }
+.theme--moon { display: inline-flex; }
+[data-theme="light"] .theme--sun { display: inline-flex; }
+[data-theme="light"] .theme--moon { display: none; }
 [data-theme="light"] .theme--moon { display: none; }
 
 /* ---- HERO ---- */
@@ -547,3 +559,46 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     .nav__links { gap: 20px; }
     .nav__link { font-size: 0.8rem; }
 }
+
+/* ---- UNLAUNCHED / COMING SOON LINKS ---- */
+.nav__link--coming {
+    color: var(--text-muted) !important;
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.35;
+    transition: none;
+}
+.nav__link--coming:hover {
+    color: var(--text-muted) !important;
+}
+
+.footer__link--coming {
+    cursor: default;
+    pointer-events: none;
+    color: var(--text-muted) !important;
+    opacity: 0.35;
+}
+
+/* ---- THEME TOGGLE — SVG-based, premium feel ---- */
+.nav__theme-btn {
+    width: 36px; height: 36px;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 8px;
+    color: var(--text-muted);
+    transition: color 150ms ease, background 150ms ease;
+    border: 1px solid transparent;
+}
+.nav__theme-btn:hover {
+    color: var(--text);
+    background: var(--surface);
+    border-color: var(--border);
+}
+.nav__theme-btn svg {
+    display: block;
+    stroke: currentColor;
+    flex-shrink: 0;
+}
+.theme--sun { display: none; }
+.theme--moon { display: inline-flex; }
+[data-theme="light"] .theme--sun { display: inline-flex; }
+[data-theme="light"] .theme--moon { display: none; }
