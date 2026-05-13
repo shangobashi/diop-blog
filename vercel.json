@@ -1,7 +1,4 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
-  "output": {
-    "public": "static"
-  }
+  "trailingSlash": false
 }
