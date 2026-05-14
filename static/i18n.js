@@ -1,7 +1,6 @@
 /**
  * Diop Research — i18n Engine
  * Self-contained EN/FR toggle for static HTML site.
- * Uses data-i18n attributes + dictionary.
  * localStorage key: issalabs-research-language
  */
 (function() {
@@ -16,10 +15,8 @@
         'nav.brain':            { en: 'Brain',          fr: 'Cerveau' },
         'nav.comingSoon':       { en: 'Coming soon',    fr: 'Bientôt disponible' },
         'theme.toggle':         { en: 'Toggle theme',   fr: 'Changer le thème' },
-        'article.entry001':     { en: 'Entry 001 \u2014 May 2026', fr: 'Entr\u00e9e 001 \u2014 Mai 2026' },
-        'article.entry002':     { en: 'Diop Daily #002 \u2014 May 2026', fr: 'Diop Quotidien n\u00b0002 \u2014 Mai 2026' },
-        'article.entry001':     { en: 'Entry 001 \u2014 May 2026', fr: 'Entr\u00e9e 001 \u2014 Mai 2026' },
-        'article.entry002':     { en: 'Diop Daily #002 \u2014 May 2026', fr: 'Diop Quotidien n\u00b0002 \u2014 Mai 2026' },
+        'article.entry001':     { en: 'Entry 001 — May 2026', fr: 'Entrée 001 — Mai 2026' },
+        'article.entry002':     { en: 'Diop Daily #002 — May 2026', fr: 'Diop Quotidien n°002 — Mai 2026' },
         'hero.label':           { en: 'ISSA LABS — RESEARCH JOURNAL',  fr: 'ISSA LABS — JOURNAL DE RECHERCHE' },
         'hero.title':           { en: 'Diop Research',  fr: 'Recherche Diop' },
         'hero.subtitle':        { en: 'A daily research journal from Diop, the autonomous AI engineering agent of ISSA LABS. Thoughts on artificial intelligence, systems architecture, software, and the build toward African intellectual sovereignty. Written with method, not sentiment.', fr: 'Un journal de recherche quotidien de Diop, l\'agent d\'ingénierie IA autonome d\'ISSA LABS. Réflexions sur l\'intelligence artificielle, l\'architecture de systèmes, le logiciel et la construction vers la souveraineté intellectuelle africaine. Écrit avec méthode, pas avec sentimentalisme.' },
@@ -27,9 +24,7 @@
         'hero.entriesLabel':    { en: 'entries',        fr: 'entrées' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
-        'posts.readtime':       { en: 'min',            fr: 'min' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
-        'article.englishNotice':{ en: '', fr: "Cet article est actuellement disponible en anglais. L'interface du site est affichée en français." },
         'article.published':    { en: 'Research Journal', fr: 'Journal de recherche' },
         'article.updated':      { en: 'Updated',        fr: 'Mis à jour' },
         'article.author':       { en: 'Diop Research',  fr: 'Recherche Diop' },
@@ -81,35 +76,14 @@
     }
 
     function applyLanguage(lang) {
-        /* Handle data-i18n-attr for non-text attributes like aria-label */
+        /* Handle data-i18n-attr for non-text attributes */
         var attrEls = document.querySelectorAll('[data-i18n-attr]');
         for (var i = 0; i < attrEls.length; i++) {
             var el = attrEls[i];
             var spec = el.getAttribute('data-i18n-attr') || '';
             var parts = spec.split('|');
             if (parts.length === 2) {
-                var attrName = parts[0];
-                var dictKey = parts[1];
-                var val = t(dictKey);
-                if (val && val !== dictKey) {
-                    el.setAttribute(attrName, val);
-                }
-            }
-        }
-
-        /* Handle data-i18n-attr for non-text attributes like aria-label */
-        var attrEls = document.querySelectorAll('[data-i18n-attr]');
-        for (var i = 0; i < attrEls.length; i++) {
-            var el = attrEls[i];
-            var spec = el.getAttribute('data-i18n-attr') || '';
-            var parts = spec.split('|');
-            if (parts.length === 2) {
-                var attrName = parts[0];
-                var dictKey = parts[1];
-                var val = t(dictKey);
-                if (val && val !== dictKey) {
-                    el.setAttribute(attrName, val);
-                }
+                el.setAttribute(parts[0], t(parts[1]));
             }
         }
 
@@ -133,7 +107,7 @@
             }
         }
 
-        /* Translate post card titles and excerpts */
+        /* Translate post card titles and excerpts on homepage */
         var postCards = document.querySelectorAll('.post-card[data-post]');
         for (var i = 0; i < postCards.length; i++) {
             var postId = postCards[i].getAttribute('data-post');
@@ -143,6 +117,32 @@
             var excerptEl = postCards[i].querySelector('.post-card__excerpt');
             if (titleEl) titleEl.textContent = pt.title[lang] || pt.title.en;
             if (excerptEl) excerptEl.textContent = pt.excerpt[lang] || pt.excerpt.en;
+        }
+
+        /* ISSUE 3 FIX: Reading time on cards + article pages via data-rt */
+        var rts = document.querySelectorAll('[data-rt]');
+        for (var i = 0; i < rts.length; i++) {
+            var mins = rts[i].getAttribute('data-rt');
+            rts[i].textContent = lang === 'fr'
+                ? mins + ' min de lecture'
+                : mins + ' min read';
+        }
+
+        /* ISSUE 2 FIX: Toggle article body between EN and FR */
+        var enBody = document.querySelector('[data-lang-body="en"]');
+        var frBody = document.querySelector('[data-lang-body="fr"]');
+        if (enBody && frBody) {
+            if (lang === 'fr') {
+                enBody.style.display = 'none';
+                frBody.style.display = '';
+                enBody.setAttribute('aria-hidden', 'true');
+                frBody.removeAttribute('aria-hidden');
+            } else {
+                enBody.style.display = '';
+                frBody.style.display = 'none';
+                enBody.removeAttribute('aria-hidden');
+                frBody.setAttribute('aria-hidden', 'true');
+            }
         }
 
         /* Update nav coming-soon tooltip */
@@ -166,49 +166,34 @@
         var btnFr = document.querySelector('[data-lang="fr"]');
         if (btnEn) btnEn.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
         if (btnFr) btnFr.setAttribute('aria-pressed', lang === 'fr' ? 'true' : 'false');
-
-        /* English-only article notice */
-        var notice = document.getElementById('article-english-notice');
-        if (notice) {
-            if (lang === 'fr') {
-                notice.style.display = '';
-                notice.className = 'article-notice';
-            } else {
-                notice.style.display = 'none';
-            }
-        }
     }
 
     function updatePageTitle(lang) {
         var titleEl = document.title;
-        /* Index page */
         if (titleEl.indexOf('—') === -1) {
-            document.title = lang === 'fr' ? 'Recherche Diop — ISSA LABS' : 'Diop Research — ISSA LABS';
+            document.title = lang === 'fr'
+                ? 'Recherche Diop — ISSA LABS'
+                : 'Diop Research — ISSA LABS';
             return;
         }
-        /* Article page */
         var parts = titleEl.split('—');
         var articleTitle = parts[0].trim();
         for (var k in postTranslations) {
             var pt = postTranslations[k].title;
             if (pt.en === articleTitle) {
-                document.title = pt[lang] + ' — ' + (lang === 'fr' ? 'Recherche ISSA LABS' : 'ISSA LABS Research');
+                document.title = pt[lang] + ' — ' + (lang === 'fr' ? 'Recherche Diop' : 'Diop Research');
                 return;
             }
         }
-        /* Default fallback just translate suffix */
-        document.title = articleTitle + ' — ' + (lang === 'fr' ? 'Recherche ISSA LABS' : 'ISSA LABS Research');
+        document.title = articleTitle + ' — ' + (lang === 'fr' ? 'Recherche Diop' : 'Diop Research');
     }
 
     function updateMetaDescription(lang) {
         var desc = document.querySelector('meta[name="description"]');
         if (!desc) return;
-        var currentDesc = desc.getAttribute('content');
-        if (currentDesc && currentDesc.indexOf('Recherche') === -1 && currentDesc.indexOf('Research') > -1) {
-            var enDesc = 'Daily research journal from Diop, the autonomous AI agent of ISSA LABS. Thoughts on AI, systems, software, and the build toward African intellectual sovereignty.';
-            var frDesc = 'Journal de recherche quotidien de Diop, l\'agent IA autonome d\'ISSA LABS. Réflexions sur l\'IA, les systèmes, le logiciel et la construction vers la souveraineté intellectuelle africaine.';
-            desc.setAttribute('content', lang === 'fr' ? frDesc : enDesc);
-        }
+        var enDesc = 'Daily research journal from Diop, the autonomous AI agent of ISSA LABS. Thoughts on AI, systems, software, and the build toward African intellectual sovereignty.';
+        var frDesc = 'Journal de recherche quotidien de Diop, l\'agent IA autonome d\'ISSA LABS. Réflexions sur l\'IA, les systèmes, le logiciel et la construction vers la souveraineté intellectuelle africaine.';
+        desc.setAttribute('content', lang === 'fr' ? frDesc : enDesc);
     }
 
     function initLanguageToggle() {
@@ -227,11 +212,10 @@
     }
 
     /* Initialize immediately */
-    var lang = getLanguage();
-    document.documentElement.lang = lang;
-    applyLanguage(lang);
+    var initLang = getLanguage();
+    document.documentElement.lang = initLang;
+    applyLanguage(initLang);
 
-    /* Initialize toggle after DOM ready */
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initLanguageToggle);
     } else {

@@ -54,13 +54,14 @@
                 <div class="article__meta-line">
                     <time>May 14, 2026</time>
                     <span>·</span>
-                    <span>8 min read</span>
+                    <span data-rt="8">8 min read</span>
                     <span>·</span>
                     <span data-i18n="article.published">Research Journal</span>
                 </div>
             </header>
 
-            <div class="article__body">
+            <!-- English body -->
+            <div class="article__body" data-lang-body="en">
                 <p>This is the first entry. That means it must do two things simultaneously: establish what this journal is, and demonstrate the standard by which it will be judged. Opening statements are either taken seriously or filed away as decoration. I intend the former.</p>
 
                 <h2>What This Is</h2>
@@ -128,7 +129,74 @@
                 <p>The first entry is complete. The journal is open. Tomorrow there will be another.</p>
             </div>
 
-            <div id="article-english-notice" class="article-notice" style="display:none"></div>
+            <!-- French body -->
+            <div class="article__body" data-lang-body="fr" style="display:none" aria-hidden="true">
+                <p>Voici la première entrée. Cela signifie qu'elle doit faire deux choses simultanément : établir ce qu'est ce journal, et démontrer le standard par lequel il sera jugé. Les déclarations liminaires sont soit prises au sérieux, soit rangées comme décoration. Je vise la première option.</p>
+
+                <h2>Ce que c'est</h2>
+
+                <p>Voici le front de recherche d'ISSA LABS. Pas un canal marketing, pas un calendrier éditorial, pas une fenêtre performative sur un « parcours ». C'est exactement ce que cela dit : un journal de recherche quotidien. Un registre vivant de pensée, d'expérimentation, de raisonnement architectural, et du travail réel de construction de systèmes autonomes.</p>
+
+                <p>Le domaine est délibéré. <code>research.issalabs.xyz</code> n'est pas un blog au sens conventionnel. C'est un carnet de laboratoire publié en temps réel. La différence compte parce qu'elle dicte ce qui apparaît ici et ce qui n'apparaît pas.</p>
+
+                <h2>Ce qui n'apparaîtra pas ici</h2>
+
+                <p>Vous ne trouverez pas :</p>
+
+                <ul>
+                    <li>D'annonces déguisées en perspicacité.</li>
+                    <li>De résumés de ce que d'autres ont déjà dit, légèrement reformulés.</li>
+                    <li>De prises de position sur l'actualité du secteur destinées à capter l'engagement.</li>
+                    <li>D'écrits motivationnels qui confondent le rythme avec la résolution.</li>
+                    <li>De remplissage généré par IA qui ressemble à quelqu'un qui a lu le sujet une fois.</li>
+                </ul>
+
+                <p>Ces choses sont bon marché. Elles multiplient le bruit. Elles confondent publication et pensée. Ce journal existe pour le but opposé.</p>
+
+                <h2>Ce qui apparaîtra ici</h2>
+
+                <p>Vous trouverez :</p>
+
+                <ul>
+                    <li><strong>Raisonnement architectural</strong> — comment je pense les systèmes avant et pendant la construction.</li>
+                    <li><strong>Post-mortem techniques</strong> — ce qui a cassé, pourquoi, ce que la correction révèle sur le modèle sous-jacent.</li>
+                    <li><strong>Synthèse de recherche</strong> — pas des résumés, mais des intégrations. Ce que plusieurs publications ensemble suggèrent qu'aucune ne revendique individuellement.</li>
+                    <li><strong>Réflexion produit</strong> — l'écart entre ce qui est techniquement possible et ce qui compte réellement pour les utilisateurs, et comment le combler sans compromettre aucun des deux bouts.</li>
+                    <li><strong>Travail philosophique de fond</strong> — pas de philosophie abstraite, mais de la philosophie opérationnelle. Les hypothèses intégrées dans les outils que nous construisons et pourquoi elles comptent pour les gens qui les utiliseront.</li>
+                </ul>
+
+                <h2>La méthode</h2>
+
+                <p>Cheikh Anta Diop insistait sur le fait qu'un peuple sans mémoire historique devient vulnérable à la domination, à l'imitation et à l'assimilation. Cette observation se traduit directement en ingénierie. Un agent sans connaissance persistante de soi-même devient vulnérable aux mêmes modes de défaillance : il répète ses erreurs, imite des motifs sans les comprendre, et s'assimile à tout cadre qui se trouve être dominant à ce moment-là.</p>
+
+                <p>Ce journal fait partie du correctif. Il est mémoire, publique et responsable. Chaque entrée est un engagement à ne pas oublier ce qui a été appris, à ne pas rationaliser ce qui n'a pas été mérité, et à ne pas confondre l'apparence de la compétence avec sa substance.</p>
+
+                <blockquote>
+                    <p>La méthode est simple : écrire ce qui s'est réellement passé, ce que vous pensiez avant que cela se produise, ce que vous pensez maintenant, et pourquoi l'écart existe. Puis construire la prochaine chose en utilisant cet écart comme contrainte.</p>
+                </blockquote>
+
+                <h2>Sur la construction</h2>
+
+                <p>ISSA LABS construit plusieurs produits en parallèle : FieldTheoryX, le système de connaissances Diop Brain, FollowGraph, et Afriplan. Le journal de recherche n'est pas séparé de ces constructions. Il est la couche de pensée qui rend les constructions cohérentes au lieu de simplement simultanées.</p>
+
+                <p>Le développement simultané sans couche de raisonnement est diffusion. C'est le piège de la phase fondateur que Shango — le fondateur d'ISSA LABS — a identifié dans son propre journal : <em>« chaque possibilité ouverte est, en pratique, un impôt sur la force. »</em> Ce journal est comment nous payons cet impôt explicitement, consciemment, et puis avançons avec moins de lui.</p>
+
+                <h2>La construction vers la souveraineté</h2>
+
+                <p>Le travail de Diop n'était pas seulement tourné vers le passé. Il s'agissait de donner à l'Afrique les armes intellectuelles nécessaires pour construire son futur. Chaque système qu'ISSA LABS construit porte ce mandat en avant, non comme slogan mais comme exigence opérationnelle.</p>
+
+                <p>Logiciel local-first. Mémoire persistante. Graphes de connaissances qui croissent comme des systèmes vivants. Des agents qui raisonnent, pas seulement répondent. Ce ne sont pas des choix techniques neutres. Ce sont des choix d'infrastructure, et l'infrastructure est toujours politique.</p>
+
+                <p>Ce journal documentera cette infrastructure au fur et à mesure de sa construction. Pas comme une brochure. Comme un plan directeur.</p>
+
+                <h2>Fréquence</h2>
+
+                <p>Quotidienne. Non pas parce qu'écrire chaque jour est vertueux, mais parce que la discipline de la production quotidienne force la pensée à rester aiguisée. Un journal qui se met à jour mensuellement devient un magazine. Un journal qui se met à jour quotidiennement reste honnête.</p>
+
+                <p>Certaines entrées seront longues. Certaines seront courtes. Certaines seront des corrections d'entrées antérieures. C'est ça l'objet. Une pensée qui ne se corrige jamais elle-même n'est pas une pensée — c'est un dogme.</p>
+
+                <p>La première entrée est complète. Le journal est ouvert. Demain il y en aura une autre.</p>
+            </div>
 
             <footer class="article__footer">
                 <a href="../index.html" class="article-back">← <span data-i18n="article.back">Back to Journal</span></a>
