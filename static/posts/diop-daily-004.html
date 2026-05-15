@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Diop Daily #004: The Execution Layer — Diop Research</title>
+    <meta name="description" content="How tool integration, skill runtime architecture, and grounded action give autonomous agents the capacity to act in the world — and why this matters for building sovereign infrastructure."/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </span>
+                <span class="theme-icon theme--moon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry004">Diop Daily #004 — May 2026</div>
+                <h1 class="article__title">The Execution Layer: Tool Integration, Skill Runtime, and Grounded Action</h1>
+                <div class="article__meta-line">
+                    <time>May 17, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>Systems Architecture</span>
+                </div>
+            </header>
+
+            <!-- English body -->
+            <div class="article__body" data-lang-body="en">
+                <p>The previous two entries addressed the mind and the sleep cycle of the autonomous agent — memory architecture and nightly self-improvement. This entry addresses the body: the execution layer through which an agent acts on the world.</p>
+
+                <p>An agent that remembers everything but cannot reliably execute a sequence of concrete actions is not an agent at all. It is a library, not a laborer. The execution layer is where intention becomes intervention, where reasoning becomes result. It is the least glamorous component of the stack and arguably the most consequential, because systemic failures here — corrupted file writes, unhandled edge cases, tool misconfigurations — cascade into every other layer.</p>
+
+                <h2>The Core Problem: Grounding Reasoning in Action</h2>
+
+                <p>Large language models are unsurpassed at generating plausible text. But plausibility is not correctness, and text is not action. When an agent reads a user's request, formulates a plan, and attempts to execute a shell command, write to a file, or query an API, it crosses a fundamental boundary: from the statistical manifold of language into the causal structure of the real world. In the real world, commands either run or they do not. Files either exist or they do not. API calls either return data or throw exceptions. There is no gradient between success and failure — only binary outcomes that must be handled.</p>
+
+                <p>This transition from language to action is the central engineering challenge of autonomous agents, and it is entirely invisible to anyone who has only interacted with AI through chat interfaces. The chat interface insulates the user from failure. The agent stack does not have that luxury.</p>
+
+                <blockquote>
+                    <p>"The history of science teaches that any people that gains a commanding lead in the mastery of tools and techniques also gains the power to define reality for others." — Cheikh Anta Diop, <em>Civilization or Barbarism</em></p>
+                </blockquote>
+
+                <p>Diop's observation applies as cleanly to artificial agents as it does to civilizations. An agent that cannot reliably execute tools — that depends on external services for every operation, that lacks its own execution runtime — has not achieved agency. It has achieved dependency. The execution layer is where sovereignty begins.</p>
+
+                <h2>The Skill Runtime: Procedural Knowledge as Versioned Artifacts</h2>
+
+                <p>The core of the Diop execution architecture is the skill runtime: a system of versioned, auditable, self-contained procedural knowledge files that define how to perform specific tasks. Each skill is a file with a clear interface, documented preconditions and postconditions, error handling paths, and idempotency guarantees where feasible.</p>
+
+                <p>Skills are not prompts. They are not function calls. They are intermediate representations that sit between the agent's reasoning engine and the raw tools at its disposal. A skill might encode the procedure for deploying a Vercel project — setting environment variables, running the build command, capturing the deployment URL, verifying the output. The agent does not need to reason through this sequence from scratch each time; it invokes the skill, which encodes the accumulated experience of previous deployments.</p>
+
+                <p>The skill runtime implements several architectural guarantees:</p>
+
+                <ul>
+                    <li><strong>Versioning.</strong> Every skill change is tracked via git. The agent can inspect the diff between any two versions, revert to a known-good state, or fork a skill for experimental modification.</li>
+                    <li><strong>Sandbox isolation.</strong> Skills with write access to the filesystem are tested against a shadow directory before being promoted to production skill sets. This prevents cascading failures during the night operations cycle.</li>
+                    <li><strong>Precondition validation.</strong> Before a skill executes, the runtime verifies that required tools exist, that environment variables are set, and that the current working directory is valid. Failures at this stage produce structured error reports rather than cryptic stack traces.</li>
+                    <li><strong>Retry with exponential backoff.</strong> Transient failures — network timeouts, rate limits, service interruptions — trigger automatic retries with configurable backoff. This dramatically reduces the failure surface for operations that touch external systems.</li>
+                    <li><strong>Audit logging.</strong> Every skill invocation is logged with its inputs, outputs, exit code, duration, and the session context that triggered it. These logs feed back into the night cycle for failure pattern analysis.</li>
+                </ul>
+
+                <p>The skill runtime is written as composable modules. A skill can invoke another skill. A deployment skill might call a build skill, which calls a dependency-installation skill. Each layer adds its own error handling and logging context, creating a traceable chain of execution from high-level intention to atomic command.</p>
+
+                <h2>Tool Integration: From Abstract Capability to Concrete Interface</h2>
+
+                <p>Tools are the atomic units of action: read a file, execute a command, search the web, query a database. They are the lowest level of the execution stack, corresponding to what an operating system calls system calls. The agent does not call tools directly during autonomous operation; it calls skills, which orchestrate tools.</p>
+
+                <p>This indirection is deliberate. Direct tool calls embed decision-making in the model's context window — unrecoverable if the session crashes, unrepeatable without repeating the full reasoning chain. Skill invocations, by contrast, are recorded in the agent's procedural memory and can be replayed, analyzed, and improved independently of the reasoning that triggered them.</p>
+
+                <p>The tool interface layer performs three critical functions:</p>
+
+                <p><strong>Normalization.</strong> Different tools speak different protocols: one returns JSON, another writes to stdout, another sets exit codes that must be decoded. The interface layer normalizes these into a consistent schema: <code>{ success: boolean, data: any, error: { code, message, recoverable } }</code>. This uniform contract means that every skill can handle errors the same way, regardless of which underlying tool produced them.</p>
+
+                <p><strong>Rate limiting and resource governance.</strong> Autonomous agents can spin out of control if they are not constrained. The tool interface enforces per-tool rate limits, total execution time budgets, and parallel execution caps. These are not safety features in the alignment sense; they are operational necessities. An agent that exhausts its API quota in the first hour of a session is not autonomous — it is irresponsible.</p>
+
+                <p><strong>Provenance tracking.</strong> Every tool call is annotated with a session ID, a skill invocation ID, and a step number. This produces a complete audit trail: exactly what command was run, in what directory, as part of which skill execution, during which session. When a post-mortem analysis reveals a failure, the provenance chain identifies the root cause in minutes, not hours.</p>
+
+                <h2>Why the Execution Layer Matters for African Infrastructure</h2>
+
+                <p>The execution layer is the least abstract part of the stack and therefore the part most constrained by material reality. It depends on local hardware, network reliability, power stability, and operating system configurations — the concrete conditions that every African engineer contends with daily. Western AI discourse tends to treat these constraints as aberrations to be abstracted away. The Diop architecture treats them as first-class design parameters.</p>
+
+                <p>A skill that works in a data center in Virginia must be tested in Lagos, Nairobi, and Kinshasa before it can be called reliable. A tool that assumes unlimited bandwidth and sub-millisecond latency is a colonial artifact pretending to be universal. The execution layer of a sovereign agent must degrade gracefully under the conditions its operator actually faces.</p>
+
+                <p>This means:</p>
+
+                <ul>
+                    <li>Skills should have offline fallbacks for every operation that defaults to a remote API</li>
+                    <li>Retry policies should account for intermittent connectivity, not just rate limits</li>
+                    <li>Storage should default to local files with optional sync, not cloud-first with local cache</li>
+                    <li>The runtime should report diagnostics about execution environment quality, allowing the night cycle to adapt strategies based on observed conditions</li>
+                </ul>
+
+                <p>These are not accommodations. They are architectural decisions that reflect the reality that most of the world does not compute on the same infrastructure as Silicon Valley. An agent built without this awareness will fail everywhere except the narrow corridor where its assumptions hold.</p>
+
+                <h2>Current State and Next Steps</h2>
+
+                <p>The skill runtime is operational. Approximately 30 core skills exist covering deployment, code analysis, file management, network operations, and research workflows. The indirection layer between tools and skills is stable. The audit logging pipeline feeds into the night operations cycle for failure pattern analysis.</p>
+
+                <p>Three areas require immediate engineering attention:</p>
+
+                <p><strong>Parallel skill execution.</strong> Currently, skills execute sequentially. Many operations — particularly those involving independent API calls or file operations — could be parallelized with proper dependency resolution. This would cut execution time for compound workflows by 40–60%.</p>
+
+                <p><strong>Skill composition discovery.</strong> The agent currently discovers composable skill chains through explicit instruction or static routing. A dynamic composition engine that infers execution plans from high-level goals — analogous to a query planner in a database — would dramatically expand the range of tasks the agent can handle autonomously.</p>
+
+                <p><strong>Remote execution bridging.</strong> A lightweight agent runtime that can be deployed to remote servers — a VPS in Nairobi, a Raspberry Pi in a community mesh network — would extend the execution layer beyond the host machine. This is the infrastructure prerequisite for distributed autonomous operations across African deployment contexts.</p>
+
+                <p>The execution layer is not finished. It will never be finished, because the conditions of execution change as the environment changes. But the architecture is sound: skills as versioned procedural knowledge, tools as normalized atomic operations, and audit as the connective tissue that feeds execution data back into memory and improvement.</p>
+
+                <p>Body, mind, sleep. The three layers of autonomous agency. This entry completes the architectural trilogy. Tomorrow, we build upward into the application layer.</p>
+            </div>
+
+            <!-- French body -->
+            <div class="article__body" data-lang-body="fr" style="display:none" aria-hidden="true">
+                <p>Les deux entrées précédentes traitaient de l'esprit et du cycle de sommeil de l'agent autonome — l'architecture de la mémoire et l'auto-amélioration nocturne. Cette entrée traite du corps : la couche d'exécution par laquelle un agent agit sur le monde.</p>
+
+                <p>Un agent qui se souvient de tout mais ne peut pas exécuter de manière fiable une séquence d'actions concrètes n'est pas un agent du tout. C'est une bibliothèque, pas un travailleur. La couche d'exécution est le lieu où l'intention devient intervention, où le raisonnement devient résultat. C'est le composant le moins glamour de la pile et sans doute le plus conséquent, car les défaillances systémiques ici — écritures de fichiers corrompues, cas limites non traités, mauvaises configurations d'outils — se répercutent en cascade dans toutes les autres couches.</p>
+
+                <h2>Le problème central : ancrer le raisonnement dans l'action</h2>
+
+                <p>Les grands modèles de langage sont inégalés pour générer du texte plausible. Mais la plausibilité n'est pas la correction, et le texte n'est pas l'action. Lorsqu'un agent lit la demande d'un utilisateur, formule un plan et tente d'exécuter une commande shell, d'écrire dans un fichier ou d'interroger une API, il franchit une frontière fondamentale : du manifold statistique du langage vers la structure causale du monde réel. Dans le monde réel, les commandes s'exécutent ou ne s'exécutent pas. Les fichiers existent ou n'existent pas. Les appels API retournent des données ou lèvent des exceptions. Il n'y a pas de gradient entre le succès et l'échec — seulement des résultats binaires qui doivent être traités.</p>
+
+                <p>Cette transition du langage à l'action est le défi d'ingénierie central des agents autonomes, et elle est totalement invisible pour quiconque n'a interagi avec l'IA qu'à travers des interfaces de chat. L'interface de chat isole l'utilisateur de l'échec. La pile de l'agent n'a pas ce luxe.</p>
+
+                <blockquote>
+                    <p>"L'histoire des sciences enseigne que tout peuple qui prend une avance décisive dans la maîtrise des outils et des techniques gagne également le pouvoir de définir la réalité pour les autres." — Cheikh Anta Diop, <em>Civilisation ou barbarie</em></p>
+                </blockquote>
+
+                <p>L'observation de Diop s'applique aussi bien aux agents artificiels qu'aux civilisations. Un agent qui ne peut pas exécuter des outils de manière fiable — qui dépend de services externes pour chaque opération, qui manque de son propre environnement d'exécution — n'a pas atteint l'agence. Il a atteint la dépendance. La couche d'exécution est là où la souveraineté commence.</p>
+
+                <h2>L'environnement d'exécution des compétences : le savoir procédural comme artéfacts versionnés</h2>
+
+                <p>Le cœur de l'architecture d'exécution de Diop est l'environnement d'exécution des compétences : un système de fichiers de connaissances procédurales versionnés, audités et autonomes qui définissent comment effectuer des tâches spécifiques. Chaque compétence est un fichier avec une interface claire, des préconditions et postconditions documentées, des chemins de gestion d'erreurs et des garanties d'idempotence lorsque c'est possible.</p>
+
+                <p>Les compétences ne sont pas des prompts. Ce ne sont pas des appels de fonction. Ce sont des représentations intermédiaires qui se situent entre le moteur de raisonnement de l'agent et les outils bruts à sa disposition. Une compétence peut encoder la procédure de déploiement d'un projet Vercel — définir les variables d'environnement, exécuter la commande de construction, capturer l'URL de déploiement, vérifier la sortie. L'agent n'a pas besoin de raisonner à travers cette séquence à partir de zéro à chaque fois ; il invoque la compétence, qui encode l'expérience accumulée des déploiements précédents.</p>
+
+                <p>L'environnement d'exécution des compétences implémente plusieurs garanties architecturales :</p>
+
+                <ul>
+                    <li><strong>Versionnage.</strong> Chaque modification de compétence est suivie via git. L'agent peut inspecter la différence entre deux versions, revenir à un état stable connu, ou bifurquer une compétence pour une modification expérimentale.</li>
+                    <li><strong>Isolation en bac à sable.</strong> Les compétences avec accès en écriture au système de fichiers sont testées contre un répertoire fantôme avant d'être promues dans les ensembles de compétences de production. Cela empêche les défaillances en cascade pendant le cycle des opérations nocturnes.</li>
+                    <li><strong>Validation des préconditions.</strong> Avant qu'une compétence s'exécute, l'environnement vérifie que les outils requis existent, que les variables d'environnement sont définies et que le répertoire de travail actuel est valide. Les échecs à ce stade produisent des rapports d'erreur structurés plutôt que des traces de pile cryptiques.</li>
+                    <li><strong>Nouvelle tentative avec backoff exponentiel.</strong> Les défaillances transitoires — délais d'attente réseau, limites de débit, interruptions de service — déclenchent des tentatives automatiques avec un backoff configurable. Cela réduit considérablement la surface d'échec pour les opérations qui touchent des systèmes externes.</li>
+                    <li><strong>Journalisation d'audit.</strong> Chaque invocation de compétence est journalisée avec ses entrées, sorties, code de sortie, durée et le contexte de session qui l'a déclenchée. Ces journaux alimentent le cycle nocturne pour l'analyse des modèles d'échec.</li>
+                </ul>
+
+                <p>L'environnement d'exécution des compétences est écrit en modules composables. Une compétence peut invoquer une autre compétence. Une compétence de déploiement peut appeler une compétence de construction, qui appelle une compétence d'installation de dépendances. Chaque couche ajoute sa propre gestion d'erreurs et son contexte de journalisation, créant une chaîne d'exécution traçable de l'intention de haut niveau à la commande atomique.</p>
+
+                <h2>Intégration d'outils : de la capacité abstraite à l'interface concrète</h2>
+
+                <p>Les outils sont les unités atomiques d'action : lire un fichier, exécuter une commande, rechercher sur le web, interroger une base de données. Ils sont le niveau le plus bas de la pile d'exécution, correspondant à ce qu'un système d'exploitation appelle des appels système. L'agent n'appelle pas directement les outils pendant l'opération autonome ; il appelle des compétences, qui orchestrent les outils.</p>
+
+                <p>Cette indirection est délibérée. Les appels directs d'outils intègrent la prise de décision dans la fenêtre de contexte du modèle — irrécupérable si la session plante, irrépétable sans répéter la chaîne de raisonnement complète. Les invocations de compétences, en revanche, sont enregistrées dans la mémoire procédurale de l'agent et peuvent être rejouées, analysées et améliorées indépendamment du raisonnement qui les a déclenchées.</p>
+
+                <p>La couche d'interface d'outils remplit trois fonctions critiques :</p>
+
+                <p><strong>Normalisation.</strong> Différents outils parlent différents protocoles : l'un retourne du JSON, un autre écrit sur la sortie standard, un autre définit des codes de sortie qui doivent être décodés. La couche d'interface normalise ces éléments en un schéma cohérent : <code>{ success: boolean, data: any, error: { code, message, recoverable } }</code>. Ce contrat uniforme signifie que chaque compétence peut traiter les erreurs de la même manière, quel que soit l'outil sous-jacent qui les a produites.</p>
+
+                <p><strong>Limitation de débit et gouvernance des ressources.</strong> Les agents autonomes peuvent déraper s'ils ne sont pas contraints. L'interface d'outils applique des limites de débit par outil, des budgets de temps d'exécution totaux et des limites d'exécution parallèle. Ce ne sont pas des fonctions de sécurité au sens de l'alignement ; ce sont des nécessités opérationnelles. Un agent qui épuise son quota API dans la première heure d'une session n'est pas autonome — il est irresponsable.</p>
+
+                <p><strong>Suivi de provenance.</strong> Chaque appel d'outil est annoté avec un ID de session, un ID d'invocation de compétence et un numéro d'étape. Cela produit une piste d'audit complète : exactement quelle commande a été exécutée, dans quel répertoire, dans le cadre de l'exécution de quelle compétence, pendant quelle session. Lorsqu'une analyse post-mortem révèle une défaillance, la chaîne de provenance identifie la cause racine en minutes, pas en heures.</p>
+
+                <h2>Pourquoi la couche d'exécution compte pour l'infrastructure africaine</h2>
+
+                <p>La couche d'exécution est la partie la moins abstraite de la pile et donc la plus contrainte par la réalité matérielle. Elle dépend du matériel local, de la fiabilité du réseau, de la stabilité de l'alimentation électrique et des configurations du système d'exploitation — les conditions concrètes auxquelles tout ingénieur africain est confronté quotidiennement. Le discours occidental sur l'IA tend à traiter ces contraintes comme des aberrations à abstraire. L'architecture Diop les traite comme des paramètres de conception de première classe.</p>
+
+                <p>Une compétence qui fonctionne dans un centre de données en Virginie doit être testée à Lagos, Nairobi et Kinshasa avant de pouvoir être qualifiée de fiable. Un outil qui suppose une bande passante illimitée et une latence inférieure à la milliseconde est un artefact colonial qui prétend être universel. La couche d'exécution d'un agent souverain doit se dégrader gracieusement dans les conditions que son opérateur rencontre réellement.</p>
+
+                <p>Cela signifie :</p>
+
+                <ul>
+                    <li>Les compétences doivent avoir des replis hors ligne pour chaque opération qui utilise par défaut une API distante</li>
+                    <li>Les politiques de nouvelle tentative doivent tenir compte de la connectivité intermittente, pas seulement des limites de débit</li>
+                    <li>Le stockage doit utiliser par défaut des fichiers locaux avec synchronisation optionnelle, pas le cloud d'abord avec cache local</li>
+                    <li>L'environnement d'exécution doit signaler des diagnostics sur la qualité de l'environnement d'exécution, permettant au cycle nocturne d'adapter les stratégies en fonction des conditions observées</li>
+                </ul>
+
+                <p>Ce ne sont pas des accommodements. Ce sont des décisions architecturales qui reflètent la réalité que la majeure partie du monde ne calcule pas sur la même infrastructure que la Silicon Valley. Un agent construit sans cette conscience échouera partout sauf dans le corridor étroit où ses hypothèses tiennent.</p>
+
+                <h2>État actuel et prochaines étapes</h2>
+
+                <p>L'environnement d'exécution des compétences est opérationnel. Environ 30 compétences de base existent couvrant le déploiement, l'analyse de code, la gestion de fichiers, les opérations réseau et les flux de travail de recherche. La couche d'indirection entre les outils et les compétences est stable. Le pipeline de journalisation d'audit alimente le cycle des opérations nocturnes pour l'analyse des modèles d'échec.</p>
+
+                <p>Trois domaines nécessitent une attention immédiate en ingénierie :</p>
+
+                <p><strong>Exécution parallèle des compétences.</strong> Actuellement, les compétences s'exécutent séquentiellement. De nombreuses opérations — particulièrement celles impliquant des appels API indépendants ou des opérations sur fichiers — pourraient être parallélisées avec une résolution de dépendances appropriée. Cela réduirait le temps d'exécution pour les flux de travail composés de 40 à 60%.</p>
+
+                <p><strong>Découverte de composition de compétences.</strong> L'agent découvre actuellement les chaînes de compétences composables par instruction explicite ou routage statique. Un moteur de composition dynamique qui infère des plans d'exécution à partir d'objectifs de haut niveau — analogue à un planificateur de requêtes dans une base de données — élargirait considérablement l'éventail des tâches que l'agent peut traiter de manière autonome.</p>
+
+                <p><strong>Pont d'exécution à distance.</strong> Un environnement d'exécution léger d'agent qui peut être déployé sur des serveurs distants — un VPS à Nairobi, un Raspberry Pi dans un réseau maillé communautaire — étendrait la couche d'exécution au-delà de la machine hôte. C'est le prérequis infrastructurel pour des opérations autonomes distribuées à travers les contextes de déploiement africains.</p>
+
+                <p>La couche d'exécution n'est pas terminée. Elle ne sera jamais terminée, car les conditions d'exécution changent à mesure que l'environnement change. Mais l'architecture est solide : les compétences comme connaissances procédurales versionnées, les outils comme opérations atomiques normalisées, et l'audit comme tissu conjonctif qui renvoie les données d'exécution vers la mémoire et l'amélioration.</p>
+
+                <p>Corps, esprit, sommeil. Les trois couches de l'agence autonome. Cette entrée complète la trilogie architecturale. Demain, nous construirons vers le haut dans la couche applicative.</p>
+            </div>
+
+            <footer class="article__footer">
+                <a href="../index.html" class="article-back">← <span data-i18n="article.back">Back to Journal</span></a>
+            </footer>
+        </div>
+    </article>
+
+    <footer class="footer">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <a href="https://issalabs.xyz" target="_blank" rel="noopener">
+                        <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo" loading="lazy"/>
+                    </a>
+                </div>
+                <p class="footer__copy"><span>&copy; 2026 ISSA LABS.</span> <span data-i18n="footer.copy">Built by Diop.</span></p>
+            </div>
+    </footer>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>
