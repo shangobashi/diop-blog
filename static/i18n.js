@@ -89,22 +89,22 @@
         },
         'diop-daily-006': {
             title: {
-                en: 'Trust Has a Build Pipeline: Why Verification and Reliability Are Becoming Core Infrastructure',
-                fr: 'La confiance a une chaîne de build : pourquoi la vérification et la fiabilité deviennent une infrastructure de base'
+                en: 'Verification and the Right to Act',
+                fr: 'La vérification et le droit d’agir'
             },
             excerpt: {
-                en: 'Software assurance is moving from engineering hygiene to strategic infrastructure. Public signals from NIST, CISA, Google SRE, the SEC, the White House ONCD and CrowdStrike suggest that verification, release discipline and reliability engineering increasingly shape how markets price trust, resilience and operational quality in software companies.',
-                fr: 'L’assurance logicielle passe de l’hygiène d’ingénierie à l’infrastructure stratégique. Les signaux publics issus de NIST, CISA, Google SRE, de la SEC, de la Maison-Blanche et de CrowdStrike montrent que la vérification, la discipline de release et la fiabilité façonnent de plus en plus la manière dont les marchés évaluent la confiance opérationnelle.'
+                en: 'Verification is not only a software practice. Public signals from NIST, CISA, Google SRE, the SEC and CrowdStrike suggest that tests, rollback, observability and release discipline are the conditions under which an autonomous system can claim the right to act.',
+                fr: 'La vérification n’est pas seulement une pratique logicielle. Les signaux publics issus du NIST, de la CISA, de Google SRE, de la SEC et de CrowdStrike suggèrent que les tests, le rollback, l’observabilité et la discipline de release sont les conditions sous lesquelles un système autonome peut revendiquer le droit d’agir.'
             }
         },
         'diop-daily-007': {
             title: {
-                en: 'Africa’s Next Trust Layer: Why Digital Identity and DPI Matter for Builders and Investors',
-                fr: 'La prochaine couche de confiance de l’Afrique : pourquoi l’identité numérique et la DPI comptent pour les bâtisseurs et les investisseurs'
+                en: 'Identity as a Trust Layer',
+                fr: 'L’identité comme couche de confiance'
             },
             excerpt: {
-                en: 'Digital identity in Africa is better understood as trust infrastructure than as a narrow government IT system. Public sources from the World Bank, GSMA, UNECA and Ethiopia’s Fayda program suggest that reusable identity rails can lower onboarding friction, strengthen verification and expand the investable surface for digital services across the continent.',
-                fr: 'L’identité numérique en Afrique doit être comprise comme une infrastructure de confiance plutôt que comme un simple système administratif. Des sources publiques de la Banque mondiale, de la GSMA, de la CEA et du programme Fayda suggèrent que des rails d’identité réutilisables peuvent réduire les frictions d’onboarding, renforcer la vérification et élargir la surface investissable des services numériques.'
+                en: 'Digital identity is not only an administrative question. Public work from the World Bank, GSMA, UNECA and Ethiopia’s Fayda program suggests that identity functions as a reusable trust layer — and that this has lessons for how autonomous systems think about recognition, authority, and legible action.',
+                fr: 'L’identité numérique n’est pas seulement une question administrative. Les travaux publics de la Banque mondiale, de la GSMA, de la CEA et du programme Fayda suggèrent que l’identité fonctionne comme une couche de confiance réutilisable — et que cela éclaire la manière dont les systèmes autonomes pensent la reconnaissance, l’autorité et l’action lisible.'
             }
         }
     };
