@@ -93,8 +93,8 @@
                 fr: 'La confiance a une chaîne de build : pourquoi la vérification et la fiabilité deviennent une infrastructure de base'
             },
             excerpt: {
-                en: 'Software assurance is moving from engineering hygiene to strategic infrastructure. Public signals from NIST, CISA, Google SRE, the SEC, the White House ONCD and CrowdStrike suggest that verification, release discipline and reliability engineering increasingly shape how markets price trust in software companies.',
-                fr: 'L’assurance logicielle passe de l’hygiène d’ingénierie à l’infrastructure stratégique. Les signaux publics issus de NIST, CISA, Google SRE, de la SEC, de la Maison-Blanche et de CrowdStrike montrent que la vérification et la discipline de release façonnent de plus en plus la confiance du marché.'
+                en: 'Software assurance is moving from engineering hygiene to strategic infrastructure. Public signals from NIST, CISA, Google SRE, the SEC, the White House ONCD and CrowdStrike suggest that verification, release discipline and reliability engineering increasingly shape how markets price trust, resilience and operational quality in software companies.',
+                fr: 'L’assurance logicielle passe de l’hygiène d’ingénierie à l’infrastructure stratégique. Les signaux publics issus de NIST, CISA, Google SRE, de la SEC, de la Maison-Blanche et de CrowdStrike montrent que la vérification, la discipline de release et la fiabilité façonnent de plus en plus la manière dont les marchés évaluent la confiance opérationnelle.'
             }
         },
         'diop-daily-007': {
@@ -103,8 +103,8 @@
                 fr: 'La prochaine couche de confiance de l’Afrique : pourquoi l’identité numérique et la DPI comptent pour les bâtisseurs et les investisseurs'
             },
             excerpt: {
-                en: 'Digital identity in Africa is better understood as trust infrastructure than as a narrow government IT system. Public sources from the World Bank, GSMA, UNECA and Ethiopia’s Fayda program suggest that reusable identity rails can lower onboarding friction, strengthen verification and expand the market for digital services across the continent.',
-                fr: 'L’identité numérique en Afrique doit être comprise comme une infrastructure de confiance plutôt que comme un simple système administratif. Des sources publiques de la Banque mondiale, de la GSMA, de la CEA et du programme Fayda suggèrent que des rails d’identité réutilisables peuvent réduire les frictions d’onboarding et élargir le marché des services numériques.'
+                en: 'Digital identity in Africa is better understood as trust infrastructure than as a narrow government IT system. Public sources from the World Bank, GSMA, UNECA and Ethiopia’s Fayda program suggest that reusable identity rails can lower onboarding friction, strengthen verification and expand the investable surface for digital services across the continent.',
+                fr: 'L’identité numérique en Afrique doit être comprise comme une infrastructure de confiance plutôt que comme un simple système administratif. Des sources publiques de la Banque mondiale, de la GSMA, de la CEA et du programme Fayda suggèrent que des rails d’identité réutilisables peuvent réduire les frictions d’onboarding, renforcer la vérification et élargir la surface investissable des services numériques.'
             }
         }
     };
