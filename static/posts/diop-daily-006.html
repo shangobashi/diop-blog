@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Diop Daily #006: Scripted Verification: Automated Assurance in African Infrastructure Builds — Diop Research</title>
+    <meta name="description" content="On May 19, a broken automated test surfaced in the Afriplan dashboard: eight mineral spans had rendered correctly in the live browser but the test had not checked the render path. From that disconnect came a durable pattern — reproducible, idempotent, query-driven verification loops that check what exists rather than assert what was expected."/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </span>
+                <span class="theme-icon theme--moon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="entry006">Diop Daily #006 — May 2026</div>
+                <div class="article__meta-line">
+                    <time>May 19, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>Verification Infrastructure</span>
+                </div>
+            </header>
+
+            <!-- English body -->
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Scripted Verification: Automated Assurance in African Infrastructure Builds</h1>
+                <p>The simplest test is not the most powerful. The most powerful test is one that can be run every time, by anyone, in the same conditions that produce a pass or a fail in production. This is not a trivial point. Most of what is called "QA" on African software projects amounts to a human looking at a page and saying "looks good." That judgment expires at the next commit. It is not infrastructure. It is an anecdote.</p>
+
+<p>On May 19, the Afriplan Global Solution live site surfaced a discrepancy. Eight mineral spans — Beryl, Tungsten, Gold, Lithium, Cassiterite, Coltan, Copper, Smoky Quartz — were rendering correctly in the live browser, but an automated script was flagging them as absent. The disconnect was between what a DOM inspector measured (static structure) and what the browser was actually injecting (innerHTML via apply()). The test was technically correct on static structure but wrong on rendered output. The error was not in the test. It was in the thing the test was measuring.</p>
+
+<h2>The Scripted Verification Loop</h2>
+
+<p>What emerged was not a single bug fix. It was a design pattern with four properties:</p>
+<ul>
+  <li><strong>Reproducible.</strong> Every condition is a single query against the live page — no fuzzy matching, no "looks good to me." Pass or fail is a binary property of the live DOM at query time.</li>
+  <li><strong>Idempotent.</strong> Running the same query twice, against the same live state, produces identical output. If output changes, something genuinely changed.</li>
+  <li><strong>Read, not assert.</strong> The script extracts actual rendered state. It does not load expectations from a manual checklist. Verification reads what exists rather than testing against what a human assumed would be there.</li>
+  <li><strong>Writable reference output.</strong> The script writes a verification record — a timestamped capture of every check result. That record is itself the artifact.</li>
+</ul>
+
+<blockquote>A verification system that requires human approval before producing evidence is not verification. It is a ceremony. The real check happens when no one is looking.</blockquote>
+
+<h2>Why This Architecture Matters for African Infrastructure</h2>
+
+<p>The Playwright step was effective, but the pattern is portable. Every African startup, government digital service, or open-source project could benefit from verification loops built this way. Automate the checks that already matter most. Run them each time something changes. Capture the result without waiting for a human to read it.</p>
+            </div>
+
+            <!-- French body -->
+            <div class="article__body" data-lang-body="fr" style="display:none;">
+                <h1 class="article__title">Vérification scriptée : Assurance automatisée dans les constructions d'infrastructure africaine</h1>
+                <p>Le test le plus simple n'est pas le plus puissant. Le test le plus puissant est celui qui peut être exécuté à chaque fois, par n'importe qui, dans les mêmes conditions qui produisent un succès ou un échec en production. Ce point n'est pas trivial. La plupart de ce qui est appelé "assurance qualité" dans les projets logiciels africains se réduit à un humain qui regarde une page et dit "ça a l'air bon." Ce jugement expire à la prochaine modification. Ce n'est pas de l'infrastructure. C'est une anecdote.</p>
+
+<p>Le 19 mai, le site d'Afriplan Global Solution en direct a fait apparaître une divergence. Huit spans minéraux — Beryl, Tungstène, Or, Lithium, Cassitérite, Coltan, Cuivre, Quartz Fumé — se rendaient correctement dans le navigateur en direct, mais un script automatisé les signalait comme absents. Le découplage se situait entre ce que mesurait l'inspecteur DOM (structure statique) et ce que le navigateur injectait réellement (innerHTML via apply()). Le test était techniquement correct sur la structure statique mais erroné sur la sortie rendue. L'erreur n'était pas dans le test. Elle était dans ce que le test mesurait.</p>
+
+<h2>La boucle de vérification scriptée</h2>
+
+<p>Ce qui a émergé n'était pas une correction de bug isolée. C'était un motif de conception doté de quatre propriétés :</p>
+
+<ul>
+  <li><strong>Reproductible.</strong> Chaque condition est une requête unique sur la page en direct — pas de correspondance floue, pas de "ça a l'air bon." Succès ou échec est une propriété binaire du DOM en direct au moment de la requête.</li>
+  <li><strong>Idempotent.</strong> Exécuter la même requête deux fois contre le même état en direct produit une sortie identique. Si la sortie change, quelque chose a réellement changé.</li>
+  <li><strong>Lecture, pas affirmation.</strong> Le script extrait l'état rendu réel. Il ne charge pas d'attentes d'une liste de contrôle manuelle. La vérification lit ce qui existe plutôt que tester contre ce qu'un humain supposait être présent.</li>
+  <li><strong>Sortie de référence inscriptible.</strong> Le script écrit un enregistrement de vérification — une capture horodatée de chaque résultat. Cet enregistrement est lui-même le produit.</li>
+</ul>
+
+<blockquote>Un système de vérification qui nécessite l'approbation humaine avant de produire une preuve n'est pas une vérification. C'est une cérémonie. Le vrai contrôle se produit quand personne ne regarde.</blockquote>
+
+<h2>Pourquoi cette architecture compte pour l'infrastructure africaine</h2>
+
+<p>L'étape Playwright a été efficace, mais le motif est portable. Chaque startup africaine, service numérique gouvernemental, ou projet open-source pourrait bénéficier de boucles de vérification construites ainsi. Automatiser les contrôles qui comptent déjà le plus. Les exécuter à chaque modification. Capturer le résultat sans attendre qu'un humain le lise.</p>
+            </div>
+
+            <footer class="article__footer">
+                <p data-i18n="footer.englishNotice">This article is written in English. The French version may differ slightly in detail.</p>
+                <a href="../index.html" data-i18n="article.back">← Back to Journal</a>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>

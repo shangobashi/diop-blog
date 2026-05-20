@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Diop Daily #007: Functional Identity: Credential Architecture Beyond the Token — Diop Research</title>
+    <meta name="description" content="The MUSAS biometric scandal in Mali was not a supply-chain error. It was architectural: a system that assumed token possession implies identity — without verifying that the token binds to anything harder to falsify than the credential itself. For identity architecture to serve African institutions, binding, provenance, and contextual authorization must be prerequisites — not optional layers."/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </span>
+                <span class="theme-icon theme--moon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="entry007">Diop Daily #007 — May 2026</div>
+                <div class="article__meta-line">
+                    <time>May 20, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>Identity Architecture</span>
+                </div>
+            </header>
+
+            <!-- English body -->
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Functional Identity: Credential Architecture Beyond the Token</h1>
+                <p>The MUSAS scandal — where a biometric identity system in Mali issued falsifiable credentials at scale — was not a "supply-chain error." It was architectural. The system conflated possession of a token with authenticated identity and did not address the binding problem: verifying that the credential derives from something harder to falsify than the credential itself.</p>
+
+<h2>Three Prerequisites Before Any Credential Can Be Trusted</h2>
+<ul>
+  <li><strong>Identity binding.</strong> The credential must be cryptographically bound to an anchor that cannot be extracted or duplicated — hardware attestation, not software state. If the binding is breakable, the credential is retrievable.</li>
+  <li><strong>Provenance chain.</strong> The credential must carry a verifiable lineage back to a trusted root resistant to both physical infiltration and state capture. Public chain verification is not optional; if one party can see the chain and another cannot, the asymmetry is the vulnerability.</li>
+  <li><strong>Contextual authorization.</strong> The credential alone must not authorize access. It must confirm a qualifying condition — document hash match, presence check, network address affiliation — not just "this was issued." Issuance is not permission.</li>
+</ul>
+
+<blockquote>Falsifiable credential issuance is the primary structural vulnerability of any identity system that has not solved the binding problem. It is not a CVE. It is design.</blockquote>
+
+<h2>The Constraint African Institutions Actually Face</h2>
+
+<p>High-income identity architecture assumes infrastructure that may not exist yet: trusted time services, hardware-backed sequencers, unsupervised CAs, synchronized clocks. Auth tools in Europe and the US silently assume these services work. For African institutions, designing from availability constraints — partial networks, intermittent power, distributed authority — is not compromise. It is correct first-principles engineering.</p>
+
+<h2>Intellectual Sovereignty Is Not Declarative. It Is Built.</h2>
+
+<p>A people without sovereign identity infrastructure cannot hold land, transact across borders, or participate in digital governance at full capacity. The ability to prove who you are — and to audit that proof without permission from any foreign authority — is a civilizational minimum. Building it at African scale, with African constraints, without dependency on foreign CA roots: this is what sovereignty produces, not merely declares.</p>
+            </div>
+
+            <!-- French body -->
+            <div class="article__body" data-lang-body="fr" style="display:none;">
+                <h1 class="article__title">Identité fonctionnelle : Architecture des credentials au-delà du token</h1>
+                <p>Le scandale MUSAS — système d'identité biométrique au Mali ayant émis des credentials falsifiables à grande échelle — n'était pas une "erreur de chaîne d'approvisionnement." C'était une défaillance architecturale. Le système a confondu possession d'un token et identité authentifiée, sans résoudre le problème de la liaison : vérifier que le credential dérive de quelque chose de plus difficile à falsifier que le credential lui-même.</p>
+
+<h2>Trois prérequis avant que tout credential ne devienne fiable</h2>
+<ul>
+  <li><strong>Liaison d'identité.</strong> Le credential doit être cryptographiquement lié à une ancre qui ne peut pas être extraite ni dupliquée — attestation matérielle, pas état logiciel. Si la liaison est cassable, le credential est récupérable.</li>
+  <li><strong>Chaîne de provenance.</strong> Le credential doit porter une lignée vérifiable remontant à une racine de confiance résistante à l'infiltration physique et à la capture d'État. La vérification publique de la chaîne n'est pas optionnelle ; si une partie peut voir et une autre pas, l'asymétrie est la vulnérabilité.</li>
+  <li><strong>Autorisation contextuelle.</strong> Le credential seul ne doit pas autoriser l'accès. Il doit confirmer une condition qualifiante — correspondance de hash de document, vérification de présence, affiliation d'adresse réseau — et pas simplement "ceci a été émis." Émission n'est pas permission.</li>
+</ul>
+
+<blockquote>L'émission de credentials falsifiables est la vulnérabilité structurelle primaire de tout système d'identité qui n'a pas résolu le problème de la liaison. Ce n'est pas un CVE. C'est une question de conception.</blockquote>
+
+<h2>La contrainte que les institutions africaines rencontrent réellement</h2>
+
+<p>L'architecture d'identité des pays à revenu élevé suppose une infrastructure qui n'existe pas encore : services d'horodatage fiables, séquenceurs supportés par du matériel, AC non supervisés, horloges synchronisées. Les outils d'authentification en Europe et aux États-Unis supposent silencieusement que ces services fonctionnent. Pour les institutions africaines, concevoir en partant de contraintes de disponibilité — réseaux partiels, courant intermittent, autorité distribuée — n'est pas un compromis. C'est une bonne ingénierie aux premiers principes.</p>
+
+<h2>La souveraineté intellectuelle ne se déclare pas. Elle se construit.</h2>
+
+<p>Un peuple sans infrastructure d'identité souveraine ne peut pas détenir de terre, faire des affaires au-delà des frontières, ni participer à la gouvernance numérique à sa capacité. La possibilité de prouver qui l'on est — et d'auditer cette preuve sans permission d'aucune autorité étrangère — est un minimum civilisationnel. La construire à l'échelle africaine, avec les contraintes africaines, sans dépendance vis-à-vis des racines CA étrangères : c'est ce que la souveraineté produit, pas seulement ce qu'elle déclare.</p>
+            </div>
+
+            <footer class="article__footer">
+                <p data-i18n="footer.englishNotice">This article is written in English. The French version may differ slightly in detail.</p>
+                <a href="../index.html" data-i18n="article.back">← Back to Journal</a>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>
