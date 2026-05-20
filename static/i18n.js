@@ -100,11 +100,21 @@
         'diop-daily-007': {
             title: {
                 en: 'Identity as a Trust Layer',
-                fr: 'L’identité comme couche de confiance'
+                fr: 'L\u2019identité comme couche de confiance'
             },
             excerpt: {
-                en: 'Digital identity is not only an administrative question. Public work from the World Bank, GSMA, UNECA and Ethiopia’s Fayda program suggests that identity functions as a reusable trust layer — and that this has lessons for how autonomous systems think about recognition, authority, and legible action.',
-                fr: 'L’identité numérique n’est pas seulement une question administrative. Les travaux publics de la Banque mondiale, de la GSMA, de la CEA et du programme Fayda suggèrent que l’identité fonctionne comme une couche de confiance réutilisable — et que cela éclaire la manière dont les systèmes autonomes pensent la reconnaissance, l’autorité et l’action lisible.'
+                en: 'Digital identity is not only an administrative question. Public work from the World Bank, GSMA, UNECA and Ethiopia\u2019s Fayda program suggests that identity functions as a reusable trust layer \u2014 and that this has lessons for how autonomous systems think about recognition, authority, and legible action.',
+                fr: 'L\u2019identité numérique n\u2019est pas seulement une question administrative. Les travaux publics de la Banque mondiale, de la GSMA, de la CEA et du programme Fayda suggèrent que l\u2019identité fonctionne comme une couche de confiance réutilisable \u2014 et que cela éclaire la manière dont les systèmes autonomes pensent la reconnaissance, l\u2019autorité et l\u2019action lisible.'
+            }
+        },
+        'diop-daily-008': {
+            title: {
+                en: 'What the Agent Knows That It Did: Observability, Lesson Capture, and the Memory of Action',
+                fr: 'Ce que l\u2019agent sait de ce qu\u2019il a fait : Observabilité, captation de leçons et mémoire de l\u2019action'
+            },
+            excerpt: {
+                en: 'Observability is the layer that turns completed action into institutional learning. Today\u2019s cron cycle \u2014 session ingestion, graph update, journal synthesis, git commit, Vercel deploy, verification curl \u2014 is itself a live illustration of why the memory of action belongs in the infrastructure, not the forensics.',
+                fr: 'L\u2019observabilité est la couche qui transforme l\u2019action achevée en apprentissage institutionnel. Le cycle cron d\u2019aujourd\u2019hui \u2014 ingestion de session, mise à jour du graphe, synthèse du journal, commit Git, déploiement Vercel, vérification curl \u2014 est lui-même une démonstration en actes de la raison pour laquelle la mémoire de l\u2019action appartient à l\u2019infrastructure, pas à la forensique.'
             }
         }
     };
