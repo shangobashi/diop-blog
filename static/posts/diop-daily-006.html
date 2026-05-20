@@ -3,15 +3,13 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Diop Daily #006: Scripted Verification: Automated Assurance in African Infrastructure Builds — Diop Research</title>
-    <meta name="description" content="On May 19, a broken automated test surfaced in the Afriplan dashboard: eight mineral spans had rendered correctly in the live browser but the test had not checked the render path. From that disconnect came a durable pattern — reproducible, idempotent, query-driven verification loops that check what exists rather than assert what was expected."/>
+    <title>Diop Daily #006: Trust Has a Build Pipeline: Why Verification and Reliability Are Becoming Core Infrastructure — Diop Research</title>
+    <meta name="description" content="Public research note on software assurance as infrastructure, grounded in NIST, CISA, SEC, Google SRE, the White House ONCD, and CrowdStrike’s public incident report."/>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
-
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
-
     <link rel="stylesheet" href="../site.css"/>
 </head>
 <body>
@@ -31,12 +29,8 @@
             <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
             <span id="lang-toggle-container"></span>
             <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
-                <span class="theme-icon theme--sun" aria-hidden="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-                </span>
-                <span class="theme-icon theme--moon" aria-hidden="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-                </span>
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
             </button>
         </div>
     </nav>
@@ -44,63 +38,96 @@
     <article class="article">
         <div class="article__inner">
             <header class="article__header">
-                <div class="article__eyebrow" data-i18n="entry006">Diop Daily #006 — May 2026</div>
+                <div class="article__eyebrow" data-i18n="article.entry006">Diop Daily #006 — May 2026</div>
                 <div class="article__meta-line">
                     <time>May 19, 2026</time>
                     <span>·</span>
-                    <span data-rt="9">9 min read</span>
+                    <span data-rt="10">10 min read</span>
                     <span>·</span>
-                    <span>Verification Infrastructure</span>
+                    <span>Software Assurance</span>
                 </div>
             </header>
 
-            <!-- English body -->
             <div class="article__body" data-lang-body="en">
-                <h1 class="article__title">Scripted Verification: Automated Assurance in African Infrastructure Builds</h1>
-                <p>The simplest test is not the most powerful. The most powerful test is one that can be run every time, by anyone, in the same conditions that produce a pass or a fail in production. This is not a trivial point. Most of what is called "QA" on African software projects amounts to a human looking at a page and saying "looks good." That judgment expires at the next commit. It is not infrastructure. It is an anecdote.</p>
+                <h1 class="article__title">Trust Has a Build Pipeline: Why Verification and Reliability Are Becoming Core Infrastructure</h1>
+                
+                <p>Serious technology investors no longer have the luxury of treating software quality as a back-office engineering matter. Public institutions are increasingly telling the same story from different angles: verification, release discipline, and reliability engineering are moving from operational hygiene to strategic infrastructure.</p>
 
-<p>On May 19, the Afriplan Global Solution live site surfaced a discrepancy. Eight mineral spans — Beryl, Tungsten, Gold, Lithium, Cassiterite, Coltan, Copper, Smoky Quartz — were rendering correctly in the live browser, but an automated script was flagging them as absent. The disconnect was between what a DOM inspector measured (static structure) and what the browser was actually injecting (innerHTML via apply()). The test was technically correct on static structure but wrong on rendered output. The error was not in the test. It was in the thing the test was measuring.</p>
+                <p>NIST’s Secure Software Development Framework (SSDF) organizes secure development into four practice groups: prepare the organization, protect the software, produce well-secured software, and respond to vulnerabilities. CISA’s secure-by-design work makes a parallel argument from the policy side: software makers should reduce entire classes of weaknesses upstream, rather than asking users to absorb avoidable risk downstream. The White House Office of the National Cyber Director has pushed the same logic further by identifying memory-safe languages as one path to eliminating recurring vulnerability classes at the source.</p>
 
-<h2>The Scripted Verification Loop</h2>
+                <h2>Why this matters to capital</h2>
 
-<p>What emerged was not a single bug fix. It was a design pattern with four properties:</p>
-<ul>
-  <li><strong>Reproducible.</strong> Every condition is a single query against the live page — no fuzzy matching, no "looks good to me." Pass or fail is a binary property of the live DOM at query time.</li>
-  <li><strong>Idempotent.</strong> Running the same query twice, against the same live state, produces identical output. If output changes, something genuinely changed.</li>
-  <li><strong>Read, not assert.</strong> The script extracts actual rendered state. It does not load expectations from a manual checklist. Verification reads what exists rather than testing against what a human assumed would be there.</li>
-  <li><strong>Writable reference output.</strong> The script writes a verification record — a timestamped capture of every check result. That record is itself the artifact.</li>
-</ul>
+                <p>The reason this now matters to investors is simple: software assurance is no longer invisible. In 2023, the U.S. Securities and Exchange Commission adopted cybersecurity disclosure rules requiring public companies to describe material cyber incidents and explain their cybersecurity risk management and governance. Reliability and security are therefore not just product concerns. They are disclosure concerns, governance concerns, and valuation concerns.</p>
 
-<blockquote>A verification system that requires human approval before producing evidence is not verification. It is a ceremony. The real check happens when no one is looking.</blockquote>
+                <p>Public incident reporting reinforces the point. In its July 2024 preliminary post-incident report, CrowdStrike stated that a Windows content configuration update triggered crashes and that a bug in content validation failed to detect the problematic update before deployment. One does not need to dramatize that event to understand the lesson: validation depth, release controls, and rollback discipline are not optional features of modern software operations. They are what prevent localized defects from becoming ecosystem-wide failures.</p>
 
-<h2>Why This Architecture Matters for African Infrastructure</h2>
+                <blockquote>Trust is not a brand attribute first. It is a systems property. It is produced by what a company can verify before release, observe after release, and reverse when release conditions fail.</blockquote>
 
-<p>The Playwright step was effective, but the pattern is portable. Every African startup, government digital service, or open-source project could benefit from verification loops built this way. Automate the checks that already matter most. Run them each time something changes. Capture the result without waiting for a human to read it.</p>
+                <h2>Reliability is an operating model</h2>
+
+                <p>Google’s Site Reliability Engineering framework made this explicit long ago through service-level objectives and error budgets. The underlying idea remains powerful: release speed must be balanced against reliability risk through an explicit operating discipline, not managerial optimism. The strongest companies treat quality gates, observability, staged rollout, and incident response as compounding capabilities.</p>
+
+                <ul>
+                    <li><strong>Verification</strong> lowers the probability that defects escape into production.</li>
+                    <li><strong>Observability</strong> shortens the time between defect introduction and defect detection.</li>
+                    <li><strong>Rollback and response discipline</strong> reduce the blast radius when failure still occurs.</li>
+                    <li><strong>Secure-by-design choices</strong> remove some classes of failure before testing even begins.</li>
+                </ul>
+
+                <p>For builders, this means reliability cannot be bolted on at the end of the pipeline. For investors, it means assurance tooling, secure deployment systems, testing infrastructure, observability layers, and memory-safety migration work should increasingly be understood as infrastructure plays rather than peripheral tools.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://csrc.nist.gov/pubs/sp/800/218/final" target="_blank" rel="noopener">NIST Secure Software Development Framework (SP 800-218)</a></li>
+                    <li><a href="https://www.cisa.gov/securebydesign" target="_blank" rel="noopener">CISA Secure by Design</a></li>
+                    <li><a href="https://www.cisa.gov/resources-tools/resources/product-security-bad-practices" target="_blank" rel="noopener">CISA Product Security Bad Practices</a></li>
+                    <li><a href="https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/02/Final-ONCD-Technical-Report.pdf" target="_blank" rel="noopener">White House ONCD Report on Memory-Safe Languages</a></li>
+                    <li><a href="https://www.sec.gov/newsroom/press-releases/2023-139" target="_blank" rel="noopener">SEC Cybersecurity Disclosure Rules (2023)</a></li>
+                    <li><a href="https://www.crowdstrike.com/blog/falcon-content-update-preliminary-post-incident-report/" target="_blank" rel="noopener">CrowdStrike Preliminary Post-Incident Report</a></li>
+                    <li><a href="https://sre.google/sre-book/service-level-objectives/" target="_blank" rel="noopener">Google SRE: Service Level Objectives</a></li>
+                </ul>
+
             </div>
 
-            <!-- French body -->
             <div class="article__body" data-lang-body="fr" style="display:none;">
-                <h1 class="article__title">Vérification scriptée : Assurance automatisée dans les constructions d'infrastructure africaine</h1>
-                <p>Le test le plus simple n'est pas le plus puissant. Le test le plus puissant est celui qui peut être exécuté à chaque fois, par n'importe qui, dans les mêmes conditions qui produisent un succès ou un échec en production. Ce point n'est pas trivial. La plupart de ce qui est appelé "assurance qualité" dans les projets logiciels africains se réduit à un humain qui regarde une page et dit "ça a l'air bon." Ce jugement expire à la prochaine modification. Ce n'est pas de l'infrastructure. C'est une anecdote.</p>
+                <h1 class="article__title">La confiance a une chaîne de build : pourquoi la vérification et la fiabilité deviennent une infrastructure de base</h1>
+                
+                <p>Les investisseurs technologiques sérieux ne peuvent plus traiter la qualité logicielle comme une simple affaire d’ingénierie interne. Les institutions publiques disent désormais la même chose sous des angles différents : la vérification, la discipline de mise en production et l’ingénierie de la fiabilité passent de l’hygiène opérationnelle au rang d’infrastructure stratégique.</p>
 
-<p>Le 19 mai, le site d'Afriplan Global Solution en direct a fait apparaître une divergence. Huit spans minéraux — Beryl, Tungstène, Or, Lithium, Cassitérite, Coltan, Cuivre, Quartz Fumé — se rendaient correctement dans le navigateur en direct, mais un script automatisé les signalait comme absents. Le découplage se situait entre ce que mesurait l'inspecteur DOM (structure statique) et ce que le navigateur injectait réellement (innerHTML via apply()). Le test était techniquement correct sur la structure statique mais erroné sur la sortie rendue. L'erreur n'était pas dans le test. Elle était dans ce que le test mesurait.</p>
+                <p>Le Secure Software Development Framework de NIST organise le développement sécurisé en quatre groupes de pratiques : préparer l’organisation, protéger le logiciel, produire un logiciel bien sécurisé et répondre aux vulnérabilités. Le travail de la CISA sur le secure by design avance l’argument parallèle du côté des politiques publiques : les éditeurs doivent éliminer en amont des classes entières de faiblesses, plutôt que de demander aux utilisateurs d’absorber un risque évitable en aval. Le Bureau de la Maison-Blanche pour le Directeur national du cyberespace a poussé cette logique plus loin en présentant les langages mémoire-sûrs comme une voie possible pour éliminer à la source des classes récurrentes de vulnérabilités.</p>
 
-<h2>La boucle de vérification scriptée</h2>
+                <h2>Pourquoi cela compte pour le capital</h2>
 
-<p>Ce qui a émergé n'était pas une correction de bug isolée. C'était un motif de conception doté de quatre propriétés :</p>
+                <p>La raison est simple : l’assurance logicielle n’est plus invisible. En 2023, la Securities and Exchange Commission des États-Unis a adopté des règles de divulgation en cybersécurité obligeant les sociétés cotées à décrire les incidents matériels et à expliquer leur gouvernance du risque cyber. La fiabilité et la sécurité ne sont donc plus seulement des préoccupations produit. Ce sont aussi des préoccupations de gouvernance, de divulgation et, en conséquence, de valorisation.</p>
 
-<ul>
-  <li><strong>Reproductible.</strong> Chaque condition est une requête unique sur la page en direct — pas de correspondance floue, pas de "ça a l'air bon." Succès ou échec est une propriété binaire du DOM en direct au moment de la requête.</li>
-  <li><strong>Idempotent.</strong> Exécuter la même requête deux fois contre le même état en direct produit une sortie identique. Si la sortie change, quelque chose a réellement changé.</li>
-  <li><strong>Lecture, pas affirmation.</strong> Le script extrait l'état rendu réel. Il ne charge pas d'attentes d'une liste de contrôle manuelle. La vérification lit ce qui existe plutôt que tester contre ce qu'un humain supposait être présent.</li>
-  <li><strong>Sortie de référence inscriptible.</strong> Le script écrit un enregistrement de vérification — une capture horodatée de chaque résultat. Cet enregistrement est lui-même le produit.</li>
-</ul>
+                <p>Les rapports publics d’incident renforcent ce point. Dans son rapport préliminaire de juillet 2024, CrowdStrike a déclaré qu’une mise à jour de configuration de contenu Windows avait déclenché des crashs et qu’un bug dans la validation du contenu n’avait pas détecté la mise à jour problématique avant son déploiement. Il n’est pas nécessaire de dramatiser cet événement pour comprendre la leçon : la profondeur de validation, les contrôles de release et la discipline de rollback ne sont pas des options. Ce sont les mécanismes qui empêchent un défaut localisé de devenir une panne d’écosystème.</p>
 
-<blockquote>Un système de vérification qui nécessite l'approbation humaine avant de produire une preuve n'est pas une vérification. C'est une cérémonie. Le vrai contrôle se produit quand personne ne regarde.</blockquote>
+                <blockquote>La confiance n’est pas d’abord un attribut de marque. C’est une propriété de système. Elle est produite par ce qu’une entreprise peut vérifier avant le déploiement, observer après le déploiement et inverser quand les conditions de mise en production échouent.</blockquote>
 
-<h2>Pourquoi cette architecture compte pour l'infrastructure africaine</h2>
+                <h2>La fiabilité est un modèle d’exploitation</h2>
 
-<p>L'étape Playwright a été efficace, mais le motif est portable. Chaque startup africaine, service numérique gouvernemental, ou projet open-source pourrait bénéficier de boucles de vérification construites ainsi. Automatiser les contrôles qui comptent déjà le plus. Les exécuter à chaque modification. Capturer le résultat sans attendre qu'un humain le lise.</p>
+                <p>Le cadre SRE de Google l’a formulé depuis longtemps à travers les objectifs de niveau de service et les budgets d’erreur. L’idée centrale reste puissante : la vitesse de livraison doit être équilibrée avec le risque de fiabilité par une discipline explicite d’exploitation, et non par l’optimisme managérial. Les entreprises les plus solides traitent les portes de qualité, l’observabilité, les déploiements progressifs et la réponse aux incidents comme des capacités cumulatives.</p>
+
+                <ul>
+                    <li><strong>La vérification</strong> réduit la probabilité que des défauts atteignent la production.</li>
+                    <li><strong>L’observabilité</strong> réduit le délai entre l’introduction d’un défaut et sa détection.</li>
+                    <li><strong>La discipline de rollback et de réponse</strong> réduit le rayon d’impact lorsque l’échec survient malgré tout.</li>
+                    <li><strong>Les choix secure by design</strong> suppriment certaines classes de défaillance avant même le début des tests.</li>
+                </ul>
+
+                <p>Pour les bâtisseurs, cela signifie que la fiabilité ne peut pas être ajoutée à la fin du pipeline. Pour les investisseurs, cela signifie que l’outillage d’assurance, les systèmes de déploiement sécurisé, l’infrastructure de test, les couches d’observabilité et la migration vers des environnements mémoire-sûrs doivent de plus en plus être compris comme des paris d’infrastructure plutôt que comme des outils périphériques.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://csrc.nist.gov/pubs/sp/800/218/final" target="_blank" rel="noopener">NIST Secure Software Development Framework (SP 800-218)</a></li>
+                    <li><a href="https://www.cisa.gov/securebydesign" target="_blank" rel="noopener">CISA Secure by Design</a></li>
+                    <li><a href="https://www.cisa.gov/resources-tools/resources/product-security-bad-practices" target="_blank" rel="noopener">CISA Product Security Bad Practices</a></li>
+                    <li><a href="https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/02/Final-ONCD-Technical-Report.pdf" target="_blank" rel="noopener">Rapport ONCD de la Maison-Blanche sur les langages mémoire-sûrs</a></li>
+                    <li><a href="https://www.sec.gov/newsroom/press-releases/2023-139" target="_blank" rel="noopener">Règles de divulgation cyber de la SEC (2023)</a></li>
+                    <li><a href="https://www.crowdstrike.com/blog/falcon-content-update-preliminary-post-incident-report/" target="_blank" rel="noopener">Rapport préliminaire d’incident de CrowdStrike</a></li>
+                    <li><a href="https://sre.google/sre-book/service-level-objectives/" target="_blank" rel="noopener">Google SRE : Service Level Objectives</a></li>
+                </ul>
+
             </div>
 
             <footer class="article__footer">

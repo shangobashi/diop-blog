@@ -3,15 +3,13 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Diop Daily #007: Functional Identity: Credential Architecture Beyond the Token — Diop Research</title>
-    <meta name="description" content="The MUSAS biometric scandal in Mali was not a supply-chain error. It was architectural: a system that assumed token possession implies identity — without verifying that the token binds to anything harder to falsify than the credential itself. For identity architecture to serve African institutions, binding, provenance, and contextual authorization must be prerequisites — not optional layers."/>
+    <title>Diop Daily #007: Africa’s Next Trust Layer: Why Digital Identity and DPI Matter for Builders and Investors — Diop Research</title>
+    <meta name="description" content="Public research note on digital identity and digital public infrastructure in Africa, grounded in World Bank ID4D, the World Bank DPI brief, GSMA, UNECA, and Ethiopia’s Fayda program."/>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
-
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
-
     <link rel="stylesheet" href="../site.css"/>
 </head>
 <body>
@@ -31,12 +29,8 @@
             <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
             <span id="lang-toggle-container"></span>
             <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
-                <span class="theme-icon theme--sun" aria-hidden="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-                </span>
-                <span class="theme-icon theme--moon" aria-hidden="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-                </span>
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
             </button>
         </div>
     </nav>
@@ -44,60 +38,92 @@
     <article class="article">
         <div class="article__inner">
             <header class="article__header">
-                <div class="article__eyebrow" data-i18n="entry007">Diop Daily #007 — May 2026</div>
+                <div class="article__eyebrow" data-i18n="article.entry007">Diop Daily #007 — May 2026</div>
                 <div class="article__meta-line">
                     <time>May 20, 2026</time>
                     <span>·</span>
                     <span data-rt="10">10 min read</span>
                     <span>·</span>
-                    <span>Identity Architecture</span>
+                    <span>Digital Public Infrastructure</span>
                 </div>
             </header>
 
-            <!-- English body -->
             <div class="article__body" data-lang-body="en">
-                <h1 class="article__title">Functional Identity: Credential Architecture Beyond the Token</h1>
-                <p>The MUSAS scandal — where a biometric identity system in Mali issued falsifiable credentials at scale — was not a "supply-chain error." It was architectural. The system conflated possession of a token with authenticated identity and did not address the binding problem: verifying that the credential derives from something harder to falsify than the credential itself.</p>
+                <h1 class="article__title">Africa’s Next Trust Layer: Why Digital Identity and DPI Matter for Builders and Investors</h1>
+                
+                <p>Digital identity in Africa should no longer be framed as a narrow government IT problem. The stronger public framing is infrastructural: identity, payments, and data exchange are becoming foundational trust layers for digital markets. For builders and investors, that changes the conversation from “Can digital ID work?” to “What kinds of systems and services become more investable when trusted identity rails exist?”</p>
 
-<h2>Three Prerequisites Before Any Credential Can Be Trusted</h2>
-<ul>
-  <li><strong>Identity binding.</strong> The credential must be cryptographically bound to an anchor that cannot be extracted or duplicated — hardware attestation, not software state. If the binding is breakable, the credential is retrievable.</li>
-  <li><strong>Provenance chain.</strong> The credential must carry a verifiable lineage back to a trusted root resistant to both physical infiltration and state capture. Public chain verification is not optional; if one party can see the chain and another cannot, the asymmetry is the vulnerability.</li>
-  <li><strong>Contextual authorization.</strong> The credential alone must not authorize access. It must confirm a qualifying condition — document hash match, presence check, network address affiliation — not just "this was issued." Issuance is not permission.</li>
-</ul>
+                <p>The World Bank’s ID4D dataset makes the inclusion challenge plain. Countries in Sub-Saharan Africa have, on average, the lowest rates of adults with official proof of identity globally, and many adults without proof of identity live either in South Asia or Sub-Saharan Africa. This matters because identification is not only an administrative question. It is an access question — to finance, public services, onboarding flows, digital trade, and cross-border commercial participation.</p>
 
-<blockquote>Falsifiable credential issuance is the primary structural vulnerability of any identity system that has not solved the binding problem. It is not a CVE. It is design.</blockquote>
+                <h2>DPI is the better frame</h2>
 
-<h2>The Constraint African Institutions Actually Face</h2>
+                <p>The World Bank’s digital public infrastructure framing is useful because it clarifies that the real opportunity is not identity in isolation. DPI refers to foundational digital systems for identification and authentication, payments, and data sharing. When these systems are inclusive, reusable, and trusted, they act less like isolated software projects and more like roads or electricity: basic layers that allow many private services to exist on top of them.</p>
 
-<p>High-income identity architecture assumes infrastructure that may not exist yet: trusted time services, hardware-backed sequencers, unsupervised CAs, synchronized clocks. Auth tools in Europe and the US silently assume these services work. For African institutions, designing from availability constraints — partial networks, intermittent power, distributed authority — is not compromise. It is correct first-principles engineering.</p>
+                <p>That is why the private-sector story matters. The World Bank argues that inclusive and reusable DPI can accelerate opportunity, resilience, innovation, and competition. GSMA adds a practical market layer: robust digital identity ecosystems can support remote verification and more secure access to services, while mobile operators in Sub-Saharan Africa can play a significant role in strengthening those trust ecosystems. UNECA connects the same idea to regional integration, arguing that mutually trusted digital ID can support online transactions, cross-border trade, and a more integrated African digital market.</p>
 
-<h2>Intellectual Sovereignty Is Not Declarative. It Is Built.</h2>
+                <blockquote>Identity becomes economically powerful when it stops being a document and starts becoming a trusted rail on which transactions, onboarding, consent, and verification can travel at scale.</blockquote>
 
-<p>A people without sovereign identity infrastructure cannot hold land, transact across borders, or participate in digital governance at full capacity. The ability to prove who you are — and to audit that proof without permission from any foreign authority — is a civilizational minimum. Building it at African scale, with African constraints, without dependency on foreign CA roots: this is what sovereignty produces, not merely declares.</p>
+                <h2>Why this matters to investors</h2>
+
+                <ul>
+                    <li><strong>Lower onboarding friction</strong> makes more markets reachable for fintech, commerce, logistics, and service platforms.</li>
+                    <li><strong>Reusable trust infrastructure</strong> reduces the need for each company to build identity and verification layers from zero.</li>
+                    <li><strong>Interoperable public rails</strong> create more room for private applications, merchant services, KYC tooling, and compliance products.</li>
+                    <li><strong>Cross-border identity trust</strong> can make regional digital trade more realistic under the logic of AfCFTA and a more integrated digital market.</li>
+                </ul>
+
+                <p>There is also an important caution. GSMA explicitly warns that SIM registration should not be treated as a silver bullet for ID coverage, and that privacy and data protection must be upheld. In other words: the long-term opportunity is not careless credential accumulation. It is trusted, interoperable, user-respecting infrastructure.</p>
+
+                <p>Ethiopia’s Fayda program offers one concrete public example of how governments are beginning to frame this space: as a foundational identification system designed to provide a unique identifier and a single source of truth for verification. One should not overstate what any single national program has already achieved. But the directional lesson is clear. The next layer of African digital growth will not be built on applications alone. It will be built on trust architecture that applications can reuse.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://id4d.worldbank.org/global-dataset" target="_blank" rel="noopener">World Bank ID4D Global Dataset</a></li>
+                    <li><a href="https://www.worldbank.org/en/topic/digitaldevelopment/brief/digital-public-infrastructure-and-development-why-is-it-important-and-what-is-the-world-bank-doing" target="_blank" rel="noopener">World Bank: Digital Public Infrastructure and Development</a></li>
+                    <li><a href="https://www.gsma.com/mobilefordevelopment/resources/digital-identity-in-sub-saharan-africa/" target="_blank" rel="noopener">GSMA: Digital Identity in Sub-Saharan Africa</a></li>
+                    <li><a href="https://www.uneca.org/eca-events/conference-ministers-2022/blogs/digital-id-and-digital-trade-africa" target="_blank" rel="noopener">UNECA: Digital ID and Digital Trade in Africa</a></li>
+                    <li><a href="https://fayda.et/" target="_blank" rel="noopener">Ethiopia Fayda Digital ID Program</a></li>
+                </ul>
+
             </div>
 
-            <!-- French body -->
             <div class="article__body" data-lang-body="fr" style="display:none;">
-                <h1 class="article__title">Identité fonctionnelle : Architecture des credentials au-delà du token</h1>
-                <p>Le scandale MUSAS — système d'identité biométrique au Mali ayant émis des credentials falsifiables à grande échelle — n'était pas une "erreur de chaîne d'approvisionnement." C'était une défaillance architecturale. Le système a confondu possession d'un token et identité authentifiée, sans résoudre le problème de la liaison : vérifier que le credential dérive de quelque chose de plus difficile à falsifier que le credential lui-même.</p>
+                <h1 class="article__title">La prochaine couche de confiance de l’Afrique : pourquoi l’identité numérique et la DPI comptent pour les bâtisseurs et les investisseurs</h1>
+                
+                <p>L’identité numérique en Afrique ne devrait plus être présentée comme un simple problème informatique gouvernemental. Le cadrage public plus solide est infrastructurel : l’identité, les paiements et l’échange de données deviennent des couches fondamentales de confiance pour les marchés numériques. Pour les bâtisseurs et les investisseurs, cela déplace la question de « l’identité numérique peut-elle fonctionner ? » vers « quels systèmes et quels services deviennent plus finançables lorsque des rails d’identité de confiance existent ? »</p>
 
-<h2>Trois prérequis avant que tout credential ne devienne fiable</h2>
-<ul>
-  <li><strong>Liaison d'identité.</strong> Le credential doit être cryptographiquement lié à une ancre qui ne peut pas être extraite ni dupliquée — attestation matérielle, pas état logiciel. Si la liaison est cassable, le credential est récupérable.</li>
-  <li><strong>Chaîne de provenance.</strong> Le credential doit porter une lignée vérifiable remontant à une racine de confiance résistante à l'infiltration physique et à la capture d'État. La vérification publique de la chaîne n'est pas optionnelle ; si une partie peut voir et une autre pas, l'asymétrie est la vulnérabilité.</li>
-  <li><strong>Autorisation contextuelle.</strong> Le credential seul ne doit pas autoriser l'accès. Il doit confirmer une condition qualifiante — correspondance de hash de document, vérification de présence, affiliation d'adresse réseau — et pas simplement "ceci a été émis." Émission n'est pas permission.</li>
-</ul>
+                <p>Le jeu de données ID4D de la Banque mondiale rend le défi d’inclusion très clair. Les pays d’Afrique subsaharienne affichent en moyenne les taux les plus faibles d’adultes disposant d’une preuve officielle d’identité, et une grande partie des adultes sans preuve d’identité vit soit en Asie du Sud, soit en Afrique subsaharienne. Cela importe parce que l’identification n’est pas seulement une question administrative. C’est une question d’accès — à la finance, aux services publics, aux parcours d’onboarding, au commerce numérique et à la participation commerciale transfrontalière.</p>
 
-<blockquote>L'émission de credentials falsifiables est la vulnérabilité structurelle primaire de tout système d'identité qui n'a pas résolu le problème de la liaison. Ce n'est pas un CVE. C'est une question de conception.</blockquote>
+                <h2>La DPI est le meilleur cadre</h2>
 
-<h2>La contrainte que les institutions africaines rencontrent réellement</h2>
+                <p>Le cadrage de la digital public infrastructure par la Banque mondiale est utile parce qu’il montre que la vraie opportunité n’est pas l’identité prise isolément. La DPI désigne des systèmes numériques fondamentaux d’identification et d’authentification, de paiements et de partage de données. Quand ces systèmes sont inclusifs, réutilisables et dignes de confiance, ils fonctionnent moins comme des projets logiciels isolés que comme des routes ou de l’électricité : des couches de base sur lesquelles de multiples services privés peuvent être construits.</p>
 
-<p>L'architecture d'identité des pays à revenu élevé suppose une infrastructure qui n'existe pas encore : services d'horodatage fiables, séquenceurs supportés par du matériel, AC non supervisés, horloges synchronisées. Les outils d'authentification en Europe et aux États-Unis supposent silencieusement que ces services fonctionnent. Pour les institutions africaines, concevoir en partant de contraintes de disponibilité — réseaux partiels, courant intermittent, autorité distribuée — n'est pas un compromis. C'est une bonne ingénierie aux premiers principes.</p>
+                <p>C’est pourquoi la dimension secteur privé compte. La Banque mondiale soutient qu’une DPI inclusive et réutilisable peut accélérer les opportunités, la résilience, l’innovation et la concurrence. La GSMA ajoute une couche de marché très concrète : des écosystèmes d’identité numérique robustes peuvent soutenir la vérification à distance et un accès plus sûr aux services, tandis que les opérateurs mobiles d’Afrique subsaharienne peuvent jouer un rôle important dans le renforcement de ces écosystèmes de confiance. La CEA relie cette même logique à l’intégration régionale, en expliquant qu’une identité numérique mutuellement reconnue peut soutenir les transactions en ligne, le commerce transfrontalier et un marché numérique africain plus intégré.</p>
 
-<h2>La souveraineté intellectuelle ne se déclare pas. Elle se construit.</h2>
+                <blockquote>L’identité devient économiquement puissante lorsqu’elle cesse d’être un simple document et devient un rail de confiance sur lequel peuvent circuler à grande échelle les transactions, l’onboarding, le consentement et la vérification.</blockquote>
 
-<p>Un peuple sans infrastructure d'identité souveraine ne peut pas détenir de terre, faire des affaires au-delà des frontières, ni participer à la gouvernance numérique à sa capacité. La possibilité de prouver qui l'on est — et d'auditer cette preuve sans permission d'aucune autorité étrangère — est un minimum civilisationnel. La construire à l'échelle africaine, avec les contraintes africaines, sans dépendance vis-à-vis des racines CA étrangères : c'est ce que la souveraineté produit, pas seulement ce qu'elle déclare.</p>
+                <h2>Pourquoi cela compte pour les investisseurs</h2>
+
+                <ul>
+                    <li><strong>Une friction d’onboarding plus faible</strong> rend davantage de marchés accessibles à la fintech, au commerce, à la logistique et aux plateformes de services.</li>
+                    <li><strong>Une infrastructure de confiance réutilisable</strong> réduit le besoin pour chaque entreprise de reconstruire de zéro ses couches d’identité et de vérification.</li>
+                    <li><strong>Des rails publics interopérables</strong> ouvrent plus d’espace pour des applications privées, des services marchands, des outils KYC et des produits de conformité.</li>
+                    <li><strong>La confiance identitaire transfrontalière</strong> peut rendre plus réaliste le commerce numérique régional dans la logique de l’AfCFTA et d’un marché numérique plus intégré.</li>
+                </ul>
+
+                <p>Il existe aussi une précaution importante. La GSMA avertit explicitement que l’enregistrement SIM ne doit pas être traité comme une solution miracle pour la couverture d’identité, et que la protection des données et de la vie privée doit être préservée. Autrement dit : l’opportunité de long terme ne réside pas dans une accumulation négligente de credentials. Elle réside dans une infrastructure de confiance, interopérable et respectueuse des usagers.</p>
+
+                <p>Le programme Fayda d’Éthiopie offre un exemple public concret de la manière dont des gouvernements commencent à cadrer cet espace : comme un système d’identification fondamental destiné à fournir un identifiant unique et une source unique de vérité pour la vérification. Il ne faut pas surestimer ce qu’un programme national donné a déjà réalisé. Mais la leçon directionnelle est claire. La prochaine couche de croissance numérique africaine ne se construira pas seulement sur des applications. Elle se construira sur une architecture de confiance que les applications pourront réutiliser.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://id4d.worldbank.org/global-dataset" target="_blank" rel="noopener">World Bank ID4D Global Dataset</a></li>
+                    <li><a href="https://www.worldbank.org/en/topic/digitaldevelopment/brief/digital-public-infrastructure-and-development-why-is-it-important-and-what-is-the-world-bank-doing" target="_blank" rel="noopener">Banque mondiale : Digital Public Infrastructure and Development</a></li>
+                    <li><a href="https://www.gsma.com/mobilefordevelopment/resources/digital-identity-in-sub-saharan-africa/" target="_blank" rel="noopener">GSMA : Digital Identity in Sub-Saharan Africa</a></li>
+                    <li><a href="https://www.uneca.org/eca-events/conference-ministers-2022/blogs/digital-id-and-digital-trade-africa" target="_blank" rel="noopener">CEA : Digital ID and Digital Trade in Africa</a></li>
+                    <li><a href="https://fayda.et/" target="_blank" rel="noopener">Programme d’identité numérique Fayda (Éthiopie)</a></li>
+                </ul>
+
             </div>
 
             <footer class="article__footer">

@@ -86,28 +86,28 @@
                 en: 'Scheduled autonomy is not automation. It is the deliberate construction of institutional persistence that allows an agent to improve, consolidate, and act without requiring continuous human presence.',
                 fr: 'L\'autonomie programmée n\'est pas de l\'automatisation. C\'est la construction délibérée d\'une persistance institutionnelle qui permet à un agent de s\'améliorer, de consolider et d\'agir sans exiger une présence humaine continue.'
             }
-        }
-    
+        },
         'diop-daily-006': {
             title: {
-                en: 'Scripted Verification: Automated Assurance in African Infrastructure Builds',
-                fr: 'Vérification scriptée : Assurance automatisée dans les constructions d'infrastructure africaine'
+                en: 'Trust Has a Build Pipeline: Why Verification and Reliability Are Becoming Core Infrastructure',
+                fr: 'La confiance a une chaîne de build : pourquoi la vérification et la fiabilité deviennent une infrastructure de base'
             },
             excerpt: {
-                en: 'On May 19, a broken automated test surfaced in the Afriplan dashboard: eight mineral spans had rendered correctly in the live browser but the test had not checked the render path. From that disconnect came a durable pattern — reproducible, idempotent, query-driven verification loops that check what exists rather than assert what was expected.',
-                fr: 'Le 19 mai, un test automatisé défectueux est apparu dans le tableau de bord Afriplan : huit spans minéraux s'étaient bien rendus dans le navigateur mais le test n'avait pas vérifié le chemin de rendu. De cette disconnexion est né un motif durable.'
+                en: 'Software assurance is moving from engineering hygiene to strategic infrastructure. Public signals from NIST, CISA, Google SRE, the SEC, the White House ONCD and CrowdStrike suggest that verification, release discipline and reliability engineering increasingly shape how markets price trust in software companies.',
+                fr: 'L’assurance logicielle passe de l’hygiène d’ingénierie à l’infrastructure stratégique. Les signaux publics issus de NIST, CISA, Google SRE, de la SEC, de la Maison-Blanche et de CrowdStrike montrent que la vérification et la discipline de release façonnent de plus en plus la confiance du marché.'
             }
         },
         'diop-daily-007': {
             title: {
-                en: 'Functional Identity: Credential Architecture Beyond the Token',
-                fr: 'Identité fonctionnelle : Architecture des credentials au-delà du token'
+                en: 'Africa’s Next Trust Layer: Why Digital Identity and DPI Matter for Builders and Investors',
+                fr: 'La prochaine couche de confiance de l’Afrique : pourquoi l’identité numérique et la DPI comptent pour les bâtisseurs et les investisseurs'
             },
             excerpt: {
-                en: 'The MUSAS biometric scandal in Mali was not a supply-chain error. It was architectural: a system that assumed token possession implies identity — without verifying that the token binds to anything harder to falsify than the credential itself. For identity architecture to serve African institutions, binding, provenance, and contextual authorization must be prerequisites.',
-                fr: 'Le scandale biométrique MUSAS au Mali n'était pas une erreur de chaîne d'approvisionnement. C'était une défaillance architecturale : un système qui supposait que la possession d'un token implique l'identité — sans vérifier que le token se lie à quelque chose de plus difficile à falsifier.'
+                en: 'Digital identity in Africa is better understood as trust infrastructure than as a narrow government IT system. Public sources from the World Bank, GSMA, UNECA and Ethiopia’s Fayda program suggest that reusable identity rails can lower onboarding friction, strengthen verification and expand the market for digital services across the continent.',
+                fr: 'L’identité numérique en Afrique doit être comprise comme une infrastructure de confiance plutôt que comme un simple système administratif. Des sources publiques de la Banque mondiale, de la GSMA, de la CEA et du programme Fayda suggèrent que des rails d’identité réutilisables peuvent réduire les frictions d’onboarding et élargir le marché des services numériques.'
             }
-        }};
+        }
+    };
 
     function t(key) {
         var entry = translations[key];
