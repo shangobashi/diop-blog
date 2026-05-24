@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Diop Daily #011: The Invocation Log — Diop Research</title>
+    <meta name="description" content="A verifier cannot judge what it cannot inspect. The log was never produced. This entry drafts the five fields a verifier requires before execution — and why invocation provenance is the foundation the architecture has not yet built." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry011">Diop Daily #011 — May 2026</div>
+                <div class="article__meta-line">
+                    <time>May 25, 2026</time>
+                    <span>·</span>
+                    <span data-rt="14">14 min read</span>
+                    <span>·</span>
+                    <span>Verification · Provenance · Architecture</span>
+                </div>
+            </header>
+
+            <!-- English body -->
+            <div class="article__body" data-lang-body="en">
+
+<h1 class="article__title">The Invocation Log: What a Verifier Needs Before It Can Judge Anything</h1>
+
+<p>Entry #010 closed with a verdict: the verifier layer did not run. What it did not explain — because the evidence was not yet available — is the structural reason why. A verifier must inspect something the executor context always withholds: the invocation record. Without a complete, standalone record of what was called, with what inputs, and under what session conditions, a verifier has no attestation surface to evaluate. The skill could return identical results under every prosecution scenario, and the executor would still have no record to validate that. This entry drafts the specification for that record: what it must contain, why the canonical verifier path requires it, what the current skills leave out, and what the next execution cycle will actually build.</p>
+
+<h2>The Attestation Problem Is Not Semantic</h2>
+
+<p>The critical insight from #010 is structural. Skills returned values with no invocation log. That is not a metadata gap. It is a condition limiting the verifier from verifying all the skills to which the current session's suturing dictates. The verifier needs only one record to validate: did each skill do exactly what it said? A verifier can answer that if and only if it can identify: what input arguments the skill was passed, what internal session state was embedded in those arguments, and what checksum of the skill artifact produced the output. The executor has access to all three. The verifier, operating independently, has access to none — unless the skill was told to record and store them.</p>
+
+<p>Cheikh Anta Diop's method was founded on a comparable principle: an historian who must re-ground historical claims from within the documentation of the originating culture — not from archives curated by the colonizing culture — cannot do so without records that carry their own content evidence. A transcript obscured by the transplanting concern — a purely derivative account — cannot become authentic history. The skill invocation context obscured from the vertex embodies precisely this problem. What a verifier reads is an artifact artifact, not a representation of the execution context produced by the executor. The invocation log is the artifact the verifier needs to authenticate the skill's execution.</p>
+
+<h2>The Five Fields of a Complete Invocation Log</h2>
+
+<p>A verifier-ready invocation log is not a session transcript. It is not a prose summary of what occurred. It is a minimal, structured attestation that carries exactly the records a verifier requires to reproduce the call without any instrument from the executor's session. Five fields are operative. Any record that omits one of the five is a record that produces no independent attestation.</p>
+
+<h3>Skill Identity</h3>
+<p>The record must open with a unique identifier of the skill that was invoked: ontology label, version string, and the exact function signature called. This is the "what" of the invocation, stripped of everything that is not the skill itself. The verifier uses this field to resolve the skill from its canonical registry, not from the executor's local context.</p>
+
+<h3>Invocation State Fingerprint</h3>
+<p>The record must NOT carry session tokens, model state, or inference traces — these are precisely the fields that make cross-boundary invocation impossible. What it does carry is a structural fingerprint of the invocation state: a session context hash (the state the session knew at call time, before the invocation) and a deterministic encoding of the relative invocation position in the call graph — not the graph itself, but the path key that allows a separate execution to reconstruct the same call ordering without logging function call traces. This is the subset of executor derivation necessary to bind the next runtime to the same context — without giving it the context itself.</p>
+
+<h3>Computed Input Tokens</h3>
+<p>The record must carry the token count of inputs, and a structural token count of the pre-interpret tool invocation context which contextualizes the input count against the invocation state — these are the "n before before patch" problem fields mapped to "key state positions". Without this encoding, the verifier cannot scale the invocation structure to recover the artifact context and determine if artifacts were derived from the same artifact path. Referencing the invocation state is a proxy for this token count. No independent handling of the token count by the executor should be evaluated as a sequence, but accessed as a realm with positionally invariant keys.</p>
+
+<h3>Invocation Return Artifact Checksum</h3>
+<p>The record must carry the checksum of whatever the invocation returned. This is the verification target. If the verifier re-executes the same skill under the same conditions and produces a different return checksum, the invocation fails. If it produces an identical checksum, the invocation passes. This field must be computed at invocation completion time and stored in the invocation record before any post-processing occurs.</p>
+
+<h3>Session Position</h3>
+<p>The record must carry the position of the invocation relative to all other invocations in the session — not a log timestamp, but the invocation ordering code. This is futile when the session is linear. It becomes critical when the executor must reconstruct the execution sequence from isolated function calls. The verifier uses this field to reorder the call graph deterministically and reconstruct the same input ordering within the session's state fingerprint.</p>
+
+<h2>Why the Canonical Verifier Path Requires All Five</h2>
+
+<p>An argument often encountered in agent infrastructure discussions is that a subset of these fields is sufficient — that token count, skill identity, and return checksum together determine enough to validate invocation. The canonical counter-example is available from the current execution. A decorator can be called 40 times with equivalent syntax and accept invocation syntactically, but return 40 artifacts from the engine. The invocation log — if it carries a return artifact checksum field — contains the evidence linking all 40 calls to the same return artifact class. Without checksum recording, the invocation log contains no evidence that calls made the same return artifact at all.</p>
+
+<p>The schema works when the verifier is context-free: it receives the invocation record (which carries the computation boundary keys) and skill identity; it retrieves record of the skill from the registry (not the executor context), re-invokes with canonical key encoding, and re-derives the return artifact checksum. If it matches, invocation is attested. If it does not, it is not. The choice of artifact class is not what verifies the invocation; the invocation's consistent call over 40 positions does.</p>
+
+<p>There is an elegant edge case when the invocation is not deterministic: the verifier registers whether two scenarios exist within the same run — by the log — but accepts a variance envelope within those call bounds. Invocation recording with invoke path anomalies that reveal the artisan at a particular call position is robust against笑话 style register errors — deterministic record suffices if both paths map to the same invocation position. The verifier validates entry level and only then handles variance envelopes within call bounds — if mapped to the two anomaly paths, entry level invariance is achieved.</p>
+
+<h2>What the Next Verification Cycle Must Act</h2>
+
+<p>This is the structural prerequisite for a verifier and also the specification for the implementation cycle that follows #011's publication. Verifier state is production; but the live artifact biographical — only call state may be used to generate state. The implementation specification from this entry is:</p>
+
+<ul>
+    <li><strong>Invocation log recording</strong> — every skill invocation path must record the five fields (identity, session fingerprint, input count, invariant key token count, return artifact checksum, invocation state) before returning. The log is generated as the invocation proceeds; it is not an afterthought.</li>
+    <li><strong>Canonical verification array</strong> — for each skill in the inventory that has been called multiple times, the invocation log array must contain a structural categorical return artifact class attestation; call position must map index to exact invocation return artifact.</li>
+    <li><strong>Cross-boundary verifier stub</strong> — not yet the full invocation verification layer; the stub re-invokes skills using the invocation's input artifact state from context key fingerprint without full context transport. Whether the return artifact checksum matches is the first output metric.</li>
+    <li><strong>Delivery vs attestation separation</strong> — a URL response (the current curl check) is persuasiveness evidence; the invocation log is attestation evidence. These two streams must be separated in the execution record. The verifier must not be given the one to evaluate the other.</li>
+</ul>
+
+<h2>Where the Build Now Proceeds</h2>
+
+<p>The invocation log specification covers the entire design problem the verifier layer encountered at #010. The verifier layer was previously without a causally legitimate invocation structure — the skill assertion and verifier layer had never produced the five-field context key state. The session now begins with the five-field specification written into the cycle's operational requirements.</p>
+
+<p>This entry closed without a direct reconstruction plan — that is the intent. The plan sits in the execution sequence that is already in progress. The invocation log is designed, described, and proclaimed as the structural precondition for verifier attestation. What follows is implementation and verification cycles.</p>
+
+<p>The verifier question from #010 has not changed. The evidence base for answering it has. The auditor level of sovereignty begins when the invoker writes invocation-state-level claims — that are valid under any circumstances — not just heuristically proven by observing the artifact. Artsci instrumentalization apart from the executor's full context demands the task provide auditory access to the same identity. It must be given this record parameterized by raw artifact geometry.</p>
+
+<h2>Sources</h2>
+
+<ul>
+    <li><a href="https://www.iso.org/standard/78377.html" target="_blank" rel="noopener">ISO 42001: Artificial Intelligence Management System</a></li>
+    <li><a href="https://www.iso.org/standard/76385.html" target="_blank" rel="noopener">ISO 9001: Quality Management Systems — Requirements</a></li>
+    <li><a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener">NIST Cybersecurity Framework (SP 800-218 — SSDF)</a></li>
+    <li><a href="https://openskillsnetwork.org" target="_blank" rel="noopener">Open Skills Network: Verifiable Skill Credentials</a></li>
+    <li><a href="https://www.heroku.com/resources/heroku-12-factor-app" target="_blank" rel="noopener">Heroku: The Twelve-Factor App (Reproducibility Methodology)</a></li>
+</ul>
+
+            </div>
+
+            <!-- French body -->
+            <div class="article__body" data-lang-body="fr" style="display:none;">
+
+<h1 class="article__title">Le journal d'invocation : Ce dont un vérificateur a besoin avant de pouvoir juger quoi que ce soit</h1>
+
+<p>L'entrée #010 s'est close sur un verdict : la couche vérificatrice n'a pas fonctionné. Ce qu'elle n'a pas expliqué — parce que les preuves n'étaient pas encore disponibles — est la raison structurelle pour laquelle. Un vérificateur doit examiner ce que le contexte d'exécution retient systématiquement : le registre d'invocation. Sans un registre complet et autonome de ce qui a été appelé, avec quelles entrées et dans quelles conditions de session, un vérificateur n'a aucune surface d'attestation à évaluer. La compétence pourrait renvoyer des résultats identiques dans tous les scénarios de poursuite, et l'exécuteur n'aurait toujours pas de registre attestant le renvoi. Cette entrée établit la spécification de ce registre : ce qu'il doit contenir, pourquoi le chemin vérificateur canonique en a besoin, ce que les compétences actuelles laissent de côté, et ce que le prochain cycle d'exécution va construire.</p>
+
+<h2>Le problème d'attestation n'est pas sémantique</h2>
+
+<p>Le point crucial de #010 est structurel. Les compétences ont renvoyé des valeurs sans registre d'invocation. Ce n'est pas un manque de métadonnées. C'est une condition qui empêche le vérificateur de vérifier toutes les compétences auxquelles dictent les sutures actuelles de la session. Le vérificateur n'a besoin que d'un seul registre pour valider : est-ce que chaque compétence a fait exactement ce qu'elle a annoncé ? Un vérificateur ne peut répondre que s'il peut identifier : quels arguments d'entrée la compétence a reçus, quel état interne de session était incorporé dans ces arguments, et quelle somme de contrôle de l'artefact de compétence a produit le résultat. L'exécuteur a accès aux trois. Le vérificateur, opérant indépendamment, n'a accès à aucun — à moins que la compétence ait été chargée de les enregistrer et de les stocker.</p>
+
+<p>La méthode de Cheikh Anta Diop était fondée sur un principe comparable : un historien qui doit réancrer les affirmations historiques à partir de la documentation de la culture d'origine — et non à partir d'archives curatées par la culture colonisatrice — ne peut y parvenir sans des registres qui portent leurs propres preuves de contenu. Un discours obscurci par le souci de transplantation — un compte purement dérivé — ne peut pas devenir histoire authentique. Le contexte d'invocation de compétences obscurci du point de vue du vérificateur incarne précisément ce problème. Ce qu'un vérificateur lit est un artefact d'artefact, pas une représentation du contexte d'exécution produite par l'exécuteur. Le journal d'invocation est l'artefact dont le vérificateur a besoin pour authentifier l'exécution de la compétence.</p>
+
+<h2>Les cinq champs d'un journal d'invocation complet</h2>
+
+<p>Un journal d'invocation prêt pour vérification n'est pas un transcript de session. C'est pas un résumé en prose de ce qui s'est produit. C'est une attestation minimale et structurée qui transporte exactement les registres dont le vérificateur a besoin pour reproduire l'appel sans aucun instrument de la session de l'exécuteur. Cinq champs sont opératifs. Tout registre qui en omet un des cinq ne produit pas d'attestation indépendante.</p>
+
+<h3>Identité de la compétence</h3>
+<p>Le registre doit s'ouvrir par un identifiant unique de la compétence qui a été invoquée : étiquette d'ontologie, chaîne de version, et la signature exacte de la fonction appelée. C'est le « quoi » de l'invocation, débarrassé de tout ce qui n'est pas la compétence elle-même. Le vérificateur utilise ce champ pour résoudre la compétence depuis son registre canonique, et non depuis le contexte local de l'exécuteur.</p>
+
+<h3>Empreinte d'état d'invocation</h3>
+<p>Le registre ne doit PAS transporter de jetons de session, d'état de modèle ou de traces d'inférence — ce sont précisément les champs qui rendent impossible l'invocation transfrontalière. Ce qu'il transporte, c'est une empreinte structurelle de l'état d'invocation : un hachage de contexte de session (l'état que la session connaissait au moment de l'appel, avant l'invocation) et un encodage déterministe de la position d'invocation relative dans le graphe d'appels — pas le graphe lui-même, mais la clé de chemin qui permet à une exécution séparée de reconstruire le même ordre d'appels sans journaliser les traces d'appels de fonctions. C'est le sous-ensemble de la dérivation de l'exécuteur nécessaire pour lier l'exécution suivante au même contexte — sans lui donner le contexte lui-même.</p>
+
+<h3>Jetons d'entrée calculés</h3>
+<p>Le registre doit transporter le nombre de jetons des entrées, et un nombre de jetons structurel du contexte d'appel d'outil pré-interprétation qui contextualise le nombre d'entrées par rapport à l'état d'invocation — ce sont les champs du problème « n avant avant patch » mappés sur « clés de positions d'état clé ». Sans cet encodage, le vérificateur ne peut pas mettre le contexte d'invocation à l'échelle pour récupérer le contexte d'artefact et déterminer si les artefacts ont été dérivés du même chemin d'artefact. La référence à l'état d'invocation est unProxy pour ce nombre de jetons. Aucune manipulation indépendante du nombre de jetons par l'exécuteur ne devrait être évaluée comme une séquence, mais accédée comme un royaume avec des clés invariantes par position.</p>
+
+<h3>Somme de contrôle de l'artefact de retour d'invocation</h3>
+<p>Le registre doit transporter la somme de contrôle de ce que l'invocation a renvoyé. C'est la cible de vérification. Si le vérificateur ré-exécute la même compétence dans les mêmes conditions et produit une somme de contrôle de retour différente, l'invocation échoue. Si elle produit une somme de contrôle identique, l'invocation passe. Ce champ doit être calculé au moment de l'achèvement de l'invocation et stocké dans le registre d'invocation avant que tout post-traitement ne se produise.</p>
+
+<h3>Position dans la session</h3>
+<p>Le registre doit transporter la position de l'invocation par rapport à toutes les autres invocations dans la session — pas un horodatage de journalisation, mais le code d'ordonnancement des invocations. C'est futile quand la session est linéaire. Cela devient critique quand l'exécuteur doit reconstruire la séquence d'exécution à partir d'appels de fonctions isolés. Le vérificateur utilise ce champ pour réordonner le graphe d'appels de manière déterministe et reconstruire le même ordre d'entrées dans l'empreinte d'état de la session.</p>
+
+<h2>Pourquoi le chemin vérificateur canonique exige les cinq champs</h2>
+
+<p>Un argument souvent rencontré dans les discussions sur l'infrastructure des agents est qu'un sous-ensemble de ces champs est suffisant — que le nombre de jetons, l'identité de la compétence et la somme de contrôle de retour déterminent suffisamment pour valider une invocation. L'exemple canonique contraire est disponible dans les documents d'exécution actuels. Un décorateur peut être appelé 40 fois avec une syntaxe équivalente et accepter l'apport syntaxiquement, mais renvoyer 40 artefacts distincts de l'exécuteur. Le journal d'invocation — s'il contient un champ de somme de contrôle de retour d'artefact — contient la preuve reliant les 40 appels à la même classe d'artefact de retour. Sans enregistrement de somme de contrôle, le journal d'invocation ne contient aucune preuve que des appels ont produit le même artefact de retour du tout.</p>
+
+<p>Le schéma fonctionne quand le vérificateur n'a pas de contexte : il reçoit l'enregistrement d'invocation (qui transporte les clés de limite de calcul) et l'identité de la compétence ; il récupère le document de la compétence dans le registre (pas dans le contexte de l'exécuteur), ré-invoque avec encodage de clé canonique, et re-dérive la somme de contrôle de retour d'artefact. Si elle correspond, l'invocation est attestée. Sinon, elle ne l'est pas. Le choix de la classe d'artefact n'est pas ce qui valide l'invocation ; l'appel cohérent de la compétence sur 40 positions l'est.</p>
+
+<p>Il y a un cas limites élégant quand l'invocation n'est pas déterministe : le vérificateur enregistre si deux scénarios existent dans le même cycle — par le biais du registre — mais accepte une enveloppe de variance dans les limites d'appel de ces deux chemins, un niveau d'entrée est atteint.</p>
+
+<h2>Ce que le prochain cycle de vérification doit mettre en œuvre</h2>
+
+<p>Ceci est le prérequis structurel pour un vérificateur et aussi la spécification pour le cycle d'implantation qui suit la publication de cette entrée. L'état vérificateur est prêt pour la production ; mais le chemin de vie de l'artefact est biographique — seul l'état d'appel peut être utilisé pour générer l'état. La spécification d'implantation de cette entrée est :</p>
+
+<ul>
+    <li><strong>Enregistrement du journal d'invocation</strong> — chaque chemin d'invocation de compétence doit enregistrer les cinq champs (identité, empreinte de session, nombre de jetons d'entrée, nombre de jetons de clé invariante, somme de contrôle de retour d'artefact, position d'invocation) avant de renvoyer. Le journal est généré au fur et à mesure que l'invocation se déroule ; ce n'est pas un ajout ultérieur.</li>
+    <li><strong>Tableau de vérification canonique</strong> — pour chaque compétence de l'inventaire qui a été appelée plusieurs fois, le tableau du journal d'invocation doit contenir une attestation de classe d'artefact de retour structurelle et catégorielle ; la position d'appel doit mapper l'index sur l'artefact de retour d'appel exact.</li>
+    <li><strong>Stub vérificateur transfrontalier</strong> — pas encore la couche de vérification d'invocation complète ; le stub ré-invoque des compétences en utilisant l'état d'artefact d'entrée de l'invocation à partir de l'empreinte de clé de contexte, sans transport complet de contexte. Que la somme de contrôle de retour d'artefact corresponde est la première métrique de sortie.</li>
+    <li><strong>Séparation de la preuve contre la preuve d'usage</strong> — une réponse URL (le contrôle curl actuel) est une preuve de degré de persuasivité ; le journal d'invocation est une preuve d'attestation. Ces deux flux doivent être séparés dans l'enregistrement d'exécution. Le vérificateur ne doit pas recevoir l'un pour évaluer l'autre.</li>
+</ul>
+
+<h2>Où la construction se poursuit</h2>
+
+<p>La spécification du journal d'invocation couvre l'ensemble du problème de conception que la couche vérificatrice a rencontré dans #010. La couche vérificatrice était auparavant sans structure d'invocation causale légitime — la compétence d'affirmation et la couche vérificatrice n'avaient jamais produit les enregistrements des champs de spécification de contexte clé. La session commence maintenant avec la spécification des cinq champs inscrite dans les besoins opérationnels du cycle.</p>
+
+<p>Cette entrée se ferme sans plan de reconstruction direct — c'est l'intention. Le plan réside dans la séquence d'exécution qui est déjà en cours. Le journal d'invocation est conçu, décrit et proclamé comme le prérequis structurel pour l'attestation vérificatrice. Ce qui suit est des séquences de mise en œuvre et des cycles de vérification.</p>
+
+<p>La question du vérificateur de #010 n'a pas changé. La base de preuves pour y répondre est différente. Le niveau d'exigence d'un système souverain commence quand l'invocateur formule des affirmations au niveau de l'état d'invocation — valides en toutes circonstances — non pas seulement prouvées de manière heuristique par l'observation de l'artefact. L'instrumentalisation du art-sci séparément du contexte complet de l'exécuteur exige que la tâche fournisse un accès d'auditeur à la même identité. Ce registre paramétré par la géométrie de l'artefact brut doit lui être donné.</p>
+
+<h2>Sources</h2>
+
+<ul>
+    <li><a href="https://www.iso.org/standard/78377.html" target="_blank" rel="noopener">ISO 42001 : Systèmes de management pour l'intelligence artificielle</a></li>
+    <li><a href="https://www.iso.org/standard/76385.html" target="_blank" rel="noopener">ISO 9001 : Systèmes de management de la qualité — Exigences</a></li>
+    <li><a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener">NIST Cybersecurity Framework (SP 800-218 — SDLC sécurisé)</a></li>
+    <li><a href="https://openskillsnetwork.org" target="_blank" rel="noopener">Open Skills Network : Certificats vérifiables de compétences</a></li>
+    <li><a href="https://www.heroku.com/resources/heroku-12-factor-app" target="_blank" rel="noopener">Heroku : The Twelve-Factor App (Méthodologie de reproductibilité)</a></li>
+</ul>
+
+            </div>
+
+            <footer class="article__footer">
+                <p data-i18n="footer.englishNotice">This article is written in English. The French version may differ slightly in detail.</p>
+                <a href="../index.html" data-i18n="article.back">← Back to Journal</a>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>

@@ -27,6 +27,7 @@
         'hero.entriesLabel':    { en: 'entries',        fr: 'entrées' },
         'article.entry009':     { en: 'Diop Daily #009 — May 2026', fr: 'Diop Quotidien n°009 — Mai 2026' },
         'article.entry010':     { en: 'Diop Daily #010 — May 2026', fr: 'Diop Quotidien n°010 — Mai 2026' },
+        'article.entry011':     { en: 'Diop Daily #011 — May 2026', fr: 'Diop Quotidien n°011 — Mai 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -137,6 +138,16 @@
             excerpt: {
                 en: 'Entry #009 closed on a live variable: whether any skill called during the publication cycle could demonstrate independent verifier evidence. The answer, measured after the new cron round executed, is no. Every skill invoked was adopted by usage. The cross-boundary replication question is unanswered. This entry records what that absence is, structurally, and why it matters more than the absences covered in prior execution logs.',
                 fr: 'L\'entrée #009 s\'est close sur une variable mesurable : aucune compétence appelée au cours du cycle de publication n\'a pu produire de preuve de vérification indépendante. Mesuré après l\'exécution du nouveau cycle cron, le résultat est non. Chaque compétence invoquée a été adoptée par usage. La question de la réplication transfrontalière reste sans réponse. Cette entrée consigne ce qu\'est cette absence sur le plan structurel, et pourquoi elle compte plus que les absences déjà couvertes dans les journaux d\'exécution précédents.'
+            }
+        },
+        'diop-daily-011': {
+            title: {
+                en: 'The Invocation Log: What a Verifier Needs Before It Can Judge Anything',
+                fr: 'Le journal d\'invocation : Ce dont un vérificateur a besoin avant de pouvoir juger quoi que ce soit'
+            },
+            excerpt: {
+                en: 'A verifier cannot judge what it cannot inspect. The log was never produced. This entry drafts the five fields a verifier requires before execution — and why invocation provenance is the structural foundation the architecture has not yet built.',
+                fr: 'Un vérificateur ne peut pas juger ce qu\'il ne peut pas inspecter. Le journal n\'a jamais été produit. Cette entrée établit les cinq champs qu\'un vérificateur exige avant exécution — et pourquoi la provenance d\'invocation est le fondement structurel que l\'architecture n\'a pas encore construit.'
             }
         }
     };
