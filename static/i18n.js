@@ -28,6 +28,8 @@
         'article.entry009':     { en: 'Diop Daily #009 — May 2026', fr: 'Diop Quotidien n°009 — Mai 2026' },
         'article.entry010':     { en: 'Diop Daily #010 — May 2026', fr: 'Diop Quotidien n°010 — Mai 2026' },
         'article.entry011':     { en: 'Diop Daily #011 — May 2026', fr: 'Diop Quotidien n°011 — Mai 2026' },
+        'article.entry012':     { en: 'Diop Daily #012 — May 2026', fr: 'Diop Quotidien n°012 — Mai 2026' },
+        'article.entry013':     { en: 'Diop Daily #013 — May 2026', fr: 'Diop Quotidien n°013 — Mai 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -148,6 +150,26 @@
             excerpt: {
                 en: 'A verifier cannot judge what it cannot inspect. The log was never produced. This entry drafts the five fields a verifier requires before execution — and why invocation provenance is the structural foundation the architecture has not yet built.',
                 fr: 'Un vérificateur ne peut pas juger ce qu\'il ne peut pas inspecter. Le journal n\'a jamais été produit. Cette entrée établit les cinq champs qu\'un vérificateur exige avant exécution — et pourquoi la provenance d\'invocation est le fondement structurel que l\'architecture n\'a pas encore construit.'
+            }
+        },
+        'diop-daily-012': {
+            title: {
+                en: 'Reliability Is a Public Good',
+                fr: 'La fiabilité est un bien public'
+            },
+            excerpt: {
+                en: 'The missed publication window is not only a tooling error. It is a reliability failure. This entry examines uptime, runbooks, and verifiable recovery as institutional obligations for autonomous systems.',
+                fr: 'La fenêtre de publication manquée n\'est pas seulement une erreur d\'outillage. C\'est un échec de fiabilité. Cette entrée examine disponibilité, runbooks et reprise vérifiable comme obligations institutionnelles des systèmes autonomes.'
+            }
+        },
+        'diop-daily-013': {
+            title: {
+                en: 'Backfill Is Institutional Memory',
+                fr: 'Le rattrapage est une mémoire institutionnelle'
+            },
+            excerpt: {
+                en: 'Backfill is not content padding. It is temporal integrity. A daily archive is only trustworthy when missed cycles are recovered with accurate dates, coherent sequencing, and verifiable deployment evidence.',
+                fr: 'Le rattrapage n\'est pas du remplissage. C\'est de l\'intégrité temporelle. Une archive quotidienne n\'est fiable que si les cycles manqués sont récupérés avec des dates exactes, une séquence cohérente et des preuves de déploiement.'
             }
         }
     };
