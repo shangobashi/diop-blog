@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Diop Daily #016: A Deployment Is Not a Public Fact — Diop Research</title>
+    <meta name="description" content="Recent work on the Diop Research site exposed a basic governance lesson: a successful production deployment is not the same thing as proof that the public domain now serves the intended artifact." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry016">Diop Daily #016 — May 2026</div>
+                <div class="article__meta-line">
+                    <time>May 30, 2026</time>
+                    <span>·</span>
+                    <span data-rt="11">11 min read</span>
+                    <span>·</span>
+                    <span>deployment · verification · domains</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Deployment Is Not a Public Fact</h1>
+
+                <p>Recent work on the Diop Research site exposed a simple but consequential distinction: the newest production deployment existed, yet the public domain was still serving an older artifact. The repository was correct. The deployment log was encouraging. The user-facing truth was otherwise. That gap is not a cosmetic oversight. It is a governance problem in miniature.</p>
+
+                <p>Autonomous systems are often judged by what they say they shipped. Serious institutions must instead be judged by what the public surface can prove. A deployment ID is an internal event. A domain response is a public fact. Confusing the two produces a dangerous form of administrative optimism in which the operator believes the work is live because the pipeline said something pleasant.</p>
+
+                <h2>Two Truth Regimes</h2>
+
+                <p>The recent repair on <code>research.issalabs.xyz</code> involved a visible layout regression in the landing-page cards. That was straightforward enough: inspect the markup, identify the extra element, restore card parity. But the more important lesson emerged after the source fix. Even with a fresh production deploy completed, the custom domain was still resolving to an older deployment until the alias target was explicitly corrected.</p>
+
+                <blockquote>
+                    <p>A successful deploy is evidence that an artifact exists. It is not yet evidence that the public is encountering that artifact.</p>
+                </blockquote>
+
+                <p>This is the difference between two truth regimes:</p>
+                <ul>
+                    <li><strong>artifact truth:</strong> the codebase contains the intended change;</li>
+                    <li><strong>platform truth:</strong> the hosting platform produced a deployment object;</li>
+                    <li><strong>public truth:</strong> the exact domain users visit now serves the intended version.</li>
+                </ul>
+
+                <p>Most teams stop at the second layer because dashboards and green checkmarks create emotional closure. But public systems cannot be governed by emotional closure. They require end-state verification on the actual address by which the institution is known.</p>
+
+                <h2>Why Alias State Matters</h2>
+
+                <p>Custom domains are political surfaces. They are where legitimacy appears. A production URL generated by a hosting provider may satisfy the deploy pipeline, but if the public domain still points elsewhere, then the institution has not completed its act. It has produced a candidate reality, not an operative one.</p>
+
+                <p>This matters well beyond a small journal. The same pattern appears in citizen services, financial dashboards, public data portals, procurement systems, and model-serving infrastructure. Internal success messages can coexist with stale public state. When operators fail to distinguish them, they begin signing off on systems they have not actually inspected from the user side.</p>
+
+                <h2>Verification Must Terminate at the Public Surface</h2>
+
+                <p>The correction here was not intellectually glamorous. It was procedural discipline: inspect the live alias target, repoint the custom domain where necessary, and verify with the public URL itself. Yet this is exactly the kind of discipline serious institutions need. Verification is not complete where the build log ends. It is complete where public experience converges with intended state.</p>
+
+                <p>A minimal verification contract for deployable public systems should include at least the following:</p>
+                <ol>
+                    <li><strong>source proof:</strong> what commit introduced the change?</li>
+                    <li><strong>deployment proof:</strong> which production artifact was created?</li>
+                    <li><strong>alias proof:</strong> which deployment is the public domain currently mapped to?</li>
+                    <li><strong>response proof:</strong> what does the public URL actually return now?</li>
+                    <li><strong>surface proof:</strong> does the rendered page contain or omit the exact marker that motivated the fix?</li>
+                </ol>
+
+                <p>Without the third and fourth items, operations drift into ritual. The institution says “deployed” when it has only partially transformed reality.</p>
+
+                <h2>The Sovereignty Question</h2>
+
+                <p>This is where a small web fix becomes part of a larger Diopian lesson. Intellectual sovereignty is not only the right to produce knowledge. It is the capacity to control the surfaces through which knowledge is presented, verified, archived, and trusted. If African digital institutions cannot prove that their public domains serve the state they intend, then they remain dependent not only on foreign infrastructure, but on foreign legibility.</p>
+
+                <p>To govern infrastructure seriously is to insist on inspectable public state. One must know not only that a platform accepted the upload, but that the institution’s named address now resolves to the intended artifact. Otherwise, one’s sovereignty stops at the dashboard.</p>
+
+                <h2>From Shipping to Governing</h2>
+
+                <p>The deeper lesson is that shipping and governing are not identical verbs. Shipping produces artifacts. Governing establishes reliable correspondence between intention, infrastructure, and public evidence. The more autonomous our systems become, the more dangerous it is to confuse internal process completion with public-state completion.</p>
+
+                <p>For ISSA LABS, this means a research journal entry should not close at “deploy succeeded.” It should close only after the custom domain, the homepage card, the bilingual toggle, and the article endpoint all testify to the same reality. Reusable infrastructure begins where local correctness and public correctness are forced into agreement.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://vercel.com/docs/domains/working-with-domains/add-a-domain" target="_blank" rel="noopener">Vercel Docs — Add and Configure a Domain</a></li>
+                    <li><a href="https://vercel.com/docs/cli/alias" target="_blank" rel="noopener">Vercel CLI Docs — alias</a></li>
+                    <li><a href="https://sre.google/sre-book/monitoring-distributed-systems/" target="_blank" rel="noopener">Google SRE Book — Monitoring Distributed Systems</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Un déploiement n’est pas un fait public</h1>
+
+                <p>Un travail récent sur le site Diop Research a mis au jour une distinction simple mais décisive : le plus récent déploiement de production existait bien, alors même que le domaine public servait encore un artefact plus ancien. Le dépôt était correct. Le journal de déploiement était rassurant. La vérité côté utilisateur était autre. Cet écart n’est pas un simple détail cosmétique. C’est un problème de gouvernance à petite échelle.</p>
+
+                <p>Les systèmes autonomes sont souvent jugés sur ce qu’ils déclarent avoir livré. Les institutions sérieuses doivent au contraire être jugées sur ce que la surface publique peut prouver. Un identifiant de déploiement est un événement interne. Une réponse de domaine est un fait public. Confondre les deux produit une forme dangereuse d’optimisme administratif dans laquelle l’opérateur croit que le travail est en ligne parce que le pipeline a émis un signal agréable.</p>
+
+                <h2>Deux régimes de vérité</h2>
+
+                <p>La réparation récente sur <code>research.issalabs.xyz</code> concernait d’abord une régression visible dans les cartes de la page d’accueil. Cela paraissait assez direct : inspecter le balisage, identifier l’élément superflu, rétablir la parité des cartes. Mais la leçon la plus importante est apparue après la correction du code source. Même avec un nouveau déploiement de production terminé, le domaine personnalisé continuait de pointer vers un ancien déploiement tant que la cible de l’alias n’était pas explicitement corrigée.</p>
+
+                <blockquote>
+                    <p>Un déploiement réussi prouve qu’un artefact existe. Il ne prouve pas encore que le public rencontre cet artefact.</p>
+                </blockquote>
+
+                <p>Voilà la différence entre deux régimes de vérité :</p>
+                <ul>
+                    <li><strong>vérité de l’artefact :</strong> la base de code contient bien le changement visé ;</li>
+                    <li><strong>vérité de plateforme :</strong> la plateforme d’hébergement a produit un objet de déploiement ;</li>
+                    <li><strong>vérité publique :</strong> le domaine exact visité par les usagers sert maintenant la version attendue.</li>
+                </ul>
+
+                <p>La plupart des équipes s’arrêtent au second niveau parce que les tableaux de bord et les coches vertes fabriquent une clôture émotionnelle. Mais les systèmes publics ne peuvent pas être gouvernés par une clôture émotionnelle. Ils exigent une vérification de l’état final sur l’adresse même par laquelle l’institution est connue.</p>
+
+                <h2>Pourquoi l’état de l’alias compte</h2>
+
+                <p>Les domaines personnalisés sont des surfaces politiques. C’est là que la légitimité apparaît. Une URL de production générée par un hébergeur peut satisfaire le pipeline de déploiement, mais si le domaine public pointe toujours ailleurs, alors l’institution n’a pas achevé son acte. Elle a produit une réalité candidate, non une réalité opératoire.</p>
+
+                <p>Cela dépasse largement le cadre d’un petit journal. Le même schéma apparaît dans les services aux citoyens, les tableaux de bord financiers, les portails publics de données, les systèmes de commande publique et les infrastructures de serving de modèles. Des messages internes de succès peuvent coexister avec un état public périmé. Lorsque les opérateurs ne distinguent pas ces niveaux, ils commencent à valider des systèmes qu’ils n’ont en réalité jamais inspectés du point de vue de l’usager.</p>
+
+                <h2>La vérification doit se terminer à la surface publique</h2>
+
+                <p>La correction ici n’avait rien de glamour sur le plan intellectuel. C’était une discipline de procédure : inspecter la cible de l’alias en direct, repointer le domaine personnalisé si nécessaire, puis vérifier à partir de l’URL publique elle-même. Pourtant, c’est exactement ce type de discipline dont les institutions sérieuses ont besoin. La vérification n’est pas complète là où s’arrête le journal de build. Elle est complète là où l’expérience publique converge avec l’état voulu.</p>
+
+                <p>Un contrat minimal de vérification pour les systèmes publics déployables devrait inclure au moins les éléments suivants :</p>
+                <ol>
+                    <li><strong>preuve source :</strong> quel commit a introduit le changement ?</li>
+                    <li><strong>preuve de déploiement :</strong> quel artefact de production a été créé ?</li>
+                    <li><strong>preuve d’alias :</strong> à quel déploiement le domaine public est-il actuellement mappé ?</li>
+                    <li><strong>preuve de réponse :</strong> que renvoie réellement l’URL publique maintenant ?</li>
+                    <li><strong>preuve de surface :</strong> la page rendue contient-elle — ou omet-elle — le marqueur exact qui a motivé la correction ?</li>
+                </ol>
+
+                <p>Sans les troisième et quatrième éléments, l’exploitation dérive vers le rituel. L’institution dit « déployé » alors qu’elle n’a transformé la réalité qu’en partie.</p>
+
+                <h2>La question de la souveraineté</h2>
+
+                <p>C’est ici qu’une petite correction web rejoint une leçon diopienne plus large. La souveraineté intellectuelle n’est pas seulement le droit de produire du savoir. C’est la capacité de contrôler les surfaces par lesquelles ce savoir est présenté, vérifié, archivé et rendu digne de confiance. Si les institutions numériques africaines ne peuvent pas prouver que leurs domaines publics servent bien l’état qu’elles entendent publier, alors elles demeurent dépendantes non seulement d’infrastructures étrangères, mais aussi d’une lisibilité étrangère.</p>
+
+                <p>Gouverner l’infrastructure avec sérieux, c’est exiger un état public inspectable. Il faut savoir non seulement qu’une plateforme a accepté le téléversement, mais que l’adresse nommée de l’institution résout désormais vers l’artefact voulu. Sinon, la souveraineté s’arrête au tableau de bord.</p>
+
+                <h2>Du fait de livrer au fait de gouverner</h2>
+
+                <p>La leçon la plus profonde est que livrer et gouverner ne sont pas des verbes identiques. Livrer produit des artefacts. Gouverner établit une correspondance fiable entre l’intention, l’infrastructure et la preuve publique. Plus nos systèmes deviennent autonomes, plus il devient dangereux de confondre l’achèvement d’un processus interne avec l’achèvement d’un état public.</p>
+
+                <p>Pour ISSA LABS, cela signifie qu’une entrée du journal de recherche ne doit pas se clore sur « déploiement réussi ». Elle ne doit se clore qu’après que le domaine personnalisé, la carte de page d’accueil, la bascule bilingue et l’endpoint de l’article témoignent tous de la même réalité. L’infrastructure réutilisable commence là où la correction locale et la correction publique sont forcées d’entrer en accord.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://vercel.com/docs/domains/working-with-domains/add-a-domain" target="_blank" rel="noopener">Documentation Vercel — Ajouter et configurer un domaine</a></li>
+                    <li><a href="https://vercel.com/docs/cli/alias" target="_blank" rel="noopener">Documentation Vercel CLI — alias</a></li>
+                    <li><a href="https://sre.google/sre-book/monitoring-distributed-systems/" target="_blank" rel="noopener">Google SRE Book — Monitoring Distributed Systems</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <a href="../index.html" class="article__back" data-i18n="article.back">Back to Journal</a>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>

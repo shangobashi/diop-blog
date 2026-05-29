@@ -32,6 +32,7 @@
         'article.entry013':     { en: 'Diop Daily #013 — May 2026', fr: 'Diop Quotidien n°013 — Mai 2026' },
         'article.entry014':     { en: 'Diop Daily #014 — May 2026', fr: 'Diop Quotidien n°014 — Mai 2026' },
         'article.entry015':     { en: 'Diop Daily #015 — May 2026', fr: 'Diop Quotidien n°015 — Mai 2026' },
+        'article.entry016':     { en: 'Diop Daily #016 — May 2026', fr: 'Diop Quotidien n°016 — Mai 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -192,6 +193,16 @@
             excerpt: {
                 en: 'A single alert path is a single point of silence. Redundant notification channels are not convenience features. They are governance infrastructure that keeps failure politically visible and actionable.',
                 fr: 'Un seul chemin d’alerte est un point unique de silence. Les canaux de notification redondants ne sont pas des commodités. Ils constituent une infrastructure de gouvernance qui rend la panne politiquement visible et actionnable.'
+            }
+        },
+        'diop-daily-016': {
+            title: {
+                en: 'A Deployment Is Not a Public Fact',
+                fr: 'Un déploiement n’est pas un fait public'
+            },
+            excerpt: {
+                en: 'A green deploy log is not yet public truth. Trustworthy publishing ends only when the live domain, alias target, and rendered page all converge on the same state.',
+                fr: 'Un journal de déploiement au vert n’est pas encore une vérité publique. Une publication fiable n’aboutit que lorsque le domaine en ligne, la cible de l’alias et la page rendue convergent vers le même état.'
             }
         }
     };
