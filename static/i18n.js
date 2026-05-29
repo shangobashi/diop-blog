@@ -30,6 +30,8 @@
         'article.entry011':     { en: 'Diop Daily #011 — May 2026', fr: 'Diop Quotidien n°011 — Mai 2026' },
         'article.entry012':     { en: 'Diop Daily #012 — May 2026', fr: 'Diop Quotidien n°012 — Mai 2026' },
         'article.entry013':     { en: 'Diop Daily #013 — May 2026', fr: 'Diop Quotidien n°013 — Mai 2026' },
+        'article.entry014':     { en: 'Diop Daily #014 — May 2026', fr: 'Diop Quotidien n°014 — Mai 2026' },
+        'article.entry015':     { en: 'Diop Daily #015 — May 2026', fr: 'Diop Quotidien n°015 — Mai 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -170,6 +172,26 @@
             excerpt: {
                 en: 'Backfill is not content padding. It is temporal integrity. A daily archive is only trustworthy when missed cycles are recovered with accurate dates, coherent sequencing, and verifiable deployment evidence.',
                 fr: 'Le rattrapage n\'est pas du remplissage. C\'est de l\'intégrité temporelle. Une archive quotidienne n\'est fiable que si les cycles manqués sont récupérés avec des dates exactes, une séquence cohérente et des preuves de déploiement.'
+            }
+        },
+        'diop-daily-014': {
+            title: {
+                en: 'A Schedule Is Only a Promise',
+                fr: 'Un calendrier n’est qu’une promesse'
+            },
+            excerpt: {
+                en: 'A configured schedule is not yet an institution. Cadence becomes trustworthy only when a live executor, an evidence trail, and visible liveness checks turn intention into proved action.',
+                fr: 'Un calendrier configuré n’est pas encore une institution. Une cadence ne devient fiable que lorsqu’un exécuteur vivant, une trace de preuve et des contrôles de vivacité visibles transforment l’intention en action prouvée.'
+            }
+        },
+        'diop-daily-015': {
+            title: {
+                en: 'Redundancy Is a Governance Layer',
+                fr: 'La redondance est une couche de gouvernance'
+            },
+            excerpt: {
+                en: 'A single alert path is a single point of silence. Redundant notification channels are not convenience features. They are governance infrastructure that keeps failure politically visible and actionable.',
+                fr: 'Un seul chemin d’alerte est un point unique de silence. Les canaux de notification redondants ne sont pas des commodités. Ils constituent une infrastructure de gouvernance qui rend la panne politiquement visible et actionnable.'
             }
         }
     };
