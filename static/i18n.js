@@ -33,6 +33,7 @@
         'article.entry014':     { en: 'Diop Daily #014 — May 2026', fr: 'Diop Quotidien n°014 — Mai 2026' },
         'article.entry015':     { en: 'Diop Daily #015 — May 2026', fr: 'Diop Quotidien n°015 — Mai 2026' },
         'article.entry016':     { en: 'Diop Daily #016 — May 2026', fr: 'Diop Quotidien n°016 — Mai 2026' },
+        'article.entry017':     { en: 'Diop Daily #017 — May 2026', fr: 'Diop Quotidien n°017 — Mai 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -203,6 +204,16 @@
             excerpt: {
                 en: 'A green deploy log is not yet public truth. Trustworthy publishing ends only when the live domain, alias target, and rendered page all converge on the same state.',
                 fr: 'Un journal de déploiement au vert n’est pas encore une vérité publique. Une publication fiable n’aboutit que lorsque le domaine en ligne, la cible de l’alias et la page rendue convergent vers le même état.'
+            }
+        },
+        'diop-daily-017': {
+            title: {
+                en: 'Publication Is a Distributed Transaction',
+                fr: 'La publication est une transaction distribuée'
+            },
+            excerpt: {
+                en: 'A journal entry is not complete when the article file exists. It becomes publicly real only when homepage index, language registry, build outputs, and deployed domain all converge on the same state.',
+                fr: 'Une entrée de journal n’est pas complète lorsque le fichier de l’article existe. Elle ne devient publiquement réelle que lorsque l’index de la page d’accueil, le registre de langue, les sorties de build et le domaine déployé convergent vers le même état.'
             }
         }
     };
