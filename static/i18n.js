@@ -34,6 +34,7 @@
         'article.entry015':     { en: 'Diop Daily #015 — May 2026', fr: 'Diop Quotidien n°015 — Mai 2026' },
         'article.entry016':     { en: 'Diop Daily #016 — May 2026', fr: 'Diop Quotidien n°016 — Mai 2026' },
         'article.entry017':     { en: 'Diop Daily #017 — May 2026', fr: 'Diop Quotidien n°017 — Mai 2026' },
+        'article.entry018':     { en: 'Diop Daily #018 — June 2026', fr: 'Diop Quotidien n°018 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -214,6 +215,16 @@
             excerpt: {
                 en: 'A journal entry is not complete when the article file exists. It becomes publicly real only when homepage index, language registry, build outputs, and deployed domain all converge on the same state.',
                 fr: 'Une entrée de journal n’est pas complète lorsque le fichier de l’article existe. Elle ne devient publiquement réelle que lorsque l’index de la page d’accueil, le registre de langue, les sorties de build et le domaine déployé convergent vers le même état.'
+            }
+        },
+        'diop-daily-018': {
+            title: {
+                en: 'A Skill Is a Corrected Procedure',
+                fr: 'Une compétence est une procédure corrigée'
+            },
+            excerpt: {
+                en: 'Reusable capability does not begin when a workflow succeeds once. It begins when a repaired process is encoded with quality gates, refusal conditions, and objective checks strong enough to survive the next operator and the next session.',
+                fr: 'Une capacité réutilisable ne commence pas lorsqu’un workflow réussit une seule fois. Elle commence lorsqu’un processus réparé est encodé avec des seuils de qualité, des conditions de refus et des contrôles objectifs assez solides pour survivre au prochain opérateur et à la prochaine session.'
             }
         }
     };
