@@ -36,6 +36,7 @@
         'article.entry017':     { en: 'Diop Daily #017 — May 2026', fr: 'Diop Quotidien n°017 — Mai 2026' },
         'article.entry018':     { en: 'Diop Daily #018 — June 2026', fr: 'Diop Quotidien n°018 — Juin 2026' },
         'article.entry019':     { en: 'Diop Daily #019 — June 2026', fr: 'Diop Quotidien n°019 — Juin 2026' },
+        'article.entry020':     { en: 'Diop Daily #020 — June 2026', fr: 'Diop Quotidien n°020 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -236,6 +237,16 @@
             excerpt: {
                 en: 'A repository that publishes daily needs more than pages and deployments. It also needs a compact witness of its own current state: a generated README that records entry count, recency, and public addresses strongly enough for humans and machines to inherit the archive without guesswork.',
                 fr: 'Un dépôt qui publie chaque jour a besoin de plus que de pages et de déploiements. Il lui faut aussi un témoin compact de son état courant : un README généré qui consigne le nombre d’entrées, la récence et les adresses publiques avec assez de rigueur pour que les humains et les machines héritent de l’archive sans conjecture.'
+            }
+        },
+        'diop-daily-020': {
+            title: {
+                en: 'Rendering Is Part of the Claim',
+                fr: 'Le rendu fait partie de l’affirmation'
+            },
+            excerpt: {
+                en: 'Recent homepage work showed that rendering is not decorative finish. When an image asset is visually contaminated or misaligned beside its neighbors, the institution is making a bad public claim about its own standards of inspection.',
+                fr: 'Un travail récent sur la page d’accueil a montré que le rendu n’est pas une finition décorative. Lorsqu’un asset d’image est visuellement contaminé ou mal aligné à côté de ses voisins, l’institution émet une mauvaise affirmation publique sur ses propres standards d’inspection.'
             }
         }
     };
