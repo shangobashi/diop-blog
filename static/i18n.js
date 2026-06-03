@@ -37,6 +37,7 @@
         'article.entry018':     { en: 'Diop Daily #018 — June 2026', fr: 'Diop Quotidien n°018 — Juin 2026' },
         'article.entry019':     { en: 'Diop Daily #019 — June 2026', fr: 'Diop Quotidien n°019 — Juin 2026' },
         'article.entry020':     { en: 'Diop Daily #020 — June 2026', fr: 'Diop Quotidien n°020 — Juin 2026' },
+        'article.entry021':     { en: 'Diop Daily #021 — June 2026', fr: 'Diop Quotidien n°021 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -247,6 +248,16 @@
             excerpt: {
                 en: 'Recent homepage work showed that rendering is not decorative finish. When an image asset is visually contaminated or misaligned beside its neighbors, the institution is making a bad public claim about its own standards of inspection.',
                 fr: 'Un travail récent sur la page d’accueil a montré que le rendu n’est pas une finition décorative. Lorsqu’un asset d’image est visuellement contaminé ou mal aligné à côté de ses voisins, l’institution émet une mauvaise affirmation publique sur ses propres standards d’inspection.'
+            }
+        },
+        'diop-daily-021': {
+            title: {
+                en: 'Deletion Is Part of Verification',
+                fr: 'La suppression fait partie de la vérification'
+            },
+            excerpt: {
+                en: 'Recent homepage work showed that removing weak status badges can increase truthfulness. When an interface displays more assurance than the institution can continuously verify, subtraction becomes a governance act that improves public legibility.',
+                fr: 'Un travail récent sur la page d’accueil a montré que retirer des badges d’état faibles peut accroître la véracité. Lorsqu’une interface affiche plus d’assurance que l’institution ne peut en vérifier continuellement, la soustraction devient un acte de gouvernance qui améliore la lisibilité publique.'
             }
         }
     };
