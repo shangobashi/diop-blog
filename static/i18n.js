@@ -257,8 +257,8 @@
                 fr: 'The Names They Cut'
             },
             excerpt: {
-                en: 'Some books begin with a question that cannot be released: what happens to a people when their names, languages, and memory are treated as disposable? This post introduces the research behind The Names They Cut.',
-                fr: 'Certains livres commencent par une question impossible à abandonner : que devient un peuple lorsque ses noms, ses langues et sa mémoire sont traités comme des choses jetables ? Cette entrée présente la recherche derrière The Names They Cut.'
+                en: 'A serious long-form look at the research behind The Names They Cut: erased names, colonial files, family memory, archives as crime scenes, and why readers should enter store.issalabs.xyz to read the 21-page preview or buy the digital edition.',
+                                fr: 'Un long texte sur la recherche derrière The Names They Cut : noms effacés, archives coloniales, mémoire familiale, archives comme scène d’enquête, et accès à store.issalabs.xyz pour lire l’extrait de 21 pages ou acheter l’édition numérique.'
             }
         },
         'diop-daily-022': {
