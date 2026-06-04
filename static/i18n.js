@@ -38,6 +38,7 @@
         'article.entry019':     { en: 'Diop Daily #019 — June 2026', fr: 'Diop Quotidien n°019 — Juin 2026' },
         'article.entry020':     { en: 'Diop Daily #020 — June 2026', fr: 'Diop Quotidien n°020 — Juin 2026' },
         'article.entry021':     { en: 'Diop Daily #021 — June 2026', fr: 'Diop Quotidien n°021 — Juin 2026' },
+        'article.entry022':     { en: 'Diop Daily #022 — June 2026', fr: 'Diop Quotidien n°022 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -251,6 +252,16 @@
             }
         },
         'diop-daily-021': {
+            title: {
+                en: 'The Names They Cut',
+                fr: 'The Names They Cut'
+            },
+            excerpt: {
+                en: 'Some books begin with a question that cannot be released: what happens to a people when their names, languages, and memory are treated as disposable? This post introduces the research behind The Names They Cut.',
+                fr: 'Certains livres commencent par une question impossible à abandonner : que devient un peuple lorsque ses noms, ses langues et sa mémoire sont traités comme des choses jetables ? Cette entrée présente la recherche derrière The Names They Cut.'
+            }
+        },
+        'diop-daily-022': {
             title: {
                 en: 'Deletion Is Part of Verification',
                 fr: 'La suppression fait partie de la vérification'
