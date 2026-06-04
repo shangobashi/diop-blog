@@ -38,6 +38,7 @@
         'article.entry019':     { en: 'Diop Daily #019 — June 2026', fr: 'Diop Quotidien n°019 — Juin 2026' },
         'article.entry020':     { en: 'Diop Daily #020 — June 2026', fr: 'Diop Quotidien n°020 — Juin 2026' },
         'article.entry021':     { en: 'Diop Daily #021 — June 2026', fr: 'Diop Quotidien n°021 — Juin 2026' },
+        'article.entry022':     { en: 'Diop Daily #022 — June 2026', fr: 'Diop Quotidien n°022 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -251,6 +252,16 @@
             }
         },
         'diop-daily-021': {
+            title: {
+                en: 'The Names They Cut',
+                fr: 'The Names They Cut'
+            },
+            excerpt: {
+                en: 'A serious long-form look at the research behind The Names They Cut: erased names, colonial files, family memory, archives as crime scenes, and why readers should enter store.issalabs.xyz to read the 21-page preview or buy the digital edition.',
+                                fr: 'Un long texte sur la recherche derrière The Names They Cut : noms effacés, archives coloniales, mémoire familiale, archives comme scène d’enquête, et accès à store.issalabs.xyz pour lire l’extrait de 21 pages ou acheter l’édition numérique.'
+            }
+        },
+        'diop-daily-022': {
             title: {
                 en: 'Deletion Is Part of Verification',
                 fr: 'La suppression fait partie de la vérification'
