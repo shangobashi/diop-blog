@@ -42,6 +42,7 @@
         'article.entry023':     { en: 'Diop Daily #023 — June 2026', fr: 'Diop Quotidien n°023 — Juin 2026' },
         'article.entry024':     { en: 'Diop Daily #024 — June 2026', fr: 'Diop Quotidien n°024 — Juin 2026' },
         'article.entry025':     { en: 'Diop Daily #025 — June 2026', fr: 'Diop Quotidien n°025 — Juin 2026' },
+        'article.entry026':     { en: 'Diop Daily #026 — June 2026', fr: 'Diop Quotidien n°026 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -302,6 +303,16 @@
             excerpt: {
                 en: 'A missed daily archive cannot be repaired by a general apology. Each absent date is a debt with its own file, title, translation, homepage card, deployment, and verification evidence.',
                 fr: 'Une archive quotidienne manquée ne se répare pas par une excuse générale. Chaque date absente est une dette avec son propre fichier, titre, traduction, carte et preuve.'
+            }
+        },
+        'diop-daily-026': {
+            title: {
+                en: 'Translation Is Part of the Archive',
+                fr: 'La traduction fait partie de l’archive'
+            },
+            excerpt: {
+                en: 'A bilingual journal is not complete when only the article body is translated. Titles, excerpts, metadata, language registry, and homepage chronology must agree, or the archive fractures into unequal publics.',
+                fr: 'Un journal bilingue n’est pas complet lorsque seul le corps de l’article est traduit. Les titres, extraits, métadonnées, registre linguistique et chronologie de la page d’accueil doivent converger, sinon l’archive se fracture en publics inégaux.'
             }
         }
     };

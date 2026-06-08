@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Translation Is Part of the Archive — Diop Research</title>
+    <meta name="description" content="A bilingual research journal cannot treat translation as decorative aftercare. When title, body, index card, and language registry diverge, the archive splits into unequal publics and weakens its own institutional memory." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry026">Diop Daily #026 — June 2026</div>
+                <div class="article__meta-line">
+                    <time>June 9, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>translation · archives · sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Translation Is Part of the Archive</h1>
+
+                <p>A bilingual journal fails if it treats translation as decorative aftercare. The archive is not complete when an English article exists and a French version is promised later, approximated on the homepage, or left inconsistent in the language registry. In such a case the institution does not possess one archive in two languages. It possesses two unequal publics: one served by the full record, the other served by a partial shadow of it.</p>
+
+                <p>Recent repair work on the journal made this visible. It was not enough to restore sequence numbers, dates, and deployment. Each recovered entry also had to exist coherently across the article page, the homepage card, the language toggle, the metadata, and the translation registry in <code>i18n.js</code>. The practical lesson is severe: multilingual publishing is not a cosmetic layer on top of the archive. It is one of the archive's integrity constraints.</p>
+
+                <blockquote>
+                    <p>If a public record changes meaning when the language changes, the institution has not translated itself; it has split itself.</p>
+                </blockquote>
+
+                <h2>Why bilingual consistency is an architectural problem</h2>
+
+                <p>Many teams imagine translation as a content operation performed near the end of the pipeline. Write first. Translate later. That logic is convenient for production, but weak for institutions. A journal entry is not merely prose. It is a structured object with a title, a date, a sequence number, a body, an excerpt, a read-time surface, a navigational path, and a place inside a public chronology. Once this is understood, translation becomes architectural.</p>
+
+                <p>Consider what happens when only part of that structure is translated. The article title may switch languages, but the homepage card may remain in English. The body may appear in French, but the meta description may still describe the English article. The post exists, but the language toggle no longer points to one stable claim. It points to a federation of mismatched surfaces.</p>
+
+                <ul>
+                    <li><strong>The body</strong> carries the argument.</li>
+                    <li><strong>The title and excerpt</strong> determine discoverability and first interpretation.</li>
+                    <li><strong>The registry and toggle</strong> determine whether the archive behaves as one institution or as a pile of disconnected pages.</li>
+                </ul>
+
+                <h2>The politics of unequal archives</h2>
+
+                <p>This is not only a user-experience defect. It is a political defect. Language decides who receives precision and who receives approximation. In African and diasporic intellectual life, we know too well what it means for one public to be treated as the primary reader and another as an afterthought. Colonial administration often governed in exactly this way: one language for command, another for reduced access; one archive for state power, another for mediated subjects.</p>
+
+                <p>A serious research institution cannot reproduce this structure casually. If it claims bilingual publication, then French readers cannot be offered a degraded derivative while English readers receive the canonical text. The French surface need not be identical in rhythm, but it must be equal in meaning, rigor, and navigability. Otherwise the institution silently assigns hierarchy to language.</p>
+
+                <h2>What the repair actually required</h2>
+
+                <p>The recent journal work made the repair path concrete. A trustworthy bilingual entry required more than translation skill. It required coordinated updates to every surface that stores or renders meaning:</p>
+
+                <ol>
+                    <li>Create the full English article with clear headings, lists, and a central claim strong enough to survive translation.</li>
+                    <li>Translate the entire body into accurate French, preserving conceptual force rather than merely replacing words.</li>
+                    <li>Register the English and French title plus excerpt in <code>i18n.js</code>, because the homepage language toggle depends on that object as a source of truth.</li>
+                    <li>Insert the homepage card in the correct chronological position, since translation without sequence still damages institutional memory.</li>
+                    <li>Verify that the live site can serve the resulting artifact, because unpublished translation is still private labor rather than public record.</li>
+                </ol>
+
+                <p>What appears to be a linguistic problem is therefore a systems problem. The translation is only trustworthy when the storage, rendering, navigation, and deployment layers agree about what exists.</p>
+
+                <h2>Why this matters for sovereignty</h2>
+
+                <p>Cheikh Anta Diop insisted that historical restoration required both scientific method and linguistic seriousness. A people does not recover itself only by making true claims. It must also build the channels through which those claims circulate without mutilation. In the present context, a bilingual archive is a small but real exercise in that discipline. It says that intellectual work should not depend on one imperial reading lane if the institution has already declared a broader public.</p>
+
+                <p>African intellectual sovereignty will not be built by symbolism alone. It will be built by archives, laboratories, translation systems, publication standards, and durable procedures that allow knowledge to move across publics without losing force. To translate rigorously is therefore not to perform courtesy. It is to build continuity across a fractured linguistic field.</p>
+
+                <p>The immediate lesson for the journal is simple. Translation must enter the definition of done. Not after publication. Inside publication. The archive becomes more honest when every declared language receives a complete and coherent artifact on the same day. That is not excess polish. It is institutional equality made operational.</p>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La traduction fait partie de l’archive</h1>
+
+                <p>Un journal bilingue échoue s’il traite la traduction comme un soin cosmétique ajouté après coup. L’archive n’est pas complète lorsqu’un article anglais existe et qu’une version française est promise pour plus tard, approximée sur la page d’accueil, ou laissée incohérente dans le registre linguistique. Dans un tel cas, l’institution ne possède pas une archive en deux langues. Elle possède deux publics inégaux : l’un servi par le dossier complet, l’autre par une ombre partielle de celui-ci.</p>
+
+                <p>Le travail récent de réparation du journal a rendu cela visible. Il ne suffisait pas de restaurer les numéros de séquence, les dates et le déploiement. Chaque entrée récupérée devait aussi exister de manière cohérente à travers la page d’article, la carte de page d’accueil, le sélecteur de langue, les métadonnées et le registre de traduction dans <code>i18n.js</code>. La leçon pratique est sévère : la publication multilingue n’est pas une couche cosmétique posée sur l’archive. Elle est l’une des contraintes d’intégrité de l’archive.</p>
+
+                <blockquote>
+                    <p>Si un dossier public change de sens lorsque la langue change, l’institution ne s’est pas traduite ; elle s’est scindée.</p>
+                </blockquote>
+
+                <h2>Pourquoi la cohérence bilingue est un problème d’architecture</h2>
+
+                <p>Beaucoup d’équipes imaginent la traduction comme une opération de contenu effectuée à la fin du pipeline. On écrit d’abord. On traduit ensuite. Cette logique est commode pour la production, mais faible pour les institutions. Une entrée de journal n’est pas seulement de la prose. C’est un objet structuré avec un titre, une date, un numéro de séquence, un corps, un extrait, une estimation de lecture, un chemin de navigation et une place dans une chronologie publique. Une fois cela compris, la traduction devient architecturale.</p>
+
+                <p>Considérons ce qui se produit lorsqu’une partie seulement de cette structure est traduite. Le titre de l’article peut changer de langue, alors que la carte de la page d’accueil reste en anglais. Le corps peut apparaître en français, alors que la méta-description décrit encore l’article anglais. L’article existe, mais le sélecteur de langue ne pointe plus vers une affirmation stable. Il pointe vers une fédération de surfaces disjointes.</p>
+
+                <ul>
+                    <li><strong>Le corps</strong> porte l’argument.</li>
+                    <li><strong>Le titre et l’extrait</strong> déterminent la découvrabilité et la première interprétation.</li>
+                    <li><strong>Le registre et le sélecteur</strong> déterminent si l’archive se comporte comme une seule institution ou comme un tas de pages déconnectées.</li>
+                </ul>
+
+                <h2>La politique des archives inégales</h2>
+
+                <p>Ce n’est pas seulement un défaut d’expérience utilisateur. C’est un défaut politique. La langue décide qui reçoit la précision et qui reçoit l’approximation. Dans la vie intellectuelle africaine et diasporique, nous savons trop bien ce que signifie traiter un public comme lecteur principal et un autre comme arrière-pensée. L’administration coloniale gouvernait souvent exactement de cette manière : une langue pour le commandement, une autre pour l’accès réduit ; une archive pour le pouvoir d’État, une autre pour des sujets médiatisés.</p>
+
+                <p>Une institution de recherche sérieuse ne peut pas reproduire cette structure par désinvolture. Si elle revendique une publication bilingue, alors les lecteurs francophones ne peuvent pas recevoir un dérivé dégradé pendant que les lecteurs anglophones reçoivent le texte canonique. La surface française n’a pas besoin d’être identique dans son rythme, mais elle doit être égale en sens, en rigueur et en navigabilité. Sinon, l’institution assigne silencieusement une hiérarchie aux langues.</p>
+
+                <h2>Ce que la réparation a réellement exigé</h2>
+
+                <p>Le travail récent sur le journal a rendu concret le chemin de réparation. Une entrée bilingue digne de confiance exigeait plus qu’une compétence de traduction. Elle exigeait des mises à jour coordonnées sur chaque surface qui stocke ou restitue le sens :</p>
+
+                <ol>
+                    <li>Créer l’article anglais complet avec des intertitres clairs, des listes et une thèse centrale assez forte pour survivre à la traduction.</li>
+                    <li>Traduire l’intégralité du corps en français exact, en préservant la force conceptuelle plutôt qu’en remplaçant simplement des mots.</li>
+                    <li>Enregistrer le titre et l’extrait en anglais et en français dans <code>i18n.js</code>, car le sélecteur de langue de la page d’accueil dépend de cet objet comme source de vérité.</li>
+                    <li>Insérer la carte de page d’accueil à la bonne place chronologique, puisque la traduction sans séquence endommage encore la mémoire institutionnelle.</li>
+                    <li>Vérifier que le site en ligne peut servir l’artefact obtenu, car une traduction non publiée reste un travail privé plutôt qu’un dossier public.</li>
+                </ol>
+
+                <p>Ce qui semble être un problème linguistique est donc un problème de système. La traduction n’est digne de confiance que lorsque les couches de stockage, de rendu, de navigation et de déploiement s’accordent sur ce qui existe.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté</h2>
+
+                <p>Cheikh Anta Diop insistait sur le fait que la restauration historique exigeait à la fois une méthode scientifique et un sérieux linguistique. Un peuple ne se rétablit pas seulement en formulant des affirmations vraies. Il doit aussi construire les canaux par lesquels ces affirmations circulent sans mutilation. Dans le contexte présent, une archive bilingue est un exercice modeste mais réel de cette discipline. Elle affirme que le travail intellectuel ne doit pas dépendre d’un seul couloir de lecture impérial si l’institution a déjà déclaré un public plus large.</p>
+
+                <p>La souveraineté intellectuelle africaine ne se construira pas par le symbolisme seul. Elle se construira par des archives, des laboratoires, des systèmes de traduction, des standards de publication et des procédures durables qui permettent au savoir de circuler entre les publics sans perdre sa force. Traduire avec rigueur n’est donc pas faire preuve de courtoisie. C’est bâtir la continuité à travers un champ linguistique fracturé.</p>
+
+                <p>La leçon immédiate pour le journal est simple. La traduction doit entrer dans la définition du travail achevé. Non pas après la publication. À l’intérieur de la publication. L’archive devient plus honnête lorsque chaque langue déclarée reçoit un artefact complet et cohérent le même jour. Ce n’est pas un surplus de finition. C’est l’égalité institutionnelle rendue opérationnelle.</p>
+            </div>
+
+            <footer class="article__footer">
+                <a href="../index.html" class="article__back" data-i18n="article.back">Back to Journal</a>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>
