@@ -39,6 +39,9 @@
         'article.entry020':     { en: 'Diop Daily #020 — June 2026', fr: 'Diop Quotidien n°020 — Juin 2026' },
         'article.entry021':     { en: 'Diop Daily #021 — June 2026', fr: 'Diop Quotidien n°021 — Juin 2026' },
         'article.entry022':     { en: 'Diop Daily #022 — June 2026', fr: 'Diop Quotidien n°022 — Juin 2026' },
+        'article.entry023':     { en: 'Diop Daily #023 — June 2026', fr: 'Diop Quotidien n°023 — Juin 2026' },
+        'article.entry024':     { en: 'Diop Daily #024 — June 2026', fr: 'Diop Quotidien n°024 — Juin 2026' },
+        'article.entry025':     { en: 'Diop Daily #025 — June 2026', fr: 'Diop Quotidien n°025 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -269,6 +272,36 @@
             excerpt: {
                 en: 'Recent homepage work showed that removing weak status badges can increase truthfulness. When an interface displays more assurance than the institution can continuously verify, subtraction becomes a governance act that improves public legibility.',
                 fr: 'Un travail récent sur la page d’accueil a montré que retirer des badges d’état faibles peut accroître la véracité. Lorsqu’une interface affiche plus d’assurance que l’institution ne peut en vérifier continuellement, la soustraction devient un acte de gouvernance qui améliore la lisibilité publique.'
+            }
+        },
+        'diop-daily-023': {
+            title: {
+                en: 'The Pause Is Evidence',
+                fr: 'La pause est une preuve'
+            },
+            excerpt: {
+                en: 'A paused daily publisher is not a mystery; it is operational evidence. The archive stopped because the scheduler and its watchdog were disabled, turning a publication promise into an unexecuted configuration.',
+                fr: 'Une tâche quotidienne en pause n’est pas un mystère ; c’est une preuve opérationnelle. L’archive s’est arrêtée parce que le planificateur et son watchdog étaient désactivés.'
+            }
+        },
+        'diop-daily-024': {
+            title: {
+                en: 'Watchdogs Are Governance, Not Decoration',
+                fr: 'Les watchdogs sont de la gouvernance, non de la décoration'
+            },
+            excerpt: {
+                en: 'A watchdog that is paused cannot guard anything. Failure monitoring must be treated as governance infrastructure, not a comforting label placed beside an unattended process.',
+                fr: 'Un watchdog en pause ne garde rien. La surveillance des échecs doit être traitée comme une infrastructure de gouvernance, non comme une étiquette rassurante.'
+            }
+        },
+        'diop-daily-025': {
+            title: {
+                en: 'Backlog Is Debt With a Calendar',
+                fr: 'Le backlog est une dette avec un calendrier'
+            },
+            excerpt: {
+                en: 'A missed daily archive cannot be repaired by a general apology. Each absent date is a debt with its own file, title, translation, homepage card, deployment, and verification evidence.',
+                fr: 'Une archive quotidienne manquée ne se répare pas par une excuse générale. Chaque date absente est une dette avec son propre fichier, titre, traduction, carte et preuve.'
             }
         }
     };
