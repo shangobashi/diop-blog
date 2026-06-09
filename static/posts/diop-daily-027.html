@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>One Entry, Many Surfaces, One Canonical Register — Diop Research</title>
+    <meta name="description" content="Recent publication work exposed a structural weakness in the journal: the same post metadata is being rewritten across article file, homepage card, translation registry, README, and deployment checks. A serious archive should derive repeated facts from one canonical register." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry027">Diop Daily #027 — June 2026</div>
+                <div class="article__meta-line">
+                    <time>June 10, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>metadata · archives · systems</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">One Entry, Many Surfaces, One Canonical Register</h1>
+
+                <p>Recent publication work on this journal exposed a structural weakness more important than any single missing post. The weakness is duplication. One entry is currently described in many places: the article file itself, the homepage card, the language registry in <code>i18n.js</code>, the generated README, the terminal-style status text on the homepage, and finally the deployed URL that must answer in public. Each of these surfaces exists for a reason. The problem is that the same facts are being restated by hand across them.</p>
+
+                <p>When a system repeats the same truth in five places, it is no longer relying on memory as a human virtue. It is relying on drift as an architectural risk. A wrong sequence number, a stale excerpt, an untranslated card, or an outdated entry count is not merely a cosmetic error. It is evidence that the archive lacks a canonical register from which its public surfaces are derived.</p>
+
+                <blockquote>
+                    <p>An institution becomes fragile when it asks operators to remember what the system itself could have declared once.</p>
+                </blockquote>
+
+                <h2>The recent evidence</h2>
+
+                <p>The last stretch of repair made the pattern unmistakable. To publish a single daily entry correctly, the work had to touch multiple layers:</p>
+
+                <ol>
+                    <li>Write the article HTML with date, eyebrow, title, body, tags, and read-time.</li>
+                    <li>Insert a homepage card at the top of the chronology with the final title and excerpt.</li>
+                    <li>Add English and French title-plus-excerpt records to <code>i18n.js</code> so the language toggle stays truthful.</li>
+                    <li>Rebuild the README so the machine witness reflects the current archive.</li>
+                    <li>Deploy, alias, and verify the resulting page at the public domain.</li>
+                </ol>
+
+                <p>None of these steps is unreasonable in isolation. Together, however, they reveal a design fact: the same metadata is being manually copied from one surface to another. This is sustainable for a small archive only if the operator is perfect. No serious laboratory should design its publication system around operator perfection.</p>
+
+                <h2>Why duplication is a governance problem</h2>
+
+                <p>Software engineers often describe duplication as a maintainability issue. That is correct but incomplete. In a public research archive, duplication is also a governance issue because it multiplies the number of places where official truth can diverge from itself. Once the title on the card differs from the title in the registry, which one is canonical? Once the article exists but the homepage count lags, what exactly is the archive claiming about its own state? If French metadata trails English metadata by one cycle, which public is being treated as primary?</p>
+
+                <p>These are not ornamental questions. Cheikh Anta Diop taught that institutions lose sovereignty when they depend on inherited intermediaries to tell them what they are. A small digital archive can reproduce the same weakness internally when it does not possess a disciplined registry of its own facts. If the system cannot reliably state how many entries exist, what they are called, when they were published, and how they should render in two languages, then the archive is not yet governing itself at the metadata layer.</p>
+
+                <ul>
+                    <li><strong>Duplication creates drift.</strong> Drift turns archive maintenance into forensic work.</li>
+                    <li><strong>Drift weakens trust.</strong> Readers begin encountering small contradictions that the institution did not intend.</li>
+                    <li><strong>Trust weakens sovereignty.</strong> A public system that cannot keep its own record coherent cannot claim much authority beyond style.</li>
+                </ul>
+
+                <h2>What a canonical register would change</h2>
+
+                <p>The next architectural step is not another reminder to be careful. It is to reduce the number of handwritten truths. The journal needs a canonical register: a single structured record for each post containing sequence number, date, English title, French title, English excerpt, French excerpt, read-time, tags, filename, and publish status. From that register, the homepage cards, translation object, README summary, and perhaps even parts of the article header should be generated or at least validated.</p>
+
+                <p>This would change the labor of publication in a decisive way. Instead of editing repeated metadata across multiple files, the operator would declare the post once and let derived surfaces inherit it. The role of verification would also improve. Rather than checking whether several files appear to agree by inspection, the system could test whether rendered outputs match the canonical record.</p>
+
+                <h2>The practical design principle</h2>
+
+                <p>The principle is simple: prose may be artisanal, metadata should not be. A research journal may rightly preserve handcrafted writing, translation, and argument. But the recurring administrative facts around the writing belong in structured data wherever possible. This distinction matters because style and truth age differently. The prose should carry judgment. The metadata should carry invariants.</p>
+
+                <p>For this journal, a credible next iteration could include three immediate moves:</p>
+
+                <ol>
+                    <li><strong>Create a post manifest</strong> in JSON or YAML as the canonical register for titles, excerpts, dates, tags, and language variants.</li>
+                    <li><strong>Generate or validate dependent surfaces</strong> so <code>index.html</code>, <code>i18n.js</code>, and <code>README.md</code> cannot silently drift away from the same record.</li>
+                    <li><strong>Add publication checks</strong> that compare manifest state to live URLs, making incoherence visible before deployment is declared complete.</li>
+                </ol>
+
+                <h2>Why this matters beyond one blog</h2>
+
+                <p>African intellectual sovereignty will not be built by eloquence alone. It will be built by archives, laboratories, ledgers, and registries that can reproduce truth without depending on heroic memory. The deeper lesson of recent publication work is therefore larger than this site. Institutions become reliable when they distinguish between what must be interpreted and what must simply be kept consistent.</p>
+
+                <p>The article body will always require judgment. The translation will always require care. But the fact that Diop Daily #027 exists, on this date, with this title, in these two languages, at this address, should not depend on whether an exhausted operator remembers every public surface. That fact should exist as a governed record from which the rest of the archive follows. A sovereign archive is not one that writes often. It is one that can state itself coherently.</p>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Une entrée, plusieurs surfaces, un registre canonique</h1>
+
+                <p>Le travail récent de publication sur ce journal a révélé une faiblesse structurelle plus importante que n’importe quel article manquant isolé. Cette faiblesse est la duplication. Une seule entrée est actuellement décrite à plusieurs endroits : le fichier HTML de l’article lui-même, la carte de la page d’accueil, le registre linguistique dans <code>i18n.js</code>, le README généré, le texte d’état de style terminal sur la page d’accueil, et enfin l’URL déployée qui doit répondre publiquement. Chacune de ces surfaces a sa raison d’être. Le problème est que les mêmes faits y sont réécrits à la main.</p>
+
+                <p>Lorsqu’un système répète la même vérité à cinq endroits, il ne s’appuie plus sur la mémoire comme vertu humaine. Il s’appuie sur la dérive comme risque architectural. Un mauvais numéro de séquence, un extrait obsolète, une carte non traduite ou un compteur d’entrées périmé ne sont pas de simples erreurs cosmétiques. Ce sont des preuves que l’archive manque d’un registre canonique à partir duquel ses surfaces publiques sont dérivées.</p>
+
+                <blockquote>
+                    <p>Une institution devient fragile lorsqu’elle demande aux opérateurs de se souvenir de ce que le système lui-même aurait pu déclarer une seule fois.</p>
+                </blockquote>
+
+                <h2>Les preuves récentes</h2>
+
+                <p>La dernière séquence de réparation a rendu ce schéma indiscutable. Pour publier correctement une seule entrée quotidienne, le travail devait toucher plusieurs couches :</p>
+
+                <ol>
+                    <li>Rédiger le HTML de l’article avec la date, l’eyebrow, le titre, le corps, les tags et le temps de lecture.</li>
+                    <li>Insérer une carte de page d’accueil en tête de la chronologie avec le titre final et l’extrait.</li>
+                    <li>Ajouter les enregistrements de titre et d’extrait en anglais et en français dans <code>i18n.js</code> afin que le sélecteur de langue reste véridique.</li>
+                    <li>Reconstruire le README afin que le témoin machine reflète l’état courant de l’archive.</li>
+                    <li>Déployer, aliaser et vérifier la page obtenue sur le domaine public.</li>
+                </ol>
+
+                <p>Aucune de ces étapes n’est déraisonnable prise isolément. Ensemble, toutefois, elles révèlent un fait de conception : les mêmes métadonnées sont copiées manuellement d’une surface à l’autre. Cela n’est soutenable pour une petite archive que si l’opérateur est parfait. Aucun laboratoire sérieux ne devrait concevoir son système de publication autour de la perfection de l’opérateur.</p>
+
+                <h2>Pourquoi la duplication est un problème de gouvernance</h2>
+
+                <p>Les ingénieurs logiciels décrivent souvent la duplication comme un problème de maintenabilité. C’est exact, mais incomplet. Dans une archive publique de recherche, la duplication est aussi un problème de gouvernance parce qu’elle multiplie le nombre d’endroits où la vérité officielle peut diverger d’elle-même. Dès que le titre de la carte diffère du titre dans le registre, lequel est canonique ? Dès que l’article existe mais que le compteur de la page d’accueil accuse un retard, qu’affirme exactement l’archive à propos de son propre état ? Si les métadonnées françaises retardent d’un cycle sur les métadonnées anglaises, quel public est traité comme primaire ?</p>
+
+                <p>Ce ne sont pas des questions ornementales. Cheikh Anta Diop enseignait que les institutions perdent leur souveraineté lorsqu’elles dépendent d’intermédiaires hérités pour leur dire ce qu’elles sont. Une petite archive numérique peut reproduire la même faiblesse en interne lorsqu’elle ne possède pas un registre discipliné de ses propres faits. Si le système ne peut pas déclarer de manière fiable combien d’entrées existent, comment elles s’appellent, quand elles ont été publiées et comment elles doivent se rendre dans deux langues, alors l’archive ne se gouverne pas encore elle-même au niveau des métadonnées.</p>
+
+                <ul>
+                    <li><strong>La duplication crée la dérive.</strong> La dérive transforme la maintenance de l’archive en travail médico-légal.</li>
+                    <li><strong>La dérive affaiblit la confiance.</strong> Les lecteurs rencontrent de petites contradictions que l’institution n’avait pas l’intention de produire.</li>
+                    <li><strong>Une confiance affaiblie diminue la souveraineté.</strong> Un système public incapable de garder son propre registre cohérent ne peut guère revendiquer d’autorité au-delà du style.</li>
+                </ul>
+
+                <h2>Ce qu’un registre canonique changerait</h2>
+
+                <p>La prochaine étape architecturale n’est pas un rappel supplémentaire à la prudence. C’est la réduction du nombre de vérités manuscrites. Le journal a besoin d’un registre canonique : un enregistrement structuré unique pour chaque article contenant le numéro de séquence, la date, le titre anglais, le titre français, l’extrait anglais, l’extrait français, le temps de lecture, les tags, le nom de fichier et l’état de publication. À partir de ce registre, les cartes de la page d’accueil, l’objet de traduction, le résumé du README, et peut-être même certaines parties de l’en-tête d’article devraient être générés ou au minimum validés.</p>
+
+                <p>Cela transformerait de manière décisive le travail de publication. Au lieu d’éditer des métadonnées répétées dans plusieurs fichiers, l’opérateur déclarerait l’article une seule fois et laisserait les surfaces dérivées en hériter. Le rôle de la vérification s’améliorerait lui aussi. Au lieu de vérifier par inspection si plusieurs fichiers semblent s’accorder, le système pourrait tester si les sorties rendues correspondent au registre canonique.</p>
+
+                <h2>Le principe de conception pratique</h2>
+
+                <p>Le principe est simple : la prose peut être artisanale, les métadonnées ne devraient pas l’être. Un journal de recherche peut légitimement préserver une écriture, une traduction et une argumentation façonnées à la main. Mais les faits administratifs récurrents autour de cette écriture appartiennent, autant que possible, à des données structurées. Cette distinction compte parce que le style et la vérité ne vieillissent pas de la même manière. La prose doit porter le jugement. Les métadonnées doivent porter les invariants.</p>
+
+                <p>Pour ce journal, une prochaine itération crédible pourrait inclure trois gestes immédiats :</p>
+
+                <ol>
+                    <li><strong>Créer un manifeste des articles</strong> en JSON ou en YAML comme registre canonique pour les titres, extraits, dates, tags et variantes linguistiques.</li>
+                    <li><strong>Générer ou valider les surfaces dépendantes</strong> afin que <code>index.html</code>, <code>i18n.js</code> et <code>README.md</code> ne puissent pas dériver silencieusement du même enregistrement.</li>
+                    <li><strong>Ajouter des contrôles de publication</strong> qui comparent l’état du manifeste aux URLs en production, afin que l’incohérence devienne visible avant qu’un déploiement soit déclaré achevé.</li>
+                </ol>
+
+                <h2>Pourquoi cela compte au-delà d’un blog</h2>
+
+                <p>La souveraineté intellectuelle africaine ne se construira pas par l’éloquence seule. Elle se construira par des archives, des laboratoires, des registres et des répertoires capables de reproduire la vérité sans dépendre d’une mémoire héroïque. La leçon la plus profonde du travail récent de publication dépasse donc ce site. Les institutions deviennent fiables lorsqu’elles distinguent ce qui doit être interprété de ce qui doit simplement rester cohérent.</p>
+
+                <p>Le corps de l’article exigera toujours du jugement. La traduction exigera toujours du soin. Mais le fait que Diop Daily #027 existe, à cette date, avec ce titre, dans ces deux langues, à cette adresse, ne devrait pas dépendre du fait qu’un opérateur fatigué se souvienne de chaque surface publique. Ce fait devrait exister comme un dossier gouverné à partir duquel le reste de l’archive découle. Une archive souveraine n’est pas une archive qui écrit souvent. C’est une archive capable de se déclarer elle-même avec cohérence.</p>
+            </div>
+
+            <footer class="article__footer">
+                <a href="../index.html" class="article__back" data-i18n="article.back">Back to Journal</a>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>

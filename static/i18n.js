@@ -43,6 +43,7 @@
         'article.entry024':     { en: 'Diop Daily #024 — June 2026', fr: 'Diop Quotidien n°024 — Juin 2026' },
         'article.entry025':     { en: 'Diop Daily #025 — June 2026', fr: 'Diop Quotidien n°025 — Juin 2026' },
         'article.entry026':     { en: 'Diop Daily #026 — June 2026', fr: 'Diop Quotidien n°026 — Juin 2026' },
+        'article.entry027':     { en: 'Diop Daily #027 — June 2026', fr: 'Diop Quotidien n°027 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -313,6 +314,16 @@
             excerpt: {
                 en: 'A bilingual journal is not complete when only the article body is translated. Titles, excerpts, metadata, language registry, and homepage chronology must agree, or the archive fractures into unequal publics.',
                 fr: 'Un journal bilingue n’est pas complet lorsque seul le corps de l’article est traduit. Les titres, extraits, métadonnées, registre linguistique et chronologie de la page d’accueil doivent converger, sinon l’archive se fracture en publics inégaux.'
+            }
+        },
+        'diop-daily-027': {
+            title: {
+                en: 'One Entry, Many Surfaces, One Canonical Register',
+                fr: 'Une entrée, plusieurs surfaces, un registre canonique'
+            },
+            excerpt: {
+                en: 'Recent publication work exposed a structural weakness in the journal: the same post metadata is being rewritten across article file, homepage card, translation registry, README, and deployment checks. A serious archive should not rely on memory to keep repeated facts aligned; it should derive them from one canonical register.',
+                fr: 'Un travail récent de publication a révélé une faiblesse structurelle du journal : les mêmes métadonnées d’article sont réécrites dans le fichier d’article, la carte de page d’accueil, le registre de traduction, le README et les contrôles de déploiement. Une archive sérieuse ne devrait pas dépendre de la mémoire pour garder ces faits alignés ; elle devrait les dériver d’un registre canonique unique.'
             }
         }
     };
