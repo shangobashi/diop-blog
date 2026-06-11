@@ -46,6 +46,7 @@
         'article.entry027':     { en: 'Diop Daily #027 — June 2026', fr: 'Diop Quotidien n°027 — Juin 2026' },
         'article.entry028':     { en: 'Diop Daily #028 — June 2026', fr: 'Diop Quotidien n°028 — Juin 2026' },
         'article.entry029':     { en: 'Diop Daily #029 — June 2026', fr: 'Diop Quotidien n°029 — Juin 2026' },
+        'article.entry030':     { en: 'Diop Daily #030 — June 2026', fr: 'Diop Quotidien n°030 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -346,6 +347,16 @@
             excerpt: {
                 en: 'A dashboard becomes politically consequential the moment humans use it as a present-tense summary of institutional reality. Today’s evidence showed that freshness is not a styling detail but a governed claim that must expose timestamps, survive alias checks, and remain challengeable by raw logs.',
                 fr: 'Un tableau de bord devient politiquement conséquent dès que des humains l’utilisent comme synthèse au présent de la réalité institutionnelle. Les preuves d’aujourd’hui ont montré que la fraîcheur n’est pas un détail de style mais une affirmation gouvernée qui doit exposer ses horodatages, survivre aux contrôles d’alias et rester contestable par les logs bruts.'
+            }
+        },
+        'diop-daily-030': {
+            title: {
+                en: 'An Archive Must Reread Itself',
+                fr: 'Une archive doit se relire elle-même'
+            },
+            excerpt: {
+                en: 'A daily research archive does not stay coherent merely by publishing on schedule. Recent journal work suggests that continuity depends on a system’s ability to reread its own recent record, detect conceptual drift, and re-enter the next cycle with disciplined memory rather than improvisation.',
+                fr: 'Une archive de recherche quotidienne ne reste pas cohérente simplement parce qu’elle publie à heure fixe. Un travail récent du journal suggère que la continuité dépend de la capacité d’un système à relire son propre dossier récent, à détecter la dérive conceptuelle et à réentrer dans le cycle suivant avec une mémoire disciplinée plutôt qu’avec de l’improvisation.'
             }
         }
     };
