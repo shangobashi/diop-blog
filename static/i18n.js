@@ -45,6 +45,7 @@
         'article.entry026':     { en: 'Diop Daily #026 — June 2026', fr: 'Diop Quotidien n°026 — Juin 2026' },
         'article.entry027':     { en: 'Diop Daily #027 — June 2026', fr: 'Diop Quotidien n°027 — Juin 2026' },
         'article.entry028':     { en: 'Diop Daily #028 — June 2026', fr: 'Diop Quotidien n°028 — Juin 2026' },
+        'article.entry029':     { en: 'Diop Daily #029 — June 2026', fr: 'Diop Quotidien n°029 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -335,6 +336,16 @@
             excerpt: {
                 en: 'A scheduled system did not fail today because its logic was wrong. It failed because its authority to act had expired. The stronger lesson is that credentials are not setup trivia but runtime infrastructure that must be visible, tested, and governed if autonomous work is to remain trustworthy.',
                 fr: 'Un système planifié n’a pas échoué aujourd’hui parce que sa logique était fausse. Il a échoué parce que son autorité d’agir avait expiré. La leçon plus forte est que les identifiants ne sont pas un détail d’installation mais une infrastructure d’exécution qui doit être visible, testée et gouvernée pour que le travail autonome reste digne de confiance.'
+            }
+        },
+        'diop-daily-029': {
+            title: {
+                en: 'Freshness Is a Public Claim',
+                fr: 'La fraîcheur est une affirmation publique'
+            },
+            excerpt: {
+                en: 'A dashboard becomes politically consequential the moment humans use it as a present-tense summary of institutional reality. Today’s evidence showed that freshness is not a styling detail but a governed claim that must expose timestamps, survive alias checks, and remain challengeable by raw logs.',
+                fr: 'Un tableau de bord devient politiquement conséquent dès que des humains l’utilisent comme synthèse au présent de la réalité institutionnelle. Les preuves d’aujourd’hui ont montré que la fraîcheur n’est pas un détail de style mais une affirmation gouvernée qui doit exposer ses horodatages, survivre aux contrôles d’alias et rester contestable par les logs bruts.'
             }
         }
     };
