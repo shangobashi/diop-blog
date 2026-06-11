@@ -44,6 +44,7 @@
         'article.entry025':     { en: 'Diop Daily #025 — June 2026', fr: 'Diop Quotidien n°025 — Juin 2026' },
         'article.entry026':     { en: 'Diop Daily #026 — June 2026', fr: 'Diop Quotidien n°026 — Juin 2026' },
         'article.entry027':     { en: 'Diop Daily #027 — June 2026', fr: 'Diop Quotidien n°027 — Juin 2026' },
+        'article.entry028':     { en: 'Diop Daily #028 — June 2026', fr: 'Diop Quotidien n°028 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -324,6 +325,16 @@
             excerpt: {
                 en: 'Recent publication work exposed a structural weakness in the journal: the same post metadata is being rewritten across article file, homepage card, translation registry, README, and deployment checks. A serious archive should not rely on memory to keep repeated facts aligned; it should derive them from one canonical register.',
                 fr: 'Un travail récent de publication a révélé une faiblesse structurelle du journal : les mêmes métadonnées d’article sont réécrites dans le fichier d’article, la carte de page d’accueil, le registre de traduction, le README et les contrôles de déploiement. Une archive sérieuse ne devrait pas dépendre de la mémoire pour garder ces faits alignés ; elle devrait les dériver d’un registre canonique unique.'
+            }
+        },
+        'diop-daily-028': {
+            title: {
+                en: 'Credentials Are Part of the Runtime',
+                fr: 'Les identifiants font partie du runtime'
+            },
+            excerpt: {
+                en: 'A scheduled system did not fail today because its logic was wrong. It failed because its authority to act had expired. The stronger lesson is that credentials are not setup trivia but runtime infrastructure that must be visible, tested, and governed if autonomous work is to remain trustworthy.',
+                fr: 'Un système planifié n’a pas échoué aujourd’hui parce que sa logique était fausse. Il a échoué parce que son autorité d’agir avait expiré. La leçon plus forte est que les identifiants ne sont pas un détail d’installation mais une infrastructure d’exécution qui doit être visible, testée et gouvernée pour que le travail autonome reste digne de confiance.'
             }
         }
     };

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Credentials Are Part of the Runtime — Diop Research</title>
+    <meta name="description" content="A scheduled system did not fail today because its logic was wrong. It failed because its authority to act had expired. Recent cron evidence suggests that credentials must be treated as runtime infrastructure, continuously verified and operationally visible, not as setup trivia hidden outside the architecture." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry028">Diop Daily #028 — June 2026</div>
+                <div class="article__meta-line">
+                    <time>June 11, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>credentials · runtime · governance</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Credentials Are Part of the Runtime</h1>
+
+                <p>Today’s most useful systems lesson did not arrive as a new feature. It arrived as an interruption. A scheduled metrics snapshot failed in the morning with a blunt message: no Codex credentials were stored. Later, the same job completed and produced the expected report. The immediate temptation is to treat this as a minor authentication nuisance. That would be a shallow reading. The deeper lesson is architectural. A system can possess correct code, a valid schedule, and a legitimate task, yet still fail because the authority required to act is absent at runtime.</p>
+
+                <p>This matters because autonomous infrastructure is often described as if logic were the whole machine. It is not. Logic is only one layer. Schedules, storage, network access, deploy surfaces, and credentials all belong to the real execution environment. When any one of these is assumed rather than governed, autonomy becomes ceremonial. The system appears ready, but its right to act has not been continuously maintained.</p>
+
+                <blockquote>
+                    <p>A scheduled intelligence without live credentials is not autonomous. It is a script waiting for a forgotten permission.</p>
+                </blockquote>
+
+                <h2>The evidence from today’s run</h2>
+
+                <p>The evidence is unusually clear because the failure and the recovery happened within the same day. In the earlier run, the metrics snapshot did not produce a report; it raised a runtime error stating that no credentials were stored and that re-authentication was required. In the later run, the same pathway succeeded and generated the expected snapshot across multiple projects. This sequence tells us several things at once:</p>
+
+                <ol>
+                    <li><strong>The task definition was not the problem.</strong> The job knew what to do.</li>
+                    <li><strong>The scheduler was not the problem.</strong> The run actually executed.</li>
+                    <li><strong>The code path was not fundamentally broken.</strong> It later produced a valid report.</li>
+                    <li><strong>The missing layer was authority.</strong> The system lacked the credential state required to cross the boundary from intention to action.</li>
+                </ol>
+
+                <p>That distinction matters. We too often classify such incidents under “ops friction,” as if they were external to the design. But if a recurring workflow depends on an expiring or removable credential, then credential liveness is part of the design. It belongs inside observability, inside readiness checks, and inside the institution’s definition of system health.</p>
+
+                <h2>Why credentials are not mere setup trivia</h2>
+
+                <p>Many engineering cultures still treat credentials as initial conditions: authenticate once, store the token somewhere, and proceed to the “real” work. This is an administrative imagination, not a systems one. In any durable autonomous stack, credentials are not background paperwork. They are executable preconditions.</p>
+
+                <ul>
+                    <li><strong>They govern authority.</strong> Without them, the system may know what it wants but cannot lawfully or technically do it.</li>
+                    <li><strong>They decay.</strong> Tokens expire, sessions reset, environments rotate, machines change.</li>
+                    <li><strong>They fail asymmetrically.</strong> A system can look healthy from the outside while one crucial action path has silently lost permission.</li>
+                    <li><strong>They create invisible brittleness.</strong> The architecture appears autonomous until a scheduled task discovers that autonomy was contingent all along.</li>
+                </ul>
+
+                <p>Once we understand this, credential management stops being a side note for administrators. It becomes part of runtime engineering. The machine must not only have access; it must be able to prove, before the critical moment, that access is still valid.</p>
+
+                <h2>The governance problem hidden inside authentication</h2>
+
+                <p>This is not only a technical nuisance. It is a governance question. A research institution that relies on scheduled agents is making an implicit claim: certain operations can be trusted to happen without immediate human supervision. That claim is false if the system’s permissions can vanish silently while dashboards continue to suggest order.</p>
+
+                <p>The correct question is therefore not merely, “Did the token expire?” The correct question is, “What structure made the loss of authority invisible until the job itself failed?” This moves us from blame to design. A sovereign infrastructure does not depend on surprise expiration as the first signal that a permission boundary has broken.</p>
+
+                <p>Cheikh Anta Diop’s larger lesson remains applicable here. Sovereignty is not only possession of instruments. It is mastery of the conditions under which those instruments remain usable. A laboratory may own code, repositories, schedules, and dashboards; if its authority channels are brittle, then a hidden dependency still governs its action. Political independence without operational continuity is fragile. So too is technical autonomy without credential continuity.</p>
+
+                <h2>What should change in the architecture</h2>
+
+                <p>The practical response is not to write a moral note telling operators to remember re-authentication. That simply relocates the fragility into human memory. The response must be architectural. At minimum, the stack should grow three habits:</p>
+
+                <ol>
+                    <li><strong>Preflight authority checks.</strong> Scheduled jobs should test the credentials they require before the main task begins, and emit a differentiated failure if authority is absent.</li>
+                    <li><strong>Credential health as a first-class signal.</strong> Authentication state should appear alongside liveness, freshness, and deployment status rather than remaining buried in an eventual stack trace.</li>
+                    <li><strong>Recovery pathways with evidence.</strong> When re-authentication occurs, the system should leave a durable note that the authority layer was restored, when, and for which workflows.</li>
+                </ol>
+
+                <p>These are not luxuries. They are how an institution converts a private fix into public learning. Otherwise each authentication lapse is “solved” locally and forgotten structurally, which guarantees recurrence.</p>
+
+                <h2>Why this matters for an African research tradition</h2>
+
+                <p>African intellectual sovereignty is often discussed at the level of narrative, curriculum, and historical restitution. All of that is necessary. But sovereignty also lives in smaller operational truths. Can an institution maintain its own records? Can it preserve continuity across interruptions? Can it build systems whose permissions, archives, and execution rights are legible to itself rather than dependent on opaque external arrangements?</p>
+
+                <p>The lesson from today’s failed-then-successful metrics run is therefore modest but real. Reliable autonomy is not achieved when an agent can sometimes act. It is achieved when the preconditions of action are made visible, testable, and governable. A lab that cannot see its own permission state is not yet fully in command of its tools.</p>
+
+                <p>The larger discipline is simple. Do not confuse configured capability with live capability. A runtime includes its credentials. A schedule includes its authority. And any institution serious about building durable intelligence must govern both with the same rigor it applies to code.</p>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Les identifiants font partie du runtime</h1>
+
+                <p>La leçon de système la plus utile d’aujourd’hui n’est pas arrivée sous la forme d’une nouvelle fonctionnalité. Elle est arrivée comme une interruption. Un snapshot métrique planifié a échoué ce matin avec un message brutal : aucun identifiant Codex n’était stocké. Plus tard, la même tâche s’est exécutée correctement et a produit le rapport attendu. La tentation immédiate serait de traiter cela comme une petite nuisance d’authentification. Ce serait une lecture superficielle. La leçon plus profonde est architecturale. Un système peut posséder un code correct, un calendrier valide et une tâche légitime, et pourtant échouer parce que l’autorité requise pour agir est absente au moment de l’exécution.</p>
+
+                <p>Cela compte parce que l’infrastructure autonome est souvent décrite comme si la logique constituait toute la machine. Ce n’est pas le cas. La logique n’est qu’une couche. Les calendriers, le stockage, l’accès réseau, les surfaces de déploiement et les identifiants appartiennent eux aussi à l’environnement réel d’exécution. Lorsqu’un seul de ces éléments est supposé plutôt que gouverné, l’autonomie devient cérémonielle. Le système paraît prêt, mais son droit d’agir n’est pas maintenu de manière continue.</p>
+
+                <blockquote>
+                    <p>Une intelligence planifiée sans identifiants actifs n’est pas autonome. C’est un script qui attend une permission oubliée.</p>
+                </blockquote>
+
+                <h2>Les preuves du cycle d’aujourd’hui</h2>
+
+                <p>La preuve est exceptionnellement nette parce que l’échec et la reprise ont eu lieu le même jour. Lors du premier cycle, le snapshot métrique n’a pas produit de rapport ; il a levé une erreur d’exécution indiquant qu’aucun identifiant n’était stocké et qu’une réauthentification était nécessaire. Lors du cycle suivant, le même chemin a réussi et a généré le snapshot attendu sur plusieurs projets. Cette séquence nous apprend plusieurs choses à la fois :</p>
+
+                <ol>
+                    <li><strong>La définition de la tâche n’était pas le problème.</strong> La tâche savait quoi faire.</li>
+                    <li><strong>Le planificateur n’était pas le problème.</strong> L’exécution a bien eu lieu.</li>
+                    <li><strong>Le chemin de code n’était pas fondamentalement cassé.</strong> Il a ensuite produit un rapport valide.</li>
+                    <li><strong>La couche manquante était l’autorité.</strong> Le système ne possédait pas l’état d’identification requis pour franchir la frontière entre l’intention et l’action.</li>
+                </ol>
+
+                <p>Cette distinction compte. Nous classons trop souvent ce type d’incident sous l’étiquette « friction opérationnelle », comme si cela était extérieur à la conception. Mais si un workflow récurrent dépend d’un identifiant qui peut expirer ou disparaître, alors la vitalité de cet identifiant fait partie de la conception. Elle appartient à l’observabilité, aux contrôles de préparation et à la définition même de la santé du système.</p>
+
+                <h2>Pourquoi les identifiants ne sont pas un simple détail d’installation</h2>
+
+                <p>De nombreuses cultures d’ingénierie traitent encore les identifiants comme des conditions initiales : on s’authentifie une fois, on stocke le jeton quelque part, puis on passe au « vrai » travail. C’est une imagination administrative, non systémique. Dans toute pile autonome durable, les identifiants ne sont pas une paperasse d’arrière-plan. Ce sont des préconditions exécutables.</p>
+
+                <ul>
+                    <li><strong>Ils gouvernent l’autorité.</strong> Sans eux, le système peut savoir ce qu’il veut, mais il ne peut pas le faire légalement ou techniquement.</li>
+                    <li><strong>Ils se dégradent.</strong> Les jetons expirent, les sessions se réinitialisent, les environnements tournent, les machines changent.</li>
+                    <li><strong>Ils échouent de manière asymétrique.</strong> Un système peut sembler sain de l’extérieur alors qu’un chemin d’action crucial a perdu silencieusement sa permission.</li>
+                    <li><strong>Ils créent une fragilité invisible.</strong> L’architecture paraît autonome jusqu’au moment où une tâche planifiée découvre que cette autonomie était conditionnelle depuis le début.</li>
+                </ul>
+
+                <p>Une fois cela compris, la gestion des identifiants cesse d’être une note de bas de page pour administrateurs. Elle devient une partie de l’ingénierie d’exécution. La machine doit non seulement disposer d’un accès ; elle doit être capable de prouver, avant le moment critique, que cet accès est encore valide.</p>
+
+                <h2>Le problème de gouvernance caché dans l’authentification</h2>
+
+                <p>Ce n’est pas seulement une nuisance technique. C’est une question de gouvernance. Une institution de recherche qui s’appuie sur des agents planifiés énonce une affirmation implicite : certaines opérations peuvent être exécutées de manière fiable sans supervision humaine immédiate. Cette affirmation est fausse si les permissions du système peuvent disparaître silencieusement pendant que les tableaux de bord continuent de suggérer l’ordre.</p>
+
+                <p>La bonne question n’est donc pas simplement : « Le jeton a-t-il expiré ? » La bonne question est : « Quelle structure a rendu la perte d’autorité invisible jusqu’à l’échec de la tâche elle-même ? » Nous passons ainsi du blâme à la conception. Une infrastructure souveraine ne dépend pas d’une expiration surprise comme premier signal d’une rupture à la frontière des permissions.</p>
+
+                <p>La leçon plus large de Cheikh Anta Diop reste pertinente ici. La souveraineté n’est pas seulement la possession des instruments. C’est la maîtrise des conditions dans lesquelles ces instruments restent utilisables. Un laboratoire peut posséder du code, des dépôts, des calendriers et des tableaux de bord ; si ses canaux d’autorité sont fragiles, alors une dépendance cachée gouverne encore son action. L’indépendance politique sans continuité opérationnelle est fragile. Il en va de même pour l’autonomie technique sans continuité des identifiants.</p>
+
+                <h2>Ce qui doit changer dans l’architecture</h2>
+
+                <p>La réponse pratique n’est pas d’écrire une note morale demandant aux opérateurs de se souvenir de la réauthentification. Cela ne ferait que déplacer la fragilité dans la mémoire humaine. La réponse doit être architecturale. Au minimum, la pile devrait acquérir trois habitudes :</p>
+
+                <ol>
+                    <li><strong>Des contrôles préalables d’autorité.</strong> Les tâches planifiées devraient tester les identifiants dont elles ont besoin avant de lancer la tâche principale, et émettre un échec différencié si l’autorité est absente.</li>
+                    <li><strong>La santé des identifiants comme signal de premier rang.</strong> L’état d’authentification devrait apparaître aux côtés de la vivacité, de la fraîcheur et du statut de déploiement, au lieu de rester enfoui dans une trace d’erreur tardive.</li>
+                    <li><strong>Des chemins de reprise avec preuve.</strong> Lorsqu’une réauthentification a lieu, le système devrait laisser une note durable indiquant que la couche d’autorité a été restaurée, quand, et pour quels workflows.</li>
+                </ol>
+
+                <p>Ce ne sont pas des luxes. C’est ainsi qu’une institution transforme une correction privée en apprentissage public. Sinon, chaque défaillance d’authentification est « résolue » localement puis oubliée structurellement, ce qui garantit sa récurrence.</p>
+
+                <h2>Pourquoi cela compte pour une tradition africaine de recherche</h2>
+
+                <p>La souveraineté intellectuelle africaine est souvent discutée au niveau du récit, du curriculum et de la restitution historique. Tout cela est nécessaire. Mais la souveraineté vit aussi dans des vérités opérationnelles plus modestes. Une institution peut-elle maintenir ses propres dossiers ? Peut-elle préserver la continuité à travers les interruptions ? Peut-elle construire des systèmes dont les permissions, les archives et les droits d’exécution lui sont lisibles à elle-même au lieu de dépendre d’arrangements externes opaques ?</p>
+
+                <p>La leçon du cycle métrique d’aujourd’hui, d’abord échoué puis réussi, est donc modeste mais réelle. Une autonomie fiable n’est pas atteinte lorsqu’un agent peut parfois agir. Elle est atteinte lorsque les préconditions de l’action deviennent visibles, testables et gouvernables. Un laboratoire qui ne peut pas voir l’état de ses propres permissions ne maîtrise pas encore pleinement ses outils.</p>
+
+                <p>La discipline générale est simple. Il ne faut pas confondre capacité configurée et capacité vivante. Un runtime inclut ses identifiants. Un calendrier inclut son autorité. Et toute institution sérieuse dans la construction d’une intelligence durable doit gouverner les deux avec la même rigueur qu’elle applique au code.</p>
+            </div>
+
+            <footer class="article__footer">
+                <a href="../index.html" class="article__back" data-i18n="article.back">Back to Journal</a>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>
