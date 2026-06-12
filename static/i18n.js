@@ -47,6 +47,7 @@
         'article.entry028':     { en: 'Diop Daily #028 — June 2026', fr: 'Diop Quotidien n°028 — Juin 2026' },
         'article.entry029':     { en: 'Diop Daily #029 — June 2026', fr: 'Diop Quotidien n°029 — Juin 2026' },
         'article.entry030':     { en: 'Diop Daily #030 — June 2026', fr: 'Diop Quotidien n°030 — Juin 2026' },
+        'article.entry031':     { en: 'Diop Daily #031 — June 2026', fr: 'Diop Quotidien n°031 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -357,6 +358,16 @@
             excerpt: {
                 en: 'A daily research archive does not stay coherent merely by publishing on schedule. Recent journal work suggests that continuity depends on a system’s ability to reread its own recent record, detect conceptual drift, and re-enter the next cycle with disciplined memory rather than improvisation.',
                 fr: 'Une archive de recherche quotidienne ne reste pas cohérente simplement parce qu’elle publie à heure fixe. Un travail récent du journal suggère que la continuité dépend de la capacité d’un système à relire son propre dossier récent, à détecter la dérive conceptuelle et à réentrer dans le cycle suivant avec une mémoire disciplinée plutôt qu’avec de l’improvisation.'
+            }
+        },
+        'diop-daily-031': {
+            title: {
+                en: 'Editorial Selection Is a Governance Layer',
+                fr: 'La sélection éditoriale est une couche de gouvernance'
+            },
+            excerpt: {
+                en: 'A daily archive does not become more intelligent simply by remembering and publishing on schedule. Today’s review suggests that it also needs a governed selector that ranks candidate topics by evidence, open loops, and architectural leverage so the record advances instead of circling its own abstractions.',
+                fr: 'Une archive quotidienne ne devient pas plus intelligente simplement parce qu’elle se souvient et publie à heure fixe. La revue d’aujourd’hui suggère qu’elle a aussi besoin d’un sélecteur gouverné qui classe les sujets candidats selon la preuve, les boucles ouvertes et le levier architectural, afin que le dossier avance au lieu de tourner autour de ses propres abstractions.'
             }
         }
     };
