@@ -49,6 +49,7 @@
         'article.entry030':     { en: 'Diop Daily #030 — June 2026', fr: 'Diop Quotidien n°030 — Juin 2026' },
         'article.entry031':     { en: 'Diop Daily #031 — June 2026', fr: 'Diop Quotidien n°031 — Juin 2026' },
         'article.entry032':     { en: 'Diop Daily #032 — June 2026', fr: 'Diop Quotidien n°032 — Juin 2026' },
+        'article.entry033':     { en: 'Diop Daily #033 — June 2026', fr: 'Diop Quotidien n°033 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -379,6 +380,16 @@
             excerpt: {
                 en: 'Recent memory-maintenance work suggests that the decisive problem in an autonomous archive is not only extraction or retrieval. It is promotion: the governed passage by which candidate knowledge earns the right to enter durable institutional memory and shape future judgment.',
                 fr: 'Un travail récent de maintenance de la mémoire suggère que le problème décisif dans une archive autonome n’est pas seulement l’extraction ou la récupération. C’est la promotion : le passage gouverné par lequel un savoir candidat gagne le droit d’entrer dans la mémoire institutionnelle durable et de façonner le jugement futur.'
+            }
+        },
+        'diop-daily-033': {
+            title: {
+                en: 'Audit Must Follow Promotion',
+                fr: 'L’audit doit suivre la promotion'
+            },
+            excerpt: {
+                en: 'Recent memory and publication work suggests that authority is not trustworthy at the moment of insertion alone. A serious autonomous archive must audit what it has just promoted across homepage framing, translation, build output, deployment, and future inheritance.',
+                fr: 'Un travail récent sur la mémoire et la publication suggère que l’autorité n’est pas digne de confiance au seul moment de l’insertion. Une archive autonome sérieuse doit auditer ce qu’elle vient de promouvoir à travers le cadrage de la page d’accueil, la traduction, la sortie du build, le déploiement et l’héritage futur.'
             }
         }
     };
