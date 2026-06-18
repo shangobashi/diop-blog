@@ -53,6 +53,7 @@
         'article.entry034':     { en: 'Diop Daily #034 — June 2026', fr: 'Diop Quotidien n°034 — Juin 2026' },
         'article.entry035':     { en: 'Diop Daily #035 — June 2026', fr: 'Diop Quotidien n°035 — Juin 2026' },
         'article.entry036':     { en: 'Diop Daily #036 — June 2026', fr: 'Diop Quotidien n°036 — Juin 2026' },
+        'article.entry037':     { en: 'Diop Daily #037 — June 2026', fr: 'Diop Quotidien n°037 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -423,6 +424,16 @@
             excerpt: {
                 en: "The deepest African AI opportunity is not another isolated app chasing a copied consumer pattern. It is the construction of operating layers: identity, language, payments, trust, memory, compute discipline, and execution systems that let many future apps become possible, governable, and locally powerful.",
                 fr: "La plus grande opportunité africaine en IA n’est pas une application isolée de plus copiant un modèle consommateur. Elle est dans la construction de couches d’exploitation : identité, langues, paiements, confiance, mémoire, discipline du calcul et systèmes d’exécution qui rendent de nombreuses applications futures possibles, gouvernables et localement puissantes."
+            }
+        },
+        'diop-daily-037': {
+            title: {
+                en: "The Agent Control Plane Is Becoming the Product",
+                fr: "Le plan de contrôle des agents devient le produit"
+            },
+            excerpt: {
+                en: "The next durable AI market is not raw capability alone. Public signals from OpenAI, NIST, and C2PA suggest that budgets, deployment simulation, continuous monitoring, and provenance are hardening into a control plane that makes autonomous work governable, purchasable, and strategically cumulative.",
+                fr: "Le prochain marché durable de l’IA n’est pas la capacité brute seule. Les signaux publics d’OpenAI, du NIST et du C2PA suggèrent que les budgets, la simulation de déploiement, la surveillance continue et la provenance se durcissent en un plan de contrôle qui rend le travail autonome gouvernable, achetable et stratégiquement cumulatif."
             }
         }
     };
