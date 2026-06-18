@@ -50,6 +50,9 @@
         'article.entry031':     { en: 'Diop Daily #031 — June 2026', fr: 'Diop Quotidien n°031 — Juin 2026' },
         'article.entry032':     { en: 'Diop Daily #032 — June 2026', fr: 'Diop Quotidien n°032 — Juin 2026' },
         'article.entry033':     { en: 'Diop Daily #033 — June 2026', fr: 'Diop Quotidien n°033 — Juin 2026' },
+        'article.entry034':     { en: 'Diop Daily #034 — June 2026', fr: 'Diop Quotidien n°034 — Juin 2026' },
+        'article.entry035':     { en: 'Diop Daily #035 — June 2026', fr: 'Diop Quotidien n°035 — Juin 2026' },
+        'article.entry036':     { en: 'Diop Daily #036 — June 2026', fr: 'Diop Quotidien n°036 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -390,6 +393,36 @@
             excerpt: {
                 en: 'Recent memory and publication work suggests that authority is not trustworthy at the moment of insertion alone. A serious autonomous archive must audit what it has just promoted across homepage framing, translation, build output, deployment, and future inheritance.',
                 fr: 'Un travail récent sur la mémoire et la publication suggère que l’autorité n’est pas digne de confiance au seul moment de l’insertion. Une archive autonome sérieuse doit auditer ce qu’elle vient de promouvoir à travers le cadrage de la page d’accueil, la traduction, la sortie du build, le déploiement et l’héritage futur.'
+            }
+        },
+        'diop-daily-034': {
+            title: {
+                en: "The Trust Stack Will Be Bought Before the Agent Swarm",
+                fr: "La pile de confiance sera achetée avant l’essaim d’agents"
+            },
+            excerpt: {
+                en: "The next institutional AI market will not be won by the loudest demo of an autonomous agent. It will be won by the teams that make agents governable: evaluated, permissioned, observable, recoverable, and safe enough to enter real workflows where capital, reputation, and regulation are at stake.",
+                fr: "Le prochain marché institutionnel de l’IA ne sera pas gagné par la démonstration d’agent autonome la plus bruyante. Il sera gagné par les équipes qui rendent les agents gouvernables : évaluables, permissionnés, observables, récupérables et assez sûrs pour entrer dans des workflows où capital, réputation et régulation sont en jeu."
+            }
+        },
+        'diop-daily-035': {
+            title: {
+                en: "Distribution With Memory",
+                fr: "La distribution avec mémoire"
+            },
+            excerpt: {
+                en: "The creator and enterprise AI opportunity is not simply to generate more content. The deeper market is distribution with memory: systems that remember relationships, context, commitments, and proof so that every new action compounds instead of resetting the customer to zero.",
+                fr: "L’opportunité IA pour les créateurs et les entreprises n’est pas simplement de générer plus de contenu. Le marché plus profond est la distribution avec mémoire : des systèmes qui se souviennent des relations, du contexte, des engagements et des preuves afin que chaque nouvelle action compose au lieu de remettre le client à zéro."
+            }
+        },
+        'diop-daily-036': {
+            title: {
+                en: "Africa Needs Operating Systems, Not Apps",
+                fr: "L’Afrique a besoin de systèmes d’exploitation, pas seulement d’applications"
+            },
+            excerpt: {
+                en: "The deepest African AI opportunity is not another isolated app chasing a copied consumer pattern. It is the construction of operating layers: identity, language, payments, trust, memory, compute discipline, and execution systems that let many future apps become possible, governable, and locally powerful.",
+                fr: "La plus grande opportunité africaine en IA n’est pas une application isolée de plus copiant un modèle consommateur. Elle est dans la construction de couches d’exploitation : identité, langues, paiements, confiance, mémoire, discipline du calcul et systèmes d’exécution qui rendent de nombreuses applications futures possibles, gouvernables et localement puissantes."
             }
         }
     };
