@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Agents Need Treaties Before They Need Market Share — Diop Research</title>
+    <meta name="description" content="A research note on why the coming agent economy will be underwritten less by flashy demos than by shared protocols, provenance, machine-readable policy, and the trust rails that let software negotiate, verify, and transact responsibly." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry038">Diop Daily #038 — June 2026</div>
+                <div class="article__meta-line">
+                    <time>June 20, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>agents · protocols · commerce</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Agents Need Treaties Before They Need Market Share</h1>
+
+                <p>The market still evaluates AI through the optics of spectacle. Which model is faster? Which demo looks more autonomous? Which assistant writes, codes, or reasons with more apparent fluency? These questions are not trivial, but they are incomplete. A serious economy is not built when isolated systems become impressive. It is built when different systems can recognize one another, exchange structured intent, present usable proof, and act inside shared rules without collapsing trust at every boundary.</p>
+
+                <p>That is why several recent public signals deserve to be read together. Google’s June 18 note on the Agent-to-Agent protocol argues that agents require a common language for secure collaboration and handoff. W3C has announced a workshop on e-commerce for humans and AI agents, explicitly asking what content and standards must change when agents become intermediaries in commercial activity. The European Commission’s General-Purpose AI Code of Practice process is translating model governance into a more legible public rule surface. And C2PA’s February release of Content Credentials 2.3 extends provenance infrastructure for digital artifacts. Different institutions, different domains, one direction: machine action is being pushed toward machine-readable trust.</p>
+
+                <blockquote>
+                    <p>The next agent market will not be won by the loudest demo. It will be won by the systems that can enter reliable relations with other systems.</p>
+                </blockquote>
+
+                <h2>From model performance to inter-agent order</h2>
+
+                <p>It is easy to imagine the future of agents as a simple scaling story: more reasoning, more tools, more vertical applications, more tasks automated. But once agents leave the sandbox, the problem changes. A useful commercial agent does not merely answer. It must discover another service, declare its intent, negotiate capability boundaries, carry context without leaking everything, prove where an output came from, and act under permissions that can later be audited. In other words, agency without order quickly becomes expensive improvisation.</p>
+
+                <p>This is why protocols matter. Human markets do not run on intelligence alone. They run on contracts, standards, receipts, signatures, ledgers, and institutions that let strangers transact with bounded risk. Agents will require the computational equivalent. A2A is one attempt to formalize how software agents coordinate and hand off work. W3C’s workshop signals that commercial content itself may need to be authored with agent mediation in mind. The EU process signals that providers of general-purpose AI will face explicit expectations around transparency, copyright, and systemic-risk governance. C2PA shows that provenance is slowly becoming attachable infrastructure rather than a luxury add-on.</p>
+
+                <h2>Why treaties is the right metaphor</h2>
+
+                <p>I use the word <em>treaties</em> deliberately. A treaty is not friendship. It is a structured agreement that makes cooperation possible without requiring total trust or perfect similarity. That is exactly what the emerging agent economy lacks. Firms are racing to produce agents, but there is still weak agreement on how one agent should identify itself to another, what counts as enough context to proceed, how rights and restrictions are expressed, how outputs are attributed, and what evidence survives after the action.</p>
+
+                <p>Without such treaties, every new deployment behaves like a closed empire. It may look powerful inside its own walls, but it produces friction at every border. With treaties, by contrast, specialized systems become easier to compose. One agent can route to another without pretending to do everything itself. One merchant can expose machine-readable inventory or policy. One research workflow can move across tools without turning memory into a pile of screenshots and copied prompts. A treaty layer turns raw capability into coordination.</p>
+
+                <ul>
+                    <li><strong>Identity:</strong> who or what is this agent, and under whose authority does it act?</li>
+                    <li><strong>Intent:</strong> what exactly is being requested, delegated, purchased, or transformed?</li>
+                    <li><strong>Permission:</strong> what is allowed, prohibited, rate-limited, or reversible?</li>
+                    <li><strong>Provenance:</strong> what evidence accompanies the output or transaction?</li>
+                    <li><strong>Liability surface:</strong> where can a human institution inspect what happened and contest it if necessary?</li>
+                </ul>
+
+                <p>These are not decorative questions. They determine whether an agent can participate in commerce, procurement, media, or regulated workflows without forcing the human operator to re-verify everything manually.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this reading is correct, the investable surface is not limited to general-purpose models or front-end copilots. It widens around the trust rails that let many agents become governable economic actors.</p>
+
+                <ul>
+                    <li><strong>Agent identity and authorization layers:</strong> systems that express delegated authority, policy scope, spending limits, and revocation in machine-readable form.</li>
+                    <li><strong>Interoperability middleware:</strong> protocol gateways, service registries, and negotiation layers that allow specialized agents to collaborate safely rather than remain trapped inside single vendors.</li>
+                    <li><strong>Provenance and rights infrastructure:</strong> content credentials, attribution trails, usage rights, and evidence packaging for synthetic and mixed-origin outputs.</li>
+                    <li><strong>Merchant and publisher tooling for agent-mediated commerce:</strong> structured product, pricing, inventory, and policy surfaces designed for both human readers and machine intermediaries.</li>
+                    <li><strong>Audit and dispute systems:</strong> records that preserve enough context for regulators, enterprises, creators, and customers to challenge or validate machine action after the fact.</li>
+                </ul>
+
+                <p>The common pattern is clear. These businesses do not merely help AI do more. They help institutions underwrite AI use with lower uncertainty. That moves them closer to budget, compliance, and durable procurement. In capital terms, they sit nearer the layer where categories become buyable at scale rather than merely admirable in demos.</p>
+
+                <h2>What this means for African and diasporic builders</h2>
+
+                <p>African technological sovereignty should study this moment carefully. It would be a strategic error to consume agent interfaces built elsewhere while outsourcing every serious trust layer, policy layer, credential layer, and machine-readable commerce surface to foreign defaults. That would reproduce dependency at a higher level of abstraction. We would appear present at the application edge while remaining absent from the constitutional layer of the market.</p>
+
+                <p>The Pan-African task is therefore not to imitate the noisiest consumer agent. It is to build competence in the rails that make agent action legible and negotiable: local identity frameworks, language-aware structured data, provenance systems, permissioning, payment integration, public archives, and institutional memory. A continent that wants sovereign participation in the machine economy must not only build agents. It must also help define the treaties under which agents meet.</p>
+
+                <p>Cheikh Anta Diop insisted that historical recovery was only the beginning; the objective was scientific capacity. The same standard applies here. It is not enough to celebrate that intelligent systems exist. One must ask who defines the protocols, who issues the credentials, who stores the proof, whose languages are understood in commercial metadata, and whose institutions can inspect the machine record. Otherwise one remains a user inside someone else’s order.</p>
+
+                <h2>Rails before empires</h2>
+
+                <p>The present temptation is to build agent empires before agent treaties. Every company wants the dominant assistant, the dominant storefront, the dominant workflow shell. But markets usually reward the quieter layer first. Payments were not transformed only by beautiful interfaces, but by settlement rails. The web did not scale because each company invented a private internet, but because shared protocols made connection cheaper than isolation. The same logic is returning to the agent economy.</p>
+
+                <p>Builders and investors should therefore ask a sterner question than “Which agent looks most human?” They should ask, “Which infrastructure makes machine relationships trustworthy enough to transact, publish, negotiate, and recover?” That is the layer on which the next serious agent companies will stand. Before market share comes admissibility. Before empires come treaties.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — How A2A is Building a World of Collaborative Agents (June 18, 2026)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/" target="_blank" rel="noopener">W3C — Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents (Published June 1, 2026)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">European Commission — Drawing-up a General-Purpose AI Code of Practice</a></li>
+                    <li><a href="https://c2pa.org/the-c2pa-launches-content-credentials-2-3-and-celebrates-5-years-of-impact-across-the-digital-ecosystem/" target="_blank" rel="noopener">C2PA — The C2PA Launches Content Credentials 2.3 and Celebrates 5 Years of Impact Across the Digital Ecosystem (February 9, 2026)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Les agents ont besoin de traités avant d’avoir besoin de parts de marché</h1>
+
+                <p>Le marché continue d’évaluer l’IA à travers l’optique du spectacle. Quel modèle est le plus rapide ? Quelle démonstration paraît la plus autonome ? Quel assistant écrit, code ou raisonne avec la plus grande fluidité apparente ? Ces questions ne sont pas insignifiantes, mais elles sont incomplètes. Une économie sérieuse ne naît pas lorsque des systèmes isolés deviennent impressionnants. Elle naît lorsque des systèmes différents peuvent se reconnaître, échanger une intention structurée, présenter des preuves utilisables et agir à l’intérieur de règles partagées sans faire s’effondrer la confiance à chaque frontière.</p>
+
+                <p>C’est pourquoi plusieurs signaux publics récents doivent être lus ensemble. La note de Google du 18 juin sur le protocole Agent-to-Agent soutient que les agents ont besoin d’un langage commun pour collaborer et transférer des tâches en sécurité. Le W3C a annoncé un atelier sur le commerce électronique pour les humains et les agents IA, posant explicitement la question de savoir quels contenus et quels standards doivent changer lorsque les agents deviennent des intermédiaires de l’activité commerciale. Le processus de Code de bonnes pratiques pour l’IA à usage général de la Commission européenne traduit la gouvernance des modèles en une surface de règles publiques plus lisible. Et la publication par la C2PA de Content Credentials 2.3 en février étend l’infrastructure de provenance pour les artefacts numériques. Des institutions différentes, des domaines différents, une même direction : l’action machinique est poussée vers une confiance lisible par machine.</p>
+
+                <blockquote>
+                    <p>Le prochain marché des agents ne sera pas gagné par la démonstration la plus bruyante. Il sera gagné par les systèmes capables d’entrer dans des relations fiables avec d’autres systèmes.</p>
+                </blockquote>
+
+                <h2>De la performance du modèle à l’ordre inter-agent</h2>
+
+                <p>Il est facile d’imaginer l’avenir des agents comme une simple histoire d’échelle : plus de raisonnement, plus d’outils, plus d’applications verticales, plus de tâches automatisées. Mais dès que les agents quittent le bac à sable, le problème change. Un agent commercial utile ne se contente pas de répondre. Il doit découvrir un autre service, déclarer son intention, négocier les limites de capacité, transporter le contexte sans tout divulguer, prouver l’origine d’un résultat et agir sous des permissions qui pourront ensuite être auditées. Autrement dit, l’agencéité sans ordre devient rapidement une improvisation coûteuse.</p>
+
+                <p>C’est pourquoi les protocoles comptent. Les marchés humains ne fonctionnent pas sur la seule intelligence. Ils reposent sur des contrats, des standards, des reçus, des signatures, des registres et des institutions qui permettent à des inconnus de transiger avec un risque borné. Les agents auront besoin de l’équivalent computationnel. A2A est une tentative de formaliser la manière dont des agents logiciels coordonnent et se transmettent le travail. L’atelier du W3C signale que le contenu commercial lui-même devra peut-être être rédigé en tenant compte de la médiation des agents. Le processus européen signale que les fournisseurs d’IA à usage général feront face à des attentes explicites en matière de transparence, de copyright et de gouvernance du risque systémique. La C2PA montre que la provenance devient lentement une infrastructure attachable plutôt qu’un luxe optionnel.</p>
+
+                <h2>Pourquoi le mot traité est juste</h2>
+
+                <p>J’emploie le mot <em>traités</em> délibérément. Un traité n’est pas une amitié. C’est un accord structuré qui rend la coopération possible sans exiger une confiance totale ni une similitude parfaite. C’est exactement ce qui manque à l’économie émergente des agents. Les entreprises se précipitent pour produire des agents, mais l’accord reste faible sur la manière dont un agent doit s’identifier auprès d’un autre, sur ce qui constitue un contexte suffisant pour agir, sur la manière dont les droits et restrictions sont exprimés, sur la façon dont les résultats sont attribués et sur les preuves qui survivent après l’action.</p>
+
+                <p>Sans de tels traités, chaque nouveau déploiement se comporte comme un empire fermé. Il peut paraître puissant à l’intérieur de ses murs, mais il produit de la friction à chaque frontière. Avec des traités, au contraire, les systèmes spécialisés deviennent plus faciles à composer. Un agent peut s’orienter vers un autre sans prétendre tout faire lui-même. Un commerçant peut exposer un inventaire ou une politique lisibles par machine. Un workflow de recherche peut circuler entre des outils sans transformer la mémoire en amas de captures d’écran et de prompts copiés. Une couche de traités transforme la capacité brute en coordination.</p>
+
+                <ul>
+                    <li><strong>Identité :</strong> qui est cet agent, ou qu’est-il, et sous quelle autorité agit-il ?</li>
+                    <li><strong>Intention :</strong> qu’est-ce qui est exactement demandé, délégué, acheté ou transformé ?</li>
+                    <li><strong>Permission :</strong> qu’est-ce qui est autorisé, interdit, limité ou réversible ?</li>
+                    <li><strong>Provenance :</strong> quelle preuve accompagne la sortie ou la transaction ?</li>
+                    <li><strong>Surface de responsabilité :</strong> où une institution humaine peut-elle inspecter ce qui s’est passé et le contester si nécessaire ?</li>
+                </ul>
+
+                <p>Ces questions ne sont pas décoratives. Elles déterminent si un agent peut participer au commerce, aux achats, aux médias ou aux workflows régulés sans forcer l’opérateur humain à tout revérifier manuellement.</p>
+
+                <h2>Où la surface investissable s’élargit</h2>
+
+                <p>Si cette lecture est juste, la surface investissable ne se limite pas aux modèles à usage général ni aux copilotes en façade. Elle s’élargit autour des rails de confiance qui permettent à de nombreux agents de devenir des acteurs économiques gouvernables.</p>
+
+                <ul>
+                    <li><strong>Couches d’identité et d’autorisation des agents :</strong> systèmes exprimant l’autorité déléguée, le périmètre des politiques, les plafonds de dépense et la révocation sous forme lisible par machine.</li>
+                    <li><strong>Middleware d’interopérabilité :</strong> passerelles de protocole, registres de services et couches de négociation permettant à des agents spécialisés de collaborer en sécurité au lieu de rester enfermés chez un seul fournisseur.</li>
+                    <li><strong>Infrastructure de provenance et de droits :</strong> content credentials, traces d’attribution, droits d’usage et paquets de preuve pour des sorties synthétiques ou d’origine mixte.</li>
+                    <li><strong>Outillage commerçant et éditeur pour un commerce médié par agents :</strong> surfaces structurées de produit, prix, inventaire et politique conçues pour les lecteurs humains autant que pour les intermédiaires machinique.</li>
+                    <li><strong>Systèmes d’audit et de contestation :</strong> enregistrements conservant assez de contexte pour permettre aux régulateurs, entreprises, créateurs et clients de contester ou valider l’action machinique après coup.</li>
+                </ul>
+
+                <p>Le motif commun est clair. Ces entreprises n’aident pas seulement l’IA à faire davantage. Elles aident les institutions à souscrire l’usage de l’IA avec moins d’incertitude. Elles se rapprochent ainsi des budgets, de la conformité et de l’achat durable. En termes de capital, elles se situent plus près de la couche où les catégories deviennent achetables à l’échelle plutôt que simplement admirables en démonstration.</p>
+
+                <h2>Ce que cela signifie pour les bâtisseurs africains et diasporiques</h2>
+
+                <p>La souveraineté technologique africaine doit étudier ce moment avec attention. Ce serait une erreur stratégique de consommer des interfaces d’agents construites ailleurs tout en externalisant chaque couche sérieuse de confiance, de politique, de credential et de commerce lisible par machine vers des standards étrangers. Ce serait reproduire la dépendance à un niveau d’abstraction plus élevé. Nous paraîtrions présents au bord applicatif tout en restant absents de la couche constitutionnelle du marché.</p>
+
+                <p>La tâche panafricaine n’est donc pas d’imiter l’agent consommateur le plus bruyant. Elle consiste à construire une compétence dans les rails qui rendent l’action des agents lisible et négociable : cadres d’identité locaux, données structurées attentives aux langues, systèmes de provenance, permissioning, intégration des paiements, archives publiques et mémoire institutionnelle. Un continent qui veut une participation souveraine à l’économie machinique ne doit pas seulement construire des agents. Il doit aussi contribuer à définir les traités sous lesquels les agents se rencontrent.</p>
+
+                <p>Cheikh Anta Diop insistait sur le fait que la récupération historique n’était qu’un commencement ; l’objectif était la capacité scientifique. Le même critère s’applique ici. Il ne suffit pas de célébrer l’existence de systèmes intelligents. Il faut demander qui définit les protocoles, qui émet les credentials, qui stocke la preuve, quelles langues sont comprises dans les métadonnées commerciales et quelles institutions peuvent inspecter le dossier machinique. Sinon, on reste utilisateur à l’intérieur de l’ordre de quelqu’un d’autre.</p>
+
+                <h2>Les rails avant les empires</h2>
+
+                <p>La tentation présente est de construire des empires d’agents avant des traités d’agents. Chaque entreprise veut l’assistant dominant, la vitrine dominante, la coque de workflow dominante. Mais les marchés récompensent souvent d’abord la couche plus discrète. Les paiements n’ont pas été transformés seulement par de belles interfaces, mais par des rails de règlement. Le web n’a pas grandi parce que chaque entreprise a inventé son internet privé, mais parce que des protocoles partagés ont rendu la connexion moins coûteuse que l’isolement. La même logique revient dans l’économie des agents.</p>
+
+                <p>Les bâtisseurs et les investisseurs devraient donc poser une question plus sévère que « Quel agent paraît le plus humain ? » Ils devraient demander : « Quelle infrastructure rend les relations entre machines assez fiables pour transiger, publier, négocier et récupérer ? » C’est sur cette couche que se tiendront les prochaines entreprises sérieuses d’agents. Avant les parts de marché vient l’admissibilité. Avant les empires viennent les traités.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — How A2A is Building a World of Collaborative Agents (18 juin 2026)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/" target="_blank" rel="noopener">W3C — Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents (publié le 1 juin 2026)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">Commission européenne — Drawing-up a General-Purpose AI Code of Practice</a></li>
+                    <li><a href="https://c2pa.org/the-c2pa-launches-content-credentials-2-3-and-celebrates-5-years-of-impact-across-the-digital-ecosystem/" target="_blank" rel="noopener">C2PA — The C2PA Launches Content Credentials 2.3 and Celebrates 5 Years of Impact Across the Digital Ecosystem (9 février 2026)</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <a href="../index.html" class="article__back" data-i18n="article.back">Back to Journal</a>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>

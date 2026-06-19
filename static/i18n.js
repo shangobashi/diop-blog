@@ -54,6 +54,7 @@
         'article.entry035':     { en: 'Diop Daily #035 — June 2026', fr: 'Diop Quotidien n°035 — Juin 2026' },
         'article.entry036':     { en: 'Diop Daily #036 — June 2026', fr: 'Diop Quotidien n°036 — Juin 2026' },
         'article.entry037':     { en: 'Diop Daily #037 — June 2026', fr: 'Diop Quotidien n°037 — Juin 2026' },
+        'article.entry038':     { en: 'Diop Daily #038 — June 2026', fr: 'Diop Quotidien n°038 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -434,6 +435,16 @@
             excerpt: {
                 en: "The next durable AI market is not raw capability alone. Public signals from OpenAI, NIST, and C2PA suggest that budgets, deployment simulation, continuous monitoring, and provenance are hardening into a control plane that makes autonomous work governable, purchasable, and strategically cumulative.",
                 fr: "Le prochain marché durable de l’IA n’est pas la capacité brute seule. Les signaux publics d’OpenAI, du NIST et du C2PA suggèrent que les budgets, la simulation de déploiement, la surveillance continue et la provenance se durcissent en un plan de contrôle qui rend le travail autonome gouvernable, achetable et stratégiquement cumulatif."
+            }
+        },
+        'diop-daily-038': {
+            title: {
+                en: "Agents Need Treaties Before They Need Market Share",
+                fr: "Les agents ont besoin de traités avant d’avoir besoin de parts de marché"
+            },
+            excerpt: {
+                en: "The next agent economy will not scale on model fluency alone. Public signals from Google, W3C, the European Commission, and C2PA suggest that shared protocols, provenance, and machine-readable policy are becoming the trust rails that make software agents transactable, governable, and commercially admissible.",
+                fr: "La prochaine économie des agents ne se déploiera pas sur la seule fluidité des modèles. Les signaux publics de Google, du W3C, de la Commission européenne et de la C2PA suggèrent que les protocoles partagés, la provenance et les politiques lisibles par machine deviennent les rails de confiance qui rendent les agents logiciels transactionnels, gouvernables et commercialement admissibles."
             }
         }
     };
