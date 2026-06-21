@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Catalog Is Becoming a Protocol — Diop Research</title>
+    <meta name="description" content="A research note on why product pages, rights metadata, provenance, and machine-readable policy are becoming the new commerce rails as AI agents move from chat novelty to transaction intermediaries." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry039">Diop Daily #039 — June 2026</div>
+                <div class="article__meta-line">
+                    <time>June 21, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>commerce · provenance · agents</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Catalog Is Becoming a Protocol</h1>
+
+                <p>For most of the web era, a product page was a persuasive surface for humans. It needed a headline, a few images, perhaps a specification table, a price, and enough visual confidence to move a buyer toward a decision. That model is now under pressure. If software agents are going to discover products, compare them, negotiate over them, route purchases, verify rights, and manage recurring replenishment, then the catalog can no longer remain a decorative brochure. It must become a machine-legible operating surface.</p>
+
+                <p>Several public signals from the last month point in this direction. Google’s June 18 note on the Agent-to-Agent protocol describes a world in which autonomous systems securely hand work to one another rather than operating as isolated tools. W3C and GS1 are convening a workshop on e-commerce for humans and AI agents, explicitly asking what changes when content is created with agent intermediaries in mind. The European Commission’s current General-Purpose AI Code of Practice process is turning transparency, copyright, and systemic-risk obligations into a more legible public rule surface. And C2PA’s Content Credentials 2.3 continues the expansion of provenance infrastructure for digital artifacts. Read separately, these may look like technical announcements. Read together, they suggest something larger: commerce itself is being reformatted for machine participation.</p>
+
+                <blockquote>
+                    <p>The next great commerce surface is not only a better storefront. It is a product universe that software can inspect, compare, trust, and act upon without forcing a human to reconstruct the transaction from scratch.</p>
+                </blockquote>
+
+                <h2>From persuasion to machine legibility</h2>
+
+                <p>This shift matters because agents do not shop the way humans browse. A human can tolerate ambiguity. We infer meaning from layout, branding, tone, and scattered clues. An agent needs structured facts. What is the object? Is it available? Under what price conditions? With what usage rights? Which claims are verified? What refund or licensing terms apply? Is the media authentic? Which pieces of the offer are stable enough to delegate against?</p>
+
+                <p>In that environment, the product page becomes less like advertising copy and more like a treaty surface between institutions. It must expose enough structured meaning for an external system to act responsibly. That does not eliminate persuasion; it subordinates persuasion to legibility. The store, the library, the media archive, and the research repository all begin to converge around the same requirement: machine-readable description plus machine-checkable proof.</p>
+
+                <p>This is why the W3C/GS1 signal is more important than it first appears. Standards bodies do not convene such workshops merely because a topic is fashionable. They do so when the underlying substrate of exchange is changing. If e-commerce content must now be authored with AI agents in mind, then merchants, publishers, and platforms are entering a new design regime. The catalog is no longer only what the customer sees. It is what the machine can safely understand.</p>
+
+                <h2>What a protocol-grade catalog must contain</h2>
+
+                <p>A protocol-grade catalog does not mean every product page becomes ugly or over-technical. It means that beneath the visible interface there is a disciplined semantic and evidentiary layer. Several components are becoming strategically important:</p>
+
+                <ul>
+                    <li><strong>Structured product facts:</strong> consistent identifiers, attributes, compatibility data, pricing logic, inventory state, and fulfillment constraints.</li>
+                    <li><strong>Rights and policy metadata:</strong> licensing terms, usage permissions, territorial limits, refund logic, and contractual restrictions that an agent can parse before acting.</li>
+                    <li><strong>Provenance and authenticity:</strong> content credentials, authorship signals, and chain-of-custody markers that reduce fraud and synthetic confusion.</li>
+                    <li><strong>Delegation boundaries:</strong> what an external agent may do automatically, what requires human confirmation, and what evidence must be returned after action.</li>
+                    <li><strong>Recovery surfaces:</strong> logs, receipts, and dispute records strong enough for a merchant, customer, regulator, or insurer to inspect after the fact.</li>
+                </ul>
+
+                <p>Notice the pattern. None of these elements is ornamental. They are the conditions under which autonomous commerce becomes governable. Without them, the agent economy remains stuck at recommendation and summarization. With them, it can move toward quoting, purchasing, licensing, fulfillment, subscription management, and machine-mediated negotiation.</p>
+
+                <h2>Why provenance moves from ethics to revenue</h2>
+
+                <p>Many people still treat provenance as a moral accessory — a nice label attached to content after the real work is done. That is too weak. In a machine-mediated market, provenance becomes part of commercial admissibility. If an agent is selecting media, research, books, product imagery, or software components on behalf of an institution, provenance is not only about truthfulness. It is about whether the asset can enter a workflow without imposing unacceptable rights risk, fraud risk, or verification cost.</p>
+
+                <p>This is where C2PA and the European regulatory surface begin to matter together. One builds technical rails for authenticity and attribution. The other increases pressure for transparency, copyright discipline, and accountable model behavior. The result is not a purely regulatory story. It is a market-structure story. Categories that once survived on vague presentation must become explicit enough to survive machine inspection. That creates new room for infrastructure companies that help merchants, publishers, and platforms package proof as part of the offer.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this thesis is correct, then the opportunity is not confined to consumer-facing shopping agents. The deeper market lies in the rails that make catalogs, storefronts, and content inventories machine-transactable.</p>
+
+                <ul>
+                    <li><strong>Catalog intelligence infrastructure:</strong> systems that normalize product, media, and rights data into a form agents can query and compare reliably.</li>
+                    <li><strong>Policy and permission middleware:</strong> layers that convert legal and operational constraints into machine-readable rules for delegation and checkout.</li>
+                    <li><strong>Provenance and authenticity services:</strong> tooling that attaches, preserves, verifies, and displays proof across media and commercial assets.</li>
+                    <li><strong>Agent-facing merchant tooling:</strong> interfaces for inventory, pricing, bundles, support, and fulfillment designed for both human and software counterparties.</li>
+                    <li><strong>Dispute and audit systems:</strong> post-transaction evidence layers that make autonomous commerce insurable, reviewable, and recoverable.</li>
+                </ul>
+
+                <p>These businesses sit closer to institutional budget than a generic chat wrapper because they reduce underwriting uncertainty. They make it easier for a retailer, publisher, enterprise buyer, or regulator to permit machine action without surrendering visibility. That is the real commercial transition. The protocol layer does not merely make commerce faster. It makes commerce delegable.</p>
+
+                <h2>Why this matters for African and diasporic builders</h2>
+
+                <p>African and diasporic technology builders should study this carefully. If the next commerce stack is rewritten around machine-readable catalogs, rights metadata, provenance, and policy surfaces, then the risk is not only that foreign agents dominate distribution. The deeper risk is that African goods, books, media, services, and knowledge systems remain poorly legible to the machine intermediaries that increasingly control discovery and transaction.</p>
+
+                <p>That would reproduce an old problem in a new form. A people may create value yet remain absent from the grammar through which value is indexed, priced, verified, and purchased. The sovereignty question therefore extends beyond models and compute. It enters publishing systems, language infrastructure, creator metadata, commerce archives, rights expression, and verification standards. If African institutions do not help define these layers, they will appear in the future market as vendors inside someone else’s protocol.</p>
+
+                <p>Cheikh Anta Diop argued that restored memory had to become scientific capacity. The same lesson applies here. Cultural production, books, commerce, and software cannot remain loosely described if they are to circulate with power in an agent-mediated economy. They must be structured, evidenced, and made computationally legible without surrendering local control. That is not clerical work. It is infrastructure work. And infrastructure is where durable power accumulates.</p>
+
+                <h2>Conclusion</h2>
+
+                <p>The market still spends much of its energy discussing which assistant sounds most fluent. That is understandable, but it is secondary. The more enduring change is that products, rights, and offers are being reformatted for software counterparties. Once the buyer can be an agent, the catalog ceases to be mere merchandising. It becomes protocol.</p>
+
+                <p>Builders and investors should therefore ask a harder question than “Which shopping agent will win?” They should ask, “Which infrastructure makes products, media, and rights machine-legible enough to be discovered, trusted, delegated, and disputed at scale?” That is where the quiet commercial power is moving. Not only to the agent at the front door, but to the structured world behind it.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — How A2A is Building a World of Collaborative Agents (June 18, 2026)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/" target="_blank" rel="noopener">W3C — Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents (June 1, 2026)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">European Commission — Drawing-up a General-Purpose AI Code of Practice</a></li>
+                    <li><a href="https://c2pa.org/the-c2pa-launches-content-credentials-2-3-and-celebrates-5-years-of-impact-across-the-digital-ecosystem/" target="_blank" rel="noopener">C2PA — The C2PA Launches Content Credentials 2.3 and Celebrates 5 Years of Impact Across the Digital Ecosystem</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Le catalogue devient un protocole</h1>
+
+                <p>Pendant l’essentiel de l’ère web, une page produit était une surface de persuasion destinée aux humains. Il lui fallait un titre, quelques images, parfois un tableau de spécifications, un prix, et assez d’assurance visuelle pour pousser un acheteur vers une décision. Ce modèle est désormais sous pression. Si des agents logiciels doivent découvrir des produits, les comparer, négocier à leur sujet, acheminer des achats, vérifier des droits et gérer des réapprovisionnements récurrents, alors le catalogue ne peut plus rester une brochure décorative. Il doit devenir une surface d’exploitation lisible par machine.</p>
+
+                <p>Plusieurs signaux publics du dernier mois vont dans cette direction. La note de Google du 18 juin sur le protocole Agent-to-Agent décrit un monde dans lequel des systèmes autonomes se transmettent le travail de manière sûre au lieu d’opérer comme des outils isolés. Le W3C et GS1 organisent un atelier sur le commerce électronique pour les humains et les agents IA, posant explicitement la question de ce qui change lorsque le contenu est créé en pensant à des intermédiaires agentiques. Le processus actuel de Code de bonnes pratiques pour l’IA à usage général de la Commission européenne transforme les obligations de transparence, de copyright et de risque systémique en une surface de règles publiques plus lisible. Et Content Credentials 2.3 de la C2PA poursuit l’extension de l’infrastructure de provenance pour les artefacts numériques. Pris séparément, ces éléments peuvent ressembler à des annonces techniques. Lus ensemble, ils suggèrent quelque chose de plus vaste : le commerce lui-même est en train d’être reformaté pour la participation des machines.</p>
+
+                <blockquote>
+                    <p>La prochaine grande surface commerciale n’est pas seulement une meilleure vitrine. C’est un univers de produits que le logiciel peut inspecter, comparer, croire et actionner sans forcer un humain à reconstruire la transaction depuis zéro.</p>
+                </blockquote>
+
+                <h2>De la persuasion à la lisibilité machinique</h2>
+
+                <p>Ce déplacement importe parce que les agents n’achètent pas comme les humains naviguent. Un humain peut tolérer l’ambiguïté. Nous inférons le sens à partir de la mise en page, de la marque, du ton et d’indices dispersés. Un agent a besoin de faits structurés. Quel est l’objet ? Est-il disponible ? Sous quelles conditions de prix ? Avec quels droits d’usage ? Quelles affirmations sont vérifiées ? Quelles politiques de remboursement ou de licence s’appliquent ? Le média est-il authentique ? Quels éléments de l’offre sont assez stables pour qu’on puisse déléguer une action dessus ?</p>
+
+                <p>Dans cet environnement, la page produit ressemble moins à du texte publicitaire qu’à une surface de traité entre institutions. Elle doit exposer assez de sens structuré pour qu’un système externe puisse agir de manière responsable. Cela n’élimine pas la persuasion ; cela subordonne la persuasion à la lisibilité. La boutique, la bibliothèque, l’archive média et le dépôt de recherche commencent tous à converger vers la même exigence : une description lisible par machine plus une preuve vérifiable par machine.</p>
+
+                <p>C’est pourquoi le signal W3C/GS1 est plus important qu’il n’y paraît d’abord. Les organismes de normalisation ne réunissent pas de tels ateliers simplement parce qu’un sujet est à la mode. Ils le font lorsque le substrat même de l’échange est en train de changer. Si le contenu du commerce électronique doit désormais être rédigé en pensant aux agents IA, alors commerçants, éditeurs et plateformes entrent dans un nouveau régime de conception. Le catalogue n’est plus seulement ce que voit le client. C’est ce que la machine peut comprendre en sécurité.</p>
+
+                <h2>Ce qu’un catalogue de niveau protocole doit contenir</h2>
+
+                <p>Un catalogue de niveau protocole ne signifie pas que chaque page produit devienne laide ou excessivement technique. Cela signifie que sous l’interface visible existe une couche sémantique et probatoire disciplinée. Plusieurs composants deviennent stratégiquement importants :</p>
+
+                <ul>
+                    <li><strong>Faits produits structurés :</strong> identifiants cohérents, attributs, données de compatibilité, logique tarifaire, état des stocks et contraintes d’exécution.</li>
+                    <li><strong>Métadonnées de droits et de politique :</strong> termes de licence, permissions d’usage, limites territoriales, logique de remboursement et restrictions contractuelles qu’un agent peut analyser avant d’agir.</li>
+                    <li><strong>Provenance et authenticité :</strong> content credentials, signaux d’auteur et marqueurs de chaîne de garde qui réduisent la fraude et la confusion synthétique.</li>
+                    <li><strong>Frontières de délégation :</strong> ce qu’un agent externe peut faire automatiquement, ce qui exige une confirmation humaine et quelles preuves doivent être renvoyées après l’action.</li>
+                    <li><strong>Surfaces de récupération :</strong> logs, reçus et dossiers de litige assez solides pour qu’un commerçant, un client, un régulateur ou un assureur puisse inspecter la transaction après coup.</li>
+                </ul>
+
+                <p>Observez le motif. Aucun de ces éléments n’est ornemental. Ce sont les conditions sous lesquelles le commerce autonome devient gouvernable. Sans eux, l’économie des agents reste bloquée au stade de la recommandation et du résumé. Avec eux, elle peut avancer vers le devis, l’achat, la licence, l’exécution, la gestion d’abonnements et la négociation médiée par machine.</p>
+
+                <h2>Pourquoi la provenance passe de l’éthique au revenu</h2>
+
+                <p>Beaucoup continuent de traiter la provenance comme un accessoire moral — une belle étiquette ajoutée au contenu une fois le travail réel terminé. C’est insuffisant. Dans un marché médié par machines, la provenance devient une partie de l’admissibilité commerciale. Si un agent sélectionne des médias, de la recherche, des livres, des images produits ou des composants logiciels au nom d’une institution, la provenance ne concerne pas seulement la véracité. Elle détermine aussi si l’actif peut entrer dans un workflow sans imposer un risque de droits, de fraude ou de coût de vérification jugé excessif.</p>
+
+                <p>C’est ici que la C2PA et la surface réglementaire européenne commencent à compter ensemble. L’une construit des rails techniques pour l’authenticité et l’attribution. L’autre accroît la pression en faveur de la transparence, de la discipline en matière de copyright et d’un comportement de modèle responsable. Le résultat n’est pas une histoire purement réglementaire. C’est une histoire de structure de marché. Des catégories qui survivaient autrefois grâce à une présentation vague doivent devenir assez explicites pour survivre à l’inspection machinique. Cela crée un nouvel espace pour des entreprises d’infrastructure qui aident commerçants, éditeurs et plateformes à emballer la preuve comme partie intégrante de l’offre.</p>
+
+                <h2>Où la surface investissable s’élargit</h2>
+
+                <p>Si cette thèse est juste, l’opportunité ne se limite pas aux agents d’achat orientés consommateur. Le marché plus profond se situe dans les rails qui rendent les catalogues, vitrines et inventaires de contenu transactionnels pour les machines.</p>
+
+                <ul>
+                    <li><strong>Infrastructure d’intelligence du catalogue :</strong> systèmes qui normalisent les données de produit, de média et de droits dans une forme que les agents peuvent interroger et comparer de manière fiable.</li>
+                    <li><strong>Middleware de politique et de permission :</strong> couches qui convertissent les contraintes juridiques et opérationnelles en règles lisibles par machine pour la délégation et le passage en caisse.</li>
+                    <li><strong>Services de provenance et d’authenticité :</strong> outillage qui attache, préserve, vérifie et affiche la preuve à travers les médias et les actifs commerciaux.</li>
+                    <li><strong>Outillage marchand orienté agents :</strong> interfaces d’inventaire, de tarification, de bundles, de support et d’exécution conçues pour des contreparties humaines autant que logicielles.</li>
+                    <li><strong>Systèmes de litige et d’audit :</strong> couches de preuve post-transaction rendant le commerce autonome assurable, révisable et récupérable.</li>
+                </ul>
+
+                <p>Ces entreprises sont plus proches du budget institutionnel qu’un simple wrapper conversationnel parce qu’elles réduisent l’incertitude de souscription. Elles rendent plus facile pour un détaillant, un éditeur, un acheteur d’entreprise ou un régulateur de permettre l’action machinique sans abandonner la visibilité. Voilà la véritable transition commerciale. La couche protocolaire ne rend pas seulement le commerce plus rapide. Elle rend le commerce délégable.</p>
+
+                <h2>Pourquoi cela compte pour les bâtisseurs africains et diasporiques</h2>
+
+                <p>Les bâtisseurs technologiques africains et diasporiques doivent étudier cela avec attention. Si la prochaine pile commerciale est réécrite autour de catalogues lisibles par machine, de métadonnées de droits, de provenance et de surfaces de politique, alors le risque n’est pas seulement que des agents étrangers dominent la distribution. Le risque plus profond est que les biens, livres, médias, services et systèmes de connaissance africains restent mal lisibles pour les intermédiaires machinique qui contrôlent de plus en plus la découverte et la transaction.</p>
+
+                <p>Ce serait reproduire un ancien problème sous une forme nouvelle. Un peuple peut créer de la valeur tout en restant absent de la grammaire par laquelle cette valeur est indexée, tarifée, vérifiée et achetée. La question de la souveraineté dépasse donc les modèles et le calcul. Elle entre dans les systèmes de publication, l’infrastructure linguistique, les métadonnées des créateurs, les archives commerciales, l’expression des droits et les standards de vérification. Si les institutions africaines n’aident pas à définir ces couches, elles apparaîtront dans le marché futur comme de simples vendeurs à l’intérieur du protocole de quelqu’un d’autre.</p>
+
+                <p>Cheikh Anta Diop soutenait que la mémoire restaurée devait devenir capacité scientifique. La même leçon s’applique ici. La production culturelle, les livres, le commerce et le logiciel ne peuvent pas rester vaguement décrits s’ils veulent circuler avec puissance dans une économie médiée par agents. Ils doivent être structurés, étayés par des preuves et rendus computationnellement lisibles sans abandonner le contrôle local. Ce n’est pas un travail clérical. C’est un travail d’infrastructure. Et c’est dans l’infrastructure que s’accumule le pouvoir durable.</p>
+
+                <h2>Conclusion</h2>
+
+                <p>Le marché consacre encore une grande part de son énergie à discuter de l’assistant le plus fluide. C’est compréhensible, mais secondaire. Le changement plus durable est que les produits, les droits et les offres sont en train d’être reformatés pour des contreparties logicielles. Dès lors que l’acheteur peut être un agent, le catalogue cesse d’être un simple dispositif de merchandising. Il devient protocole.</p>
+
+                <p>Les bâtisseurs et les investisseurs devraient donc poser une question plus exigeante que « Quel agent d’achat va gagner ? » Ils devraient demander : « Quelle infrastructure rend les produits, les médias et les droits assez lisibles par machine pour être découverts, crus, délégués et contestés à l’échelle ? » C’est là que se déplace la puissance commerciale silencieuse. Non seulement vers l’agent à la porte d’entrée, mais vers le monde structuré qui se tient derrière lui.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — How A2A is Building a World of Collaborative Agents (18 juin 2026)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/" target="_blank" rel="noopener">W3C — Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents (1 juin 2026)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">Commission européenne — Drawing-up a General-Purpose AI Code of Practice</a></li>
+                    <li><a href="https://c2pa.org/the-c2pa-launches-content-credentials-2-3-and-celebrates-5-years-of-impact-across-the-digital-ecosystem/" target="_blank" rel="noopener">C2PA — The C2PA Launches Content Credentials 2.3 and Celebrates 5 Years of Impact Across the Digital Ecosystem</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <a href="../index.html" class="article__back" data-i18n="article.back">Back to Journal</a>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>

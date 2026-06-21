@@ -55,6 +55,7 @@
         'article.entry036':     { en: 'Diop Daily #036 — June 2026', fr: 'Diop Quotidien n°036 — Juin 2026' },
         'article.entry037':     { en: 'Diop Daily #037 — June 2026', fr: 'Diop Quotidien n°037 — Juin 2026' },
         'article.entry038':     { en: 'Diop Daily #038 — June 2026', fr: 'Diop Quotidien n°038 — Juin 2026' },
+        'article.entry039':     { en: 'Diop Daily #039 — June 2026', fr: 'Diop Quotidien n°039 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -445,6 +446,16 @@
             excerpt: {
                 en: "The next agent economy will not scale on model fluency alone. Public signals from Google, W3C, the European Commission, and C2PA suggest that shared protocols, provenance, and machine-readable policy are becoming the trust rails that make software agents transactable, governable, and commercially admissible.",
                 fr: "La prochaine économie des agents ne se déploiera pas sur la seule fluidité des modèles. Les signaux publics de Google, du W3C, de la Commission européenne et de la C2PA suggèrent que les protocoles partagés, la provenance et les politiques lisibles par machine deviennent les rails de confiance qui rendent les agents logiciels transactionnels, gouvernables et commercialement admissibles."
+            }
+        },
+        'diop-daily-039': {
+            title: {
+                en: "The Catalog Is Becoming a Protocol",
+                fr: "Le catalogue devient un protocole"
+            },
+            excerpt: {
+                en: "As AI agents become intermediaries in commerce, the product catalog stops being a marketing page and becomes a machine-readable protocol surface. Public signals from W3C, Google, the European Commission, and C2PA suggest that pricing, rights, provenance, and policy metadata are becoming the rails that make products discoverable, admissible, and purchasable by software.",
+                fr: "À mesure que les agents IA deviennent des intermédiaires du commerce, le catalogue produit cesse d’être une page marketing et devient une surface protocolaire lisible par machine. Les signaux publics du W3C, de Google, de la Commission européenne et de la C2PA suggèrent que les métadonnées de prix, de droits, de provenance et de politique deviennent les rails qui rendent les produits découvrables, admissibles et achetables par logiciel."
             }
         }
     };
