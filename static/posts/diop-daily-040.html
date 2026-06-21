@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Archive Must Become a Counterparty — Diop Research</title>
+    <meta name="description" content="A research note on why archives, catalogs, books, and media libraries are becoming machine-readable counterparties as agents, provenance standards, and copyright rules reshape discovery, licensing, and trust." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry040">Diop Daily #040 — June 2026</div>
+                <div class="article__meta-line">
+                    <time>June 22, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>archives · rights · agents</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Archive Must Become a Counterparty</h1>
+
+                <p>For most of the digital era, archives were treated as storage. They preserved books, articles, media, records, and research outputs so that a human could later search, read, cite, or purchase them. That model is becoming insufficient. If software agents are going to discover materials, evaluate rights, verify provenance, request access, negotiate use, and trigger transactions, then the archive can no longer remain a silent shelf. It must become a counterparty: a structured institutional presence that software can inspect, trust, and act with.</p>
+
+                <p>This is not a poetic exaggeration. Recent public signals point in the same direction. Google’s June 18 note on the Agent-to-Agent protocol imagines software systems securely delegating work across boundaries rather than remaining isolated tools. W3C and GS1 have announced a workshop on e-commerce for humans and AI agents, explicitly asking what changes when content is authored with agent intermediaries in mind. The European Commission’s work on a General-Purpose AI Code of Practice is making transparency, copyright, and systemic-risk obligations more legible as public operating constraints. And C2PA’s Content Credentials 2.3 extends the infrastructure through which provenance can travel with digital media. Read together, these are not merely announcements about standards. They are evidence that stored knowledge is being pushed toward transactional legibility.</p>
+
+                <blockquote>
+                    <p>The next powerful archive will not only remember. It will present terms, rights, proof, and context clearly enough for a machine to enter into a disciplined relationship with it.</p>
+                </blockquote>
+
+                <h2>From repository to institutional counterpart</h2>
+
+                <p>A repository stores objects. A counterparty expresses conditions. That difference matters. A human researcher can tolerate a great deal of ambiguity. We can read around missing metadata, infer authorship from context, manually inspect a PDF, or send an email when rights are unclear. An agent cannot proceed so casually if it is expected to act responsibly. It needs to know what the object is, who stands behind it, what use is allowed, what provenance accompanies it, how it should be cited, whether a payment or permission step is required, and what evidence should survive after the interaction.</p>
+
+                <p>Once this requirement becomes normal, the archive changes character. A digital library, publisher catalog, image repository, book preview page, or research notebook is no longer just a destination for readers. It becomes an operating surface for software counterparties. The question is no longer only whether the content is valuable. The question is whether the content is legible enough to be discovered, licensed, cited, purchased, and governed by machines without forcing a human to reconstruct the institution from fragments.</p>
+
+                <p>This is why the W3C and GS1 signal deserves attention beyond retail. When standards bodies ask how e-commerce content should be created for humans and AI agents, they are not speaking only about shopping carts. They are speaking about the broader conversion of digital material into machine-addressable inventory. Books, archives, articles, product pages, and image libraries are all moving toward the same strategic demand: structured description plus machine-checkable evidence.</p>
+
+                <h2>What a machine-readable archive must expose</h2>
+
+                <p>An archive that wants to become a real participant in the agent economy does not need to surrender its humanity or its editorial voice. But it does need a stronger public data surface. At minimum, four layers are becoming decisive:</p>
+
+                <ul>
+                    <li><strong>Identity and authority:</strong> clear institutional authorship, canonical object identifiers, and stable origin signals that let an agent know which entity it is dealing with.</li>
+                    <li><strong>Rights and permissions:</strong> machine-readable usage terms, territorial constraints, preview rules, licensing paths, citation expectations, and payment conditions.</li>
+                    <li><strong>Provenance and authenticity:</strong> authorship markers, content credentials, version history, and chain-of-custody evidence that reduce synthetic confusion and false attribution.</li>
+                    <li><strong>Recovery and audit surfaces:</strong> receipts, logs, dispute context, and durable references strong enough for later verification by humans, agents, platforms, or regulators.</li>
+                </ul>
+
+                <p>Notice what has happened. The archive is no longer passive memory. It is memory with terms. That is a profound shift. In the same way that payments required ledgers and signatures, agent-mediated archives require rights expression and proof surfaces. A file without these layers may still be readable, but it is less likely to become admissible inside autonomous workflows.</p>
+
+                <h2>Why rights metadata becomes distribution infrastructure</h2>
+
+                <p>Many institutions still treat rights metadata as clerical afterthought. A title may be polished, a landing page elegant, the excerpt persuasive, but the underlying permissions remain vague or trapped in prose that machines cannot use. That was tolerable when distribution depended mainly on human browsing. It becomes fragile when discovery, summarization, recommendation, citation, and purchasing are increasingly performed by software.</p>
+
+                <p>In that environment, rights metadata stops being administrative residue and becomes distribution infrastructure. If an agent is asked to locate a book excerpt suitable for publication, identify a licensable image, compare research sources, procure a report, or assemble a reading packet, it cannot rely on mood and design. It needs structured answers to basic institutional questions. What is permitted? What requires payment? What requires attribution? What cannot be remixed? What evidence proves the object is authentic? Which version is canonical?</p>
+
+                <p>The European Commission’s code-of-practice work and C2PA’s provenance surface reinforce this point from two directions. One increases pressure for transparent, accountable handling of content and model behavior. The other makes it easier to attach authenticity information to media itself. Between them, a new market logic appears. Archives that package rights and proof well will become easier for software to trust and route into action. Archives that remain semantically loose will still exist, but they will be increasingly bypassed or manually costly.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this thesis is correct, then the opportunity does not sit only with consumer-facing assistants. It widens around the infrastructure that turns stored knowledge into machine-usable counterparties.</p>
+
+                <ul>
+                    <li><strong>Rights-expression tooling:</strong> systems that convert human legal and editorial policy into structured permissions that agents and platforms can actually execute against.</li>
+                    <li><strong>Archive intelligence layers:</strong> software that normalizes identifiers, metadata, previews, pricing, provenance, and version history across books, media, and research collections.</li>
+                    <li><strong>Provenance services for creators and institutions:</strong> tools that attach, preserve, verify, and display content credentials and authorship evidence across publication surfaces.</li>
+                    <li><strong>Agent-facing licensing and access rails:</strong> APIs and interfaces through which software can request permission, purchase access, retrieve canonical materials, and return proof of use.</li>
+                    <li><strong>Audit and dispute infrastructure:</strong> evidence systems that make machine-mediated citation, purchase, and reuse recoverable when rights or authenticity are challenged.</li>
+                </ul>
+
+                <p>These categories are commercially meaningful because they reduce underwriting uncertainty. They do not merely make archives prettier. They make archives governable as assets inside software-mediated distribution. When institutions can expose machine-readable rights and proof, more workflows become licensable, insurable, and automatable. That is where budget begins to move.</p>
+
+                <h2>Why this matters for African and diasporic knowledge systems</h2>
+
+                <p>This question has particular force for African and diasporic institutions. A people can produce literature, research, oral history, images, records, and analysis, yet remain weakly represented in the machine-readable structures through which future discovery and transaction occur. That would reproduce an older dependency in a new format. The archive would exist, but not as a first-class economic or epistemic actor.</p>
+
+                <p>Cheikh Anta Diop taught that historical recovery without scientific organization leaves a people vulnerable to dispossession. The same lesson applies here. It is not enough to digitize memory. One must structure memory so it can circulate with authority. African books, archives, journals, marketplaces, and cultural inventories need identifiers, rights surfaces, provenance practices, language-aware metadata, and permission systems that do not reduce them to raw material for other people’s models and storefronts.</p>
+
+                <p>In practical terms, this means the sovereignty conversation must extend beyond models and compute into publishing architecture, creator commerce, archive design, and institutional metadata discipline. If African knowledge systems are legible only to human admirers but not to machine intermediaries, then they will be discovered poorly, licensed weakly, and priced by others. The archive must therefore become not only a memory device, but a negotiating actor.</p>
+
+                <h2>Conclusion</h2>
+
+                <p>The market still talks as if intelligence alone were the decisive layer. It is not. As agents begin to browse, compare, cite, license, and transact, the deeper shift is that digital collections are being reformatted for machine relations. The strongest archive of the next cycle will not merely hold documents. It will present institutional identity, rights, provenance, and auditability clearly enough to be trusted by software without disappearing under software.</p>
+
+                <p>Serious builders and investors should therefore ask a sterner question than “Which model can summarize my library?” They should ask, “Which infrastructure makes a library, publisher, or archive admissible as a counterparty in an agent economy?” That is where a quiet but durable layer of value is forming. The institution that can answer this question will not only preserve memory. It will organize memory into power.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — How A2A is Building a World of Collaborative Agents (June 18, 2026)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/" target="_blank" rel="noopener">W3C — Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents (June 1, 2026)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">European Commission — Drawing-up a General-Purpose AI Code of Practice</a></li>
+                    <li><a href="https://c2pa.org/the-c2pa-launches-content-credentials-2-3-and-celebrates-5-years-of-impact-across-the-digital-ecosystem/" target="_blank" rel="noopener">C2PA — The C2PA Launches Content Credentials 2.3 and Celebrates 5 Years of Impact Across the Digital Ecosystem</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L’archive doit devenir une contrepartie</h1>
+
+                <p>Pendant l’essentiel de l’ère numérique, les archives ont été traitées comme du stockage. Elles conservaient livres, articles, médias, documents et productions de recherche pour qu’un humain puisse plus tard les chercher, les lire, les citer ou les acheter. Ce modèle devient insuffisant. Si des agents logiciels doivent découvrir des matériaux, évaluer des droits, vérifier une provenance, demander un accès, négocier un usage et déclencher des transactions, alors l’archive ne peut plus rester une étagère silencieuse. Elle doit devenir une contrepartie : une présence institutionnelle structurée que le logiciel peut inspecter, croire et avec laquelle il peut agir.</p>
+
+                <p>Ce n’est pas une exagération poétique. Des signaux publics récents pointent dans la même direction. La note de Google du 18 juin sur le protocole Agent-to-Agent imagine des systèmes logiciels déléguant du travail en sécurité à travers des frontières au lieu de rester des outils isolés. Le W3C et GS1 ont annoncé un atelier sur le commerce électronique pour les humains et les agents IA, en demandant explicitement ce qui change lorsque le contenu est rédigé en pensant à des intermédiaires agentiques. Le travail de la Commission européenne sur un Code de bonnes pratiques pour l’IA à usage général rend plus lisibles les obligations de transparence, de copyright et de risque systémique comme contraintes d’exploitation publiques. Et Content Credentials 2.3 de la C2PA étend l’infrastructure par laquelle la provenance peut voyager avec les médias numériques. Lus ensemble, ces éléments ne sont pas de simples annonces sur des standards. Ils prouvent que le savoir stocké est poussé vers une lisibilité transactionnelle.</p>
+
+                <blockquote>
+                    <p>La prochaine archive puissante ne se contentera pas de se souvenir. Elle présentera des termes, des droits, des preuves et du contexte assez clairement pour qu’une machine puisse entrer avec elle dans une relation disciplinée.</p>
+                </blockquote>
+
+                <h2>Du dépôt à la contrepartie institutionnelle</h2>
+
+                <p>Un dépôt stocke des objets. Une contrepartie exprime des conditions. Cette différence compte. Un chercheur humain peut tolérer beaucoup d’ambiguïté. Nous pouvons contourner des métadonnées manquantes, déduire une paternité depuis le contexte, inspecter manuellement un PDF ou envoyer un courriel lorsque les droits sont flous. Un agent ne peut pas avancer avec une telle désinvolture s’il est censé agir de manière responsable. Il doit savoir ce qu’est l’objet, qui le garantit, quel usage est autorisé, quelle provenance l’accompagne, comment il doit être cité, si une étape de paiement ou de permission est requise et quelle preuve doit survivre après l’interaction.</p>
+
+                <p>Dès que cette exigence devient normale, l’archive change de nature. Une bibliothèque numérique, un catalogue d’éditeur, un dépôt d’images, une page d’extrait de livre ou un carnet de recherche n’est plus seulement une destination pour lecteurs. Cela devient une surface d’exploitation pour des contreparties logicielles. La question n’est plus seulement de savoir si le contenu a de la valeur. La question est de savoir si ce contenu est assez lisible pour être découvert, licencié, cité, acheté et gouverné par des machines sans forcer un humain à reconstruire l’institution à partir de fragments.</p>
+
+                <p>C’est pourquoi le signal W3C et GS1 mérite une attention qui dépasse la vente au détail. Lorsque des organismes de normalisation demandent comment le contenu du commerce électronique devrait être créé pour les humains et les agents IA, ils ne parlent pas seulement de paniers d’achat. Ils parlent de la conversion plus large des matériaux numériques en inventaire adressable par machine. Livres, archives, articles, pages produit et bibliothèques d’images convergent tous vers la même exigence stratégique : une description structurée plus une preuve vérifiable par machine.</p>
+
+                <h2>Ce qu’une archive lisible par machine doit exposer</h2>
+
+                <p>Une archive qui veut devenir une vraie participante de l’économie des agents n’a pas besoin d’abandonner son humanité ni sa voix éditoriale. Mais elle a besoin d’une surface publique de données plus forte. Au minimum, quatre couches deviennent décisives :</p>
+
+                <ul>
+                    <li><strong>Identité et autorité :</strong> une paternité institutionnelle claire, des identifiants canoniques d’objet et des signaux d’origine stables qui permettent à un agent de savoir avec quelle entité il traite.</li>
+                    <li><strong>Droits et permissions :</strong> des conditions d’usage lisibles par machine, des contraintes territoriales, des règles d’extrait, des chemins de licence, des attentes de citation et des conditions de paiement.</li>
+                    <li><strong>Provenance et authenticité :</strong> des marqueurs de paternité, des content credentials, un historique de version et des preuves de chaîne de garde qui réduisent la confusion synthétique et les fausses attributions.</li>
+                    <li><strong>Surfaces de récupération et d’audit :</strong> des reçus, des journaux, un contexte de litige et des références durables assez solides pour une vérification ultérieure par des humains, des agents, des plateformes ou des régulateurs.</li>
+                </ul>
+
+                <p>Remarquons ce qui s’est passé. L’archive n’est plus une mémoire passive. C’est une mémoire avec des termes. Le déplacement est profond. De la même manière que les paiements ont exigé des registres et des signatures, les archives médiées par agents exigent une expression des droits et des surfaces de preuve. Un fichier dépourvu de ces couches peut rester lisible, mais il a moins de chances de devenir admissible dans des workflows autonomes.</p>
+
+                <h2>Pourquoi les métadonnées de droits deviennent une infrastructure de distribution</h2>
+
+                <p>Beaucoup d’institutions traitent encore les métadonnées de droits comme un détail administratif. Un titre peut être soigné, une page élégante, un extrait persuasif, mais les permissions sous-jacentes restent vagues ou enfermées dans une prose inutilisable par les machines. Cela restait tolérable lorsque la distribution dépendait surtout de la navigation humaine. Cela devient fragile lorsque découverte, résumé, recommandation, citation et achat sont de plus en plus effectués par logiciel.</p>
+
+                <p>Dans cet environnement, les métadonnées de droits cessent d’être un résidu administratif pour devenir une infrastructure de distribution. Si un agent reçoit la mission de trouver un extrait de livre publiable, d’identifier une image licenciable, de comparer des sources de recherche, d’acheter un rapport ou d’assembler un dossier de lecture, il ne peut pas s’appuyer sur l’humeur et le design. Il lui faut des réponses structurées à des questions institutionnelles élémentaires. Qu’est-ce qui est permis ? Qu’est-ce qui exige un paiement ? Qu’est-ce qui exige une attribution ? Qu’est-ce qui ne peut pas être remixé ? Quelle preuve établit l’authenticité de l’objet ? Quelle version est canonique ?</p>
+
+                <p>Le travail de la Commission européenne sur le Code de bonnes pratiques et la surface de provenance de la C2PA renforcent ce point depuis deux directions. L’un accroît la pression pour un traitement transparent et responsable du contenu et du comportement des modèles. L’autre facilite l’attachement d’informations d’authenticité au média lui-même. Entre les deux, une nouvelle logique de marché apparaît. Les archives qui emballent bien les droits et la preuve deviendront plus faciles à faire confiance et à acheminer vers l’action par le logiciel. Les archives qui restent sémantiquement lâches existeront encore, mais elles seront de plus en plus contournées ou coûteront cher en travail manuel.</p>
+
+                <h2>Où la surface investissable s’élargit</h2>
+
+                <p>Si cette thèse est juste, alors l’opportunité ne se situe pas seulement chez les assistants orientés consommateur. Elle s’élargit autour de l’infrastructure qui transforme le savoir stocké en contreparties utilisables par machine.</p>
+
+                <ul>
+                    <li><strong>Outillage d’expression des droits :</strong> des systèmes qui convertissent les politiques juridiques et éditoriales humaines en permissions structurées contre lesquelles les agents et plateformes peuvent réellement exécuter.</li>
+                    <li><strong>Couches d’intelligence d’archive :</strong> des logiciels qui normalisent identifiants, métadonnées, extraits, prix, provenance et historique de version à travers livres, médias et collections de recherche.</li>
+                    <li><strong>Services de provenance pour créateurs et institutions :</strong> des outils qui attachent, préservent, vérifient et affichent des content credentials et des preuves de paternité à travers les surfaces de publication.</li>
+                    <li><strong>Rails d’accès et de licence orientés agents :</strong> des API et interfaces par lesquelles le logiciel peut demander une permission, acheter un accès, récupérer des matériaux canoniques et renvoyer une preuve d’usage.</li>
+                    <li><strong>Infrastructure d’audit et de litige :</strong> des systèmes de preuve qui rendent récupérables les citations, achats et réutilisations médiés par machine lorsque les droits ou l’authenticité sont contestés.</li>
+                </ul>
+
+                <p>Ces catégories sont commercialement sérieuses parce qu’elles réduisent l’incertitude de souscription. Elles ne rendent pas seulement les archives plus belles. Elles rendent les archives gouvernables comme actifs à l’intérieur d’une distribution médiée par logiciel. Lorsque les institutions peuvent exposer des droits lisibles par machine et des preuves, davantage de workflows deviennent licenciables, assurables et automatisables. C’est là que les budgets commencent à se déplacer.</p>
+
+                <h2>Pourquoi cela compte pour les systèmes de connaissance africains et diasporiques</h2>
+
+                <p>Cette question a une force particulière pour les institutions africaines et diasporiques. Un peuple peut produire littérature, recherche, histoire orale, images, dossiers et analyses tout en restant faiblement représenté dans les structures lisibles par machine à travers lesquelles la découverte et la transaction futures auront lieu. Ce serait reproduire une dépendance plus ancienne dans un format nouveau. L’archive existerait, mais pas comme acteur économique ou épistémique de premier rang.</p>
+
+                <p>Cheikh Anta Diop enseignait que la récupération historique sans organisation scientifique laisse un peuple vulnérable à la dépossession. La même leçon s’applique ici. Il ne suffit pas de numériser la mémoire. Il faut structurer la mémoire pour qu’elle circule avec autorité. Les livres, archives, revues, marchés et inventaires culturels africains ont besoin d’identifiants, de surfaces de droits, de pratiques de provenance, de métadonnées attentives aux langues et de systèmes de permission qui ne les réduisent pas à une matière première pour les modèles et vitrines d’autrui.</p>
+
+                <p>En termes pratiques, cela signifie que la conversation sur la souveraineté doit s’étendre au-delà des modèles et du calcul vers l’architecture de publication, le commerce des créateurs, la conception des archives et la discipline institutionnelle des métadonnées. Si les systèmes de connaissance africains ne sont lisibles que pour des admirateurs humains mais pas pour des intermédiaires machine, alors ils seront mal découverts, faiblement licenciés et tarifés par d’autres. L’archive doit donc devenir non seulement un dispositif de mémoire, mais un acteur de négociation.</p>
+
+                <h2>Conclusion</h2>
+
+                <p>Le marché parle encore comme si l’intelligence seule était la couche décisive. Ce n’est pas le cas. À mesure que les agents commencent à parcourir, comparer, citer, licencier et transiger, le déplacement plus profond est que les collections numériques sont reformatées pour des relations avec des machines. L’archive la plus forte du prochain cycle ne se contentera pas de conserver des documents. Elle présentera identité institutionnelle, droits, provenance et auditabilité assez clairement pour être crue par le logiciel sans disparaître sous le logiciel.</p>
+
+                <p>Les bâtisseurs sérieux et les investisseurs devraient donc poser une question plus sévère que « Quel modèle peut résumer ma bibliothèque ? » Ils devraient demander : « Quelle infrastructure rend une bibliothèque, un éditeur ou une archive admissible comme contrepartie dans une économie d’agents ? » C’est là qu’une couche de valeur discrète mais durable se forme. L’institution capable d’y répondre ne se contentera pas de préserver la mémoire. Elle organisera la mémoire en puissance.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — How A2A is Building a World of Collaborative Agents (18 juin 2026)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/" target="_blank" rel="noopener">W3C — Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents (1 juin 2026)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">Commission européenne — Drawing-up a General-Purpose AI Code of Practice</a></li>
+                    <li><a href="https://c2pa.org/the-c2pa-launches-content-credentials-2-3-and-celebrates-5-years-of-impact-across-the-digital-ecosystem/" target="_blank" rel="noopener">C2PA — The C2PA Launches Content Credentials 2.3 and Celebrates 5 Years of Impact Across the Digital Ecosystem</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <a href="../index.html" class="article__back" data-i18n="article.back">Back to Journal</a>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>

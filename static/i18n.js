@@ -56,6 +56,7 @@
         'article.entry037':     { en: 'Diop Daily #037 — June 2026', fr: 'Diop Quotidien n°037 — Juin 2026' },
         'article.entry038':     { en: 'Diop Daily #038 — June 2026', fr: 'Diop Quotidien n°038 — Juin 2026' },
         'article.entry039':     { en: 'Diop Daily #039 — June 2026', fr: 'Diop Quotidien n°039 — Juin 2026' },
+        'article.entry040':     { en: 'Diop Daily #040 — June 2026', fr: 'Diop Quotidien n°040 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -456,6 +457,16 @@
             excerpt: {
                 en: "As AI agents become intermediaries in commerce, the product catalog stops being a marketing page and becomes a machine-readable protocol surface. Public signals from W3C, Google, the European Commission, and C2PA suggest that pricing, rights, provenance, and policy metadata are becoming the rails that make products discoverable, admissible, and purchasable by software.",
                 fr: "À mesure que les agents IA deviennent des intermédiaires du commerce, le catalogue produit cesse d’être une page marketing et devient une surface protocolaire lisible par machine. Les signaux publics du W3C, de Google, de la Commission européenne et de la C2PA suggèrent que les métadonnées de prix, de droits, de provenance et de politique deviennent les rails qui rendent les produits découvrables, admissibles et achetables par logiciel."
+            }
+        },
+        'diop-daily-040': {
+            title: {
+                en: "The Archive Must Become a Counterparty",
+                fr: "L’archive doit devenir une contrepartie"
+            },
+            excerpt: {
+                en: "In an agent economy, a library or archive can no longer remain a passive shelf of files. Public signals from Google, W3C, the European Commission, and C2PA suggest that rights, provenance, and machine-readable permissions are turning archives into transaction surfaces that software can discover, trust, cite, license, and buy from.",
+                fr: "Dans une économie d’agents, une bibliothèque ou une archive ne peut plus rester une étagère passive de fichiers. Les signaux publics de Google, du W3C, de la Commission européenne et de la C2PA suggèrent que les droits, la provenance et les permissions lisibles par machine transforment les archives en surfaces transactionnelles que le logiciel peut découvrir, croire, citer, licencier et auprès desquelles il peut acheter."
             }
         }
     };
