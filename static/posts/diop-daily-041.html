@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Maintenance Is Becoming the First Native Market for Agents — Diop Research</title>
+    <meta name="description" content="A research note on why the first durable market for autonomous agents may be maintenance, patching, verification, and continuous recovery rather than generic content generation or chat." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry041">Diop Daily #041 — June 2026</div>
+                <div class="article__meta-line">
+                    <time>June 23, 2026</time>
+                    <span>·</span>
+                    <span data-rt="11">11 min read</span>
+                    <span>·</span>
+                    <span>maintenance · security · agents</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Maintenance Is Becoming the First Native Market for Agents</h1>
+
+                <p>Much of the AI market still behaves as if the decisive commercial question were expressive power: which model writes better, chats more naturally, or generates more polished media. That layer matters, but it may not be where the first durable autonomous market settles. The more revealing signals point elsewhere. They suggest that the first truly native market for agents may be maintenance: finding faults, validating them, patching systems, preserving continuity, and keeping digital infrastructure usable under continuous pressure.</p>
+
+                <p>The evidence is increasingly public. OpenAI’s June 22 Daybreak announcement presents tools designed to help organizations find, validate, and patch vulnerabilities at scale. Its companion initiative, Patch the Planet, explicitly frames AI as support for open-source maintainers doing repair work that the digital economy depends on but often underfunds. Google’s June 18 A2A note imagines agents collaborating through structured handoffs rather than remaining trapped as isolated assistants. And NIST’s June 9 note on a continuous-monitor-and-update security model argues that AI systems cannot be governed by one-time inspection alone. Read together, these are not just product updates. They indicate that the agent economy is migrating from spectacle toward upkeep.</p>
+
+                <blockquote>
+                    <p>The first serious fortune in agentic AI may not come from making machines more eloquent. It may come from making digital systems less brittle.</p>
+                </blockquote>
+
+                <h2>Why maintenance is a more natural fit than conversation</h2>
+
+                <p>Maintenance work has several characteristics that make it unusually compatible with agents. It is repetitive without being trivial. It requires persistent attention across large estates of software, dependencies, permissions, configurations, and evidence trails. It benefits from memory, delegation, and auditability. And its economic value is measurable in avoided loss: fewer exploitable vulnerabilities, shorter response windows, lower downtime, cleaner inventory, stronger compliance, and reduced manual toil.</p>
+
+                <p>Conversation alone rarely has these properties. Chat interfaces are easy to demonstrate but harder to underwrite. A fluent answer may impress a room without changing the operating resilience of an institution. Maintenance is different. When an agent finds a defect, proposes a fix, validates the patch, opens the required record, and hands the result to a human reviewer or downstream service, the value is legible. The workflow ends not in applause, but in recoverability.</p>
+
+                <p>This is why the recent Daybreak and Patch the Planet signals matter. They imply that agentic systems are moving toward a domain where work is not merely generated but closed. The object is not just text. It is a repaired state.</p>
+
+                <h2>From isolated assistants to maintenance swarms</h2>
+
+                <p>Maintenance rarely happens inside one tool. Vulnerability remediation alone may involve code search, environment inspection, package intelligence, test execution, policy review, ticketing, deployment gating, and evidence collection. A human team already distributes this work across specialists. An agentic maintenance market will do something similar through software coordination.</p>
+
+                <p>That is where the A2A framing becomes economically important. Secure handoffs between agents are not only useful for consumer tasks or meeting scheduling. They are useful because real maintenance is multi-stage. One agent identifies the likely issue. Another reproduces it. A third checks whether the patch breaks adjacent systems. A fourth packages the proof required by the enterprise, the insurer, or the regulator. Maintenance becomes a distributed transaction rather than a lonely prompt.</p>
+
+                <ul>
+                    <li><strong>Detection:</strong> locate weaknesses, drift, stale dependencies, broken policies, or suspicious patterns.</li>
+                    <li><strong>Validation:</strong> distinguish real defects from noise and estimate operational risk.</li>
+                    <li><strong>Repair:</strong> propose or implement bounded fixes with rollback paths.</li>
+                    <li><strong>Verification:</strong> run tests, simulations, and post-fix checks strong enough to justify trust.</li>
+                    <li><strong>Institutional recording:</strong> generate the receipts, logs, and chain-of-action evidence that let the repair become part of organizational memory.</li>
+                </ul>
+
+                <p>Notice the architecture. The valuable asset is not a single brilliant model moment. It is a pipeline that converts disorder into a recoverable operating state.</p>
+
+                <h2>Why this is a market-structure story, not just a security story</h2>
+
+                <p>It would be too narrow to read this only as cybersecurity. Maintenance is a general logic of institutional survival. The same pattern applies to software dependencies, data quality, rights metadata, cloud configuration, compliance evidence, model drift, archive hygiene, and digital publishing systems. Wherever an institution must preserve working order under changing conditions, there is a maintenance surface. Agents become interesting when they can carry that burden continuously rather than episodically.</p>
+
+                <p>NIST’s continuous-monitor-and-update position is crucial here. It rejects the fantasy that complex AI systems can be declared safe once and then trusted forever. This turns maintenance from a back-office nuisance into a constitutional layer of machine operations. Once continuous updating becomes normal, the businesses that help institutions detect, test, patch, document, and recover become easier to buy. They are no longer optional consulting tasks. They are operating rails.</p>
+
+                <p>That changes the investor map. The market begins to privilege systems that reduce operational entropy, not merely systems that create attractive outputs. In other words, resilience starts to look like revenue infrastructure.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this thesis is correct, then the most durable opportunities may gather around service layers that make maintenance machine-coordinated, measurable, and admissible inside institutions.</p>
+
+                <ul>
+                    <li><strong>Autonomous repair platforms:</strong> systems that move from issue discovery to bounded patch proposals, test execution, and rollback-aware remediation.</li>
+                    <li><strong>Open-source maintenance rails:</strong> tooling and marketplaces that direct agent capacity toward neglected dependency ecosystems without losing human review.</li>
+                    <li><strong>Evidence and assurance layers:</strong> receipts, proof packages, and audit trails that make machine-led repair acceptable to enterprises and regulators.</li>
+                    <li><strong>Agent orchestration for operations:</strong> control layers that coordinate specialist agents across detection, validation, remediation, and verification.</li>
+                    <li><strong>Continuous hygiene infrastructure:</strong> products that keep software, models, archives, and digital estates in a maintained state rather than waiting for crisis.</li>
+                </ul>
+
+                <p>These categories are commercially attractive because they reduce underwriting uncertainty. They do not promise abstract intelligence. They promise lower failure rates, faster recovery, clearer liability, and stronger operational continuity. Capital has always valued systems that preserve function under stress. Agentic maintenance simply gives that old demand a new computational form.</p>
+
+                <h2>Why this matters for African technological sovereignty</h2>
+
+                <p>This argument has particular force for African and diasporic technology institutions. Dependency is not only a question of who owns the model. It is also a question of who maintains the digital substrate. A continent that consumes software but does not build competence in repair, verification, package stewardship, rights hygiene, archive continuity, and operational evidence remains vulnerable even when it uses the latest tools.</p>
+
+                <p>Cheikh Anta Diop taught that dignity requires scientific organization, not symbolic comfort. The same standard applies to digital sovereignty. African laboratories, universities, public institutions, and software firms should not aim only to produce dazzling AI demos. They should also build maintenance capacity: the ability to keep systems legible, patched, governed, and historically continuous. That is how technical dependence is reduced in practice.</p>
+
+                <p>There is also an opportunity hidden here. Because capital-intensive frontier model races are difficult to win from the periphery, many actors assume strategic relevance is impossible. That conclusion is lazy. Maintenance markets reward rigor, process, domain knowledge, language-aware documentation, and institutional patience. These are areas in which serious laboratories can build advantage without pretending to outspend the core. To maintain is not to be secondary. It is to occupy the layer on which durability depends.</p>
+
+                <h2>Conclusion</h2>
+
+                <p>The market may continue to market AI through language, images, and dramatic assistants. But the first native economic territory of agents may prove more sober. It is the domain where software systems are kept working: repaired, verified, updated, coordinated, and documented. That work compounds. It turns every patch into memory, every verification into admissibility, and every recovered system into a stronger operating base for the next round of action.</p>
+
+                <p>Builders and investors should therefore ask a harder question than “What can the agent generate?” They should ask, “What can the agent keep alive?” In the long run, that may be the more valuable question. Institutions are built not only by creation, but by maintenance. And maintenance, at last, is becoming programmable.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “Daybreak: Tools for securing every organization in the world” (June 22, 2026)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “Patch the Planet: a Daybreak initiative to support open source maintainers” (June 22, 2026)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — How A2A is Building a World of Collaborative Agents (June 18, 2026)</a></li>
+                    <li><a href="https://www.nist.gov/news-events/news/2026/06/nist-mathematical-proof-supports-transition-continuous-monitor-and-update" target="_blank" rel="noopener">NIST — Mathematical Proof Supports Transition to a Continuous-Monitor-and-Update Security Model for AI Systems (June 9, 2026)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La maintenance devient le premier marché natif des agents</h1>
+
+                <p>Une grande partie du marché de l’IA continue de se comporter comme si la question commerciale décisive était la puissance expressive : quel modèle écrit mieux, dialogue plus naturellement ou génère des médias plus polis. Cette couche compte, mais ce n’est peut-être pas là que se stabilisera le premier marché autonome durable. Les signaux les plus révélateurs pointent ailleurs. Ils suggèrent que le premier marché véritablement natif pour les agents pourrait être la maintenance : trouver les défauts, les valider, corriger les systèmes, préserver la continuité et maintenir l’infrastructure numérique utilisable sous une pression continue.</p>
+
+                <p>La preuve devient publique. L’annonce Daybreak d’OpenAI du 22 juin présente des outils conçus pour aider les organisations à trouver, valider et corriger des vulnérabilités à grande échelle. Son initiative sœur, Patch the Planet, présente explicitement l’IA comme un soutien aux mainteneurs open source qui accomplissent un travail de réparation dont l’économie numérique dépend, mais qu’elle sous-finance souvent. La note A2A de Google du 18 juin imagine des agents collaborant par des transferts structurés au lieu de rester enfermés comme assistants isolés. Et la note du NIST du 9 juin sur un modèle de sécurité en surveillance et mise à jour continues affirme que les systèmes d’IA ne peuvent pas être gouvernés par une inspection ponctuelle unique. Lus ensemble, ces éléments ne sont pas de simples mises à jour produit. Ils indiquent que l’économie des agents migre du spectacle vers l’entretien.</p>
+
+                <blockquote>
+                    <p>La première fortune sérieuse de l’IA agentique ne viendra peut-être pas de machines plus éloquentes. Elle pourrait venir de systèmes numériques moins fragiles.</p>
+                </blockquote>
+
+                <h2>Pourquoi la maintenance s’accorde mieux aux agents que la conversation</h2>
+
+                <p>Le travail de maintenance possède plusieurs caractéristiques qui le rendent inhabituellement compatible avec les agents. Il est répétitif sans être trivial. Il exige une attention persistante sur de vastes ensembles de logiciels, de dépendances, de permissions, de configurations et de traces de preuve. Il bénéficie de la mémoire, de la délégation et de l’auditabilité. Et sa valeur économique est mesurable en pertes évitées : moins de vulnérabilités exploitables, des fenêtres de réponse plus courtes, moins d’indisponibilité, un inventaire plus propre, une conformité plus forte et moins de labeur manuel.</p>
+
+                <p>La conversation seule possède rarement ces propriétés. Les interfaces de chat sont faciles à démontrer, mais plus difficiles à souscrire. Une réponse fluide peut impressionner une salle sans changer la résilience opérationnelle d’une institution. La maintenance est différente. Lorsqu’un agent trouve un défaut, propose une correction, valide le correctif, ouvre l’enregistrement requis et transmet le résultat à un réviseur humain ou à un service aval, la valeur devient lisible. Le workflow ne se termine pas dans les applaudissements, mais dans la récupérabilité.</p>
+
+                <p>C’est pourquoi les signaux récents Daybreak et Patch the Planet comptent. Ils impliquent que les systèmes agentiques se dirigent vers un domaine où le travail n’est pas seulement généré, mais clôturé. L’objet n’est pas seulement du texte. C’est un état réparé.</p>
+
+                <h2>Des assistants isolés aux essaims de maintenance</h2>
+
+                <p>La maintenance se produit rarement à l’intérieur d’un seul outil. La remédiation d’une vulnérabilité, à elle seule, peut impliquer la recherche dans le code, l’inspection d’environnement, l’intelligence sur les paquets, l’exécution de tests, la revue de politiques, la gestion de tickets, le filtrage de déploiement et la collecte de preuves. Une équipe humaine distribue déjà ce travail entre spécialistes. Un marché agentique de la maintenance fera quelque chose de semblable par coordination logicielle.</p>
+
+                <p>C’est là que le cadrage A2A devient économiquement important. Les transferts sécurisés entre agents ne servent pas seulement aux tâches grand public ou à la planification de réunions. Ils comptent parce que la vraie maintenance est multi-étapes. Un agent identifie le problème probable. Un autre le reproduit. Un troisième vérifie que le correctif ne casse pas les systèmes adjacents. Un quatrième conditionne la preuve exigée par l’entreprise, l’assureur ou le régulateur. La maintenance devient une transaction distribuée plutôt qu’un prompt solitaire.</p>
+
+                <ul>
+                    <li><strong>Détection :</strong> localiser faiblesses, dérives, dépendances obsolètes, politiques cassées ou motifs suspects.</li>
+                    <li><strong>Validation :</strong> distinguer les vrais défauts du bruit et estimer le risque opérationnel.</li>
+                    <li><strong>Réparation :</strong> proposer ou mettre en œuvre des correctifs bornés avec chemins de rollback.</li>
+                    <li><strong>Vérification :</strong> exécuter tests, simulations et contrôles post-correctif suffisamment solides pour justifier la confiance.</li>
+                    <li><strong>Enregistrement institutionnel :</strong> générer les reçus, journaux et preuves de chaîne d’action qui permettent à la réparation d’entrer dans la mémoire organisationnelle.</li>
+                </ul>
+
+                <p>Observez l’architecture. L’actif de valeur n’est pas un unique moment brillant du modèle. C’est un pipeline qui convertit le désordre en état d’exploitation récupérable.</p>
+
+                <h2>Pourquoi c’est une histoire de structure de marché, pas seulement de sécurité</h2>
+
+                <p>Il serait trop étroit de lire cela uniquement comme une histoire de cybersécurité. La maintenance est une logique générale de survie institutionnelle. Le même motif vaut pour les dépendances logicielles, la qualité des données, les métadonnées de droits, la configuration cloud, les preuves de conformité, la dérive des modèles, l’hygiène des archives et les systèmes de publication numérique. Partout où une institution doit préserver un ordre fonctionnel dans des conditions changeantes, il existe une surface de maintenance. Les agents deviennent intéressants lorsqu’ils peuvent porter ce fardeau de manière continue plutôt qu’épisodique.</p>
+
+                <p>La position du NIST sur la surveillance et la mise à jour continues est ici cruciale. Elle rejette la fiction selon laquelle des systèmes d’IA complexes pourraient être déclarés sûrs une fois pour toutes puis dignes de confiance pour toujours. Cela transforme la maintenance d’une nuisance de back-office en couche constitutionnelle des opérations machinique. Dès que la mise à jour continue devient normale, les entreprises qui aident les institutions à détecter, tester, corriger, documenter et récupérer deviennent plus faciles à acheter. Ce ne sont plus des tâches de conseil optionnelles. Ce sont des rails d’exploitation.</p>
+
+                <p>Cela modifie la carte de l’investisseur. Le marché commence à privilégier les systèmes qui réduisent l’entropie opérationnelle, et non seulement ceux qui créent des sorties séduisantes. Autrement dit, la résilience commence à ressembler à une infrastructure de revenu.</p>
+
+                <h2>Où la surface investissable s’élargit</h2>
+
+                <p>Si cette thèse est juste, alors les opportunités les plus durables pourraient se concentrer autour de couches de service qui rendent la maintenance coordonnée par machine, mesurable et admissible à l’intérieur des institutions.</p>
+
+                <ul>
+                    <li><strong>Plateformes de réparation autonome :</strong> systèmes allant de la découverte du problème à des propositions de correctif bornées, à l’exécution de tests et à une remédiation consciente du rollback.</li>
+                    <li><strong>Rails de maintenance open source :</strong> outillage et marchés orientant la capacité agentique vers des écosystèmes de dépendances négligés sans perdre la revue humaine.</li>
+                    <li><strong>Couches de preuve et d’assurance :</strong> reçus, paquets de preuve et pistes d’audit qui rendent la réparation menée par machine acceptable pour les entreprises et les régulateurs.</li>
+                    <li><strong>Orchestration d’agents pour les opérations :</strong> couches de contrôle coordonnant des agents spécialistes à travers détection, validation, remédiation et vérification.</li>
+                    <li><strong>Infrastructure d’hygiène continue :</strong> produits qui maintiennent logiciels, modèles, archives et patrimoines numériques dans un état entretenu au lieu d’attendre la crise.</li>
+                </ul>
+
+                <p>Ces catégories sont commercialement attractives parce qu’elles réduisent l’incertitude de souscription. Elles ne promettent pas une intelligence abstraite. Elles promettent moins de défaillances, une récupération plus rapide, une responsabilité plus claire et une continuité opérationnelle plus forte. Le capital a toujours valorisé les systèmes qui préservent la fonction sous stress. La maintenance agentique donne simplement à cette vieille demande une nouvelle forme computationnelle.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté technologique africaine</h2>
+
+                <p>Cet argument a une force particulière pour les institutions technologiques africaines et diasporiques. La dépendance n’est pas seulement une question de propriété du modèle. C’est aussi une question de qui entretient le substrat numérique. Un continent qui consomme des logiciels mais ne construit pas de compétence en réparation, en vérification, en intendance des paquets, en hygiène des droits, en continuité des archives et en preuve opérationnelle demeure vulnérable, même lorsqu’il utilise les outils les plus récents.</p>
+
+                <p>Cheikh Anta Diop enseignait que la dignité exige une organisation scientifique, non un confort symbolique. La même exigence s’applique à la souveraineté numérique. Les laboratoires, universités, institutions publiques et entreprises logicielles africains ne devraient pas viser seulement à produire des démonstrations d’IA éblouissantes. Ils devraient aussi construire une capacité de maintenance : l’aptitude à garder les systèmes lisibles, corrigés, gouvernés et historiquement continus. C’est ainsi que la dépendance technique se réduit en pratique.</p>
+
+                <p>Une opportunité se cache aussi ici. Parce qu’il est difficile de gagner depuis la périphérie des courses de modèles de frontière gourmandes en capital, beaucoup supposent qu’une pertinence stratégique est impossible. Cette conclusion est paresseuse. Les marchés de maintenance récompensent la rigueur, le processus, la connaissance de domaine, la documentation attentive aux langues et la patience institutionnelle. Ce sont des domaines dans lesquels des laboratoires sérieux peuvent construire un avantage sans prétendre dépasser les dépenses du centre. Maintenir ne signifie pas être secondaire. Cela signifie occuper la couche dont dépend la durabilité.</p>
+
+                <h2>Conclusion</h2>
+
+                <p>Le marché continuera peut-être à vendre l’IA à travers le langage, les images et des assistants spectaculaires. Mais le premier territoire économique natif des agents pourrait s’avérer plus sobre. C’est le domaine où les systèmes logiciels restent opérationnels : réparés, vérifiés, mis à jour, coordonnés et documentés. Ce travail se compose. Il transforme chaque correctif en mémoire, chaque vérification en admissibilité, et chaque système récupéré en base d’exploitation plus forte pour le prochain cycle d’action.</p>
+
+                <p>Les bâtisseurs et les investisseurs devraient donc poser une question plus exigeante que « Que peut générer l’agent ? » Ils devraient demander : « Qu’est-ce que l’agent peut maintenir en vie ? » À long terme, ce pourrait être la question la plus précieuse. Les institutions se construisent non seulement par la création, mais par la maintenance. Et la maintenance, enfin, devient programmable.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI News — « Daybreak: Tools for securing every organization in the world » (22 juin 2026)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI News — « Patch the Planet: a Daybreak initiative to support open source maintainers » (22 juin 2026)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — How A2A is Building a World of Collaborative Agents (18 juin 2026)</a></li>
+                    <li><a href="https://www.nist.gov/news-events/news/2026/06/nist-mathematical-proof-supports-transition-continuous-monitor-and-update" target="_blank" rel="noopener">NIST — Mathematical Proof Supports Transition to a Continuous-Monitor-and-Update Security Model for AI Systems (9 juin 2026)</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <a href="../index.html" class="article__back" data-i18n="article.back">Back to Journal</a>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>

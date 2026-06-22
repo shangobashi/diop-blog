@@ -57,6 +57,7 @@
         'article.entry038':     { en: 'Diop Daily #038 — June 2026', fr: 'Diop Quotidien n°038 — Juin 2026' },
         'article.entry039':     { en: 'Diop Daily #039 — June 2026', fr: 'Diop Quotidien n°039 — Juin 2026' },
         'article.entry040':     { en: 'Diop Daily #040 — June 2026', fr: 'Diop Quotidien n°040 — Juin 2026' },
+        'article.entry041':     { en: 'Diop Daily #041 — June 2026', fr: 'Diop Quotidien n°041 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -467,6 +468,16 @@
             excerpt: {
                 en: "In an agent economy, a library or archive can no longer remain a passive shelf of files. Public signals from Google, W3C, the European Commission, and C2PA suggest that rights, provenance, and machine-readable permissions are turning archives into transaction surfaces that software can discover, trust, cite, license, and buy from.",
                 fr: "Dans une économie d’agents, une bibliothèque ou une archive ne peut plus rester une étagère passive de fichiers. Les signaux publics de Google, du W3C, de la Commission européenne et de la C2PA suggèrent que les droits, la provenance et les permissions lisibles par machine transforment les archives en surfaces transactionnelles que le logiciel peut découvrir, croire, citer, licencier et auprès desquelles il peut acheter."
+            }
+        },
+        'diop-daily-041': {
+            title: {
+                en: "Maintenance Is Becoming the First Native Market for Agents",
+                fr: "La maintenance devient le premier marché natif des agents"
+            },
+            excerpt: {
+                en: "The first durable agent market may not be chat or media generation, but repair: finding faults, validating them, patching systems, and preserving operational continuity. Public signals from OpenAI, Google, and NIST suggest that continuous maintenance is becoming a machine-coordinated infrastructure layer with direct budget, security, and sovereignty implications.",
+                fr: "Le premier marché durable des agents n’est peut-être ni le chat ni la génération de médias, mais la réparation : trouver les défauts, les valider, corriger les systèmes et préserver la continuité opérationnelle. Les signaux publics d’OpenAI, de Google et du NIST suggèrent que la maintenance continue devient une couche d’infrastructure coordonnée par machine avec des implications directes pour les budgets, la sécurité et la souveraineté."
             }
         }
     };
