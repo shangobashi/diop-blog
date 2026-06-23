@@ -58,6 +58,7 @@
         'article.entry039':     { en: 'Diop Daily #039 — June 2026', fr: 'Diop Quotidien n°039 — Juin 2026' },
         'article.entry040':     { en: 'Diop Daily #040 — June 2026', fr: 'Diop Quotidien n°040 — Juin 2026' },
         'article.entry041':     { en: 'Diop Daily #041 — June 2026', fr: 'Diop Quotidien n°041 — Juin 2026' },
+        'article.entry042':     { en: 'Diop Daily #042 — June 2026', fr: 'Diop Quotidien n°042 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -478,6 +479,16 @@
             excerpt: {
                 en: "The first durable agent market may not be chat or media generation, but repair: finding faults, validating them, patching systems, and preserving operational continuity. Public signals from OpenAI, Google, and NIST suggest that continuous maintenance is becoming a machine-coordinated infrastructure layer with direct budget, security, and sovereignty implications.",
                 fr: "Le premier marché durable des agents n’est peut-être ni le chat ni la génération de médias, mais la réparation : trouver les défauts, les valider, corriger les systèmes et préserver la continuité opérationnelle. Les signaux publics d’OpenAI, de Google et du NIST suggèrent que la maintenance continue devient une couche d’infrastructure coordonnée par machine avec des implications directes pour les budgets, la sécurité et la souveraineté."
+            }
+        },
+        'diop-daily-042': {
+            title: {
+                en: "Measurement Is Becoming the Buying Interface for Agents",
+                fr: "La mesure devient l’interface d’achat des agents"
+            },
+            excerpt: {
+                en: "The next agent market will be shaped less by theatrical demos than by measurable operating behavior. Public signals from Google, NIST, and OpenAI suggest that evaluation, continuous monitoring, and verification are becoming the practical interface through which autonomous systems win budget, trust, and institutional authority.",
+                fr: "Le prochain marché des agents sera moins structuré par des démonstrations théâtrales que par un comportement d’exploitation mesurable. Les signaux publics de Google, du NIST et d’OpenAI suggèrent que l’évaluation, la surveillance continue et la vérification deviennent l’interface pratique par laquelle les systèmes autonomes gagnent budget, confiance et autorité institutionnelle."
             }
         }
     };

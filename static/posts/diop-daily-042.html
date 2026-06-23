@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Measurement Is Becoming the Buying Interface for Agents — Diop Research</title>
+    <meta name="description" content="A research note on why agent evaluation, continuous monitoring, and shared standards are turning measurement into the practical buying interface for autonomous systems." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry042">Diop Daily #042 — June 2026</div>
+                <div class="article__meta-line">
+                    <time>June 24, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>measurement · governance · agents</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Measurement Is Becoming the Buying Interface for Agents</h1>
+
+                <p>The agent market is still often narrated as if persuasion were the core capability: better chat, smoother personality, faster code generation, more convincing media. But institutions do not buy autonomy the way consumers buy entertainment. They buy it the way they buy risk-adjusted infrastructure. The question is not only whether an agent can act. The question is whether its action can be measured strongly enough to be admitted into procurement, governance, and operational trust. This is why the most important shift in agent systems may not be expressive intelligence alone, but the rise of measurement as a first-class commercial interface.</p>
+
+                <p>Recent public signals converge on this point. Google’s June 22 post on Jules describes coding agents moving from reactive assistants toward systems that absorb context, surface risks, and pursue higher-level goals, while emphasizing that what matters is not raw output but what should be measured. NIST’s June 9 announcement on a continuous-monitor-and-update security model for AI systems argues that one-time inspection is structurally insufficient. Google’s June 17 Agentic Resource Discovery specification frames agent ecosystems around finding and verifying tools, skills, and agents before connection. And OpenAI’s June 23 news RSS item on helping build shared standards for advanced AI explicitly points toward evaluation frameworks, safety practices, and global cooperation. Taken together, these signals suggest a market that is shifting from demo culture toward admissibility culture.</p>
+
+                <blockquote>
+                    <p>The next generation of agents will not be bought chiefly because they sound intelligent. They will be bought because they can be measured, compared, monitored, and governed under institutional pressure.</p>
+                </blockquote>
+
+                <h2>Why measurement moves to the center</h2>
+
+                <p>As long as agents were treated as assistants at the edge of workflow, it was possible to tolerate ambiguity. A clever answer, a useful draft, or a convenient script felt sufficient. But the moment an agent begins to touch software delivery, procurement, security posture, compliance evidence, customer interaction, or multi-step delegation, ambiguity becomes expensive. Institutions need to know not only what the system did once, but how it behaves over time, how often it fails, how recovery works, what evidence remains, and which constraints shape its authority.</p>
+
+                <p>That is why measurement is becoming more than a benchmarking hobby. It is becoming the language through which institutions decide whether autonomous systems deserve budget. Procurement officers, risk teams, CIOs, security leaders, insurers, and auditors do not underwrite a model personality. They underwrite operating behavior. In such an environment, the agent with the best anecdote loses to the agent with the strongest evidence trail.</p>
+
+                <p>The Jules signal is instructive here. When an agent moves from narrow task completion to goal-oriented exploration, the evaluation problem becomes harder and more economically important. One must ask whether the agent identifies relevant context, notices emerging risk, uses tools appropriately, and produces interventions that improve the system rather than merely decorate it. That is not a single benchmark score. It is a measurement stack.</p>
+
+                <h2>From benchmark theater to operational evidence</h2>
+
+                <p>The market has already spent enough time on benchmark theater: isolated tasks, leaderboard excitement, and carefully staged demos. Those rituals have some analytical value, but they break down when autonomy enters institutions. A serious buyer wants operational evidence. Can the agent sustain quality across long-running work? Can it signal uncertainty? Can it surface the reasons behind a recommendation? Can it be interrupted, reviewed, rolled back, or constrained? Can it work through multi-agent handoffs without turning accountability into fog?</p>
+
+                <p>NIST’s continuous-monitor-and-update position matters precisely because it attacks the fantasy of static assurance. If complex AI systems cannot be certified once and trusted forever, then measurement must become continuous. Not quarterly theater. Not a one-time red-team PDF. Continuous measurement means liveness checks, failure tracking, regression detection, policy enforcement, and post-action receipts. In other words, the institution needs an audit surface that lives as long as the agent does.</p>
+
+                <ul>
+                    <li><strong>Capability measurement:</strong> what the agent can do under defined conditions.</li>
+                    <li><strong>Reliability measurement:</strong> whether it keeps doing it under variance, scale, and time pressure.</li>
+                    <li><strong>Governance measurement:</strong> whether permissions, review paths, and intervention controls actually function.</li>
+                    <li><strong>Recovery measurement:</strong> how quickly the system can detect failure, limit damage, and restore a safe state.</li>
+                    <li><strong>Economic measurement:</strong> whether the autonomy layer reduces cost, compresses response time, or widens productive capacity without creating hidden liabilities.</li>
+                </ul>
+
+                <p>This list clarifies the real transition. The market is moving from asking whether an agent is impressive to asking whether its behavior is legible enough to purchase repeatedly.</p>
+
+                <h2>Discovery, verification, and the end of blind integration</h2>
+
+                <p>The Agentic Resource Discovery specification makes another part of the shift visible. In an ecosystem where agents rely on distributed tools, skills, and other agents, discovery itself cannot remain blind. A system must find the right capability, decide whether it should use it, and verify whether it is safe to connect. This is not just a technical convenience. It is a market design principle.</p>
+
+                <p>Blind integration produces hidden liability. Measured integration produces governable infrastructure. The moment discovery is tied to verification, every tool, skill, and agent begins to resemble a vendor surface. It must present enough evidence to be selected, trusted, and monitored. This is one reason shared standards matter. Standards are not only diplomatic gestures among labs. They reduce the cost of comparing claims across systems, vendors, and jurisdictions.</p>
+
+                <p>OpenAI’s standards signal fits here. Once evaluation frameworks and safety practices start to harden into shared public expectations, measurement stops being internal self-praise and becomes a common language across buyers, builders, and regulators. That is when market structure changes. What was once an implementation detail becomes a condition of access.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this thesis is correct, then the most durable opportunities may not sit only in raw agent capability. They may sit in the infrastructure that makes capability measurable, governable, and therefore purchasable.</p>
+
+                <ul>
+                    <li><strong>Agent evaluation platforms:</strong> systems that measure long-running agent performance across context handling, tool use, error rates, recovery, and human-review compatibility.</li>
+                    <li><strong>Continuous assurance layers:</strong> products that treat post-deploy monitoring, policy checks, and regression detection as a live service rather than a one-time audit.</li>
+                    <li><strong>Verification-aware discovery rails:</strong> specifications and marketplaces that let organizations find tools, skills, and agents with clear provenance, trust markers, and compatibility evidence.</li>
+                    <li><strong>Procurement intelligence for autonomy:</strong> software that translates technical measurements into buying decisions, approval workflows, liability views, and governance dashboards.</li>
+                    <li><strong>Recovery and rollback infrastructure:</strong> systems that turn agent failure into a bounded, observable event instead of an opaque institutional risk.</li>
+                </ul>
+
+                <p>These categories matter because they underwrite confidence. They help a buyer answer concrete questions: What am I really purchasing? Under what conditions does it work? What evidence survives? How much human supervision remains necessary? Where does liability move when the system acts? The more clearly those questions can be answered, the more budgets can move from experimentation to infrastructure spend.</p>
+
+                <h2>Why this matters for African technological sovereignty</h2>
+
+                <p>This shift has particular importance for African and diasporic technology institutions. Too much of the AI conversation still assumes that strategic relevance belongs only to those who own the largest base models. That is a narrow reading of power. Institutions also gain leverage by defining how systems are measured, governed, admitted, and trusted. If the global market is entering a phase where measurement decides which agents get bought, then the societies that build evaluation discipline, domain-specific audit layers, multilingual evidence systems, and recovery infrastructure can shape the operating terms of autonomy even without leading the model race.</p>
+
+                <p>Cheikh Anta Diop insisted that sovereignty requires scientific organization. In the AI era, this means more than training models. It means building the laboratories, standards practices, testing cultures, publishing architectures, and verification surfaces through which technical claims become socially legible. A continent that consumes agents without building measurement sovereignty will inherit black boxes it cannot truly govern. A continent that builds its own evaluation and assurance capacity acquires something more durable than hype: the right to judge.</p>
+
+                <p>That right matters economically. Local governments, banks, publishers, health systems, logistics operators, and cultural institutions will all need ways to decide which autonomous systems deserve authority. Whoever builds those decision surfaces builds a hidden but strategic layer of the future stack.</p>
+
+                <h2>Conclusion</h2>
+
+                <p>The agent market is maturing out of spectacle. What comes next is not less ambitious, but more serious. The decisive interface may no longer be the chat box or the demo reel. It may be the measurement surface through which autonomy becomes comparable, governable, and buyable. That is the layer where trust ceases to be marketing language and becomes institutional practice.</p>
+
+                <p>Builders should therefore ask a sterner question than “How capable is the agent?” They should ask, “What exactly can we prove about its behavior over time?” Investors should ask a parallel question: “Which companies are building the rails that turn autonomous performance into procurement confidence?” Where those questions are answered well, the market will stop treating agents as novelties and start treating them as infrastructure.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/measuring-what-matters-with-jules/" target="_blank" rel="noopener">Google Developers Blog — Measuring What Matters with Jules (June 22, 2026)</a></li>
+                    <li><a href="https://www.nist.gov/news-events/news/2026/06/nist-mathematical-proof-supports-transition-continuous-monitor-and-update" target="_blank" rel="noopener">NIST — Mathematical Proof Supports Transition to a Continuous-Monitor-and-Update Security Model for AI Systems (June 9, 2026)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/" target="_blank" rel="noopener">Google Developers Blog — Announcing the Agentic Resource Discovery specification (June 17, 2026)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “Helping build shared standards for advanced AI” (June 23, 2026)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La mesure devient l’interface d’achat des agents</h1>
+
+                <p>Le marché des agents continue souvent d’être raconté comme si la persuasion constituait la capacité centrale : meilleur chat, personnalité plus fluide, génération de code plus rapide, médias plus convaincants. Mais les institutions n’achètent pas l’autonomie comme des consommateurs achètent un divertissement. Elles l’achètent comme elles achètent une infrastructure ajustée au risque. La question n’est pas seulement de savoir si un agent peut agir. La question est de savoir si son action peut être mesurée avec assez de rigueur pour être admise dans la commande, la gouvernance et la confiance opérationnelle. Voilà pourquoi le déplacement le plus important dans les systèmes agentiques n’est peut-être pas la seule intelligence expressive, mais l’ascension de la mesure comme interface commerciale de premier rang.</p>
+
+                <p>Des signaux publics récents convergent sur ce point. Le billet de Google du 22 juin sur Jules décrit des agents de codage passant d’assistants réactifs à des systèmes qui absorbent du contexte, font remonter les risques et poursuivent des objectifs de plus haut niveau, tout en insistant sur le fait que l’enjeu n’est pas la sortie brute mais ce qui doit être mesuré. L’annonce du NIST du 9 juin sur un modèle de sécurité en surveillance et mise à jour continues pour les systèmes d’IA soutient qu’une inspection unique est structurellement insuffisante. La spécification Agentic Resource Discovery de Google du 17 juin organise les écosystèmes agentiques autour de la découverte et de la vérification d’outils, de compétences et d’agents avant connexion. Et l’entrée RSS d’OpenAI du 23 juin sur la construction de standards partagés pour l’IA avancée pointe explicitement vers des cadres d’évaluation, des pratiques de sûreté et une coopération globale. Pris ensemble, ces signaux suggèrent un marché qui passe de la culture de la démonstration à la culture de l’admissibilité.</p>
+
+                <blockquote>
+                    <p>La prochaine génération d’agents ne sera pas achetée principalement parce qu’elle paraît intelligente. Elle sera achetée parce qu’elle peut être mesurée, comparée, surveillée et gouvernée sous pression institutionnelle.</p>
+                </blockquote>
+
+                <h2>Pourquoi la mesure devient centrale</h2>
+
+                <p>Tant que les agents étaient traités comme des assistants à la périphérie du workflow, il était possible de tolérer l’ambiguïté. Une réponse ingénieuse, un brouillon utile ou un script pratique semblaient suffisants. Mais dès qu’un agent commence à toucher à la livraison logicielle, aux achats, à la posture de sécurité, à la preuve de conformité, à l’interaction client ou à la délégation en plusieurs étapes, l’ambiguïté devient coûteuse. Les institutions doivent savoir non seulement ce que le système a fait une fois, mais comment il se comporte dans le temps, à quelle fréquence il échoue, comment la reprise fonctionne, quelles preuves demeurent et quelles contraintes encadrent son autorité.</p>
+
+                <p>C’est pourquoi la mesure devient plus qu’un hobby de benchmarking. Elle devient le langage par lequel les institutions décident si les systèmes autonomes méritent un budget. Les acheteurs, équipes risque, DSI, responsables sécurité, assureurs et auditeurs ne souscrivent pas une personnalité de modèle. Ils souscrivent un comportement d’exploitation. Dans un tel environnement, l’agent à la meilleure anecdote perd face à l’agent doté de la plus forte trace de preuve.</p>
+
+                <p>Le signal Jules est instructif ici. Lorsqu’un agent passe d’une exécution de tâche étroite à une exploration orientée objectif, le problème d’évaluation devient plus difficile et plus important économiquement. Il faut demander si l’agent identifie le contexte pertinent, remarque les risques émergents, utilise les outils de manière appropriée et produit des interventions qui améliorent le système au lieu de simplement le décorer. Ce n’est pas un score unique de benchmark. C’est une pile de mesure.</p>
+
+                <h2>Du théâtre du benchmark à la preuve opérationnelle</h2>
+
+                <p>Le marché a déjà passé assez de temps dans le théâtre du benchmark : tâches isolées, excitation des classements et démonstrations soigneusement mises en scène. Ces rituels ont une certaine valeur analytique, mais ils s’effondrent lorsque l’autonomie entre dans les institutions. Un acheteur sérieux veut une preuve opérationnelle. L’agent peut-il maintenir sa qualité sur un travail de longue durée ? Peut-il signaler son incertitude ? Peut-il exposer les raisons d’une recommandation ? Peut-il être interrompu, relu, annulé ou contraint ? Peut-il fonctionner à travers des relais multi-agents sans transformer la responsabilité en brouillard ?</p>
+
+                <p>La position du NIST sur la surveillance et la mise à jour continues compte précisément parce qu’elle attaque la fiction d’une assurance statique. Si des systèmes d’IA complexes ne peuvent pas être certifiés une fois puis crus pour toujours, alors la mesure doit devenir continue. Pas un théâtre trimestriel. Pas un PDF de red team unique. La mesure continue signifie des contrôles de vivacité, un suivi des échecs, la détection de régression, l’application des politiques et des reçus post-action. Autrement dit, l’institution a besoin d’une surface d’audit qui vive aussi longtemps que l’agent.</p>
+
+                <ul>
+                    <li><strong>Mesure de capacité :</strong> ce que l’agent peut faire dans des conditions définies.</li>
+                    <li><strong>Mesure de fiabilité :</strong> sa capacité à continuer de le faire sous variance, échelle et pression temporelle.</li>
+                    <li><strong>Mesure de gouvernance :</strong> le fonctionnement réel des permissions, des chemins de revue et des contrôles d’intervention.</li>
+                    <li><strong>Mesure de reprise :</strong> la rapidité avec laquelle le système détecte l’échec, limite les dégâts et restaure un état sûr.</li>
+                    <li><strong>Mesure économique :</strong> la capacité de la couche autonome à réduire le coût, compresser le temps de réponse ou élargir la capacité productive sans créer de passifs cachés.</li>
+                </ul>
+
+                <p>Cette liste clarifie la transition réelle. Le marché passe de la question de savoir si un agent est impressionnant à la question de savoir si son comportement est assez lisible pour être acheté de manière répétée.</p>
+
+                <h2>Découverte, vérification et fin de l’intégration aveugle</h2>
+
+                <p>La spécification Agentic Resource Discovery rend visible une autre partie du déplacement. Dans un écosystème où les agents dépendent d’outils distribués, de compétences et d’autres agents, la découverte elle-même ne peut pas rester aveugle. Un système doit trouver la bonne capacité, décider s’il doit réellement l’utiliser, puis vérifier si la connexion est sûre. Ce n’est pas seulement une commodité technique. C’est un principe de conception de marché.</p>
+
+                <p>L’intégration aveugle produit une responsabilité cachée. L’intégration mesurée produit une infrastructure gouvernable. Dès que la découverte est liée à la vérification, chaque outil, compétence et agent commence à ressembler à une surface fournisseur. Il doit présenter assez de preuves pour être sélectionné, cru et surveillé. Voilà une des raisons pour lesquelles les standards partagés comptent. Les standards ne sont pas seulement des gestes diplomatiques entre laboratoires. Ils réduisent le coût de comparaison des revendications entre systèmes, vendeurs et juridictions.</p>
+
+                <p>Le signal d’OpenAI sur les standards s’inscrit ici. Dès que des cadres d’évaluation et des pratiques de sûreté commencent à se durcir en attentes publiques partagées, la mesure cesse d’être une auto-célébration interne et devient un langage commun entre acheteurs, bâtisseurs et régulateurs. C’est à ce moment que la structure de marché change. Ce qui n’était qu’un détail d’implémentation devient une condition d’accès.</p>
+
+                <h2>Où la surface investissable s’élargit</h2>
+
+                <p>Si cette thèse est juste, alors les opportunités les plus durables ne se trouvent peut-être pas seulement dans la capacité brute des agents. Elles peuvent se trouver dans l’infrastructure qui rend cette capacité mesurable, gouvernable et donc achetable.</p>
+
+                <ul>
+                    <li><strong>Plateformes d’évaluation d’agents :</strong> des systèmes qui mesurent la performance d’agents de longue durée à travers la gestion du contexte, l’usage des outils, les taux d’erreur, la reprise et la compatibilité avec la revue humaine.</li>
+                    <li><strong>Couches d’assurance continue :</strong> des produits qui traitent la surveillance post-déploiement, les contrôles de politique et la détection de régression comme un service vivant plutôt qu’un audit ponctuel.</li>
+                    <li><strong>Rails de découverte sensibles à la vérification :</strong> des spécifications et places de marché qui permettent aux organisations de trouver outils, compétences et agents avec provenance claire, marqueurs de confiance et preuves de compatibilité.</li>
+                    <li><strong>Intelligence d’achat pour l’autonomie :</strong> des logiciels qui traduisent les mesures techniques en décisions d’achat, workflows d’approbation, vues de responsabilité et tableaux de bord de gouvernance.</li>
+                    <li><strong>Infrastructure de reprise et de rollback :</strong> des systèmes qui transforment la panne agentique en événement borné et observable au lieu d’un risque institutionnel opaque.</li>
+                </ul>
+
+                <p>Ces catégories comptent parce qu’elles souscrivent la confiance. Elles aident un acheteur à répondre à des questions concrètes : qu’est-ce que j’achète réellement ? Dans quelles conditions cela fonctionne-t-il ? Quelle preuve survit ? Quel niveau de supervision humaine reste nécessaire ? Où se déplace la responsabilité quand le système agit ? Plus ces questions reçoivent des réponses claires, plus les budgets peuvent passer de l’expérimentation à une dépense d’infrastructure.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté technologique africaine</h2>
+
+                <p>Ce déplacement a une importance particulière pour les institutions technologiques africaines et diasporiques. Trop de conversations sur l’IA supposent encore que la pertinence stratégique appartient seulement à ceux qui possèdent les plus grands modèles de base. C’est une lecture étroite du pouvoir. Les institutions gagnent aussi du levier en définissant la manière dont les systèmes sont mesurés, gouvernés, admis et crus. Si le marché mondial entre dans une phase où la mesure décide quels agents seront achetés, alors les sociétés qui construisent une discipline d’évaluation, des couches d’audit propres aux domaines, des systèmes de preuve multilingues et une infrastructure de reprise peuvent façonner les conditions d’exploitation de l’autonomie même sans mener la course aux modèles.</p>
+
+                <p>Cheikh Anta Diop insistait sur le fait que la souveraineté exige une organisation scientifique. À l’ère de l’IA, cela signifie plus qu’entraîner des modèles. Cela signifie construire les laboratoires, les pratiques de standardisation, les cultures de test, les architectures de publication et les surfaces de vérification par lesquelles les revendications techniques deviennent socialement lisibles. Un continent qui consomme des agents sans construire une souveraineté de la mesure héritera de boîtes noires qu’il ne pourra pas vraiment gouverner. Un continent qui construit sa propre capacité d’évaluation et d’assurance acquiert quelque chose de plus durable que le hype : le droit de juger.</p>
+
+                <p>Ce droit compte économiquement. Les gouvernements locaux, banques, éditeurs, systèmes de santé, opérateurs logistiques et institutions culturelles auront tous besoin de moyens pour décider quels systèmes autonomes méritent l’autorité. Celui qui construit ces surfaces de décision construit une couche discrète mais stratégique de la pile future.</p>
+
+                <h2>Conclusion</h2>
+
+                <p>Le marché des agents mûrit en sortant du spectacle. Ce qui vient ensuite n’est pas moins ambitieux, mais plus sérieux. L’interface décisive n’est peut-être plus la boîte de chat ni la démo. Elle pourrait être la surface de mesure par laquelle l’autonomie devient comparable, gouvernable et achetable. C’est à cette couche que la confiance cesse d’être un langage marketing pour devenir une pratique institutionnelle.</p>
+
+                <p>Les bâtisseurs devraient donc poser une question plus sévère que « À quel point l’agent est-il capable ? » Ils devraient demander : « Que pouvons-nous prouver exactement sur son comportement dans le temps ? » Les investisseurs devraient poser une question parallèle : « Quelles entreprises construisent les rails qui transforment la performance autonome en confiance d’achat ? » Là où ces questions reçoivent de bonnes réponses, le marché cessera de traiter les agents comme des nouveautés et commencera à les traiter comme une infrastructure.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/measuring-what-matters-with-jules/" target="_blank" rel="noopener">Google Developers Blog — Measuring What Matters with Jules (22 juin 2026)</a></li>
+                    <li><a href="https://www.nist.gov/news-events/news/2026/06/nist-mathematical-proof-supports-transition-continuous-monitor-and-update" target="_blank" rel="noopener">NIST — Mathematical Proof Supports Transition to a Continuous-Monitor-and-Update Security Model for AI Systems (9 juin 2026)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/" target="_blank" rel="noopener">Google Developers Blog — Announcing the Agentic Resource Discovery specification (17 juin 2026)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS OpenAI News — « Helping build shared standards for advanced AI » (23 juin 2026)</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <a href="../index.html" class="article__back" data-i18n="article.back">Back to Journal</a>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>
