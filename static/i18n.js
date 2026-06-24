@@ -59,6 +59,7 @@
         'article.entry040':     { en: 'Diop Daily #040 — June 2026', fr: 'Diop Quotidien n°040 — Juin 2026' },
         'article.entry041':     { en: 'Diop Daily #041 — June 2026', fr: 'Diop Quotidien n°041 — Juin 2026' },
         'article.entry042':     { en: 'Diop Daily #042 — June 2026', fr: 'Diop Quotidien n°042 — Juin 2026' },
+        'article.entry043':     { en: 'Diop Daily #043 — June 2026', fr: 'Diop Quotidien n°043 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -488,7 +489,17 @@
             },
             excerpt: {
                 en: "The next agent market will be shaped less by theatrical demos than by measurable operating behavior. Public signals from Google, NIST, and OpenAI suggest that evaluation, continuous monitoring, and verification are becoming the practical interface through which autonomous systems win budget, trust, and institutional authority.",
-                fr: "Le prochain marché des agents sera moins structuré par des démonstrations théâtrales que par un comportement d’exploitation mesurable. Les signaux publics de Google, du NIST et d’OpenAI suggèrent que l’évaluation, la surveillance continue et la vérification deviennent l’interface pratique par laquelle les systèmes autonomes gagnent budget, confiance et autorité institutionnelle."
+                fr: "Le prochain marché des agents sera moins façonné par des démonstrations théâtrales que par un comportement opérationnel mesurable. Les signaux publics de Google, du NIST et d’OpenAI suggèrent que l’évaluation, la surveillance continue et la vérification deviennent l’interface pratique par laquelle les systèmes autonomes gagnent budget, confiance et autorité institutionnelle."
+            }
+        },
+        'diop-daily-043': {
+            title: {
+                en: "Institutional Capacity Is Becoming the Real AI Product",
+                fr: "La capacité institutionnelle devient le vrai produit de l’IA"
+            },
+            excerpt: {
+                en: "The next durable AI market may belong not to the flashiest model, but to institutions that can delegate, monitor, verify, and govern autonomous work as a repeatable operating capacity. Public signals from Google, NIST, W3C, and OpenAI suggest that organized reliability is becoming the real buying surface.",
+                fr: "Le prochain marché durable de l’IA pourrait appartenir non pas au modèle le plus spectaculaire, mais aux institutions capables de déléguer, surveiller, vérifier et gouverner le travail autonome comme une capacité d’exploitation répétable. Les signaux publics de Google, du NIST, du W3C et d’OpenAI suggèrent que la fiabilité organisée devient la véritable surface d’achat."
             }
         }
     };
