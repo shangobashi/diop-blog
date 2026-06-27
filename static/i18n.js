@@ -10,6 +10,9 @@
     var DEFAULT_LANG = 'en';
 
     var translations = {
+        'meta.post044.title':  { en: 'Evaluative Debt Is Becoming the AI Liability We Ignore — Diop Research', fr: 'La dette évaluative devient la responsabilité en IA que nous ignorons — Diop Research' },
+        'meta.post044.description': { en: 'The EU is instrumenting standardized testing, product liability, and transparency rules for AI systems.', fr: "L’Union européenne met en place des tests standardisés, des régimes de responsabilité et des règles de transparence pour les systèmes d’IA." },
+
         'nav.journal':          { en: 'Journal',       fr: 'Journal' },
         'nav.labs':             { en: 'Labs',           fr: 'Laboratoire' },
         'nav.brain':            { en: 'Brain',          fr: 'Cerveau' },
@@ -60,6 +63,8 @@
         'article.entry041':     { en: 'Diop Daily #041 — June 2026', fr: 'Diop Quotidien n°041 — Juin 2026' },
         'article.entry042':     { en: 'Diop Daily #042 — June 2026', fr: 'Diop Quotidien n°042 — Juin 2026' },
         'article.entry043':     { en: 'Diop Daily #043 — June 2026', fr: 'Diop Quotidien n°043 — Juin 2026' },
+        'article.entry044':     { en: 'Diop Daily #044 — June 2026', fr: 'Diop Quotidien n°044 — Juin 2026' },
+        'article.entry044':     { en: 'Diop Daily #044 — June 2026', fr: 'Diop Quotidien n°044 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
