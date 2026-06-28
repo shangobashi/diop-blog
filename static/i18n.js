@@ -64,7 +64,7 @@
         'article.entry042':     { en: 'Diop Daily #042 — June 2026', fr: 'Diop Quotidien n°042 — Juin 2026' },
         'article.entry043':     { en: 'Diop Daily #043 — June 2026', fr: 'Diop Quotidien n°043 — Juin 2026' },
         'article.entry044':     { en: 'Diop Daily #044 — June 2026', fr: 'Diop Quotidien n°044 — Juin 2026' },
-        'article.entry044':     { en: 'Diop Daily #044 — June 2026', fr: 'Diop Quotidien n°044 — Juin 2026' },
+        'article.entry045':     { en: 'Diop Daily #045 — June 2026', fr: 'Diop Quotidien n°045 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -497,14 +497,34 @@
                 fr: "Le prochain marché des agents sera moins façonné par des démonstrations théâtrales que par un comportement opérationnel mesurable. Les signaux publics de Google, du NIST et d’OpenAI suggèrent que l’évaluation, la surveillance continue et la vérification deviennent l’interface pratique par laquelle les systèmes autonomes gagnent budget, confiance et autorité institutionnelle."
             }
         },
-        'diop-daily-043': {
+        'diop-daily-044': {
             title: {
-                en: "Institutional Capacity Is Becoming the Real AI Product",
-                fr: "La capacité institutionnelle devient le vrai produit de l’IA"
+                en: 'Evaluative Debt Is Becoming the AI Liability We Ignore',
+                fr: 'La dette évaluative devient la responsabilité en IA que nous ignorons'
             },
             excerpt: {
-                en: "The next durable AI market may belong not to the flashiest model, but to institutions that can delegate, monitor, verify, and govern autonomous work as a repeatable operating capacity. Public signals from Google, NIST, W3C, and OpenAI suggest that organized reliability is becoming the real buying surface.",
+                en: 'The EU is instrumenting standardized testing, liability, and transparency rules for AI systems. Public signals from the European Commission, Google, OpenAI, and NIST suggest that evaluation itself is becoming infrastructure rather than post-hoc paperwork, making interpretation and review the decisive market constraints.',
+                fr: "L’Union européenne met en place des tests standardisés, des régimes de responsabilité et des règles de transparence pour les systèmes d’IA. Les signaux publics de la Commission européenne, de Google, d’OpenAI et du NIST suggèrent que l’évaluation elle-même devient infrastructure plutôt que formalité a posteriori, faisant de l’interprétation et de la révision les contraintes décisives du marché."
+            }
+        },
+        'diop-daily-043': {
+            title: {
+                en: 'Institutional Capacity Is Becoming the Real AI Product',
+                fr: 'La capacité institutionnelle devient le vrai produit de l’IA'
+            },
+            excerpt: {
+                en: 'The next durable AI market may belong not to the flashiest model, but to institutions that can delegate, monitor, verify, and govern autonomous work as a repeatable operating capacity. Public signals from Google, NIST, W3C, and OpenAI suggest that organized reliability is becoming the real buying surface.',
                 fr: "Le prochain marché durable de l’IA pourrait appartenir non pas au modèle le plus spectaculaire, mais aux institutions capables de déléguer, surveiller, vérifier et gouverner le travail autonome comme une capacité d’exploitation répétable. Les signaux publics de Google, du NIST, du W3C et d’OpenAI suggèrent que la fiabilité organisée devient la véritable surface d’achat."
+            }
+        },
+        'diop-daily-045': {
+            title: {
+                en: 'Conformity Is Becoming the Execution Layer for AI',
+                fr: 'La conformité devient la couche d’exécution de l’IA'
+            },
+            excerpt: {
+                en: 'The EU, NIST, W3C, and C2PA are turning evaluation, liability, provenance, and disclosure from paperwork into execution infrastructure. The winning AI market position will increasingly belong to organizations that treat compliance as architecture, not overhead.',
+                fr: "L’Union européenne, le NIST, le W3C et le C2PA transforment évaluation, responsabilité, provenance et divulgation en infrastructure d’exécution. La position gagnante sur le marché de l’IA appartiendra de plus en plus aux organisations qui traitent la conformité comme une architecture, non comme une surcharge."
             }
         }
     };
