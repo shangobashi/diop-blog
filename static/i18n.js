@@ -513,6 +513,10 @@
         'diop-daily-046': {
             title: { en: 'Conformity Is Becoming the Execution Layer for AI', fr: 'La conformité devient la couche d’exécution de l’IA' },
             excerpt: { en: 'The EU, NIST, W3C, and C2PA are turning evaluation, liability, provenance, and disclosure from paperwork into execution infrastructure. The winning AI market position will increasingly belong to organizations that treat compliance as architecture, not overhead.', fr: "L’Union européenne, le NIST, le W3C et le C2PA transforment évaluation, responsabilité, provenance et divulgation en infrastructure d’exécution. La position gagnante sur le marché de l’IA appartiendra de plus en plus aux organisations qui traitent la conformité comme une architecture, non comme une surcharge." }
+        },
+        'diop-daily-047': {
+            title: { en: 'Standardization Is Becoming the Market-Making Layer for AI', fr: 'La standardisation devient la couche de création de marché pour l’IA' },
+            excerpt: { en: 'The EU, NIST, and W3C are making shared standards, conformity assessments, and evaluation formats the primary market-making infrastructure for AI. The firms that master this transition will treat standardization as product architecture, not compliance cost, and own the durable interfaces through which capital and contracts flow.', fr: "L’Union européenne, le NIST et le W3C font des standards partagés, des évaluations de conformité et des formats d’évaluation l’infrastructure première de création de marché pour l’IA. Les entreprises qui maîtrisent cette transition traiteront la standardisation comme architecture produit, non comme coût de conformité, et posséderont les interfaces durables par lesquelles le capital et les contrats circulent." }
         }
     };
 
