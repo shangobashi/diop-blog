@@ -66,6 +66,7 @@
         'article.entry044':     { en: 'Diop Daily #044 — June 2026', fr: 'Diop Quotidien n°044 — Juin 2026' },
         'article.entry045':     { en: 'Diop Daily #045 — June 2026', fr: 'Diop Quotidien n°045 — Juin 2026' },
         'article.entry046':     { en: 'Diop Daily #046 — June 2026', fr: 'Diop Quotidien n°046 — Juin 2026' },
+        'article.entry048':     { en: 'Diop Daily #048 — June 2026', fr: 'Diop Quotidien n°048 — Juin 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -517,6 +518,10 @@
         'diop-daily-047': {
             title: { en: 'Standardization Is Becoming the Market-Making Layer for AI', fr: 'La standardisation devient la couche de création de marché pour l’IA' },
             excerpt: { en: 'The EU, NIST, and W3C are making shared standards, conformity assessments, and evaluation formats the primary market-making infrastructure for AI. The firms that master this transition will treat standardization as product architecture, not compliance cost, and own the durable interfaces through which capital and contracts flow.', fr: "L’Union européenne, le NIST et le W3C font des standards partagés, des évaluations de conformité et des formats d’évaluation l’infrastructure première de création de marché pour l’IA. Les entreprises qui maîtrisent cette transition traiteront la standardisation comme architecture produit, non comme coût de conformité, et posséderont les interfaces durables par lesquelles le capital et les contrats circulent." }
+        },
+        'diop-daily-048': {
+            title: { en: 'AI Job Mapping Is Becoming the New Carbon Accounting', fr: 'La cartographie des emplois transformés par l’IA devient le nouveau bilan carbone' },
+            excerpt: { en: 'Markets now require measurement of AI’s labor footprint before they will fund, govern, or deploy it at scale. OpenAI’s move toward country-level job-transition mapping is creating the carbon-ledger infrastructure of the AI era — and the builders who standardize this first will own the trust layer through which capital and policy flow.', fr: "Les marchés réclament désormais une mesure de l’empreinte de l’IA sur l’emploi avant de la financer, la réguler ou la déployer à grande échelle. La démarche d’OpenAI vers une cartographie des transitions professionnelles au niveau national construit l’infrastructure de grand livre de l’ère IA — et les bâtisseurs qui standardiseront cela les premiers posséderont la couche de confiance par laquelle le capital et les politiques circulent." }
         }
     };
 
