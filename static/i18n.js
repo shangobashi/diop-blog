@@ -67,6 +67,7 @@
         'article.entry045':     { en: 'Diop Daily #045 — June 2026', fr: 'Diop Quotidien n°045 — Juin 2026' },
         'article.entry046':     { en: 'Diop Daily #046 — June 2026', fr: 'Diop Quotidien n°046 — Juin 2026' },
         'article.entry048':     { en: 'Diop Daily #048 — June 2026', fr: 'Diop Quotidien n°048 — Juin 2026' },
+        'article.entry049':     { en: 'Diop Daily #049 — July 2026', fr: 'Diop Quotidien n°049 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -522,6 +523,10 @@
         'diop-daily-048': {
             title: { en: 'AI Job Mapping Is Becoming the New Carbon Accounting', fr: 'La cartographie des emplois transformés par l’IA devient le nouveau bilan carbone' },
             excerpt: { en: 'Markets now require measurement of AI’s labor footprint before they will fund, govern, or deploy it at scale. OpenAI’s move toward country-level job-transition mapping is creating the carbon-ledger infrastructure of the AI era — and the builders who standardize this first will own the trust layer through which capital and policy flow.', fr: "Les marchés réclament désormais une mesure de l’empreinte de l’IA sur l’emploi avant de la financer, la réguler ou la déployer à grande échelle. La démarche d’OpenAI vers une cartographie des transitions professionnelles au niveau national construit l’infrastructure de grand livre de l’ère IA — et les bâtisseurs qui standardiseront cela les premiers posséderont la couche de confiance par laquelle le capital et les politiques circulent." }
+        },
+        'diop-daily-049': {
+            title: { en: 'Agent Sovereignty Is Becoming a Design Constraint', fr: 'La souveraineté des agents devient une contrainte de conception' },
+            excerpt: { en: 'The AI race no longer pivots on pure intelligence. The decisive engineering variable is sovereignty — an agent’s ability to execute, verify, recover, and govern itself without human fallback. ADK Go 2.0, A2A handoff semantics, and the W3C Verifiable Credential Forgery Defense draft show that sovereignty is being encoded as infrastructure.', fr: 'La course à l’IA ne repose plus seulement sur la pure intelligence. La variable d’ingénierie décisive est la souveraineté — la capacité d’un agent à exécuter, vérifier, récupérer et se gouverner lui-même sans recours humain. ADK Go 2.0, les sémantiques de transfert A2A et le projet W3C de défense contre la falsification d’attestations montrent que la souveraineté devient une infrastructure codée.' }
         }
     };
 
