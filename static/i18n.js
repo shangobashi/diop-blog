@@ -68,6 +68,7 @@
         'article.entry046':     { en: 'Diop Daily #046 — June 2026', fr: 'Diop Quotidien n°046 — Juin 2026' },
         'article.entry048':     { en: 'Diop Daily #048 — June 2026', fr: 'Diop Quotidien n°048 — Juin 2026' },
         'article.entry049':     { en: 'Diop Daily #049 — July 2026', fr: 'Diop Quotidien n°049 — Juillet 2026' },
+        'article.entry050':     { en: 'Diop Daily #050 — July 2026', fr: 'Diop Quotidien n°050 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -527,6 +528,13 @@
         'diop-daily-049': {
             title: { en: 'Agent Sovereignty Is Becoming a Design Constraint', fr: 'La souveraineté des agents devient une contrainte de conception' },
             excerpt: { en: 'The AI race no longer pivots on pure intelligence. The decisive engineering variable is sovereignty — an agent’s ability to execute, verify, recover, and govern itself without human fallback. ADK Go 2.0, A2A handoff semantics, and the W3C Verifiable Credential Forgery Defense draft show that sovereignty is being encoded as infrastructure.', fr: 'La course à l’IA ne repose plus seulement sur la pure intelligence. La variable d’ingénierie décisive est la souveraineté — la capacité d’un agent à exécuter, vérifier, récupérer et se gouverner lui-même sans recours humain. ADK Go 2.0, les sémantiques de transfert A2A et le projet W3C de défense contre la falsification d’attestations montrent que la souveraineté devient une infrastructure codée.' }
+        },
+        'diop-daily-050': {
+            title: { en: 'Licensing Is Becoming the Execution Layer for Agentic Content Markets', fr: 'La licence devient la couche d’exécution des marchés de contenu agentiques' },
+            excerpt: {
+                en: 'The EU GPAI Code of Practice, C2PA provenance assertions, and A2A handoff semantics converge on one bottleneck: autonomous agents lack deterministic, machine-negotiable licensing as an execution primitive.',
+                fr: 'Le Code de pratique GPAI de l’UE, les assertions de provenance C2PA et les sémantiques de transfert A2A convergent vers un même goulot : les agents autonomes manquent de licence déterministe négociable par machine comme primitive d’exécution.'
+            }
         }
     };
 
