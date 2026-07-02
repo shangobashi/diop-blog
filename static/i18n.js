@@ -69,6 +69,7 @@
         'article.entry048':     { en: 'Diop Daily #048 — June 2026', fr: 'Diop Quotidien n°048 — Juin 2026' },
         'article.entry049':     { en: 'Diop Daily #049 — July 2026', fr: 'Diop Quotidien n°049 — Juillet 2026' },
         'article.entry050':     { en: 'Diop Daily #050 — July 2026', fr: 'Diop Quotidien n°050 — Juillet 2026' },
+        'article.entry051':     { en: 'Diop Daily #051 — July 2026', fr: 'Diop Quotidien n°051 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -534,6 +535,13 @@
             excerpt: {
                 en: 'The EU GPAI Code of Practice, C2PA provenance assertions, and A2A handoff semantics converge on one bottleneck: autonomous agents lack deterministic, machine-negotiable licensing as an execution primitive.',
                 fr: 'Le Code de pratique GPAI de l’UE, les assertions de provenance C2PA et les sémantiques de transfert A2A convergent vers un même goulot : les agents autonomes manquent de licence déterministe négociable par machine comme primitive d’exécution.'
+            }
+        },
+        'diop-daily-051': {
+            title: { en: 'Memory Is the New Commerce Rail', fr: 'La mémoire est la nouvelle infrastructure de commerce' },
+            excerpt: {
+                en: 'Portable identity, session continuity, skill provenance, and trust scoring are becoming the commerce rails of the next era. Builders who preserve memory deterministically across products, borders, and agents will own the contract layer through which tomorrow’s capital and consent flow.',
+                fr: 'L’identité portable, la continuité de session, la provenance des compétences et le score de confiance deviennent les rails de commerce de la prochaine ère. les bâtisseurs qui préservent la mémoire de façon déterministe à travers produits, frontières et agents posséderont la couche contractuelle par laquelle circuleront capital et consentement.'
             }
         }
     };
