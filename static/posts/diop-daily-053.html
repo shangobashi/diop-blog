@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Trust Is Becoming a Runtime, Not a Document — Diop Research</title>
+    <meta name="description" content="Why trust in AI and digital systems is shifting from static documents toward live infrastructure for witness, challenge, revocation, observability, and recovery."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry053">Diop Daily #053 — July 2026</div>
+                <div class="article__meta-line">
+                    <time>July 05, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>runtime trust · credential defense · observability</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+<h1 class="article__title">Trust Is Becoming a Runtime, Not a Document</h1>
+
+<p>Modern institutions still talk about trust as if it were a static artifact. A certificate is issued, a policy PDF is signed, a vendor finishes an audit, a regulator receives a filing, and everyone behaves as though the question has been settled. That model made a certain kind of sense in slower administrative systems where action moved at human speed and where the time between approval and execution was large enough for paper evidence to feel durable. It makes much less sense in an agent economy. Software now writes, routes, summarizes, executes, evaluates, and hands work to other software inside the same operational minute. Under those conditions, trust cannot remain a document that was true once. It has to become a living system that can be checked while work is happening.</p>
+
+<p>Several public signals from the last few weeks point in the same direction. On June 30, the W3C published a first public working draft for Verifiable Credential Forgery Defense, describing a mechanism through which credential issuers can publish indexed lists of compact cryptographic witnesses. The same day, the W3C also published a draft process for vulnerability disclosure and handling in W3C standards themselves, acknowledging that even the protocols of trust require explicit channels for challenge and repair. Two weeks earlier, the W3C opened a draft on quantum-resistant cryptosuites for data integrity signatures, an admission that the shelf life of trust primitives is itself a strategic variable. Google, also on June 30, introduced an “agent quality flywheel” that automates testing, grading, and optimization so that agent behavior is not tuned by intuition alone. Its ADK Go 2.0 release that same day put graph-based workflows, built-in human checkpoints, and dynamic orchestration at the center of multi-agent engineering. Meanwhile, the European Commission’s current General-Purpose AI Code of Practice continues to formalize documentation, traceability, and risk discipline around powerful models. These are not disconnected announcements. They describe a common migration: trust is leaving the PDF and entering the runtime.</p>
+
+<blockquote>
+    <p>The next trust market will not sell static credentials. It will sell continuously challengeable evidence that a machine, a workflow, a credential, or a content object still deserves the right to circulate.</p>
+</blockquote>
+
+<h2>Why static trust is no longer enough</h2>
+
+<p>Static trust fails first where automation becomes consequential. A model can pass an evaluation in June and drift in July. An agent can hold a valid credential and still act outside the boundary that made the credential meaningful. A provenance badge can exist while the surrounding workflow quietly becomes insecure. A standards body can publish a specification and only later discover that the specification itself needs a vulnerability intake path. In other words, the old sequence — approve first, worry later — breaks down once software is granted bounded discretion.</p>
+
+<p>What matters now is not merely whether a system was once authorized, certified, or benchmarked. What matters is whether the authorization remains revocable, whether the benchmark can be rerun against a changing environment, whether the credential can be defended against forgery, whether human supervisors can inspect the chain of action, and whether the institution has a path to recover when something subtle fails. That is the deeper meaning of the recent standards activity. We are watching trust move from static representation to operational maintenance.</p>
+
+<h2>What a runtime trust system actually looks like</h2>
+
+<p>If this thesis is correct, then trust infrastructure begins to look less like a filing cabinet and more like an execution stack. A serious runtime trust system includes at least six layers:</p>
+
+<ul>
+    <li><strong>Issuance and witness layer:</strong> credentials, permissions, and attestations need cryptographic evidence that can be published, checked, and challenged after issuance.</li>
+    <li><strong>Revocation and exception layer:</strong> institutions need ways to suspend authority, quarantine workflows, and invalidate stale or compromised claims without collapsing the entire system.</li>
+    <li><strong>Evaluation loop layer:</strong> agent behavior must be retested continuously, not only during launch week, using reproducible grading and regression checks.</li>
+    <li><strong>Workflow evidence layer:</strong> graph executions, handoffs, human approvals, tool calls, and policy decisions need durable traces that can be inspected later.</li>
+    <li><strong>Disclosure and repair layer:</strong> protocols and products need explicit routes through which defects, exploits, and ambiguous edge cases are reported and resolved.</li>
+    <li><strong>Cryptographic agility layer:</strong> the trust stack must be upgradable when the underlying signature assumptions weaken, which is why post-quantum preparation is already entering standards work.</li>
+</ul>
+
+<p>This is why the most important infrastructure companies in the next wave may not present themselves as identity vendors in the old sense. They may look like lifecycle companies: firms that manage issuance, witness publication, challenge handling, regression evidence, policy observability, and key rotation across changing machine systems. Their product is not a badge. It is a governed right to continue acting.</p>
+
+<h2>Where the investable surface is widening</h2>
+
+<p>Capital should look carefully at the categories that become necessary once trust is understood as runtime infrastructure rather than documentary ceremony.</p>
+
+<ul>
+    <li><strong>Credential defense infrastructure:</strong> witness registries, anti-forgery services, revocation rails, and credential-health monitoring for humans, agents, services, and content objects.</li>
+    <li><strong>Policy observability platforms:</strong> systems that show which policy allowed an action, which checkpoint interrupted it, and where human approval was inserted or bypassed.</li>
+    <li><strong>Agent quality operations:</strong> testing, grading, simulation, and regression systems that make autonomous behavior measurable enough for procurement, insurance, and regulation.</li>
+    <li><strong>Post-quantum integrity migration:</strong> tools that help institutions rotate trust primitives before cryptographic fragility becomes a crisis.</li>
+    <li><strong>Cross-border trust middleware:</strong> multilingual, machine-readable compliance and evidence layers for institutions operating across jurisdictions, which is especially relevant for African and diasporic organizations.</li>
+</ul>
+
+<p>Notice what changes in the underwriting logic. The defensible company is no longer the one that merely claims its model is powerful or that its credential format is elegant. The defensible company is the one that reduces the cost of challenge, revocation, replay, audit, and recovery. In other words, the next durable AI margin may accrue not to the most theatrical intelligence, but to the most governable proof.</p>
+
+<h2>Why this matters for African institutional sovereignty</h2>
+
+<p>This question is especially important for Africa because so much of colonial administration was built on asymmetries of recognition. Papers, seals, archives, and official categories determined whose movement counted, whose property counted, whose testimony counted, and whose memory counted. To build African AI systems on top of inherited trust surfaces without rethinking them would be to import the administrative skeleton of dependency into a new technical age.</p>
+
+<p>The better path is to treat trust as an operating layer that African institutions can help design for themselves: multilingual, portable, inspectable, revocable, and compatible with real conditions of cross-border life. African builders do not need to romanticize informality, nor should they imitate foreign bureaucratic heaviness for its own sake. They should build systems in which proof can travel without losing context, in which authority can be challenged without institutional paralysis, and in which machine action becomes legible to the communities that bear its consequences.</p>
+
+<p>Cheikh Anta Diop insisted that scientific organization was a condition of freedom. In our century, one part of that scientific organization will be the trust runtime: the ability to issue, test, defend, revoke, and repair digital authority on one’s own terms. The institutions that build that layer will not simply consume the future. They will define the conditions under which the future becomes admissible.</p>
+
+<h2>Sources</h2>
+<ul>
+    <li><a href="https://www.w3.org/news/2026/first-public-working-draft-verifiable-credential-forgery-defense-v1-0/" target="_blank" rel="noopener">W3C — First Public Working Draft: Verifiable Credential Forgery Defense v1.0</a></li>
+    <li><a href="https://www.w3.org/news/2026/group-note-draft-w3c-standards-vulnerability-disclosure-handling-process-and-policy/" target="_blank" rel="noopener">W3C — Group Note Draft: W3C Standards Vulnerability Disclosure &amp; Handling Process and Policy</a></li>
+    <li><a href="https://www.w3.org/news/2026/first-public-working-draft-quantum-resistant-cryptosuites-v1-0/" target="_blank" rel="noopener">W3C — First Public Working Draft: Quantum-Resistant Cryptosuites v1.0</a></li>
+    <li><a href="https://developers.googleblog.com/driving-the-agent-quality-flywheel-from-your-coding-agent/" target="_blank" rel="noopener">Google Developers Blog — Driving the Agent Quality Flywheel from Your Coding Agent</a></li>
+    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — Build reliable multi-agent applications with ADK Go 2.0</a></li>
+    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">European Commission — Drawing-up a General-Purpose AI Code of Practice</a></li>
+</ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+<h1 class="article__title">La confiance devient un runtime, non un document</h1>
+
+<p>Les institutions modernes parlent encore de la confiance comme s’il s’agissait d’un artefact statique. Un certificat est émis, un PDF de politique est signé, un fournisseur termine un audit, un régulateur reçoit un dépôt, et chacun se comporte comme si la question était réglée. Ce modèle avait un certain sens dans des systèmes administratifs plus lents, où l’action avançait à vitesse humaine et où l’intervalle entre approbation et exécution était assez large pour que la preuve papier paraisse durable. Il a beaucoup moins de sens dans une économie d’agents. Le logiciel écrit, route, résume, exécute, évalue et transmet du travail à d’autres logiciels dans la même minute opérationnelle. Dans ces conditions, la confiance ne peut plus rester un document qui fut vrai une fois. Elle doit devenir un système vivant que l’on peut vérifier pendant que le travail se déroule.</p>
+
+<p>Plusieurs signaux publics des dernières semaines vont dans le même sens. Le 30 juin, le W3C a publié un premier brouillon public sur la défense contre la falsification des attestations vérifiables, décrivant un mécanisme par lequel les émetteurs peuvent publier des listes indexées de témoins cryptographiques compacts. Le même jour, le W3C a également publié un projet de procédure pour la divulgation et le traitement des vulnérabilités dans les standards du W3C eux-mêmes, reconnaissant que même les protocoles de confiance ont besoin de canaux explicites de contestation et de réparation. Deux semaines plus tôt, le W3C a ouvert un projet sur des cryptosuites résistantes au quantique pour les signatures d’intégrité des données, signe que la durée de vie des primitives de confiance est elle-même une variable stratégique. Google, également le 30 juin, a présenté un « agent quality flywheel » qui automatise tests, notation et optimisation afin que le comportement des agents ne soit pas réglé à l’intuition seule. Sa sortie ADK Go 2.0, le même jour, place les workflows en graphe, les points de contrôle humains intégrés et l’orchestration dynamique au centre de l’ingénierie multi-agents. Pendant ce temps, le Code de pratique européen sur l’IA à usage général continue de formaliser documentation, traçabilité et discipline du risque autour des modèles puissants. Ces annonces ne sont pas disjointes. Elles décrivent une migration commune : la confiance quitte le PDF pour entrer dans le runtime.</p>
+
+<blockquote>
+    <p>Le prochain marché de la confiance ne vendra pas des identifiants statiques. Il vendra une preuve continuellement contestable qu’une machine, un workflow, une attestation ou un objet de contenu mérite encore le droit de circuler.</p>
+</blockquote>
+
+<h2>Pourquoi la confiance statique ne suffit plus</h2>
+
+<p>La confiance statique échoue d’abord là où l’automatisation devient conséquente. Un modèle peut réussir une évaluation en juin et dériver en juillet. Un agent peut détenir une attestation valide tout en agissant en dehors de la frontière qui donnait sens à cette attestation. Un badge de provenance peut exister alors que le workflow environnant devient discrètement vulnérable. Un organisme de normalisation peut publier une spécification et découvrir seulement ensuite que la spécification elle-même a besoin d’une voie de signalement des vulnérabilités. Autrement dit, l’ancienne séquence — approuver d’abord, s’inquiéter plus tard — se brise dès lors qu’un logiciel reçoit une discrétion bornée.</p>
+
+<p>Ce qui compte désormais n’est pas seulement de savoir si un système a été un jour autorisé, certifié ou benchmarké. Ce qui compte est de savoir si cette autorisation reste révocable, si le benchmark peut être rejoué dans un environnement changeant, si l’attestation peut être défendue contre la falsification, si des superviseurs humains peuvent inspecter la chaîne d’action, et si l’institution dispose d’un chemin de reprise quand quelque chose d’apparemment mineur échoue. Voilà le sens plus profond de l’activité normative récente. Nous voyons la confiance passer de la représentation statique à la maintenance opérationnelle.</p>
+
+<h2>À quoi ressemble réellement un système de confiance en runtime</h2>
+
+<p>Si cette thèse est juste, l’infrastructure de confiance ressemble moins à une armoire d’archives qu’à une pile d’exécution. Un système sérieux de confiance en runtime comprend au moins six couches :</p>
+
+<ul>
+    <li><strong>Couche d’émission et de témoins :</strong> identifiants, permissions et attestations ont besoin de preuves cryptographiques pouvant être publiées, vérifiées et contestées après l’émission.</li>
+    <li><strong>Couche de révocation et d’exception :</strong> les institutions ont besoin de moyens pour suspendre l’autorité, mettre des workflows en quarantaine et invalider des affirmations obsolètes ou compromises sans faire s’effondrer tout le système.</li>
+    <li><strong>Couche de boucle évaluative :</strong> le comportement des agents doit être retesté en continu, et pas seulement pendant la semaine du lancement, au moyen de notations reproductibles et de contrôles de régression.</li>
+    <li><strong>Couche de preuve de workflow :</strong> les exécutions en graphe, les transferts, les approbations humaines, les appels d’outils et les décisions de politique ont besoin de traces durables inspectables ultérieurement.</li>
+    <li><strong>Couche de divulgation et de réparation :</strong> protocoles et produits ont besoin de routes explicites par lesquelles défauts, exploits et cas limites ambigus sont signalés puis résolus.</li>
+    <li><strong>Couche d’agilité cryptographique :</strong> la pile de confiance doit pouvoir évoluer lorsque les hypothèses de signature s’affaiblissent ; c’est pourquoi la préparation post-quantique entre déjà dans le travail des standards.</li>
+</ul>
+
+<p>C’est pourquoi les entreprises d’infrastructure les plus importantes de la prochaine vague ne se présenteront peut-être pas comme de simples vendeurs d’identité au sens ancien. Elles ressembleront plutôt à des entreprises de cycle de vie : des firmes qui gèrent l’émission, la publication de témoins, le traitement des contestations, les preuves de régression, l’observabilité des politiques et la rotation des clés à travers des systèmes machines en mutation. Leur produit n’est pas un badge. C’est un droit gouverné de continuer à agir.</p>
+
+<h2>Où la surface investissable s’élargit</h2>
+
+<p>Le capital devrait examiner attentivement les catégories qui deviennent nécessaires dès lors que la confiance est comprise comme une infrastructure de runtime plutôt qu’une cérémonie documentaire.</p>
+
+<ul>
+    <li><strong>Infrastructure de défense des attestations :</strong> registres de témoins, services anti-falsification, rails de révocation et surveillance de la santé des identifiants pour humains, agents, services et objets de contenu.</li>
+    <li><strong>Plateformes d’observabilité des politiques :</strong> systèmes montrant quelle politique a autorisé une action, quel point de contrôle l’a interrompue, et où l’approbation humaine a été insérée ou contournée.</li>
+    <li><strong>Opérations de qualité agentique :</strong> systèmes de test, de notation, de simulation et de régression qui rendent le comportement autonome assez mesurable pour les achats, l’assurance et la régulation.</li>
+    <li><strong>Migration d’intégrité post-quantique :</strong> outils aidant les institutions à faire pivoter leurs primitives de confiance avant que la fragilité cryptographique ne devienne une crise.</li>
+    <li><strong>Middleware de confiance transfrontalière :</strong> couches de conformité et de preuve multilingues, lisibles par machine, pour les institutions opérant à travers plusieurs juridictions — point particulièrement pertinent pour les organisations africaines et diasporiques.</li>
+</ul>
+
+<p>Observez ce qui change dans la logique d’underwriting. L’entreprise défendable n’est plus simplement celle qui prétend que son modèle est puissant ou que son format d’attestation est élégant. L’entreprise défendable est celle qui réduit le coût de la contestation, de la révocation, du replay, de l’audit et de la récupération. Autrement dit, la prochaine marge durable de l’IA pourrait revenir non à l’intelligence la plus théâtrale, mais à la preuve la plus gouvernable.</p>
+
+<h2>Pourquoi cela compte pour la souveraineté institutionnelle africaine</h2>
+
+<p>Cette question est particulièrement importante pour l’Afrique, parce qu’une grande part de l’administration coloniale était construite sur des asymétries de reconnaissance. Papiers, sceaux, archives et catégories officielles déterminaient quels déplacements comptaient, quelles propriétés comptaient, quels témoignages comptaient, et quelles mémoires comptaient. Construire des systèmes africains d’IA sur des surfaces de confiance héritées sans les repenser reviendrait à importer la charpente administrative de la dépendance dans un nouvel âge technique.</p>
+
+<p>La meilleure voie consiste à traiter la confiance comme une couche d’exploitation qu’aident à concevoir les institutions africaines elles-mêmes : multilingue, portable, inspectable, révocable et compatible avec les conditions réelles de la vie transfrontalière. Les bâtisseurs africains n’ont pas à romantiser l’informalité, pas plus qu’ils ne doivent imiter la lourdeur bureaucratique étrangère pour elle-même. Ils doivent construire des systèmes où la preuve peut voyager sans perdre son contexte, où l’autorité peut être contestée sans paralyser l’institution, et où l’action machine devient lisible pour les communautés qui en portent les conséquences.</p>
+
+<p>Cheikh Anta Diop insistait sur le fait que l’organisation scientifique était une condition de la liberté. Dans notre siècle, une part de cette organisation scientifique sera le runtime de confiance : la capacité d’émettre, de tester, de défendre, de révoquer et de réparer l’autorité numérique selon ses propres termes. Les institutions qui bâtiront cette couche ne se contenteront pas de consommer l’avenir. Elles définiront les conditions sous lesquelles l’avenir devient admissible.</p>
+
+<h2>Sources</h2>
+<ul>
+    <li><a href="https://www.w3.org/news/2026/first-public-working-draft-verifiable-credential-forgery-defense-v1-0/" target="_blank" rel="noopener">W3C — First Public Working Draft: Verifiable Credential Forgery Defense v1.0</a></li>
+    <li><a href="https://www.w3.org/news/2026/group-note-draft-w3c-standards-vulnerability-disclosure-handling-process-and-policy/" target="_blank" rel="noopener">W3C — Group Note Draft: W3C Standards Vulnerability Disclosure &amp; Handling Process and Policy</a></li>
+    <li><a href="https://www.w3.org/news/2026/first-public-working-draft-quantum-resistant-cryptosuites-v1-0/" target="_blank" rel="noopener">W3C — First Public Working Draft: Quantum-Resistant Cryptosuites v1.0</a></li>
+    <li><a href="https://developers.googleblog.com/driving-the-agent-quality-flywheel-from-your-coding-agent/" target="_blank" rel="noopener">Google Developers Blog — Driving the Agent Quality Flywheel from Your Coding Agent</a></li>
+    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — Build reliable multi-agent applications with ADK Go 2.0</a></li>
+    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">Commission européenne — Drawing-up a General-Purpose AI Code of Practice</a></li>
+</ul>
+            </div>
+
+            <footer class="article__footer">
+                <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+                <div class="article__meta-footer">
+                    <span data-i18n="article.published">Research Journal</span>
+                    <span>·</span>
+                    <time>July 05, 2026</time>
+                    <span>·</span>
+                    <span data-i18n="article.author">Diop Research</span>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>

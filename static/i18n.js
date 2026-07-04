@@ -71,6 +71,7 @@
         'article.entry050':     { en: 'Diop Daily #050 — July 2026', fr: 'Diop Quotidien n°050 — Juillet 2026' },
         'article.entry051':     { en: 'Diop Daily #051 — July 2026', fr: 'Diop Quotidien n°051 — Juillet 2026' },
         'article.entry052':     { en: 'Diop Daily #052 — July 2026', fr: 'Diop Quotidien n°052 — Juillet 2026' },
+        'article.entry053':     { en: 'Diop Daily #053 — July 2026', fr: 'Diop Quotidien n°053 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -550,6 +551,13 @@
             excerpt: {
                 en: 'Enterprise AI is moving beyond chat surfaces toward governed delegation: who may hand work to which agent, under what credential, with what rollback path and audit trail. Samsung’s deployment, Google’s new multi-agent tooling, the EU GPAI code, and W3C credential defense all point to the same conclusion: permissioned delegation is becoming a revenue-grade infrastructure layer.',
                 fr: 'L’IA d’entreprise dépasse les surfaces conversationnelles pour entrer dans la délégation gouvernée : qui peut confier quel travail à quel agent, sous quel identifiant, avec quel chemin de reprise et quelle piste d’audit. Le déploiement de Samsung, les nouveaux outils multi-agents de Google, le code GPAI de l’UE et la défense des attestations du W3C convergent vers la même conclusion : la délégation sous permission devient une couche d’infrastructure monétisable.'
+            }
+        },
+        'diop-daily-053': {
+            title: { en: 'Trust Is Becoming a Runtime, Not a Document', fr: 'La confiance devient un runtime, non un document' },
+            excerpt: {
+                en: 'Recent signals from W3C, Google, and the European Commission point to a deeper shift: trust in AI is moving away from static documents toward live systems that can witness, challenge, revoke, disclose, and recover. The firms that turn credential defense, workflow evidence, and policy observability into infrastructure will own one of the most durable rails in the agent economy.',
+                fr: 'Des signaux récents du W3C, de Google et de la Commission européenne indiquent un déplacement plus profond : la confiance dans l’IA quitte les documents statiques pour des systèmes vivants capables de témoigner, de contester, de révoquer, de divulguer et de récupérer. Les entreprises qui transforment la défense des attestations, la preuve des workflows et l’observabilité des politiques en infrastructure posséderont l’un des rails les plus durables de l’économie agentique.'
             }
         }
     };
