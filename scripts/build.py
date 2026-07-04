@@ -40,14 +40,36 @@ def scan_posts():
         })
     return posts
 
-def generate_index():
-    """Read the index template (if exists) or rebuild."""
-    # For now we just verify the existing index.html
+def generate_index(posts=None):
+    """Verify the hand-curated index is complete before any deploy can proceed."""
+    posts = posts or scan_posts()
     index = SITE_DIR / "index.html"
-    if index.exists():
-        print(f"index.html exists at {index}")
-        return True
-    return False
+    if not index.exists():
+        print(f"ERROR: index.html missing at {index}", file=sys.stderr)
+        return False
+
+    text = index.read_text(encoding='utf-8')
+    card_ids = re.findall(r'data-post="([^"]+)"', text)
+    post_ids = [p['id'] for p in posts]
+    missing = [pid for pid in post_ids if pid not in card_ids]
+    extra = [cid for cid in card_ids if cid not in post_ids]
+    duplicates = sorted({cid for cid in card_ids if card_ids.count(cid) > 1})
+
+    print(f"index.html exists at {index}")
+    print(f"Index cards: {len(card_ids)}; post files: {len(post_ids)}")
+
+    if missing or extra or duplicates or len(card_ids) != len(post_ids):
+        print("ERROR: index.html post-card register is inconsistent with static/posts", file=sys.stderr)
+        if missing:
+            print("  Missing cards: " + ', '.join(missing), file=sys.stderr)
+        if extra:
+            print("  Extra cards: " + ', '.join(extra), file=sys.stderr)
+        if duplicates:
+            print("  Duplicate cards: " + ', '.join(duplicates), file=sys.stderr)
+        return False
+
+    print("Index card register verified complete")
+    return True
 
 def generate_readme():
     readme = Path(__file__).parent.parent / "README.md"
@@ -75,5 +97,6 @@ if __name__ == '__main__':
     print(f"Found {len(posts)} post(s)")
     for p in posts:
         print(f"  [{p['date']}] {p['title']}")
-    generate_index()
+    if not generate_index(posts):
+        sys.exit(1)
     generate_readme()
