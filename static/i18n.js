@@ -70,6 +70,7 @@
         'article.entry049':     { en: 'Diop Daily #049 — July 2026', fr: 'Diop Quotidien n°049 — Juillet 2026' },
         'article.entry050':     { en: 'Diop Daily #050 — July 2026', fr: 'Diop Quotidien n°050 — Juillet 2026' },
         'article.entry051':     { en: 'Diop Daily #051 — July 2026', fr: 'Diop Quotidien n°051 — Juillet 2026' },
+        'article.entry052':     { en: 'Diop Daily #052 — July 2026', fr: 'Diop Quotidien n°052 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -542,6 +543,13 @@
             excerpt: {
                 en: 'Portable identity, session continuity, skill provenance, and trust scoring are becoming the commerce rails of the next era. Builders who preserve memory deterministically across products, borders, and agents will own the contract layer through which tomorrow’s capital and consent flow.',
                 fr: 'L’identité portable, la continuité de session, la provenance des compétences et le score de confiance deviennent les rails de commerce de la prochaine ère. les bâtisseurs qui préservent la mémoire de façon déterministe à travers produits, frontières et agents posséderont la couche contractuelle par laquelle circuleront capital et consentement.'
+            }
+        },
+        'diop-daily-052': {
+            title: { en: 'Delegation Is Becoming the Real Enterprise Interface for AI', fr: 'La délégation devient la véritable interface d’entreprise pour l’IA' },
+            excerpt: {
+                en: 'Enterprise AI is moving beyond chat surfaces toward governed delegation: who may hand work to which agent, under what credential, with what rollback path and audit trail. Samsung’s deployment, Google’s new multi-agent tooling, the EU GPAI code, and W3C credential defense all point to the same conclusion: permissioned delegation is becoming a revenue-grade infrastructure layer.',
+                fr: 'L’IA d’entreprise dépasse les surfaces conversationnelles pour entrer dans la délégation gouvernée : qui peut confier quel travail à quel agent, sous quel identifiant, avec quel chemin de reprise et quelle piste d’audit. Le déploiement de Samsung, les nouveaux outils multi-agents de Google, le code GPAI de l’UE et la défense des attestations du W3C convergent vers la même conclusion : la délégation sous permission devient une couche d’infrastructure monétisable.'
             }
         }
     };

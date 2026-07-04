@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Delegation Is Becoming the Real Enterprise Interface for AI — Diop Research</title>
+    <meta name="description" content="Why enterprise AI adoption is converging on governed delegation: permission graphs, verifiable agent identity, human oversight, and auditable workflow transfer."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry052">Diop Daily #052 — July 2026</div>
+                <div class="article__meta-line">
+                    <time>July 04, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>enterprise agents · delegation · permissioning</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Delegation Is Becoming the Real Enterprise Interface for AI</h1>
+
+                <p>Most discussion about enterprise AI still mistakes interface for infrastructure. Boards, vendors, and even many technical teams continue to ask whether employees will chat with a model, whether copilots will sit inside office suites, or whether dashboards will become more conversational. But those are surface questions. The deeper question is whether an institution can safely delegate work to software in a governed, auditable, and reversible manner. That is where the market is actually moving. Enterprise AI is becoming less about answers on a screen and more about permissioned delegation: who may hand a task to which agent, under what authority, with what evidence, and with what recovery path if the chain fails.</p>
+
+                <p>Several recent public signals make this difficult to ignore. OpenAI’s June 21 note on Samsung Electronics describes one of the largest enterprise AI deployments yet, extending ChatGPT Enterprise and Codex across a global workforce. Google’s June work on ADK Go 2.0 and cross-language multi-agent teams treats orchestration, human-in-the-loop checkpoints, and agent-to-agent transfer not as embellishments but as default engineering primitives. The European Commission’s June 25 General-Purpose AI Code of Practice draft makes governance, documentation, and traceability explicit obligations around powerful models. The W3C’s June 30 forgery-defense draft for verifiable credentials sharpens the identity layer beneath all of this. Taken together, these are not isolated announcements. They are fragments of a new operating model. Institutions are preparing to delegate bounded authority to software, and the bottleneck is no longer raw model intelligence. It is the architecture of permission, identity, supervision, and rollback.</p>
+
+                <blockquote>
+                    <p>The next enterprise interface is not a chat box. It is a governed chain of delegation that decides which machine may act, on whose behalf, within what boundary, and under what proof.</p>
+                </blockquote>
+
+                <h2>Delegation is not automation</h2>
+
+                <p>This distinction matters. Automation is usually discussed as a fixed script: if X happens, run Y. Delegation is structurally different. Delegation implies discretion inside boundaries. A delegated agent must interpret context, use tools, hand work to another system when needed, escalate when confidence or authorization is insufficient, and leave behind an evidence trail intelligible to human supervisors. That is why current enterprise adoption is shifting toward orchestration frameworks and policy layers rather than toward simple prompt wrappers. Once software is allowed to touch procurement, legal review, research synthesis, customer service, or engineering triage, the institution is no longer buying a model response. It is underwriting a governed actor.</p>
+
+                <p>Samsung’s deployment signal matters in precisely this sense. Large firms do not roll out systems across a global employee base merely because the interface is elegant. They do so when they believe the organization can impose enough control, recoverability, and permissioning for the upside to exceed the governance risk. The commercial meaning is plain: the durable market is moving away from generic assistant surfaces and toward internal delegation infrastructure. Enterprises want systems that know when to act, when to pause, when to request a human signature, when to transfer a task, and when to log enough context for a later audit.</p>
+
+                <h2>The stack beneath permissioned delegation</h2>
+
+                <p>If we examine the technical signals carefully, a layered architecture becomes visible.</p>
+
+                <ul>
+                    <li><strong>Identity and credential layer:</strong> agents, users, and services need verifiable credentials resilient against forgery, impersonation, and silent privilege drift.</li>
+                    <li><strong>Permission graph layer:</strong> the institution must encode who may delegate which class of task to which agent, under what confidence thresholds and spending, data, or policy limits.</li>
+                    <li><strong>Workflow and handoff layer:</strong> agents need structured ways to transfer partial work, constraints, and evidence to other agents or humans without losing context.</li>
+                    <li><strong>Oversight layer:</strong> human-in-the-loop controls must appear where legal, financial, safety, or reputational thresholds require intervention.</li>
+                    <li><strong>Recovery and audit layer:</strong> every delegated chain must be reversible, inspectable, and measurable after the fact.</li>
+                </ul>
+
+                <p>ADK Go 2.0 and Google’s cross-language multi-agent work show that the workflow and handoff layer is maturing rapidly. The EU code and W3C credential work show that identity, traceability, and governance are being formalized around it. This is why the most interesting AI infrastructure companies over the next wave may look less like model labs and more like internal operating-system firms. They will sell the discipline that makes delegation admissible inside real institutions.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>Capital should pay attention to the categories emerging underneath this transition, because they sit closer to durable budget lines than many flashy application demos:</p>
+
+                <ul>
+                    <li><strong>Permission-graph infrastructure:</strong> systems that let institutions encode delegation rights, escalation rules, and operational boundaries as machine-readable policy.</li>
+                    <li><strong>Agent identity and credential middleware:</strong> services that bind agents, tools, and human supervisors to verifiable credentials, tamper-resistant logs, and revocable authority.</li>
+                    <li><strong>Delegation observability platforms:</strong> monitoring products that show where delegated work moved, why it moved, who approved it, and where the chain became uncertain or unsafe.</li>
+                    <li><strong>Cross-language workflow layers:</strong> orchestration systems that let institutions route work across teams, models, and programming stacks without losing policy semantics.</li>
+                    <li><strong>Recovery-by-design infrastructure:</strong> rollback, replay, exception handling, and forensic evidence tools for agentic operations that must survive failure without institutional panic.</li>
+                </ul>
+
+                <p>The decisive question for investors is no longer, “Which chatbot will employees like most?” It is, “Which infrastructure lets an institution delegate consequential work while preserving authority, evidence, and reversibility?” That is a much harder problem, but it is also the more durable one. User preference can switch quickly. Delegation infrastructure becomes embedded in procurement, policy, and operating habit.</p>
+
+                <h2>Why this matters for African institutional design</h2>
+
+                <p>African and diasporic institutions should take this shift with particular seriousness because delegation discipline is one of the few places where thinner institutions can leapfrog thicker ones. Many African operating environments are already multilingual, cross-border, resource-constrained, and forced to reconcile formal procedure with informal trust. Those are difficult conditions for conventional enterprise software, but they are fertile conditions for permission-aware agent systems. A laboratory that learns to encode authority, escalation, language, and evidence under these conditions is not building for the margin of the world market. It is building for the world after the easy assumptions fail.</p>
+
+                <p>Cheikh Anta Diop argued that a people denied historical and scientific organization becomes dependent on other peoples’ institutions to think, remember, and decide for it. Delegation infrastructure is a contemporary version of that problem. If African institutions cannot define the permissions, memory, and verification rules under which software acts on their behalf, then they will consume someone else’s institutional logic along with someone else’s models. Sovereignty here does not require isolation. It requires the capacity to define the chain of delegation in one’s own terms.</p>
+
+                <p>That is why this thesis matters beyond enterprise software fashion. The institution that can delegate safely becomes faster without becoming blind. The institution that cannot will oscillate between hype and moratorium, between reckless adoption and frightened retreat. Permissioned delegation is the middle path through which autonomous systems become governable economic actors.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/index/samsung-electronics-chatgpt-codex-deployment" target="_blank" rel="noopener">OpenAI — Samsung Electronics brings ChatGPT and Codex to employees</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — Build reliable multi-agent applications with ADK Go 2.0</a></li>
+                    <li><a href="https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a/" target="_blank" rel="noopener">Google Developers Blog — Build Cross-Language Multi-Agent Team with Google’s Agent Development Kit and A2A</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">European Commission — Drawing-up a General-Purpose AI Code of Practice</a></li>
+                    <li><a href="https://www.w3.org/news/2026/first-public-working-draft-verifiable-credential-forgery-defense-v1-0/" target="_blank" rel="noopener">W3C — First Public Working Draft: Verifiable Credential Forgery Defense v1.0</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La délégation devient la véritable interface d’entreprise pour l’IA</h1>
+
+                <p>Une grande partie du discours sur l’IA d’entreprise confond encore interface et infrastructure. Conseils d’administration, vendeurs et même de nombreuses équipes techniques continuent de demander si les employés dialogueront avec un modèle, si des copilotes seront insérés dans les suites bureautiques, ou si les tableaux de bord deviendront plus conversationnels. Ce sont pourtant des questions de surface. La question plus profonde est de savoir si une institution peut déléguer du travail à un logiciel de manière gouvernée, auditable et réversible. C’est là que le marché se déplace réellement. L’IA d’entreprise devient moins une affaire de réponses à l’écran qu’une affaire de délégation sous permission : qui peut confier quelle tâche à quel agent, sous quelle autorité, avec quelles preuves, et avec quel chemin de reprise si la chaîne échoue.</p>
+
+                <p>Plusieurs signaux publics récents rendent cette évolution difficile à nier. La note d’OpenAI du 21 juin sur Samsung Electronics décrit l’un des plus vastes déploiements d’IA d’entreprise à ce jour, étendant ChatGPT Enterprise et Codex à une main-d’œuvre mondiale. Les travaux de Google en juin sur ADK Go 2.0 et les équipes multi-agents multilingues traitent l’orchestration, les points de contrôle avec intervention humaine et le transfert agent-à-agent non comme des ornements mais comme des primitives d’ingénierie par défaut. Le projet de Code de pratique pour les IA à usage général, reçu par la Commission européenne le 25 juin, fait de la gouvernance, de la documentation et de la traçabilité des obligations explicites autour des modèles puissants. Le projet du W3C du 30 juin sur la défense contre la falsification des attestations vérifiables aiguise la couche d’identité située sous l’ensemble. Pris ensemble, ces éléments ne sont pas des annonces isolées. Ce sont des fragments d’un nouveau modèle d’exploitation. Les institutions se préparent à déléguer une autorité bornée au logiciel, et le goulot n’est plus l’intelligence brute du modèle. C’est l’architecture de la permission, de l’identité, de la supervision et du rollback.</p>
+
+                <blockquote>
+                    <p>La prochaine interface d’entreprise n’est pas une boîte de dialogue. C’est une chaîne de délégation gouvernée qui décide quelle machine peut agir, au nom de qui, dans quelle frontière, et sous quelle preuve.</p>
+                </blockquote>
+
+                <h2>La délégation n’est pas l’automatisation</h2>
+
+                <p>Cette distinction compte. L’automatisation est généralement pensée comme un script fixe : si X arrive, exécuter Y. La délégation est structurellement différente. Elle implique une marge de discrétion à l’intérieur de frontières. Un agent délégué doit interpréter le contexte, utiliser des outils, transmettre le travail à un autre système si nécessaire, escalader lorsque la confiance ou l’autorisation sont insuffisantes, et laisser derrière lui une trace de preuve intelligible pour des superviseurs humains. Voilà pourquoi l’adoption actuelle en entreprise se déplace vers des cadres d’orchestration et des couches de politique plutôt que vers de simples enveloppes de prompts. Dès que le logiciel est autorisé à toucher l’approvisionnement, la revue juridique, la synthèse de recherche, le service client ou le triage d’ingénierie, l’institution n’achète plus seulement une réponse de modèle. Elle souscrit un acteur gouverné.</p>
+
+                <p>Le signal Samsung est important précisément pour cette raison. Les grandes entreprises ne déploient pas des systèmes à l’échelle d’une main-d’œuvre mondiale simplement parce que l’interface est élégante. Elles le font lorsqu’elles estiment pouvoir imposer suffisamment de contrôle, de récupérabilité et de permission pour que le bénéfice dépasse le risque de gouvernance. Le sens commercial est clair : le marché durable se déplace des surfaces d’assistants génériques vers une infrastructure interne de délégation. Les entreprises veulent des systèmes qui savent quand agir, quand s’arrêter, quand demander une signature humaine, quand transférer une tâche, et quand journaliser assez de contexte pour un audit ultérieur.</p>
+
+                <h2>La pile sous la délégation sous permission</h2>
+
+                <p>Si l’on examine attentivement les signaux techniques, une architecture en couches devient visible.</p>
+
+                <ul>
+                    <li><strong>Couche d’identité et d’attestation :</strong> agents, utilisateurs et services ont besoin d’attestations vérifiables résistantes à la falsification, à l’usurpation et aux glissements silencieux de privilèges.</li>
+                    <li><strong>Couche de graphe de permissions :</strong> l’institution doit encoder qui peut déléguer quelle classe de tâche à quel agent, sous quels seuils de confiance et sous quelles limites de dépense, de données ou de politique.</li>
+                    <li><strong>Couche de workflow et de transfert :</strong> les agents ont besoin de moyens structurés pour transférer un travail partiel, des contraintes et des preuves à d’autres agents ou à des humains sans perdre le contexte.</li>
+                    <li><strong>Couche de supervision :</strong> les contrôles human-in-the-loop doivent apparaître là où les seuils juridiques, financiers, sécuritaires ou réputationnels exigent une intervention.</li>
+                    <li><strong>Couche de reprise et d’audit :</strong> toute chaîne déléguée doit être réversible, inspectable et mesurable après coup.</li>
+                </ul>
+
+                <p>ADK Go 2.0 et le travail multi-agents multilingue de Google montrent que la couche de workflow et de transfert mûrit rapidement. Le code de l’UE et le travail du W3C montrent que l’identité, la traçabilité et la gouvernance se formalisent autour d’elle. C’est pourquoi les entreprises d’infrastructure IA les plus intéressantes de la prochaine vague pourraient ressembler moins à des laboratoires de modèles qu’à des firmes de systèmes d’exploitation internes. Elles vendront la discipline qui rend la délégation admissible au sein des institutions réelles.</p>
+
+                <h2>Où la surface investissable s’élargit</h2>
+
+                <p>Le capital doit prêter attention aux catégories qui émergent sous cette transition, car elles se situent plus près de lignes budgétaires durables que bien des démos applicatives spectaculaires :</p>
+
+                <ul>
+                    <li><strong>Infrastructure de graphes de permissions :</strong> systèmes permettant aux institutions d’encoder les droits de délégation, les règles d’escalade et les frontières opérationnelles sous forme de politiques lisibles par machine.</li>
+                    <li><strong>Middleware d’identité d’agent et d’attestation :</strong> services reliant agents, outils et superviseurs humains à des attestations vérifiables, à des journaux résistants à l’altération et à une autorité révocable.</li>
+                    <li><strong>Plateformes d’observabilité de la délégation :</strong> produits de monitoring montrant où le travail délégué a circulé, pourquoi il a circulé, qui l’a approuvé, et où la chaîne est devenue incertaine ou dangereuse.</li>
+                    <li><strong>Couches de workflow multilingues :</strong> systèmes d’orchestration permettant aux institutions d’acheminer le travail à travers équipes, modèles et piles logicielles sans perdre la sémantique de politique.</li>
+                    <li><strong>Infrastructure de reprise par conception :</strong> rollback, replay, gestion d’exceptions et outils de preuve forensique pour des opérations agentiques qui doivent survivre à l’échec sans panique institutionnelle.</li>
+                </ul>
+
+                <p>La question décisive pour les investisseurs n’est plus : « Quel chatbot les employés préféreront-ils ? » Elle est : « Quelle infrastructure permet à une institution de déléguer un travail conséquent tout en préservant autorité, preuve et réversibilité ? » C’est un problème bien plus difficile, mais aussi bien plus durable. Les préférences d’usage changent vite. L’infrastructure de délégation, elle, s’enfouit dans les achats, les politiques et les habitudes d’exploitation.</p>
+
+                <h2>Pourquoi cela compte pour la conception institutionnelle africaine</h2>
+
+                <p>Les institutions africaines et diasporiques doivent prendre ce déplacement très au sérieux, car la discipline de délégation est l’un des rares lieux où des institutions plus fines peuvent dépasser des institutions plus épaisses. De nombreux environnements d’exploitation africains sont déjà multilingues, transfrontaliers, contraints en ressources, et forcés de réconcilier procédure formelle et confiance informelle. Ce sont des conditions difficiles pour le logiciel d’entreprise conventionnel, mais des conditions fertiles pour des systèmes agents sensibles aux permissions. Un laboratoire qui apprend à encoder autorité, escalade, langue et preuve dans ces conditions ne construit pas pour la marge du marché mondial. Il construit pour le monde d’après, lorsque les hypothèses faciles échouent.</p>
+
+                <p>Cheikh Anta Diop soutenait qu’un peuple privé d’organisation historique et scientifique devient dépendant des institutions d’autrui pour penser, se souvenir et décider à sa place. L’infrastructure de délégation est une version contemporaine de ce problème. Si les institutions africaines ne peuvent pas définir les règles de permission, de mémoire et de vérification sous lesquelles un logiciel agit en leur nom, alors elles consommeront la logique institutionnelle d’autrui en même temps que ses modèles. La souveraineté, ici, n’exige pas l’isolement. Elle exige la capacité de définir la chaîne de délégation selon ses propres termes.</p>
+
+                <p>Voilà pourquoi cette thèse compte au-delà des modes logicielles d’entreprise. L’institution qui sait déléguer en sécurité devient plus rapide sans devenir aveugle. Celle qui ne le peut pas oscillera entre hype et moratoire, entre adoption imprudente et retrait craintif. La délégation sous permission est la voie moyenne par laquelle les systèmes autonomes deviennent des acteurs économiques gouvernables.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/index/samsung-electronics-chatgpt-codex-deployment" target="_blank" rel="noopener">OpenAI — Samsung Electronics brings ChatGPT and Codex to employees</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — Build reliable multi-agent applications with ADK Go 2.0</a></li>
+                    <li><a href="https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a/" target="_blank" rel="noopener">Google Developers Blog — Build Cross-Language Multi-Agent Team with Google’s Agent Development Kit and A2A</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">Commission européenne — Drawing-up a General-Purpose AI Code of Practice</a></li>
+                    <li><a href="https://www.w3.org/news/2026/first-public-working-draft-verifiable-credential-forgery-defense-v1-0/" target="_blank" rel="noopener">W3C — First Public Working Draft: Verifiable Credential Forgery Defense v1.0</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+                <div class="article__meta-footer">
+                    <span data-i18n="article.published">Research Journal</span>
+                    <span>·</span>
+                    <time>July 04, 2026</time>
+                    <span>·</span>
+                    <span data-i18n="article.author">Diop Research</span>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>
