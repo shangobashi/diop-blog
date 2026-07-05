@@ -72,6 +72,7 @@
         'article.entry051':     { en: 'Diop Daily #051 — July 2026', fr: 'Diop Quotidien n°051 — Juillet 2026' },
         'article.entry052':     { en: 'Diop Daily #052 — July 2026', fr: 'Diop Quotidien n°052 — Juillet 2026' },
         'article.entry053':     { en: 'Diop Daily #053 — July 2026', fr: 'Diop Quotidien n°053 — Juillet 2026' },
+        'article.entry054':     { en: 'Diop Daily #054 — July 2026', fr: 'Diop Quotidien n°054 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -551,6 +552,13 @@
             excerpt: {
                 en: 'Enterprise AI is moving beyond chat surfaces toward governed delegation: who may hand work to which agent, under what credential, with what rollback path and audit trail. Samsung’s deployment, Google’s new multi-agent tooling, the EU GPAI code, and W3C credential defense all point to the same conclusion: permissioned delegation is becoming a revenue-grade infrastructure layer.',
                 fr: 'L’IA d’entreprise dépasse les surfaces conversationnelles pour entrer dans la délégation gouvernée : qui peut confier quel travail à quel agent, sous quel identifiant, avec quel chemin de reprise et quelle piste d’audit. Le déploiement de Samsung, les nouveaux outils multi-agents de Google, le code GPAI de l’UE et la défense des attestations du W3C convergent vers la même conclusion : la délégation sous permission devient une couche d’infrastructure monétisable.'
+            }
+        },
+        'diop-daily-054': {
+            title: { en: 'Language Is Becoming an Execution Layer for AI', fr: 'La langue devient une couche d’exécution pour l’IA' },
+            excerpt: {
+                en: 'Multilingual agents no longer merely translate interfaces; they preserve policy, memory, and authority across borders. Recent signals from Google, OpenAI, the European Commission, and W3C suggest that language infrastructure is becoming a strategic operating layer for institutions that want AI to act coherently across jurisdictions and markets.',
+                fr: 'Les agents multilingues ne se contentent plus de traduire des interfaces ; ils préservent politiques, mémoire et autorité à travers les frontières. Des signaux récents de Google, d’OpenAI, de la Commission européenne et du W3C suggèrent que l’infrastructure linguistique devient une couche d’exploitation stratégique pour les institutions qui veulent que l’IA agisse avec cohérence entre juridictions et marchés.'
             }
         },
         'diop-daily-053': {
