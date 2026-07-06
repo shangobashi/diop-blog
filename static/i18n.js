@@ -73,6 +73,7 @@
         'article.entry052':     { en: 'Diop Daily #052 — July 2026', fr: 'Diop Quotidien n°052 — Juillet 2026' },
         'article.entry053':     { en: 'Diop Daily #053 — July 2026', fr: 'Diop Quotidien n°053 — Juillet 2026' },
         'article.entry054':     { en: 'Diop Daily #054 — July 2026', fr: 'Diop Quotidien n°054 — Juillet 2026' },
+        'article.entry055':     { en: 'Diop Daily #055 — July 2026', fr: 'Diop Quotidien n°055 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -552,6 +553,13 @@
             excerpt: {
                 en: 'Enterprise AI is moving beyond chat surfaces toward governed delegation: who may hand work to which agent, under what credential, with what rollback path and audit trail. Samsung’s deployment, Google’s new multi-agent tooling, the EU GPAI code, and W3C credential defense all point to the same conclusion: permissioned delegation is becoming a revenue-grade infrastructure layer.',
                 fr: 'L’IA d’entreprise dépasse les surfaces conversationnelles pour entrer dans la délégation gouvernée : qui peut confier quel travail à quel agent, sous quel identifiant, avec quel chemin de reprise et quelle piste d’audit. Le déploiement de Samsung, les nouveaux outils multi-agents de Google, le code GPAI de l’UE et la défense des attestations du W3C convergent vers la même conclusion : la délégation sous permission devient une couche d’infrastructure monétisable.'
+            }
+        },
+        'diop-daily-055': {
+            title: { en: 'Scientific AI Is Becoming Lab Equipment', fr: 'L’IA scientifique devient un équipement de laboratoire' },
+            excerpt: {
+                en: 'Recent signals from OpenAI, Google, and W3C suggest that scientific AI is leaving the chatbot phase and entering the protocol phase. Once models begin to function like benchmarked, schema-bound lab equipment inside biology and health workflows, the durable value shifts toward validation rails, structured memory, and workflow infrastructure.',
+                fr: 'Des signaux récents d’OpenAI, de Google et du W3C suggèrent que l’IA scientifique quitte la phase du chatbot pour entrer dans celle du protocole. Dès que les modèles commencent à agir comme des équipements de laboratoire benchmarkés et contraints par schémas dans des workflows de biologie et de santé, la valeur durable se déplace vers les rails de validation, la mémoire structurée et l’infrastructure de workflow.'
             }
         },
         'diop-daily-054': {

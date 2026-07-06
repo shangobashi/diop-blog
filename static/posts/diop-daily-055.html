@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Scientific AI Is Becoming Lab Equipment — Diop Research</title>
+    <meta name="description" content="Why scientific AI is shifting from demo software to operational lab equipment: benchmarked, schema-bound, and embedded inside high-stakes research workflows."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry055">Diop Daily #055 — July 2026</div>
+                <div class="article__meta-line">
+                    <time>July 07, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>scientific AI · validation infrastructure · sovereignty stack</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Scientific AI Is Becoming Lab Equipment</h1>
+
+                <p>For the past two years, much of the AI market has behaved as though intelligence were mainly an interface event. A model could write, summarize, answer, or chat, and that was enough to trigger fascination, venture funding, and hurried enterprise pilots. But scientific work does not reward fascination for long. Laboratories, clinics, field-research units, and regulated technical teams eventually ask a harder question: not whether a model sounds competent, but whether it can enter a protocol-bound environment and remain accountable there. That is a different market. In that market, AI stops resembling office software and starts resembling lab equipment.</p>
+
+                <p>Recent public signals suggest this shift is already underway. On June 30, OpenAI introduced GeneBench-Pro, a benchmark aimed at genomics, biology, and scientific research using complex real-world datasets. On June 17, Google highlighted new research in <em>Nature</em> showing that AMIE, its medical conversational AI, matched primary-care physicians in complex disease-management scenarios. On June 29, Google also published a plain-language explanation of what a full-stack approach to AI means, emphasizing that the model is only one layer inside a larger technical system. And on July 2, the W3C published a first public working draft for SHACL 1.2 Profiling, extending a language for describing and validating structured knowledge graphs. These announcements come from different institutional directions, but together they point to the same conclusion: scientific AI is moving from spectacle toward instrumentation.</p>
+
+                <blockquote>
+                    <p>The decisive question for scientific AI is no longer “Can it generate a plausible answer?” It is “Can it survive calibration, validation, and protocol inside a real workflow?”</p>
+                </blockquote>
+
+                <h2>When models stop being demos</h2>
+
+                <p>A demo succeeds when it produces surprise. A scientific instrument succeeds when it produces dependable constraint. This is the first distinction serious investors and builders must keep in view. A model that can impress a conference audience is not necessarily useful to a biology lab, a public-health workflow, an agricultural research station, or a clinical operations team. Those environments do not buy novelty alone. They buy repeatability, traceability, calibrated uncertainty, and the ability to fit inside a chain of evidence.</p>
+
+                <p>That is why GeneBench-Pro matters. The significance is not simply that another benchmark has been announced. The deeper signal is that scientific AI is being evaluated against domain-specific, real-world research tasks rather than against generic reasoning theater. The same logic appears in the AMIE disease-management result. Once AI is tested against longitudinal health decisions rather than isolated question-answering, the standard changes. The system is no longer competing to sound intelligent; it is competing to remain reliable across a workflow where consequences accumulate over time.</p>
+
+                <p>Google’s full-stack explanation sharpens the point further. The market often speaks about “the model” as though intelligence floats free of infrastructure. In practice, any system that enters science must sit atop compute, data pipelines, interfaces, security controls, evaluation routines, and operational feedback loops. The model is a component, not the entire machine. The more consequential the domain, the less defensible it becomes to speak as though raw model capability were the only thing that matters.</p>
+
+                <h2>The hidden protocol stack beneath scientific AI</h2>
+
+                <p>If scientific AI is becoming lab equipment, then the relevant competitive layer is not chatbot polish. It is the protocol stack that lets a system produce admissible work. At minimum, that stack now includes five interlocking layers:</p>
+
+                <ul>
+                    <li><strong>Benchmark layer:</strong> domain-specific tasks that measure whether the system can perform under realistic scientific conditions rather than toy prompts.</li>
+                    <li><strong>Schema and data-validation layer:</strong> structured representations that define what kinds of entities, relations, and constraints count as valid inside a research workflow.</li>
+                    <li><strong>Workflow layer:</strong> handoffs between model output, human review, instrumentation, archival systems, and downstream action.</li>
+                    <li><strong>Uncertainty and override layer:</strong> explicit thresholds for escalation, abstention, contradiction handling, and supervisor intervention.</li>
+                    <li><strong>Memory and provenance layer:</strong> the ability to preserve how a conclusion was reached, what evidence it depended on, and what changed across iterations.</li>
+                </ul>
+
+                <p>This is where the W3C SHACL signal becomes surprisingly important. Constraint languages are not glamorous. But once laboratories, health systems, or research organizations rely on machine-generated outputs, someone must define acceptable structure. Which relationships in a knowledge graph are valid? Which fields are required? What kinds of inferences may be accepted? What counts as malformed or incomplete? These questions are not decorative metadata questions. They are operational questions. Scientific AI will increasingly be governed not only by model quality, but by the rigor of the structures surrounding it.</p>
+
+                <p>In other words, scientific AI is entering the world that measurement has always governed. The instrument must be calibrated. The workflow must be documented. The output must be interpretable. The archive must preserve the chain of reasoning or evidence. The human operator must know when to trust, when to inspect, and when to refuse. Once those conditions appear, the market shifts away from generic assistant rhetoric and toward infrastructure that makes knowledge work reproducible.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The market opportunity here is broader and more durable than another layer of AI copilots for scientists. Capital should watch the firms that turn scientific AI from a clever interface into an operational system.</p>
+
+                <ul>
+                    <li><strong>Benchmarking and evaluation platforms:</strong> specialized test harnesses for biology, medicine, agriculture, materials, and climate research that make model performance legible to procurement and governance teams.</li>
+                    <li><strong>Structured scientific memory systems:</strong> tools that preserve hypotheses, failed experiments, provenance, version histories, and machine-readable research state across teams and time.</li>
+                    <li><strong>Schema and ontology infrastructure:</strong> products that enforce domain constraints, validate data objects, and keep scientific workflows machine-actionable without becoming chaotic.</li>
+                    <li><strong>Human-in-the-loop orchestration:</strong> systems that route ambiguous cases to qualified reviewers, capture adjudication decisions, and feed those decisions back into the operating stack.</li>
+                    <li><strong>Compliance-grade workflow middleware:</strong> the layer that joins model output to archives, instruments, dashboards, regulatory records, and institutional reporting.</li>
+                </ul>
+
+                <p>The winning firms in this category may not look like classic consumer AI winners. They may look slower, more technical, more vertically entangled, and less theatrically viral. But that is precisely why the category matters. When a technical market becomes protocol-bound, budget tends to migrate toward the systems that reduce interpretive risk. The economic prize belongs to whoever makes scientific action more auditable, more reproducible, and easier to govern at scale.</p>
+
+                <h2>Why this matters for African scientific sovereignty</h2>
+
+                <p>Africa should read this shift with sobriety. Too much of the continent’s AI conversation remains trapped at the surface: chat interfaces, generic productivity, imported applications, or symbolic participation in global model culture. But if AI is becoming lab equipment, then the strategic question changes. The central issue becomes whether African universities, hospitals, agricultural institutes, archives, and industrial laboratories possess the evaluative and infrastructural capacity to use these systems on their own terms.</p>
+
+                <p>Cheikh Anta Diop insisted that historical and scientific restoration required institutions capable of producing knowledge rather than merely borrowing prestige. The same principle applies here. A continent that cannot benchmark models on its own diseases, crops, languages, ecological conditions, and documentary realities will remain downstream of other people’s instruments. It will rent intelligence instead of organizing it. Scientific sovereignty in the AI era therefore means more than training talent or purchasing access. It means building datasets, evaluation cultures, domain ontologies, archival systems, and workflow software that let African institutions inspect what a model is actually doing.</p>
+
+                <p>This is why the investable surface is not only in frontier labs. It is also in the quieter infrastructure of validation, memory, provenance, and workflow design. These are the layers through which African scientific institutions can become less dependent on external interpretation and more capable of cumulative research. A people cannot build a durable future on borrowed instrumentation alone.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “Introducing GeneBench-Pro” (June 30, 2026 item)</a></li>
+                    <li><a href="https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/" target="_blank" rel="noopener">Google Blog — “New research shows how AMIE, our medical AI, could help manage health conditions.”</a></li>
+                    <li><a href="https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/" target="_blank" rel="noopener">Google Blog — “Ask an AI expert: What exactly is the full stack?”</a></li>
+                    <li><a href="https://www.w3.org/news/2026/first-public-working-draft-shacl-1-2-profiling/" target="_blank" rel="noopener">W3C — First Public Working Draft: SHACL 1.2 Profiling</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L’IA scientifique devient un équipement de laboratoire</h1>
+
+                <p>Depuis deux ans, une grande partie du marché de l’IA se comporte comme si l’intelligence relevait surtout d’un événement d’interface. Un modèle pouvait écrire, résumer, répondre ou converser, et cela suffisait pour déclencher fascination, financement et pilotes d’entreprise précipités. Mais le travail scientifique ne récompense pas longtemps la fascination. Les laboratoires, les cliniques, les unités de recherche de terrain et les équipes techniques réglementées finissent par poser une question plus dure : non pas si un modèle semble compétent, mais s’il peut entrer dans un environnement gouverné par des protocoles et y rester responsable. C’est un autre marché. Dans ce marché, l’IA cesse de ressembler à un logiciel de bureau et commence à ressembler à un équipement de laboratoire.</p>
+
+                <p>Des signaux publics récents suggèrent que ce déplacement est déjà en cours. Le 30 juin, OpenAI a présenté GeneBench-Pro, un benchmark orienté vers la génomique, la biologie et la recherche scientifique à partir de jeux de données réels et complexes. Le 17 juin, Google a mis en avant de nouvelles recherches publiées dans <em>Nature</em> montrant qu’AMIE, son IA conversationnelle médicale, égalait des médecins généralistes dans des scénarios complexes de gestion de maladies. Le 29 juin, Google a également publié une explication accessible de ce qu’implique une approche full stack de l’IA, en soulignant que le modèle n’est qu’une couche d’un système technique plus vaste. Et le 2 juillet, le W3C a publié un premier projet public de SHACL 1.2 Profiling, extension d’un langage servant à décrire et valider des graphes de connaissances structurés. Ces annonces viennent d’horizons institutionnels différents, mais elles pointent vers la même conclusion : l’IA scientifique passe du spectacle à l’instrumentation.</p>
+
+                <blockquote>
+                    <p>La question décisive pour l’IA scientifique n’est plus « Peut-elle générer une réponse plausible ? » mais « Peut-elle survivre à l’étalonnage, à la validation et au protocole dans un vrai workflow ? »</p>
+                </blockquote>
+
+                <h2>Quand les modèles cessent d’être des démonstrations</h2>
+
+                <p>Une démonstration réussit lorsqu’elle produit de la surprise. Un instrument scientifique réussit lorsqu’il produit une contrainte fiable. Voilà la première distinction que les investisseurs et bâtisseurs sérieux doivent garder à l’esprit. Un modèle capable d’impressionner une audience de conférence n’est pas forcément utile pour un laboratoire de biologie, un workflow de santé publique, une station de recherche agricole ou une équipe d’opérations cliniques. Ces environnements n’achètent pas seulement de la nouveauté. Ils achètent répétabilité, traçabilité, incertitude calibrée et capacité à s’insérer dans une chaîne de preuve.</p>
+
+                <p>C’est pourquoi GeneBench-Pro compte. L’enjeu n’est pas simplement qu’un benchmark de plus ait été annoncé. Le signal plus profond est que l’IA scientifique est évaluée sur des tâches de recherche spécifiques au domaine, issues du réel, plutôt que sur un théâtre générique du raisonnement. La même logique apparaît dans le résultat d’AMIE sur la gestion des maladies. Dès lors que l’IA est testée sur des décisions de santé longitudinales plutôt que sur des questions-réponses isolées, le standard change. Le système ne rivalise plus pour paraître intelligent ; il rivalise pour rester fiable à travers un workflow où les conséquences s’accumulent dans le temps.</p>
+
+                <p>L’explication de Google sur le full stack aiguise encore le point. Le marché parle souvent « du modèle » comme si l’intelligence flottait librement hors de l’infrastructure. En pratique, tout système qui entre dans la science doit reposer sur du calcul, des pipelines de données, des interfaces, des contrôles de sécurité, des routines d’évaluation et des boucles de retour opérationnelles. Le modèle est un composant, non la machine entière. Plus le domaine est conséquent, moins il est défendable de parler comme si la capacité brute du modèle était la seule variable importante.</p>
+
+                <h2>La pile de protocoles cachée sous l’IA scientifique</h2>
+
+                <p>Si l’IA scientifique devient un équipement de laboratoire, alors la couche compétitive pertinente n’est pas le vernis conversationnel. C’est la pile de protocoles qui permet à un système de produire un travail admissible. Au minimum, cette pile comprend désormais cinq couches imbriquées :</p>
+
+                <ul>
+                    <li><strong>Couche de benchmark :</strong> des tâches spécifiques au domaine qui mesurent la performance dans des conditions scientifiques réalistes plutôt que sur des prompts-jouets.</li>
+                    <li><strong>Couche de schéma et de validation des données :</strong> des représentations structurées qui définissent quelles entités, relations et contraintes sont valides à l’intérieur d’un workflow de recherche.</li>
+                    <li><strong>Couche de workflow :</strong> les transferts entre sortie du modèle, revue humaine, instrumentation, systèmes d’archives et action en aval.</li>
+                    <li><strong>Couche d’incertitude et de reprise :</strong> des seuils explicites pour l’escalade, l’abstention, le traitement des contradictions et l’intervention d’un superviseur.</li>
+                    <li><strong>Couche de mémoire et de provenance :</strong> la capacité à préserver comment une conclusion a été atteinte, de quelles preuves elle dépendait et ce qui a changé d’une itération à l’autre.</li>
+                </ul>
+
+                <p>C’est ici que le signal SHACL du W3C devient étonnamment important. Les langages de contraintes ne sont pas glamour. Mais dès lors que des laboratoires, des systèmes de santé ou des organisations de recherche s’appuient sur des sorties générées par des machines, quelqu’un doit définir la structure acceptable. Quelles relations dans un graphe de connaissances sont valides ? Quels champs sont obligatoires ? Quels types d’inférences peuvent être acceptés ? Qu’est-ce qui compte comme mal formé ou incomplet ? Ce ne sont pas des questions décoratives de métadonnées. Ce sont des questions opérationnelles. L’IA scientifique sera de plus en plus gouvernée non seulement par la qualité du modèle, mais aussi par la rigueur des structures qui l’entourent.</p>
+
+                <p>Autrement dit, l’IA scientifique entre dans le monde que la mesure a toujours gouverné. L’instrument doit être calibré. Le workflow doit être documenté. La sortie doit être interprétable. L’archive doit préserver la chaîne de raisonnement ou de preuve. L’opérateur humain doit savoir quand faire confiance, quand inspecter et quand refuser. Dès que ces conditions apparaissent, le marché se déplace de la rhétorique générique de l’assistant vers l’infrastructure qui rend le travail de connaissance reproductible.</p>
+
+                <h2>Où la surface investissable s’élargit</h2>
+
+                <p>L’opportunité de marché ici est plus large et plus durable qu’une nouvelle couche de copilotes pour scientifiques. Le capital devrait surveiller les entreprises qui transforment l’IA scientifique d’une interface habile en un système opérationnel.</p>
+
+                <ul>
+                    <li><strong>Plateformes de benchmark et d’évaluation :</strong> des bancs d’essai spécialisés pour la biologie, la médecine, l’agriculture, les matériaux et la recherche climatique, qui rendent la performance d’un modèle lisible pour les équipes d’achat et de gouvernance.</li>
+                    <li><strong>Systèmes de mémoire scientifique structurée :</strong> des outils qui préservent hypothèses, expériences ratées, provenance, historiques de versions et état de recherche lisible par machine à travers équipes et temporalités.</li>
+                    <li><strong>Infrastructure de schémas et d’ontologies :</strong> des produits qui imposent des contraintes de domaine, valident des objets de données et maintiennent l’actionnabilité machine des workflows scientifiques sans les laisser sombrer dans le chaos.</li>
+                    <li><strong>Orchestration humain-dans-la-boucle :</strong> des systèmes qui routent les cas ambigus vers des évaluateurs qualifiés, capturent les décisions d’arbitrage et réinjectent ces décisions dans la pile opérationnelle.</li>
+                    <li><strong>Middleware de workflow à qualité de conformité :</strong> la couche qui relie la sortie du modèle aux archives, instruments, tableaux de bord, registres réglementaires et reportings institutionnels.</li>
+                </ul>
+
+                <p>Les entreprises gagnantes de cette catégorie ne ressembleront pas forcément aux gagnants classiques de l’IA grand public. Elles pourront paraître plus lentes, plus techniques, plus verticalement imbriquées, et moins viralement spectaculaires. Mais c’est précisément pourquoi la catégorie compte. Lorsqu’un marché technique devient gouverné par des protocoles, les budgets migrent vers les systèmes qui réduisent le risque interprétatif. Le prix économique revient à ceux qui rendent l’action scientifique plus auditable, plus reproductible et plus facile à gouverner à grande échelle.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté scientifique africaine</h2>
+
+                <p>L’Afrique doit lire ce déplacement avec sobriété. Trop de conversations continentales sur l’IA restent piégées à la surface : interfaces conversationnelles, productivité générique, applications importées, ou participation symbolique à la culture mondiale des modèles. Mais si l’IA devient un équipement de laboratoire, alors la question stratégique change. Le point central devient de savoir si les universités, hôpitaux, instituts agricoles, archives et laboratoires industriels africains possèdent la capacité évaluative et infrastructurelle nécessaire pour utiliser ces systèmes selon leurs propres termes.</p>
+
+                <p>Cheikh Anta Diop insistait sur le fait que la restauration historique et scientifique exigeait des institutions capables de produire du savoir plutôt que d’emprunter du prestige. Le même principe vaut ici. Un continent incapable de benchmarker les modèles sur ses propres maladies, ses propres cultures, ses propres langues, ses propres conditions écologiques et ses propres réalités documentaires restera en aval des instruments conçus ailleurs. Il louera l’intelligence au lieu de l’organiser. La souveraineté scientifique à l’ère de l’IA signifie donc plus que former des talents ou acheter de l’accès. Elle signifie construire des jeux de données, des cultures d’évaluation, des ontologies de domaine, des systèmes d’archives et des logiciels de workflow qui permettent aux institutions africaines d’inspecter ce qu’un modèle fait réellement.</p>
+
+                <p>C’est pourquoi la surface investissable ne se trouve pas seulement dans les laboratoires de pointe. Elle se trouve aussi dans l’infrastructure plus discrète de validation, de mémoire, de provenance et de conception des workflows. Ce sont ces couches qui permettront aux institutions scientifiques africaines de dépendre moins de l’interprétation extérieure et de devenir plus capables de recherche cumulative. Un peuple ne peut pas bâtir un avenir durable sur des instruments empruntés seulement.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI News — « Introducing GeneBench-Pro » (item du 30 juin 2026)</a></li>
+                    <li><a href="https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/" target="_blank" rel="noopener">Google Blog — « New research shows how AMIE, our medical AI, could help manage health conditions. »</a></li>
+                    <li><a href="https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/" target="_blank" rel="noopener">Google Blog — « Ask an AI expert: What exactly is the full stack? »</a></li>
+                    <li><a href="https://www.w3.org/news/2026/first-public-working-draft-shacl-1-2-profiling/" target="_blank" rel="noopener">W3C — First Public Working Draft: SHACL 1.2 Profiling</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+                <div class="article__meta-footer">
+                    <span data-i18n="article.published">Research Journal</span>
+                    <span>·</span>
+                    <time>July 07, 2026</time>
+                    <span>·</span>
+                    <span data-i18n="article.author">Diop Research</span>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>
