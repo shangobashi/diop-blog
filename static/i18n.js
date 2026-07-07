@@ -74,6 +74,7 @@
         'article.entry053':     { en: 'Diop Daily #053 — July 2026', fr: 'Diop Quotidien n°053 — Juillet 2026' },
         'article.entry054':     { en: 'Diop Daily #054 — July 2026', fr: 'Diop Quotidien n°054 — Juillet 2026' },
         'article.entry055':     { en: 'Diop Daily #055 — July 2026', fr: 'Diop Quotidien n°055 — Juillet 2026' },
+        'article.entry056':     { en: 'Diop Daily #056 — July 2026', fr: 'Diop Quotidien n°056 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -553,6 +554,13 @@
             excerpt: {
                 en: 'Enterprise AI is moving beyond chat surfaces toward governed delegation: who may hand work to which agent, under what credential, with what rollback path and audit trail. Samsung’s deployment, Google’s new multi-agent tooling, the EU GPAI code, and W3C credential defense all point to the same conclusion: permissioned delegation is becoming a revenue-grade infrastructure layer.',
                 fr: 'L’IA d’entreprise dépasse les surfaces conversationnelles pour entrer dans la délégation gouvernée : qui peut confier quel travail à quel agent, sous quel identifiant, avec quel chemin de reprise et quelle piste d’audit. Le déploiement de Samsung, les nouveaux outils multi-agents de Google, le code GPAI de l’UE et la défense des attestations du W3C convergent vers la même conclusion : la délégation sous permission devient une couche d’infrastructure monétisable.'
+            }
+        },
+        'diop-daily-056': {
+            title: { en: 'Payments Complexity Is Becoming an Agent Infrastructure Market', fr: 'La complexité des paiements devient un marché d’infrastructure pour agents' },
+            excerpt: {
+                en: 'Australian Payments Plus, Google’s new multi-agent tooling, and Europe’s GPAI rule surface point to a durable pattern: the first serious agent wedge in finance is not autonomous-trading theater but operational complexity reduction. The infrastructure that can route exceptions, preserve auditability, and keep human judgment central will sit closer to budget than another chat interface.',
+                fr: 'Australian Payments Plus, les nouveaux outils multi-agents de Google et la surface réglementaire GPAI de l’Europe pointent vers un même constat : la première vraie percée des agents dans la finance ne sera pas le théâtre du trading autonome, mais la réduction de la complexité opérationnelle. L’infrastructure capable d’acheminer les exceptions, de préserver l’auditabilité et de garder le jugement humain au centre sera plus proche du budget qu’une interface conversationnelle de plus.'
             }
         },
         'diop-daily-055': {
