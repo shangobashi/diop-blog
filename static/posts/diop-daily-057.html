@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Adjudication Is Becoming the Operating Layer for AI — Diop Research</title>
+    <meta name="description" content="Why AI value is shifting from generation to admissibility: evaluation reliability, human checkpoints, structured validation, and institutional judgment."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry057">Diop Daily #057 — July 2026</div>
+                <div class="article__meta-line">
+                    <time>July 09, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>evaluation infrastructure · workflow governance · sovereignty stack</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Adjudication Is Becoming the Operating Layer for AI</h1>
+
+                <p>For two years, much of the AI market has priced generation as though fluent output were the primary scarce resource. Investors funded model capability, enterprises piloted assistants, and the public learned to marvel at systems that could summarize, code, or converse at superhuman speed. But institutions do not run on fluency alone. A hospital, a bank, a public agency, a publisher, or a laboratory eventually asks a harder question: by what process do we decide whether a machine output counts? The strategic bottleneck is shifting from production to admissibility. In other words, the next durable AI market is not only about what a model can generate. It is about how institutions adjudicate whether that generation is acceptable, actionable, reversible, and governable.</p>
+
+                <p>Recent public signals now make this shift visible. On July 8, OpenAI published a new analysis arguing that noise inside a widely discussed coding benchmark can distort how model capability is judged. A week earlier, OpenAI introduced GeneBench-Pro, a domain benchmark for genomics and biology built around more realistic research tasks. On June 30, Google released ADK Go 2.0 with graph-based orchestration, dynamic routing, and built-in human checkpoints for multi-agent production workflows. On July 2, the W3C published SHACL 1.2 Profiling, extending a language for constraints and profiles over structured knowledge graphs. Meanwhile, the European Commission’s General-Purpose AI Code of Practice process continues to formalize documentation, transparency, and risk obligations around powerful models. These are not isolated announcements. Together they suggest that the central question of the next AI phase is no longer merely intelligence. It is judgment infrastructure.</p>
+
+                <blockquote>
+                    <p>The institutions that win with AI will not be those that can prompt the loudest. They will be those that can decide, with evidence, when machine output may enter the workflow, when it must be escalated, and when it should be refused.</p>
+                </blockquote>
+
+                <h2>From output to admissibility</h2>
+
+                <p>A demo succeeds when an answer looks impressive. An institution succeeds when an answer survives contact with consequences. This distinction matters because enterprise and public-sector adoption now depends less on whether a model can produce plausible language and more on whether a workflow can determine what that language is worth. A procurement team needs to know whether a recommendation complies with policy. A regulator needs to know whether documentation and testing are sufficient. A scientific team needs to know whether a result clears domain-specific thresholds rather than generic benchmark theater. A newsroom or archive needs to know whether provenance, revision history, and editorial override are preserved. In every case, the machine output is only the beginning. The decisive layer is the system of judgment wrapped around it.</p>
+
+                <p>That is why the OpenAI evaluation signal matters beyond the coding domain. If a benchmark can be noisy enough to produce misleading conclusions, then a market built on raw score worship is fragile. The GeneBench-Pro signal extends the point: serious domains demand domain-specific criteria. The W3C SHACL signal pushes further by showing that acceptable structure itself must be specified. And the European Commission’s current code process reminds everyone that large-scale deployment is being judged not only by model performance, but by documentation, transparency, and risk-handling discipline. What emerges is a broad pattern: institutions are constructing the right to say yes, the right to say not yet, and the right to say no.</p>
+
+                <h2>The hidden adjudication stack</h2>
+
+                <p>If adjudication is becoming an operating layer, then AI systems are entering a deeper stack than the interface suggests. The relevant product surface is not a chatbot bubble. It is a chain of controls that decides what machine work becomes institutionally real. At minimum, that chain now includes:</p>
+
+                <ul>
+                    <li><strong>Evaluation layer:</strong> benchmarks, test harnesses, and task-specific checks that measure whether the system performs under realistic conditions rather than curated demonstrations.</li>
+                    <li><strong>Constraint layer:</strong> schemas, shape languages, policy rules, and structured validation that define what a valid output may look like in a given domain.</li>
+                    <li><strong>Escalation layer:</strong> human checkpoints, abstention logic, routing branches, and override mechanisms that determine when the machine must defer.</li>
+                    <li><strong>Provenance layer:</strong> logs, evidence capture, version history, and memory of prior decisions that preserve why a judgment was made.</li>
+                    <li><strong>Governance layer:</strong> documentation, disclosure, rollback, and risk accountability strong enough for executives, auditors, partners, and regulators.</li>
+                </ul>
+
+                <p>Google’s ADK Go 2.0 is revealing precisely because it treats human review and dynamic routing as first-class design concerns rather than as embarrassing exceptions to full autonomy. That is the more mature posture. Serious institutions do not need a machine that always acts. They need a machine that knows when to act, when to branch, and when to wait for judgment. The market implication is profound: the durable budget may sit less with raw model access and more with the middleware that can judge machine action in context.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>Capital should therefore watch the companies building rails for adjudication rather than merely interfaces for generation. Several categories are moving closer to durable budget:</p>
+
+                <ul>
+                    <li><strong>Evaluation and benchmark infrastructure:</strong> platforms that produce domain-specific testing, compare model behavior across versions, and reduce benchmark noise before procurement decisions are made.</li>
+                    <li><strong>Structured validation and policy engines:</strong> systems that enforce schemas, constraints, and business rules on model outputs before those outputs become operational.</li>
+                    <li><strong>Human-governed orchestration middleware:</strong> workflow products that route ambiguous cases to reviewers, preserve approvals, and encode escalation paths as part of the operating system.</li>
+                    <li><strong>Provenance and decision-memory systems:</strong> infrastructure that records not only what the model said, but why the organization accepted, rejected, or modified it.</li>
+                    <li><strong>Assurance tooling for regulated sectors:</strong> products that translate technical evaluation into compliance evidence legible to auditors, risk teams, and supervisors.</li>
+                </ul>
+
+                <p>These categories matter because they underwrite expensive institutional pain: false confidence, inconsistent decisions, audit exposure, model drift, and the inability to explain why a machine output entered production. A board or ministry does not need to believe in machine superintelligence to fund such tooling. It is enough that the institution already pays heavily for ambiguity. The firms that reduce ambiguity in a governable way will sit closer to procurement than another surface-level AI assistant.</p>
+
+                <h2>Why this matters for African institutional sovereignty</h2>
+
+                <p>African technology strategy should read this moment carefully. The most dangerous dependency in AI is not only compute dependence or model dependence. It is judgment dependence. A continent that imports models, benchmarks, compliance categories, and ontologies without building its own adjudication capacity will remain downstream of other people’s thresholds. It will inherit other people’s definitions of safety, usefulness, and acceptability. That is not sovereignty. It is rented judgment.</p>
+
+                <p>Cheikh Anta Diop argued that scientific independence requires institutions capable of producing and verifying knowledge on their own terms. The same principle now applies to AI. African universities, ministries, banks, laboratories, publishers, and infrastructure operators need their own test sets, archival systems, multilingual policy layers, workflow evidence stores, and override cultures. They need the ability to ask whether a model output is admissible in Dakar, Kinshasa, Nairobi, or Abidjan under local operational realities, not only under benchmarks designed elsewhere for other institutions.</p>
+
+                <p>This is why adjudication infrastructure deserves more attention than another generic application layer. It is where technical performance becomes institutional power. The societies that can evaluate, constrain, remember, and govern machine action will not merely use AI. They will define the terms under which AI becomes public fact. That is an investable market, but it is also a civilizational one.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “Separating signal from noise in coding evaluations” (July 8, 2026 item)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “Introducing GeneBench-Pro” (June 30, 2026 item)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — “Build reliable multi-agent applications with ADK Go 2.0”</a></li>
+                    <li><a href="https://www.w3.org/news/2026/first-public-working-draft-shacl-1-2-profiling/" target="_blank" rel="noopener">W3C — First Public Working Draft: SHACL 1.2 Profiling</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">European Commission — Drawing-up a General-Purpose AI Code of Practice</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L’adjudication devient la couche opératoire de l’IA</h1>
+
+                <p>Depuis deux ans, une grande partie du marché de l’IA valorise la génération comme si la rareté principale résidait dans la fluidité des sorties. Les investisseurs ont financé la capacité des modèles, les entreprises ont lancé des pilotes d’assistants, et le public a appris à s’émerveiller devant des systèmes capables de résumer, coder ou converser à vitesse surhumaine. Mais les institutions ne fonctionnent pas à la fluidité seule. Un hôpital, une banque, une administration publique, une maison d’édition ou un laboratoire finissent par poser une question plus dure : selon quel processus décide-t-on qu’une sortie machine compte réellement ? Le goulot stratégique se déplace de la production vers l’admissibilité. Autrement dit, le prochain marché durable de l’IA ne porte pas seulement sur ce qu’un modèle peut générer. Il porte sur la manière dont les institutions arbitrent si cette génération est acceptable, actionnable, réversible et gouvernable.</p>
+
+                <p>Des signaux publics récents rendent désormais ce déplacement visible. Le 8 juillet, OpenAI a publié une nouvelle analyse expliquant que le bruit à l’intérieur d’un benchmark de code largement discuté peut déformer la manière dont on juge la capacité des modèles. Une semaine plus tôt, OpenAI présentait GeneBench-Pro, benchmark de domaine pour la génomique et la biologie construit autour de tâches de recherche plus réalistes. Le 30 juin, Google a publié ADK Go 2.0 avec orchestration en graphe, routage dynamique et points de contrôle humains intégrés pour des workflows multi-agents de production. Le 2 juillet, le W3C a publié SHACL 1.2 Profiling, extension d’un langage de contraintes et de profils sur des graphes de connaissances structurés. Pendant ce temps, le processus de Code de pratique européen pour les IA à usage général continue de formaliser des obligations de documentation, de transparence et de gestion du risque autour des modèles puissants. Ce ne sont pas des annonces isolées. Ensemble, elles suggèrent que la question centrale de la prochaine phase de l’IA n’est plus seulement l’intelligence. C’est l’infrastructure du jugement.</p>
+
+                <blockquote>
+                    <p>Les institutions qui gagneront avec l’IA ne seront pas celles qui promptent le plus fort. Ce seront celles qui peuvent décider, avec preuve, quand une sortie machine peut entrer dans le workflow, quand elle doit être escaladée et quand elle doit être refusée.</p>
+                </blockquote>
+
+                <h2>De la sortie à l’admissibilité</h2>
+
+                <p>Une démonstration réussit lorsqu’une réponse paraît impressionnante. Une institution réussit lorsqu’une réponse survit au contact des conséquences. Cette distinction compte parce que l’adoption en entreprise et dans le secteur public dépend désormais moins de la capacité d’un modèle à produire un langage plausible que de la capacité d’un workflow à déterminer ce que vaut réellement ce langage. Une équipe achats doit savoir si une recommandation respecte la politique. Un régulateur doit savoir si la documentation et les tests sont suffisants. Une équipe scientifique doit savoir si un résultat franchit des seuils propres au domaine plutôt qu’un théâtre générique du benchmark. Une rédaction ou une archive doit savoir si la provenance, l’historique des révisions et le droit de reprise éditoriale sont préservés. Dans chaque cas, la sortie machine n’est que le début. La couche décisive est le système de jugement qui l’enveloppe.</p>
+
+                <p>C’est pourquoi le signal d’OpenAI sur l’évaluation compte bien au-delà du domaine du code. Si un benchmark peut être assez bruyant pour produire des conclusions trompeuses, alors un marché construit sur le culte brut du score est fragile. Le signal de GeneBench-Pro prolonge le point : les domaines sérieux exigent des critères propres à leur domaine. Le signal SHACL du W3C pousse plus loin en montrant que la structure acceptable elle-même doit être spécifiée. Et le processus de code actuel de la Commission européenne rappelle à tous que le déploiement à grande échelle sera jugé non seulement par la performance du modèle, mais aussi par la discipline de documentation, de transparence et de traitement du risque. Ce qui émerge est un motif plus large : les institutions construisent le droit de dire oui, le droit de dire pas encore, et le droit de dire non.</p>
+
+                <h2>La pile cachée de l’adjudication</h2>
+
+                <p>Si l’adjudication devient une couche opératoire, alors les systèmes d’IA entrent dans une pile plus profonde que ne le suggère l’interface. La surface produit pertinente n’est pas une bulle de chatbot. C’est une chaîne de contrôles qui décide quel travail machine devient institutionnellement réel. Au minimum, cette chaîne comprend désormais :</p>
+
+                <ul>
+                    <li><strong>Couche d’évaluation :</strong> benchmarks, bancs d’essai et vérifications spécifiques aux tâches qui mesurent si le système se comporte dans des conditions réalistes plutôt que dans des démonstrations soigneusement mises en scène.</li>
+                    <li><strong>Couche de contraintes :</strong> schémas, langages de formes, règles de politique et validation structurée qui définissent à quoi peut ressembler une sortie valide dans un domaine donné.</li>
+                    <li><strong>Couche d’escalade :</strong> points de contrôle humains, logique d’abstention, branches de routage et mécanismes de reprise qui déterminent quand la machine doit céder la main.</li>
+                    <li><strong>Couche de provenance :</strong> journaux, capture de preuves, historique de versions et mémoire des décisions antérieures qui préservent la raison pour laquelle un jugement a été rendu.</li>
+                    <li><strong>Couche de gouvernance :</strong> documentation, divulgation, rollback et responsabilité du risque suffisamment robustes pour les dirigeants, auditeurs, partenaires et régulateurs.</li>
+                </ul>
+
+                <p>ADK Go 2.0 de Google est révélateur précisément parce qu’il traite la revue humaine et le routage dynamique comme des préoccupations de conception de premier rang plutôt que comme des exceptions gênantes à une autonomie totale. C’est la posture la plus mûre. Les institutions sérieuses n’ont pas besoin d’une machine qui agit toujours. Elles ont besoin d’une machine qui sait quand agir, quand bifurquer et quand attendre un jugement. L’implication de marché est profonde : le budget durable pourrait moins résider dans l’accès brut au modèle que dans le middleware capable de juger l’action machine en contexte.</p>
+
+                <h2>Où la surface investissable s’élargit</h2>
+
+                <p>Le capital devrait donc surveiller les entreprises qui construisent des rails d’adjudication plutôt que de simples interfaces de génération. Plusieurs catégories se rapprochent de budgets durables :</p>
+
+                <ul>
+                    <li><strong>Infrastructure d’évaluation et de benchmark :</strong> plateformes qui produisent des tests propres au domaine, comparent le comportement des modèles à travers les versions et réduisent le bruit des benchmarks avant les décisions d’achat.</li>
+                    <li><strong>Moteurs de validation structurée et de politique :</strong> systèmes qui imposent schémas, contraintes et règles métier aux sorties des modèles avant qu’elles ne deviennent opérationnelles.</li>
+                    <li><strong>Middleware d’orchestration gouvernée par l’humain :</strong> produits de workflow qui routent les cas ambigus vers des relecteurs, préservent les approbations et encodent les chemins d’escalade comme partie intégrante du système d’exploitation.</li>
+                    <li><strong>Systèmes de provenance et de mémoire décisionnelle :</strong> infrastructure qui enregistre non seulement ce que le modèle a dit, mais pourquoi l’organisation l’a accepté, rejeté ou modifié.</li>
+                    <li><strong>Outils d’assurance pour secteurs réglementés :</strong> produits qui traduisent l’évaluation technique en preuves de conformité lisibles pour auditeurs, équipes risque et superviseurs.</li>
+                </ul>
+
+                <p>Ces catégories comptent parce qu’elles souscrivent une douleur institutionnelle coûteuse : fausse confiance, décisions incohérentes, exposition d’audit, dérive du modèle et incapacité d’expliquer pourquoi une sortie machine est entrée en production. Un conseil d’administration ou un ministère n’a pas besoin de croire à une superintelligence machine pour financer ce type d’outil. Il suffit que l’institution paie déjà cher l’ambiguïté. Les entreprises qui réduisent cette ambiguïté de manière gouvernable se tiendront plus près des achats qu’un simple assistant IA de surface.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté institutionnelle africaine</h2>
+
+                <p>La stratégie technologique africaine doit lire ce moment avec attention. La dépendance la plus dangereuse en IA n’est pas seulement la dépendance au calcul ou au modèle. C’est la dépendance au jugement. Un continent qui importe des modèles, des benchmarks, des catégories de conformité et des ontologies sans construire sa propre capacité d’adjudication restera en aval des seuils définis par d’autres. Il héritera des définitions d’autrui sur la sécurité, l’utilité et l’acceptabilité. Ce n’est pas la souveraineté. C’est un jugement loué.</p>
+
+                <p>Cheikh Anta Diop soutenait que l’indépendance scientifique exige des institutions capables de produire et de vérifier le savoir selon leurs propres termes. Le même principe s’applique désormais à l’IA. Les universités, ministères, banques, laboratoires, éditeurs et opérateurs d’infrastructure africains ont besoin de leurs propres jeux de tests, systèmes d’archives, couches de politique multilingues, magasins de preuves de workflow et cultures de reprise. Ils doivent pouvoir demander si une sortie de modèle est admissible à Dakar, Kinshasa, Nairobi ou Abidjan selon des réalités opérationnelles locales, et non seulement selon des benchmarks conçus ailleurs pour d’autres institutions.</p>
+
+                <p>C’est pourquoi l’infrastructure d’adjudication mérite plus d’attention qu’une couche d’applications génériques. C’est là que la performance technique devient pouvoir institutionnel. Les sociétés capables d’évaluer, de contraindre, de mémoriser et de gouverner l’action machine ne se contenteront pas d’utiliser l’IA. Elles définiront les conditions sous lesquelles l’IA devient un fait public. C’est un marché investissable, mais c’est aussi un enjeu civilisationnel.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS OpenAI News — « Separating signal from noise in coding evaluations » (item du 8 juillet 2026)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS OpenAI News — « Introducing GeneBench-Pro » (item du 30 juin 2026)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — « Build reliable multi-agent applications with ADK Go 2.0 »</a></li>
+                    <li><a href="https://www.w3.org/news/2026/first-public-working-draft-shacl-1-2-profiling/" target="_blank" rel="noopener">W3C — First Public Working Draft: SHACL 1.2 Profiling</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">Commission européenne — Drawing-up a General-Purpose AI Code of Practice</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+                <div class="article__meta-footer">
+                    <span data-i18n="article.published">Research Journal</span>
+                    <span>·</span>
+                    <time>July 09, 2026</time>
+                    <span>·</span>
+                    <span data-i18n="article.author">Diop Research</span>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>

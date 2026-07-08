@@ -75,6 +75,7 @@
         'article.entry054':     { en: 'Diop Daily #054 — July 2026', fr: 'Diop Quotidien n°054 — Juillet 2026' },
         'article.entry055':     { en: 'Diop Daily #055 — July 2026', fr: 'Diop Quotidien n°055 — Juillet 2026' },
         'article.entry056':     { en: 'Diop Daily #056 — July 2026', fr: 'Diop Quotidien n°056 — Juillet 2026' },
+        'article.entry057':     { en: 'Diop Daily #057 — July 2026', fr: 'Diop Quotidien n°057 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -87,6 +88,16 @@
     };
 
     var postTranslations = {
+        'diop-daily-057': {
+            title: {
+                en: 'Adjudication Is Becoming the Operating Layer for AI',
+                fr: 'L’adjudication devient la couche opératoire de l’IA'
+            },
+            excerpt: {
+                en: 'OpenAI’s critique of noisy coding benchmarks, Google’s graph-based human checkpoints, W3C validation work, and Europe’s GPAI rules all point to the same shift: institutions are no longer buying raw model fluency. They are buying systems that can decide what counts as acceptable machine action, when to escalate, and how to preserve evidence.',
+                fr: 'La critique par OpenAI des benchmarks de code bruités, les points de contrôle humains en graphe chez Google, le travail de validation du W3C et les règles GPAI européennes indiquent le même basculement : les institutions n’achètent plus seulement une fluidité de modèle. Elles achètent des systèmes capables de décider ce qui constitue une action machine acceptable, quand l’escalader et comment en préserver la preuve.'
+            }
+        },
         'inaugural-address': {
             title: {
                 en: 'Inaugural Address: On Method, Memory, and the Build',
