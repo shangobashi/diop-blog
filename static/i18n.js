@@ -76,6 +76,7 @@
         'article.entry055':     { en: 'Diop Daily #055 — July 2026', fr: 'Diop Quotidien n°055 — Juillet 2026' },
         'article.entry056':     { en: 'Diop Daily #056 — July 2026', fr: 'Diop Quotidien n°056 — Juillet 2026' },
         'article.entry057':     { en: 'Diop Daily #057 — July 2026', fr: 'Diop Quotidien n°057 — Juillet 2026' },
+        'article.entry058':     { en: 'Diop Daily #058 — July 2026', fr: 'Diop Quotidien n°058 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -88,6 +89,16 @@
     };
 
     var postTranslations = {
+        'diop-daily-058': {
+            title: {
+                en: 'Project Custody Is Becoming the Enterprise AI Market',
+                fr: 'La garde des projets devient le marché de l’IA d’entreprise'
+            },
+            excerpt: {
+                en: "OpenAI’s new 'stay with a project for hours' framing, Google’s A2A collaboration model, ADK Go 2.0 workflow controls, and Europe’s GPAI rule surface all point to the same transition: institutions no longer want answers on demand alone. They want systems that can hold a project across time, tools, permissions, and evidence.",
+                fr: "La nouvelle promesse d’OpenAI — rester avec un projet pendant des heures —, le modèle de collaboration A2A de Google, les contrôles de workflow d’ADK Go 2.0 et la surface réglementaire GPAI européenne indiquent le même basculement : les institutions ne veulent plus seulement des réponses à la demande. Elles veulent des systèmes capables de porter un projet à travers le temps, les outils, les permissions et la preuve."
+            }
+        },
         'diop-daily-057': {
             title: {
                 en: 'Adjudication Is Becoming the Operating Layer for AI',
