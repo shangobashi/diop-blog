@@ -77,6 +77,7 @@
         'article.entry056':     { en: 'Diop Daily #056 — July 2026', fr: 'Diop Quotidien n°056 — Juillet 2026' },
         'article.entry057':     { en: 'Diop Daily #057 — July 2026', fr: 'Diop Quotidien n°057 — Juillet 2026' },
         'article.entry058':     { en: 'Diop Daily #058 — July 2026', fr: 'Diop Quotidien n°058 — Juillet 2026' },
+        'article.entry059':     { en: 'Diop Daily #059 — July 2026', fr: 'Diop Quotidien n°059 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -89,6 +90,17 @@
     };
 
     var postTranslations = {
+
+'diop-daily-059': {
+    title: {
+        en: 'Telecommunications Is Becoming the Public Utility Layer for AI',
+        fr: 'Les télécommunications deviennent la couche d’utilité publique de l’IA'
+    },
+    excerpt: {
+        en: "OpenAI’s Deutsche Telekom signal, the spread of GPT-5.6 into Microsoft 365 Copilot, Google’s A2A collaboration model, and Europe’s trustworthy-AI institutions point to the same transition: AI is moving out of isolated apps and into distribution infrastructure. The strategic layer is becoming the network that can carry identity, workflow, voice, and governed action at public scale.",
+        fr: "Le signal Deutsche Telekom d’OpenAI, la diffusion de GPT-5.6 dans Microsoft 365 Copilot, le modèle de collaboration A2A de Google et les institutions européennes de l’IA de confiance indiquent le même basculement : l’IA sort des applications isolées pour entrer dans l’infrastructure de distribution. La couche stratégique devient le réseau capable de porter l’identité, le workflow, la voix et l’action gouvernée à l’échelle publique."
+    }
+},
         'diop-daily-058': {
             title: {
                 en: 'Project Custody Is Becoming the Enterprise AI Market',
