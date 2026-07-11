@@ -78,6 +78,7 @@
         'article.entry057':     { en: 'Diop Daily #057 — July 2026', fr: 'Diop Quotidien n°057 — Juillet 2026' },
         'article.entry058':     { en: 'Diop Daily #058 — July 2026', fr: 'Diop Quotidien n°058 — Juillet 2026' },
         'article.entry059':     { en: 'Diop Daily #059 — July 2026', fr: 'Diop Quotidien n°059 — Juillet 2026' },
+        'article.entry060':     { en: 'Diop Daily #060 — July 2026', fr: 'Diop Quotidien n°060 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -91,7 +92,18 @@
 
     var postTranslations = {
 
-'diop-daily-059': {
+
+'diop-daily-060': {
+    title: {
+        en: 'Democratic Accountability Is Becoming the Procurement Layer for AI',
+        fr: 'La responsabilité démocratique devient la couche d’achat de l’IA'
+    },
+    excerpt: {
+        en: "As AI enters governments, infrastructure operators, and regulated public services, the decisive buying question is no longer model brilliance alone. The strategic layer is the system that can prove who acted, under what authority, with what human checkpoints, and with what recovery path when the machine should not decide alone.",
+        fr: "À mesure que l’IA entre dans les gouvernements, les opérateurs d’infrastructure et les services publics régulés, la question décisive n’est plus seulement la brillance du modèle. La couche stratégique devient le système capable de prouver qui a agi, sous quelle autorité, avec quels points de contrôle humains et avec quel chemin de reprise lorsque la machine ne doit pas décider seule."
+    }
+},
+        'diop-daily-059': {
     title: {
         en: 'Telecommunications Is Becoming the Public Utility Layer for AI',
         fr: 'Les télécommunications deviennent la couche d’utilité publique de l’IA'
