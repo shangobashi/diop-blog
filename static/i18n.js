@@ -79,6 +79,7 @@
         'article.entry058':     { en: 'Diop Daily #058 — July 2026', fr: 'Diop Quotidien n°058 — Juillet 2026' },
         'article.entry059':     { en: 'Diop Daily #059 — July 2026', fr: 'Diop Quotidien n°059 — Juillet 2026' },
         'article.entry060':     { en: 'Diop Daily #060 — July 2026', fr: 'Diop Quotidien n°060 — Juillet 2026' },
+        'article.entry061':     { en: 'Diop Daily #061 — July 2026', fr: 'Diop Quotidien n°061 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -93,7 +94,17 @@
     var postTranslations = {
 
 
-'diop-daily-060': {
+'diop-daily-061': {
+    title: {
+        en: 'Provenance Is Becoming the Distribution Right for AI',
+        fr: 'La provenance devient le droit de distribution de l’IA'
+    },
+    excerpt: {
+        en: "As synthetic media and agent workflows become abundant, the bottleneck is shifting from generation to admissibility. The strategic layer is the infrastructure that can carry proof of origin, authority, handoff integrity, and rights status so machine-made work can move through publishing, enterprise, and creative markets without collapsing trust.",
+        fr: "À mesure que les médias synthétiques et les workflows d’agents deviennent abondants, le goulot d’étranglement se déplace de la génération vers l’admissibilité. La couche stratégique devient l’infrastructure capable de porter la preuve d’origine, l’autorité, l’intégrité des transferts et le statut des droits afin que le travail produit par machine circule dans l’édition, l’entreprise et les marchés créatifs sans faire s’effondrer la confiance."
+    }
+},
+        'diop-daily-060': {
     title: {
         en: 'Democratic Accountability Is Becoming the Procurement Layer for AI',
         fr: 'La responsabilité démocratique devient la couche d’achat de l’IA'

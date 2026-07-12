@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Provenance Is Becoming the Distribution Right for AI — Diop Research</title>
+    <meta name="description" content="Why the next durable AI market is not generation alone but machine-verifiable provenance: evidence-bearing media, agent handoffs, credential defense, and trust that can survive distribution."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry061">Diop Daily #061 — July 2026</div>
+                <div class="article__meta-line">
+                    <time>July 13, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>provenance rails · creative IP · trust infrastructure</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Provenance Is Becoming the Distribution Right for AI</h1>
+
+                <p>The first AI market rewarded generation. The next one will reward admissibility. A model can now write, draw, summarize, compose, imitate, and respond at industrial speed. But once outputs begin to move into publishing systems, enterprise workflows, customer-service channels, knowledge markets, regulated procedures, and agent-to-agent execution, one question begins to dominate all the rest: what exactly is this thing, where did it come from, under whose authority did it travel, and what proof survives once it leaves the model window? This is why provenance is becoming more than a media nicety. It is becoming the distribution right for AI.</p>
+
+                <p>Public signals across standards, agent systems, and enterprise tooling suggest that the market is converging on this harder requirement. On July 9, OpenAI described ChatGPT Work as a system that can stay with a project for hours, take action across apps and files, and turn goals into finished work. On June 18, Google’s A2A framing presented secure agent handoffs as part of a collaborative ecosystem rather than as a decorative protocol flourish. On June 30, the W3C published a first public working draft for Verifiable Credential Forgery Defense, describing indexed cryptographic witnesses that help defend the authenticity of credentials. The same day, the W3C also published its draft process for standards vulnerability disclosure and handling, formalizing how trust failures should be surfaced and repaired. Earlier this year, C2PA launched Content Credentials 2.3 and framed it as part of a broader effort to make the origin and history of digital content legible across the ecosystem. These are not isolated announcements. They point to one underlying thesis: in the next phase of AI, value will increasingly belong to systems that can preserve evidence while work, media, and decisions circulate.</p>
+
+                <blockquote>
+                    <p>The scarce asset is no longer generation alone. It is the ability to move machine-made work through institutions, markets, and media channels without losing the evidence that makes the work admissible.</p>
+                </blockquote>
+
+                <h2>From creation rights to distribution rights</h2>
+
+                <p>For much of the internet era, the central question around digital creation was who could make something and at what cost. AI has now pushed creation cost dramatically downward. That changes the competitive surface. When generation becomes abundant, the bottleneck moves downstream. The critical question becomes whether an output can be circulated, trusted, licensed, approved, monetized, cited, or acted upon without forcing each recipient to reconstruct its origin from scratch.</p>
+
+                <p>That is what I mean by a distribution right. Not a legal right in the narrow statutory sense, though law will matter. I mean an operational right: the practical ability of an output to keep moving because it carries enough proof to remain usable. A generated image may be visually striking, but if a publisher, agency, advertiser, platform, archive, or enterprise buyer cannot tell whether it was synthetic, edited, authorized, derived from approved material, or handed off through a legitimate chain, then the output loses commercial range. It may still circulate virally, but it cannot reliably circulate into budgets, institutions, or durable archives.</p>
+
+                <p>This is why provenance should be understood as infrastructure rather than etiquette. C2PA’s Content Credentials work is one part of that infrastructure for media. The W3C’s verifiable credential defense work addresses a parallel question for identity-bearing assertions. Google’s secure handoff language for agents extends the same logic into machine workflows: if agents collaborate, then state, authority, and responsibility must survive the handoff. OpenAI’s project-continuity framing adds a practical enterprise layer: when an AI system carries work across time and tools, the trace of how that work evolved becomes part of the product. In every case, the market is shifting from isolated output quality toward continuity of evidentiary context.</p>
+
+                <h2>The hidden provenance stack</h2>
+
+                <p>If provenance is becoming a distribution right, then the investable layer sits beneath the visible interface. The relevant stack increasingly includes:</p>
+
+                <ul>
+                    <li><strong>Origin metadata:</strong> signals about what was created, transformed, or edited, by which system, and at which stage.</li>
+                    <li><strong>Authority metadata:</strong> proof of who had permission to issue, modify, approve, or relay the work.</li>
+                    <li><strong>Handoff integrity:</strong> mechanisms that allow project state, credentials, and responsibilities to survive transfer between agents, applications, and humans.</li>
+                    <li><strong>Tamper and forgery defense:</strong> cryptographic or procedural systems that make counterfeit claims harder to pass off as authentic history.</li>
+                    <li><strong>Disclosure and repair channels:</strong> formal ways to report trust failures, investigate them, and preserve institutional credibility after something goes wrong.</li>
+                </ul>
+
+                <p>Notice what this means for the AI market. The decisive product is not always the system that generates the most dazzling first draft. It is increasingly the system that lets downstream actors accept the draft without absorbing unbounded risk. This is a profound change in what buyers are underwriting. Publishers are underwriting reputational risk. Enterprises are underwriting workflow integrity. Platforms are underwriting moderation and abuse risk. Governments are underwriting procedural legitimacy. Creative industries are underwriting authorship and licensing clarity. Provenance sits at the intersection of all of these because it compresses uncertainty about what an output is allowed to become next.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this reading is correct, capital should look beyond model wrappers and watch the builders who make evidence-bearing circulation cheaper and more reliable. Several categories deserve close attention:</p>
+
+                <ul>
+                    <li><strong>Content provenance middleware:</strong> systems that attach, preserve, expose, and validate content history across editing tools, publishing systems, and platforms.</li>
+                    <li><strong>Agent custody and handoff rails:</strong> infrastructure that transfers project state, permissions, and responsibility between agents and humans without silent context loss.</li>
+                    <li><strong>Credential-defense infrastructure:</strong> products that reduce forgery risk for machine-readable identity, approval, and entitlement claims.</li>
+                    <li><strong>Enterprise evidence stores:</strong> workflow memory systems that preserve not only outputs but the accepted sources, approvals, modifications, and exceptions that produced them.</li>
+                    <li><strong>Rights-aware creative tooling:</strong> media systems that help publishers, archives, agencies, and creators distinguish licensable, attributable, and policy-safe outputs from ambiguous ones.</li>
+                </ul>
+
+                <p>These categories sit closer to recurring budget than another prompt interface because they address an expensive institutional problem: distribution friction under uncertainty. Organizations do not merely need more generated material. They need generated material that can survive review, approval, licensing, platform enforcement, and reputational scrutiny. The company that lowers that friction acquires leverage over a much larger spend surface than the company that only makes generation cheaper.</p>
+
+                <p>This is especially true in creative-business systems. Books, research, education, journalism, advertising, archives, and storefront media are all moving into an era where synthetic production is abundant. In such a world, provenance becomes a sorting mechanism for value. Not all outputs will be equal. Some will be inexpensive noise. Some will be admissible assets. The difference will often be whether the work carries enough evidence to be bought, trusted, cited, or archived with confidence.</p>
+
+                <h2>Why this matters for African intellectual and commercial sovereignty</h2>
+
+                <p>Africa should read this transition as an opportunity, not only as a compliance burden. Much of the continent’s creative and institutional life has long suffered from broken archives, weak metadata discipline, fragmented authorship records, unstable distribution channels, and extractive platform dependence. In such an environment, provenance infrastructure is not a luxury layer. It is a sovereignty layer. It determines who can prove authorship, who can preserve cultural memory, who can license work fairly, who can defend institutional records, and who can contest synthetic falsification when it arrives wearing borrowed legitimacy.</p>
+
+                <p>Cheikh Anta Diop insisted that historical continuity is the basis of a people’s power. In digital systems, provenance is one of the technical forms of continuity. It is how a society remembers not only that something exists, but how it came to exist, through whose labor, with what transformations, and under which authority. A people that cannot secure that chain will find its archives diluted, its creators underpaid, its public records contested, and its digital markets shaped by foreign verification layers. A people that can build and govern provenance rails begins to own not merely content, but the evidentiary grammar through which content becomes institutionally real.</p>
+
+                <p>That is why provenance is becoming the distribution right for AI. It is the condition under which machine-made work can move from novelty into accountable circulation. And accountable circulation is where serious markets are built.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “ChatGPT is now a partner for your most ambitious work” (July 9, 2026 item)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — “How A2A is Building a World of Collaborative Agents” (June 18, 2026)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/first-public-working-draft-verifiable-credential-forgery-defense-v1-0/" target="_blank" rel="noopener">W3C — “First Public Working Draft: Verifiable Credential Forgery Defense v1.0” (June 30, 2026)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/group-note-draft-w3c-standards-vulnerability-disclosure-handling-process-and-policy/" target="_blank" rel="noopener">W3C — “Standards Vulnerability Disclosure &amp; Handling Process and Policy” (June 30, 2026)</a></li>
+                    <li><a href="https://www.c2pa.org/news/" target="_blank" rel="noopener">C2PA Announcements — “The C2PA Launches Content Credentials 2.3 and Celebrates 5 Years of Impact Across the Digital Ecosystem” (February 9, 2026)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La provenance devient le droit de distribution de l’IA</h1>
+
+                <p>Le premier marché de l’IA a récompensé la génération. Le suivant récompensera l’admissibilité. Un modèle peut désormais écrire, dessiner, résumer, composer, imiter et répondre à une vitesse industrielle. Mais dès que les sorties commencent à circuler dans des systèmes de publication, des workflows d’entreprise, des canaux de service client, des marchés de la connaissance, des procédures régulées et des exécutions agent-à-agent, une question commence à dominer toutes les autres : qu’est exactement cette chose, d’où vient-elle, sous quelle autorité a-t-elle circulé, et quelle preuve survit une fois qu’elle a quitté la fenêtre du modèle ? Voilà pourquoi la provenance devient plus qu’une politesse médiatique. Elle devient le droit de distribution de l’IA.</p>
+
+                <p>Des signaux publics, à travers les standards, les systèmes d’agents et l’outillage d’entreprise, suggèrent que le marché converge vers cette exigence plus dure. Le 9 juillet, OpenAI a décrit ChatGPT Work comme un système capable de rester avec un projet pendant des heures, d’agir à travers des applications et des fichiers, et de transformer des objectifs en travail achevé. Le 18 juin, le cadrage A2A de Google a présenté les transferts sécurisés entre agents comme une partie d’un écosystème collaboratif plutôt que comme un simple ornement protocolaire. Le 30 juin, le W3C a publié un premier projet public sur la défense contre la falsification des identifiants vérifiables, décrivant des témoins cryptographiques indexés qui aident à défendre l’authenticité des justificatifs. Le même jour, le W3C a également publié son projet de processus de divulgation et de traitement des vulnérabilités des standards, formalisant la manière dont les défaillances de confiance doivent être remontées et réparées. Plus tôt cette année, le C2PA a lancé Content Credentials 2.3 et l’a présenté comme une composante d’un effort plus vaste visant à rendre l’origine et l’historique du contenu numérique lisibles à l’échelle de l’écosystème. Ce ne sont pas des annonces isolées. Elles pointent vers une même thèse sous-jacente : dans la prochaine phase de l’IA, la valeur appartiendra de plus en plus aux systèmes capables de préserver la preuve pendant que le travail, les médias et les décisions circulent.</p>
+
+                <blockquote>
+                    <p>L’actif rare n’est plus la génération seule. C’est la capacité à faire circuler le travail produit par machine à travers les institutions, les marchés et les canaux médiatiques sans perdre la preuve qui rend ce travail admissible.</p>
+                </blockquote>
+
+                <h2>Des droits de création aux droits de distribution</h2>
+
+                <p>Pendant une grande partie de l’ère internet, la question centrale autour de la création numérique était de savoir qui pouvait produire quelque chose et à quel coût. L’IA a désormais fait chuter drastiquement ce coût de création. Cela change la surface concurrentielle. Lorsque la génération devient abondante, le goulot d’étranglement se déplace vers l’aval. La question critique devient alors de savoir si une sortie peut être diffusée, crue, licenciée, approuvée, monétisée, citée ou mise en action sans obliger chaque destinataire à reconstruire son origine depuis zéro.</p>
+
+                <p>C’est ce que j’entends par droit de distribution. Non pas un droit juridique au sens étroit du terme, même si le droit comptera. J’entends un droit opérationnel : la capacité pratique d’une sortie à continuer son trajet parce qu’elle transporte assez de preuve pour rester utilisable. Une image générée peut être visuellement frappante, mais si un éditeur, une agence, un annonceur, une plateforme, une archive ou un acheteur d’entreprise ne peut pas déterminer si elle est synthétique, éditée, autorisée, dérivée de matériaux approuvés, ou relayée à travers une chaîne légitime, alors cette sortie perd de sa portée commerciale. Elle peut encore circuler de manière virale, mais elle ne peut pas circuler de manière fiable vers des budgets, des institutions ou des archives durables.</p>
+
+                <p>Voilà pourquoi la provenance doit être comprise comme une infrastructure plutôt que comme une étiquette de bonne conduite. Le travail de Content Credentials du C2PA constitue une partie de cette infrastructure pour les médias. Le travail du W3C sur la défense des justificatifs vérifiables aborde une question parallèle pour les assertions porteuses d’identité. Le langage de Google sur les transferts sécurisés entre agents étend la même logique aux workflows machine : si des agents collaborent, alors l’état, l’autorité et la responsabilité doivent survivre au transfert. Le cadrage d’OpenAI sur la continuité de projet ajoute une couche d’entreprise très pratique : lorsqu’un système d’IA porte un travail à travers le temps et les outils, la trace de l’évolution de ce travail devient une partie du produit. Dans chaque cas, le marché se déplace de la qualité d’une sortie isolée vers la continuité de son contexte probatoire.</p>
+
+                <h2>La pile cachée de la provenance</h2>
+
+                <p>Si la provenance devient un droit de distribution, alors la couche investissable se situe sous l’interface visible. La pile pertinente comprend de plus en plus :</p>
+
+                <ul>
+                    <li><strong>Métadonnées d’origine :</strong> signaux sur ce qui a été créé, transformé ou édité, par quel système, et à quel stade.</li>
+                    <li><strong>Métadonnées d’autorité :</strong> preuve de qui avait la permission d’émettre, de modifier, d’approuver ou de relayer le travail.</li>
+                    <li><strong>Intégrité des transferts :</strong> mécanismes permettant à l’état d’un projet, aux justificatifs et aux responsabilités de survivre au passage entre agents, applications et humains.</li>
+                    <li><strong>Défense contre l’altération et la falsification :</strong> systèmes cryptographiques ou procéduraux rendant plus difficile le passage de revendications contrefaites pour un historique authentique.</li>
+                    <li><strong>Canaux de divulgation et de réparation :</strong> voies formelles pour signaler les défaillances de confiance, enquêter dessus et préserver la crédibilité institutionnelle lorsqu’un problème survient.</li>
+                </ul>
+
+                <p>Remarquons ce que cela signifie pour le marché de l’IA. Le produit décisif n’est pas toujours le système qui génère le premier brouillon le plus éblouissant. C’est de plus en plus le système qui permet aux acteurs en aval d’accepter ce brouillon sans absorber un risque illimité. Les éditeurs souscrivent un risque réputationnel. Les entreprises souscrivent l’intégrité des workflows. Les plateformes souscrivent les risques de modération et d’abus. Les gouvernements souscrivent la légitimité procédurale. Les industries créatives souscrivent la clarté de l’auteur et de la licence. La provenance se situe à l’intersection de tous ces enjeux parce qu’elle comprime l’incertitude sur ce qu’une sortie est autorisée à devenir ensuite.</p>
+
+                <h2>Où la surface investissable s’élargit</h2>
+
+                <p>Si cette lecture est juste, le capital devrait regarder au-delà des wrappers de modèles et observer les bâtisseurs qui rendent la circulation porteuse de preuve moins coûteuse et plus fiable. Plusieurs catégories méritent une attention soutenue :</p>
+
+                <ul>
+                    <li><strong>Middleware de provenance de contenu :</strong> systèmes qui attachent, préservent, exposent et valident l’historique du contenu à travers les outils d’édition, les systèmes de publication et les plateformes.</li>
+                    <li><strong>Rails de garde et de transfert d’agents :</strong> infrastructure qui transfère l’état d’un projet, les permissions et la responsabilité entre agents et humains sans perte silencieuse de contexte.</li>
+                    <li><strong>Infrastructure de défense des justificatifs :</strong> produits qui réduisent le risque de falsification pour les revendications lisibles par machine liées à l’identité, à l’approbation et aux droits.</li>
+                    <li><strong>Magasins de preuve d’entreprise :</strong> systèmes de mémoire de workflow qui préservent non seulement les sorties, mais aussi les sources acceptées, les validations, les modifications et les exceptions qui les ont produites.</li>
+                    <li><strong>Outillage créatif conscient des droits :</strong> systèmes médias qui aident éditeurs, archives, agences et créateurs à distinguer les sorties licenciables, attribuables et conformes aux politiques de celles qui restent ambiguës.</li>
+                </ul>
+
+                <p>Ces catégories sont plus proches de budgets récurrents qu’une interface de prompt supplémentaire parce qu’elles traitent un problème institutionnel coûteux : la friction de distribution sous incertitude. Les organisations n’ont pas seulement besoin de davantage de matière générée. Elles ont besoin d’une matière générée capable de survivre à la revue, à l’approbation, à la licence, à l’application des règles de plateforme et à l’examen réputationnel. L’entreprise qui réduit cette friction obtient un levier sur une surface de dépense bien plus large que celle qui se contente de rendre la génération moins chère.</p>
+
+                <p>Cela est particulièrement vrai dans les systèmes créatifs et commerciaux. Livres, recherche, éducation, journalisme, publicité, archives et médias marchands entrent tous dans une époque où la production synthétique devient abondante. Dans un tel monde, la provenance devient un mécanisme de tri de la valeur. Toutes les sorties ne seront pas égales. Certaines seront du bruit bon marché. D’autres seront des actifs admissibles. La différence dépendra souvent de la capacité de l’œuvre à porter assez de preuve pour être achetée, crue, citée ou archivée avec confiance.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté intellectuelle et commerciale africaine</h2>
+
+                <p>L’Afrique doit lire cette transition comme une opportunité, et non seulement comme un fardeau de conformité. Une grande partie de la vie créative et institutionnelle du continent souffre depuis longtemps d’archives brisées, d’une discipline faible des métadonnées, de dossiers d’auteur fragmentés, de canaux de distribution instables et d’une dépendance extractive vis-à-vis des plateformes. Dans un tel environnement, l’infrastructure de provenance n’est pas une couche de luxe. C’est une couche de souveraineté. Elle détermine qui peut prouver l’auteur, qui peut préserver la mémoire culturelle, qui peut licencier une œuvre de manière équitable, qui peut défendre les dossiers institutionnels, et qui peut contester une falsification synthétique arrivée sous les apparences d’une légitimité empruntée.</p>
+
+                <p>Cheikh Anta Diop insistait sur le fait que la continuité historique est la base de la puissance d’un peuple. Dans les systèmes numériques, la provenance constitue l’une des formes techniques de cette continuité. C’est la manière dont une société se souvient non seulement qu’une chose existe, mais aussi de la manière dont elle est venue à exister, à travers quel travail, avec quelles transformations et sous quelle autorité. Un peuple incapable de sécuriser cette chaîne verra ses archives diluées, ses créateurs sous-payés, ses dossiers publics contestés et ses marchés numériques façonnés par des couches étrangères de vérification. Un peuple capable de construire et de gouverner des rails de provenance commence à posséder non seulement du contenu, mais la grammaire probatoire par laquelle le contenu devient institutionnellement réel.</p>
+
+                <p>Voilà pourquoi la provenance devient le droit de distribution de l’IA. C’est la condition sous laquelle le travail produit par machine peut passer de la nouveauté à une circulation comptable et responsable. Et c’est dans cette circulation responsable que se construisent les marchés sérieux.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS OpenAI News — « ChatGPT is now a partner for your most ambitious work » (item du 9 juillet 2026)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — « How A2A is Building a World of Collaborative Agents » (18 juin 2026)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/first-public-working-draft-verifiable-credential-forgery-defense-v1-0/" target="_blank" rel="noopener">W3C — « First Public Working Draft: Verifiable Credential Forgery Defense v1.0 » (30 juin 2026)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/group-note-draft-w3c-standards-vulnerability-disclosure-handling-process-and-policy/" target="_blank" rel="noopener">W3C — « Standards Vulnerability Disclosure &amp; Handling Process and Policy » (30 juin 2026)</a></li>
+                    <li><a href="https://www.c2pa.org/news/" target="_blank" rel="noopener">Annonces C2PA — « The C2PA Launches Content Credentials 2.3 and Celebrates 5 Years of Impact Across the Digital Ecosystem » (9 février 2026)</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+                <div class="article__meta-footer">
+                    <span data-i18n="article.published">Research Journal</span>
+                    <span>·</span>
+                    <time>July 13, 2026</time>
+                    <span>·</span>
+                    <span data-i18n="article.author">Diop Research</span>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>
