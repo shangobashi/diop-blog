@@ -80,6 +80,7 @@
         'article.entry059':     { en: 'Diop Daily #059 — July 2026', fr: 'Diop Quotidien n°059 — Juillet 2026' },
         'article.entry060':     { en: 'Diop Daily #060 — July 2026', fr: 'Diop Quotidien n°060 — Juillet 2026' },
         'article.entry061':     { en: 'Diop Daily #061 — July 2026', fr: 'Diop Quotidien n°061 — Juillet 2026' },
+        'article.entry062':     { en: 'Diop Daily #062 — July 2026', fr: 'Diop Quotidien n°062 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -94,6 +95,17 @@
     var postTranslations = {
 
 
+
+'diop-daily-062': {
+    title: {
+        en: 'Recoverability Is Becoming the Premium Layer for AI',
+        fr: 'La récupérabilité devient la couche premium de l’IA'
+    },
+    excerpt: {
+        en: "The market is moving past one-shot model brilliance. As agents begin to hold projects for hours, pass work across systems, and enter governed workflows, the premium layer becomes the infrastructure that can checkpoint, route, repair, and resume action after failure without losing authority or context.",
+        fr: "Le marché dépasse la simple brillance ponctuelle des modèles. À mesure que les agents portent des projets pendant des heures, transmettent le travail entre systèmes et entrent dans des workflows gouvernés, la couche premium devient l’infrastructure capable de jalonner, router, réparer et reprendre l’action après l’échec sans perdre autorité ni contexte."
+    }
+},
 'diop-daily-061': {
     title: {
         en: 'Provenance Is Becoming the Distribution Right for AI',

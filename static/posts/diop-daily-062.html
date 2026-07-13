@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Recoverability Is Becoming the Premium Layer for AI — Diop Research</title>
+    <meta name="description" content="Why serious AI markets are shifting toward checkpointing, routing, repair, and resumable workflows: recoverability, not just brilliance, is becoming the premium infrastructure layer."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry062">Diop Daily #062 — July 2026</div>
+                <div class="article__meta-line">
+                    <time>July 14, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>workflow resilience · recoverability rails · agent infrastructure</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Recoverability Is Becoming the Premium Layer for AI</h1>
+
+                <p>The first commercial wave of AI rewarded immediacy. The model that answered faster, generated more fluently, or dazzled more convincingly won attention. That phase is not over, but it is no longer sufficient. Once AI begins to hold projects for hours, move between applications, pass work across agents, and enter institutional workflows, the central question changes. The serious buyer no longer asks only whether the system can act. It asks whether the system can recover after acting badly, incompletely, or under interruption. This is why recoverability is becoming the premium layer for AI.</p>
+
+                <p>Recent public signals converge on this point. OpenAI’s July 9 RSS item on ChatGPT Work describes an agent that can stay with a project for hours, take action across apps and files, and turn a goal into finished work. That is not a one-shot prompt product; it is a long-duration execution surface, which means interruption, ambiguity, and partial failure are no longer edge cases. On June 18, Google framed A2A as a collaborative ecosystem of secure autonomous handoffs between agents rather than as a solo-model spectacle. On June 30, Google’s ADK Go 2.0 introduced graph-based workflow composition, built-in human-in-the-loop controls, dynamic routing, and explicit resilience as part of the runtime itself. That same day, the W3C published a draft vulnerability disclosure and handling process for standards, defining how suspected weaknesses should be reported, triaged, confirmed, and resolved. These signals point in the same direction. The market is beginning to value not only machine action, but machine action that can be paused, inspected, repaired, and resumed without institutional chaos.</p>
+
+                <blockquote>
+                    <p>The premium AI product is no longer merely the one that acts. It is the one that can lose its footing without losing the project.</p>
+                </blockquote>
+
+                <h2>From autonomous output to recoverable execution</h2>
+
+                <p>There is a difference between a clever output and a recoverable system. A clever output can impress in a demo. A recoverable system can survive reality. Reality includes missing permissions, stale context, partial tool failure, uncertain authority, conflicting instructions, and handoffs between humans and machines that do not happen cleanly. As AI moves from chat windows into work surfaces, that difference becomes economically decisive.</p>
+
+                <p>OpenAI’s framing of ChatGPT Work is revealing for this reason. A system that stays with a project for hours is no longer judged only by the brilliance of its first answer. It is judged by whether it can continue coherently after delay, tool switching, file changes, and revision. Google’s A2A framing adds another pressure point. Once multiple agents exchange state, intent, and responsibility, silent failure becomes more dangerous than visible failure. A brittle handoff can corrupt a process without announcing itself. ADK Go 2.0 responds to exactly this class of problem by making graph workflows, human checkpoints, routing logic, and resilience part of the runtime rather than afterthoughts built by each application team from scratch.</p>
+
+                <p>The W3C vulnerability-handling draft broadens the lesson beyond agent frameworks. A standards body does not publish a process for disclosure, triage, confirmation, and resolution because perfection has been achieved. It does so because trust depends on disciplined repair. That is the deeper institutional signal. Serious systems are not defined by the fantasy of never failing. They are defined by the presence of formal recovery channels when failure arrives. AI is entering that phase now.</p>
+
+                <h2>The hidden stack of recoverability</h2>
+
+                <p>If recoverability is becoming a premium layer, the most important product surface sits below the interface. The relevant stack increasingly includes:</p>
+
+                <ul>
+                    <li><strong>Checkpointed workflow state:</strong> the ability to preserve what the system was doing, what assumptions it held, and where the process can safely resume.</li>
+                    <li><strong>Handoff integrity:</strong> mechanisms that keep task state, authority, and obligations intact when work moves between agents, applications, and humans.</li>
+                    <li><strong>Dynamic routing and abstention:</strong> systems that can escalate, defer, branch, or stop rather than forcing every request through one brittle execution path.</li>
+                    <li><strong>Human intervention architecture:</strong> explicit places where review, approval, repair, or redirection can occur without destroying continuity.</li>
+                    <li><strong>Incident memory and replay:</strong> evidence stores that preserve what failed, what changed, and how the system returned to a trustworthy state.</li>
+                </ul>
+
+                <p>Notice what buyers are underwriting when they pay for this layer. They are not only buying intelligence. They are buying failure containment. They are buying lower downtime in work that now depends on agents. They are buying fewer silent errors during handoffs. They are buying shorter recovery cycles after tool failure or policy conflict. They are buying the confidence that an interrupted project does not have to be restarted from social and procedural zero.</p>
+
+                <p>This is why recoverability is a better lens than raw autonomy. Raw autonomy sounds exciting but conceals risk. Recoverability names the actual institutional desire: not a machine that improvises forever, but a machine that can be governed through disorder. The first companies that turn that desire into reusable infrastructure will sit closer to budget than another interface wrapper around the same model APIs.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this reading is correct, capital should watch the builders making machine recovery operationally cheap. Several categories now look especially strategic:</p>
+
+                <ul>
+                    <li><strong>Checkpoint and state-custody middleware:</strong> infrastructure that preserves project continuity across sessions, tools, and agent boundaries.</li>
+                    <li><strong>Exception-routing engines:</strong> products that encode when a workflow should pause, escalate, fork, or abstain instead of pushing every case through automated completion.</li>
+                    <li><strong>Agent replay and incident memory systems:</strong> tooling that records what happened in a machine workflow strongly enough to support diagnosis, repair, audit, and supervised restart.</li>
+                    <li><strong>Human-governed orchestration layers:</strong> runtimes that make approval checkpoints and controlled resumption first-class product features.</li>
+                    <li><strong>Recoverability analytics:</strong> observability surfaces that measure restart cost, handoff loss, policy exception rates, and time-to-trust-restoration rather than vanity prompt metrics alone.</li>
+                </ul>
+
+                <p>These categories are commercially serious because they underwrite recurring institutional pain. Long-running AI workflows create expensive failure modes: duplicated work, context collapse, invisible state corruption, approval deadlocks, and rework spirals after a system touches the wrong tool or user. The infrastructure that shortens those costs will command durable spend because it protects the economics of deployment itself.</p>
+
+                <p>This is also where the distinction between rails and apps becomes useful. Many applications will claim to automate. Far fewer will own the rails that let automation fail gracefully. The app may generate the visible value, but the rail captures the durable budget because it keeps operations from becoming brittle. In every important technology cycle, reliability infrastructure eventually monetizes more consistently than theatrical front ends. AI is heading toward the same settlement.</p>
+
+                <h2>Why this matters for African institutional sovereignty</h2>
+
+                <p>Africa should take this shift seriously because many of its institutions already operate under conditions where continuity is fragile. Records are fragmented. Workflows cross language boundaries. Administrative handoffs are often person-dependent. Connectivity quality varies. Tooling layers are imported and unevenly integrated. In such environments, brittle automation is not merely annoying; it can deepen institutional weakness. A recoverability-first architecture offers another path. It treats interruption, translation, incomplete records, and partial failure as design realities rather than embarrassing anomalies.</p>
+
+                <p>Cheikh Anta Diop argued that historical continuity is a condition of collective power. In digital institutions, recoverability is one of the technical forms of continuity. It is the capacity to preserve the thread of action through disruption. A people that cannot resume its own workflows without foreign platforms, foreign custodians, or improvised human memory remains exposed. A people that can build systems of checkpointed memory, explicit repair, multilingual handoff discipline, and evidence-bearing restart begins to own not only software, but operational time itself.</p>
+
+                <p>That is the deeper reason recoverability matters. It is not a secondary engineering virtue. It is the bridge between machine power and institutional durability. And durable institutions, not dazzling demos, are where serious markets are made.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “ChatGPT is now a partner for your most ambitious work” (July 9, 2026 item; description: an agent that can take action across apps and files, stay with a project for hours, and turn a goal into finished work)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — “How A2A is Building a World of Collaborative Agents” (June 18, 2026)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/group-note-draft-w3c-standards-vulnerability-disclosure-handling-process-and-policy/" target="_blank" rel="noopener">W3C — “Standards Vulnerability Disclosure &amp; Handling Process and Policy” (June 30, 2026)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La récupérabilité devient la couche premium de l’IA</h1>
+
+                <p>La première vague commerciale de l’IA a récompensé l’immédiateté. Le modèle qui répondait plus vite, générait avec plus de fluidité ou impressionnait le plus fortement captait l’attention. Cette phase n’est pas terminée, mais elle ne suffit plus. Dès que l’IA commence à porter des projets pendant des heures, à passer d’une application à une autre, à transmettre le travail entre agents et à entrer dans des workflows institutionnels, la question centrale change. L’acheteur sérieux ne demande plus seulement si le système peut agir. Il demande si le système peut se rétablir après avoir mal agi, agi partiellement ou été interrompu. Voilà pourquoi la récupérabilité devient la couche premium de l’IA.</p>
+
+                <p>Des signaux publics récents convergent sur ce point. L’item RSS d’OpenAI du 9 juillet consacré à ChatGPT Work décrit un agent capable de rester avec un projet pendant des heures, d’agir à travers des applications et des fichiers, et de transformer un objectif en travail achevé. Ce n’est pas un produit de prompt ponctuel ; c’est une surface d’exécution de longue durée, ce qui signifie que l’interruption, l’ambiguïté et la panne partielle ne sont plus des cas limites. Le 18 juin, Google a présenté A2A comme un écosystème collaboratif de transferts autonomes sécurisés entre agents plutôt que comme un simple spectacle de modèle solitaire. Le 30 juin, ADK Go 2.0 de Google a introduit la composition de workflows en graphe, des contrôles humains intégrés, le routage dynamique et la résilience explicite comme éléments du runtime lui-même. Le même jour, le W3C a publié un projet de processus de divulgation et de traitement des vulnérabilités des standards, définissant comment les faiblesses supposées doivent être signalées, triées, confirmées et résolues. Ces signaux pointent dans la même direction. Le marché commence à valoriser non seulement l’action machine, mais l’action machine qui peut être interrompue, inspectée, réparée et reprise sans chaos institutionnel.</p>
+
+                <blockquote>
+                    <p>Le produit IA premium n’est plus seulement celui qui agit. C’est celui qui peut perdre l’équilibre sans perdre le projet.</p>
+                </blockquote>
+
+                <h2>De la sortie autonome à l’exécution récupérable</h2>
+
+                <p>Il existe une différence entre une sortie brillante et un système récupérable. Une sortie brillante peut impressionner dans une démonstration. Un système récupérable peut survivre au réel. Le réel comprend des permissions manquantes, un contexte périmé, des défaillances partielles d’outils, une autorité incertaine, des instructions contradictoires et des transferts entre humains et machines qui ne se déroulent pas proprement. À mesure que l’IA quitte la fenêtre de chat pour entrer dans les surfaces de travail, cette différence devient économiquement décisive.</p>
+
+                <p>Le cadrage d’OpenAI autour de ChatGPT Work est révélateur pour cette raison. Un système qui reste avec un projet pendant des heures n’est plus jugé seulement sur l’éclat de sa première réponse. Il est jugé sur sa capacité à continuer de manière cohérente après des délais, des changements d’outils, des modifications de fichiers et des révisions. Le cadrage A2A de Google ajoute un autre point de pression. Dès lors que plusieurs agents échangent de l’état, de l’intention et de la responsabilité, l’échec silencieux devient plus dangereux que l’échec visible. Un transfert fragile peut corrompre un processus sans même s’annoncer. ADK Go 2.0 répond précisément à cette classe de problème en faisant des workflows en graphe, des points de contrôle humains, de la logique de routage et de la résilience des parties du runtime plutôt que des ajouts bricolés par chaque équipe applicative.</p>
+
+                <p>Le projet du W3C sur le traitement des vulnérabilités élargit la leçon au-delà des frameworks d’agents. Un organisme de normalisation ne publie pas un processus de divulgation, de triage, de confirmation et de résolution parce que la perfection a été atteinte. Il le fait parce que la confiance dépend d’une réparation disciplinée. C’est là le signal institutionnel le plus profond. Les systèmes sérieux ne sont pas définis par le fantasme de ne jamais échouer. Ils sont définis par l’existence de canaux formels de reprise lorsque l’échec survient. L’IA entre dans cette phase maintenant.</p>
+
+                <h2>La pile cachée de la récupérabilité</h2>
+
+                <p>Si la récupérabilité devient une couche premium, alors la surface produit la plus importante se situe sous l’interface. La pile pertinente comprend de plus en plus :</p>
+
+                <ul>
+                    <li><strong>État de workflow jalonné :</strong> la capacité à préserver ce que le système était en train de faire, les hypothèses qu’il tenait et l’endroit où le processus peut reprendre en sécurité.</li>
+                    <li><strong>Intégrité des transferts :</strong> des mécanismes qui maintiennent intacts l’état de la tâche, l’autorité et les obligations lorsque le travail passe entre agents, applications et humains.</li>
+                    <li><strong>Routage dynamique et abstention :</strong> des systèmes capables d’escalader, de différer, de bifurquer ou de s’arrêter au lieu de forcer chaque demande à travers un seul chemin d’exécution fragile.</li>
+                    <li><strong>Architecture d’intervention humaine :</strong> des endroits explicites où revue, approbation, réparation ou redirection peuvent se produire sans détruire la continuité.</li>
+                    <li><strong>Mémoire d’incident et relecture :</strong> des magasins de preuve qui préservent ce qui a échoué, ce qui a changé et la manière dont le système est revenu à un état digne de confiance.</li>
+                </ul>
+
+                <p>Remarquons ce que les acheteurs souscrivent lorsqu’ils paient pour cette couche. Ils n’achètent pas seulement de l’intelligence. Ils achètent du confinement de panne. Ils achètent moins d’interruptions dans des travaux qui dépendent désormais d’agents. Ils achètent moins d’erreurs silencieuses pendant les transferts. Ils achètent des cycles de reprise plus courts après une panne d’outil ou un conflit de politique. Ils achètent la confiance qu’un projet interrompu n’a pas besoin d’être redémarré depuis zéro sur le plan social et procédural.</p>
+
+                <p>C’est pourquoi la récupérabilité constitue une meilleure grille de lecture que l’autonomie brute. L’autonomie brute paraît excitante mais dissimule le risque. La récupérabilité nomme le désir institutionnel réel : non pas une machine qui improvise indéfiniment, mais une machine qui peut être gouvernée à travers le désordre. Les premières entreprises qui transformeront ce désir en infrastructure réutilisable se placeront plus près du budget qu’un simple habillage d’interface autour des mêmes API de modèles.</p>
+
+                <h2>Où la surface investissable s’élargit</h2>
+
+                <p>Si cette lecture est juste, le capital devrait observer les bâtisseurs qui rendent la reprise machine opérationnellement peu coûteuse. Plusieurs catégories paraissent désormais particulièrement stratégiques :</p>
+
+                <ul>
+                    <li><strong>Middleware de jalons et de garde d’état :</strong> une infrastructure qui préserve la continuité d’un projet à travers sessions, outils et frontières entre agents.</li>
+                    <li><strong>Moteurs de routage des exceptions :</strong> des produits qui encodent quand un workflow doit faire pause, escalader, bifurquer ou s’abstenir au lieu de pousser chaque cas vers une complétion automatisée.</li>
+                    <li><strong>Systèmes de relecture d’agents et de mémoire d’incident :</strong> un outillage qui enregistre ce qui s’est passé dans un workflow machine avec assez de rigueur pour soutenir diagnostic, réparation, audit et redémarrage supervisé.</li>
+                    <li><strong>Couches d’orchestration gouvernées par l’humain :</strong> des runtimes qui font des points de contrôle d’approbation et de la reprise contrôlée des fonctionnalités centrales du produit.</li>
+                    <li><strong>Analytique de récupérabilité :</strong> des surfaces d’observabilité qui mesurent le coût de redémarrage, la perte lors des transferts, les taux d’exception de politique et le temps de restauration de la confiance plutôt que de simples métriques de vanity autour des prompts.</li>
+                </ul>
+
+                <p>Ces catégories sont commercialement sérieuses parce qu’elles souscrivent une douleur institutionnelle récurrente. Les workflows d’IA de longue durée créent des modes d’échec coûteux : travail dupliqué, effondrement du contexte, corruption invisible de l’état, blocages d’approbation et spirales de reprise après qu’un système a touché le mauvais outil ou le mauvais utilisateur. L’infrastructure qui raccourcit ces coûts commandera des dépenses durables parce qu’elle protège l’économie même du déploiement.</p>
+
+                <p>C’est aussi ici que la distinction entre rails et applications devient utile. Beaucoup d’applications prétendront automatiser. Bien moins posséderont les rails qui permettent à l’automatisation d’échouer avec grâce. L’application peut générer la valeur visible, mais le rail capte le budget durable parce qu’il empêche les opérations de devenir fragiles. Dans chaque cycle technologique important, l’infrastructure de fiabilité finit par se monétiser plus régulièrement que les façades théâtrales. L’IA se dirige vers le même règlement.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté institutionnelle africaine</h2>
+
+                <p>L’Afrique doit prendre ce déplacement au sérieux parce que nombre de ses institutions opèrent déjà dans des conditions où la continuité est fragile. Les dossiers sont fragmentés. Les workflows traversent des frontières linguistiques. Les transferts administratifs dépendent souvent des personnes. La qualité de connectivité varie. Les couches logicielles sont importées et intégrées de manière inégale. Dans de tels environnements, une automatisation fragile n’est pas simplement agaçante ; elle peut approfondir la faiblesse institutionnelle. Une architecture pensée d’abord pour la reprise offre une autre voie. Elle traite l’interruption, la traduction, les dossiers incomplets et la panne partielle comme des réalités de conception plutôt que comme des anomalies embarrassantes.</p>
+
+                <p>Cheikh Anta Diop soutenait que la continuité historique est une condition de la puissance collective. Dans les institutions numériques, la récupérabilité constitue l’une des formes techniques de cette continuité. C’est la capacité à préserver le fil de l’action à travers la perturbation. Un peuple incapable de reprendre ses propres workflows sans plateformes étrangères, gardiens étrangers ou mémoire humaine improvisée reste exposé. Un peuple capable de construire des systèmes de mémoire jalonnée, de réparation explicite, de discipline multilingue de transfert et de redémarrage porteur de preuve commence à posséder non seulement du logiciel, mais le temps opérationnel lui-même.</p>
+
+                <p>Voilà la raison plus profonde pour laquelle la récupérabilité compte. Ce n’est pas une vertu d’ingénierie secondaire. C’est le pont entre la puissance machine et la durabilité institutionnelle. Et ce sont les institutions durables, non les démonstrations brillantes, qui donnent naissance aux marchés sérieux.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux OpenAI News RSS — « ChatGPT is now a partner for your most ambitious work » (item du 9 juillet 2026 ; description : un agent capable d’agir à travers applications et fichiers, de rester avec un projet pendant des heures et de transformer un objectif en travail achevé)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — « How A2A is Building a World of Collaborative Agents » (18 juin 2026)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/group-note-draft-w3c-standards-vulnerability-disclosure-handling-process-and-policy/" target="_blank" rel="noopener">W3C — « Standards Vulnerability Disclosure &amp; Handling Process and Policy » (30 juin 2026)</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+                <div class="article__meta-footer">
+                    <span data-i18n="article.published">Research Journal</span>
+                    <span>·</span>
+                    <time>July 14, 2026</time>
+                    <span>·</span>
+                    <span data-i18n="article.author">Diop Research</span>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>
