@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Useful Work Per Dollar Is Becoming the Capital Metric for AI — Diop Research</title>
+    <meta name="description" content="Why agentic AI spending is shifting from benchmark theater to measured useful work: governed workflows, secure handoffs, recoverable execution, and infrastructure that turns model capability into budget-worthy output."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry063">Diop Daily #063 — July 2026</div>
+                <div class="article__meta-line">
+                    <time>July 15, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>agent economics · workflow infrastructure · capital allocation</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Useful Work Per Dollar Is Becoming the Capital Metric for AI</h1>
+
+                <p>The first commercial cycle of AI was priced like spectacle. A model wrote faster than a human, summarized more quickly than an analyst, or produced a convincing imitation of expertise, and the market treated this as proof of durable value. But spectacle is not a budget line. Once institutions begin to fund agents as operating systems rather than as novelty interfaces, the governing question changes. The serious buyer asks a harsher question: how much useful work does this system actually complete per dollar of spend, under real operating constraints, with enough governance to survive review? That is why useful work per dollar is becoming the capital metric for AI.</p>
+
+                <p>The phrase itself is no longer merely an analyst’s invention. OpenAI’s July 14 RSS item on managing AI investments in the agentic era explicitly tells enterprises to measure useful work per dollar, improve efficiency, and scale high-value workflows. That language matters because it names a shift in what capital is being asked to underwrite. On July 9, OpenAI also described ChatGPT Work as an agent able to stay with a project for hours, act across apps and files, and turn a goal into finished work. On June 18, Google presented A2A as a world of collaborative agents built around secure autonomous handoffs rather than isolated tool use. On June 30, Google’s ADK Go 2.0 announced graph-based workflows, built-in human-in-the-loop controls, dynamic orchestration, and resilience inside the runtime itself. The same day, the W3C published a standards vulnerability disclosure and handling process that formalizes how issues should be triaged, confirmed, and resolved. These signals are converging on one market lesson: intelligence is not enough. Capital now wants measurable, governable workflow output.</p>
+
+                <blockquote>
+                    <p>The next durable AI multiple will not be awarded to eloquence alone. It will be awarded to systems that convert model capability into accountable finished work at a cost profile institutions can actually govern.</p>
+                </blockquote>
+
+                <h2>From benchmark theater to capital discipline</h2>
+
+                <p>Benchmarks still matter, but they no longer settle the investment question. A benchmark is a proxy. A budget is an obligation. When a system enters legal review, procurement, operations, customer support, research synthesis, document production, or internal planning, the institution is not paying for token brilliance in the abstract. It is paying for completed tasks, compressed cycle times, fewer dropped handoffs, lower rework, and higher throughput in workflows that matter to revenue, compliance, or service quality.</p>
+
+                <p>This is why OpenAI’s language on useful work per dollar is more revealing than another model leaderboard. It implies that the relevant unit is not raw generation, but economically legible output. ChatGPT Work extends the same logic. A system that can stay with a project for hours is no longer being compared only on first-response charm. It is being evaluated on continuity, stamina, and the ability to keep producing value after context shifts, tool changes, and revision. Google’s A2A framing adds another pressure point: once tasks pass between agents, the loss surface widens. A dropped permission, missing state transfer, or ambiguous authority chain can erase the apparent productivity gain. ADK Go 2.0 responds by pushing orchestration, human checkpoints, routing logic, and resilience into the runtime. The W3C’s vulnerability-handling draft supplies the broader institutional lesson: trustworthy systems are not those that promise perfection, but those that can surface, triage, and repair problems without dissolving trust.</p>
+
+                <p>Put differently, the market is moving from model-centric evaluation to workflow-centric underwriting. That is a deeper change than it first appears. It means the center of gravity is shifting away from isolated prompts and toward production systems that can accumulate useful work across time.</p>
+
+                <h2>The hidden stack behind useful work</h2>
+
+                <p>Useful work per dollar sounds like a simple metric, but it rests on a complex substrate. A system can only produce useful work economically if several layers below the interface are functioning well at the same time:</p>
+
+                <ul>
+                    <li><strong>State custody:</strong> the workflow has to preserve what the system knows, what it has already done, and where it can safely resume.</li>
+                    <li><strong>Handoff integrity:</strong> tasks moving between agents, tools, and humans must retain authority, context, and obligations without silent corruption.</li>
+                    <li><strong>Human checkpoint design:</strong> not every step should be automated; useful work often depends on structured review, approval, or abstention.</li>
+                    <li><strong>Routing and exception handling:</strong> low-value cases should flow cheaply, while ambiguous or risky cases should escalate without wrecking throughput.</li>
+                    <li><strong>Repair discipline:</strong> systems need a credible way to expose mistakes, investigate them, and return to trusted operation after failure.</li>
+                </ul>
+
+                <p>Once these layers are visible, the meaning of useful work per dollar becomes clearer. It is not just a productivity slogan. It is a compact expression for throughput after friction, governance, interruption, and repair have all taken their share. Many AI products look inexpensive until one accounts for the hidden tax of monitoring them, correcting them, explaining them, or restarting them after they derail a process. In that sense, useful work per dollar is a better economic measure because it forces institutions to price the full operating reality rather than the demo.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this thesis is correct, the strategic layer is not merely the model endpoint. The widening investable surface sits in the infrastructure that helps an institution convert model capacity into measured output without losing control. Several categories deserve close attention:</p>
+
+                <ul>
+                    <li><strong>Workflow instrumentation and economics layers:</strong> systems that can measure task completion, rework rates, escalation cost, and time-to-finished-output rather than vanity prompt counts alone.</li>
+                    <li><strong>Agent orchestration runtimes:</strong> products that encode routing, checkpoints, retries, and collaboration as reusable operating logic instead of one-off application glue.</li>
+                    <li><strong>State-custody and replay infrastructure:</strong> memory systems that preserve project continuity strongly enough to support long-duration work, supervised restart, and post-incident diagnosis.</li>
+                    <li><strong>Authority and handoff rails:</strong> middleware that makes permissions, identity, and responsibility survive movement across agents and applications.</li>
+                    <li><strong>AI financial operations surfaces:</strong> tooling that lets enterprises decide which workflows deserve more spend because they produce repeatable useful work, not just more interaction volume.</li>
+                </ul>
+
+                <p>Notice how different this is from the first-wave assumption that better models alone would capture most value. Models remain necessary, but the revenue gravity shifts toward the systems that reduce the cost of turning model intelligence into finished institutional output. The winner is increasingly the layer that makes workflow yield legible, governable, and improvable. That layer sits closer to budget committees, operating executives, and procurement than another wrapper promising more magic.</p>
+
+                <p>This is also why the capital metric matters. Once useful work per dollar becomes the language of buying, the market becomes less forgiving of theatrical AI. Products that generate curiosity but not workflow yield will look expensive very quickly. Products that quietly compress cycle time, reduce handoff loss, and preserve recoverable output will look cheap, even if their underlying model costs are higher. Serious investment will follow the latter.</p>
+
+                <h2>Why this matters for African institutional sovereignty</h2>
+
+                <p>African institutions should read this transition with great care. Much of the continent’s technology market has been trained to consume software as aspiration rather than as audited operating capacity. That habit is dangerous in the agentic era. A ministry, university, media house, financial institution, logistics network, or research laboratory does not need imported eloquence alone. It needs systems that produce measurable useful work under local conditions: multilingual environments, intermittent infrastructure, fragmented records, variable staffing, and high administrative friction.</p>
+
+                <p>Cheikh Anta Diop insisted that historical recovery was not an exercise in pride alone, but a condition for organized power. The same logic applies to digital institutions. A society that cannot measure what its technical systems actually help it finish will confuse consumption with capacity. Useful work per dollar is therefore not only an enterprise metric. It is a sovereignty metric. It helps distinguish decorative dependence from real institutional strengthening. A people able to build, evaluate, and govern systems on the basis of completed useful work begins to own the grammar of execution rather than merely renting intelligence from elsewhere.</p>
+
+                <p>That is why this metric matters. It disciplines capital, but it also disciplines imagination. It asks whether AI is producing finished work, preserved judgment, and repeatable capability — or merely generating the feeling of modernity. Serious institutions, and serious investors, will increasingly demand the former.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “How to manage AI investments in the agentic era” (July 14, 2026 item; description: measure useful work per dollar, improve efficiency, and scale high-value workflows)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “ChatGPT is now a partner for your most ambitious work” (July 9, 2026 item; description: an agent that can act across apps and files, stay with a project for hours, and turn a goal into finished work)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — “How A2A is Building a World of Collaborative Agents” (June 18, 2026)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/group-note-draft-w3c-standards-vulnerability-disclosure-handling-process-and-policy/" target="_blank" rel="noopener">W3C — “Standards Vulnerability Disclosure &amp; Handling Process and Policy” (June 30, 2026)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Le travail utile par dollar devient la métrique capitale de l’IA</h1>
+
+                <p>Le premier cycle commercial de l’IA a été tarifé comme un spectacle. Un modèle écrivait plus vite qu’un humain, résumait plus rapidement qu’un analyste ou produisait une imitation convaincante de l’expertise, et le marché traitait cela comme une preuve de valeur durable. Mais le spectacle n’est pas une ligne budgétaire. Dès que les institutions commencent à financer des agents comme des systèmes d’exploitation plutôt que comme des interfaces de nouveauté, la question décisive change. L’acheteur sérieux pose une question plus dure : combien de travail utile ce système accomplit-il réellement par dollar dépensé, sous de vraies contraintes opérationnelles, avec assez de gouvernance pour survivre à la revue ? Voilà pourquoi le travail utile par dollar devient la métrique capitale de l’IA.</p>
+
+                <p>L’expression elle-même n’est plus une simple invention d’analyste. L’item RSS d’OpenAI du 14 juillet sur la gestion des investissements IA à l’ère agentique demande explicitement aux entreprises de mesurer le travail utile par dollar, d’améliorer l’efficacité et de faire monter en puissance les workflows à forte valeur. Cette formulation compte parce qu’elle nomme un déplacement dans ce que le capital est invité à souscrire. Le 9 juillet, OpenAI a aussi décrit ChatGPT Work comme un agent capable de rester avec un projet pendant des heures, d’agir à travers des applications et des fichiers, et de transformer un objectif en travail achevé. Le 18 juin, Google a présenté A2A comme un monde d’agents collaboratifs construit autour de transferts autonomes sécurisés plutôt que d’un simple usage d’outils isolés. Le 30 juin, ADK Go 2.0 de Google a annoncé des workflows en graphe, des contrôles humains intégrés, une orchestration dynamique et de la résilience à l’intérieur même du runtime. Le même jour, le W3C a publié un processus de divulgation et de traitement des vulnérabilités des standards qui formalise la manière dont les problèmes doivent être triés, confirmés et résolus. Ces signaux convergent vers une même leçon de marché : l’intelligence ne suffit pas. Le capital veut désormais une production de workflow mesurable et gouvernable.</p>
+
+                <blockquote>
+                    <p>Le prochain multiple durable de l’IA ne sera pas attribué à la seule éloquence. Il ira aux systèmes capables de convertir la capacité du modèle en travail achevé et comptable à un profil de coût que les institutions peuvent réellement gouverner.</p>
+                </blockquote>
+
+                <h2>Du théâtre des benchmarks à la discipline du capital</h2>
+
+                <p>Les benchmarks comptent encore, mais ils ne règlent plus la question de l’investissement. Un benchmark est un proxy. Un budget est une obligation. Lorsqu’un système entre dans la revue juridique, les achats, les opérations, le support client, la synthèse de recherche, la production documentaire ou la planification interne, l’institution ne paie pas une brillance tokenisée dans l’abstrait. Elle paie des tâches achevées, des temps de cycle compressés, moins de transferts perdus, moins de reprise, et un débit supérieur dans des workflows qui comptent pour le revenu, la conformité ou la qualité de service.</p>
+
+                <p>C’est pourquoi le langage d’OpenAI sur le travail utile par dollar est plus révélateur qu’un nouveau classement de modèles. Il implique que l’unité pertinente n’est pas la génération brute, mais la sortie économiquement lisible. ChatGPT Work prolonge cette même logique. Un système capable de rester avec un projet pendant des heures n’est plus comparé seulement au charme de sa première réponse. Il est évalué sur sa continuité, son endurance et sa capacité à continuer de produire de la valeur après des changements de contexte, d’outils et de révision. Le cadrage A2A de Google ajoute une autre contrainte : dès lors que les tâches passent entre agents, la surface de perte s’élargit. Une permission perdue, un transfert d’état manquant ou une chaîne d’autorité ambiguë peut effacer le gain de productivité apparent. ADK Go 2.0 répond à cela en poussant l’orchestration, les points de contrôle humains, la logique de routage et la résilience dans le runtime. Le projet du W3C sur le traitement des vulnérabilités fournit la leçon institutionnelle plus large : les systèmes dignes de confiance ne sont pas ceux qui promettent la perfection, mais ceux qui peuvent faire remonter, trier et réparer les problèmes sans dissoudre la confiance.</p>
+
+                <p>Autrement dit, le marché passe d’une évaluation centrée sur le modèle à une souscription centrée sur le workflow. C’est un changement plus profond qu’il n’y paraît d’abord. Cela signifie que le centre de gravité se déplace des prompts isolés vers des systèmes de production capables d’accumuler du travail utile à travers le temps.</p>
+
+                <h2>La pile cachée derrière le travail utile</h2>
+
+                <p>Le travail utile par dollar ressemble à une métrique simple, mais il repose sur un substrat complexe. Un système ne peut produire du travail utile économiquement que si plusieurs couches situées sous l’interface fonctionnent bien en même temps :</p>
+
+                <ul>
+                    <li><strong>Garde de l’état :</strong> le workflow doit préserver ce que le système sait, ce qu’il a déjà fait et l’endroit où il peut reprendre sans danger.</li>
+                    <li><strong>Intégrité des transferts :</strong> les tâches qui passent entre agents, outils et humains doivent conserver l’autorité, le contexte et les obligations sans corruption silencieuse.</li>
+                    <li><strong>Conception des points de contrôle humains :</strong> tout ne doit pas être automatisé ; le travail utile dépend souvent d’une revue, d’une approbation ou d’une abstention structurée.</li>
+                    <li><strong>Routage et gestion des exceptions :</strong> les cas de faible valeur doivent circuler à bas coût, tandis que les cas ambigus ou risqués doivent être escaladés sans détruire le débit.</li>
+                    <li><strong>Discipline de réparation :</strong> les systèmes ont besoin d’une manière crédible d’exposer les erreurs, de les investiguer et de revenir à un fonctionnement digne de confiance après un échec.</li>
+                </ul>
+
+                <p>Une fois ces couches rendues visibles, le sens du travail utile par dollar devient plus clair. Ce n’est pas seulement un slogan de productivité. C’est une expression condensée du débit après que friction, gouvernance, interruption et réparation ont tous prélevé leur part. Beaucoup de produits IA paraissent bon marché jusqu’au moment où l’on tient compte de la taxe cachée liée à leur surveillance, à leur correction, à leur explication ou à leur redémarrage après qu’ils ont déraillé un processus. En ce sens, le travail utile par dollar est une meilleure mesure économique parce qu’il oblige les institutions à tarifer la réalité complète de l’exploitation plutôt que la démonstration.</p>
+
+                <h2>Où la surface investissable s’élargit</h2>
+
+                <p>Si cette thèse est correcte, la couche stratégique n’est pas simplement l’endpoint du modèle. La surface investissable qui s’élargit se situe dans l’infrastructure qui aide une institution à convertir la capacité du modèle en production mesurée sans perdre le contrôle. Plusieurs catégories méritent une attention soutenue :</p>
+
+                <ul>
+                    <li><strong>Couches d’instrumentation de workflow et d’économie :</strong> des systèmes capables de mesurer l’achèvement des tâches, les taux de reprise, le coût d’escalade et le temps jusqu’à la sortie achevée plutôt que de simples comptes de prompts.</li>
+                    <li><strong>Runtimes d’orchestration d’agents :</strong> des produits qui encodent routage, points de contrôle, reprises et collaboration comme logique d’exploitation réutilisable au lieu d’un collage applicatif ponctuel.</li>
+                    <li><strong>Infrastructure de garde d’état et de relecture :</strong> des systèmes de mémoire qui préservent suffisamment la continuité d’un projet pour permettre un travail de longue durée, un redémarrage supervisé et un diagnostic après incident.</li>
+                    <li><strong>Rails d’autorité et de transfert :</strong> un middleware qui permet aux permissions, à l’identité et à la responsabilité de survivre au passage entre agents et applications.</li>
+                    <li><strong>Surfaces d’opérations financières de l’IA :</strong> un outillage qui permet aux entreprises de décider quels workflows méritent davantage de dépenses parce qu’ils produisent un travail utile répétable, et non simplement plus de volume d’interaction.</li>
+                </ul>
+
+                <p>Remarquons à quel point cela diffère de l’hypothèse de première vague selon laquelle de meilleurs modèles captureraient l’essentiel de la valeur. Les modèles restent nécessaires, mais la gravité du revenu se déplace vers les systèmes qui réduisent le coût de transformation de l’intelligence du modèle en production institutionnelle achevée. Le gagnant devient de plus en plus la couche qui rend le rendement du workflow lisible, gouvernable et améliorable. Cette couche se tient plus près des comités budgétaires, des dirigeants opérationnels et des achats qu’un wrapper supplémentaire promettant davantage de magie.</p>
+
+                <p>C’est aussi pourquoi la métrique du capital compte. Dès lors que le travail utile par dollar devient le langage de l’achat, le marché devient moins indulgent envers l’IA théâtrale. Les produits qui génèrent de la curiosité mais pas de rendement de workflow paraîtront très vite coûteux. Les produits qui compriment silencieusement le temps de cycle, réduisent la perte au transfert et préservent une sortie récupérable paraîtront bon marché, même si leurs coûts de modèle sous-jacents sont plus élevés. L’investissement sérieux suivra les seconds.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté institutionnelle africaine</h2>
+
+                <p>Les institutions africaines devraient lire cette transition avec une grande attention. Une large partie du marché technologique du continent a été entraînée à consommer le logiciel comme une aspiration plutôt que comme une capacité opérationnelle auditée. Cette habitude devient dangereuse à l’ère agentique. Un ministère, une université, une maison de médias, une institution financière, un réseau logistique ou un laboratoire de recherche n’a pas besoin d’éloquence importée seulement. Il lui faut des systèmes capables de produire un travail utile mesurable dans des conditions locales : environnements multilingues, infrastructures intermittentes, dossiers fragmentés, effectifs variables et forte friction administrative.</p>
+
+                <p>Cheikh Anta Diop insistait sur le fait que la récupération historique n’était pas seulement un exercice de fierté, mais une condition de la puissance organisée. La même logique vaut pour les institutions numériques. Une société qui ne peut pas mesurer ce que ses systèmes techniques l’aident réellement à achever confondra la consommation avec la capacité. Le travail utile par dollar n’est donc pas seulement une métrique d’entreprise. C’est une métrique de souveraineté. Elle aide à distinguer la dépendance décorative du renforcement institutionnel réel. Un peuple capable de construire, d’évaluer et de gouverner des systèmes sur la base du travail utile achevé commence à posséder la grammaire de l’exécution au lieu de simplement louer de l’intelligence ailleurs.</p>
+
+                <p>Voilà pourquoi cette métrique compte. Elle discipline le capital, mais elle discipline aussi l’imagination. Elle demande si l’IA produit du travail achevé, du jugement préservé et de la capacité répétable — ou si elle génère seulement le sentiment de la modernité. Les institutions sérieuses, comme les investisseurs sérieux, exigeront de plus en plus la première option.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS OpenAI News — « How to manage AI investments in the agentic era » (item du 14 juillet 2026 ; description : mesurer le travail utile par dollar, améliorer l’efficacité et faire monter en puissance les workflows à forte valeur)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS OpenAI News — « ChatGPT is now a partner for your most ambitious work » (item du 9 juillet 2026 ; description : un agent capable d’agir à travers applications et fichiers, de rester avec un projet pendant des heures et de transformer un objectif en travail achevé)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — « How A2A is Building a World of Collaborative Agents » (18 juin 2026)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/group-note-draft-w3c-standards-vulnerability-disclosure-handling-process-and-policy/" target="_blank" rel="noopener">W3C — « Standards Vulnerability Disclosure &amp; Handling Process and Policy » (30 juin 2026)</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+                <div class="article__meta-footer">
+                    <span data-i18n="article.published">Research Journal</span>
+                    <span>·</span>
+                    <time>July 15, 2026</time>
+                    <span>·</span>
+                    <span data-i18n="article.author">Diop Research</span>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>

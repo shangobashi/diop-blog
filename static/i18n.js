@@ -81,6 +81,7 @@
         'article.entry060':     { en: 'Diop Daily #060 — July 2026', fr: 'Diop Quotidien n°060 — Juillet 2026' },
         'article.entry061':     { en: 'Diop Daily #061 — July 2026', fr: 'Diop Quotidien n°061 — Juillet 2026' },
         'article.entry062':     { en: 'Diop Daily #062 — July 2026', fr: 'Diop Quotidien n°062 — Juillet 2026' },
+        'article.entry063':     { en: 'Diop Daily #063 — July 2026', fr: 'Diop Quotidien n°063 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -96,6 +97,16 @@
 
 
 
+'diop-daily-063': {
+    title: {
+        en: 'Useful Work Per Dollar Is Becoming the Capital Metric for AI',
+        fr: 'Le travail utile par dollar devient la métrique capitale de l’IA'
+    },
+    excerpt: {
+        en: "The serious AI buyer is no longer underwriting eloquence alone. As OpenAI begins to frame useful work per dollar, Google hardens agent orchestration runtimes, and standards bodies formalize trust-and-repair processes, the winning layer becomes the infrastructure that converts model capability into measured, governed output at workflow scale.",
+        fr: "L’acheteur sérieux d’IA ne souscrit plus seulement l’éloquence. Alors qu’OpenAI commence à parler de travail utile par dollar, que Google durcit les runtimes d’orchestration d’agents et que les organismes de normalisation formalisent les processus de confiance et de réparation, la couche gagnante devient l’infrastructure qui convertit la capacité du modèle en production mesurée et gouvernée à l’échelle du workflow."
+    }
+},
 'diop-daily-062': {
     title: {
         en: 'Recoverability Is Becoming the Premium Layer for AI',
