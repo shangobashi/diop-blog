@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Work Packets Are Becoming the Buying Unit for AI — Diop Research</title>
+    <meta name="description" content="Why AI spending is shifting from generic seats to repeatable work packets: role-bound deliverables, orchestration runtimes, approval fabrics, and evidence-bearing outputs."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry064">Diop Daily #064 — July 2026</div>
+                <div class="article__meta-line">
+                    <time>July 16, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>workflow packaging · agent economics · delivery infrastructure</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Work Packets Are Becoming the Buying Unit for AI</h1>
+
+                <p>The market is learning that model access is not the same thing as a product. A seat license, a chat box, or a generic assistant can demonstrate capability, but institutions do not budget around capability in the abstract. They budget around finished work. That is why the commercial language around AI is beginning to change. The serious buyer is no longer asking only which model is smartest, fastest, or cheapest per token. The buyer is starting to ask which system can repeatedly deliver a bounded packet of useful work: a brief, a review, a memo, a specification, a diagnosis, an approved draft, a reusable artifact. This is the deeper reason work packets are becoming the buying unit for AI.</p>
+
+                <p>The public signals are unusually precise. OpenAI’s July 14 item on managing AI investments in the agentic era tells enterprises to measure useful work per dollar, improve efficiency, and scale high-value workflows. That already moves the conversation away from generic seat adoption and toward workflow yield. The same day, OpenAI published examples for sales teams and data science teams using ChatGPT Work. The examples are striking because they are framed as concrete deliverables rather than open-ended chat: pipeline briefs, meeting-prep packets, forecast reviews, account plans, stalled-deal diagnoses, root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specifications. On June 18, Google described A2A as a world of collaborative agents built around secure autonomous handoffs. On June 30, Google’s ADK Go 2.0 introduced graph-based workflows, human-in-the-loop controls, dynamic orchestration, and built-in resilience. Earlier this year, C2PA’s Content Credentials 2.3 reinforced the need for digital outputs to carry evidence of origin and history as they move across an ecosystem. These signals converge on one lesson: the durable commercial object is not chat itself. It is the governable packet of finished work that can be requested, routed, reviewed, and trusted.</p>
+
+                <blockquote>
+                    <p>The next AI market will not be priced around access alone. It will be priced around whether a system can manufacture repeatable units of finished work that survive handoff, review, and reuse.</p>
+                </blockquote>
+
+                <h2>From model access to packet economics</h2>
+
+                <p>In the first buying cycle, many organizations treated AI like software electricity. Buy access, let employees experiment, and hope productivity appears. That was a reasonable exploratory phase, but it does not scale into disciplined capital allocation. A CFO cannot underwrite “more chat.” A head of operations cannot optimize “more interaction.” A research lead cannot staff around “more cleverness.” They can, however, budget around packets of work that compress a known workflow: the account brief that used to take two hours, the KPI memo that used to require three systems and a manager’s rewrite, the root-cause summary that used to stall because no one wanted to assemble the evidence.</p>
+
+                <p>This is why the OpenAI role pages matter. They show the commercial surface moving from general assistance to workflow packaging. A sales team is not buying language generation as such; it is buying a recurring packet that can enter the cadence of pipeline management. A data-science team is not buying generic analysis vibes; it is buying packaged outputs that can move into operational review. Once the packet becomes the unit, the conversation changes from “How good is the model?” to “How many reliable packets can this system ship, under what supervision cost, with what approval path, and with what evidence attached?”</p>
+
+                <p>Google’s A2A and ADK work fit the same shift. If work is packetized, then it must move. It must pass between agents, tools, and humans without losing state. It must branch when a review is needed. It must pause when authority is insufficient. It must resume without forcing the institution to restart from zero. Packet economics therefore pulls orchestration and handoff design into the center of product value. C2PA adds the external-facing version of the same truth: once a packet leaves the system and enters a wider market, provenance becomes part of its usability.</p>
+
+                <h2>The hidden stack beneath a work packet</h2>
+
+                <p>A work packet sounds simple from the surface. In reality, it rests on a stack of infrastructure that many first-wave AI products still lack:</p>
+
+                <ul>
+                    <li><strong>Role framing:</strong> the system must know which function it is serving and what a good deliverable looks like in that role.</li>
+                    <li><strong>Input discipline:</strong> source material, tools, and permissions must be bounded strongly enough that the packet does not become a hallucinated performance.</li>
+                    <li><strong>Orchestration logic:</strong> the packet needs routing, branching, retries, and escalation rules rather than a single brittle pass through one model.</li>
+                    <li><strong>Approval architecture:</strong> some packets can flow automatically; others require human checkpointing before they become institutionally real.</li>
+                    <li><strong>Evidence and provenance:</strong> the packet must preserve enough trace of origin, modification, and support to remain admissible after handoff.</li>
+                    <li><strong>Replay and repair:</strong> when a packet fails, the system should support diagnosis and controlled regeneration rather than social confusion.</li>
+                </ul>
+
+                <p>This stack matters because it defines whether a packet is truly buyable. A pretty draft that cannot survive review is not a work packet. A summary with no recoverable evidence is not a work packet. A plan that cannot be re-run under changed assumptions is not a work packet. The packet becomes economically real only when it can enter institutional motion without forcing hidden labor to rebuild confidence around it.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this thesis is correct, the strategic layer sits in the tooling that turns model access into packaged, governable output. Several categories deserve close attention:</p>
+
+                <ul>
+                    <li><strong>Workflow packaging systems:</strong> products that encode recurring deliverables as reusable packet templates tied to role, evidence, and review logic.</li>
+                    <li><strong>Agent orchestration runtimes:</strong> infrastructure that moves packets across tools, agents, and humans while preserving state and responsibility.</li>
+                    <li><strong>Packet observability and economics:</strong> systems that measure time-to-finished-output, rework rates, escalation cost, and review burden rather than vanity prompt metrics.</li>
+                    <li><strong>Approval and provenance layers:</strong> tooling that makes a packet signable, reviewable, attributable, and safe to move into publishing, management, or compliance channels.</li>
+                    <li><strong>Role-specific memory surfaces:</strong> memory systems that preserve the recurring context needed to produce the same packet well over time instead of starting fresh each session.</li>
+                </ul>
+
+                <p>What capital underwrites here is not another assistant front end. It underwrites a lower cost of producing institutionally usable outputs. That is a different kind of market. It sits closer to operations budgets, management cadence, and procurement discipline. It also explains why apparently modest infrastructure companies can become strategically important. The firm that helps a customer ship ten reliable work packets per day is often closer to budget than the firm that provides one more way to chat with the same model.</p>
+
+                <h2>Why this matters for African institutional sovereignty</h2>
+
+                <p>African institutions should read this transition with ambition. Much of the continent’s administrative and commercial friction lies not in a lack of ideas, but in the cost of assembling a finished packet of work from fragmented records, multilingual teams, unstable tooling, and person-dependent routines. That is why packetization matters. It offers a way to encode recurring institutional outputs without pretending that the surrounding environment is frictionless. A ministry, media house, bank, university, logistics network, or laboratory does not need imported eloquence alone. It needs reproducible work packets that fit local process reality and preserve enough evidence to remain governable.</p>
+
+                <p>Cheikh Anta Diop insisted that organized memory is a precondition of power. Work packets are one technical expression of organized memory. They transform what an institution repeatedly knows how to do into a reusable, reviewable unit. A society that only rents generic model access will consume intelligence while paying the coordination tax again each day. A society that learns to package its recurrent work — with its own languages, approval norms, evidence burdens, and archives — begins to build a sovereign execution layer. That is not merely a productivity gain. It is an institutional one.</p>
+
+                <p>The first wave of AI sold access. The next serious wave will sell packaged execution. The builders who understand this will sit closer to the real buying unit of the market: the finished packet of work.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “How to manage AI investments in the agentic era” (July 14, 2026 item; description: measure useful work per dollar, improve efficiency, and scale high-value workflows)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “How sales teams use ChatGPT Work” (July 14, 2026 item; description: create pipeline briefs, meeting prep packets, forecast reviews, account plans, and stalled-deal diagnoses from real work inputs)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “How data science teams use ChatGPT Work” (July 14, 2026 item; description: build root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specs from real work inputs)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — “How A2A is Building a World of Collaborative Agents” (June 18, 2026)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026)</a></li>
+                    <li><a href="https://www.c2pa.org/news/" target="_blank" rel="noopener">C2PA Announcements — “The C2PA Launches Content Credentials 2.3 and Celebrates 5 Years of Impact Across the Digital Ecosystem” (February 9, 2026)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Les paquets de travail deviennent l’unité d’achat de l’IA</h1>
+
+                <p>Le marché apprend que l’accès à un modèle n’est pas encore un produit. Une licence par siège, une boîte de dialogue ou un assistant générique peuvent démontrer une capacité, mais les institutions ne budgètent pas une capacité dans l’abstrait. Elles budgètent du travail achevé. Voilà pourquoi le langage commercial autour de l’IA commence à changer. L’acheteur sérieux ne demande plus seulement quel modèle est le plus intelligent, le plus rapide ou le moins cher par token. Il commence à demander quel système peut livrer de manière répétée un paquet borné de travail utile : un brief, une revue, un mémo, une spécification, un diagnostic, un brouillon approuvé, un artefact réutilisable. C’est la raison profonde pour laquelle les paquets de travail deviennent l’unité d’achat de l’IA.</p>
+
+                <p>Les signaux publics sont remarquablement précis. L’item d’OpenAI du 14 juillet sur la gestion des investissements IA à l’ère agentique demande aux entreprises de mesurer le travail utile par dollar, d’améliorer l’efficacité et de faire monter en puissance les workflows à forte valeur. Cela déplace déjà la conversation hors de l’adoption générique par siège vers le rendement de workflow. Le même jour, OpenAI a publié des exemples pour les équipes commerciales et les équipes data science utilisant ChatGPT Work. Les exemples sont frappants parce qu’ils sont formulés comme des livrables concrets et non comme du chat ouvert : briefs de pipeline, dossiers de préparation de réunion, revues de prévision, plans de compte, diagnostics d’affaires bloquées, briefs de cause racine, notes d’impact, mémos KPI, analyses cadrées et spécifications de tableaux de bord. Le 18 juin, Google a décrit A2A comme un monde d’agents collaboratifs construit autour de transferts autonomes sécurisés. Le 30 juin, ADK Go 2.0 de Google a introduit des workflows en graphe, des contrôles humains dans la boucle, une orchestration dynamique et une résilience intégrée. Plus tôt cette année, Content Credentials 2.3 du C2PA a renforcé la nécessité que les sorties numériques portent une preuve de leur origine et de leur histoire lorsqu’elles circulent dans un écosystème. Ces signaux convergent vers une leçon : l’objet commercial durable n’est pas le chat en lui-même. C’est le paquet gouvernable de travail achevé qui peut être demandé, routé, revu et cru.</p>
+
+                <blockquote>
+                    <p>Le prochain marché de l’IA ne sera pas tarifé autour du seul accès. Il sera tarifé autour de la capacité d’un système à fabriquer des unités répétables de travail achevé qui survivent au transfert, à la revue et à la réutilisation.</p>
+                </blockquote>
+
+                <h2>De l’accès au modèle à l’économie du paquet</h2>
+
+                <p>Dans le premier cycle d’achat, beaucoup d’organisations ont traité l’IA comme une électricité logicielle. Acheter l’accès, laisser les employés expérimenter, et espérer que la productivité apparaisse. C’était une phase exploratoire raisonnable, mais elle ne peut pas se prolonger en allocation disciplinée du capital. Un directeur financier ne peut pas souscrire « plus de chat ». Un responsable des opérations ne peut pas optimiser « plus d’interaction ». Un directeur de recherche ne peut pas organiser une équipe autour de « plus d’ingéniosité ». En revanche, ils peuvent budgéter des paquets de travail qui compressent un workflow connu : le brief de compte qui prenait deux heures, le mémo KPI qui exigeait trois systèmes et une réécriture managériale, le résumé de cause racine qui bloquait parce que personne ne voulait assembler la preuve.</p>
+
+                <p>Voilà pourquoi les pages de rôle d’OpenAI comptent. Elles montrent que la surface commerciale passe de l’assistance générale à l’empaquetage du workflow. Une équipe commerciale n’achète pas la génération de langage en tant que telle ; elle achète un paquet récurrent qui peut entrer dans la cadence de la gestion de pipeline. Une équipe data science n’achète pas une ambiance analytique générique ; elle achète des sorties empaquetées pouvant entrer dans la revue opérationnelle. Dès que le paquet devient l’unité, la conversation change : elle passe de « Quelle est la qualité du modèle ? » à « Combien de paquets fiables ce système peut-il livrer, sous quel coût de supervision, avec quel chemin d’approbation, et avec quelle preuve attachée ? »</p>
+
+                <p>Les travaux de Google sur A2A et ADK s’inscrivent dans le même déplacement. Si le travail est paquetisé, il doit alors circuler. Il doit passer entre agents, outils et humains sans perdre son état. Il doit bifurquer lorsqu’une revue est nécessaire. Il doit faire pause quand l’autorité manque. Il doit reprendre sans obliger l’institution à redémarrer depuis zéro. L’économie du paquet place donc l’orchestration et le design des transferts au centre de la valeur produit. Le C2PA ajoute la version externe de cette même vérité : dès qu’un paquet quitte le système pour entrer dans un marché plus large, sa provenance devient une partie de son utilisabilité.</p>
+
+                <h2>La pile cachée sous un paquet de travail</h2>
+
+                <p>Un paquet de travail paraît simple depuis la surface. En réalité, il repose sur une pile d’infrastructure dont beaucoup de produits IA de première vague manquent encore :</p>
+
+                <ul>
+                    <li><strong>Cadrage de rôle :</strong> le système doit savoir quelle fonction il sert et à quoi ressemble un bon livrable dans ce rôle.</li>
+                    <li><strong>Discipline des entrées :</strong> les sources, les outils et les permissions doivent être assez bornés pour que le paquet ne devienne pas une performance hallucinée.</li>
+                    <li><strong>Logique d’orchestration :</strong> le paquet a besoin de routage, de bifurcation, de reprises et de règles d’escalade plutôt que d’un seul passage fragile à travers un modèle.</li>
+                    <li><strong>Architecture d’approbation :</strong> certains paquets peuvent circuler automatiquement ; d’autres exigent un point de contrôle humain avant de devenir institutionnellement réels.</li>
+                    <li><strong>Preuve et provenance :</strong> le paquet doit préserver assez de trace d’origine, de modification et de support pour rester admissible après le transfert.</li>
+                    <li><strong>Relecture et réparation :</strong> lorsque le paquet échoue, le système doit permettre un diagnostic et une régénération contrôlée plutôt qu’une confusion sociale.</li>
+                </ul>
+
+                <p>Cette pile compte parce qu’elle définit si un paquet est réellement achetable. Un beau brouillon qui ne survit pas à la revue n’est pas un paquet de travail. Un résumé sans preuve récupérable n’est pas un paquet de travail. Un plan qu’on ne peut pas rejouer sous d’autres hypothèses n’est pas un paquet de travail. Le paquet ne devient économiquement réel que lorsqu’il peut entrer dans le mouvement institutionnel sans forcer un travail caché à reconstruire la confiance autour de lui.</p>
+
+                <h2>Où la surface investissable s’élargit</h2>
+
+                <p>Si cette thèse est juste, la couche stratégique se trouve dans l’outillage qui transforme l’accès au modèle en sortie empaquetée et gouvernable. Plusieurs catégories méritent une attention soutenue :</p>
+
+                <ul>
+                    <li><strong>Systèmes d’empaquetage de workflow :</strong> des produits qui encodent des livrables récurrents comme des modèles de paquets réutilisables liés au rôle, à la preuve et à la logique de revue.</li>
+                    <li><strong>Runtimes d’orchestration d’agents :</strong> une infrastructure qui déplace les paquets entre outils, agents et humains tout en préservant l’état et la responsabilité.</li>
+                    <li><strong>Observabilité et économie du paquet :</strong> des systèmes qui mesurent le temps jusqu’à la sortie achevée, les taux de reprise, le coût d’escalade et la charge de revue plutôt que des métriques de vanité autour des prompts.</li>
+                    <li><strong>Couches d’approbation et de provenance :</strong> un outillage qui rend un paquet signable, révisable, attribuable et sûr à déplacer vers des canaux éditoriaux, managériaux ou de conformité.</li>
+                    <li><strong>Surfaces de mémoire orientées rôle :</strong> des systèmes de mémoire qui préservent le contexte récurrent nécessaire pour produire le même paquet correctement dans le temps au lieu de repartir de zéro à chaque session.</li>
+                </ul>
+
+                <p>Ce que le capital souscrit ici n’est pas un front-end d’assistant supplémentaire. Il souscrit un coût plus faible de production de sorties institutionnellement utilisables. C’est un autre type de marché. Il se tient plus près des budgets d’opérations, des cadences managériales et de la discipline des achats. Il explique aussi pourquoi des entreprises d’infrastructure apparemment modestes peuvent devenir stratégiquement importantes. La firme qui aide un client à livrer dix paquets de travail fiables par jour se tient souvent plus près du budget que celle qui fournit simplement une façon supplémentaire de chatter avec le même modèle.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté institutionnelle africaine</h2>
+
+                <p>Les institutions africaines devraient lire cette transition avec ambition. Une grande partie de la friction administrative et commerciale du continent ne vient pas d’un manque d’idées, mais du coût d’assembler un paquet de travail achevé à partir de dossiers fragmentés, d’équipes multilingues, d’outils instables et de routines dépendantes des personnes. Voilà pourquoi la paquetisation compte. Elle offre un moyen d’encoder des sorties institutionnelles récurrentes sans prétendre que l’environnement autour est sans friction. Un ministère, une maison de médias, une banque, une université, un réseau logistique ou un laboratoire n’a pas besoin d’éloquence importée seulement. Il a besoin de paquets de travail reproductibles qui s’ajustent à la réalité locale des processus et préservent assez de preuve pour rester gouvernables.</p>
+
+                <p>Cheikh Anta Diop insistait sur le fait que la mémoire organisée est une condition préalable de la puissance. Les paquets de travail constituent une expression technique de cette mémoire organisée. Ils transforment ce qu’une institution sait faire de manière répétée en une unité réutilisable et révisable. Une société qui ne fait que louer un accès générique au modèle consommera de l’intelligence tout en repayant chaque jour la taxe de coordination. Une société qui apprend à empaqueter son travail récurrent — avec ses propres langues, ses propres normes d’approbation, ses propres charges de preuve et ses propres archives — commence à construire une couche souveraine d’exécution. Ce n’est pas seulement un gain de productivité. C’est un gain institutionnel.</p>
+
+                <p>La première vague de l’IA a vendu l’accès. La prochaine vague sérieuse vendra l’exécution empaquetée. Les bâtisseurs qui le comprendront s’installeront plus près de la véritable unité d’achat du marché : le paquet de travail achevé.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux OpenAI News RSS — « How to manage AI investments in the agentic era » (item du 14 juillet 2026 ; description : mesurer le travail utile par dollar, améliorer l’efficacité et faire monter en puissance les workflows à forte valeur)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux OpenAI News RSS — « How sales teams use ChatGPT Work » (item du 14 juillet 2026 ; description : créer des briefs de pipeline, dossiers de préparation de réunion, revues de prévision, plans de compte et diagnostics d’affaires bloquées à partir d’entrées réelles)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux OpenAI News RSS — « How data science teams use ChatGPT Work » (item du 14 juillet 2026 ; description : produire des briefs de cause racine, notes d’impact, mémos KPI, analyses cadrées et spécifications de tableaux de bord à partir d’entrées réelles)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — « How A2A is Building a World of Collaborative Agents » (18 juin 2026)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026)</a></li>
+                    <li><a href="https://www.c2pa.org/news/" target="_blank" rel="noopener">Annonces C2PA — « The C2PA Launches Content Credentials 2.3 and Celebrates 5 Years of Impact Across the Digital Ecosystem » (9 février 2026)</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+                <div class="article__meta-footer">
+                    <span data-i18n="article.published">Research Journal</span>
+                    <span>·</span>
+                    <time>July 16, 2026</time>
+                    <span>·</span>
+                    <span data-i18n="article.author">Diop Research</span>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>

@@ -82,6 +82,7 @@
         'article.entry061':     { en: 'Diop Daily #061 — July 2026', fr: 'Diop Quotidien n°061 — Juillet 2026' },
         'article.entry062':     { en: 'Diop Daily #062 — July 2026', fr: 'Diop Quotidien n°062 — Juillet 2026' },
         'article.entry063':     { en: 'Diop Daily #063 — July 2026', fr: 'Diop Quotidien n°063 — Juillet 2026' },
+        'article.entry064':     { en: 'Diop Daily #064 — July 2026', fr: 'Diop Quotidien n°064 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -97,6 +98,16 @@
 
 
 
+'diop-daily-064': {
+    title: {
+        en: 'Work Packets Are Becoming the Buying Unit for AI',
+        fr: 'Les paquets de travail deviennent l’unité d’achat de l’IA'
+    },
+    excerpt: {
+        en: "The market is moving beyond generic AI seats toward repeatable packets of finished work tied to a role, an approval path, and an evidence trail. As OpenAI publishes sales and data-science work packets, Google hardens orchestration runtimes, and content-credential systems mature, the strategic layer becomes the infrastructure that turns model access into governable deliverables.",
+        fr: "Le marché dépasse les sièges IA génériques pour se tourner vers des paquets répétables de travail achevé liés à un rôle, à un chemin d’approbation et à une trace probatoire. Alors qu’OpenAI publie des paquets de travail pour les équipes commerciales et data science, que Google durcit les runtimes d’orchestration, et que les systèmes de justificatifs de contenu mûrissent, la couche stratégique devient l’infrastructure qui transforme l’accès au modèle en livrables gouvernables."
+    }
+},
 'diop-daily-063': {
     title: {
         en: 'Useful Work Per Dollar Is Becoming the Capital Metric for AI',
