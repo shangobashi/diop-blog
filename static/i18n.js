@@ -83,6 +83,7 @@
         'article.entry062':     { en: 'Diop Daily #062 — July 2026', fr: 'Diop Quotidien n°062 — Juillet 2026' },
         'article.entry063':     { en: 'Diop Daily #063 — July 2026', fr: 'Diop Quotidien n°063 — Juillet 2026' },
         'article.entry064':     { en: 'Diop Daily #064 — July 2026', fr: 'Diop Quotidien n°064 — Juillet 2026' },
+        'article.entry065':     { en: 'Diop Daily #065 — July 2026', fr: 'Diop Quotidien n°065 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -98,6 +99,16 @@
 
 
 
+'diop-daily-065': {
+    title: {
+        en: 'Escalation Paths Are Becoming the Margin Structure of AI',
+        fr: 'Les chemins d’escalade deviennent la structure de marge de l’IA'
+    },
+    excerpt: {
+        en: "As AI leaves the demo and enters sales, analysis, and operations, the decisive cost is no longer average-case generation. It is the price of the exception: who reviews, how work is routed, what evidence survives handoff, and how quickly an institution can return to trusted flow. The strategic layer is becoming the infrastructure that makes escalation cheap without making governance weak.",
+        fr: "À mesure que l’IA quitte la démonstration pour entrer dans la vente, l’analyse et les opérations, le coût décisif n’est plus la génération moyenne. C’est le prix de l’exception : qui révise, comment le travail est routé, quelle preuve survit au transfert, et à quelle vitesse une institution peut revenir à un flux digne de confiance. La couche stratégique devient l’infrastructure qui rend l’escalade peu coûteuse sans affaiblir la gouvernance."
+    }
+},
 'diop-daily-064': {
     title: {
         en: 'Work Packets Are Becoming the Buying Unit for AI',
