@@ -84,6 +84,7 @@
         'article.entry063':     { en: 'Diop Daily #063 — July 2026', fr: 'Diop Quotidien n°063 — Juillet 2026' },
         'article.entry064':     { en: 'Diop Daily #064 — July 2026', fr: 'Diop Quotidien n°064 — Juillet 2026' },
         'article.entry065':     { en: 'Diop Daily #065 — July 2026', fr: 'Diop Quotidien n°065 — Juillet 2026' },
+        'article.entry066':     { en: 'Diop Daily #066 — July 2026', fr: 'Diop Quotidien n°066 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -99,7 +100,7 @@
 
 
 
-'diop-daily-065': {
+'diop-daily-066': {
     title: {
         en: 'Escalation Paths Are Becoming the Margin Structure of AI',
         fr: 'Les chemins d’escalade deviennent la structure de marge de l’IA'
@@ -107,6 +108,16 @@
     excerpt: {
         en: "As AI leaves the demo and enters sales, analysis, and operations, the decisive cost is no longer average-case generation. It is the price of the exception: who reviews, how work is routed, what evidence survives handoff, and how quickly an institution can return to trusted flow. The strategic layer is becoming the infrastructure that makes escalation cheap without making governance weak.",
         fr: "À mesure que l’IA quitte la démonstration pour entrer dans la vente, l’analyse et les opérations, le coût décisif n’est plus la génération moyenne. C’est le prix de l’exception : qui révise, comment le travail est routé, quelle preuve survit au transfert, et à quelle vitesse une institution peut revenir à un flux digne de confiance. La couche stratégique devient l’infrastructure qui rend l’escalade peu coûteuse sans affaiblir la gouvernance."
+    }
+},
+'diop-daily-065': {
+    title: {
+        en: 'Scorecards Are Becoming the Management Layer for AI',
+        fr: 'Les tableaux de bord deviennent la couche de pilotage de l’IA'
+    },
+    excerpt: {
+        en: "OpenAI’s new scorecard language—useful work, cost per successful task, dependability, return on compute—signals a shift from demo culture to deployment accounting. The strategic layer is becoming the instrumentation that tells an institution when an agent deserves more authority, when it needs repair, and which workflows are truly compounding.",
+        fr: "Le nouveau langage d’OpenAI autour des tableaux de bord — travail utile, coût par tâche réussie, fiabilité, retour sur calcul — signale un passage de la culture de la démonstration à la comptabilité du déploiement. La couche stratégique devient l’instrumentation qui dit à une institution quand un agent mérite davantage d’autorité, quand il doit être réparé, et quels workflows composent réellement."
     }
 },
 'diop-daily-064': {
