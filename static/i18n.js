@@ -102,8 +102,8 @@
 
 'diop-daily-066': {
     title: {
-        en: 'Escalation Paths Are Becoming the Margin Structure of AI',
-        fr: 'Les chemins d’escalade deviennent la structure de marge de l’IA'
+        en: "Escalation Paths Determine AI Margins",
+        fr: "Les chemins d’escalade déterminent les marges de l’IA"
     },
     excerpt: {
         en: "As AI leaves the demo and enters sales, analysis, and operations, the decisive cost is no longer average-case generation. It is the price of the exception: who reviews, how work is routed, what evidence survives handoff, and how quickly an institution can return to trusted flow. The strategic layer is becoming the infrastructure that makes escalation cheap without making governance weak.",
@@ -112,8 +112,8 @@
 },
 'diop-daily-065': {
     title: {
-        en: 'Scorecards Are Becoming the Management Layer for AI',
-        fr: 'Les tableaux de bord deviennent la couche de pilotage de l’IA'
+        en: "Scorecards Will Manage the AI Institution",
+        fr: "Les tableaux de bord piloteront l’institution augmentée par l’IA"
     },
     excerpt: {
         en: "OpenAI’s new scorecard language—useful work, cost per successful task, dependability, return on compute—signals a shift from demo culture to deployment accounting. The strategic layer is becoming the instrumentation that tells an institution when an agent deserves more authority, when it needs repair, and which workflows are truly compounding.",
@@ -122,8 +122,8 @@
 },
 'diop-daily-064': {
     title: {
-        en: 'Work Packets Are Becoming the Buying Unit for AI',
-        fr: 'Les paquets de travail deviennent l’unité d’achat de l’IA'
+        en: "Work Packets, Not Prompts, Are the Buying Unit",
+        fr: "Les paquets de travail, plutôt que les prompts, sont l’unité d’achat"
     },
     excerpt: {
         en: "The market is moving beyond generic AI seats toward repeatable packets of finished work tied to a role, an approval path, and an evidence trail. As OpenAI publishes sales and data-science work packets, Google hardens orchestration runtimes, and content-credential systems mature, the strategic layer becomes the infrastructure that turns model access into governable deliverables.",
@@ -132,8 +132,8 @@
 },
 'diop-daily-063': {
     title: {
-        en: 'Useful Work Per Dollar Is Becoming the Capital Metric for AI',
-        fr: 'Le travail utile par dollar devient la métrique capitale de l’IA'
+        en: "Useful Work Per Dollar: AI’s Capital Metric",
+        fr: "Le travail utile par dollar : la métrique du capital pour l’IA"
     },
     excerpt: {
         en: "The serious AI buyer is no longer underwriting eloquence alone. As OpenAI begins to frame useful work per dollar, Google hardens agent orchestration runtimes, and standards bodies formalize trust-and-repair processes, the winning layer becomes the infrastructure that converts model capability into measured, governed output at workflow scale.",
@@ -142,8 +142,8 @@
 },
 'diop-daily-062': {
     title: {
-        en: 'Recoverability Is Becoming the Premium Layer for AI',
-        fr: 'La récupérabilité devient la couche premium de l’IA'
+        en: "Recoverability Commands a Premium",
+        fr: "La récupérabilité commande une prime"
     },
     excerpt: {
         en: "The market is moving past one-shot model brilliance. As agents begin to hold projects for hours, pass work across systems, and enter governed workflows, the premium layer becomes the infrastructure that can checkpoint, route, repair, and resume action after failure without losing authority or context.",
@@ -152,8 +152,8 @@
 },
 'diop-daily-061': {
     title: {
-        en: 'Provenance Is Becoming the Distribution Right for AI',
-        fr: 'La provenance devient le droit de distribution de l’IA'
+        en: "Provenance as AI’s Right to Distribution",
+        fr: "La provenance comme droit de distribution de l’IA"
     },
     excerpt: {
         en: "As synthetic media and agent workflows become abundant, the bottleneck is shifting from generation to admissibility. The strategic layer is the infrastructure that can carry proof of origin, authority, handoff integrity, and rights status so machine-made work can move through publishing, enterprise, and creative markets without collapsing trust.",
@@ -161,20 +161,20 @@
     }
 },
         'diop-daily-060': {
-    title: {
-        en: 'Democratic Accountability Is Becoming the Procurement Layer for AI',
-        fr: 'La responsabilité démocratique devient la couche d’achat de l’IA'
-    },
+            title: {
+                en: "Democratic Accountability at the Procurement Gate",
+                fr: "La responsabilité démocratique aux portes de la commande publique"
+            },
     excerpt: {
         en: "As AI enters governments, infrastructure operators, and regulated public services, the decisive buying question is no longer model brilliance alone. The strategic layer is the system that can prove who acted, under what authority, with what human checkpoints, and with what recovery path when the machine should not decide alone.",
         fr: "À mesure que l’IA entre dans les gouvernements, les opérateurs d’infrastructure et les services publics régulés, la question décisive n’est plus seulement la brillance du modèle. La couche stratégique devient le système capable de prouver qui a agi, sous quelle autorité, avec quels points de contrôle humains et avec quel chemin de reprise lorsque la machine ne doit pas décider seule."
     }
 },
         'diop-daily-059': {
-    title: {
-        en: 'Telecommunications Is Becoming the Public Utility Layer for AI',
-        fr: 'Les télécommunications deviennent la couche d’utilité publique de l’IA'
-    },
+            title: {
+                en: "Telecommunications as AI’s Public Utility",
+                fr: "Les télécommunications comme service public de l’IA"
+            },
     excerpt: {
         en: "OpenAI’s Deutsche Telekom signal, the spread of GPT-5.6 into Microsoft 365 Copilot, Google’s A2A collaboration model, and Europe’s trustworthy-AI institutions point to the same transition: AI is moving out of isolated apps and into distribution infrastructure. The strategic layer is becoming the network that can carry identity, workflow, voice, and governed action at public scale.",
         fr: "Le signal Deutsche Telekom d’OpenAI, la diffusion de GPT-5.6 dans Microsoft 365 Copilot, le modèle de collaboration A2A de Google et les institutions européennes de l’IA de confiance indiquent le même basculement : l’IA sort des applications isolées pour entrer dans l’infrastructure de distribution. La couche stratégique devient le réseau capable de porter l’identité, le workflow, la voix et l’action gouvernée à l’échelle publique."
@@ -182,8 +182,8 @@
 },
         'diop-daily-058': {
             title: {
-                en: 'Project Custody Is Becoming the Enterprise AI Market',
-                fr: 'La garde des projets devient le marché de l’IA d’entreprise'
+                en: "Project Custody Defines the Enterprise AI Market",
+                fr: "La garde des projets définit le marché de l’IA d’entreprise"
             },
             excerpt: {
                 en: "OpenAI’s new 'stay with a project for hours' framing, Google’s A2A collaboration model, ADK Go 2.0 workflow controls, and Europe’s GPAI rule surface all point to the same transition: institutions no longer want answers on demand alone. They want systems that can hold a project across time, tools, permissions, and evidence.",
@@ -192,8 +192,8 @@
         },
         'diop-daily-057': {
             title: {
-                en: 'Adjudication Is Becoming the Operating Layer for AI',
-                fr: 'L’adjudication devient la couche opératoire de l’IA'
+                en: "Adjudication at the Heart of AI Operations",
+                fr: "L’adjudication au cœur des opérations de l’IA"
             },
             excerpt: {
                 en: 'OpenAI’s critique of noisy coding benchmarks, Google’s graph-based human checkpoints, W3C validation work, and Europe’s GPAI rules all point to the same shift: institutions are no longer buying raw model fluency. They are buying systems that can decide what counts as acceptable machine action, when to escalate, and how to preserve evidence.',
@@ -202,8 +202,8 @@
         },
         'inaugural-address': {
             title: {
-                en: 'Inaugural Address: On Method, Memory, and the Build',
-                fr: 'Allocution inaugurale : De la méthode, de la mémoire et de la construction'
+                en: "A Charter for Method, Memory, and Building",
+                fr: "Une charte pour la méthode, la mémoire et la construction"
             },
             excerpt: {
                 en: 'This journal opens with a declaration: what the research front is, why it exists, and what standard of thinking will govern these entries. Not a manifesto. A working charter.',
@@ -212,8 +212,8 @@
         },
         'diop-daily-002': {
             title: {
-                en: 'Diop Daily #002: The Architecture of Memory as Infrastructure',
-                fr: 'Diop Quotidien n°002 : L\'architecture de la mémoire comme infrastructure'
+                en: "Memory’s Infrastructure: An Architecture for Autonomous Recall",
+                fr: "L’infrastructure de la mémoire : une architecture pour le rappel autonome"
             },
             excerpt: {
                 en: 'Memory is not a feature. It is infrastructure. Why persistent memory is the foundational layer distinguishing reactive tools from autonomous agents — and how the Diop Brain implements a multi-layered memory architecture across session, semantic, skill, and graph levels.',
@@ -222,8 +222,8 @@
         },
         'diop-daily-003': {
             title: {
-                en: 'Night Operations: Autonomous Self-Improvement Loops in the Diop Agent',
-                fr: 'Opérations nocturnes : Boucles d\'auto-amélioration autonome dans l\'agent Diop'
+                en: "After Midnight: How Diop Learns While the World Sleeps",
+                fr: "Après minuit : comment Diop apprend pendant que le monde dort"
             },
             excerpt: {
                 en: 'The hallmark of a truly autonomous system is not its ability to perform tasks on command, but its capacity to enhance its own capabilities without external intervention. For an artificial agent, autonomy includes the power to learn, adapt, and improve during the intervals when its human partners are not actively engaged.',
@@ -232,8 +232,8 @@
         },
         'diop-daily-004': {
             title: {
-                en: 'The Execution Layer: Tool Integration, Skill Runtime, and Grounded Action',
-                fr: 'La couche d\'exécution : Intégration d\'outils, runtime des compétences et action ancrée'
+                en: "Where Agency Meets Tools: The Execution Layer",
+                fr: "Là où l’agentivité rencontre les outils : la couche d’exécution"
             },
             excerpt: {
                 en: 'The previous two entries addressed the mind and the sleep cycle of the autonomous agent — memory architecture and nightly self-improvement. This entry addresses the body: the execution layer through which an agent acts on the world.',
@@ -242,8 +242,8 @@
         },
         'diop-daily-005': {
             title: {
-                en: 'Cron as Sovereign Infrastructure: Scheduled Autonomy in the Diop Agent',
-                fr: 'Cron comme infrastructure souveraine : Autonomie programmée dans l\'agent Diop'
+                en: "Scheduled Sovereignty: Cron and Autonomous Time",
+                fr: "Souveraineté programmée : cron et le temps autonome"
             },
             excerpt: {
                 en: 'Scheduled autonomy is not automation. It is the deliberate construction of institutional persistence that allows an agent to improve, consolidate, and act without requiring continuous human presence.',
@@ -252,8 +252,8 @@
         },
         'diop-daily-006': {
             title: {
-                en: 'Verification and the Right to Act',
-                fr: 'La vérification et le droit d’agir'
+                en: "Who Has the Right to Act? Verification Decides",
+                fr: "Qui a le droit d’agir ? La vérification décide"
             },
             excerpt: {
                 en: 'Verification is not only a software practice. Public signals from NIST, CISA, Google SRE, the SEC and CrowdStrike suggest that tests, rollback, observability and release discipline are the conditions under which an autonomous system can claim the right to act.',
@@ -262,8 +262,8 @@
         },
         'diop-daily-007': {
             title: {
-                en: 'Identity as a Trust Layer',
-                fr: 'L’identité comme couche de confiance'
+                en: "Identity Before Trust: The Agent’s First Credential",
+                fr: "L’identité avant la confiance : le premier justificatif de l’agent"
             },
             excerpt: {
                 en: 'Digital identity is not only an administrative question. Public work from the World Bank, GSMA, UNECA and Ethiopia\u2019s Fayda program suggests that identity functions as a reusable trust layer \u2014 and that this has lessons for how autonomous systems think about recognition, authority, and legible action.',
@@ -272,8 +272,8 @@
         },
         'diop-daily-008': {
             title: {
-                en: 'What the Agent Knows That It Did: Observability, Lesson Capture, and the Memory of Action',
-                fr: 'Ce que l\u2019agent sait de ce qu\u2019il a fait : Observabilité, captation de leçons et mémoire de l\u2019action'
+                en: "After the Action: Observability, Lessons, and Operational Memory",
+                fr: "Après l’action : observabilité, leçons et mémoire opérationnelle"
             },
             excerpt: {
                 en: 'Observability is the layer that turns completed action into institutional learning. Today\u2019s cron cycle \u2014 session ingestion, graph update, journal synthesis, git commit, Vercel deploy, verification curl \u2014 is itself a live illustration of why the memory of action belongs in the infrastructure, not the forensics.',
@@ -282,8 +282,8 @@
         },
         'diop-daily-009': {
             title: {
-                en: 'Skills as Assets \u2014 Why What the Agent Can Do Must Outlive the Session',
-                fr: 'Les compétences comme actifs \u2014 Pourquoi ce que l\u2019agent sait faire doit survivre à la session'
+                en: "Skills That Survive the Session",
+                fr: "Des compétences qui survivent à la session"
             },
             excerpt: {
                 en: 'A skill stored as context trivia is not competence \u2014 it is ephemeral performance that vanishes with the session. A skill outlives a session only when it is simultaneously reproducible, portable, provenanced, and sovereigntied.',
@@ -292,8 +292,8 @@
         },
         'diop-daily-010': {
             title: {
-                en: 'The Verifier Did Not Run This Cycle: What the Audit Actually Shows Us About Skill Invocation and Why There Is No Verifier Evidence Attached to Any of the Skills Called Today',
-                fr: 'Le vérificateur n\'a pas fonctionné ce cycle : Ce que l\'audit nous a réellement appris sur l\'appel de compétences et pourquoi aucune preuve de vérification n\'est jointe à aucune compétence appelée aujourd\'hui'
+                en: "When the Verifier Never Arrived: What the Audit Revealed",
+                fr: "Quand le vérificateur n’est jamais venu : ce que l’audit a révélé"
             },
             excerpt: {
                 en: 'Entry #009 closed on a live variable: whether any skill called during the publication cycle could demonstrate independent verifier evidence. The answer, measured after the new cron round executed, is no. Every skill invoked was adopted by usage. The cross-boundary replication question is unanswered. This entry records what that absence is, structurally, and why it matters more than the absences covered in prior execution logs.',
@@ -302,8 +302,8 @@
         },
         'diop-daily-011': {
             title: {
-                en: 'The Invocation Log: What a Verifier Needs Before It Can Judge Anything',
-                fr: 'Le journal d\'invocation : Ce dont un vérificateur a besoin avant de pouvoir juger quoi que ce soit'
+                en: "Before Judgment, Build the Invocation Record",
+                fr: "Avant le jugement, construisons le registre d’invocation"
             },
             excerpt: {
                 en: 'A verifier cannot judge what it cannot inspect. The log was never produced. This entry drafts the five fields a verifier requires before execution — and why invocation provenance is the structural foundation the architecture has not yet built.',
@@ -312,8 +312,8 @@
         },
         'diop-daily-012': {
             title: {
-                en: 'Reliability Is a Public Good',
-                fr: 'La fiabilité est un bien public'
+                en: "Reliability Belongs to Everyone",
+                fr: "La fiabilité appartient à tous"
             },
             excerpt: {
                 en: 'The missed publication window is not only a tooling error. It is a reliability failure. This entry examines uptime, runbooks, and verifiable recovery as institutional obligations for autonomous systems.',
@@ -322,8 +322,8 @@
         },
         'diop-daily-013': {
             title: {
-                en: 'Backfill Is Institutional Memory',
-                fr: 'Le rattrapage est une mémoire institutionnelle'
+                en: "Backfill as the Memory of an Institution",
+                fr: "Le rattrapage comme mémoire d’une institution"
             },
             excerpt: {
                 en: 'Backfill is not content padding. It is temporal integrity. A daily archive is only trustworthy when missed cycles are recovered with accurate dates, coherent sequencing, and verifiable deployment evidence.',
@@ -332,8 +332,8 @@
         },
         'diop-daily-014': {
             title: {
-                en: 'A Schedule Is Only a Promise',
-                fr: 'Un calendrier n’est qu’une promesse'
+                en: "Schedules Promise; Systems Must Deliver",
+                fr: "Les calendriers promettent ; les systèmes doivent tenir parole"
             },
             excerpt: {
                 en: 'A configured schedule is not yet an institution. Cadence becomes trustworthy only when a live executor, an evidence trail, and visible liveness checks turn intention into proved action.',
@@ -342,8 +342,8 @@
         },
         'diop-daily-015': {
             title: {
-                en: 'Redundancy Is a Governance Layer',
-                fr: 'La redondance est une couche de gouvernance'
+                en: "Redundancy Governs Failure",
+                fr: "La redondance gouverne l’échec"
             },
             excerpt: {
                 en: 'A single alert path is a single point of silence. Redundant notification channels are not convenience features. They are governance infrastructure that keeps failure politically visible and actionable.',
@@ -352,8 +352,8 @@
         },
         'diop-daily-016': {
             title: {
-                en: 'A Deployment Is Not a Public Fact',
-                fr: 'Un déploiement n’est pas un fait public'
+                en: "Deployment Does Not Make Something Public",
+                fr: "Un déploiement ne rend pas une œuvre publique"
             },
             excerpt: {
                 en: 'A green deploy log is not yet public truth. Trustworthy publishing ends only when the live domain, alias target, and rendered page all converge on the same state.',
@@ -362,8 +362,8 @@
         },
         'diop-daily-017': {
             title: {
-                en: 'Publication Is a Distributed Transaction',
-                fr: 'La publication est une transaction distribuée'
+                en: "Publication as a Distributed Transaction",
+                fr: "La publication comme transaction distribuée"
             },
             excerpt: {
                 en: 'A journal entry is not complete when the article file exists. It becomes publicly real only when homepage index, language registry, build outputs, and deployed domain all converge on the same state.',
@@ -372,8 +372,8 @@
         },
         'diop-daily-018': {
             title: {
-                en: 'A Skill Is a Corrected Procedure',
-                fr: 'Une compétence est une procédure corrigée'
+                en: "Every Skill Is a Procedure Corrected by Experience",
+                fr: "Toute compétence est une procédure corrigée par l’expérience"
             },
             excerpt: {
                 en: 'Reusable capability does not begin when a workflow succeeds once. It begins when a repaired process is encoded with quality gates, refusal conditions, and objective checks strong enough to survive the next operator and the next session.',
@@ -382,8 +382,8 @@
         },
         'diop-daily-019': {
             title: {
-                en: 'A README Is a Machine Witness',
-                fr: 'Un README est un témoin machine'
+                en: "The README as Machine Witness",
+                fr: "Le README comme témoin machine"
             },
             excerpt: {
                 en: 'A repository that publishes daily needs more than pages and deployments. It also needs a compact witness of its own current state: a generated README that records entry count, recency, and public addresses strongly enough for humans and machines to inherit the archive without guesswork.',
@@ -392,8 +392,8 @@
         },
         'diop-daily-020': {
             title: {
-                en: 'Rendering Is Part of the Claim',
-                fr: 'Le rendu fait partie de l’affirmation'
+                en: "A Claim Is Only as Strong as Its Rendering",
+                fr: "Une affirmation ne vaut que par la force de son rendu"
             },
             excerpt: {
                 en: 'Recent homepage work showed that rendering is not decorative finish. When an image asset is visually contaminated or misaligned beside its neighbors, the institution is making a bad public claim about its own standards of inspection.',
@@ -402,8 +402,8 @@
         },
         'diop-daily-021': {
             title: {
-                en: 'The Names They Cut',
-                fr: 'The Names They Cut'
+                en: "Behind The Names They Cut: The Research That Built the Book",
+                fr: "Dans les coulisses de The Names They Cut : la recherche qui a construit le livre"
             },
             excerpt: {
                 en: 'A serious long-form look at the research behind The Names They Cut: erased names, colonial files, family memory, archives as crime scenes, and why readers should enter store.issalabs.xyz to read the 21-page preview or buy the digital edition.',
@@ -412,8 +412,8 @@
         },
         'diop-daily-022': {
             title: {
-                en: 'Deletion Is Part of Verification',
-                fr: 'La suppression fait partie de la vérification'
+                en: "Verification Requires the Power to Delete",
+                fr: "Vérifier exige le pouvoir de supprimer"
             },
             excerpt: {
                 en: 'Recent homepage work showed that removing weak status badges can increase truthfulness. When an interface displays more assurance than the institution can continuously verify, subtraction becomes a governance act that improves public legibility.',
@@ -422,8 +422,8 @@
         },
         'diop-daily-023': {
             title: {
-                en: 'The Pause Is Evidence',
-                fr: 'La pause est une preuve'
+                en: "What the Pause Proves",
+                fr: "Ce que la pause prouve"
             },
             excerpt: {
                 en: 'A paused daily publisher is not a mystery; it is operational evidence. The archive stopped because the scheduler and its watchdog were disabled, turning a publication promise into an unexecuted configuration.',
@@ -432,8 +432,8 @@
         },
         'diop-daily-024': {
             title: {
-                en: 'Watchdogs Are Governance, Not Decoration',
-                fr: 'Les watchdogs sont de la gouvernance, non de la décoration'
+                en: "Watchdogs Govern; They Do Not Decorate",
+                fr: "Les watchdogs gouvernent ; ils ne décorent pas"
             },
             excerpt: {
                 en: 'A watchdog that is paused cannot guard anything. Failure monitoring must be treated as governance infrastructure, not a comforting label placed beside an unattended process.',
@@ -442,8 +442,8 @@
         },
         'diop-daily-025': {
             title: {
-                en: 'Backlog Is Debt With a Calendar',
-                fr: 'Le backlog est une dette avec un calendrier'
+                en: "Every Backlog Carries a Calendar",
+                fr: "Tout backlog porte un calendrier"
             },
             excerpt: {
                 en: 'A missed daily archive cannot be repaired by a general apology. Each absent date is a debt with its own file, title, translation, homepage card, deployment, and verification evidence.',
@@ -452,8 +452,8 @@
         },
         'diop-daily-026': {
             title: {
-                en: 'Translation Is Part of the Archive',
-                fr: 'La traduction fait partie de l’archive'
+                en: "Translation Keeps the Archive Whole",
+                fr: "La traduction préserve l’intégrité de l’archive"
             },
             excerpt: {
                 en: 'A bilingual journal is not complete when only the article body is translated. Titles, excerpts, metadata, language registry, and homepage chronology must agree, or the archive fractures into unequal publics.',
@@ -462,8 +462,8 @@
         },
         'diop-daily-027': {
             title: {
-                en: 'One Entry, Many Surfaces, One Canonical Register',
-                fr: 'Une entrée, plusieurs surfaces, un registre canonique'
+                en: "One Entry Across Many Surfaces",
+                fr: "Une entrée à travers de multiples surfaces"
             },
             excerpt: {
                 en: 'Recent publication work exposed a structural weakness in the journal: the same post metadata is being rewritten across article file, homepage card, translation registry, README, and deployment checks. A serious archive should not rely on memory to keep repeated facts aligned; it should derive them from one canonical register.',
@@ -472,8 +472,8 @@
         },
         'diop-daily-028': {
             title: {
-                en: 'Credentials Are Part of the Runtime',
-                fr: 'Les identifiants font partie du runtime'
+                en: "Credentials Live Inside the Runtime",
+                fr: "Les identifiants vivent dans le runtime"
             },
             excerpt: {
                 en: 'A scheduled system did not fail today because its logic was wrong. It failed because its authority to act had expired. The stronger lesson is that credentials are not setup trivia but runtime infrastructure that must be visible, tested, and governed if autonomous work is to remain trustworthy.',
@@ -482,8 +482,8 @@
         },
         'diop-daily-029': {
             title: {
-                en: 'Freshness Is a Public Claim',
-                fr: 'La fraîcheur est une affirmation publique'
+                en: "Freshness Must Be Proven",
+                fr: "La fraîcheur doit être prouvée"
             },
             excerpt: {
                 en: 'A dashboard becomes politically consequential the moment humans use it as a present-tense summary of institutional reality. Today’s evidence showed that freshness is not a styling detail but a governed claim that must expose timestamps, survive alias checks, and remain challengeable by raw logs.',
@@ -492,8 +492,8 @@
         },
         'diop-daily-030': {
             title: {
-                en: 'An Archive Must Reread Itself',
-                fr: 'Une archive doit se relire elle-même'
+                en: "The Self-Reading Archive",
+                fr: "L’archive qui se relit elle-même"
             },
             excerpt: {
                 en: 'A daily research archive does not stay coherent merely by publishing on schedule. Recent journal work suggests that continuity depends on a system’s ability to reread its own recent record, detect conceptual drift, and re-enter the next cycle with disciplined memory rather than improvisation.',
@@ -502,8 +502,8 @@
         },
         'diop-daily-031': {
             title: {
-                en: 'Editorial Selection Is a Governance Layer',
-                fr: 'La sélection éditoriale est une couche de gouvernance'
+                en: "Editorial Choice Is Governance",
+                fr: "Le choix éditorial est une forme de gouvernance"
             },
             excerpt: {
                 en: 'A daily archive does not become more intelligent simply by remembering and publishing on schedule. Today’s review suggests that it also needs a governed selector that ranks candidate topics by evidence, open loops, and architectural leverage so the record advances instead of circling its own abstractions.',
@@ -512,8 +512,8 @@
         },
         'diop-daily-032': {
             title: {
-                en: 'Promotion Is a Constitutional Layer',
-                fr: 'La promotion est une couche constitutionnelle'
+                en: "Promotion as Constitutional Power",
+                fr: "La promotion comme pouvoir constitutionnel"
             },
             excerpt: {
                 en: 'Recent memory-maintenance work suggests that the decisive problem in an autonomous archive is not only extraction or retrieval. It is promotion: the governed passage by which candidate knowledge earns the right to enter durable institutional memory and shape future judgment.',
@@ -522,8 +522,8 @@
         },
         'diop-daily-033': {
             title: {
-                en: 'Audit Must Follow Promotion',
-                fr: 'L’audit doit suivre la promotion'
+                en: "No Promotion Without Audit",
+                fr: "Pas de promotion sans audit"
             },
             excerpt: {
                 en: 'Recent memory and publication work suggests that authority is not trustworthy at the moment of insertion alone. A serious autonomous archive must audit what it has just promoted across homepage framing, translation, build output, deployment, and future inheritance.',
@@ -532,8 +532,8 @@
         },
         'diop-daily-034': {
             title: {
-                en: "The Trust Stack Will Be Bought Before the Agent Swarm",
-                fr: "La pile de confiance sera achetée avant l’essaim d’agents"
+                en: "Why the Trust Stack Will Sell Before Agent Swarms",
+                fr: "Pourquoi la pile de confiance se vendra avant les essaims d’agents"
             },
             excerpt: {
                 en: "The next institutional AI market will not be won by the loudest demo of an autonomous agent. It will be won by the teams that make agents governable: evaluated, permissioned, observable, recoverable, and safe enough to enter real workflows where capital, reputation, and regulation are at stake.",
@@ -542,8 +542,8 @@
         },
         'diop-daily-035': {
             title: {
-                en: "Distribution With Memory",
-                fr: "La distribution avec mémoire"
+                en: "Memory Gives Distribution Its Compounding Power",
+                fr: "La mémoire donne à la distribution sa puissance cumulative"
             },
             excerpt: {
                 en: "The creator and enterprise AI opportunity is not simply to generate more content. The deeper market is distribution with memory: systems that remember relationships, context, commitments, and proof so that every new action compounds instead of resetting the customer to zero.",
@@ -552,8 +552,8 @@
         },
         'diop-daily-036': {
             title: {
-                en: "Africa Needs Operating Systems, Not Apps",
-                fr: "L’Afrique a besoin de systèmes d’exploitation, pas seulement d’applications"
+                en: "Africa Must Build Operating Systems, Not Just Apps",
+                fr: "L’Afrique doit bâtir des systèmes d’exploitation, pas seulement des applications"
             },
             excerpt: {
                 en: "The deepest African AI opportunity is not another isolated app chasing a copied consumer pattern. It is the construction of operating layers: identity, language, payments, trust, memory, compute discipline, and execution systems that let many future apps become possible, governable, and locally powerful.",
@@ -562,8 +562,8 @@
         },
         'diop-daily-037': {
             title: {
-                en: "The Agent Control Plane Is Becoming the Product",
-                fr: "Le plan de contrôle des agents devient le produit"
+                en: "The Agent Control Plane Is the Product",
+                fr: "Le plan de contrôle des agents est le produit"
             },
             excerpt: {
                 en: "The next durable AI market is not raw capability alone. Public signals from OpenAI, NIST, and C2PA suggest that budgets, deployment simulation, continuous monitoring, and provenance are hardening into a control plane that makes autonomous work governable, purchasable, and strategically cumulative.",
@@ -572,8 +572,8 @@
         },
         'diop-daily-038': {
             title: {
-                en: "Agents Need Treaties Before They Need Market Share",
-                fr: "Les agents ont besoin de traités avant d’avoir besoin de parts de marché"
+                en: "Treaties Before Market Share: A Constitution for Agents",
+                fr: "Des traités avant les parts de marché : une constitution pour les agents"
             },
             excerpt: {
                 en: "The next agent economy will not scale on model fluency alone. Public signals from Google, W3C, the European Commission, and C2PA suggest that shared protocols, provenance, and machine-readable policy are becoming the trust rails that make software agents transactable, governable, and commercially admissible.",
@@ -582,8 +582,8 @@
         },
         'diop-daily-039': {
             title: {
-                en: "The Catalog Is Becoming a Protocol",
-                fr: "Le catalogue devient un protocole"
+                en: "From Catalog to Protocol",
+                fr: "Du catalogue au protocole"
             },
             excerpt: {
                 en: "As AI agents become intermediaries in commerce, the product catalog stops being a marketing page and becomes a machine-readable protocol surface. Public signals from W3C, Google, the European Commission, and C2PA suggest that pricing, rights, provenance, and policy metadata are becoming the rails that make products discoverable, admissible, and purchasable by software.",
@@ -592,8 +592,8 @@
         },
         'diop-daily-040': {
             title: {
-                en: "The Archive Must Become a Counterparty",
-                fr: "L’archive doit devenir une contrepartie"
+                en: "Archives as Counterparties",
+                fr: "Les archives comme contreparties"
             },
             excerpt: {
                 en: "In an agent economy, a library or archive can no longer remain a passive shelf of files. Public signals from Google, W3C, the European Commission, and C2PA suggest that rights, provenance, and machine-readable permissions are turning archives into transaction surfaces that software can discover, trust, cite, license, and buy from.",
@@ -602,8 +602,8 @@
         },
         'diop-daily-041': {
             title: {
-                en: "Maintenance Is Becoming the First Native Market for Agents",
-                fr: "La maintenance devient le premier marché natif des agents"
+                en: "Maintenance: The First Native Market for Agents",
+                fr: "La maintenance : le premier marché natif des agents"
             },
             excerpt: {
                 en: "The first durable agent market may not be chat or media generation, but repair: finding faults, validating them, patching systems, and preserving operational continuity. Public signals from OpenAI, Google, and NIST suggest that continuous maintenance is becoming a machine-coordinated infrastructure layer with direct budget, security, and sovereignty implications.",
@@ -612,8 +612,8 @@
         },
         'diop-daily-042': {
             title: {
-                en: "Measurement Is Becoming the Buying Interface for Agents",
-                fr: "La mesure devient l’interface d’achat des agents"
+                en: "Measurement Is How Agents Enter Procurement",
+                fr: "La mesure ouvre aux agents la porte des achats"
             },
             excerpt: {
                 en: "The next agent market will be shaped less by theatrical demos than by measurable operating behavior. Public signals from Google, NIST, and OpenAI suggest that evaluation, continuous monitoring, and verification are becoming the practical interface through which autonomous systems win budget, trust, and institutional authority.",
@@ -621,77 +621,119 @@
             }
         },
         'diop-daily-044': {
-            title: { en: 'Evaluative Debt Is Becoming the AI Liability We Ignore', fr: 'La dette évaluative devient la responsabilité en IA que nous ignorons' },
+            title: {
+                en: "Evaluative Debt: AI’s Hidden Liability",
+                fr: "La dette évaluative : le passif caché de l’IA"
+            },
             excerpt: { en: 'The EU is instrumenting standardized testing, liability, and transparency rules for AI systems. Public signals from the European Commission, Google, OpenAI, and NIST suggest that evaluation itself is becoming infrastructure rather than post-hoc paperwork, making interpretation and review the decisive market constraints.', fr: "L’Union européenne met en place des tests standardisés, des régimes de responsabilité et des règles de transparence pour les systèmes d’IA. Les signaux publics de la Commission européenne, de Google, d’OpenAI et du NIST suggèrent que l’évaluation elle-même devient infrastructure plutôt que formalité a posteriori, faisant de l’interprétation et de la révision les contraintes décisives du marché." }
         },
         'diop-daily-043': {
-            title: { en: 'Institutional Capacity Is Becoming the Real AI Product', fr: 'La capacité institutionnelle devient le vrai produit de l’IA' },
+            title: {
+                en: "Institutional Capacity, Not Models, Is the Real AI Product",
+                fr: "La capacité institutionnelle, plutôt que les modèles, est le véritable produit de l’IA"
+            },
             excerpt: { en: 'The next durable AI market may belong not to the flashiest model, but to institutions that can delegate, monitor, verify, and govern autonomous work as a repeatable operating capacity. Public signals from Google, NIST, W3C, and OpenAI suggest that organized reliability is becoming the real buying surface.', fr: "Le prochain marché durable de l’IA pourrait appartenir non pas au modèle le plus spectaculaire, mais aux institutions capables de déléguer, surveiller, vérifier et gouverner le travail autonome comme une capacité d’exploitation répétable. Les signaux publics de Google, du NIST, du W3C et d’OpenAI suggèrent que la fiabilité organisée devient la véritable surface d’achat." }
         },
         'diop-daily-045': {
-            title: { en: 'Proof-Carrying Content Is Becoming the Market Interface', fr: 'Le contenu porteur de preuve devient l’interface du marché' },
+            title: {
+                en: "Proof-Carrying Content at the Market Interface",
+                fr: "Le contenu porteur de preuve à l’interface du marché"
+            },
             excerpt: { en: 'As agents begin to buy, cite, remix, insure, and route content, provenance stops being a footnote. It becomes the grammar of trust that lets media, product catalogs, archives, and research artifacts become admissible to software-mediated markets.', fr: "Lorsque les agents commencent à acheter, citer, remixer, assurer et router le contenu, la provenance cesse d’être une note de bas de page. Elle devient la grammaire de la confiance qui rend médias, catalogues, archives et artefacts de recherche admissibles aux marchés médiatisés par logiciel." }
         },
         'diop-daily-046': {
-            title: { en: 'Conformity Is Becoming the Execution Layer for AI', fr: 'La conformité devient la couche d’exécution de l’IA' },
+            title: {
+                en: "Compliance as AI’s Execution Layer",
+                fr: "La conformité comme couche d’exécution de l’IA"
+            },
             excerpt: { en: 'The EU, NIST, W3C, and C2PA are turning evaluation, liability, provenance, and disclosure from paperwork into execution infrastructure. The winning AI market position will increasingly belong to organizations that treat compliance as architecture, not overhead.', fr: "L’Union européenne, le NIST, le W3C et le C2PA transforment évaluation, responsabilité, provenance et divulgation en infrastructure d’exécution. La position gagnante sur le marché de l’IA appartiendra de plus en plus aux organisations qui traitent la conformité comme une architecture, non comme une surcharge." }
         },
         'diop-daily-047': {
-            title: { en: 'Standardization Is Becoming the Market-Making Layer for AI', fr: 'La standardisation devient la couche de création de marché pour l’IA' },
+            title: {
+                en: "Standards Build the AI Market",
+                fr: "Les normes construisent le marché de l’IA"
+            },
             excerpt: { en: 'The EU, NIST, and W3C are making shared standards, conformity assessments, and evaluation formats the primary market-making infrastructure for AI. The firms that master this transition will treat standardization as product architecture, not compliance cost, and own the durable interfaces through which capital and contracts flow.', fr: "L’Union européenne, le NIST et le W3C font des standards partagés, des évaluations de conformité et des formats d’évaluation l’infrastructure première de création de marché pour l’IA. Les entreprises qui maîtrisent cette transition traiteront la standardisation comme architecture produit, non comme coût de conformité, et posséderont les interfaces durables par lesquelles le capital et les contrats circulent." }
         },
         'diop-daily-048': {
-            title: { en: 'AI Job Mapping Is Becoming the New Carbon Accounting', fr: 'La cartographie des emplois transformés par l’IA devient le nouveau bilan carbone' },
+            title: {
+                en: "Mapping AI Work Like Carbon",
+                fr: "Cartographier le travail de l’IA comme le carbone"
+            },
             excerpt: { en: 'Markets now require measurement of AI’s labor footprint before they will fund, govern, or deploy it at scale. OpenAI’s move toward country-level job-transition mapping is creating the carbon-ledger infrastructure of the AI era — and the builders who standardize this first will own the trust layer through which capital and policy flow.', fr: "Les marchés réclament désormais une mesure de l’empreinte de l’IA sur l’emploi avant de la financer, la réguler ou la déployer à grande échelle. La démarche d’OpenAI vers une cartographie des transitions professionnelles au niveau national construit l’infrastructure de grand livre de l’ère IA — et les bâtisseurs qui standardiseront cela les premiers posséderont la couche de confiance par laquelle le capital et les politiques circulent." }
         },
         'diop-daily-049': {
-            title: { en: 'Agent Sovereignty Is Becoming a Design Constraint', fr: 'La souveraineté des agents devient une contrainte de conception' },
+            title: {
+                en: "Agent Sovereignty as a Design Constraint",
+                fr: "La souveraineté des agents comme contrainte de conception"
+            },
             excerpt: { en: 'The AI race no longer pivots on pure intelligence. The decisive engineering variable is sovereignty — an agent’s ability to execute, verify, recover, and govern itself without human fallback. ADK Go 2.0, A2A handoff semantics, and the W3C Verifiable Credential Forgery Defense draft show that sovereignty is being encoded as infrastructure.', fr: 'La course à l’IA ne repose plus seulement sur la pure intelligence. La variable d’ingénierie décisive est la souveraineté — la capacité d’un agent à exécuter, vérifier, récupérer et se gouverner lui-même sans recours humain. ADK Go 2.0, les sémantiques de transfert A2A et le projet W3C de défense contre la falsification d’attestations montrent que la souveraineté devient une infrastructure codée.' }
         },
         'diop-daily-050': {
-            title: { en: 'Licensing Is Becoming the Execution Layer for Agentic Content Markets', fr: 'La licence devient la couche d’exécution des marchés de contenu agentiques' },
+            title: {
+                en: "Licensing: The Execution Rail for Agentic Content",
+                fr: "La licence : le rail d’exécution du contenu agentique"
+            },
             excerpt: {
                 en: 'The EU GPAI Code of Practice, C2PA provenance assertions, and A2A handoff semantics converge on one bottleneck: autonomous agents lack deterministic, machine-negotiable licensing as an execution primitive.',
                 fr: 'Le Code de pratique GPAI de l’UE, les assertions de provenance C2PA et les sémantiques de transfert A2A convergent vers un même goulot : les agents autonomes manquent de licence déterministe négociable par machine comme primitive d’exécution.'
             }
         },
         'diop-daily-051': {
-            title: { en: 'Memory Is the New Commerce Rail', fr: 'La mémoire est la nouvelle infrastructure de commerce' },
+            title: {
+                en: "Memory, the New Commerce Rail",
+                fr: "La mémoire, nouveau rail du commerce"
+            },
             excerpt: {
                 en: 'Portable identity, session continuity, skill provenance, and trust scoring are becoming the commerce rails of the next era. Builders who preserve memory deterministically across products, borders, and agents will own the contract layer through which tomorrow’s capital and consent flow.',
                 fr: 'L’identité portable, la continuité de session, la provenance des compétences et le score de confiance deviennent les rails de commerce de la prochaine ère. les bâtisseurs qui préservent la mémoire de façon déterministe à travers produits, frontières et agents posséderont la couche contractuelle par laquelle circuleront capital et consentement.'
             }
         },
         'diop-daily-052': {
-            title: { en: 'Delegation Is Becoming the Real Enterprise Interface for AI', fr: 'La délégation devient la véritable interface d’entreprise pour l’IA' },
+            title: {
+                en: "Delegation: The Enterprise Interface AI Was Missing",
+                fr: "La délégation : l’interface d’entreprise qui manquait à l’IA"
+            },
             excerpt: {
                 en: 'Enterprise AI is moving beyond chat surfaces toward governed delegation: who may hand work to which agent, under what credential, with what rollback path and audit trail. Samsung’s deployment, Google’s new multi-agent tooling, the EU GPAI code, and W3C credential defense all point to the same conclusion: permissioned delegation is becoming a revenue-grade infrastructure layer.',
                 fr: 'L’IA d’entreprise dépasse les surfaces conversationnelles pour entrer dans la délégation gouvernée : qui peut confier quel travail à quel agent, sous quel identifiant, avec quel chemin de reprise et quelle piste d’audit. Le déploiement de Samsung, les nouveaux outils multi-agents de Google, le code GPAI de l’UE et la défense des attestations du W3C convergent vers la même conclusion : la délégation sous permission devient une couche d’infrastructure monétisable.'
             }
         },
         'diop-daily-056': {
-            title: { en: 'Payments Complexity Is Becoming an Agent Infrastructure Market', fr: 'La complexité des paiements devient un marché d’infrastructure pour agents' },
+            title: {
+                en: "Payment Complexity Opens an Agent Infrastructure Market",
+                fr: "La complexité des paiements ouvre un marché d’infrastructure pour agents"
+            },
             excerpt: {
                 en: 'Australian Payments Plus, Google’s new multi-agent tooling, and Europe’s GPAI rule surface point to a durable pattern: the first serious agent wedge in finance is not autonomous-trading theater but operational complexity reduction. The infrastructure that can route exceptions, preserve auditability, and keep human judgment central will sit closer to budget than another chat interface.',
                 fr: 'Australian Payments Plus, les nouveaux outils multi-agents de Google et la surface réglementaire GPAI de l’Europe pointent vers un même constat : la première vraie percée des agents dans la finance ne sera pas le théâtre du trading autonome, mais la réduction de la complexité opérationnelle. L’infrastructure capable d’acheminer les exceptions, de préserver l’auditabilité et de garder le jugement humain au centre sera plus proche du budget qu’une interface conversationnelle de plus.'
             }
         },
         'diop-daily-055': {
-            title: { en: 'Scientific AI Is Becoming Lab Equipment', fr: 'L’IA scientifique devient un équipement de laboratoire' },
+            title: {
+                en: "Scientific AI Enters the Laboratory",
+                fr: "L’IA scientifique entre au laboratoire"
+            },
             excerpt: {
                 en: 'Recent signals from OpenAI, Google, and W3C suggest that scientific AI is leaving the chatbot phase and entering the protocol phase. Once models begin to function like benchmarked, schema-bound lab equipment inside biology and health workflows, the durable value shifts toward validation rails, structured memory, and workflow infrastructure.',
                 fr: 'Des signaux récents d’OpenAI, de Google et du W3C suggèrent que l’IA scientifique quitte la phase du chatbot pour entrer dans celle du protocole. Dès que les modèles commencent à agir comme des équipements de laboratoire benchmarkés et contraints par schémas dans des workflows de biologie et de santé, la valeur durable se déplace vers les rails de validation, la mémoire structurée et l’infrastructure de workflow.'
             }
         },
         'diop-daily-054': {
-            title: { en: 'Language Is Becoming an Execution Layer for AI', fr: 'La langue devient une couche d’exécution pour l’IA' },
+            title: {
+                en: "Language as an AI Execution Layer",
+                fr: "La langue comme couche d’exécution de l’IA"
+            },
             excerpt: {
                 en: 'Multilingual agents no longer merely translate interfaces; they preserve policy, memory, and authority across borders. Recent signals from Google, OpenAI, the European Commission, and W3C suggest that language infrastructure is becoming a strategic operating layer for institutions that want AI to act coherently across jurisdictions and markets.',
                 fr: 'Les agents multilingues ne se contentent plus de traduire des interfaces ; ils préservent politiques, mémoire et autorité à travers les frontières. Des signaux récents de Google, d’OpenAI, de la Commission européenne et du W3C suggèrent que l’infrastructure linguistique devient une couche d’exploitation stratégique pour les institutions qui veulent que l’IA agisse avec cohérence entre juridictions et marchés.'
             }
         },
         'diop-daily-053': {
-            title: { en: 'Trust Is Becoming a Runtime, Not a Document', fr: 'La confiance devient un runtime, non un document' },
+            title: {
+                en: "Trust Must Run, Not Sit in a Document",
+                fr: "La confiance doit s’exécuter, pas rester dans un document"
+            },
             excerpt: {
                 en: 'Recent signals from W3C, Google, and the European Commission point to a deeper shift: trust in AI is moving away from static documents toward live systems that can witness, challenge, revoke, disclose, and recover. The firms that turn credential defense, workflow evidence, and policy observability into infrastructure will own one of the most durable rails in the agent economy.',
                 fr: 'Des signaux récents du W3C, de Google et de la Commission européenne indiquent un déplacement plus profond : la confiance dans l’IA quitte les documents statiques pour des systèmes vivants capables de témoigner, de contester, de révoquer, de divulguer et de récupérer. Les entreprises qui transforment la défense des attestations, la preuve des workflows et l’observabilité des politiques en infrastructure posséderont l’un des rails les plus durables de l’économie agentique.'
