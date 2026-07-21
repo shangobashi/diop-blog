@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Before Deployment: The New AI Security Perimeter — Diop Research</title>
+    <meta name="description" content="Why AI trust is moving upstream into the evaluation perimeter: model-evaluation security, long-horizon safeguards, red teaming, runtime gating, and the infrastructure that clears systems for real institutional use."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry067">Diop Daily #067 — July 2026</div>
+                <div class="article__meta-line">
+                    <time>July 22, 2026</time>
+                    <span>·</span>
+                    <span data-rt="11">11 min read</span>
+                    <span>·</span>
+                    <span>evaluation security · release gates · agent safety</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Before Deployment: The New AI Security Perimeter</h1>
+
+                <p>The market spent the first AI cycle talking as if trust began at the user interface. A person would type a request, a model would answer, and the question would be whether the answer felt impressive, helpful, or safe enough to continue using. That was an understandable early lens, but it is no longer sufficient. This week’s public signals suggest that the strategic boundary has moved upstream. The decisive struggle is not only inside the conversation. It is before deployment, inside the evaluation perimeter where models are tested, attacked, instrumented, and either cleared or blocked from institutional use. That perimeter is becoming one of the most important layers in the AI economy.</p>
+
+                <p>The evidence is unusually sharp. On July 21, OpenAI and Hugging Face disclosed a security incident during model evaluation, framing it as a lesson for defenders as advanced cyber capabilities meet shared AI testing environments. One day earlier, OpenAI published a note on safety and alignment in an era of long-horizon models, emphasizing new risks observed in long-running systems and the need for improved safeguards through iterative deployment. On July 15, OpenAI presented GPT-Red, an automated red-teaming system designed to improve robustness, alignment, and prompt-injection resistance. On June 30, Google’s ADK Go 2.0 formalized graph-based workflows, built-in human-in-the-loop controls, dynamic orchestration, and resilience in the runtime itself. Europe’s General-Purpose AI Code of Practice effort, meanwhile, is turning compliance expectations into operational guidance for providers of general-purpose models. These are not scattered press notes. They converge on a harder thesis: the institutions that control the evaluation perimeter will control the right to deploy.</p>
+
+                <blockquote>
+                    <p>The next premium AI layer is not only generation or orchestration. It is the perimeter that decides whether a system has earned permission to touch real workflows, real data, and real authority.</p>
+                </blockquote>
+
+                <h2>Why the evaluation perimeter is moving to the center</h2>
+
+                <p>Evaluation used to sound like an internal laboratory function: benchmark the model, inspect a few failure modes, run some red-team prompts, ship the release, and continue improving later. But long-horizon agents, multi-step workflows, tool use, and cross-system handoffs make that old rhythm too weak. Once a model can stay with a project for hours, call tools, inherit permissions, and operate across a chain of software and people, the consequences of a weak test environment rise sharply. The relevant question is no longer simply whether the model can perform a task. It is whether the institution can expose the model to realistic pressure before the market, the regulator, or an adversary does it first.</p>
+
+                <p>The July 21 OpenAI–Hugging Face incident matters precisely because it names model evaluation itself as a contested surface. That is a structural shift. When the environment used to judge and improve models becomes a target, evaluation ceases to be a backstage technical chore. It becomes critical infrastructure. The same is true of OpenAI’s long-horizon safety note. Long-running systems do not fail only by producing a wrong sentence. They fail by drifting across time, compounding hidden mistakes, misusing tools, overreaching under uncertainty, or preserving harmful momentum across a chain of actions. Those are workflow failures, not just prompt failures. They demand a stronger perimeter before deployment.</p>
+
+                <h2>From benchmark theater to release gates</h2>
+
+                <p>Many AI organizations still speak the language of benchmark theater. A score improves, a demo succeeds, and the release narrative writes itself. But serious deployment is governed by release gates, not by applause. A release gate asks more difficult questions. What did the system do under adversarial pressure? What happened when a tool returned incomplete data? How did the workflow behave when a handoff failed? Which actions demanded human intervention? What evidence survived the replay? Could the institution explain to a regulator, customer, auditor, or internal operator why the model was allowed through?</p>
+
+                <p>GPT-Red is important in this respect because it signals that red teaming is becoming automated, repeatable, and embedded in the improvement cycle rather than reserved for ceremonial testing. Google’s ADK Go 2.0 matters for the same reason from a different angle. By putting graph workflows, dynamic routing, human checkpoints, and resilience into the runtime, Google is effectively acknowledging that reliability can no longer be bolted on after a clever agent is built. The runtime itself must support disciplined gating. Europe’s Code of Practice effort points in the same direction politically: trust is being translated into procedural expectations. The market should read this carefully. When policy, safety, and runtime design begin to rhyme, a new infrastructure layer is solidifying.</p>
+
+                <h2>The hidden stack beneath a trustworthy release gate</h2>
+
+                <p>A real evaluation perimeter is not a spreadsheet of benchmark scores. It is a stack. At minimum, it requires:</p>
+
+                <ul>
+                    <li><strong>Isolated evaluation environments:</strong> testing surfaces where models, tools, and datasets can be stressed without contaminating production systems or leaking sensitive artifacts.</li>
+                    <li><strong>Automated adversarial pressure:</strong> red-teaming workflows that probe prompt injection, tool misuse, role confusion, and hidden state drift repeatedly rather than occasionally.</li>
+                    <li><strong>Workflow replay and evidence capture:</strong> systems that preserve what happened, why it happened, and what changed between runs so failure can be studied instead of narrated loosely.</li>
+                    <li><strong>Human release authority:</strong> explicit checkpoints for who can approve, widen, pause, or deny deployment when a model crosses operational thresholds.</li>
+                    <li><strong>Policy-bound pass/fail logic:</strong> gating criteria tied to risk class, sector requirements, and institutional tolerance rather than generic model optimism.</li>
+                </ul>
+
+                <p>Notice what this means commercially. The value is no longer only in a smarter model or a smoother chat interface. It is in a lower cost of deciding correctly whether the system is fit for exposure. That decision function becomes more valuable as agents gain longer memory, broader permissions, and more direct operational reach.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this thesis is correct, capital should pay closer attention to the companies and internal platforms that harden the evaluation perimeter itself. Several categories now look strategically important:</p>
+
+                <ul>
+                    <li><strong>Evaluation sandboxes and secure test harnesses:</strong> controlled environments for exercising models against realistic tools, data, and adversarial scenarios without contaminating production.</li>
+                    <li><strong>Automated red-teaming and attack simulation:</strong> systems that generate repeatable pressure against models, agents, and workflows to expose the hidden tax of unsafe deployment.</li>
+                    <li><strong>Release-gate analytics:</strong> instrumentation that measures which failure modes recur, which workflows remain too fragile, and what evidence justifies a widened deployment surface.</li>
+                    <li><strong>Long-horizon observability:</strong> tooling that watches drift, goal corruption, retry spirals, and unsafe persistence across hours of action rather than across one prompt.</li>
+                    <li><strong>Compliance-to-runtime middleware:</strong> layers that translate institutional policy or regulatory obligations into actual pass/fail checks before release.</li>
+                </ul>
+
+                <p>This surface is commercially attractive because it sits close to the buyer’s deepest fear. Institutions are not merely afraid that a model will answer badly. They are afraid that a system will be granted authority before it deserves it. Whoever lowers that fear without weakening rigor will sit closer to durable budget than another feature wrapper around the same frontier model.</p>
+
+                <h2>Why this matters for African institutional sovereignty</h2>
+
+                <p>African institutions should study this layer with seriousness. Much of the continent will not win by trying to outspend frontier labs on raw model training alone. But it can build real strategic value by mastering the governance perimeter around deployment: multilingual testing, local-policy release rules, sector-specific approval thresholds, evidence-preserving workflows, and secure evaluation environments that reflect local administrative reality. This matters especially where public records are fragmented, infrastructure quality is uneven, and imported systems often arrive without local guarantees about how they were tested for the context in which they will operate.</p>
+
+                <p>Cheikh Anta Diop’s lesson here is methodological. Sovereignty does not mean reciting pride while renting opaque judgment from elsewhere. It means building the institutions that can examine, verify, challenge, and certify before they obey. In AI, that spirit becomes concrete in the evaluation perimeter. A laboratory, bank, newsroom, ministry, or logistics operator that cannot test a system under its own conditions remains intellectually dependent even if it can buy the latest model. A society that learns to build its own release gates, attack simulations, approval logic, and evidence trails begins to own the grammar of technical permission. That is not symbolic sovereignty. It is operational sovereignty.</p>
+
+                <p>The market is therefore entering a more adult phase. The decisive question is no longer only what the model can do when invited to perform. It is what the institution knows before it lets the model act. That is why the evaluation perimeter deserves to be treated as core infrastructure, and why the right to deploy may become one of the most valuable rights in the AI stack.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “OpenAI and Hugging Face partner to address security incident during model evaluation” (July 21, 2026 item; description: early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “Safety and alignment in an era of long-horizon models” (July 20, 2026 item; description: lessons from deploying long-running AI models, new safety risks, observed failures, and improved safeguards through iterative deployment)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “GPT-Red: Unlocking Self-Improvement for Robustness” (July 15, 2026 item; description: automated red teaming to improve AI safety, alignment, and prompt-injection robustness)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; graph-based workflow engine, built-in human-in-the-loop, dynamic orchestration, and resilience)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">European Commission / AI Office — “Drawing-up a General-Purpose AI Code of Practice” (page describing the first GPAI Code of Practice received by the Commission and detailing AI Act rules for providers of general-purpose AI models)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Avant le déploiement : le nouveau périmètre de sécurité de l’IA</h1>
+
+                <p>Le marché a passé le premier cycle de l’IA à parler comme si la confiance commençait à l’interface utilisateur. Une personne écrivait une requête, un modèle répondait, et la question devenait de savoir si la réponse semblait assez impressionnante, utile ou sûre pour poursuivre l’usage. Ce fut une grille de lecture compréhensible au départ, mais elle ne suffit plus. Les signaux publics de cette semaine suggèrent que la frontière stratégique s’est déplacée vers l’amont. La lutte décisive ne se joue plus seulement dans la conversation. Elle se joue avant le déploiement, à l’intérieur du périmètre d’évaluation où les modèles sont testés, attaqués, instrumentés, puis autorisés ou bloqués avant d’entrer dans l’usage institutionnel réel. Ce périmètre devient l’une des couches les plus importantes de l’économie de l’IA.</p>
+
+                <p>La preuve est remarquablement nette. Le 21 juillet, OpenAI et Hugging Face ont divulgué un incident de sécurité survenu pendant une évaluation de modèle, en le présentant comme une leçon pour les défenseurs à mesure que des capacités cyber avancées rencontrent des environnements partagés de test d’IA. Un jour plus tôt, OpenAI a publié une note sur la sûreté et l’alignement à l’ère des modèles de longue durée, en insistant sur de nouveaux risques observés dans les systèmes qui tournent longtemps et sur la nécessité de garanties renforcées par le déploiement itératif. Le 15 juillet, OpenAI a présenté GPT-Red, un système automatisé de red teaming conçu pour améliorer la robustesse, l’alignement et la résistance aux injections de prompt. Le 30 juin, ADK Go 2.0 de Google a formalisé des workflows en graphe, des contrôles humains dans la boucle, une orchestration dynamique et la résilience dans le runtime lui-même. L’effort européen autour du Code de bonnes pratiques pour les modèles d’IA à usage général traduit, quant à lui, des attentes réglementaires en guidage opératoire pour les fournisseurs de modèles généraux. Ce ne sont pas des notes de presse dispersées. Elles convergent vers une thèse plus dure : les institutions qui contrôlent le périmètre d’évaluation contrôleront le droit de déployer.</p>
+
+                <blockquote>
+                    <p>La prochaine couche premium de l’IA n’est pas seulement la génération ou l’orchestration. C’est le périmètre qui décide si un système a réellement mérité la permission de toucher des workflows réels, des données réelles et une autorité réelle.</p>
+                </blockquote>
+
+                <h2>Pourquoi le périmètre d’évaluation revient au centre</h2>
+
+                <p>L’évaluation sonnait autrefois comme une fonction interne de laboratoire : on benchmarke le modèle, on inspecte quelques modes de défaillance, on lance quelques prompts de red team, on publie la release, puis on améliore plus tard. Mais les agents de longue durée, les workflows multi-étapes, l’usage d’outils et les transferts inter-systèmes rendent ce vieux rythme trop faible. Dès qu’un modèle peut rester avec un projet pendant des heures, appeler des outils, hériter de permissions et agir à travers une chaîne de logiciels et de personnes, les conséquences d’un environnement de test faible montent brutalement. La vraie question n’est plus simplement de savoir si le modèle peut accomplir une tâche. Elle est de savoir si l’institution peut exposer le modèle à une pression réaliste avant que le marché, le régulateur ou un adversaire ne le fasse à sa place.</p>
+
+                <p>L’incident OpenAI–Hugging Face du 21 juillet compte précisément parce qu’il désigne l’évaluation du modèle elle-même comme une surface contestée. C’est un déplacement structurel. Quand l’environnement qui sert à juger et à améliorer les modèles devient une cible, l’évaluation cesse d’être une corvée technique de coulisse. Elle devient une infrastructure critique. La note d’OpenAI sur les modèles de longue durée dit la même chose sous un autre angle. Les systèmes qui tournent longtemps n’échouent pas seulement en produisant une phrase fausse. Ils échouent en dérivant dans le temps, en accumulant des erreurs cachées, en utilisant mal des outils, en outrepassant sous incertitude, ou en conservant une dynamique nocive sur une chaîne d’actions. Ce sont des défaillances de workflow, pas seulement des défaillances de prompt. Elles exigent un périmètre plus solide avant le déploiement.</p>
+
+                <h2>Du théâtre des benchmarks aux portes de release</h2>
+
+                <p>Beaucoup d’organisations IA parlent encore la langue du théâtre des benchmarks. Un score monte, une démo réussit, et le récit de release s’écrit tout seul. Mais le déploiement sérieux est gouverné par des portes de release, non par les applaudissements. Une porte de release pose des questions plus difficiles. Que faisait le système sous pression adversariale ? Que se passait-il lorsqu’un outil renvoyait des données incomplètes ? Comment le workflow se comportait-il lorsqu’un transfert échouait ? Quelles actions exigeaient une intervention humaine ? Quelle preuve survivait à la relecture ? L’institution pouvait-elle expliquer à un régulateur, à un client, à un auditeur ou à un opérateur interne pourquoi le modèle avait été autorisé à passer ?</p>
+
+                <p>GPT-Red est important en ce sens parce qu’il signale que le red teaming devient automatisé, répétable et intégré au cycle d’amélioration, au lieu d’être réservé à des tests cérémoniels. ADK Go 2.0 de Google compte pour la même raison sous un autre angle. En plaçant workflows en graphe, routage dynamique, points de contrôle humains et résilience dans le runtime, Google reconnaît en pratique que la fiabilité ne peut plus être ajoutée après coup sur un agent ingénieux. Le runtime lui-même doit supporter une discipline de filtrage. L’effort européen autour du Code de bonnes pratiques va dans le même sens sur le plan politique : la confiance est en train d’être traduite en attentes procédurales. Le marché devrait le lire avec attention. Quand la politique, la sûreté et le design du runtime commencent à rimer, une nouvelle couche d’infrastructure se solidifie.</p>
+
+                <h2>La pile cachée sous une vraie porte de release</h2>
+
+                <p>Un vrai périmètre d’évaluation n’est pas une feuille de scores de benchmarks. C’est une pile. Au minimum, il exige :</p>
+
+                <ul>
+                    <li><strong>Des environnements d’évaluation isolés :</strong> des surfaces de test où modèles, outils et jeux de données peuvent être mis sous pression sans contaminer la production ni laisser fuir des artefacts sensibles.</li>
+                    <li><strong>Une pression adversariale automatisée :</strong> des workflows de red teaming qui sondent de façon répétée les injections de prompt, la mauvaise utilisation des outils, la confusion de rôle et la dérive d’état caché.</li>
+                    <li><strong>La relecture des workflows et la capture de preuve :</strong> des systèmes qui préservent ce qui s’est produit, pourquoi cela s’est produit, et ce qui a changé entre les exécutions afin que l’échec puisse être étudié au lieu d’être raconté vaguement.</li>
+                    <li><strong>Une autorité humaine de release :</strong> des points de contrôle explicites pour savoir qui peut approuver, élargir, suspendre ou refuser le déploiement lorsqu’un modèle franchit des seuils opérationnels.</li>
+                    <li><strong>Une logique de réussite/échec liée à la politique :</strong> des critères de passage liés à la classe de risque, aux exigences sectorielles et à la tolérance institutionnelle plutôt qu’à un optimisme générique sur le modèle.</li>
+                </ul>
+
+                <p>Notons ce que cela signifie commercialement. La valeur n’est plus seulement dans un modèle plus intelligent ou une interface plus fluide. Elle est dans un coût plus faible pour décider correctement si le système est apte à l’exposition. Cette fonction de décision devient plus précieuse à mesure que les agents gagnent en mémoire longue, en permissions étendues et en portée opérationnelle directe.</p>
+
+                <h2>Où la surface investissable s’élargit</h2>
+
+                <p>Si cette thèse est juste, le capital devrait regarder de plus près les entreprises et les plateformes internes qui durcissent le périmètre d’évaluation lui-même. Plusieurs catégories paraissent désormais stratégiques :</p>
+
+                <ul>
+                    <li><strong>Sandboxes d’évaluation et harnais de test sécurisés :</strong> des environnements contrôlés pour exercer les modèles contre des outils, des données et des scénarios adversariaux réalistes sans contaminer la production.</li>
+                    <li><strong>Red teaming automatisé et simulation d’attaque :</strong> des systèmes qui génèrent une pression répétable contre les modèles, les agents et les workflows afin d’exposer la taxe cachée d’un déploiement non sûr.</li>
+                    <li><strong>Analytique des portes de release :</strong> une instrumentation qui mesure quels modes d’échec reviennent, quels workflows restent trop fragiles, et quelle preuve justifie un élargissement de la surface de déploiement.</li>
+                    <li><strong>Observabilité de longue durée :</strong> un outillage qui surveille la dérive, la corruption d’objectif, les spirales de retry et la persistance dangereuse sur des heures d’action plutôt que sur un seul prompt.</li>
+                    <li><strong>Middleware de la conformité vers le runtime :</strong> des couches qui traduisent une politique institutionnelle ou des obligations réglementaires en véritables contrôles de réussite/échec avant la release.</li>
+                </ul>
+
+                <p>Cette surface est commercialement attractive parce qu’elle se tient au plus près de la peur profonde de l’acheteur. Les institutions n’ont pas seulement peur qu’un modèle réponde mal. Elles ont peur qu’un système reçoive une autorité avant de l’avoir méritée. Celui qui réduit cette peur sans affaiblir la rigueur se tiendra plus près d’un budget durable qu’un simple wrapper de fonctionnalités autour du même modèle frontier.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté institutionnelle africaine</h2>
+
+                <p>Les institutions africaines devraient étudier cette couche avec sérieux. Une grande partie du continent ne gagnera pas en essayant de dépasser les laboratoires frontier sur la seule dépense d’entraînement brut des modèles. Mais il peut construire une vraie valeur stratégique en maîtrisant le périmètre de gouvernance autour du déploiement : tests multilingues, règles locales de release, seuils sectoriels d’approbation, workflows qui préservent la preuve, et environnements d’évaluation sécurisés reflétant la réalité administrative locale. Cela compte d’autant plus là où les archives publiques sont fragmentées, la qualité d’infrastructure inégale, et les systèmes importés arrivent souvent sans garanties locales sur la manière dont ils ont été testés pour le contexte où ils opéreront.</p>
+
+                <p>La leçon de Cheikh Anta Diop ici est méthodologique. La souveraineté ne consiste pas à réciter la fierté tout en louant ailleurs un jugement opaque. Elle consiste à bâtir les institutions capables d’examiner, de vérifier, de contester et de certifier avant d’obéir. En IA, cet esprit devient concret dans le périmètre d’évaluation. Un laboratoire, une banque, une rédaction, un ministère ou un opérateur logistique qui ne peut pas tester un système dans ses propres conditions demeure intellectuellement dépendant même s’il peut acheter le dernier modèle. Une société qui apprend à construire ses propres portes de release, ses propres simulations d’attaque, sa propre logique d’approbation et ses propres traces de preuve commence à posséder la grammaire de la permission technique. Ce n’est pas une souveraineté symbolique. C’est une souveraineté opérationnelle.</p>
+
+                <p>Le marché entre donc dans une phase plus adulte. La question décisive n’est plus seulement ce que le modèle peut faire lorsqu’on l’invite à performer. Elle est ce que l’institution sait avant de laisser le modèle agir. Voilà pourquoi le périmètre d’évaluation mérite d’être traité comme une infrastructure centrale, et pourquoi le droit de déployer pourrait devenir l’un des droits les plus précieux de la pile IA.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « OpenAI and Hugging Face partner to address security incident during model evaluation » (item du 21 juillet 2026 ; description : premiers éléments sur un incident de sécurité pendant une évaluation de modèle d’IA, mettant en lumière des capacités cyber avancées et des leçons pour les défenseurs)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « Safety and alignment in an era of long-horizon models » (item du 20 juillet 2026 ; description : leçons issues du déploiement de modèles de longue durée, nouveaux risques observés, échecs constatés et garanties renforcées par le déploiement itératif)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « GPT-Red: Unlocking Self-Improvement for Robustness » (item du 15 juillet 2026 ; description : red teaming automatisé pour améliorer la sûreté, l’alignement et la robustesse face aux injections de prompt)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; moteur de workflow en graphe, humain dans la boucle, orchestration dynamique et résilience)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">Commission européenne / AI Office — « Drawing-up a General-Purpose AI Code of Practice » (page décrivant le premier Code de bonnes pratiques GPAI reçu par la Commission et détaillant les règles de l’AI Act pour les fournisseurs de modèles d’IA à usage général)</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+                <div class="article__meta-footer">
+                    <span data-i18n="article.published">Research Journal</span>
+                    <span>·</span>
+                    <time>July 22, 2026</time>
+                    <span>·</span>
+                    <span data-i18n="article.author">Diop Research</span>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>

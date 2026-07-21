@@ -85,6 +85,7 @@
         'article.entry064':     { en: 'Diop Daily #064 — July 2026', fr: 'Diop Quotidien n°064 — Juillet 2026' },
         'article.entry065':     { en: 'Diop Daily #065 — July 2026', fr: 'Diop Quotidien n°065 — Juillet 2026' },
         'article.entry066':     { en: 'Diop Daily #066 — July 2026', fr: 'Diop Quotidien n°066 — Juillet 2026' },
+        'article.entry067':     { en: 'Diop Daily #067 — July 2026', fr: 'Diop Quotidien n°067 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -100,6 +101,16 @@
 
 
 
+'diop-daily-067': {
+    title: {
+        en: "Before Deployment: The New AI Security Perimeter",
+        fr: "Avant le déploiement : le nouveau périmètre de sécurité de l’IA"
+    },
+    excerpt: {
+        en: "This week’s OpenAI security-incident disclosure, long-horizon safety note, Google’s resilient agent runtime work, and Europe’s code-of-practice push all point to the same shift: the decisive AI layer is the evaluation perimeter where systems are tested, attacked, gated, and cleared for real institutional use.",
+        fr: "La divulgation cette semaine d’un incident de sécurité par OpenAI, sa note sur la sûreté des modèles de longue durée, le travail de Google sur les runtimes d’agents résilients, et l’effort européen autour du code de bonnes pratiques convergent : la couche décisive de l’IA est désormais le périmètre d’évaluation où les systèmes sont testés, attaqués, filtrés et autorisés pour un usage institutionnel réel."
+    }
+},
 'diop-daily-066': {
     title: {
         en: "Escalation Paths Determine AI Margins",
