@@ -86,6 +86,7 @@
         'article.entry065':     { en: 'Diop Daily #065 — July 2026', fr: 'Diop Quotidien n°065 — Juillet 2026' },
         'article.entry066':     { en: 'Diop Daily #066 — July 2026', fr: 'Diop Quotidien n°066 — Juillet 2026' },
         'article.entry067':     { en: 'Diop Daily #067 — July 2026', fr: 'Diop Quotidien n°067 — Juillet 2026' },
+        'article.entry068':     { en: 'Diop Daily #068 — July 2026', fr: 'Diop Quotidien n°068 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -101,6 +102,16 @@
 
 
 
+'diop-daily-068': {
+    title: {
+        en: "Who Speaks for the Institution When AI Answers First?",
+        fr: "Qui parle pour l’institution quand l’IA répond en premier ?"
+    },
+    excerpt: {
+        en: "The market is moving beyond copilots and even beyond packaged work. As OpenAI introduces Presence, newsrooms turn AI into audience infrastructure, small businesses adopt ChatGPT Work, and Google hardens multi-agent handoffs, the strategic layer becomes the stack that lets a machine speak, remember, and escalate on behalf of an institution without diluting trust.",
+        fr: "Le marché dépasse désormais les copilotes, et même les paquets de travail. À mesure qu’OpenAI lance Presence, que les rédactions transforment l’IA en infrastructure d’audience, que les petites entreprises adoptent ChatGPT Work et que Google durcit les transferts multi-agents, la couche stratégique devient la pile qui permet à une machine de parler, se souvenir et escalader au nom d’une institution sans dissoudre la confiance."
+    }
+},
 'diop-daily-067': {
     title: {
         en: "Before Deployment: The New AI Security Perimeter",
