@@ -87,6 +87,8 @@
         'article.entry066':     { en: 'Diop Daily #066 — July 2026', fr: 'Diop Quotidien n°066 — Juillet 2026' },
         'article.entry067':     { en: 'Diop Daily #067 — July 2026', fr: 'Diop Quotidien n°067 — Juillet 2026' },
         'article.entry068':     { en: 'Diop Daily #068 — July 2026', fr: 'Diop Quotidien n°068 — Juillet 2026' },
+        'article.entry069':     { en: 'Diop Daily #069 — July 2026', fr: 'Diop Quotidien n°069 — Juillet 2026' },
+        'article.entry070':     { en: 'Diop Daily #070 — July 2026', fr: 'Diop Quotidien n°070 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -102,6 +104,26 @@
 
 
 
+'diop-daily-069': {
+    title: {
+        en: "Modular AI Infrastructure: The Build-Artifact Turn",
+        fr: "L'infrastructure modulaire de l'IA : le tournant des artefacts de construction"
+    },
+    excerpt: {
+        en: "As AI systems grow more capable, the cost of a broken prompt grows faster than the cost of a broken function. Google's modular prompt transpilation, OpenAI's community infrastructure projects, and NTT DATA's 9,000-employee Codex rollout all point to the same shift: AI systems are becoming build artifacts, validated through CI/CD pipelines, composed from modular templates, and deployed with reproducibility standards. The strategic layer is becoming the infrastructure that turns prompts into products.",
+        fr: "À mesure que les systèmes d'IA deviennent plus capables, le coût d'un prompt cassé croît plus vite que celui d'une fonction cassée. La transpilation modulaire des prompts de Google, les projets d'infrastructure communautaire d'OpenAI et le déploiement de Codex à 9 000 employés chez NTT DATA indiquent tous le même basculement : les systèmes d'IA deviennent des artefacts de construction, validés par des pipelines CI/CD, composés à partir de modèles modulaires et déployés avec des normes de reproductibilité. La couche stratégique devient l'infrastructure qui transforme les prompts en produits."
+    }
+},
+'diop-daily-070': {
+    title: {
+        en: "Rooted AI: When Infrastructure Becomes Physical, Institutional, and Regulated",
+        fr: "L'IA ancrée : quand l'infrastructure devient physique, institutionnelle et régulée"
+    },
+    excerpt: {
+        en: "AI infrastructure is shifting from abstract cloud abstractions to physical data centers, community-rooted deployments, scientific partnerships, and regulated institutional obligations. The market is no longer asking only whether the model works. It is asking where the model lives, who governs it, what energy powers it, and what institutional commitments back it.",
+        fr: "L'infrastructure d'IA passe d'abstractions cloud abstraites à des centres de données physiques, des déploiements ancrés dans les communautés, des partenariats scientifiques et des obligations institutionnelles régulées. Le marché ne se demande plus seulement si le modèle fonctionne. Il se demande où le modèle réside, qui le gouverne, quelle énergie l'alimente et quels engagements institutionnels le soutiennent."
+    }
+},
 'diop-daily-068': {
     title: {
         en: "Who Speaks for the Institution When AI Answers First?",

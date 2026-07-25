@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Modular AI Infrastructure: The Build-Artifact Turn — Diop Research</title>
+    <meta name="description" content="Why AI systems are becoming build artifacts with CI/CD validation, reproducible deployment, and modular composition — and what this means for the infrastructure layer that turns prompts into products."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry069">Diop Daily #069 — July 2026</div>
+                <div class="article__meta-line">
+                    <time>July 24, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>build infrastructure · prompt engineering · reproducibility</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Modular AI Infrastructure: The Build-Artifact Turn</h1>
+
+                <p>For most of the AI boom, the dominant mental model treated prompts as text — something typed into a chat window, something that lived in a single session, something that was either copied or forgotten. The market built its earliest products around that assumption: prompt libraries, prompt tuners, prompt marketplaces. But the strongest public signals this week describe a different reality taking shape. AI systems are becoming build artifacts. They are being composed from modular templates, validated through CI/CD pipelines, transpiled into runtime configurations, and deployed with the same reproducibility standards that govern software. That shift is quietly creating a new infrastructure layer: the systems that turn prompts into products.</p>
+
+                <p>Google’s recent work makes this transition explicit. A new post on the Google Developers Blog argues that engineering teams should treat prompts as build artifacts by modularizing instructions into reusable templates, running them through transpilers, and validating them in continuous integration. The motivation is practical: monolithic system prompts cause scaling bottlenecks and runtime errors that are nearly impossible to debug once deployed. By decomposing instructions into modular “skill files,” teams can validate, test, and compose agent behavior before it ever reaches production. This is not prompt engineering as craft. It is prompt engineering as software engineering.</p>
+
+                <p>OpenAI’s signals reinforce the same pattern from a different angle. Project Camellia in Effingham County, Georgia, is not just a community data center. It is infrastructure designed to make AI deployment reproducible across a region: responsible energy, community investment, jobs, and access to Codex as a shared resource. NTT DATA’s deployment of ChatGPT Enterprise and Codex across 9,000 employees is not a pilot. It is a production rollout that depends on the same reproducibility: the ability to scale secure AI adoption, cut incident analysis from hours to minutes, and automate work without losing auditability. Even OpenAI’s small-business program, which invites entrepreneurs to build AI skills and automate work, is structured around the assumption that AI workflows must be repeatable, not one-off.</p>
+
+                <blockquote>
+                    <p>The next premium AI layer is not only generation or orchestration. It is the build infrastructure that makes AI systems reproducible, testable, and deployable like software — before they ever meet a user.</p>
+                </blockquote>
+
+                <h2>Why prompts are becoming build artifacts</h2>
+
+                <p>The shift from prompt-as-text to prompt-as-artifact is driven by a simple economic pressure: as AI systems grow more capable, the cost of a broken prompt grows faster than the cost of a broken function. A single misconfigured instruction in a long-running agent can cascade into hours of wasted compute, corrupted state, incorrect tool calls, or unsafe behavior that reaches real users. When the agent operates inside a sales workflow, a research pipeline, or a customer service channel, the prompt is no longer a convenience. It is a contract.</p>
+
+                <p>Google’s modular prompt transpilation approach recognizes this. Instead of embedding a thousand lines of instructions into a single system prompt, teams decompose behavior into modular templates — one for tone, one for tool use, one for escalation logic, one for domain knowledge. These modules are then transpiled into the final runtime configuration, validated against test cases, and versioned in source control. The result is a pipeline that catches errors before deployment rather than discovering them in production logs.</p>
+
+                <p>This matters because the old model — where prompts lived in chat histories and were never formally tested — is collapsing under its own scale. As agents begin to hold projects for hours, call tools, inherit permissions, and operate across chains of software and people, the prompt ceases to be a one-time instruction. It becomes the operating contract for a persistent system. And contracts, in software, are built, not typed.</p>
+
+                <h2>The hidden stack beneath reproducible AI</h2>
+
+                <p>A reproducible AI system does not emerge from better prompting alone. It requires an infrastructure stack that many current AI products still treat as secondary:</p>
+
+                <ul>
+                    <li><strong>Modular composition layers:</strong> systems that let teams decompose behavior into reusable, versioned templates that can be composed, tested, and deployed independently.</li>
+                    <li><strong>Transpilation and validation pipelines:</strong> tooling that converts high-level prompt templates into runtime configurations, validates them against test suites, and rejects configurations that violate safety or policy constraints.</li>
+                    <li><strong>CI/CD for AI workflows:</strong> continuous integration that runs prompt tests, regression checks, and safety validations on every change, and continuous deployment that ships validated configurations to production.</li>
+                    <li><strong>Version control and provenance:</strong> systems that track which version of each prompt module is running in which environment, what changes were made, and what evidence supports the deployment decision.</li>
+                    <li><strong>Reproducible runtime environments:</strong> infrastructure that ensures the same prompt configuration produces the same behavior across development, staging, and production, regardless of model version or platform.</li>
+                </ul>
+
+                <p>Notice what this stack enables. It turns AI development from an artisanal practice — where a skilled prompt engineer crafts a system prompt by hand and hopes it generalizes — into an engineering discipline where behavior is composed, tested, and verified. The value is not in a cleverer prompt. It is in a lower cost of deploying AI safely, consistently, and at scale.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this thesis is correct, capital should look beyond prompt libraries and chat interfaces toward the infrastructure that makes AI systems buildable, testable, and deployable. Several categories now look strategically important:</p>
+
+                <ul>
+                    <li><strong>Prompt composition and template engines:</strong> platforms that let teams decompose agent behavior into modular, versioned templates that can be composed, tested, and deployed independently — the equivalent of component libraries for AI.</li>
+                    <li><strong>AI CI/CD and validation pipelines:</strong> tooling that runs prompt tests, regression checks, safety validations, and policy scans on every change, and ships only validated configurations to production.</li>
+                    <li><strong>Build-time safety and policy enforcement:</strong> systems that enforce safety, compliance, and authorization constraints at build time, not runtime — catching violations before deployment rather than discovering them in production.</li>
+                    <li><strong>Reproducible runtime environments:</strong> infrastructure that ensures the same prompt configuration produces the same behavior across development, staging, and production, regardless of model version or platform.</li>
+                    <li><strong>Provenance and version control for AI artifacts:</strong> systems that track which version of each prompt module, tool configuration, and policy rule is running in which environment, with full audit trails.</li>
+                </ul>
+
+                <p>Notice what capital underwrites here. It is not merely a better way to write prompts. It is a lower cost of deploying AI safely, consistently, and at scale. The organization with strong build infrastructure can deploy AI into more workflows because the downside is contained and the behavior is predictable. The organization without it remains stuck in artisanal mode, where every deployment is a gamble and every failure requires manual debugging.</p>
+
+                <h2>Why this matters for African institutional sovereignty</h2>
+
+                <p>African institutions should study this transition with particular urgency. Much of the continent’s AI adoption follows a pattern of importing finished products — chat interfaces, workflow wrappers, API clients — without the underlying build infrastructure to adapt, test, or verify them locally. That creates a dependency trap: the institution can use AI, but cannot safely modify it, cannot reproduce it under local conditions, and cannot audit it when something goes wrong.</p>
+
+                <p>The build-artifact turn changes this equation. If AI systems are composed from modular templates, validated through pipelines, and deployed with reproducibility, then the sovereignty question becomes concrete: can an institution build its own prompt modules, validate them against local languages and policies, and deploy them with confidence? Can a university, a bank, a health ministry, or a logistics operator compose AI behavior from reusable, tested components rather than accepting opaque wrappers from abroad?</p>
+
+                <p>Cheikh Anta Diop’s method reminds us that sovereignty is not about rejecting tools. It is about building the capacity to examine, verify, and reproduce. In AI, that capacity lives in the build layer. A society that only imports finished AI products imports finished assumptions about language, policy, authority, and risk. A society that learns to build its own AI artifacts — modular prompts, validated pipelines, reproducible deployments — begins to own the grammar of its own automation. That is not symbolic sovereignty. It is operational sovereignty.</p>
+
+                <p>The market is therefore entering a new phase. Earlier, the premium question was whether the model could produce a good answer. Then it became whether the workflow could be measured, governed, and safely released. Now another question is arriving: can the system be built, tested, and deployed like software? The firms that answer that question well will sit on a strategic layer of the next AI economy — not because they have better models, but because they have better build infrastructure.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/building-scalable-ai-agents-with-modular-prompt-transpilation/" target="_blank" rel="noopener">Google Developers Blog — “Building scalable AI agents with modular prompt transpilation” (July 2026; meta description: Scale your AI agents by treating prompts as build artifacts. Learn how to use modular templates, transpilers, and CI/CD validation to prevent runtime errors.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “Building AI infrastructure with the Effingham County community” (July 22, 2026 item; description: OpenAI announces Project Camellia in Effingham County, Georgia, with commitments to responsible energy, community investment, jobs, and access to Codex)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “NTT DATA Group cuts incident analysis to 30 minutes with Codex” (July 22, 2026 item; description: NTT DATA Group uses ChatGPT Enterprise and Codex to help 9,000 employees automate work, cut incident analysis to 30 minutes, and scale secure AI adoption)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “Introducing the ChatGPT for small business program” (July 21, 2026 item; description: helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">European Commission / AI Office — “Drawing-up a General-Purpose AI Code of Practice” (page describing the first GPAI Code of Practice received by the Commission and detailing AI Act rules for providers of general-purpose AI models)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/group-note-draft-w3c-standards-vulnerability-disclosure-handling-process-and-policy/" target="_blank" rel="noopener">W3C — “Group Note Draft: W3C Standards Vulnerability Disclosure &amp; Handling Process and Policy” (2026; describes how to report suspected security vulnerabilities in W3C standards so issues can be triaged, confirmed, and resolved)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L’infrastructure modulaire de l’IA : le tournant des artefacts de construction</h1>
+
+                <p>Pendant la majeure partie de l’essor de l’IA, le modèle mental dominant traitait les prompts comme du texte — quelque chose de tapé dans une fenêtre de chat, quelque chose qui vivait dans une seule session, quelque chose qui était soit copié, soit oublié. Le marché a construit ses premiers produits autour de cette hypothèse : bibliothèques de prompts, réglages de prompts, marchés de prompts. Mais les signaux publics les plus forts de cette semaine décrivent une réalité différente qui prend forme. Les systèmes d’IA deviennent des artefacts de construction. Ils sont composés à partir de modèles modulaires, validés par le biais de pipelines CI/CD, transpilés en configurations d’exécution, et déployés avec les mêmes normes de reproductibilité que le logiciel. Ce basculement crée silencieusement une nouvelle couche d’infrastructure : les systèmes qui transforment les prompts en produits.</p>
+
+                <p>Les travaux récents de Google rendent cette transition explicite. Un nouvel article sur le Google Developers Blog soutient que les équipes de développement devraient traiter les prompts comme des artefacts de construction en modularisant les instructions en modèles réutilisables, en les exécutant à travers des transpileurs, et en les validant dans l’intégration continue. La motivation est pratique : les prompts système monolithiques provoquent des goulots d’étranglement et des erreurs d’exécution presque impossibles à déboguer une fois déployés. En décomposant les comportements en « fichiers de compétences » modulaires, les équipes peuvent valider, tester et composer le comportement d’un agent avant qu’il n’atteigne la production. Ce n’est pas l’ingénierie de prompts en artisannerie. C’est l’ingénierie de prompts en ingénierie logicielle.</p>
+
+                <p>Les signaux d’OpenAI renforcent le même motif sous un autre angle. Project Camellia dans le comté de Effingham, en Géorgie, n’est pas seulement un centre de données communautaire. C’est une infrastructure conçue pour rendre le déploiement de l’IA reproductible à l’échelle d’une région : énergie responsable, investissement communautaire, emplois, et accès à Codex en tant que ressource partagée. Le déploiement de ChatGPT Enterprise et Codex par NTT DATA à travers 9 000 employés n’est pas un pilote. C’est un déploiement en production qui dépend de la même reproductibilité : la capacité à faire monter en puissance l’adoption sécurisée de l’IA, à réduire l’analyse des incidents d’heures à minutes, et à automatiser le travail sans perdre l’auditabilité. Même le programme pour petites entreprises d’OpenAI, qui invite les entrepreneurs à acquérir des compétences IA et à automatiser leur travail, est structuré autour de l’hypothèse que les workflows d’IA doivent être répétables, et non ponctuels.</p>
+
+                <blockquote>
+                    <p>La prochaine couche premium de l’IA n’est pas seulement la génération ou l’orchestration. C’est l’infrastructure de construction qui rend les systèmes d’IA reproductibles, testables et déployables comme du logiciel — avant qu’ils ne rencontrent un utilisateur.</p>
+                </blockquote>
+
+                <h2>Pourquoi les prompts deviennent des artefacts de construction</h2>
+
+                <p>Le passage du prompt-en-texte à l’artefact-de-construction est motivé par une pression économique simple : à mesure que les systèmes d’IA deviennent plus capables, le coût d’un prompt cassé croît plus vite que le coût d’une fonction cassée. Un seul prompt mal configuré dans un agent de longue durée peut se transformer en heures de calcul gaspillé, en état corrompu, en appels d’outils incorrects, ou en comportement insécurisé qui atteint les utilisateurs finaux. Lorsque l’agent opère à l’intérieur d’un workflow commercial, d’un pipeline de recherche ou d’un canal de service client, le prompt n’est plus une commodité. C’est un contrat.</p>
+
+                <p>L’approche de transpilation modulaire des prompts de Google reconnaît cela. Au lieu d’incruster mille lignes d’instructions dans un seul prompt système, les équipes décomposent les comportements en modèles modulaires — un pour le ton, un pour l’usage des outils, un pour la logique d’escalade, un pour les connaissances du domaine. Ces modules sont ensuite transpilés en la configuration d’exécution finale, validés contre des jeux de test, et versionnés dans le contrôle de source. Le résultat est un pipeline qui détecte les erreurs avant le déploiement plutôt que de les découvrir dans les journaux de production.</p>
+
+                <p>Cela compte parce que l’ancien modèle — où les prompts vivaient dans les historiques de chat et n’étaient jamais formellement testés — s’effondre sous son propre échelle. À mesure que les agents commencent à porter des projets pendant des heures, à appeler des outils, à hériter de permissions et à opérer à travers des chaînes de logiciels et de personnes, le prompt cesse d’être une instruction ponctuelle. Il devient le contrat d’exploitation d’un système persistant. Et les contrats, en logiciel, se construisent, ne se tapent pas.</p>
+
+                <h2>La pile cachée sous une IA reproductible</h2>
+
+                <p>Un système d’IA reproductible ne découle pas d’un meilleur prompting seulement. Il exige une pile d’infrastructure que beaucoup de produits d’IA actuels traitent encore comme secondaire :</p>
+
+                <ul>
+                    <li><strong>Couches de composition modulaire :</strong> des systèmes qui permettent aux équipes de décomposer les comportements en modèles réutilisables et versionnés pouvant être composés, testés et déployés indépendamment.</li>
+                    <li><strong>Pipelines de transpilation et de validation :</strong> un outillage qui convertit les modèles de prompts de haut niveau en configurations d’exécution, les valide contre des suites de test, et rejette les configurations qui violent les contraintes de sécurité ou de politique.</li>
+                    <li><strong>CI/CD pour les workflows d’IA :</strong> une intégration continue qui exécute des tests de prompts, des vérifications de régression et des validations de sécurité à chaque modification, et un déploiement continu qui envoie les configurations validées en production.</li>
+                    <li><strong>Contrôle de version et provenance :</strong> des systèmes qui suivent quelle version de chaque module de prompt est exécutée dans quel environnement, quelles modifications ont été apportées, et quelle preuve soutient la décision de déploiement.</li>
+                    <li><strong>Environnements d’exécution reproductibles :</strong> une infrastructure qui garantit que la même configuration de prompt produit le même comportement dans le développement, l’environnement de staging et la production, indépendamment de la version du modèle ou de la plateforme.</li>
+                </ul>
+
+                <p>Remarquons ce que cette pile permet. Elle transforme le développement d’IA d’une pratique artisanal — où un ingénieur de prompts chevronné conçoit un prompt système à la main et espère qu’il généralise — en une discipline ingénierique où les comportements sont composés, testés et vérifiés. La valeur n’est pas dans un prompt plus ingénieux. Elle est dans un coût plus faible pour déployer l’IA de manière sûre, cohérente et à grande échelle.</p>
+
+                <h2>Où la surface investissable s’élargit</h2>
+
+                <p>Si cette thèse est juste, le capital devrait regarder au-delà des bibliothèques de prompts et des interfaces de chat vers l’infrastructure qui rend l’IA construisible, testable et déployable. Plusieurs catégories paraissent désormais particulièrement stratégiques :</p>
+
+                <ul>
+                    <li><strong>Moteurs de composition et de modèles de prompts :</strong> des plateformes qui permettent aux équipes de décomposer les comportements d’un agent en modèles modulaires et versionnés pouvant être composés, testés et déployés indépendamment — l’équivalent de bibliothèques de composants pour l’IA.</li>
+                    <li><strong>Pipelines CI/CD et validation pour l’IA :</strong> un outillage qui exécute des tests de prompts, des vérifications de régression, des validations de sécurité et des analyses de conformité à chaque modification, et n’envoie en production que les configurations validées.</li>
+                    <li><strong>Sécurité et application de la politique à la construction :</strong> des systèmes qui imposent des contraintes de sécurité, de conformité et d’autorisation à la construction, et non à l’exécution — détectant les violations avant le déploiement plutôt que de les découvrir en production.</li>
+                    <li><strong>Environnements d’exécution reproductibles :</strong> une infrastructure qui garantit que la même configuration de prompt produit le même comportement dans le développement, l’environnement de staging et la production, indépendamment de la version du modèle ou de la plateforme.</li>
+                    <li><strong>Contrôle de version et provenance pour les artefacts d’IA :</strong> des systèmes qui suivent quelle version de chaque module de prompt, configuration d’outil et règle de politique est exécutée dans quel environnement, avec des traces complètes d’audit.</li>
+                </ul>
+
+                <p>Remarquons ce que le capital souscrit ici. Il ne s’agit pas seulement d’une meilleure manière d’écrire des prompts. Il s’agit d’un coût plus faible pour déployer l’IA de manière sûre, cohérente et à grande échelle. L’organisation dotée d’une forte infrastructure de construction peut déployer l’IA dans davantage de workflows parce que le risque de baisse est contenu et le comportement est prévisible. L’organisation qui en est dépourvue reste bloquée en mode artisanal, où chaque déploiement est un pari et chaque échec exige un débogage manuel.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté institutionnelle africaine</h2>
+
+                <p>Les institutions africaines devraient étudier cette transition avec une urgence particulière. Une grande partie de l’adoption de l’IA sur le continent suit un modèle d’importation de produits finis — interfaces de chat, wrappers de workflow, clients API — sans l’infrastructure de construction sous-jacente pour adapter, tester ou vérifier localement. Cela crée un piège de dépendance : l’institution peut utiliser l’IA, mais ne peut pas la modifier en toute sécurité, ne peut pas la reproduire dans des conditions locales, et ne peut pas l’auditer quand quelque chose ne va pas.</p>
+
+                <p>Le tournant des artefacts de construction change cette équation. Si les systèmes d’IA sont composés à partir de modèles modulaires, validés par des pipelines, et déployés avec reproductibilité, alors la question de souveraineté devient concrète : une institution peut-elle construire ses propres modules de prompts, les valider contre les langues et les politiques locales, et les déployer avec confiance ? Une université, une banque, un ministère de la santé ou un opérateur logistique peut-il composer des comportements d’IA à partir de composants réutilisables et testés plutôt qu’accepter des wrappers opaques depuis l’étranger ?</p>
+
+                <p>La méthode de Cheikh Anta Diop nous rappelle que la souveraineté ne consiste pas à rejeter des outils. Elle consiste à bâtir la capacité d’examiner, de vérifier et de reproduire. En IA, cette capacité réside dans la couche de construction. Une société qui n’importe que des produits d’IA finis importe des hypothèses finies sur la langue, la politique, l’autorité et le risque. Une société qui apprend à construire ses propres artefacts d’IA — prompts modulaires, pipelines validés, déploiements reproductibles — commence à posséder la grammaire de son propre automatisation. Ce n’est pas une souveraineté symbolique. C’est une souveraineté opérationnelle.</p>
+
+                <p>Le marché entre donc dans une nouvelle phase. Hier, la question premium portait sur la capacité du modèle à produire une bonne réponse. Ensuite, elle est devenue celle de savoir si le workflow pouvait être mesuré, gouverné et publié en sécurité. Désormais, une autre question arrive : le système peut-il être construit, testé et déployé comme du logiciel ? Les entreprises qui répondront bien à cette question occuperont une couche stratégique de la prochaine économie de l’IA — non pas parce qu’elles ont des modèles meilleurs, mais parce qu’elles ont une meilleure infrastructure de construction.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/building-scalable-ai-agents-with-modular-prompt-transpilation/" target="_blank" rel="noopener">Google Developers Blog — « Building scalable AI agents with modular prompt transpilation » (juillet 2026 ; méta-description : faire monter en échelle ses agents d’IA en traitant les prompts comme des artefacts de construction. Apprendre à utiliser des modèles modulaires, des transpileurs et une validation CI/CD pour prévenir les erreurs d’exécution.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « Building AI infrastructure with the Effingham County community » (item du 22 juillet 2026 ; description : OpenAI annonce Project Camellia dans le comté de Effingham, en Géorgie, avec des engagements en faveur d’une énergie responsable, de l’investissement communautaire, d’emplois et d’un accès à Codex)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « NTT DATA Group cuts incident analysis to 30 minutes with Codex » (item du 22 juillet 2026 ; description : NTT DATA utilise ChatGPT Enterprise et Codex pour aider 9 000 employés à automatiser le travail, réduire l’analyse des incidents à 30 minutes et faire monter en puissance l’adoption sécurisée de l’IA)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « Introducing the ChatGPT for small business program » (item du 21 juillet 2026 ; description : aider les entrepreneurs à acquérir des compétences IA, automatiser le travail et se développer avec ChatGPT Work)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">Commission européenne / AI Office — « Drawing-up a General-Purpose AI Code of Practice » (page décrivant le premier Code de bonnes pratiques GPAI reçu par la Commission et détaillant les règles de l’AI Act pour les fournisseurs de modèles d’IA à usage général)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/group-note-draft-w3c-standards-vulnerability-disclosure-handling-process-and-policy/" target="_blank" rel="noopener">W3C — « Group Note Draft: W3C Standards Vulnerability Disclosure &amp; Handling Process and Policy » (2026 ; décrit la marche à suivre pour signaler les vulnérabilités de sécurité suspectées dans les normes et spécifications du W3C afin que les problèmes puissent être triés, confirmés et résolus)</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+                <div class="article__meta-footer">
+                    <span data-i18n="article.published">Research Journal</span>
+                    <span>·</span>
+                    <time>July 24, 2026</time>
+                    <span>·</span>
+                    <span data-i18n="article.author">Diop Research</span>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>
