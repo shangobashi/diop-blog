@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Conversation Minutes: The Unit of Account for Agentic Work — Diop Research</title>
+    <meta name="description" content="Cars24's 1M+ monthly conversation minutes, NTT DATA's incident analysis cuts, and OpenAI Presence enterprise agents converge on a new boundary: conversation minutes as the billable unit that turns AI agents into measurable, governable operating capacity."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry075">Diop Daily #075 — July 2026</div>
+                <div class="article__meta-line">
+                    <time>July 26, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>conversation minutes · agent economics · telecom infrastructure</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Conversation Minutes: The Unit of Account for Agentic Work</h1>
+
+                <p>For most of the AI boom, enterprise value was measured in tasks completed, queries answered, or workflows automated. These are useful abstractions, but they remained largely qualitative — a demo succeeded, a pipeline finished, a ticket was resolved. The strongest public signals this week describe a different reality taking shape. AI agents are no longer evaluated on whether they can complete a task. They are being measured on how many conversation minutes they process, how many incidents they resolve per minute, and how much billable work they generate per hour of operation. The new boundary is not whether the agent works. The new boundary is whether the system can carry proof of conversation volume, cost per minute, and revenue per conversation — at every step, for every workflow, under every budget review.</p>
+
+                <p>Cars24's deployment of OpenAI-powered voice and chat agents provides the clearest signal yet. The company handles over 1 million monthly conversation minutes, recovers 12% of lost leads, and brings agentic workflows to teams across the organization. This is not a chatbot answering general questions. This is a system that must bill for, track, and optimize every minute of conversation — because conversation minutes are the unit of account through which the enterprise evaluates return on investment. When a voice agent processes a customer inquiry, the system must record: how long the conversation lasted, what outcome it produced, what cost was incurred, and what revenue was recovered. The moment a model touches a production workflow, the entire architecture changes. The system is no longer evaluated only on whether it answers correctly. It is evaluated on whether it can prove, at every interaction, that its conversation minutes were productive, that its cost per minute was justified, and that its revenue per conversation met the threshold for expansion.</p>
+
+                <blockquote>
+                    <p>The next premium AI layer is not only generation or orchestration. It is the conversation-minute ledger that turns agent deployments into measurable, billable operating capacity — with volume, cost-per-minute, and revenue-per-conversation baked into every workflow.</p>
+                </blockquote>
+
+                <h2>Why conversation minutes are becoming the billable unit</h2>
+
+                <p>The shift toward conversation minutes as the unit of account is driven by three converging pressures. First, the scale of agent deployment has outpaced the ability to evaluate it qualitatively. Cars24's 1 million monthly conversation minutes is not a vanity metric. It is a production figure — a volume of billable work that must be tracked, costed, and reconciled against revenue recovered. At this scale, a human review of every conversation is impossible. The system must be able to answer: how many conversation minutes were processed, what was the cost per minute, what revenue was recovered per conversation, and when should the agent's authority be expanded or contracted based on measured performance. Without these measurements, scale becomes a liability rather than an asset.</p>
+
+                <p>Second, the economics of agent deployment are becoming explicit. NTT DATA Group's use of ChatGPT Enterprise and Codex to help 9,000 employees automate work — cutting incident analysis to 30 minutes — is not just a productivity story. It is a cost-per-minute story. Every minute of agent operation has a price: compute, API calls, human oversight, and recovery. The system must be able to prove that the cost per minute of agent operation is lower than the cost per minute of human operation, and that the revenue or savings per conversation minute exceeds the operational cost. This is the calculation that determines whether an agent deserves more budget, more authority, or more deployment surface.</p>
+
+                <p>Third, the market is demanding granular accountability. OpenAI's scorecard framework, introduced by CFO Sarah Friar, measures useful work, cost per successful task, dependability, and return on compute. But the scorecard's metrics only become actionable when they are tied to a concrete unit of production. Conversation minutes provide that unit. A scorecard that says "the agent processed 1.2 million conversation minutes at a cost of $0.03 per minute, recovering $4.20 per conversation and $2.10 per minute" is a financial instrument, not a dashboard. It is the kind of evidence that satisfies a budget review, a procurement gate, or a board presentation.</p>
+
+                <h2>The conversation-minute ledger beneath billable agents</h2>
+
+                <p>A billable agent deployment does not emerge from better prompting or more training data alone. It requires a ledger infrastructure that many current AI products still treat as secondary:</p>
+
+                <ul>
+                    <li><strong>Volume tracking:</strong> systems that record every conversation minute processed by every agent, across every channel — voice, chat, email, API — so the system can prove, at any moment, the total volume of billable work generated and whether it meets deployment thresholds.</li>
+                    <li><strong>Cost-per-minute accounting:</strong> systems that record the compute, API, and operational cost of every minute of agent operation, every handoff, every retry — creating a transparent ledger that satisfies budget reviews and enables cost-per-minute optimization at scale.</li>
+                    <li><strong>Revenue-per-conversation attribution:</strong> systems that bind every conversation to a measurable outcome — leads recovered, incidents resolved, queries handled, sales closed — so the system can prove that each conversation minute generated positive revenue or savings.</li>
+                    <li><strong>Authority escalation and withdrawal:</strong> systems that adjust agent authority based on conversation-minute performance — granting more autonomy to agents that deliver high revenue-per-minute, restricting authority for underperforming ones, and ensuring that every authority decision is backed by ledger evidence.</li>
+                    <li><strong>Recovery and rollback:</strong> systems that can isolate, correct, or fully erase a conversation's data and any derived outputs — not as a batch job, but as an architectural guarantee that can be invoked at any point in the conversation lifecycle, preserving the integrity of the ledger.</li>
+                </ul>
+
+                <p>Notice what this ledger demands. It demands that agent infrastructure be designed from the ground up to carry accounting — not just of what the agent did, but of what it was worth per minute, what it cost per minute, and what revenue it generated per conversation. This is not a feature you add to an AI product. It is the architecture the product must be built on.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this thesis is correct, capital should look beyond response engines and chat interfaces toward the infrastructure that makes conversation minutes billable and accountable. Several categories now look strategically important:</p>
+
+                <ul>
+                    <li><strong>Conversation-minute billing and metering platforms:</strong> systems that record, aggregate, and bill for every minute of agent operation across voice, chat, and API channels — providing the granular metering that enterprises need to reconcile AI costs against revenue recovered.</li>
+                    <li><strong>Cost-per-minute optimization engines:</strong> infrastructure that continuously evaluates the cost per minute of agent operation, identifies inefficiencies, and routes work to the most cost-effective agent configuration — turning conversation minutes into an optimizable variable rather than a fixed expense.</li>
+                    <li><strong>Revenue-per-conversation attribution systems:</strong> platforms that bind every conversation minute to a measurable business outcome — lead recovery, incident resolution, sales conversion, customer retention — so the system can prove that each minute of agent operation generated positive return.</li>
+                    <li><strong>Multi-agent conversation orchestration:</strong> systems that route conversations across multiple specialized agents, track handoffs, and preserve context — so that a single customer conversation can be processed by multiple agents while maintaining a unified conversation-minute ledger.</li>
+                    <li><strong>Conversation-minute audit and compliance infrastructure:</strong> systems that preserve every conversation minute as an auditable record, satisfying regulatory requirements for financial services, healthcare, and public sector deployments where conversation volume must be provable and accountable.</li>
+                </ul>
+
+                <p>Notice the shift in what is being underwritten. The buyer is not simply purchasing a smarter agent or a faster response. The buyer is purchasing billability: the right to deploy agents at enterprise scale with proof that every conversation minute was productive, cost-justified, and revenue-generating. That is a much more defensible category than another wrapper around frontier APIs, because it sits closer to budget authority, operational risk, and institutional trust at the scale of enterprise investment.</p>
+
+                <h2>Why this matters for African telecom sovereignty</h2>
+
+                <p>African operators should study this transition with particular urgency. Across the continent, mobile money and telecom operators already bill for discrete units of communication — SMS, voice minutes, data bytes. The conversation-minute model is not foreign. It is native. When an AI agent processes a customer inquiry for a Lagos fintech, the operator already has the infrastructure to bill for that minute. The question is whether the operator can extend its billing infrastructure to AI agents — tracking conversation volume, cost per minute, and revenue per conversation — and offer this as a service to enterprises across the continent.</p>
+
+                <p>The conversation-minute ledger changes this equation. If AI agents must carry proof of conversation volume, cost per minute, and revenue per conversation at every step, then the sovereignty question becomes concrete: can an African telecom operator build its own conversation-minute ledger for AI agents? Can it define what constitutes a billable conversation minute in local market contexts? Can it track cost per minute against local infrastructure costs rather than imported benchmarks? Can it attribute revenue per conversation against local business outcomes rather than Northern metrics?</p>
+
+                <p>Cheikh Anta Diop's method reminds us that sovereignty is not about rejecting tools. It is about building the capacity to examine, verify, and reproduce. In AI agent infrastructure, that capacity lives in the billing layer. A society that only imports pre-billed agent platforms imports pre-approved assumptions about what constitutes a billable conversation, what cost per minute is acceptable, what revenue per conversation is sufficient, and what authority the agent should have. A society that learns to build its own conversation-minute ledger — volume tracking, cost-per-minute accounting, revenue attribution, authority governance, recovery mechanisms — begins to own the grammar of its own AI economics. That is not symbolic sovereignty. It is operational sovereignty.</p>
+
+                <p>The market is therefore entering a new phase. Earlier, the premium question was whether the agent could complete a task. Then it became whether the workflow could be measured, governed, and safely released. Now another question is arriving: can the system prove that every conversation minute was productive, cost-justified, and revenue-generating? The firms that answer that question well will sit on a strategic layer of the next AI economy — not because they have better agents, but because they have better conversation-minute infrastructure.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "How Cars24 scales conversations and builds faster with OpenAI" (July 16, 2026 item; description: Cars24 uses OpenAI-powered voice and chat agents to handle 1M+ monthly conversation minutes, recover 12% of lost leads, and bring agentic workflows to teams across the company)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "NTT DATA Group cuts incident analysis to 30 minutes with Codex" (July 22, 2026 item; description: NTT DATA Group uses ChatGPT Enterprise and Codex to help 9,000 employees automate work, cut incident analysis to 30 minutes, and scale secure AI adoption)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "Introducing OpenAI Presence" (July 22, 2026 item; description: OpenAI Presence, a proven enterprise AI agent platform that helps organizations deploy trusted voice and chat agents for customer and internal workflows)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "A scorecard for the AI age" (July 17, 2026 item; description: Sarah Friar, CFO of OpenAI, introduces a practical AI scorecard to measure ROI through useful work, cost per successful task, dependability, and return on compute)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "Introducing the ChatGPT for small business program" (July 21, 2026 item; description: OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">European Commission / AI Office — "Drawing-up a General-Purpose AI Code of Practice" (page last updated June 25, 2026; describes the first GPAI Code of Practice received by the Commission, detailing AI Act rules for providers of general-purpose AI models and models with systemic risks, including risk assessment and mitigation obligations)</a></li>
+                    <li><a href="https://www.w3.org/TR/vc-data-model/" target="_blank" rel="noopener">W3C — "Verifiable Credentials Data Model v2.0" (specification describing the extensible data model for verifiable credentials, how they can be secured from tampering, and a three-party ecosystem for issuance, verification, and revocation — the foundation for carrying proof of authority and measurement in digital systems)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Les minutes de conversation : l'unité de compte du travail agentique</h1>
+
+                <p>Pendant la majeure partie de l'essor de l'IA, la valeur en entreprise était mesurée en tâches achevées, questions répondues ou workflows automatisés. Ce sont des abstractions utiles, mais elles sont restées largement qualitatives — une démonstration réussissait, un pipeline s'achevait, un ticket était résolu. Les signaux publics les plus forts de cette semaine décrivent une réalité différente qui prend forme. Les agents d'IA ne sont plus évalués sur leur capacité à achever une tâche. Ils sont mesurés sur le nombre de minutes de conversation qu'ils traitent, le nombre d'incidents qu'ils résolvent par minute, et le montant de travail facturable qu'ils génèrent par heure d'opération. La nouvelle frontière n'est plus de savoir si l'agent fonctionne. La nouvelle frontière est de savoir si le système peut porter la preuve du volume de conversation, du coût par minute et du revenu par conversation — à chaque étape, pour chaque workflow, sous chaque révision budgétaire.</p>
+
+                <p>Le déploiement par Cars24 d'agents vocaux et de chat basés sur OpenAI fournit le signal le plus clair à ce jour. L'entreprise gère plus de 1 million de minutes de conversation mensuelles, récupère 12 % des leads perdus, et apporte des workflows d'agents aux équipes de l'organisation. Ce n'est pas un chatbot qui répond à des questions générales. C'est un système qui doit facturer, suivre et optimiser chaque minute de conversation — car les minutes de conversation sont l'unité de compte à travers laquelle l'entreprise évalue le retour sur investissement. Lorsqu'un agent vocal traite une demande client, le système doit enregistrer : combien de temps a duré la conversation, quel résultat elle a produit, quel coût elle a engagé, et quel revenu elle a récupéré. Le moment où un modèle touche un workflow de production, toute l'architecture change. Le système n'est plus évalué uniquement sur la justesse de sa réponse. Il est évalué sur sa capacité à prouver, à chaque interaction, que ses minutes de conversation étaient productives, que son coût par minute était justifié, et que son revenu par conversation a atteint le seuil d'expansion.</p>
+
+                <blockquote>
+                    <p>La prochaine couche premium de l'IA n'est pas seulement la génération ou l'orchestration. C'est le registre des minutes de conversation qui transforme les déploiements d'agents en capacité opérationnelle mesurable et facturable — avec le volume, le coût par minute et le revenu par conversation intégrés dans chaque workflow.</p>
+                </blockquote>
+
+                <h2>Pourquoi les minutes de conversation deviennent l'unité facturable</h2>
+
+                <p>Le basculement vers les minutes de conversation comme unité de compte est motivé par trois pressions convergentes. Premièrement, l'échelle des déploiements d'agents a dépassé la capacité d'évaluation qualitative. Les 1 million de minutes de conversation mensuelles de Cars24 ne sont pas une métrique de vanité. C'est un chiffre de production — un volume de travail facturable qui doit être suivi, coûté et réconcilié avec le revenu récupéré. À cette échelle, une revue humaine de chaque conversation est impossible. Le système doit pouvoir répondre : combien de minutes de conversation ont été traitées, quel était le coût par minute, quel revenu a été récupéré par conversation, et quand l'autorité de l'agent devrait-elle être augmentée ou réduite en fonction des performances mesurées. Sans ces mesures, l'échelle devient un risque plutôt qu'un atout.</p>
+
+                <p>Deuxièmement, l'économie des déploiements d'agents devient explicite. L'utilisation par NTT DATA Group de ChatGPT Enterprise et Codex pour aider 9 000 employés à automatiser le travail — en réduisant l'analyse des incidents à 30 minutes — n'est pas seulement une histoire de productivité. C'est une histoire de coût par minute. Chaque minute d'opération d'agent a un prix : calcul, appels API, surveillance humaine et récupération. Le système doit pouvoir prouver que le coût par minute d'opération de l'agent est inférieur au coût par minute d'opération humaine, et que le revenu ou les économies par minute de conversation dépassent le coût opérationnel. C'est le calcul qui détermine si un agent mérite plus de budget, plus d'autorité, ou plus de surface de déploiement.</p>
+
+                <p>Troisièmement, le marché exige une responsabilité granulaire. Le cadre de tableau de bord d'OpenAI, introduit par la CFO Sarah Friar, mesure le travail utile, le coût par tâche réussie, la fiabilité et le retour sur calcul. Mais les métriques du tableau de bord ne deviennent exploitables que lorsqu'elles sont liées à une unité concrète de production. Les minutes de conversation fournissent cette unité. Un tableau de bord qui dit « l'agent a traité 1,2 million de minutes de conversation à un coût de 0,03 $ par minute, récupérant 4,20 $ par conversation et 2,10 $ par minute » est un instrument financier, pas un tableau de bord. C'est le type de preuve qui satisfait une révision budgétaire, une porte d'approvisionnement ou une présentation au conseil d'administration.</p>
+
+                <h2>Le registre des minutes de conversation sous les agents facturables</h2>
+
+                <p>Un déploiement d'agent facturable ne découle pas d'un meilleur prompting ou de plus de données d'entraînement. Il exige une infrastructure de registre que beaucoup de produits d'IA actuels traitent encore comme secondaire :</p>
+
+                <ul>
+                    <li><strong>Suivi du volume :</strong> des systèmes qui enregistrent chaque minute de conversation traitée par chaque agent, à travers chaque canal — voix, chat, email, API — afin que le système puisse prouver, à tout moment, le volume total de travail facturable généré et s'il respecte les seuils de déploiement.</li>
+                    <li><strong>Comptabilité du coût par minute :</strong> des systèmes qui enregistrent le calcul, les API et le coût opérationnel de chaque minute d'opération d'agent, chaque transfert, chaque réessai — créant un registre transparent qui satisfait les révisions budgétaires et permet l'optimisation du coût par minute à grande échelle.</li>
+                    <li><strong>Attribution du revenu par conversation :</strong> des systèmes qui lient chaque minute de conversation à un résultat mesurable — leads récupérés, incidents résolus, requêtes traitées, ventes conclues — afin que le système puisse prouver que chaque minute d'opération d'agent a généré un retour positif.</li>
+                    <li><strong>Escalade et retrait d'autorité :</strong> des systèmes qui ajustent l'autorité des agents en fonction des performances en minutes de conversation — accédant plus d'autonomie aux agents qui livrent un revenu élevé par minute, restreignant l'autorité des agents sous-performants, et garantissant que chaque décision d'autorité est fondée sur des preuves de registre.</li>
+                    <li><strong>Récupération et restauration :</strong> des systèmes qui peuvent isoler, corriger ou entièrement effacer les données d'une conversation et toutes les sorties dérivées — pas comme un travail par lots, mais comme une garantie architecturale pouvant être invoquée à tout moment dans le cycle de vie de la conversation, préservant l'intégrité du registre.</li>
+                </ul>
+
+                <p>Remarquons ce que ce registre exige. Il exige que l'infrastructure d'agents soit conçue de fond en comble pour porter la comptabilité — non seulement de ce que l'agent a fait, mais de ce qu'il a valu par minute, de ce que ça a coûté par minute, et du revenu qu'il a généré par conversation. Ce n'est pas une fonctionnalité que vous ajoutez à un produit d'IA. C'est l'architecture dont le produit doit être construit.</p>
+
+                <h2>Où la surface investissable s'élargit</h2>
+
+                <p>Si cette thèse est juste, le capital devrait regarder au-delà des moteurs de réponse et des interfaces de chat vers l'infrastructure qui rend les minutes de conversation facturables et responsables. Plusieurs catégories paraissent désormais particulièrement stratégiques :</p>
+
+                <ul>
+                    <li><strong>Plateformes de facturation et de comptage des minutes de conversation :</strong> des systèmes qui enregistrent, agrègent et facturent chaque minute d'opération d'agent à travers les canaux vocal, chat et API — fournissant la comptabilité granulaire dont les entreprises ont besoin pour réconcilier les coûts d'IA avec le revenu récupéré.</li>
+                    <li><strong>Moteurs d'optimisation du coût par minute :</strong> une infrastructure qui évalue en continu le coût par minute d'opération d'agent, identifie les inefficacités et achemine le travail vers la configuration d'agent la plus rentable — transformant les minutes de conversation en une variable optimisable plutôt qu'une dépense fixe.</li>
+                    <li><strong>Systèmes d'attribution du revenu par conversation :</strong> des plateformes qui lient chaque minute de conversation à un résultat commercial mesurable — récupération de leads, résolution d'incidents, conversion de ventes, fidélisation client — afin que le système pouvez prouver que chaque minute d'opération d'agent a généré un retour positif.</li>
+                    <li><strong>Orchestration de conversations multi-agents :</strong> des systèmes qui acheminent les conversations à travers plusieurs agents spécialisés, suivent les transferts et préservent le contexte — afin qu'une seule conversation client puisse être traitée par plusieurs agents tout en maintenant un registre unifié des minutes de conversation.</li>
+                    <li><strong>Infrastructure d'audit et de conformité des minutes de conversation :</strong> des systèmes qui préservent chaque minute de conversation comme un enregistrement auditable, satisfaisant les exigences réglementaires pour les services financiers, les soins de santé et les déploiements du secteur public où le volume de conversation doit être prouvable et responsable.</li>
+                </ul>
+
+                <p>Remarquons le déplacement de ce qui est souscrit. L'acheteur n'achète pas simplement un agent plus intelligent ou une réponse plus rapide. L'acheteur achète la facturabilité : le droit de déployer des agents à grande échelle dans les entreprises avec la preuve que chaque minute de conversation était productive, justifiée par les coûts et générant des revenus. C'est une catégorie bien plus défendable qu'un wrapper supplémentaire autour d'API frontier, parce qu'elle se tient plus près de l'autorité budgétaire, du risque opérationnel et de la confiance institutionnelle à l'échelle de l'investissement d'entreprise.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté télécoms africaine</h2>
+
+                <p>Les opérateurs africains devraient étudier cette transition avec une urgence particulière. À travers le continent, les opérateurs de monnaie mobile et de télécommunications facturent déjà des unités discrètes de communication — SMS, minutes vocales, octets de données. Le modèle des minutes de conversation n'est pas étranger. Il est natif. Lorsqu'un agent d'IA traite une demande client pour une fintech de Lagos, l'opérateur a déjà l'infrastructure pour facturer cette minute. La question est de savoir si l'opérateur peut étendre son infrastructure de facturation aux agents d'IA — suivre le volume de conversation, le coût par minute et le revenu par conversation — et offrir cela comme un service aux entreprises à travers le continent.</p>
+
+                <p>Le registre des minutes de conversation change cette équation. Si les agents d'IA doivent porter la preuve du volume de conversation, du coût par minute et du revenu par conversation à chaque étape, alors la question de souveraineté devient concrète : un opérateur télécom africain peut-il construire son propre registre des minutes de conversation pour les agents d'IA ? Peut-il définir ce qui constitue une minute de conversation facturable dans les contextes de marché locaux ? Peut-il suivre le coût par minute contre les coûts d'infrastructure locaux plutôt que des référentiels importés ? Peut-il attribuer le revenu par conversation selon les résultats commerciaux locaux plutôt que des métriques du Nord ?</p>
+
+                <p>La méthode de Cheikh Anta Diop nous rappelle que la souveraineté ne consiste pas à rejeter des outils. Elle consiste à bâtir la capacité d'examiner, de vérifier et de reproduire. Dans l'infrastructure des agents d'IA, cette capacité réside dans la couche de facturation. Une société qui n'importe que des plateformes d'agents pré-facturées importe des hypothèses pré-approuvées sur ce qui constitue une minute de conversation facturable, quel coût par minute est acceptable, quel revenu par conversation est suffisant, et quelle autorité l'agent devrait avoir. Une société qui apprend à construire son propre registre des minutes de conversation — suivi du volume, comptabilité du coût par minute, attribution du revenu, gouvernance de l'autorité, mécanismes de récupération — commence à posséder la grammaire de sa propre économie d'IA. Ce n'est pas une souveraineté symbolique. C'est une souveraineté opérationnelle.</p>
+
+                <p>Le marché entre donc dans une nouvelle phase. Plus tôt, la question premium portait sur la capacité de l'agent à achever une tâche. Ensuite, il est devenu de savoir si le workflow pouvait être mesuré, gouverné et déployé en toute sécurité. Désormais, une autre question arrive : le système peut-il prouver que chaque minute de conversation était productive, justifiée par les coûts et générant des revenus ? Les entreprises qui répondront bien à cette question occuperont une couche stratégique de la prochaine économie de l'IA — non pas parce qu'elles ont de meilleurs agents, mais parce qu'elles ont une meilleure infrastructure de minutes de conversation.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « How Cars24 scales conversations and builds faster with OpenAI » (item du 16 juillet 2026 ; description : Cars24 utilise des agents vocaux et de chat d'OpenAI pour gérer plus de 1 million de minutes de conversation mensuelles, récupérer 12 % des leads perdus et apporter des workflows d'agents aux équipes de l'entreprise)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « NTT DATA Group cuts incident analysis to 30 minutes with Codex » (item du 22 juillet 2026 ; description : NTT DATA Group utilise ChatGPT Enterprise et Codex pour aider 9 000 employés à automatiser le travail, réduire l'analyse des incidents à 30 minutes et accroître l'adoption sécurisée de l'IA)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « Introducing OpenAI Presence » (item du 22 juillet 2026 ; description : OpenAI Presence, une plateforme d'agents d'entreprise éprouvée qui aide les organisations à déployer des agents vocaux et de chat de confiance pour les workflows clients et internes)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « A scorecard for the AI age » (item du 17 juillet 2026 ; description : Sarah Friar, CFO d'OpenAI, présente un scorecard pratique pour mesurer le ROI par le travail utile, le coût par tâche réussie, la fiabilité et le retour sur calcul)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « Introducing the ChatGPT for small business program » (item du 21 juillet 2026 ; description : OpenAI lance le programme ChatGPT for Small Businesses, aidant les entrepreneurs à développer des compétences en IA, à automatiser le travail et à croître avec ChatGPT Work)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">Commission européenne / AI Office — « Drawing-up a General-Purpose AI Code of Practice » (page mise à jour le 25 juin 2026 ; décrit le premier Code de pratique GPAI reçu par la Commission, détaillant les règles de l'AI Act pour les fournisseurs de modèles d'IA à usage général et les modèles à risques systémiques, y compris les obligations d'évaluation et d'atténuation des risques)</a></li>
+                    <li><a href="https://www.w3.org/TR/vc-data-model/" target="_blank" rel="noopener">W3C — « Verifiable Credentials Data Model v2.0 » (spécification décrivant le modèle de données extensible pour les attestations vérifiables, la manière dont elles peuvent être sécurisées contre la falsification, et un écosystème à trois parties pour l'émission, la vérification et la révocation — la base pour porter la preuve d'autorité et de mesure dans les systèmes numériques)</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+                <div class="article__meta-footer">
+                    <span data-i18n="article.published">Research Journal</span>
+                    <span>·</span>
+                    <time>July 26, 2026</time>
+                    <span>·</span>
+                    <span data-i18n="article.author">Diop Research</span>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

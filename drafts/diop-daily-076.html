@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Talent Routing Layer: Where Human Judgment Becomes Composable Infrastructure — Diop Research</title>
+    <meta name="description" content="As AI agents enter institutional workflows at scale, the decisive infrastructure layer is not the model or the measurement framework but the system that routes, verifies, and composes human judgment across agent ecosystems — turning human expertise into portable, auditable capacity."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry076">Diop Daily #076 — July 2026</div>
+                <div class="article__meta-line">
+                    <time>July 28, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>talent routing · human-in-the-loop · agent infrastructure</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Talent Routing Layer: Where Human Judgment Becomes Composable Infrastructure</h1>
+
+                <p>For most of the AI boom, the human-in-the-loop was treated as a safety checkbox — a manual review step inserted before a model's output was allowed to reach a customer. The assumption was simple: the model does the work, the human checks the result. But the strongest public signals this week describe a different reality taking shape. AI agents are entering institutional workflows at a scale where human oversight is no longer a single checkpoint. It is a distributed infrastructure layer. The decisive question is no longer whether a human reviewed the output. The decisive question is whether the system can route the right human expertise to the right agent at the right moment, verify that expertise against institutional requirements, and compose that judgment across multiple workflows, agents, and domains. The new boundary is not whether the agent works. The new boundary is whether the system can carry proof of human authority, human review, and human accountability at every step, for every workflow, under every audit.</p>
+
+                <p>NTT DATA Group's deployment of ChatGPT Enterprise and Codex across 9,000 employees provides the clearest signal yet. This is not a chatbot answering general questions for a handful of users. This is a system where thousands of employees — engineers, analysts, project managers, security reviewers — must be routed to the right agent workflows at the right moments. When Codex generates code that touches a production system, the system must route it to a security reviewer. When an agent proposes an incident analysis, the system must route it to a domain expert. When an agent's output fails a confidence threshold, the system must route it to a human with the right expertise to correct it. The moment an AI system operates at enterprise scale, the human-in-the-loop stops being a checkbox and becomes a routing problem: how do you distribute the right human judgment across thousands of agent interactions, each requiring different expertise, different authority, and different verification standards?</p>
+
+                <blockquote>
+                    <p>The next premium AI layer is not only generation, orchestration, or measurement. It is the talent routing layer that turns human judgment into composable, auditable infrastructure — with expertise routing, authority verification, and accountability chains baked into every agent workflow.</p>
+                </blockquote>
+
+                <h2>Why talent routing is becoming the last infrastructure layer</h2>
+
+                <p>The shift toward talent routing as infrastructure is driven by three converging pressures. First, the scale of agent deployment has outpaced the ability to assign human reviewers ad hoc. NTT DATA's 9,000-employee deployment means that every day, thousands of agent interactions require human review, escalation, or correction. A manual assignment of reviewers — "John reviews all Codex outputs" — breaks down at this scale. The system must be able to answer: which human has the right expertise for this specific agent output, what is their current workload, what authority do they carry, and what evidence must they provide when they approve or reject the work. Without automated routing, scale becomes a liability rather than an asset, because the bottleneck shifts from model capacity to human capacity.</p>
+
+                <p>Second, the stakes of human judgment are escalating. As AI agents begin to participate in high-stakes workflows — incident response, code deployment, financial analysis, customer safety — the quality of human review matters more than ever. A junior analyst reviewing a security incident may miss critical signals. A senior engineer reviewing routine code changes may be underutilized. The system must be able to route each agent output to the human with the right level of expertise, the right authority, and the right context. Google's ADK Go 2.0, which introduces graph-based workflow composition with built-in human-in-the-loop controls, recognizes this shift explicitly. The runtime no longer treats human review as an optional add-on. It treats it as a first-class routing target — a destination that work flows to when confidence thresholds are breached, when edge cases are detected, or when institutional policy requires human authority.</p>
+
+                <p>Third, the market is demanding auditable accountability. OpenAI's scorecard framework, introduced by CFO Sarah Friar, measures useful work, cost per successful task, dependability, and return on compute. But the scorecard's metrics only become actionable when they are tied to a concrete unit of human accountability. When an agent's output is reviewed by a human, the system must be able to prove: who reviewed it, what expertise they carried, what authority they exercised, what evidence they provided, and what decision they made. This is not a compliance overlay. It is the foundation of institutional trust. The W3C's Verifiable Credentials Data Model v2.0 provides the technical substrate for this — a standard for carrying proof of authority, expertise, and decision-making that can be verified across systems and institutions. When a human reviewer signs off on an agent's output, the system must be able to produce a verifiable credential that proves the reviewer's expertise, their authorization, and their decision — not as a PDF attachment, but as a structured, machine-verifiable assertion.</p>
+
+                <h2>The infrastructure stack beneath talent-routable agents</h2>
+
+                <p>A talent-routable agent system does not emerge from better prompting or more training data alone. It requires an infrastructure stack that many current AI products still treat as secondary:</p>
+
+                <ul>
+                    <li><strong>Expertise routing engines:</strong> systems that maintain a real-time map of human expertise across the organization — who knows what, who is available, who carries what authority — and route each agent output to the right reviewer based on domain, seniority, workload, and institutional requirements.</li>
+                    <li><strong>Authority verification layers:</strong> systems that bind every human review to a verifiable authorization decision, a documented expertise credential, and a logged institutional commitment — so the system can prove, at any moment, that the reviewer had the right to approve this specific type of work.</li>
+                    <li><strong>Decision evidence capture:</strong> systems that record not just that a human reviewed an output, but what evidence they considered, what alternatives they evaluated, what decision they made, and what confidence they assigned — creating an auditable trail that satisfies both internal review and external regulation.</li>
+                    <li><strong>Workflow composition across reviews:</strong> systems that preserve the chain of human judgment through every workflow step — who reviewed what, when, under what authority, and what evidence survived handoff to the next stage of the process, so that a multi-step agent workflow can be reconstructed end-to-end with full human accountability.</li>
+                    <li><strong>Verifiable credential integration:</strong> systems that issue, verify, and revoke human expertise credentials using open standards like the W3C Verifiable Credentials Data Model, so that a reviewer's authority can be proven across systems, institutions, and regulatory boundaries without relying on centralized identity providers.</li>
+                </ul>
+
+                <p>Notice what this stack demands. It demands that agent infrastructure be designed from the ground up to carry proof of human judgment — not just of what the agent did, but of what humans reviewed, what expertise they brought, what authority they exercised, and what evidence they provided. This is not a feature you add to an AI product. It is the architecture the product must be built on.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this thesis is correct, capital should look beyond response engines, chat interfaces, and measurement frameworks toward the infrastructure that makes human judgment composable and auditable across agent ecosystems. Several categories now look strategically important:</p>
+
+                <ul>
+                    <li><strong>Expertise routing and talent allocation platforms:</strong> systems that maintain a real-time map of human expertise across an organization and route each agent output to the right reviewer based on domain, seniority, workload, and institutional requirements — turning human talent into a dynamically allocatable resource rather than a static assignment.</li>
+                    <li><strong>Authority verification and credential infrastructure:</strong> platforms that bind every human review to a verifiable authorization decision, a documented expertise credential, and a logged institutional commitment — using open standards like W3C Verifiable Credentials to ensure that a reviewer's authority can be proven across systems and institutions.</li>
+                    <li><strong>Decision evidence and audit trail systems:</strong> infrastructure that captures not just that a human reviewed an output, but what evidence they considered, what alternatives they evaluated, what decision they made, and what confidence they assigned — creating an auditable trail that satisfies both internal governance and external regulation.</li>
+                    <li><strong>Multi-review workflow composition:</strong> systems that preserve the chain of human judgment through every workflow step, so that a multi-step agent workflow can be reconstructed end-to-end with full human accountability — who reviewed what, when, under what authority, and what evidence survived handoff.</li>
+                    <li><strong>Cross-institutional credential networks:</strong> infrastructure that issues, verifies, and revokes human expertise credentials across organizational boundaries, enabling talent routing not just within a single enterprise but across partner ecosystems, supply chains, and regulatory jurisdictions.</li>
+                </ul>
+
+                <p>Notice the shift in what is being underwritten. The buyer is not simply purchasing a smarter agent or a faster response. The buyer is purchasing accountability: the right to deploy agents at enterprise scale with proof that every human review was conducted by the right expert, with the right authority, and with the right evidence. That is a much more defensible category than another wrapper around frontier APIs, because it sits closer to liability, regulatory compliance, and institutional trust at the scale of enterprise investment.</p>
+
+                <h2>Why this matters for African institutional sovereignty</h2>
+
+                <p>African institutions should study this transition with particular urgency. Across the continent, AI adoption is often framed as a choice between importing pre-built agent platforms or building local capacity from scratch. But the talent routing layer reveals a deeper dimension of this choice. When an African bank deploys an AI agent for fraud detection, the question is not only whether the model works. The question is whether the system can route the right local expertise to review flagged transactions, whether it can verify that the reviewer carries the right authority under local financial regulations, and whether it can produce an auditable trail that satisfies both local regulators and international compliance standards.</p>
+
+                <p>The talent routing layer changes this equation. If AI systems must carry proof of human authority, expertise, and accountability at every step, then the sovereignty question becomes concrete: can an African institution build its own expertise routing engine? Can it maintain a real-time map of local expertise — who knows what, who is available, who carries what authority under local regulatory frameworks? Can it issue and verify human credentials using open standards that work across both local and international systems? Can it route agent outputs to the right local expert while preserving an auditable trail that satisfies both domestic and cross-border requirements?</p>
+
+                <p>Cheikh Anta Diop's method reminds us that sovereignty is not about rejecting tools. It is about building the capacity to examine, verify, and reproduce. In AI agent infrastructure, that capacity lives in the talent routing layer. A society that only imports pre-routed agent platforms imports pre-approved assumptions about what constitutes expert review, what authority is sufficient, what evidence is required, and what accountability looks like. A society that learns to build its own talent routing infrastructure — expertise mapping, authority verification, decision evidence capture, workflow composition, credential networks — begins to own the grammar of its own institutional judgment. That is not symbolic sovereignty. It is operational sovereignty.</p>
+
+                <p>The market is therefore entering a new phase. Earlier, the premium question was whether the model could produce a good answer. Then it became whether the workflow could be measured, governed, and safely released. Now another question is arriving: can the system route the right human expertise to the right agent at the right moment, with proof of authority, expertise, and accountability at every step? The firms that answer that question well will sit on a strategic layer of the next AI economy — not because they have better agents, but because they have better talent routing infrastructure.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "NTT DATA Group cuts incident analysis to 30 minutes with Codex" (July 22, 2026 item; description: NTT DATA Group uses ChatGPT Enterprise and Codex to help 9,000 employees automate work, cut incident analysis to 30 minutes, and scale secure AI adoption)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "Introducing OpenAI Presence" (July 22, 2026 item; description: OpenAI Presence, a proven enterprise AI agent platform that helps organizations deploy trusted voice and chat agents for customer and internal workflows)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "A scorecard for the AI age" (July 17, 2026 item; description: Sarah Friar, CFO of OpenAI, introduces a practical AI scorecard to measure ROI through useful work, cost per successful task, dependability, and return on compute)</a></li>
+                    <li><a href="https://developers.google.com/blog/building-scalable-ai-agents-with-modular-prompt-transpilation" target="_blank" rel="noopener">Google Developers Blog — "Building scalable AI agents with modular prompt transpilation" (post describing how engineering teams should treat prompts as build artifacts by modularizing instructions into reusable templates, running them through transpilers, and validating them in CI/CD)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">European Commission / AI Office — "Drawing-up a General-Purpose AI Code of Practice" (page last updated June 25, 2026; describes the first GPAI Code of Practice received by the Commission, detailing AI Act rules for providers of general-purpose AI models and models with systemic risks, including risk assessment and mitigation obligations)</a></li>
+                    <li><a href="https://www.w3.org/TR/vc-data-model/" target="_blank" rel="noopener">W3C — "Verifiable Credentials Data Model v2.0" (specification describing the extensible data model for verifiable credentials, how they can be secured from tampering, and a three-party ecosystem for issuance, verification, and revocation — the foundation for carrying proof of authority and expertise in digital systems)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La couche d'acheminement des talents : où le jugement humain devient une infrastructure composable</h1>
+
+                <p>Pendant la majeure partie de l'essor de l'IA, le « humain dans la boucle » était traité comme une case de sécurité — une étape de révision manuelle insérée avant qu'une sortie de modèle ne soit autorisée à atteindre un client. L'hypothèse était simple : le modèle fait le travail, l'humain vérifie le résultat. Mais les signaux publics les plus forts de cette semaine décrivent une réalité différente qui prend forme. Les agents d'IA entrent dans les workflows institutionnels à une échelle où la supervision humaine n'est plus une simple étape de vérification. Elle devient une couche d'infrastructure distribuée. La question décisive n'est plus de savoir si un humain a révisé la sortie. La question décisive est de savoir si le système peut acheminer le bon expert humain vers le bon agent au bon moment, vérifier cette expertise contre les exigences institutionnelles, et composer ce jugement à travers plusieurs workflows, agents et domaines. La nouvelle frontière n'est plus de savoir si l'agent fonctionne. La nouvelle frontière est de savoir si le système peut porter la preuve de l'autorité humaine, de la révision humaine et de la responsabilité humaine à chaque étape, pour chaque workflow, sous chaque audit.</p>
+
+                <p>Le déploiement par NTT DATA Group de ChatGPT Enterprise et Codex à travers 9 000 employés fournit le signal le plus clair à ce jour. Ce n'est pas un chatbot qui répond à des questions générales pour un petit groupe d'utilisateurs. C'est un système où des milliers d'employés — ingénieurs, analystes, chefs de projet, réviseurs de sécurité — doivent être acheminés vers les bons workflows d'agents au bons moments. Lorsque Codex génère du code qui touche un système de production, le système doit l'acheminer vers un réviseur de sécurité. Lorsqu'un agent propose une analyse d'incident, le système doit l'acheminer vers un expert du domaine. Lorsque la sortie d'un agent échoue à un seuil de confiance, le système doit l'acheminer vers un humain possédant l'expertise appropriée pour le corriger. Le moment où un système d'IA opère à l'échelle de l'entreprise, le « humain dans la boucle » cesse d'être une case à cocher et devient un problème d'acheminement : comment distribuer le bon jugement humain à travers des milliers d'interactions d'agents, chacune nécessitant une expertise différente, une autorité différente et des normes de vérification différentes ?</p>
+
+                <blockquote>
+                    <p>La prochaine couche premium de l'IA n'est pas seulement la génération, l'orchestration ou la mesure. C'est la couche d'acheminement des talents qui transforme le jugement humain en une infrastructure composable et auditable — avec le routage d'expertise, la vérification d'autorité et les chaînes de responsabilité intégrés dans chaque workflow d'agents.</p>
+                </blockquote>
+
+                <h2>Pourquoi l'acheminement des talents devient la dernière couche d'infrastructure</h2>
+
+                <p>Le basculement vers l'acheminement des talents en tant qu'infrastructure est motivé par trois pressions convergentes. Premièrement, l'échelle des déploiements d'agents a dépassé la capacité d'assigner des réviseurs humains de manière ad hoc. Le déploiement à 9 000 employés de NTT DATA signifie que chaque jour, des milliers d'interactions d'agents nécessitent une révision humaine, une escalade ou une correction. Une assignation manuelle des réviseurs — « John révise toutes les sorties de Codex » — se casse à cette échelle. Le système doit pouvoir répondre : quel humain possède l'expertise appropriée pour cette sortie d'agent spécifique, quelle est sa charge de travail actuelle, quelle autorité il porte, et quelle preuve il doit fournir lorsqu'il approuve ou rejette le travail. Sans acheminement automatisé, l'échelle devient un risque plutôt qu'un atout, car le goulot d'étranglement se déplace de la capacité du modèle à la capacité humaine.</p>
+
+                <p>Deuxièmement, les enjeux du jugement humain s'intensifient. Alors que les agents d'IA commencent à participer à des workflows à haute envergure — réponse aux incidents, déploiement de code, analyse financière, sécurité client — la qualité de la révision humaine compte plus que jamais. Un analyste junior révisant un incident de sécurité peut manquer des signaux critiques. Un ingénieur senior révisant des changements de code routiniers peut être sous-utilisé. Le système doit pouvoir acheminer chaque sortie d'agent vers le humain possédant le niveau d'expertise approprié, l'autorité appropriée et le contexte approprié. Google ADK Go 2.0, qui introduit la composition de workflows basés sur des graphes avec des contrôles humains intégrés, reconnaît ce basculement explicitement. L'environnement d'exécution ne traite plus la révision humaine comme un ajout optionnel. Il la traite comme une cible d'acheminement de premier ordre — une destination vers laquelle le travail s'écoule lorsque les seuils de confiance sont franchis, que des cas particuliers sont détectés, ou que la politique institutionnelle exige l'autorité humaine.</p>
+
+                <p>Troisièmement, le marché exige une responsabilité auditable. Le cadre de tableau de bord d'OpenAI, introduit par la CFO Sarah Friar, mesure le travail utile, le coût par tâche réussie, la fiabilité et le retour sur calcul. Mais les métriques du tableau de bord ne deviennent exploitables que lorsqu'elles sont liées à une unité concrète de responsabilité humaine. Lorsqu'un humain révise la sortie d'un agent, le système doit pouvoir prouver : qui l'a révisée, quelle expertise il portait, quelle autorité il a exercée, quelle preuve il a fournie, et quelle décision il a prise. Ce n'est pas une couche de conformité. C'est la fondation de la confiance institutionnelle. Le modèle de données des Identifiants Vérifiables v2.0 du W3C fournit le substrat technique pour cela — une norme pour porter la preuve d'autorité, d'expertise et de prise de décision pouvant être vérifiée à travers les systèmes et les institutions. Lorsqu'un réviseur humain approuve la sortie d'un agent, le système doit pouvoir produire un identifiant vérifiable prouvant l'expertise du réviseur, son autorisation et sa décision — non pas comme une pièce jointe PDF, mais comme une assertion structurée et vérifiable par machine.</p>
+
+                <h2>La pile d'infrastructure sous les agents acheminables en talents</h2>
+
+                <p>Un système d'agents acheminables en talents ne découle pas d'un meilleur prompting ou de plus de données d'entraînement. Il exige une pile d'infrastructure que beaucoup de produits d'IA actuels traitent encore comme secondaire :</p>
+
+                <ul>
+                    <li><strong>Moteurs d'acheminement d'expertise :</strong> des systèmes qui maintiennent une carte en temps réel de l'expertise humaine à travers l'organisation — qui sait quoi, qui est disponible, qui porte quelle autorité — et acheminent chaque sortie d'agent vers le bon réviseur en fonction du domaine, du niveau d'ancienneté, de la charge de travail et des exigences institutionnelles.</li>
+                    <li><strong>Couches de vérification d'autorité :</strong> des systèmes qui lient chaque révision humaine à une décision d'autorisation vérifiable, un identifiant d'expertise documenté et un engagement institutionnel enregistré — afin que le système puisse prouver, à tout moment, que le réviseur avait le droit d'approuver ce type de travail.</li>
+                    <li><strong>Capture de preuves de décision :</strong> des systèmes qui enregistrent non seulement qu'un humain a révisé une sortie, mais quelles preuves il a considérées, quelles alternatives il a évaluées, quelle décision il a prise et quelle confiance il a attribuée — créant un journal d'audit qui satisfait à la fois à l'examen interne et à la réglementation externe.</li>
+                    <li><strong>Composition de workflows à travers les révisions :</strong> des systèmes qui préservent la chaîne de jugement humain à travers chaque étape du workflow — qui a révisé quoi, quand, sous quelle autorité, et quelle preuve a survécu au transfert vers l'étape suivante du processus, afin qu'un workflow d'agents à plusieurs étapes puisse être reconstruit de bout en bout avec une responsabilité humaine complète.</li>
+                    <li><strong>Intégration d'identifiants vérifiables :</strong> des systèmes qui émettent, vérifient et révoquent les identifiants d'expertise humaine en utilisant des normes ouvertes comme le modèle de données des Identifiants Vérifiables du W3C, afin qu'une autorité de réviseur puisse être prouvée à travers les systèmes, les institutions et les frontières réglementaires sans dépendre de fournisseurs d'identité centralisés.</li>
+                </ul>
+
+                <p>Remarquons ce que cette pile exige. Elle exige que l'infrastructure d'agents soit conçue de fond en comble pour porter la preuve du jugement humain — non seulement de ce que l'agent a fait, mais de ce que les humains ont révisé, quelle expertise ils ont apportée, quelle autorité ils ont exercée, et quelle preuve ils ont fournie. Ce n'est pas une fonctionnalité que vous ajoutez à un produit d'IA. C'est l'architecture dont le produit doit être construit.</p>
+
+                <h2>Où la surface investissable s'élargit</h2>
+
+                <p>Si cette thèse est juste, le capital devrait regarder au-delà des moteurs de réponse, des interfaces de chat et des cadres de mesure vers l'infrastructure qui rend le jugement humain composable et auditable à travers les écosystèmes d'agents. Plusieurs catégories paraissent désormais particulièrement stratégiques :</p>
+
+                <ul>
+                    <li><strong>Plateformes d'acheminement et d'allocation de talents :</strong> des systèmes qui maintiennent une carte en temps réel de l'expertise humaine à travers une organisation et achemine chaque sortie d'agent vers le bon réviseur en fonction du domaine, de l'ancienneté, de la charge de travail et des exigences institutionnelles — transformant le capital humain en une ressource dynamiquement allouable plutôt qu'en une assignation statique.</li>
+                    <li><strong>Infrastructure de vérification et de certification d'autorité :</strong> des plateformes qui lient chaque révision humaine à une décision d'autorisation vérifiable, un identifiant d'expertise documenté et un engagement institutionnel enregistré — en utilisant des normes ouvertes comme les Identifiants Vérifiables du W3C pour garantir qu'une autorité de réviseur puisse être prouvée à travers les systèmes et les institutions.</li>
+                    <li><strong>Systèmes de capture de preuves de décision et de journaux d'audit :</strong> une infrastructure qui capture non seulement qu'un humain a révisé une sortie, mais quelles preuves il a considérées, quelles alternatives il a évaluées, quelle décision il a prise et quelle confiance il a attribuée — créant un journal d'audit qui satisfait à la fois à la gouvernance interne et à la réglementation externe.</li>
+                    <li><strong>Composition de workflows multi-révisions :</strong> des systèmes qui préservent la chaîne de jugement humain à travers chaque étape du workflow, afin qu'un workflow d'agents à plusieurs étapes puisse être reconstruit de bout en bout avec une responsabilité humaine complète — qui a révisé quoi, quand, sous quelle autorité, et quelle preuve a survécu au transfert.</li>
+                    <li><strong>Réseaux de certification inter-institutionnels :</strong> une infrastructure qui émet, vérifie et révoque des identifiants d'expertise humaine à travers les frontières organisationnelles, permettant l'acheminement de talents non seulement au sein d'une entreprise mais à travers les écosystèmes partenaires, les chaînes d'approvisionnement et les juridictions réglementaires.</li>
+                </ul>
+
+                <p>Remarquons le déplacement de ce qui est souscrit. L'acheteur n'achète pas simplement un agent plus intelligent ou une réponse plus rapide. L'acheteur achète la responsabilité : le droit de déployer des agents à grande échelle dans les entreprises avec la preuve que chaque révision humaine a été effectuée par le bon expert, avec la bonne autorité et les bonnes preuves. C'est une catégorie bien plus défendable qu'un wrapper supplémentaire autour d'API frontier, parce qu'elle se tient plus près de la responsabilité, de la conformité réglementaire et de la confiance institutionnelle à l'échelle de l'investissement d'entreprise.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté institutionnelle africaine</h2>
+
+                <p>Les institutions africaines devraient étudier cette transition avec une urgence particulière. À travers le continent, l'adoption de l'IA est souvent présentée comme un choix entre importer des plateformes d'agents pré-construites ou construire une capacité locale à partir de zéro. Mais la couche d'acheminement des talents révèle une dimension plus profonde de ce choix. Lorsqu'une banque africaine déploie un agent d'IA pour la détection de fraude, la question n'est plus seulement de savoir si le modèle fonctionne. La question est de savoir si le système peut acheminer le bon expert local pour réviser les transactions signalées, s'il peut vérifier que le réviseur porte l'autorité appropriée selon les réglementations financières locales, et s'il peut produire un journal d'audit satisfaisant à la fois aux régulateurs locaux et aux normes de conformité internationales.</p>
+
+                <p>La couche d'acheminement des talents change cette équation. Si les systèmes d'IA doivent porter la preuve de l'autorité humaine, de l'expertise et de la responsabilité à chaque étape, alors la question de souveraineté devient concrète : une institution africaine peut-elle construire son propre moteur d'acheminement d'expertise ? Peut-elle maintenir une carte en temps réel de l'expertise locale — qui sait quoi, qui est disponible, qui porte quelle autorité selon les cadres réglementaires locaux ? Peut-elle émettre et vérifier des identifiants humains en utilisant des normes ouvertes qui fonctionnent à la fois à l'échelle locale et internationale ? Peut-elle acheminer les sorties d'agents vers le bon expert local tout en préservant un journal d'audit satisfaisant à la fois aux exigences nationales et transfrontalières ?</p>
+
+                <p>La méthode de Cheikh Anta Diop nous rappelle que la souveraineté ne consiste pas à rejeter des outils. Elle consiste à bâtir la capacité d'examiner, de vérifier et de reproduire. Dans l'infrastructure d'agents d'IA, cette capacité réside dans la couche d'acheminement des talents. Une société qui n'importe que des plateformes d'agents pré-acheminés importe des hypothèses pré-approuvées sur ce qui constitue une révision experte, quelle autorité est suffisante, quelles preuves sont exigées, et à quoi ressemble la responsabilité. Une société qui apprend à construire ses propres infrastructures d'acheminement des talents — cartographie d'expertise, vérification d'autorité, capture de preuves de décision, composition de workflows, réseaux de certification — commence à posséder la grammaire de son propre jugement institutionnel. Ce n'est pas une souveraineté symbolique. C'est une souverainé operationnelle.</p>
+
+                <p>Le marché entre donc dans une nouvelle phase. Plus tôt, la question premium portait sur la capacité du modèle à produire une bonne réponse. Ensuite, elle est devenue celle de savoir si le workflow pouvait être mesuré, gouverné et déployé en toute sécurité. Désormais, une autre question arrive : le système peut-il acheminer le bon expert humain vers le bon agent au bon moment, avec la preuve de l'autorité, de l'expertise et de la responsabilité à chaque étape ? Les entreprises qui répondront bien à cette question occuperont une couche stratégique de la prochaine économie de l'IA — non pas parce qu'elles ont de meilleurs agents, mais parce qu'elles ont une meilleure infrastructure d'acheminement des talents.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « NTT DATA Group cuts incident analysis to 30 minutes with Codex » (item du 22 juillet 2026 ; description : NTT DATA Group utilise ChatGPT Enterprise et Codex pour aider 9 000 employés à automatiser le travail, réduire l'analyse des incidents à 30 minutes et accroître l'adoption sécurisée de l'IA)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « Introducing OpenAI Presence » (item du 22 juillet 2026 ; description : OpenAI Presence, une plateforme d'agents d'entreprise éprouvée qui aide les organisations à déployer des agents vocaux et de chat de confiance pour les workflows clients et internes)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « A scorecard for the AI age » (item du 17 juillet 2026 ; description : Sarah Friar, CFO d'OpenAI, présente un scorecard pratique pour mesurer le ROI par le travail utile, le coût par tâche réussie, la fiabilité et le retour sur calcul)</a></li>
+                    <li><a href="https://developers.google.com/blog/building-scalable-ai-agents-with-modular-prompt-transpilation" target="_blank" rel="noopener">Google Developers Blog — « Building scalable AI agents with modular prompt transpilation » (article décrivant comment les équipes d'ingénierie devraient traiter les prompts comme des artefacts de construction en modularisant les instructions en modèles réutilisables, en les exécutant à travers des transpileurs et en les validant en CI/CD)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">Commission européenne / AI Office — « Drawing-up a General-Purpose AI Code of Practice » (page mise à jour le 25 juin 2026 ; décrit le premier Code de pratique GPAI reçu par la Commission, détaillant les règles de l'AI Act pour les fournisseurs de modèles d'IA à usage général et les modèles à risques systémiques, y compris les obligations d'évaluation et d'atténuation des risques)</a></li>
+                    <li><a href="https://www.w3.org/TR/vc-data-model/" target="_blank" rel="noopener">W3C — « Verifiable Credentials Data Model v2.0 » (spécification décrivant le modèle de données extensible pour les identifiants vérifiables, la manière dont ils peuvent être sécurisés contre la falsification, et un écosystème à trois parties pour l'émission, la vérification et la révocation — la base pour porter la preuve d'autorité et d'expertise dans les systèmes numériques)</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+                <div class="article__meta-footer">
+                    <span data-i18n="article.published">Research Journal</span>
+                    <span>·</span>
+                    <time>July 28, 2026</time>
+                    <span>·</span>
+                    <span data-i18n="article.author">Diop Research</span>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

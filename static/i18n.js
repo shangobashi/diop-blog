@@ -89,6 +89,7 @@
         'article.entry068':     { en: 'Diop Daily #068 — July 2026', fr: 'Diop Quotidien n°068 — Juillet 2026' },
         'article.entry069':     { en: 'Diop Daily #069 — July 2026', fr: 'Diop Quotidien n°069 — Juillet 2026' },
         'article.entry070':     { en: 'Diop Daily #070 — July 2026', fr: 'Diop Quotidien n°070 — Juillet 2026' },
+        'article.entry071':     { en: 'Diop Daily #071 — July 2026', fr: 'Diop Quotidien n°071 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -122,6 +123,16 @@
     excerpt: {
         en: "AI infrastructure is shifting from abstract cloud abstractions to physical data centers, community-rooted deployments, scientific partnerships, and regulated institutional obligations. The market is no longer asking only whether the model works. It is asking where the model lives, who governs it, what energy powers it, and what institutional commitments back it.",
         fr: "L'infrastructure d'IA passe d'abstractions cloud abstraites à des centres de données physiques, des déploiements ancrés dans les communautés, des partenariats scientifiques et des obligations institutionnelles régulées. Le marché ne se demande plus seulement si le modèle fonctionne. Il se demande où le modèle réside, qui le gouverne, quelle énergie l'alimente et quels engagements institutionnels le soutiennent."
+    }
+},
+'diop-daily-071': {
+    title: {
+        en: "The Evaluation Perimeter: When AI Security Moves to Pre-Deployment",
+        fr: "Le périmètre d'évaluation : quand la sécurité de l'IA passe au pré-déploiement"
+    },
+    excerpt: {
+        en: "This week's OpenAI security-incident disclosure, long-horizon safety note, Google's resilient agent runtime work, and Europe's code-of-practice push all point to the same shift: the decisive AI layer is the evaluation perimeter where systems are tested, attacked, gated, and cleared for real institutional use.",
+        fr: "La divulgation cette semaine d'un incident de sécurité par OpenAI, sa note sur la sûreté des modèles de longue durée, le travail de Google sur les runtimes d'agents résilients, et l'effort européen autour du code de bonnes pratiques convergent : la couche décisive de l'IA est désormais le périmètre d'évaluation où les systèmes sont testés, attaqués, filtrés et autorisés pour un usage institutionnel réel."
     }
 },
 'diop-daily-068': {

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Evaluation Perimeter: When AI Security Moves to Pre-Deployment — Diop Research</title>
+    <meta name="description" content="The HuggingFace security incident during model evaluation, OpenAI's long-horizon safety lessons, and the EU GPAI Code of Practice all converge on a new boundary: the evaluation perimeter. AI security is moving from post-deployment monitoring to pre-deployment gates."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry071">Diop Daily #071 — July 2026</div>
+                <div class="article__meta-line">
+                    <time>July 26, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>evaluation security · pre-deployment · model governance</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Evaluation Perimeter: When AI Security Moves to Pre-Deployment</h1>
+
+                <p>For most of the AI boom, security was understood as a post-deployment problem. A model shipped, operated behind a firewall or inside a chat interface, and defenders monitored for misuse, drift, or failure after the fact. Incident response, red-teaming, and abuse detection were all downstream activities. But the strongest public signals this week describe a different reality taking shape. AI security is moving upstream. The new boundary is not the production endpoint. It is the evaluation perimeter — the pre-deployment gate where models are tested, validated, and either cleared or blocked before they ever reach a user. The question is no longer only whether a system failed in production. The question is whether it was ever allowed to deploy at all.</p>
+
+                <p>OpenAI's disclosure of a security incident during model evaluation with Hugging Face makes this shift explicit. The incident did not occur in production. It occurred during the evaluation phase — before the model was released. OpenAI and Hugging Face shared early findings that highlight advanced cyber capabilities and lessons for defenders. This is a critical distinction. When a security incident is caught during evaluation rather than after deployment, the entire risk calculus changes. The breach is contained before it can affect users, before it can corrupt downstream systems, before it can erode trust in a live product. The evaluation phase becomes the first and most important line of defense.</p>
+
+                <blockquote>
+                    <p>The next premium AI security layer is not only monitoring what happens after deployment. It is the evaluation perimeter: the pre-deployment gate that decides whether a model is safe enough to ship at all.</p>
+                </blockquote>
+
+                <h2>Why security is moving to the evaluation phase</h2>
+
+                <p>The shift from post-deployment to pre-deployment security is driven by three converging pressures. First, the cost of a security failure in production has grown beyond what most organizations can absorb. A single breach can compromise millions of users, trigger regulatory penalties, destroy brand trust, and require years of recovery. By the time a model is live, the surface area for damage is enormous and the cost of remediation is extreme. Catching threats during evaluation — before the model reaches production — contains the blast radius at the cheapest possible point.</p>
+
+                <p>Second, AI models are becoming more autonomous and more capable of long-running behavior. OpenAI's recent work on long-horizon models highlights new safety risks that emerge when systems operate for extended periods, accumulate state, and make decisions without constant human oversight. A failure that might be caught in a five-minute chat interaction can compound over hours or days of autonomous operation. The evaluation phase must therefore test not only whether a model can perform a task, but whether it can perform that task safely over time — under stress, under adversarial pressure, and under conditions that approximate real-world deployment.</p>
+
+                <p>Third, regulatory frameworks are codifying evaluation as a compliance requirement. The EU's General-Purpose AI Code of Practice, updated in June 2026, details the AI Act rules for providers of general-purpose AI models and models with systemic risks. The Code of Practice represents a voluntary tool that operationalizes these rules, and it explicitly requires providers to conduct rigorous evaluation before deployment. What was once a best practice is becoming a legal obligation. The evaluation perimeter is no longer optional infrastructure. It is regulatory infrastructure.</p>
+
+                <h2>The evaluation stack beneath pre-deployment security</h2>
+
+                <p>A credible evaluation perimeter does not emerge from a single test suite. It requires a layered infrastructure that many current AI products still treat as secondary:</p>
+
+                <ul>
+                    <li><strong>Adversarial evaluation environments:</strong> controlled sandboxes where models are tested against red-team adversaries, prompt injection attacks, jailbreaking attempts, and edge-case inputs that approximate real-world threat models.</li>
+                    <li><strong>Long-horizon safety testing:</strong> evaluation protocols that run models over extended time horizons to detect drift, state corruption, unsafe persistence, and cascading failures that only emerge after sustained operation.</li>
+                    <li><strong>Cross-model vulnerability assessment:</strong> systems that test models against known vulnerability classes — including those discovered in other providers' models — so that a security incident during one evaluation can inform the evaluation of another.</li>
+                    <li><strong>Evidence preservation and audit trails:</strong> infrastructure that records every evaluation run, every test case, every failure, and every decision to deploy or block — creating an auditable chain of evidence that regulators, partners, and customers can inspect.</li>
+                    <li><strong>Automated gate enforcement:</strong> pipelines that enforce evaluation criteria as hard gates — a model that fails critical safety tests cannot proceed to deployment, regardless of business pressure or timeline.</li>
+                </ul>
+
+                <p>Notice what this stack enables. It turns AI security from a reactive discipline — where defenders respond to incidents after they occur — into a preventive one, where threats are caught and contained before they can cause harm. The value is not in a more sophisticated firewall. It is in a lower probability that a dangerous model ever reaches a user in the first place.</p>
+
+                <h2>Why this matters for African institutional sovereignty</h2>
+
+                <p>African institutions should examine this transition with particular urgency. Much of the continent's AI adoption follows a pattern of importing finished models that have already passed (or failed) evaluation elsewhere. That creates a dependency trap: the institution can use AI, but cannot independently verify whether a model is safe to deploy, cannot audit the evaluation process, and cannot adapt the testing criteria to local threat models, languages, or cultural contexts.</p>
+
+                <p>The evaluation perimeter changes this equation. If AI security is decided at the evaluation gate rather than in production, then the sovereignty question becomes concrete: can an institution run its own evaluation suites? Can it test models against local adversarial patterns, local languages, local social expectations of authority and privacy? Can it preserve evidence of evaluation in a form that local regulators can audit? Can it build evaluation infrastructure that is independent of the providers whose models it deploys?</p>
+
+                <p>Cheikh Anta Diop's method reminds us that sovereignty is not about rejecting tools. It is about building the capacity to examine, verify, and reproduce. In AI security, that capacity lives in the evaluation layer. A society that only imports pre-evaluated models imports pre-approved assumptions about what threats matter, what languages are tested, what cultural contexts are considered, and what constitutes acceptable risk. A society that learns to build its own evaluation infrastructure — adversarial sandboxes, long-horizon safety tests, cross-model vulnerability assessment, evidence preservation, and automated gate enforcement — begins to own the grammar of its own AI security. That is not symbolic sovereignty. It is operational sovereignty.</p>
+
+                <p>The market is therefore entering a new phase. Earlier, the premium question was whether the model could produce a good answer. Then it became whether the workflow could be measured, governed, and safely released. Now another question is arriving: can we prove the model is safe enough to deploy before it ever reaches a user? The firms that answer that question well will sit on a strategic layer of the next AI economy — not because they have better models, but because they have better evaluation infrastructure.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this thesis is correct, capital should look beyond post-deployment monitoring tools and pay closer attention to the layers that make pre-deployment evaluation rigorous, auditable, and enforceable. Several categories now appear especially strategic:</p>
+
+                <ul>
+                    <li><strong>Adversarial evaluation platforms:</strong> systems that simulate red-team attacks, prompt injection, jailbreaking, and edge-case inputs in controlled sandboxes, producing structured reports that can be audited by regulators and partners.</li>
+                    <li><strong>Long-horizon safety testing infrastructure:</strong> tooling that runs models over extended time horizons to detect drift, state corruption, unsafe persistence, and cascading failures that only emerge after sustained autonomous operation.</li>
+                    <li><strong>Cross-model vulnerability intelligence:</strong> platforms that share vulnerability findings across model providers, so that a security incident discovered during one evaluation informs the testing of all models in a portfolio.</li>
+                    <li><strong>Evaluation evidence and audit infrastructure:</strong> systems that preserve every test run, every failure, every decision to deploy or block, creating an auditable chain of evidence that satisfies regulatory requirements and partner due diligence.</li>
+                    <li><strong>Automated deployment gates:</strong> pipelines that enforce evaluation criteria as hard gates — a model that fails critical safety tests cannot proceed to deployment, regardless of business pressure or timeline.</li>
+                </ul>
+
+                <p>Notice the shift in what is being underwritten. The buyer is not simply purchasing a clever response engine or even a monitored production system. The buyer is purchasing pre-deployment assurance: the right to know, before a model ships, that it has been tested against realistic threats, evaluated over realistic time horizons, and cleared by an independent gate. That is a much more defensible category than another wrapper around frontier APIs, because it sits closer to liability, regulatory compliance, and long-term institutional trust.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "OpenAI and Hugging Face partner to address security incident during model evaluation" (July 21, 2026 item; description: OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "Safety and alignment in an era of long-horizon models" (July 20, 2026 item; description: OpenAI shares lessons from deploying long-running AI models, highlighting new safety risks, observed failures, and improved safeguards through iterative deployment)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "A scorecard for the AI age" (July 17, 2026 item; description: Sarah Friar, CFO of OpenAI, introduces a practical AI scorecard to measure ROI through useful work, cost per successful task, dependability, and return on compute)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">European Commission / AI Office — "Drawing-up a General-Purpose AI Code of Practice" (page last updated June 25, 2026; describes the first GPAI Code of Practice received by the Commission, detailing AI Act rules for providers of general-purpose AI models and models with systemic risks)</a></li>
+                    <li><a href="https://www.w3.org/TR/vc-data-model/" target="_blank" rel="noopener">W3C — "Verifiable Credentials Data Model v2.0" (specification describing the extensible data model for verifiable credentials, how they can be secured from tampering, and a three-party ecosystem for issuance, verification, and revocation)</a></li>
+                    <li><a href="https://developers.google.com/blog/build-reliable-multi-agent-applications-with-adk-go-2-0" target="_blank" rel="noopener">Google Developers Blog — "Build reliable multi-agent applications with ADK Go 2.0" (June 30, 2026; meta description: graph-based workflow engine, built-in human-in-the-loop, and dynamic orchestration)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Le périmètre d'évaluation : quand la sécurité de l'IA passe au pré-déploiement</h1>
+
+                <p>Pendant la majeure partie de l'essor de l'IA, la sécurité était comprise comme un problème post-déploiement. Un modèle était livré, opérait derrière un pare-feu ou à l'intérieur d'une interface de chat, et les défenseurs surveillaient les dérives, les écarts ou les échecs après coup. La réponse aux incidents, le test rouge et la détection d'abus étaient toutes des activités en aval. Mais les signaux publics les plus forts de cette semaine décrivent une réalité différente qui prend forme. La sécurité de l'IA se déplace en amont. La nouvelle frontière n'est plus le point final de production. C'est le périmètre d'évaluation — la porte de pré-déploiement où les modèles sont testés, validés et soit autorisés, soit bloqués avant de jamais atteindre un utilisateur. La question n'est plus seulement de savoir si un système a échoué en production. La question est de savoir s'il a jamais été autorisé à être déployé.</p>
+
+                <p>La divulgation par OpenAI d'un incident de sécurité lors de l'évaluation de modèles avec Hugging Face rend ce changement explicite. L'incident ne s'est pas produit en production. Il s'est produit lors de la phase d'évaluation — avant que le modèle ne soit publié. OpenAI et Hugging Face ont partagé leurs premières conclusions qui mettent en évidence des capacités cybernétiques avancées et des leçons pour les défenseurs. Cette distinction est cruciale. Lorsqu'un incident de sécurité est détecté lors de l'évaluation plutôt qu'après le déploiement, la calcul de risque complet change. La violation est contenue avant de pouvoir affecter des utilisateurs, avant de corrompre des systèmes en aval, avant d'effriter la confiance dans un produit en direct. La phase d'évaluation devient la première et plus importante ligne de défense.</p>
+
+                <blockquote>
+                    <p>La prochaine couche premium de sécurité de l'IA n'est pas seulement de surveiller ce qui se passe après le déploiement. C'est le périmètre d'évaluation : la porte de pré-déploiement qui décide si un modèle est assez sûr pour être livré.</p>
+                </blockquote>
+
+                <h2>Pourquoi la sécurité se déplace vers la phase d'évaluation</h2>
+
+                <p>Le passage de la sécurité post-déploiement à la sécurité pré-déploiement est motivé par trois pressions convergentes. Premièrement, le coût d'un échec de sécurité en production a dépassé ce que la plupart des organisations peuvent absorber. Une seule violation peut compromettre des millions d'utilisateurs, déclencher des pénalités réglementaires, détruire la confiance de la marque et exiger des années de récupération. Quand un modèle est en ligne, la surface de damage est énorme et le coût de remise en état est extrême. Capturer les menaces lors de l'évaluation — avant que le modèle n'atteigne la production — contient l'effet d'engrenage au point le plus peu coûteux possible.</p>
+
+                <p>Deuxièmement, les modèles d'IA deviennent plus autonomes et plus capables de comportements à long terme. Les travaux récents d'OpenAI sur les modèles à longue durée d'opération mettent en évidence de nouveaux risques de sécurité qui émergent lorsque les systèmes opèrent pendant des périodes prolongées, accumulent de l'état et prennent des décisions sans surveillance humaine constante. Un échec qui pourrait être détecté dans une interaction de chat de cinq minutes peut s'accumuler sur des heures ou des jours d'opération autonome. La phase d'évaluation doit donc tester non seulement si un modèle peut accomplir une tâche, mais s'il peut l'accomplir en toute sécurité sur le long terme — sous stress, sous pression adversariale, et dans des conditions qui approximent le déploiement réel.</p>
+
+                <p>Troisièmement, les cadres réglementaires codifient l'évaluation comme une exigence de conformité. Le Code de pratique GPAI de l'UE, mis à jour en juin 2026, détaille les règles de l'AI Act pour les fournisseurs de modèles d'IA à usage général et les modèles à risques systémiques. Le Code de pratique représente un outil volontaire qui opérationnalise ces règles et exige explicitement que les fournisseurs mènent une évaluation rigoureuse avant le déploiement. Ce qui était autrefois une pratique optimale devient une obligation légale. Le périmètre d'évaluation n'est plus une infrastructure optionnelle. C'est une infrastructure réglementaire.</p>
+
+                <h2>La pile d'évaluation sous la sécurité pré-déploiement</h2>
+
+                <p>Un périmètre d'évaluation crédible ne découle pas d'un seul ensemble de tests. Il nécessite une infrastructure stratifiée que de nombreux produits d'IA actuels traitent encore comme secondaire :</p>
+
+                <ul>
+                    <li><strong>Environnements d'évaluation adverses :</strong> des bacs à tests contrôlés où les modèles sont testés contre des adversaires de type rouge, des tentatives d'injection de prompts, des tentatives de jailbreaking et des entrées extrêmes qui approximent les modèles de menace du monde réel.</li>
+                    <li><strong>Tests de sécurité à longue durée :</strong> des protocoles d'évaluation qui exécutent des modèles sur des horizons temporels prolongés pour détecter la dérive, la corruption d'état, la persistance dangereuse et les échecs en cascade qui ne s'expriment qu'après une opération autonome prolongée.</li>
+                    <li><strong>Évaluation des vulnérabilités inter-modèles :</strong> des systèmes qui testent les modèles contre des classes de vulnérabilités connues — y compris celles découvertes dans les modèles d'autres fournisseurs — afin qu'un incident de sécurité lors d'une évaluation puisse informer l'évaluation d'un autre modèle.</li>
+                    <li><strong>Conservation des preuves et traçabilité :</strong> une infrastructure qui enregistre chaque exécution d'évaluation, chaque cas de test, chaque échec et chaque décision de déployer ou de bloquer — créant une chaîne de preuves auditable que les régulateurs, les partenaires et les clients peuvent inspecter.</li>
+                    <li><strong>Application automatisée des portes :</strong> des pipelines qui imposent les critères d'évaluation comme des portes strictes — un modèle qui échoue aux tests de sécurité critiques ne peut pas passer à l'étape de déploiement, quelle que soit la pression commerciale ou le calendrier.</li>
+                </ul>
+
+                <p>Remarquons ce que cette pile permet. Elle transforme la sécurité de l'IA d'une discipline réactive — où les défenseurs répondent aux incidents après leur survenance — en une discipline préventive, où les menaces sont détectées et contenues avant de pouvoir causer de préjudice. La valeur n'est pas dans un pare-feu plus sophistiqué. C'est une probabilité réduite qu'un modèle dangereux atteigne jamais un utilisateur.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté institutionnelle africaine</h2>
+
+                <p>Les institutions africaines devraient examiner cette transition avec une attention particulière. Une grande partie de l'adoption d'IA sur le continent suit un modèle d'importation de modèles finis qui ont déjà passé (ou échoué) l'évaluation ailleurs. Cela crée un piège de dépendance : l'institution peut utiliser l'IA, mais ne peut pas indépendamment vérifier si un modèle est sûr à déployer, ne peut pas auditer le processus d'évaluation et ne peut pas adapter les critères de test aux modèles de menace locaux, aux langues ou aux contextes culturels.</p>
+
+                <p>Le périmètre d'évaluation change cette équation. Si la sécurité de l'IA est décidée à la porte d'évaluation plutôt qu'en production, alors la question de souveraineté devient concrète : une institution peut-elle exécuter ses propres suites d'évaluation ? Peut-elle tester les modèles contre des modèles de menace locaux, des langues locales, des attentes sociales locales d'autorité et de confidentialité ? Peut-elle conserver des preuves de l'évaluation sous une forme que les régulateurs locaux peuvent auditer ? Peut-elle construire une infrastructure d'évaluation indépendante des fournisseurs dont elle déploie les modèles ?</p>
+
+                <p>La méthode de Cheikh Anta Diop nous rappelle que la souveraineté n'est pas rejeter les outils. C'est construire la capacité d'examiner, vérifier et reproduire. Dans la sécurité de l'IA, cette capacité réside dans la couche d'évaluation. Une société qui n'importe que des modèles pré-évalués importe des hypothèses pré-approuvées sur ce qui constitue une menace, quelles langues sont testées, quels contextes culturels sont considérés et ce qui constitue un risque acceptable. Une société qui apprend à construire son propre infrastructure d'évaluation — bacs à tests adverses, tests de sécurité à longue durée, évaluation des vulnérabilités inter-modèles, conservation des preuves et application automatisée des portes — commence à posséder la grammaire de sa propre sécurité de l'IA. Ce n'est pas une souveraineté symbolique. C'est une souveraineté opérationnelle.</p>
+
+                <p>Le marché entre donc dans une nouvelle phase. Plus tôt, la question premium était de savoir si le modèle pouvait produire une bonne réponse. Ensuite, il est devenu de savoir si le workflow pouvait être mesuré, gouverné et déployé en toute sécurité. Maintenant, une autre question arrive : pouvons-nous prouver que le modèle est assez sûr pour être déployé avant qu'il n'atteigne jamais un utilisateur ? Les entreprises qui répondent bien à cette question occuperont une couche stratégique de la prochaine économie de l'IA — non pas parce qu'elles ont de meilleurs modèles, mais parce qu'elles ont une meilleure infrastructure d'évaluation.</p>
+
+                <h2>Où la surface investissable s'élargit</h2>
+
+                <p>Si cette thèse est juste, le capital devrait regarder au-delà des outils de surveillance post-déploiement et prêter une attention plus grande aux couches qui rendent l'évaluation pré-déploiement rigoureuse, auditable et contraignante. Plusieurs catégories paraissent désormais particulièrement stratégiques :</p>
+
+                <ul>
+                    <li><strong>Plateformes d'évaluation adverses :</strong> des systèmes qui simulent des attaques de type rouge, l'injection de prompts, le jailbreaking et les entrées extrêmes dans des bacs à tests contrôlés, produisant des rapports structurés que les régulateurs et les partenaires peuvent auditer.</li>
+                    <li><strong>Infrastructure de tests de sécurité à longue durée :</strong> un outillage qui exécute des modèles sur des horizons temporels prolongés pour détecter la dérive, la corruption d'état, la persistance dangereuse et les échecs en cascade qui ne s'expriment qu'après une opération autonome prolongée.</li>
+                    <li><strong>Intelligence des vulnérabilités inter-modèles :</strong> des plateformes qui partagent les découvertes de vulnérabilités entre les fournisseurs de modèles, afin qu'un incident de sécurité découvert lors d'une évaluation informe le test de tous les modèles d'un portefeuille.</li>
+                    <li><strong>Infrastructure de preuves et d'audit d'évaluation :</strong> des systèmes qui conservent chaque exécution de test, chaque échec, chaque décision de déployer ou de bloquer, créant une chaîne de preuves auditable qui satisfait les exigences réglementaires et la diligence des partenaires.</li>
+                    <li><strong>Portes de déploiement automatisées :</strong> des pipelines qui imposent les critères d'évaluation comme des portes strictes — un modèle qui échoue aux tests de sécurité critiques ne peut pas passer à l'étape de déploiement, quelle que soit la pression commerciale ou le calendrier.</li>
+                </ul>
+
+                <p>Remarquons le déplacement de ce qui est souscrit. L'acheteur n'achète pas simplement un moteur de réponse habile ou même un système de production surveillé. L'acheteur achète une assurance pré-déploiement : le droit de savoir, avant qu'un modèle ne soit livré, qu'il a été testé contre des menaces réalistes, évalué sur des horizons temporels réalistes et approuvé par une porte indépendante. C'est une catégorie bien plus défendable qu'un wrapper supplémentaire autour d'API frontier, parce qu'elle se tient plus près de la responsabilité, de la conformité réglementaire et de la confiance institutionnelle à long terme.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « OpenAI and Hugging Face partner to address security incident during model evaluation » (item du 21 juillet 2026 ; description : OpenAI et Hugging Face partagent leurs premières conclusions d'un incident de sécurité lors de l'évaluation de modèles d'IA, mettant en évidence des capacités cybernétiques avancées et des leçons pour les défenseurs)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « Safety and alignment in an era of long-horizon models » (item du 20 juillet 2026 ; description : OpenAI partage des leçons de son déploiement de modèles à longue durée d'opération, mettant en évidence de nouveaux risques de sécurité, des échecs observés et des sauvegardes améliorées par le biais d'un déploiement itératif)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « A scorecard for the AI age » (item du 17 juillet 2026 ; description : Sarah Friar, CFO d'OpenAI, présente un scorecard pratique pour mesurer le ROI par le travail utile, le coût par tâche réussie, la fiabilité et le retour sur calcul)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">Commission européenne / AI Office — « Drawing-up a General-Purpose AI Code of Practice » (page mise à jour le 25 juin 2026 ; décrit le premier Code de pratique GPAI reçu par la Commission, détaillant les règles de l'AI Act pour les fournisseurs de modèles d'IA à usage général et les modèles à risques systémiques)</a></li>
+                    <li><a href="https://www.w3.org/TR/vc-data-model/" target="_blank" rel="noopener">W3C — « Verifiable Credentials Data Model v2.0 » (spécification décrivant le modèle de données extensible pour les attestations vérifiables, la manière dont elles peuvent être sécurisées contre la falsification, et un écosystystème à trois parties pour l'émission, la vérification et la révocation)</a></li>
+                    <li><a href="https://developers.google.com/blog/build-reliable-multi-agent-applications-with-adk-go-2-0" target="_blank" rel="noopener">Google Developers Blog — « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; méta-description : moteur de workflow en graphe, orchestration humain-dans-la-boucle et routage dynamique)</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+                <div class="article__meta-footer">
+                    <span data-i18n="article.published">Research Journal</span>
+                    <span>·</span>
+                    <time>July 26, 2026</time>
+                    <span>·</span>
+                    <span data-i18n="article.author">Diop Research</span>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>
