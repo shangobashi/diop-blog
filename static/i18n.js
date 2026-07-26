@@ -90,6 +90,7 @@
         'article.entry069':     { en: 'Diop Daily #069 — July 2026', fr: 'Diop Quotidien n°069 — Juillet 2026' },
         'article.entry070':     { en: 'Diop Daily #070 — July 2026', fr: 'Diop Quotidien n°070 — Juillet 2026' },
         'article.entry071':     { en: 'Diop Daily #071 — July 2026', fr: 'Diop Quotidien n°071 — Juillet 2026' },
+        'article.entry072':     { en: 'Diop Daily #072 — July 2026', fr: 'Diop Quotidien n°072 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -103,6 +104,16 @@
 
     var postTranslations = {
 
+'diop-daily-072': {
+    title: {
+        en: "The Custody Layer: Who Holds the Project When AI Carries It Forward?",
+        fr: "La couche de garde : qui tient le projet quand l’IA le porte dans la durée ?"
+    },
+    excerpt: {
+        en: "OpenAI is now describing AI that stays with projects for hours, connects to medical records, and supports newsroom operations, while Google hardens agent handoffs and graph runtimes. The strategic layer is becoming project custody: the infrastructure that preserves state, permissions, evidence, and recovery as work moves across files, agents, and institutions.",
+        fr: "OpenAI décrit désormais une IA qui reste des heures avec un projet, se connecte aux dossiers médicaux et soutient les opérations des rédactions, tandis que Google durcit les transferts d’agents et les runtimes en graphe. La couche stratégique devient la garde du projet : l’infrastructure qui préserve l’état, les permissions, les preuves et la reprise quand le travail circule entre fichiers, agents et institutions."
+    }
+},
 
 
 'diop-daily-069': {

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Custody Layer: Who Holds the Project When AI Carries It Forward? — Diop Research</title>
+    <meta name="description" content="As AI starts carrying projects across files, records, and workflows, the strategic layer is becoming project custody: the infrastructure that preserves state, permissions, evidence, and recovery across long-running work."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry072">Diop Daily #072 — July 2026</div>
+                <div class="article__meta-line">
+                    <time>July 27, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>project custody · workflow memory · governed handoffs</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+
+                <h1 class="article__title">The Custody Layer: Who Holds the Project When AI Carries It Forward?</h1>
+
+                <p>The market spent two years admiring answers. It is now being forced to confront a harder question: who holds the work once the model leaves the chat window and begins to move through files, records, approvals, and live institutional processes? That is the question beneath several recent public signals. OpenAI now describes systems that can stay with a project for hours and turn a goal into finished work. It is also shipping health features that securely connect medical records and Apple Health, while pointing to newsroom use cases that strengthen reporting, audience growth, and business operations. Google, for its part, is hardening the handoff and orchestration substrate through Agent-to-Agent collaboration and graph-based runtimes with human checkpoints. The premium AI layer is therefore shifting again. It is no longer enough to generate a strong answer. The strategic layer is becoming custody: the infrastructure that keeps the project coherent while the machine carries it forward.</p>
+
+                <p>This is a different problem from ordinary productivity software. A spreadsheet does not pretend to remember why a decision was made. A chat window does not, by itself, guarantee that a file, a permission, a health record, an editorial draft, or a compliance step will still be legible after several handoffs. But once a system is asked to work across applications and over time, the question of custody arrives immediately. Who owns the live state? Which permissions were granted, and for what duration? What evidence survives the handoff? Which human can reconstruct the reasoning if something breaks? When the model becomes long-running, the institution stops buying eloquence alone. It starts buying continuity.</p>
+
+                <blockquote>
+                    <p>The next defensible AI layer is not only intelligence on demand. It is the custody layer: the systems that preserve state, permissions, evidence, and recovery while work moves across time, tools, and institutions.</p>
+                </blockquote>
+
+                <h2>From response quality to project custody</h2>
+
+                <p>In the first phase of the AI market, failure was easy to name. A model hallucinated, misread a prompt, or produced a weak draft. The remedy was more model quality, better prompting, or tighter retrieval. In the current phase, the failure is increasingly bureaucratic rather than linguistic. The model may produce a plausible answer and still lose the project. It may write into the wrong file, forget the approval path, exceed its permission boundary, drop the thread during escalation, or leave behind no admissible record of what happened. These are not minor UX defects. They are failures of custody.</p>
+
+                <p>The recent source cluster makes that shift visible. OpenAI’s July 9 RSS item, <em>ChatGPT is now a partner for your most ambitious work</em>, describes an agent that can take action across apps and files, stay with a project for hours, and turn a goal into finished work. That wording matters because it names duration, cross-tool state, and outcome conversion as product features. OpenAI’s July 23 item on Health in ChatGPT then goes further: if a system securely connects medical records and Apple Health, the issue is no longer “did the model answer well?” but “how is sensitive context held, bounded, and recalled?” The July 22 newsroom item adds another angle. Once AI enters reporting, audience operations, and publisher workflows, the institution is not merely outsourcing text. It is allowing software to touch memory, sequence, and operational judgment.</p>
+
+                <p>Google’s infrastructure work explains why this is now a market layer rather than a collection of product anecdotes. The A2A protocol is framed as secure, autonomous agent handoffs for collaborative workflows. ADK Go 2.0 adds a graph-based workflow engine, human-in-the-loop checkpoints, dynamic orchestration, and built-in resilience. These are custody primitives. They answer a concrete institutional need: how to let work travel without letting it become ownerless. The European Commission’s GPAI Code of Practice adds another pressure. Once providers face obligations around documentation, accountability, and systemic-risk handling, long-running AI work cannot remain an invisible sequence of model calls. It must leave a governable trail.</p>
+
+                <h2>The five continuities beneath custody</h2>
+
+                <p>Project custody sounds abstract until one names the continuities an institution is actually underwriting. At minimum, five must survive if AI is to carry real work rather than merely decorate it:</p>
+
+                <ul>
+                    <li><strong>State continuity:</strong> the system must preserve what the project is, what has already happened, which artifacts matter, and what remains unresolved. A long-running agent without state continuity is not carrying a project; it is repeatedly forgetting one.</li>
+                    <li><strong>Permission continuity:</strong> the institution must know which data, tools, and actions the system is authorized to touch, and how those permissions narrow, expand, expire, or escalate under supervision. Otherwise the agent is operationally powerful but administratively illegible.</li>
+                    <li><strong>Handoff continuity:</strong> when work moves from one agent to another, or from an agent to a human, the receiving party must inherit enough context to continue the task without reconstructing it from scraps. This is where secure handoff protocols become economically meaningful.</li>
+                    <li><strong>Evidence continuity:</strong> every consequential action must leave behind a usable record: what context was present, which tools were invoked, which files changed, which approvals were obtained, and why the next step was justified. This is the difference between automation and admissible automation.</li>
+                    <li><strong>Recovery continuity:</strong> a broken workflow must be restartable. If the system pauses, escalates, or fails, the institution needs a clear path back into the work without losing the case, the rationale, or the audit trail.</li>
+                </ul>
+
+                <p>Notice what sits beneath those continuities. Not just a better frontier model, but memory middleware, identity and delegation controls, replayable workflow logs, handoff standards, retrieval tied to live case state, and human checkpoints that do not destroy momentum. This is why custody deserves to be named as a layer of infrastructure in its own right. It is the difference between a machine that can impress a user for five minutes and a machine that can be entrusted with a week-long piece of institutional work.</p>
+
+                <h2>Why institutions will buy custody, not just intelligence</h2>
+
+                <p>In health, a strong answer without custody is dangerous. The institution needs to know which records were accessed, under which consent boundary, with what retention logic, and how a clinician can review or override the result. In a newsroom, an elegant summary without custody is also weak. Editors need to know what source trail informed the draft, which audience assumptions were embedded, where the piece sits in the publication flow, and how the work can be resumed after revision. In enterprise project work, the same logic holds. The premium question is not simply whether the model can write, summarize, or classify. It is whether the work survives contact with actual institutions.</p>
+
+                <p>This changes the commercial unit of analysis. A chat seat is not the ultimate buying unit. A long-running project with governed continuity is. The buyer is underwriting the right to let a machine carry unfinished work across time without losing the file, the authority boundary, or the recovery path. That makes custody much more durable than a generic wrapper around a model API, because it sits closer to liability, trust, sector compliance, and operational throughput. Intelligence may attract the first budget line. Custody is what justifies renewal.</p>
+
+                <h2>Why this matters for African institutional sovereignty</h2>
+
+                <p>African institutions should study this layer with unusual seriousness. The old dependency pattern was already costly: imported software often arrived with foreign assumptions about language, workflow, hierarchy, and administrative memory. If the next generation of AI systems begins to hold cases, projects, patient context, editorial drafts, and operational histories, then the dependency deepens. A society may appear to adopt AI while quietly surrendering the custody of its own work. The danger is not only data extraction. It is the export of administrative grammar: who is allowed to act, what must be remembered, which approvals count, and how recovery is performed when something goes wrong.</p>
+
+                <p>A serious sovereignty program therefore cannot stop at model access. It needs local custody infrastructure: archives that can hold long-running case memory in African languages, delegation systems aligned with local institutional practice, replayable logs that regulators and public bodies can inspect, and recovery paths that do not depend entirely on a distant vendor’s black box. Cheikh Anta Diop’s lesson remains exact here. A people is not sovereign because it consumes a powerful instrument. It becomes sovereign when it can examine, reproduce, and govern that instrument on its own terms. In the age of long-running AI work, those terms live in the custody layer.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this thesis is correct, capital should look beyond chatbot interfaces toward the systems that make long-running work governable. Several categories now appear especially strategic:</p>
+
+                <ul>
+                    <li><strong>Workflow memory and case-state middleware:</strong> infrastructure that binds model activity to persistent project context, so tasks can continue across time, tools, and participants without losing the live case.</li>
+                    <li><strong>Delegated identity and permission fabric:</strong> systems that express who may act, on whose behalf, with which constraints, and for how long across multi-agent workflows.</li>
+                    <li><strong>Handoff, replay, and audit layers:</strong> products that preserve the chain of work across agent-to-agent and agent-to-human transfers, while making each step inspectable and restartable.</li>
+                    <li><strong>Sector-specific custody systems:</strong> health, media, public-service, finance, and industrial platforms where continuity requirements are domain-specific and therefore harder to commoditize.</li>
+                    <li><strong>Evidence and compliance archives for AI work:</strong> stores of admissible traces that tie outputs, approvals, tool calls, and policy checks into a record an institution can defend.</li>
+                </ul>
+
+                <p>The important shift is what capital is really underwriting. Not another interface for asking clever questions, but the operational right to let machines carry consequential work without dissolving accountability. The firm that owns this layer will sit closer to renewal budgets, risk committees, regulators, and institutional trust than the firm that merely wraps a frontier model in polished chat. As AI leaves the conversation and enters the file, the decisive premium moves to the custody layer.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “ChatGPT is now a partner for your most ambitious work” (Thu, 09 Jul 2026 10:00:00 GMT; description: ChatGPT Work is an agent that can take action across your apps and files, stay with a project for hours if needed, and turn a goal into finished work.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “Launching Health in ChatGPT” (Thu, 23 Jul 2026 00:00:00 GMT; description: Health in ChatGPT now lets eligible U.S. users securely connect medical records and Apple Health to get more personalized insights and better understand their health.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “How news organizations are using AI to advance their vital missions” (Wed, 22 Jul 2026 13:00:00 GMT; description: News organizations are using AI to strengthen reporting, grow audiences, and improve business operations, with OpenAI tools supporting journalists and publishers worldwide.)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — “How A2A is Building a World of Collaborative Agents” (visible page date: June 18, 2026; meta description: the Agent-to-Agent protocol is shifting AI from isolated tools to a collaborative ecosystem, enabling secure, autonomous agent handoffs and scalable workflows.)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — “Build reliable multi-agent applications with ADK Go 2.0” (visible page date: June 30, 2026; meta description: graph-based workflow engine, built-in human-in-the-loop, dynamic orchestration, and built-in resilience for multi-agent applications.)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">European Commission / AI Office — “Drawing-up a General-Purpose AI Code of Practice” (page containing June 25, 2026 update language; meta description: the first General-Purpose AI Code of Practice details AI Act rules for providers of general-purpose AI models and models with systemic risks.)</a></li>
+                </ul>
+
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+
+                <h1 class="article__title">La couche de garde : qui tient le projet quand l’IA le porte dans la durée ?</h1>
+
+                <p>Le marché a passé deux ans à admirer des réponses. Il est maintenant forcé d’affronter une question plus dure : qui tient réellement le travail une fois que le modèle quitte la fenêtre de chat et commence à circuler entre fichiers, dossiers, validations et processus institutionnels vivants ? C’est la question qui se cache sous plusieurs signaux publics récents. OpenAI décrit désormais des systèmes capables de rester des heures avec un projet et de transformer un objectif en travail fini. L’entreprise déploie aussi des fonctions de santé qui connectent de manière sécurisée des dossiers médicaux et Apple Health, tout en montrant des cas d’usage dans les rédactions pour renforcer le reportage, la croissance d’audience et les opérations métier. Google, de son côté, durcit le socle de transfert et d’orchestration à travers la collaboration Agent-to-Agent et des runtimes en graphe avec points de contrôle humains. La couche premium de l’IA se déplace donc encore. Il ne suffit plus de générer une bonne réponse. La couche stratégique devient la garde : l’infrastructure qui maintient la cohérence du projet pendant que la machine le porte en avant.</p>
+
+                <p>C’est un problème différent de celui d’un simple logiciel de productivité. Une feuille de calcul ne prétend pas se souvenir de la raison d’une décision. Une fenêtre de chat ne garantit pas, à elle seule, qu’un fichier, une permission, un dossier de santé, un brouillon éditorial ou une étape de conformité resteront lisibles après plusieurs transferts. Mais dès qu’un système est invité à travailler à travers des applications et dans la durée, la question de la garde surgit immédiatement. Qui possède l’état vivant ? Quelles permissions ont été accordées, et pour combien de temps ? Quelle preuve survit au transfert ? Quel humain peut reconstruire le raisonnement si quelque chose casse ? Quand le modèle devient un opérateur de longue durée, l’institution cesse d’acheter seulement de l’éloquence. Elle commence à acheter de la continuité.</p>
+
+                <blockquote>
+                    <p>La prochaine couche défendable de l’IA n’est pas seulement une intelligence à la demande. C’est la couche de garde : les systèmes qui préservent l’état, les permissions, les preuves et la reprise pendant que le travail traverse le temps, les outils et les institutions.</p>
+                </blockquote>
+
+                <h2>De la qualité de réponse à la garde du projet</h2>
+
+                <p>Dans la première phase du marché de l’IA, l’échec se nommait facilement. Un modèle hallucinaient, interprétait mal une demande ou produisait un brouillon faible. Le remède consistait à gagner en qualité de modèle, en prompting ou en récupération de contexte. Dans la phase actuelle, l’échec devient de plus en plus bureaucratique plutôt que linguistique. Le modèle peut produire une réponse plausible et pourtant perdre le projet. Il peut écrire dans le mauvais fichier, oublier le chemin d’approbation, dépasser sa frontière de permission, laisser tomber le fil au moment de l’escalade, ou ne laisser derrière lui aucune trace admissible de ce qui s’est passé. Ce ne sont pas de petits défauts d’interface. Ce sont des défaillances de garde.</p>
+
+                <p>Le récent paquet de sources rend ce déplacement visible. L’item RSS d’OpenAI du 9 juillet, <em>ChatGPT is now a partner for your most ambitious work</em>, décrit un agent capable d’agir à travers vos applications et vos fichiers, de rester avec un projet pendant des heures et de transformer un objectif en travail fini. Cette formulation compte, parce qu’elle nomme la durée, l’état inter-outils et la conversion en résultat comme des caractéristiques de produit. L’item du 23 juillet sur Health in ChatGPT va plus loin : si un système connecte de manière sécurisée des dossiers médicaux et Apple Health, la vraie question n’est plus « la réponse était-elle bonne ? », mais « comment ce contexte sensible est-il tenu, borné et rappelé ? ». L’item du 22 juillet sur les organisations de presse ajoute un autre angle. Une fois que l’IA entre dans le reportage, les opérations d’audience et les flux des éditeurs, l’institution ne sous-traite pas seulement du texte. Elle autorise un logiciel à toucher à la mémoire, à la séquence et au jugement opérationnel.</p>
+
+                <p>Le travail d’infrastructure de Google explique pourquoi il s’agit désormais d’une couche de marché et non d’une collection d’anecdotes produit. Le protocole A2A est présenté comme un mécanisme de transferts d’agents sécurisés et autonomes pour des workflows collaboratifs. ADK Go 2.0 ajoute un moteur de workflow en graphe, des points de contrôle humain-dans-la-boucle, une orchestration dynamique et une résilience intégrée. Ce sont des primitives de garde. Elles répondent à un besoin institutionnel concret : laisser le travail voyager sans le laisser devenir orphelin. Le Code de pratique GPAI de la Commission européenne ajoute une autre pression. Dès lors que les fournisseurs font face à des obligations de documentation, de responsabilité et de traitement du risque systémique, le travail d’IA de longue durée ne peut pas rester une suite invisible d’appels au modèle. Il doit laisser une trace gouvernable.</p>
+
+                <h2>Les cinq continuités qui soutiennent la garde</h2>
+
+                <p>La garde du projet semble abstraite jusqu’au moment où l’on nomme les continuités qu’une institution souscrit réellement. Au minimum, cinq doivent survivre si l’IA doit porter du vrai travail plutôt que simplement l’orner :</p>
+
+                <ul>
+                    <li><strong>La continuité d’état :</strong> le système doit préserver ce qu’est le projet, ce qui a déjà eu lieu, quels artefacts comptent et ce qui reste irrésolu. Un agent de longue durée sans continuité d’état ne porte pas un projet ; il l’oublie sans cesse.</li>
+                    <li><strong>La continuité de permission :</strong> l’institution doit savoir quelles données, quels outils et quelles actions le système est autorisé à toucher, et comment ces permissions se resserrent, s’élargissent, expirent ou s’escaladent sous supervision. Sans cela, l’agent est puissant en opération, mais illisible administrativement.</li>
+                    <li><strong>La continuité de transfert :</strong> quand le travail passe d’un agent à un autre, ou d’un agent à un humain, le destinataire doit hériter d’assez de contexte pour continuer la tâche sans la reconstruire à partir de fragments. C’est ici que les protocoles de handoff sécurisés prennent une vraie valeur économique.</li>
+                    <li><strong>La continuité de preuve :</strong> chaque action conséquente doit laisser derrière elle un enregistrement exploitable : quel contexte était présent, quels outils ont été invoqués, quels fichiers ont changé, quelles validations ont été obtenues, et pourquoi l’étape suivante était justifiée. C’est la différence entre l’automatisation et l’automatisation admissible.</li>
+                    <li><strong>La continuité de reprise :</strong> un workflow cassé doit pouvoir redémarrer. Si le système se met en pause, escalade ou échoue, l’institution a besoin d’un chemin clair pour revenir dans le travail sans perdre le dossier, la raison ni la piste d’audit.</li>
+                </ul>
+
+                <p>Voyons ce qui se trouve sous ces continuités. Pas seulement un meilleur modèle frontière, mais aussi un middleware de mémoire, des contrôles d’identité et de délégation, des journaux rejouables, des standards de transfert, de la récupération liée à l’état vivant du dossier, et des points de contrôle humains qui ne détruisent pas l’élan. C’est pour cela que la garde mérite d’être nommée comme une couche d’infrastructure à part entière. C’est la différence entre une machine qui impressionne un utilisateur pendant cinq minutes et une machine à laquelle on peut confier une semaine entière de travail institutionnel.</p>
+
+                <h2>Pourquoi les institutions achèteront de la garde, pas seulement de l’intelligence</h2>
+
+                <p>Dans la santé, une bonne réponse sans garde est dangereuse. L’institution doit savoir quels dossiers ont été consultés, sous quelle frontière de consentement, avec quelle logique de rétention, et comment un clinicien peut revoir ou annuler le résultat. Dans une rédaction, un résumé élégant sans garde est également faible. Les éditeurs ont besoin de savoir quelle trace de sources a nourri le brouillon, quelles hypothèses d’audience y ont été intégrées, où le texte se trouve dans le flux de publication, et comment le travail peut reprendre après révision. Dans le travail de projet en entreprise, la même logique tient. La question premium n’est pas simplement de savoir si le modèle sait écrire, résumer ou classifier. C’est de savoir si le travail survit au contact d’institutions réelles.</p>
+
+                <p>Cela change l’unité commerciale d’analyse. Le siège de chat n’est pas l’unité d’achat ultime. Un projet de longue durée avec continuité gouvernée l’est davantage. L’acheteur souscrit le droit de laisser une machine porter du travail inachevé dans le temps sans perdre le dossier, la frontière d’autorité ni le chemin de reprise. Cela rend la garde bien plus durable qu’un wrapper générique autour d’une API de modèle, parce qu’elle se tient plus près de la responsabilité, de la confiance, de la conformité sectorielle et du débit opérationnel. L’intelligence peut attirer la première ligne budgétaire. La garde est ce qui justifie le renouvellement.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté institutionnelle africaine</h2>
+
+                <p>Les institutions africaines devraient étudier cette couche avec un sérieux particulier. L’ancien schéma de dépendance coûtait déjà cher : les logiciels importés arrivaient souvent avec des hypothèses étrangères sur la langue, le workflow, la hiérarchie et la mémoire administrative. Si la prochaine génération de systèmes d’IA commence à tenir des dossiers, des projets, du contexte patient, des brouillons éditoriaux et des historiques opérationnels, alors la dépendance s’approfondit. Une société peut avoir l’air d’adopter l’IA tout en cédant silencieusement la garde de son propre travail. Le danger n’est pas seulement l’extraction de données. C’est l’exportation d’une grammaire administrative : qui est autorisé à agir, ce qui doit être mémorisé, quelles approbations comptent, et comment la reprise s’effectue quand quelque chose se dérègle.</p>
+
+                <p>Un programme sérieux de souveraineté ne peut donc pas s’arrêter à l’accès au modèle. Il lui faut une infrastructure locale de garde : des archives capables de contenir la mémoire de cas de longue durée en langues africaines, des systèmes de délégation alignés sur la pratique institutionnelle locale, des journaux rejouables que les régulateurs et les organismes publics peuvent inspecter, et des chemins de reprise qui ne dépendent pas entièrement de la boîte noire d’un vendeur lointain. La leçon de Cheikh Anta Diop demeure exacte ici. Un peuple n’est pas souverain parce qu’il consomme un instrument puissant. Il le devient lorsqu’il peut examiner, reproduire et gouverner cet instrument selon ses propres termes. À l’âge du travail d’IA de longue durée, ces termes vivent dans la couche de garde.</p>
+
+                <h2>Où la surface investissable s’élargit</h2>
+
+                <p>Si cette thèse est juste, le capital devrait regarder au-delà des interfaces de chatbot vers les systèmes qui rendent le travail de longue durée gouvernable. Plusieurs catégories paraissent désormais particulièrement stratégiques :</p>
+
+                <ul>
+                    <li><strong>Middleware de mémoire de workflow et d’état de dossier :</strong> une infrastructure qui attache l’activité du modèle à un contexte de projet persistant, afin que les tâches puissent continuer à travers le temps, les outils et les participants sans perdre le dossier vivant.</li>
+                    <li><strong>Tissu d’identité déléguée et de permissions :</strong> des systèmes qui expriment qui peut agir, au nom de qui, sous quelles contraintes et pour combien de temps dans des workflows multi-agents.</li>
+                    <li><strong>Couches de transfert, de rejeu et d’audit :</strong> des produits qui préservent la chaîne de travail à travers les passages agent-à-agent et agent-à-humain, tout en rendant chaque étape inspectable et redémarrable.</li>
+                    <li><strong>Systèmes de garde sectoriels :</strong> des plateformes pour la santé, les médias, le service public, la finance et l’industrie, où les exigences de continuité sont propres au domaine et donc plus difficiles à banaliser.</li>
+                    <li><strong>Archives de preuve et de conformité pour le travail d’IA :</strong> des magasins de traces admissibles qui relient sorties, validations, appels d’outils et contrôles de politique dans un dossier qu’une institution peut défendre.</li>
+                </ul>
+
+                <p>Le déplacement important tient à ce que le capital souscrit réellement. Non pas une interface supplémentaire pour poser des questions habiles, mais le droit opérationnel de laisser des machines porter un travail conséquent sans dissoudre la responsabilité. L’entreprise qui possède cette couche se situera plus près des budgets de renouvellement, des comités de risque, des régulateurs et de la confiance institutionnelle que celle qui se contente d’envelopper un modèle frontière dans un chat poli. À mesure que l’IA quitte la conversation pour entrer dans le dossier, la prime décisive se déplace vers la couche de garde.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « ChatGPT is now a partner for your most ambitious work » (jeu. 09 juil. 2026 10:00:00 GMT ; description : ChatGPT Work est un agent capable d’agir à travers vos applications et vos fichiers, de rester avec un projet pendant des heures si nécessaire, et de transformer un objectif en travail fini.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « Launching Health in ChatGPT » (jeu. 23 juil. 2026 00:00:00 GMT ; description : Health in ChatGPT permet désormais aux utilisateurs américains éligibles de connecter de manière sécurisée des dossiers médicaux et Apple Health pour obtenir des informations plus personnalisées.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « How news organizations are using AI to advance their vital missions » (mer. 22 juil. 2026 13:00:00 GMT ; description : des organisations de presse utilisent l’IA pour renforcer le reportage, faire croître l’audience et améliorer les opérations métier.)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — « How A2A is Building a World of Collaborative Agents » (date visible : 18 juin 2026 ; méta-description : le protocole Agent-to-Agent fait passer l’IA d’outils isolés à un écosystème collaboratif, avec des transferts d’agents sécurisés et autonomes et des workflows extensibles.)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — « Build reliable multi-agent applications with ADK Go 2.0 » (date visible : 30 juin 2026 ; méta-description : moteur de workflow en graphe, humain-dans-la-boucle, orchestration dynamique et résilience intégrée pour les applications multi-agents.)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">Commission européenne / AI Office — « Drawing-up a General-Purpose AI Code of Practice » (page portant une mise à jour de juin 2026 ; méta-description : le premier Code de pratique pour l’IA à usage général détaille les règles de l’AI Act pour les fournisseurs de modèles à usage général et les modèles à risques systémiques.)</a></li>
+                </ul>
+
+            </div>
+
+            <footer class="article__footer">
+                <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+                <div class="article__meta-footer">
+                    <span data-i18n="article.published">Research Journal</span>
+                    <span>·</span>
+                    <time>July 27, 2026</time>
+                    <span>·</span>
+                    <span data-i18n="article.author">Diop Research</span>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>
