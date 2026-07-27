@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Org Chart Is Becoming a Workflow Graph — Diop Research</title>
+    <meta name="description" content="OpenAI’s latest work signals that AI is not just automating tasks; it is redrawing job boundaries. The strategic layer is becoming the workflow graph that routes authority, context, and approval across people and agents."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry073">Diop Daily #073 — July 2026</div>
+                <div class="article__meta-line">
+                    <time>July 28, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>workflow graph · org design · agent operations</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Org Chart Is Becoming a Workflow Graph</h1>
+
+                <p>For most of the software era, the firm was organized first and digitized second. The org chart came before the tooling. A company had departments, managers, analysts, operators, coordinators, and specialists; software then helped each role work faster inside its predefined boundary. The newest public AI signals suggest that this order is beginning to reverse. OpenAI’s latest work research says AI is expanding what people do at work, with ChatGPT users taking on tasks across roles and reshaping job boundaries. In the same week, OpenAI pointed to a 9,000-employee Codex rollout at NTT DATA and launched a small-business program built around ChatGPT Work. Google, meanwhile, continues to harden the substrate for secure agent handoffs and graph-based multi-agent execution. Put together, these signals describe a structural shift. AI is no longer just helping a worker complete the tasks already assigned to a role. It is beginning to redraw the role itself. The org chart is becoming a workflow graph.</p>
+
+                <p>This distinction matters. A workflow graph is not simply an automation script. It is a map of how authority, context, judgment, approvals, and execution move through an institution. Once AI can draft, route, summarize, escalate, retrieve, transform, and hand off work across functions, the practical unit of design is no longer the isolated employee seat. It is the sequence. Which tasks remain bundled inside one human role? Which become distributed across humans and agents? Which transitions require a signed handoff, a supervisor checkpoint, or a memory layer that preserves why the work moved? These are not interface questions. They are organizational questions.</p>
+
+                <blockquote>
+                    <p>The next strategic AI layer is not merely a better assistant inside the old firm. It is the workflow graph that reorganizes how work, authority, and context travel across people and agents.</p>
+                </blockquote>
+
+                <h2>From task automation to role recomposition</h2>
+
+                <p>Traditional automation assumed a stable role and an unstable task list. The finance analyst stayed a finance analyst; the software simply removed a few repetitive steps. The latest signals suggest something more disruptive. OpenAI’s July 27 research item does not say only that workers are getting faster. It says AI is expanding what people do at work and reshaping job boundaries. That language is important because it names a change in occupational perimeter, not merely in speed.</p>
+
+                <p>The NTT DATA example makes the same point in enterprise form. If 9,000 employees are using ChatGPT Enterprise and Codex to automate work and cut incident analysis to 30 minutes, the gain is not only operational efficiency. It is a redistribution of who can do what, when, and with how much dependency on adjacent teams. The person who once waited for a specialist queue may now complete more of the chain directly. The specialist, in turn, may move upward toward exception handling, architecture, or supervision. The role boundary shifts.</p>
+
+                <p>The small-business signal is equally revealing. Small firms do not have the luxury of deep departmental redundancy. When OpenAI frames ChatGPT Work as a way for entrepreneurs to build AI skills, automate work, and grow, it is describing a business environment in which one operator can temporarily inhabit fragments of many roles: analyst, marketer, scheduler, support desk, researcher, operator. AI does not just make the owner faster. It changes how many roles can be provisionally assembled inside one operating node.</p>
+
+                <p>Google’s A2A and ADK Go 2.0 work explain why this becomes durable rather than anecdotal. Secure, autonomous agent handoffs and graph-based workflow engines mean the market is acquiring a runtime for inter-role movement. Once work can move legibly between agents, humans, and tools, the old departmental wall ceases to be the natural container of execution. The graph becomes the container.</p>
+
+                <h2>What a workflow graph really changes</h2>
+
+                <p>If the org chart is becoming a workflow graph, several institutional assumptions begin to change at once:</p>
+
+                <ul>
+                    <li><strong>Job descriptions become porous:</strong> a role is defined less by a closed list of tasks and more by the set of actions it may initiate, supervise, approve, or inherit.</li>
+                    <li><strong>Authority becomes routable:</strong> the key question is not only who knows how to do the work, but who is permitted to trigger the next step, delegate it, and accept the output.</li>
+                    <li><strong>Exceptions become more valuable than averages:</strong> when routine execution is cheap, the premium human role shifts toward edge cases, judgment, repair, and escalation.</li>
+                    <li><strong>Memory becomes organizational infrastructure:</strong> if work moves across nodes in the graph, the institution needs persistent context so the next actor does not restart from zero.</li>
+                    <li><strong>Approval paths become software-visible:</strong> compliance, supervision, and sign-off can no longer live only in unwritten habits; they must be encoded into the graph itself.</li>
+                </ul>
+
+                <p>This is why the workflow graph deserves to be treated as an economic object. A company that merely buys model access gets bursts of intelligence. A company that learns to redesign work as a governed graph gets new operating geometry. It can compress queues, shorten handoffs, widen the span of competent action for mid-level operators, and reserve expensive specialists for the moments that truly require them. The value comes not only from generation, but from recomposition.</p>
+
+                <h2>Why buyers will pay for graph discipline</h2>
+
+                <p>Institutions do not actually want infinite fluidity. They want controlled fluidity. A hospital cannot let job boundaries dissolve without preserving liability and clinical review. A newsroom cannot let AI touch reporting, audience operations, and publishing workflows without maintaining editorial judgment and source integrity. A bank cannot let delegated execution travel freely without explicit authority checks. This is why the workflow graph will not be sold merely as convenience software. It will be sold as graph discipline: the ability to redraw work without dissolving governance.</p>
+
+                <p>That creates a new commercial center of gravity. The winning layer will not simply be the chatbot at the edge of the system. It will be the infrastructure that expresses who may act, which context must accompany the action, which steps require a human checkpoint, how the handoff is recorded, and how the institution recovers when the graph breaks. In earlier phases of AI adoption, buyers tolerated improvisation. In this phase, they will pay for explicit topology.</p>
+
+                <p>Seen this way, the workflow graph is the successor to the org chart, but not its complete abolition. The org chart still names formal accountability. The graph names operational flow. The firms that learn to align the two will be faster without becoming illegible. The firms that ignore the graph will keep paying the hidden tax of queue friction, duplicated review, and brittle handoffs. The firms that embrace it without governance will create a new kind of administrative chaos. The premium belongs to the middle path: adaptive routing with institutional clarity.</p>
+
+                <h2>Why this matters for African institutional sovereignty</h2>
+
+                <p>African institutions should approach this transition with unusual seriousness. Much of the continent’s digital life is still mediated through imported software that assumes foreign job architectures, foreign reporting chains, foreign language defaults, and foreign norms of escalation. If AI begins to redraw work itself, then dependency deepens. It is no longer only the software interface that is imported. The institution may begin importing the choreography of its own labor.</p>
+
+                <p>That is a civilizational issue, not just an enterprise software issue. The workflow graph decides whose judgment matters, which language is legible to the system, what counts as evidence, when a case is escalated, and how responsibility is distributed between frontline workers and central specialists. A society that does not build or adapt these graphs on its own terms risks letting an external software logic reorganize local administrative life from the inside.</p>
+
+                <p>Cheikh Anta Diop’s method remains useful here. Sovereignty is not the performance of pride; it is the capacity to inspect, reproduce, and govern the instruments that shape collective life. In the AI era, one of those instruments is the graph of work itself. African builders therefore need more than local model access. They need local workflow grammars: systems that can encode multilingual operations, sector-specific authority, public-service review norms, and institutional memory in forms that match African realities rather than overwrite them.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this thesis is correct, capital should look beyond generic copilots toward the systems that make role recomposition governable. Several categories now appear especially strategic:</p>
+
+                <ul>
+                    <li><strong>Workflow graph orchestration:</strong> platforms that model, execute, and monitor cross-role work as governed graphs rather than as isolated prompts or static automations.</li>
+                    <li><strong>Delegated authority and approval fabric:</strong> infrastructure that determines who can trigger which actions, under what constraints, with which escalation path and audit trail.</li>
+                    <li><strong>Organizational memory layers:</strong> systems that preserve case state, rationale, and handoff context so work can move across humans and agents without becoming incoherent.</li>
+                    <li><strong>Exception-routing and supervision software:</strong> products that detect when routine flow should pause, escalate, or transfer to a higher-trust operator.</li>
+                    <li><strong>Sector-specific graph templates:</strong> reusable patterns for health, media, finance, government, logistics, and education where authority boundaries are hard to improvise and expensive to get wrong.</li>
+                </ul>
+
+                <p>The important shift is what capital is actually underwriting. Not simply another interface for asking a model to help with a task, but the institutional capacity to redraw work itself without losing accountability. That sits closer to durable budgets than novelty software does, because it touches hiring logic, managerial span, review costs, throughput, and risk. When the org chart becomes a workflow graph, the investable layer is the infrastructure that makes the graph legible, governed, and repairable.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “How AI is expanding what people do at work” (Mon, 27 Jul 2026 03:30:00 GMT; description: new OpenAI research shows how AI is expanding what workers do, with ChatGPT users taking on tasks across roles and reshaping job boundaries.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “NTT DATA Group cuts incident analysis to 30 minutes with Codex” (Wed, 22 Jul 2026 00:00:00 GMT; description: NTT DATA Group uses ChatGPT Enterprise and Codex to help 9,000 employees automate work, cut incident analysis to 30 minutes, and scale secure AI adoption.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “Introducing the ChatGPT for small business program” (Tue, 21 Jul 2026 17:00:00 GMT; description: OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — “How A2A is Building a World of Collaborative Agents” (visible page date: June 18, 2026; meta description: the Agent-to-Agent protocol is shifting AI from isolated tools to a collaborative ecosystem, enabling secure, autonomous agent handoffs and scalable workflows.)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — “Build reliable multi-agent applications with ADK Go 2.0” (visible page date: June 30, 2026; meta description: graph-based workflow engine, built-in human-in-the-loop, dynamic routing, and built-in resilience for multi-agent applications.)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L’organigramme devient un graphe de workflow</h1>
+
+                <p>Pendant l’essentiel de l’ère logicielle, l’entreprise était d’abord organisée, puis numérisée. L’organigramme venait avant l’outil. Une société avait des départements, des managers, des analystes, des opérateurs, des coordinateurs et des spécialistes ; le logiciel aidait ensuite chaque rôle à travailler plus vite à l’intérieur d’une frontière déjà définie. Les signaux publics les plus récents autour de l’IA suggèrent que cet ordre commence à s’inverser. La dernière note de recherche d’OpenAI explique que l’IA élargit ce que les personnes font au travail, les utilisateurs de ChatGPT prenant en charge des tâches à travers plusieurs rôles et redessinant les frontières de poste. La même semaine, OpenAI mettait en avant un déploiement de Codex chez NTT DATA à l’échelle de 9 000 employés et lançait un programme pour petites entreprises centré sur ChatGPT Work. Google, de son côté, continue de durcir le substrat des transferts sécurisés entre agents et de l’exécution multi-agents en graphe. Pris ensemble, ces signaux décrivent un basculement structurel. L’IA n’aide plus seulement un travailleur à accomplir les tâches déjà assignées à un rôle. Elle commence à redessiner le rôle lui-même. L’organigramme devient un graphe de workflow.</p>
+
+                <p>Cette distinction compte. Un graphe de workflow n’est pas simplement un script d’automatisation. C’est une carte de la manière dont l’autorité, le contexte, le jugement, les validations et l’exécution circulent à travers une institution. Dès lors que l’IA peut rédiger, router, résumer, escalader, récupérer, transformer et transmettre du travail entre fonctions, l’unité pratique de conception n’est plus le siège employé isolé. C’est la séquence. Quelles tâches restent regroupées à l’intérieur d’un rôle humain ? Lesquelles deviennent distribuées entre humains et agents ? Quelles transitions exigent un transfert signé, un point de contrôle managérial ou une couche de mémoire qui conserve la raison du déplacement du travail ? Ce ne sont pas des questions d’interface. Ce sont des questions d’organisation.</p>
+
+                <blockquote>
+                    <p>La prochaine couche stratégique de l’IA n’est pas simplement un meilleur assistant logé dans l’ancienne entreprise. C’est le graphe de workflow qui réorganise la circulation du travail, de l’autorité et du contexte entre humains et agents.</p>
+                </blockquote>
+
+                <h2>De l’automatisation des tâches à la recomposition des rôles</h2>
+
+                <p>L’automatisation classique supposait un rôle stable et une liste de tâches instable. L’analyste financier restait analyste financier ; le logiciel retirait simplement quelques étapes répétitives. Les signaux les plus récents suggèrent quelque chose de plus perturbateur. L’item de recherche d’OpenAI du 27 juillet ne dit pas seulement que les travailleurs vont plus vite. Il dit que l’IA élargit ce que les personnes font au travail et reconfigure les frontières de poste. Cette formule importe, parce qu’elle nomme un changement de périmètre professionnel, et pas seulement un gain de vitesse.</p>
+
+                <p>L’exemple de NTT DATA exprime la même idée à l’échelle de l’entreprise. Si 9 000 employés utilisent ChatGPT Enterprise et Codex pour automatiser du travail et réduire l’analyse d’incident à 30 minutes, le gain n’est pas seulement opérationnel. C’est aussi une redistribution de qui peut faire quoi, à quel moment, et avec quel degré de dépendance vis-à-vis des équipes voisines. La personne qui attendait autrefois la file d’un spécialiste peut désormais accomplir une plus grande part de la chaîne directement. Le spécialiste, de son côté, peut remonter vers le traitement des exceptions, l’architecture ou la supervision. La frontière du rôle se déplace.</p>
+
+                <p>Le signal venant des petites entreprises est tout aussi révélateur. Les petites structures n’ont pas le luxe d’une redondance départementale profonde. Lorsqu’OpenAI présente ChatGPT Work comme un moyen d’aider les entrepreneurs à acquérir des compétences IA, automatiser du travail et croître, il décrit un environnement dans lequel un seul opérateur peut habiter provisoirement des fragments de plusieurs rôles : analyste, marketeur, planificateur, support, chercheur, opérateur. L’IA ne rend pas seulement le fondateur plus rapide. Elle modifie le nombre de rôles qu’un même nœud opératoire peut assembler provisoirement.</p>
+
+                <p>Les travaux de Google sur A2A et ADK Go 2.0 expliquent pourquoi cette évolution devient durable plutôt qu’anecdotique. Les transferts sécurisés et autonomes entre agents, ainsi que les moteurs de workflow en graphe, donnent au marché un runtime pour le mouvement inter-rôles. Dès lors que le travail peut circuler de façon lisible entre agents, humains et outils, le vieux mur départemental cesse d’être le conteneur naturel de l’exécution. Le graphe devient le conteneur.</p>
+
+                <h2>Ce qu’un graphe de workflow change réellement</h2>
+
+                <p>Si l’organigramme devient un graphe de workflow, plusieurs hypothèses institutionnelles changent en même temps :</p>
+
+                <ul>
+                    <li><strong>Les fiches de poste deviennent poreuses :</strong> un rôle se définit moins par une liste fermée de tâches que par l’ensemble des actions qu’il peut initier, superviser, approuver ou recevoir.</li>
+                    <li><strong>L’autorité devient routable :</strong> la vraie question n’est pas seulement de savoir qui sait faire le travail, mais qui est autorisé à déclencher l’étape suivante, à la déléguer et à accepter le résultat.</li>
+                    <li><strong>Les exceptions prennent plus de valeur que les moyennes :</strong> lorsque l’exécution routinière devient bon marché, la prime humaine se déplace vers les cas limites, le jugement, la réparation et l’escalade.</li>
+                    <li><strong>La mémoire devient une infrastructure organisationnelle :</strong> si le travail passe d’un nœud à l’autre dans le graphe, l’institution a besoin d’un contexte persistant pour que l’acteur suivant ne reparte pas de zéro.</li>
+                    <li><strong>Les chemins d’approbation deviennent visibles pour le logiciel :</strong> conformité, supervision et validation ne peuvent plus vivre seulement dans des habitudes implicites ; ils doivent être encodés dans le graphe lui-même.</li>
+                </ul>
+
+                <p>C’est pourquoi le graphe de workflow mérite d’être traité comme un objet économique. Une entreprise qui achète seulement l’accès à un modèle obtient des sursauts d’intelligence. Une entreprise qui apprend à redessiner le travail comme un graphe gouverné obtient une nouvelle géométrie opérationnelle. Elle peut compresser les files, raccourcir les transferts, élargir le rayon d’action compétent des opérateurs intermédiaires, et réserver les spécialistes coûteux aux moments qui les exigent vraiment. La valeur ne vient pas seulement de la génération, mais de la recomposition.</p>
+
+                <h2>Pourquoi les acheteurs paieront pour la discipline du graphe</h2>
+
+                <p>Les institutions ne veulent pas réellement une fluidité infinie. Elles veulent une fluidité contrôlée. Un hôpital ne peut pas laisser les frontières de poste se dissoudre sans préserver la responsabilité et la revue clinique. Une rédaction ne peut pas laisser l’IA toucher au reportage, aux opérations d’audience et au flux de publication sans maintenir le jugement éditorial et l’intégrité des sources. Une banque ne peut pas laisser l’exécution déléguée circuler librement sans contrôles explicites d’autorité. Voilà pourquoi le graphe de workflow ne sera pas vendu comme un simple logiciel de confort. Il sera vendu comme une discipline du graphe : la capacité de redessiner le travail sans dissoudre la gouvernance.</p>
+
+                <p>Cela crée un nouveau centre de gravité commercial. La couche gagnante ne sera pas simplement le chatbot à la lisière du système. Ce sera l’infrastructure qui exprime qui peut agir, quel contexte doit accompagner l’action, quelles étapes exigent un point de contrôle humain, comment le transfert est enregistré, et comment l’institution se rétablit quand le graphe se brise. Dans les phases précédentes de l’adoption de l’IA, les acheteurs toléraient l’improvisation. Dans cette phase, ils paieront pour une topologie explicite.</p>
+
+                <p>Vu sous cet angle, le graphe de workflow succède à l’organigramme sans pourtant l’abolir entièrement. L’organigramme continue de nommer la responsabilité formelle. Le graphe nomme le flux opérationnel. Les entreprises qui apprennent à aligner les deux seront plus rapides sans devenir illisibles. Celles qui ignorent le graphe continueront de payer la taxe cachée de la friction des files, de la revue dupliquée et des transferts fragiles. Celles qui l’embrassent sans gouvernance produiront une nouvelle forme de chaos administratif. La prime appartient à la voie médiane : un routage adaptatif avec clarté institutionnelle.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté institutionnelle africaine</h2>
+
+                <p>Les institutions africaines devraient aborder cette transition avec un sérieux particulier. Une grande partie de la vie numérique du continent reste médiatisée par des logiciels importés qui présupposent des architectures de poste étrangères, des chaînes de reporting étrangères, des langues par défaut étrangères et des normes d’escalade étrangères. Si l’IA commence à redessiner le travail lui-même, la dépendance s’approfondit. Ce n’est plus seulement l’interface logicielle qui est importée. L’institution risque d’importer la chorégraphie même de son travail.</p>
+
+                <p>C’est une question civilisationnelle, pas seulement un sujet de logiciel d’entreprise. Le graphe de workflow décide quel jugement compte, quelle langue est lisible pour le système, ce qui vaut comme preuve, à quel moment un dossier est escaladé, et comment la responsabilité est distribuée entre agents de première ligne et spécialistes centraux. Une société qui ne construit pas ou n’adapte pas ces graphes selon ses propres termes risque de laisser une logique logicielle externe réorganiser de l’intérieur sa vie administrative locale.</p>
+
+                <p>La méthode de Cheikh Anta Diop reste utile ici. La souveraineté n’est pas une performance de fierté ; c’est la capacité d’inspecter, de reproduire et de gouverner les instruments qui façonnent la vie collective. À l’ère de l’IA, l’un de ces instruments est le graphe du travail lui-même. Les bâtisseurs africains ont donc besoin de plus que d’un accès local aux modèles. Ils ont besoin de grammaires locales du workflow : des systèmes capables d’encoder des opérations multilingues, des autorités sectorielles spécifiques, des normes de revue du service public et une mémoire institutionnelle dans des formes qui correspondent aux réalités africaines au lieu de les écraser.</p>
+
+                <h2>Où la surface investissable s’élargit</h2>
+
+                <p>Si cette thèse est juste, le capital devrait regarder au-delà des copilotes génériques vers les systèmes qui rendent la recomposition des rôles gouvernable. Plusieurs catégories paraissent désormais particulièrement stratégiques :</p>
+
+                <ul>
+                    <li><strong>Orchestration de graphes de workflow :</strong> des plateformes qui modélisent, exécutent et surveillent le travail inter-rôles comme des graphes gouvernés plutôt que comme des prompts isolés ou des automatisations statiques.</li>
+                    <li><strong>Tissu d’autorité déléguée et d’approbation :</strong> une infrastructure qui détermine qui peut déclencher quelles actions, sous quelles contraintes, avec quel chemin d’escalade et quelle piste d’audit.</li>
+                    <li><strong>Couches de mémoire organisationnelle :</strong> des systèmes qui préservent l’état d’un dossier, la logique de décision et le contexte du transfert afin que le travail puisse circuler entre humains et agents sans devenir incohérent.</li>
+                    <li><strong>Logiciels de routage des exceptions et de supervision :</strong> des produits qui détectent quand un flux routinier doit se mettre en pause, escalader ou passer à un opérateur de plus haute confiance.</li>
+                    <li><strong>Modèles sectoriels de graphes :</strong> des patrons réutilisables pour la santé, les médias, la finance, l’État, la logistique et l’éducation, là où les frontières d’autorité sont difficiles à improviser et coûteuses à mal dessiner.</li>
+                </ul>
+
+                <p>Le déplacement décisif tient à ce que le capital souscrit réellement. Il ne s’agit pas seulement d’une interface supplémentaire pour demander à un modèle d’aider sur une tâche, mais d’une capacité institutionnelle à redessiner le travail lui-même sans perdre la responsabilité. Cette couche se tient plus près des budgets durables que les logiciels de nouveauté, parce qu’elle touche à la logique d’embauche, à l’étendue managériale, au coût de la revue, au débit et au risque. Quand l’organigramme devient un graphe de workflow, la couche investissable est l’infrastructure qui rend ce graphe lisible, gouverné et réparable.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « How AI is expanding what people do at work » (lun. 27 juil. 2026 03:30:00 GMT ; description : la nouvelle recherche d’OpenAI montre comment l’IA élargit ce que les travailleurs font au travail, les utilisateurs de ChatGPT prenant en charge des tâches à travers plusieurs rôles et redessinant les frontières de poste.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « NTT DATA Group cuts incident analysis to 30 minutes with Codex » (mer. 22 juil. 2026 00:00:00 GMT ; description : NTT DATA Group utilise ChatGPT Enterprise et Codex pour aider 9 000 employés à automatiser du travail, réduire l’analyse d’incident à 30 minutes et étendre une adoption sécurisée de l’IA.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « Introducing the ChatGPT for small business program » (mar. 21 juil. 2026 17:00:00 GMT ; description : OpenAI lance le programme ChatGPT pour les petites entreprises, aidant les entrepreneurs à développer des compétences IA, automatiser du travail et croître avec ChatGPT Work.)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — « How A2A is Building a World of Collaborative Agents » (date visible : 18 juin 2026 ; méta-description : le protocole Agent-to-Agent fait passer l’IA d’outils isolés à un écosystème collaboratif, avec des transferts sécurisés et autonomes entre agents et des workflows extensibles.)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — « Build reliable multi-agent applications with ADK Go 2.0 » (date visible : 30 juin 2026 ; méta-description : moteur de workflow en graphe, humain-dans-la-boucle, routage dynamique et résilience intégrée pour des applications multi-agents.)</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+                <div class="article__meta-footer">
+                    <span data-i18n="article.published">Research Journal</span>
+                    <span>·</span>
+                    <time>July 28, 2026</time>
+                    <span>·</span>
+                    <span data-i18n="article.author">Diop Research</span>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>

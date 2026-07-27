@@ -10,6 +10,9 @@
     var DEFAULT_LANG = 'en';
 
     var translations = {
+        'meta.post073.title':  { en: 'The Org Chart Is Becoming a Workflow Graph — Diop Research', fr: 'L’organigramme devient un graphe de workflow — Diop Research' },
+        'meta.post073.description': { en: 'OpenAI’s latest work signals that AI is not just automating tasks; it is redrawing job boundaries. The strategic layer is becoming the workflow graph that routes authority, context, and approval across people and agents.', fr: 'Les derniers signaux d’OpenAI montrent que l’IA n’automatise pas seulement des tâches ; elle redessine les frontières de poste. La couche stratégique devient le graphe de workflow qui route l’autorité, le contexte et les validations entre humains et agents.' },
+
         'meta.post044.title':  { en: 'Evaluative Debt Is Becoming the AI Liability We Ignore — Diop Research', fr: 'La dette évaluative devient la responsabilité en IA que nous ignorons — Diop Research' },
         'meta.post044.description': { en: 'The EU is instrumenting standardized testing, product liability, and transparency rules for AI systems.', fr: "L’Union européenne met en place des tests standardisés, des régimes de responsabilité et des règles de transparence pour les systèmes d’IA." },
 
@@ -91,6 +94,7 @@
         'article.entry070':     { en: 'Diop Daily #070 — July 2026', fr: 'Diop Quotidien n°070 — Juillet 2026' },
         'article.entry071':     { en: 'Diop Daily #071 — July 2026', fr: 'Diop Quotidien n°071 — Juillet 2026' },
         'article.entry072':     { en: 'Diop Daily #072 — July 2026', fr: 'Diop Quotidien n°072 — Juillet 2026' },
+        'article.entry073':     { en: 'Diop Daily #073 — July 2026', fr: 'Diop Quotidien n°073 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -103,6 +107,17 @@
     };
 
     var postTranslations = {
+
+'diop-daily-073': {
+    title: {
+        en: "The Org Chart Is Becoming a Workflow Graph",
+        fr: "L’organigramme devient un graphe de workflow"
+    },
+    excerpt: {
+        en: "OpenAI’s latest work research, NTT DATA’s 9,000-employee Codex rollout, and Google’s multi-agent runtime stack all point to the same shift: AI is no longer just helping workers complete tasks. It is redrawing job boundaries, turning the org chart into a workflow graph where authority, context, and approvals move across people and agents.",
+        fr: "Les dernières recherches d’OpenAI sur le travail, le déploiement de Codex chez NTT DATA à l’échelle de 9 000 employés et la pile d’exécution multi-agents de Google convergent vers le même basculement : l’IA n’aide plus seulement les travailleurs à accomplir des tâches. Elle redessine les frontières de poste, transformant l’organigramme en graphe de workflow où l’autorité, le contexte et les validations circulent entre humains et agents."
+    }
+},
 
 'diop-daily-072': {
     title: {
