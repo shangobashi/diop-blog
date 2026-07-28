@@ -10,6 +10,9 @@
     var DEFAULT_LANG = 'en';
 
     var translations = {
+        'meta.post074.title':  { en: 'Before the Answer, the Record: AI’s Next Gate Is Live Context — Diop Research', fr: 'Avant la réponse, le dossier : le prochain seuil de l’IA est le contexte vivant — Diop Research' },
+        'meta.post074.description': { en: 'Health in ChatGPT, OpenAI Presence, and Google’s agent runtime stack all point to the same shift: the decisive AI layer is the context gate that decides which live records a machine may touch, under what authority, and with what recovery path.', fr: 'Health in ChatGPT, OpenAI Presence et la pile d’exécution agentique de Google convergent vers le même déplacement : la couche décisive de l’IA devient la porte du contexte, qui décide quels dossiers vivants une machine peut toucher, sous quelle autorité, et avec quel chemin de reprise.' },
+
         'meta.post073.title':  { en: 'The Org Chart Is Becoming a Workflow Graph — Diop Research', fr: 'L’organigramme devient un graphe de workflow — Diop Research' },
         'meta.post073.description': { en: 'OpenAI’s latest work signals that AI is not just automating tasks; it is redrawing job boundaries. The strategic layer is becoming the workflow graph that routes authority, context, and approval across people and agents.', fr: 'Les derniers signaux d’OpenAI montrent que l’IA n’automatise pas seulement des tâches ; elle redessine les frontières de poste. La couche stratégique devient le graphe de workflow qui route l’autorité, le contexte et les validations entre humains et agents.' },
 
@@ -95,6 +98,7 @@
         'article.entry071':     { en: 'Diop Daily #071 — July 2026', fr: 'Diop Quotidien n°071 — Juillet 2026' },
         'article.entry072':     { en: 'Diop Daily #072 — July 2026', fr: 'Diop Quotidien n°072 — Juillet 2026' },
         'article.entry073':     { en: 'Diop Daily #073 — July 2026', fr: 'Diop Quotidien n°073 — Juillet 2026' },
+        'article.entry074':     { en: 'Diop Daily #074 — July 2026', fr: 'Diop Quotidien n°074 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -107,6 +111,17 @@
     };
 
     var postTranslations = {
+
+'diop-daily-074': {
+    title: {
+        en: "Before the Answer, the Record: AI’s Next Gate Is Live Context",
+        fr: "Avant la réponse, le dossier : le prochain seuil de l’IA est le contexte vivant"
+    },
+    excerpt: {
+        en: "Health in ChatGPT, OpenAI Presence, and Google’s agent runtime stack all point to the same shift: the decisive AI layer is no longer the answer surface. It is the context gate—the infrastructure that decides which live records a machine may touch, under what authority, and with what recovery path.",
+        fr: "Health in ChatGPT, OpenAI Presence et la pile d’exécution agentique de Google convergent vers le même déplacement : la couche décisive de l’IA n’est plus la surface de réponse. C’est la porte du contexte — l’infrastructure qui décide quels dossiers vivants une machine peut toucher, sous quelle autorité, et avec quel chemin de reprise."
+    }
+},
 
 'diop-daily-073': {
     title: {

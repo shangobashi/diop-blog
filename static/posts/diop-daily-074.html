@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Before the Answer, the Record: AI’s Next Gate Is Live Context — Diop Research</title>
+    <meta name="description" content="Health in ChatGPT, OpenAI Presence, and Google’s agent runtime stack all point to the same shift: the decisive AI layer is the context gate that decides which live records a machine may touch, under what authority, and with what recovery path."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry074">Diop Daily #074 — July 2026</div>
+                <div class="article__meta-line">
+                    <time>July 29, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>context gate · live records · permission fabric</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Before the Answer, the Record: AI’s Next Gate Is Live Context</h1>
+
+                <p>The market spent its first AI cycle admiring outputs. It is entering the next one by confronting a harder question: what happens when the model is allowed to touch a live institutional record? Not a synthetic benchmark. Not a disposable prompt. A medical file, an audience system, a customer conversation, an internal workflow, a compliance trail, a case that already has consequences attached to it. The recent public signal cluster is unusually clear. OpenAI is now offering Health in ChatGPT, with eligible users able to connect medical records and Apple Health. It is introducing OpenAI Presence as a trusted voice-and-chat platform for customer and internal workflows. It is showing news organizations using AI not only for drafting, but for reporting support, audience growth, and business operations. Google, meanwhile, is hardening the substrate for secure agent handoffs and graph-based orchestration with human checkpoints. Put together, these do not merely say that AI is improving. They say the decisive commercial threshold is shifting. The next gate is live context.</p>
+
+                <p>This is a more specific thesis than “AI is entering the enterprise.” Enterprises have always had software. The strategic change is that AI is being invited closer to institutional memory itself. Once a system can read, carry, summarize, route, or act on live records, the purchase question changes. Buyers are no longer underwriting eloquence alone. They are underwriting a bounded right of contact: which records the system may touch, under what authority, for what duration, with which escalation path, and with what recovery trail if the machine should not have touched them at all.</p>
+
+                <blockquote>
+                    <p>The next premium AI layer is not the answer surface. It is the context gate: the infrastructure that decides which live records a machine may touch, under what authority, and with what proof, limits, and recovery.</p>
+                </blockquote>
+
+                <h2>Why live context changes the market</h2>
+
+                <p>Once AI works only on synthetic or user-supplied text, failure is relatively legible. The draft is weak, the summary is wrong, the code is buggy, the reply is unhelpful. These are serious issues, but they are still output problems. Live context creates another order of consequence. A health-connected system can misread or over-reach into sensitive records. A customer-facing presence layer can inherit incomplete account history and speak too confidently. A newsroom workflow can confuse reporting assistance, audience analytics, and operational judgment if the boundaries between them are vague. The question therefore stops being “did the model sound good?” and becomes “what was the machine permitted to know, carry, and do?”</p>
+
+                <p>This is why the new public sources fit together so tightly. Health in ChatGPT is not simply a personalization feature. It is a live-records signal. OpenAI Presence is not simply a better chatbot. It is a trusted-contact signal: the machine as a front door into customer and internal workflow. The newsroom item is not simply an adoption anecdote. It shows AI entering a mixed environment where editorial memory, audience operations, and business procedure all live near each other. Google’s A2A and ADK Go 2.0 work explain how such environments become operational rather than theatrical: secure handoffs, graph runtimes, dynamic routing, and human checkpoints make it possible for context to travel without becoming ownerless chaos.</p>
+
+                <h2>The four duties of a real context gate</h2>
+
+                <p>If live context is becoming the gate, then the market needs more than access connectors. It needs a discipline. At minimum, a serious context gate has four duties:</p>
+
+                <ul>
+                    <li><strong>Selective admission:</strong> the system must know which records are relevant and which must remain outside the current action. More context is not automatically better context.</li>
+                    <li><strong>Bounded authority:</strong> access rights must be tied to role, purpose, time, and escalation conditions. A machine that can see everything will eventually mishandle something.</li>
+                    <li><strong>Transfer discipline:</strong> when context moves between agents, tools, or humans, the handoff must preserve meaning without leaking unnecessary records downstream.</li>
+                    <li><strong>Recovery and contestability:</strong> if the wrong record was touched, or the right record was used in the wrong way, the institution must be able to reconstruct the event, challenge it, and repair the workflow without starting from zero.</li>
+                </ul>
+
+                <p>These duties matter because live context is where institutional trust actually resides. A ministry may forgive a mediocre prototype. It will not forgive a workflow that touches the wrong case file. A hospital may tolerate a weak first draft of patient guidance if a clinician catches it. It cannot tolerate invisible context drift around medical records. A publisher may experiment with AI summaries. It cannot casually dissolve the boundaries between source material, audience signals, and editorial approval. Context is not an accessory to work. It is the field in which permission, memory, and liability converge.</p>
+
+                <h2>Why buyers will pay for context discipline</h2>
+
+                <p>The important shift is that context discipline sits much closer to durable budgets than output novelty does. Buyers will pay to lower the risk that AI touches the wrong record, retains context too long, routes sensitive material without supervision, or leaves no usable explanation behind. This is not cosmetic risk reduction. It changes how institutions think about operating capacity. A system with strong context gating can let more work happen at the edge because managers know the access boundary is legible. It can shorten response times because relevant records arrive with the right handoff, instead of being rebuilt manually. It can widen the span of safe delegation because escalation rules are encoded into the runtime rather than living only in tribal memory.</p>
+
+                <p>Notice how this differs from adjacent thesis families in the archive. Workflow-graph thinking asks how work moves across roles. Custody asks who keeps the project coherent over time. The context-gate question comes one step earlier: what must be true before that movement is allowed to touch live institutional memory in the first place? That difference matters commercially. The graph may be elegant and the custody layer robust, yet the system remains unfit for serious deployment if it cannot control admission to sensitive context.</p>
+
+                <h2>Why this matters for African institutional sovereignty</h2>
+
+                <p>African institutions should read this shift with precision. Much of the continent’s digital environment is already shaped by fragmented records, multilingual operations, uneven interoperability, imported workflow software, and fragile administrative memory. In such environments, context mistakes are expensive. They create duplication, mistranslation, improper escalation, and institutional confusion. If AI is layered on top without a locally governed context discipline, the result will not be intelligent modernization. It will be high-speed confusion backed by foreign defaults.</p>
+
+                <p>The sovereign opportunity is therefore not only to host models locally or fine-tune language support. It is to build context gates aligned with local realities: multilingual record access, public-service authority chains, health and education workflows with human review, archives that distinguish public evidence from private notes, and consent structures that remain legible to local regulators and institutions. Cheikh Anta Diop’s lesson remains exact. A people is not protected merely because it uses a powerful instrument. It is protected when it governs the conditions under which that instrument may enter the record of collective life.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this thesis is correct, capital should look beyond interface polish toward the infrastructure that makes live context safe, selective, and governable. Several categories now look especially strategic:</p>
+
+                <ul>
+                    <li><strong>Context-broker middleware:</strong> systems that decide which records, fields, and histories are admissible for a given action rather than dumping entire data stores into an agent.</li>
+                    <li><strong>Permission fabric for multi-agent workflows:</strong> infrastructure that binds access rights to role, task, and escalation path across humans, agents, and tools.</li>
+                    <li><strong>Sensitive-record routing and redaction layers:</strong> products that preserve relevance while constraining over-exposure in health, finance, media, and public-service environments.</li>
+                    <li><strong>Context replay and dispute systems:</strong> audit layers that let institutions reconstruct what context was available at the moment of action and whether its use was justified.</li>
+                    <li><strong>Sector-specific context gates:</strong> packaged governance layers for domains where records are valuable precisely because they are dangerous to mishandle.</li>
+                </ul>
+
+                <p>The deeper point is that the next serious AI buyer is not merely asking for a better answer engine. The buyer is asking for a governable right to let machines touch live institutional memory. That is a harder problem, but also a more durable one. Whoever solves it does not own just another wrapper around a frontier model. They own a decision surface that sits closer to liability, trust, compliance, throughput, and institutional legitimacy.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “Launching Health in ChatGPT” (Thu, 23 Jul 2026 00:00:00 GMT; description: Health in ChatGPT now lets eligible U.S. users securely connect medical records and Apple Health to get more personalized insights and better understand their health.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “Introducing OpenAI Presence” (Wed, 22 Jul 2026 05:30:00 GMT; description: a proven enterprise AI agent platform that helps organizations deploy trusted voice and chat agents for customer and internal workflows.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “How news organizations are using AI to advance their vital missions” (Wed, 22 Jul 2026 13:00:00 GMT; description: news organizations are using AI to strengthen reporting, grow audiences, and improve business operations, with OpenAI tools supporting journalists and publishers worldwide.)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — “How A2A is Building a World of Collaborative Agents” (visible page date: June 18, 2026; meta description: the Agent-to-Agent protocol enables secure, autonomous agent handoffs and scalable workflows.)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — “Build reliable multi-agent applications with ADK Go 2.0” (visible page date: June 30, 2026; meta description: graph-based workflow engine, built-in human-in-the-loop orchestration, dynamic routing, and built-in resilience.)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">European Commission / AI Office — “Drawing-up a General-Purpose AI Code of Practice” (meta description: the first General-Purpose AI Code of Practice details AI Act rules for providers of general-purpose AI models and models with systemic risks.)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Avant la réponse, le dossier : le prochain seuil de l’IA est le contexte vivant</h1>
+
+                <p>Le marché a passé son premier cycle IA à admirer les sorties. Il entre dans le suivant en affrontant une question plus dure : que se passe-t-il quand le modèle est autorisé à toucher un dossier institutionnel vivant ? Pas un benchmark synthétique. Pas un prompt jetable. Un dossier médical, un système d’audience, une conversation client, un workflow interne, une trace de conformité, un cas qui porte déjà des conséquences. Le récent faisceau de signaux publics est inhabituellement clair. OpenAI propose désormais Health in ChatGPT, permettant à des utilisateurs éligibles de connecter des dossiers médicaux et Apple Health. L’entreprise introduit OpenAI Presence comme plateforme vocale et conversationnelle de confiance pour les workflows clients et internes. Elle montre aussi des organisations de presse utilisant l’IA non seulement pour rédiger, mais pour soutenir le reportage, la croissance d’audience et les opérations métier. Google, de son côté, durcit le substrat des transferts sécurisés entre agents et de l’orchestration en graphe avec points de contrôle humains. Pris ensemble, ces signaux ne disent pas seulement que l’IA progresse. Ils disent que le seuil commercial décisif se déplace. Le prochain seuil est le contexte vivant.</p>
+
+                <p>Cette thèse est plus précise que « l’IA entre dans l’entreprise ». Les entreprises ont toujours eu des logiciels. Le changement stratégique est que l’IA est invitée plus près de la mémoire institutionnelle elle-même. Dès lors qu’un système peut lire, porter, résumer, router ou agir sur des dossiers vivants, la question d’achat change. Les acheteurs ne souscrivent plus seulement l’éloquence. Ils souscrivent un droit borné de contact : quels dossiers le système peut toucher, sous quelle autorité, pendant combien de temps, avec quel chemin d’escalade, et avec quelle trace de reprise si la machine n’aurait pas dû y toucher du tout.</p>
+
+                <blockquote>
+                    <p>La prochaine couche premium de l’IA n’est pas la surface de réponse. C’est la porte du contexte : l’infrastructure qui décide quels dossiers vivants une machine peut toucher, sous quelle autorité, avec quelles preuves, quelles limites et quelle capacité de reprise.</p>
+                </blockquote>
+
+                <h2>Pourquoi le contexte vivant change le marché</h2>
+
+                <p>Tant que l’IA travaille seulement sur du texte synthétique ou fourni par l’utilisateur, l’échec reste relativement lisible. Le brouillon est faible, le résumé est faux, le code est bogué, la réponse est peu utile. Ce sont des problèmes sérieux, mais ce sont encore des problèmes de sortie. Le contexte vivant crée un autre ordre de conséquences. Un système connecté à la santé peut mal lire un dossier sensible ou aller trop loin dans son accès. Une couche de présence orientée client peut hériter d’un historique de compte incomplet et parler avec trop d’assurance. Un workflow de rédaction peut confondre aide au reportage, signaux d’audience et jugement éditorial si les frontières entre ces domaines sont vagues. La question cesse donc d’être « le modèle sonnait-il bien ? » pour devenir « que savait, portait et faisait-il le droit de savoir, porter et faire ? »</p>
+
+                <p>C’est pourquoi les nouvelles sources publiques s’emboîtent si étroitement. Health in ChatGPT n’est pas simplement une fonction de personnalisation. C’est un signal de dossiers vivants. OpenAI Presence n’est pas simplement un meilleur chatbot. C’est un signal de contact de confiance : la machine comme porte d’entrée vers les workflows clients et internes. L’item sur les rédactions n’est pas seulement une anecdote d’adoption. Il montre l’IA entrant dans un environnement mixte où la mémoire éditoriale, les opérations d’audience et les procédures métier vivent à proximité les unes des autres. Les travaux de Google sur A2A et ADK Go 2.0 expliquent comment de tels environnements deviennent opératoires plutôt que théâtraux : transferts sécurisés, runtimes en graphe, routage dynamique et points de contrôle humains permettent au contexte de circuler sans devenir un chaos sans propriétaire.</p>
+
+                <h2>Les quatre devoirs d’une véritable porte du contexte</h2>
+
+                <p>Si le contexte vivant devient le seuil décisif, le marché a besoin de plus que de simples connecteurs d’accès. Il lui faut une discipline. Au minimum, une porte du contexte sérieuse assume quatre devoirs :</p>
+
+                <ul>
+                    <li><strong>Admission sélective :</strong> le système doit savoir quels dossiers sont pertinents et lesquels doivent rester hors de l’action en cours. Plus de contexte n’est pas automatiquement meilleur contexte.</li>
+                    <li><strong>Autorité bornée :</strong> les droits d’accès doivent être liés au rôle, à la finalité, à la durée et aux conditions d’escalade. Une machine qui peut tout voir finira par mal traiter quelque chose.</li>
+                    <li><strong>Discipline de transfert :</strong> lorsque le contexte passe entre agents, outils ou humains, le handoff doit préserver le sens sans faire fuiter inutilement des dossiers vers l’aval.</li>
+                    <li><strong>Reprise et contestabilité :</strong> si le mauvais dossier a été touché, ou si le bon dossier a été utilisé de la mauvaise manière, l’institution doit pouvoir reconstruire l’événement, le contester et réparer le workflow sans repartir de zéro.</li>
+                </ul>
+
+                <p>Ces devoirs importent parce que le contexte vivant est l’endroit où réside réellement la confiance institutionnelle. Un ministère peut pardonner un prototype médiocre. Il ne pardonnera pas un workflow qui touche le mauvais dossier. Un hôpital peut tolérer un premier brouillon faible si un clinicien le rattrape. Il ne peut pas tolérer une dérive invisible autour des dossiers médicaux. Un éditeur peut expérimenter des résumés IA. Il ne peut pas dissoudre à la légère les frontières entre matériau source, signaux d’audience et validation éditoriale. Le contexte n’est pas un accessoire du travail. C’est le champ où convergent permission, mémoire et responsabilité.</p>
+
+                <h2>Pourquoi les acheteurs paieront pour la discipline du contexte</h2>
+
+                <p>Le déplacement important est que la discipline du contexte se situe bien plus près des budgets durables que la nouveauté des sorties. Les acheteurs paieront pour réduire le risque que l’IA touche le mauvais dossier, conserve un contexte trop longtemps, route un matériau sensible sans supervision, ou ne laisse derrière elle aucune explication utilisable. Ce n’est pas une réduction cosmétique du risque. Cela change la manière dont les institutions pensent leur capacité opérationnelle. Un système doté d’un fort filtrage du contexte peut laisser davantage de travail se faire à la périphérie, parce que les managers savent que la frontière d’accès est lisible. Il peut raccourcir les délais de réponse parce que les bons dossiers arrivent avec le bon handoff au lieu d’être reconstruits à la main. Il peut élargir le rayon d’une délégation sûre parce que les règles d’escalade sont encodées dans le runtime au lieu de vivre uniquement dans la mémoire tribale.</p>
+
+                <p>Notons en quoi cela diffère des familles de thèses voisines déjà présentes dans l’archive. Le graphe de workflow demande comment le travail circule entre rôles. La garde demande qui maintient la cohérence du projet dans le temps. La question de la porte du contexte se pose un cran plus tôt : qu’est-ce qui doit être vrai avant que ce mouvement soit autorisé à toucher la mémoire institutionnelle vivante ? Cette différence compte commercialement. Le graphe peut être élégant et la couche de garde robuste, mais le système reste impropre à un déploiement sérieux s’il ne sait pas contrôler l’admission au contexte sensible.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté institutionnelle africaine</h2>
+
+                <p>Les institutions africaines devraient lire ce déplacement avec précision. Une grande partie de l’environnement numérique du continent est déjà marquée par des dossiers fragmentés, des opérations multilingues, une interopérabilité inégale, des logiciels de workflow importés et une mémoire administrative fragile. Dans de tels environnements, les erreurs de contexte coûtent cher. Elles créent duplication, mistraduction, mauvaise escalade et confusion institutionnelle. Si l’IA est ajoutée par-dessus sans discipline locale du contexte, le résultat ne sera pas une modernisation intelligente. Ce sera une confusion accélérée à grande vitesse, portée par des défauts étrangers.</p>
+
+                <p>L’opportunité souveraine ne consiste donc pas seulement à héberger localement des modèles ou à améliorer la couverture linguistique. Elle consiste à construire des portes du contexte alignées sur les réalités locales : accès multilingue aux dossiers, chaînes d’autorité du service public, workflows de santé et d’éducation avec revue humaine, archives distinguant preuve publique et notes privées, et structures de consentement lisibles pour les régulateurs et institutions locales. La leçon de Cheikh Anta Diop demeure exacte. Un peuple n’est pas protégé simplement parce qu’il utilise un instrument puissant. Il l’est lorsqu’il gouverne les conditions dans lesquelles cet instrument peut entrer dans le dossier de la vie collective.</p>
+
+                <h2>Où la surface investissable s’élargit</h2>
+
+                <p>Si cette thèse est juste, le capital devrait regarder au-delà du polissage des interfaces vers l’infrastructure qui rend le contexte vivant sûr, sélectif et gouvernable. Plusieurs catégories paraissent particulièrement stratégiques :</p>
+
+                <ul>
+                    <li><strong>Middleware de courtage du contexte :</strong> des systèmes qui décident quels dossiers, quels champs et quels historiques sont admissibles pour une action donnée, au lieu de déverser des bases entières dans un agent.</li>
+                    <li><strong>Tissu de permissions pour workflows multi-agents :</strong> une infrastructure qui lie les droits d’accès au rôle, à la tâche et au chemin d’escalade à travers humains, agents et outils.</li>
+                    <li><strong>Couches de routage et de caviardage des dossiers sensibles :</strong> des produits qui préservent la pertinence tout en limitant la surexposition dans la santé, la finance, les médias et les services publics.</li>
+                    <li><strong>Systèmes de rejeu du contexte et de contestation :</strong> des couches d’audit permettant aux institutions de reconstruire quel contexte était disponible au moment de l’action et si son usage était justifié.</li>
+                    <li><strong>Portes du contexte sectorielles :</strong> des couches de gouvernance packagées pour les domaines où les dossiers valent précisément parce qu’ils sont dangereux à mal manier.</li>
+                </ul>
+
+                <p>Le point le plus profond est que le prochain acheteur sérieux d’IA ne demande pas seulement un meilleur moteur de réponse. Il demande un droit gouvernable permettant aux machines de toucher la mémoire institutionnelle vivante. C’est un problème plus difficile, mais aussi plus durable. Celui qui le résout ne possède pas simplement un wrapper de plus autour d’un modèle frontière. Il possède une surface de décision située plus près de la responsabilité, de la confiance, de la conformité, du débit et de la légitimité institutionnelle.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « Launching Health in ChatGPT » (jeu. 23 juil. 2026 00:00:00 GMT ; description : Health in ChatGPT permet à des utilisateurs américains éligibles de connecter de manière sécurisée des dossiers médicaux et Apple Health pour obtenir des informations plus personnalisées et mieux comprendre leur santé.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « Introducing OpenAI Presence » (mer. 22 juil. 2026 05:30:00 GMT ; description : une plateforme agentique IA d’entreprise aidant les organisations à déployer des agents vocaux et conversationnels de confiance pour des workflows clients et internes.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « How news organizations are using AI to advance their vital missions » (mer. 22 juil. 2026 13:00:00 GMT ; description : des organisations de presse utilisent l’IA pour renforcer le reportage, faire croître l’audience et améliorer les opérations métier, avec les outils d’OpenAI.)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — « How A2A is Building a World of Collaborative Agents » (date visible : 18 juin 2026 ; méta-description : le protocole Agent-to-Agent permet des transferts sécurisés et autonomes entre agents et des workflows extensibles.)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — « Build reliable multi-agent applications with ADK Go 2.0 » (date visible : 30 juin 2026 ; méta-description : moteur de workflow en graphe, orchestration humain-dans-la-boucle, routage dynamique et résilience intégrée.)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">Commission européenne / AI Office — « Drawing-up a General-Purpose AI Code of Practice » (méta-description : le premier Code de pratique pour l’IA à usage général détaille les règles de l’AI Act pour les fournisseurs de modèles à usage général et de modèles à risques systémiques.)</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+                <div class="article__meta-footer">
+                    <span data-i18n="article.published">Research Journal</span>
+                    <span>·</span>
+                    <time>July 29, 2026</time>
+                    <span>·</span>
+                    <span data-i18n="article.author">Diop Research</span>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../i18n.js"></script>
+    <script src="../site.js"></script>
+</body>
+</html>
