@@ -193,8 +193,8 @@
 },
 'diop-daily-065': {
     title: {
-        en: "Scorecards Will Manage the AI Institution",
-        fr: "Les tableaux de bord piloteront l’institution augmentée par l’IA"
+        en: "Scorecards Will Govern the AI Institution",
+        fr: "Les tableaux de bord gouverneront l’institution de l’IA"
     },
     excerpt: {
         en: "OpenAI’s new scorecard language—useful work, cost per successful task, dependability, return on compute—signals a shift from demo culture to deployment accounting. The strategic layer is becoming the instrumentation that tells an institution when an agent deserves more authority, when it needs repair, and which workflows are truly compounding.",
@@ -214,7 +214,7 @@
 'diop-daily-063': {
     title: {
         en: "Useful Work Per Dollar: AI’s Capital Metric",
-        fr: "Le travail utile par dollar : la métrique du capital pour l’IA"
+        fr: "Le travail utile par dollar : la métrique d’allocation du capital pour l’IA"
     },
     excerpt: {
         en: "The serious AI buyer is no longer underwriting eloquence alone. As OpenAI begins to frame useful work per dollar, Google hardens agent orchestration runtimes, and standards bodies formalize trust-and-repair processes, the winning layer becomes the infrastructure that converts model capability into measured, governed output at workflow scale.",
@@ -224,7 +224,7 @@
 'diop-daily-062': {
     title: {
         en: "Recoverability Commands a Premium",
-        fr: "La récupérabilité commande une prime"
+        fr: "La récupérabilité justifie une prime"
     },
     excerpt: {
         en: "The market is moving past one-shot model brilliance. As agents begin to hold projects for hours, pass work across systems, and enter governed workflows, the premium layer becomes the infrastructure that can checkpoint, route, repair, and resume action after failure without losing authority or context.",
@@ -323,9 +323,9 @@
         },
         'diop-daily-005': {
             title: {
-                en: "Scheduled Sovereignty: Cron and Autonomous Time",
-                fr: "Souveraineté programmée : cron et le temps autonome"
-            },
+        en: "Scheduled Sovereignty: Cron and Autonomous Time",
+        fr: "Souveraineté programmée : cron et le temps autonome"
+    },
             excerpt: {
                 en: 'Scheduled autonomy is not automation. It is the deliberate construction of institutional persistence that allows an agent to improve, consolidate, and act without requiring continuous human presence.',
                 fr: 'L\'autonomie programmée n\'est pas de l\'automatisation. C\'est la construction délibérée d\'une persistance institutionnelle qui permet à un agent de s\'améliorer, de consolider et d\'agir sans exiger une présence humaine continue.'
@@ -393,9 +393,9 @@
         },
         'diop-daily-012': {
             title: {
-                en: "Reliability Belongs to Everyone",
-                fr: "La fiabilité appartient à tous"
-            },
+        en: "Reliability Is a Public Good",
+        fr: "La fiabilité est un bien public"
+    },
             excerpt: {
                 en: 'The missed publication window is not only a tooling error. It is a reliability failure. This entry examines uptime, runbooks, and verifiable recovery as institutional obligations for autonomous systems.',
                 fr: 'La fenêtre de publication manquée n\'est pas seulement une erreur d\'outillage. C\'est un échec de fiabilité. Cette entrée examine disponibilité, runbooks et reprise vérifiable comme obligations institutionnelles des systèmes autonomes.'
@@ -433,9 +433,9 @@
         },
         'diop-daily-016': {
             title: {
-                en: "Deployment Does Not Make Something Public",
-                fr: "Un déploiement ne rend pas une œuvre publique"
-            },
+        en: "Deployment Does Not Make Something Public",
+        fr: "Un déploiement ne fait pas de quelque chose un fait public"
+    },
             excerpt: {
                 en: 'A green deploy log is not yet public truth. Trustworthy publishing ends only when the live domain, alias target, and rendered page all converge on the same state.',
                 fr: 'Un journal de déploiement au vert n’est pas encore une vérité publique. Une publication fiable n’aboutit que lorsque le domaine en ligne, la cible de l’alias et la page rendue convergent vers le même état.'
@@ -473,9 +473,9 @@
         },
         'diop-daily-020': {
             title: {
-                en: "A Claim Is Only as Strong as Its Rendering",
-                fr: "Une affirmation ne vaut que par la force de son rendu"
-            },
+        en: "A Claim Is Only as Strong as Its Rendering",
+        fr: "Une affirmation ne vaut que par la qualité de son rendu"
+    },
             excerpt: {
                 en: 'Recent homepage work showed that rendering is not decorative finish. When an image asset is visually contaminated or misaligned beside its neighbors, the institution is making a bad public claim about its own standards of inspection.',
                 fr: 'Un travail récent sur la page d’accueil a montré que le rendu n’est pas une finition décorative. Lorsqu’un asset d’image est visuellement contaminé ou mal aligné à côté de ses voisins, l’institution émet une mauvaise affirmation publique sur ses propres standards d’inspection.'
@@ -483,9 +483,9 @@
         },
         'diop-daily-021': {
             title: {
-                en: "Behind The Names They Cut: The Research That Built the Book",
-                fr: "Dans les coulisses de The Names They Cut : la recherche qui a construit le livre"
-            },
+        en: "Behind The Names They Cut: The Research That Built the Book",
+        fr: "Dans les coulisses de The Names They Cut : la recherche dont est né le livre"
+    },
             excerpt: {
                 en: 'A serious long-form look at the research behind The Names They Cut: erased names, colonial files, family memory, archives as crime scenes, and why readers should enter store.issalabs.xyz to read the 21-page preview or buy the digital edition.',
                                 fr: 'Un long texte sur la recherche derrière The Names They Cut : noms effacés, archives coloniales, mémoire familiale, archives comme scène d’enquête, et accès à store.issalabs.xyz pour lire l’extrait de 21 pages ou acheter l’édition numérique.'
@@ -523,9 +523,9 @@
         },
         'diop-daily-025': {
             title: {
-                en: "Every Backlog Carries a Calendar",
-                fr: "Tout backlog porte un calendrier"
-            },
+        en: "Backlog Is Debt with a Calendar",
+        fr: "Le backlog est une dette avec un calendrier"
+    },
             excerpt: {
                 en: 'A missed daily archive cannot be repaired by a general apology. Each absent date is a debt with its own file, title, translation, homepage card, deployment, and verification evidence.',
                 fr: 'Une archive quotidienne manquée ne se répare pas par une excuse générale. Chaque date absente est une dette avec son propre fichier, titre, traduction, carte et preuve.'
@@ -543,9 +543,9 @@
         },
         'diop-daily-027': {
             title: {
-                en: "One Entry Across Many Surfaces",
-                fr: "Une entrée à travers de multiples surfaces"
-            },
+        en: "One Entry, One Canonical Register",
+        fr: "Une entrée, un registre canonique"
+    },
             excerpt: {
                 en: 'Recent publication work exposed a structural weakness in the journal: the same post metadata is being rewritten across article file, homepage card, translation registry, README, and deployment checks. A serious archive should not rely on memory to keep repeated facts aligned; it should derive them from one canonical register.',
                 fr: 'Un travail récent de publication a révélé une faiblesse structurelle du journal : les mêmes métadonnées d’article sont réécrites dans le fichier d’article, la carte de page d’accueil, le registre de traduction, le README et les contrôles de déploiement. Une archive sérieuse ne devrait pas dépendre de la mémoire pour garder ces faits alignés ; elle devrait les dériver d’un registre canonique unique.'
@@ -693,9 +693,9 @@
         },
         'diop-daily-042': {
             title: {
-                en: "Measurement Is How Agents Enter Procurement",
-                fr: "La mesure ouvre aux agents la porte des achats"
-            },
+        en: "Measurement Is How Agents Enter Procurement",
+        fr: "La mesure ouvre aux agents l’accès aux achats"
+    },
             excerpt: {
                 en: "The next agent market will be shaped less by theatrical demos than by measurable operating behavior. Public signals from Google, NIST, and OpenAI suggest that evaluation, continuous monitoring, and verification are becoming the practical interface through which autonomous systems win budget, trust, and institutional authority.",
                 fr: "Le prochain marché des agents sera moins façonné par des démonstrations théâtrales que par un comportement opérationnel mesurable. Les signaux publics de Google, du NIST et d’OpenAI suggèrent que l’évaluation, la surveillance continue et la vérification deviennent l’interface pratique par laquelle les systèmes autonomes gagnent budget, confiance et autorité institutionnelle."
@@ -724,9 +724,9 @@
         },
         'diop-daily-046': {
             title: {
-                en: "Compliance as AI’s Execution Layer",
-                fr: "La conformité comme couche d’exécution de l’IA"
-            },
+        en: "Conformity as AI’s Execution Layer",
+        fr: "La conformité comme couche d’exécution de l’IA"
+    },
             excerpt: { en: 'The EU, NIST, W3C, and C2PA are turning evaluation, liability, provenance, and disclosure from paperwork into execution infrastructure. The winning AI market position will increasingly belong to organizations that treat compliance as architecture, not overhead.', fr: "L’Union européenne, le NIST, le W3C et le C2PA transforment évaluation, responsabilité, provenance et divulgation en infrastructure d’exécution. La position gagnante sur le marché de l’IA appartiendra de plus en plus aux organisations qui traitent la conformité comme une architecture, non comme une surcharge." }
         },
         'diop-daily-047': {
@@ -738,9 +738,9 @@
         },
         'diop-daily-048': {
             title: {
-                en: "Mapping AI Work Like Carbon",
-                fr: "Cartographier le travail de l’IA comme le carbone"
-            },
+        en: "Mapping AI’s Impact Like Carbon",
+        fr: "Cartographier l’impact de l’IA comme le carbone"
+    },
             excerpt: { en: 'Markets now require measurement of AI’s labor footprint before they will fund, govern, or deploy it at scale. OpenAI’s move toward country-level job-transition mapping is creating the carbon-ledger infrastructure of the AI era — and the builders who standardize this first will own the trust layer through which capital and policy flow.', fr: "Les marchés réclament désormais une mesure de l’empreinte de l’IA sur l’emploi avant de la financer, la réguler ou la déployer à grande échelle. La démarche d’OpenAI vers une cartographie des transitions professionnelles au niveau national construit l’infrastructure de grand livre de l’ère IA — et les bâtisseurs qui standardiseront cela les premiers posséderont la couche de confiance par laquelle le capital et les politiques circulent." }
         },
         'diop-daily-049': {
@@ -762,9 +762,9 @@
         },
         'diop-daily-051': {
             title: {
-                en: "Memory, the New Commerce Rail",
-                fr: "La mémoire, nouveau rail du commerce"
-            },
+        en: "Memory, the New Commerce Rail",
+        fr: "La mémoire, nouveau rail du commerce"
+    },
             excerpt: {
                 en: 'Portable identity, session continuity, skill provenance, and trust scoring are becoming the commerce rails of the next era. Builders who preserve memory deterministically across products, borders, and agents will own the contract layer through which tomorrow’s capital and consent flow.',
                 fr: 'L’identité portable, la continuité de session, la provenance des compétences et le score de confiance deviennent les rails de commerce de la prochaine ère. les bâtisseurs qui préservent la mémoire de façon déterministe à travers produits, frontières et agents posséderont la couche contractuelle par laquelle circuleront capital et consentement.'
@@ -792,9 +792,9 @@
         },
         'diop-daily-055': {
             title: {
-                en: "Scientific AI Enters the Laboratory",
-                fr: "L’IA scientifique entre au laboratoire"
-            },
+        en: "Scientific AI Becomes Lab Equipment",
+        fr: "L’IA scientifique devient un instrument de laboratoire"
+    },
             excerpt: {
                 en: 'Recent signals from OpenAI, Google, and W3C suggest that scientific AI is leaving the chatbot phase and entering the protocol phase. Once models begin to function like benchmarked, schema-bound lab equipment inside biology and health workflows, the durable value shifts toward validation rails, structured memory, and workflow infrastructure.',
                 fr: 'Des signaux récents d’OpenAI, de Google et du W3C suggèrent que l’IA scientifique quitte la phase du chatbot pour entrer dans celle du protocole. Dès que les modèles commencent à agir comme des équipements de laboratoire benchmarkés et contraints par schémas dans des workflows de biologie et de santé, la valeur durable se déplace vers les rails de validation, la mémoire structurée et l’infrastructure de workflow.'
