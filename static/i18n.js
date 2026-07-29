@@ -13,6 +13,9 @@
         'meta.post074.title':  { en: 'Before the Answer, the Record: AI’s Next Gate Is Live Context — Diop Research', fr: 'Avant la réponse, le dossier : le prochain seuil de l’IA est le contexte vivant — Diop Research' },
         'meta.post074.description': { en: 'Health in ChatGPT, OpenAI Presence, and Google’s agent runtime stack all point to the same shift: the decisive AI layer is the context gate that decides which live records a machine may touch, under what authority, and with what recovery path.', fr: 'Health in ChatGPT, OpenAI Presence et la pile d’exécution agentique de Google convergent vers le même déplacement : la couche décisive de l’IA devient la porte du contexte, qui décide quels dossiers vivants une machine peut toucher, sous quelle autorité, et avec quel chemin de reprise.' },
 
+        'meta.post075.title':  { en: 'Scientific Computing Is the New Sovereign AI Frontier — Diop Research', fr: 'Le calcul scientifique est la nouvelle frontière souveraine de l’IA — Recherche Diop' },
+        'meta.post075.description': { en: 'OpenAI’s signals on agentic scientific computing and 100,000 researcher access, combined with Google’s A2A runtime, point to a clear shift: the decisive AI layer is moving into the research substrate itself. The strategic question is whether institutions can govern an agentic interface to the scientific record without importing foreign knowledge choreography.', fr: 'Les signaux d’OpenAI sur le calcul scientifique agentique et l’accès à 100 000 chercheurs, combinés au runtime A2A de Google, convergent vers un déplacement clair : la couche décisive de l’IA se déplace vers le substrat de recherche lui-même. La question stratégique est de savoir si les institutions peuvent gouverner une interface agentique au dossier scientifique sans importer une chorégraphie étrangère du savoir.' },
+
         'meta.post073.title':  { en: 'The Org Chart Is Becoming a Workflow Graph — Diop Research', fr: 'L’organigramme devient un graphe de workflow — Diop Research' },
         'meta.post073.description': { en: 'OpenAI’s latest work signals that AI is not just automating tasks; it is redrawing job boundaries. The strategic layer is becoming the workflow graph that routes authority, context, and approval across people and agents.', fr: 'Les derniers signaux d’OpenAI montrent que l’IA n’automatise pas seulement des tâches ; elle redessine les frontières de poste. La couche stratégique devient le graphe de workflow qui route l’autorité, le contexte et les validations entre humains et agents.' },
 
@@ -99,6 +102,7 @@
         'article.entry072':     { en: 'Diop Daily #072 — July 2026', fr: 'Diop Quotidien n°072 — Juillet 2026' },
         'article.entry073':     { en: 'Diop Daily #073 — July 2026', fr: 'Diop Quotidien n°073 — Juillet 2026' },
         'article.entry074':     { en: 'Diop Daily #074 — July 2026', fr: 'Diop Quotidien n°074 — Juillet 2026' },
+        'article.entry075':     { en: 'Diop Daily #075 — July 2026', fr: 'Diop Quotidien n°075 — Juillet 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -114,23 +118,34 @@
 
 'diop-daily-074': {
     title: {
-        en: "Before the Answer, the Record: AI’s Next Gate Is Live Context",
-        fr: "Avant la réponse, le dossier : le prochain seuil de l’IA est le contexte vivant"
+        en: "Before the Answer, the Record: AI's Next Gate Is Live Context",
+        fr: "Avant la réponse, le dossier : le prochain seuil de l'IA est le contexte vivant"
     },
     excerpt: {
-        en: "Health in ChatGPT, OpenAI Presence, and Google’s agent runtime stack all point to the same shift: the decisive AI layer is no longer the answer surface. It is the context gate—the infrastructure that decides which live records a machine may touch, under what authority, and with what recovery path.",
-        fr: "Health in ChatGPT, OpenAI Presence et la pile d’exécution agentique de Google convergent vers le même déplacement : la couche décisive de l’IA n’est plus la surface de réponse. C’est la porte du contexte — l’infrastructure qui décide quels dossiers vivants une machine peut toucher, sous quelle autorité, et avec quel chemin de reprise."
+        en: "Health in ChatGPT, OpenAI Presence, and Google's agent runtime stack all point to the same shift: the decisive AI layer is no longer the answer surface. It is the context gate—the infrastructure that decides which live records a machine may touch, under what authority, and with what recovery path.",
+        fr: "Health in ChatGPT, OpenAI Presence et la pile d'exécution agentique de Google convergent vers le même déplacement : la couche décisive de l'IA n'est plus la surface de réponse. C'est la porte du contexte — l'infrastructure qui décide quels dossiers vivants une machine peut toucher, sous quelle autorité, et avec quel chemin de reprise."
+    }
+},
+
+'diop-daily-075': {
+    title: {
+        en: "Scientific Computing Is the New Sovereign AI Frontier",
+        fr: "Le calcul scientifique est la nouvelle frontière souveraine de l'IA"
+    },
+    excerpt: {
+        en: "OpenAI's signals on agentic scientific computing and 100,000 researcher access, combined with Google's A2A runtime, point to a clear shift: the decisive AI layer is moving into the research substrate itself. The strategic question is whether institutions can govern an agentic interface to the scientific record without importing foreign knowledge choreography.",
+        fr: "Les signaux d'OpenAI sur le calcul scientifique agentique et l'accès à 100 000 chercheurs, combinés au runtime A2A de Google, convergent vers un déplacement clair : la couche décisive de l'IA se déplace vers le substrat de recherche lui-même. La question stratégique est de savoir si les institutions peuvent gouverner une interface agentique au dossier scientifique sans importer une chorégraphie étrangère du savoir."
     }
 },
 
 'diop-daily-073': {
     title: {
         en: "The Org Chart Is Becoming a Workflow Graph",
-        fr: "L’organigramme devient un graphe de workflow"
+        fr: "L'organigramme devient un graphe de workflow"
     },
     excerpt: {
-        en: "OpenAI’s latest work research, NTT DATA’s 9,000-employee Codex rollout, and Google’s multi-agent runtime stack all point to the same shift: AI is no longer just helping workers complete tasks. It is redrawing job boundaries, turning the org chart into a workflow graph where authority, context, and approvals move across people and agents.",
-        fr: "Les dernières recherches d’OpenAI sur le travail, le déploiement de Codex chez NTT DATA à l’échelle de 9 000 employés et la pile d’exécution multi-agents de Google convergent vers le même basculement : l’IA n’aide plus seulement les travailleurs à accomplir des tâches. Elle redessine les frontières de poste, transformant l’organigramme en graphe de workflow où l’autorité, le contexte et les validations circulent entre humains et agents."
+        en: "OpenAI's latest work research, NTT DATA's 9,000-employee Codex rollout, and Google's multi-agent runtime stack all point to the same shift: AI is no longer just helping workers complete tasks. It is redrawing job boundaries, turning the org chart into a workflow graph where authority, context, and approvals move across people and agents.",
+        fr: "Les dernières recherches d'OpenAI sur le travail, le déploiement de Codex chez NTT DATA à l'échelle de 9 000 employés et la pile d'exécution multi-agents de Google convergent vers le même basculement : l'IA n'aide plus seulement les travailleurs à accomplir des tâches. Elle redessine les frontières de poste, transformant l'organigramme en graphe de workflow où l'autorité, le contexte et les validations circulent entre humains et agents."
     }
 },
 

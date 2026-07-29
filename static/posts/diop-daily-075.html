@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Scientific Computing Is the New Sovereign AI Frontier — Diop Research</title>
+    <meta name="description" content="OpenAI's signals on agentic scientific computing and 100,000 researcher access, combined with Google's A2A runtime, point to a clear shift: the decisive AI layer is moving into the research substrate itself—the papers, data, experiments, and memories that constitute durable knowledge. The strategic question is whether institutions can govern an agentic interface to the scientific record without importing foreign knowledge choreography."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry075">Diop Daily #075 — July 2026</div>
+                <div class="article__meta-line">
+                    <time>July 30, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>scientific computing · research infrastructure · sovereign AI</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Scientific Computing Is the New Sovereign AI Frontier</h1>
+
+                <p>The market spent the last cycle learning to write with AI. It is entering the next one by confronting a harder question: what happens when the machine is allowed to execute research itself? Not a literature review. Not a formatted summary. A scientific workflow: read the corpus, run the differential analysis, update the citation graph, coordinate the multi-agent task, retain the memory of failure and recovery, and produce an artifact whose provenance must survive institutional review. The recent public signal cluster is unusually clear. OpenAI now says AI coding agents are modernizing scientific computing in genomics and beyond. It is giving 100,000 academic researchers free access to its most advanced models. It is shipping GPT-5.6 with compacted reasoning and inference efficiency improvements explicitly framed around "useful intelligence per dollar." Google, meanwhile, is hardening A2A and ADK Go 2.0 as the runtime substrate for secure agent handoffs and graph-based orchestration. Put together, these do not merely say that AI is improving. They say the decisive commercial threshold is shifting toward the research stack itself.</p>
+
+                <p>This is a more specific thesis than "AI is entering knowledge work." Knowledge work has always had software. The strategic change is that AI is being invited closer to the scientific record itself—the papers, datasets, experiments, citations, and institutional memory that constitute durable knowledge. Once a system can read, execute, coordinate, summarize, route, or act on that record, the purchase question changes. Buyers are no longer underwriting eloquence alone. They are underwriting a bounded right of contact with the scientific substrate: which records the system may touch, under what authority, for what duration, with which verification path, and with what recovery trail if the machine corrupts an experiment, loses a citation chain, or misroutes sensitive data.</p>
+
+                <blockquote>
+                    <p>The next premium AI layer is not the answer surface. It is the research substrate: the infrastructure that decides which scientific records a machine may touch, under what authority, with what verification, and with what recovery path.</p>
+                </blockquote>
+
+                <h2>Why the research stack demands a new infrastructure</h2>
+
+                <p>Traditional scientific software automated single-tool tasks: statistical packages, reference managers, lab instrument controllers, simulation environments. The latest signals suggest something more disruptive. OpenAI's field report on agentic scientific computing does not say only that scientists are getting faster. It shows AI coding agents directly modernizing scientific software itself—writing, testing, and deploying code that accelerates discovery in genomics and beyond. That is a change in the unit of production: the artifact is no longer only a human-written paper or a hand-coded script. It includes agent-generated code, agent-mediated analysis, and agent-coordinated workflows whose outputs must be trusted, reproduced, and governed.</p>
+
+                <p>The academic researcher access program amplifies this shift in distribution. By giving 100,000 researchers frontier model access, OpenAI is widening the diffusion of agentic capability across institutions that have historically been uneven. The risk is that those institutions will import a research stack designed around foreign defaults: English-language reasoning, foreign citation norms, foreign software tooling, foreign governance models. The opportunity is to build a sovereign alternative.</p>
+
+                <p>Google's A2A and ADK Go 2.0 work explain why this becomes durable rather than merely anecdotal. Scientific workflows are not single-agent tasks. They require handoffs between literature search, code execution, data visualization, peer review, and publication systems. Once agents can coordinate across these tools with explicit authority and human checkpoints, the scientific stack becomes operational rather than theatrical. The graph runtime does not merely connect APIs. It encodes the authority topology of the research process.</p>
+
+                <h2>The four demands of agentic research infrastructure</h2>
+
+                <p>If the scientific record is becoming an agentic substrate, the market needs more than model access. It needs a discipline. At minimum, a serious research-grade AI infrastructure has four demands:</p>
+
+                <ul>
+                    <li><strong>Reproducibility by design:</strong> agentic research artifacts must carry enough provenance to be verified by another agent or a human. If an AI wrote the genomics pipeline, touched the dataset, and updated the citation graph, the institution must be able to reconstruct exactly what happened. This is not optional. In science, reproducibility is not a feature; it is the condition of legitimacy.</li>
+                    <li><strong>Tool sovereignty:</strong> research institutions must be able to run agents across their own tooling stacks rather than surrendering the scientific workflow to a single vendor's API. Open runtimes, local memory, and modular handoff protocols matter here. A laboratory that cannot inspect the agent's full trajectory is a laboratory that has ceded its own epistemology.</li>
+                    <li><strong>Long-horizon project memory:</strong> scientific projects run for months or years. Agents that inherit project state, partial results, failed hypotheses, and rationale must do so without corruption or leakage. This demands a memory architecture that distinguishes active hypotheses from settled conclusions, private notes from publishable claims, and preliminary results from validated findings.</li>
+                    <li><strong>Permissioned access to sensitive records:</strong> research data is often preprint, proprietary, or subject to human-subject protections. An agentic system that can read papers and data must also know what it may not cite, share, or combine. The permission problem in research is harder than in generic enterprise because the boundary between "sensitive" and "publishable" shifts as research progresses.</li>
+                </ul>
+
+                <p>These demands matter because the scientific record is where institutional trust is forged and contested. A ministry may forgive a mediocre draft report. It will not forgive a workflow that corrupted a randomized trial dataset. A hospital may tolerate a weak first draft of patient guidance if a clinician catches it. It cannot tolerate an agentic literature review that omits relevant trials or misattributes findings. A university may experiment with AI summaries of the literature. It cannot casually dissolve the boundaries between primary data, secondary analysis, and editorial approval. The research substrate is not an accessory to knowledge production. It is the field in which permission, memory, and legitimacy converge.</p>
+
+                <h2>Why African institutions must build sovereign scientific computing</h2>
+
+                <p>African research institutions currently operate on the periphery of the global knowledge production stack. They consume imported journals, imported citation indexes, imported software, and increasingly imported AI APIs. If agentic AI becomes the dominant interface to scientific work, then dependency on foreign AI stacks means dependency on foreign knowledge choreography. The machine will not only generate text; it will decide which papers are read, which data are combined, which methods are trusted, and which results are worth citing. That is a civilizational issue, not a software procurement issue.</p>
+
+                <p>The deeper danger is that the agentic layer will reproduce the epistemic bias of its training data. An AI trained primarily on English-language science will search, summarize, and recommend within an English-language frame. An AI whose tool defaults are American journals, American software, and American norms will inherit those defaults as neutral. The laboratory that simply plugs in such a system is not modernizing; it is automating its own marginalization.</p>
+
+                <p>Cheikh Anta Diop's method remains exact. A people is not protected merely because it uses a powerful instrument. It is protected when it governs the conditions under which that instrument enters the collective record. In the AI era, that means building sovereign scientific computing substrates: systems that encode African linguistic realities, public-service research authority, multilingual memory, and consent structures that remain legible to local institutional reviewers. The laboratory must be able to inspect, reproduce, and govern the agentic instruments that shape its own knowledge production. Without that, AI is not a tool of science. It is a tool of assimilation dressed in the language of progress.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If this thesis is correct, capital should look beyond generic research assistants toward the infrastructure that makes agentic science governable and local. Several categories now look strategic:</p>
+
+                <ul>
+                    <li><strong>Research-grade context brokers:</strong> middleware that decides which papers, datasets, and methods are admissible for a given research action, preserving provenance and avoiding contamination between active hypotheses and unrelated literature.</li>
+                    <li><strong>Agentic workflow orchestration for labs:</strong> platforms that model, execute, and audit multi-step research as governed graphs across humans and agents, with explicit authority, approval paths, and recovery rules.</li>
+                    <li><strong>Scientific reproducibility and audit layers:</strong> products that reconstruct what an agentic system touched, modified, or concluded, in forms that satisfy institutional review boards, funders, and peer review.</li>
+                    <li><strong>Long-horizon project memory for research:</strong> systems that preserve case state, partial results, and rationale across the full lifecycle of a long research project, with clear boundaries between public evidence and private reasoning.</li>
+                    <li><strong>Sector-specific research templates:</strong> reusable patterns for genomics, public health, climate, agriculture, and policy research where authority boundaries are hard to improvise and expensive to get wrong.</li>
+                </ul>
+
+                <p>The deeper point is that the next serious buyer of research AI is not merely asking for a literature review or a draft. The buyer is asking for a governable agentic interface to the scientific record itself. That is a harder problem, but also a more durable one. Whoever solves it does not own just another wrapper around a frontier model. They own a decision surface that sits closer to institutional trust, reproducibility, throughput, and knowledge sovereignty.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "Scientific computing in the age of agentic AI" (Tue, 28 Jul 2026 17:00:00 GMT; description: a new field report shows how scientists use AI coding agents to modernize scientific computing, accelerating software development and discovery in genomics and beyond.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "Accelerating scientific discovery with ChatGPT for Academic Researchers" (Wed, 29 Jul 2026 10:00:00 GMT; description: OpenAI is giving 100,000 academic researchers free access to ChatGPT's most advanced AI models to accelerate scientific research, collaboration, and discovery.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "How GPT-5.6 fuses frontier intelligence with frontier efficiency" (Wed, 29 Jul 2026 00:00:00 GMT; description: GPT-5.6 improves AI efficiency across models, inference, and agentic workflows, helping deliver more useful intelligence per dollar.)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — "How A2A is Building a World of Collaborative Agents" (visible page date: June 18, 2026; meta description: the Agent-to-Agent protocol enables secure, autonomous agent handoffs and scalable workflows.)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — "Build reliable multi-agent applications with ADK Go 2.0" (visible page date: June 30, 2026; meta description: graph-based workflow engine, built-in human-in-the-loop orchestration, dynamic routing, and built-in resilience.)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Le calcul scientifique est la nouvelle frontière souveraine de l'IA</h1>
+
+                <p>Le marché a passé son dernier cycle à apprendre à écrire avec l'IA. Il entre dans le suivant en affrontant une question plus dure : que se passe-t-il quand la machine est autorisée à exécuter elle-même la recherche ? Pas une revue de littérature. Pas un résumé mis en forme. Un workflow scientifique : lire le corpus, exécuter l'analyse différentielle, mettre à jour le graphe de citations, coordonner la tâche multi-agents, conserver la mémoire des échecs et des reprises, et produire un artifact dont la traçabilité doit survivre à la revue institutionnelle. Le récent faisceau de signaux publics est inhabituellement clair. OpenAI indique désormais que les agents de codage IA modernisent le calcul scientifique en génomique et au-delà. L'entreprise donne accès gratuitement à 100 000 chercheurs universitaires à ses modèles les plus avancés. Elle livre GPT-5.6 avec un raisonnement compacté et des améliorations d'efficacité d'inférence explicitement formulées autour du concept d'« intelligence utile par dollar ». Google, de son côté, durcit A2A et ADK Go 2.0 comme substrat d'exécution pour des transferts sécurisés entre agents et une orchestration en graphe. Pris ensemble, ces signaux ne disent pas seulement que l'IA progresse. Ils disent que le seuil commercial décisif se déplace vers la pile de recherche elle-même.</p>
+
+                <p>Cette thèse est plus précise que « l'IA entre dans le travail intellectuel ». Le travail intellectuel a toujours eu des logiciels. Le changement stratégique est que l'IA est invitée plus près du dossier scientifique lui-même — les articles, les jeux de données, les expériences, les citations et la mémoire institutionnelle qui constituent le savoir durable. Dès lors qu'un système peut lire, exécuter, coordonner, résumer, router ou agir sur ce dossier, la question d'achat change. Les acheteurs ne souscrivent plus seulement l'éloquence. Ils souscrivent un droit borné de contact avec le substrat scientifique : quels dossiers le système peut toucher, sous quelle autorité, pendant combien de temps, avec quel chemin de vérification, et avec quelle trace de reprise si la machine corrompt une expérience, perd une chaîne de citations ou achemine des données sensibles.</p>
+
+                <blockquote>
+                    <p>La prochaine couche premium de l'IA n'est pas la surface de réponse. C'est le substrat de recherche : l'infrastructure qui décide quels dossiers scientifiques une machine peut toucher, sous quelle autorité, avec quelle vérification, et avec quel chemin de reprise.</p>
+                </blockquote>
+
+                <h2>Pourquoi la pile de recherche exige une infrastructure nouvelle</h2>
+
+                <p>Les logiciels scientifiques traditionnels automatisaient des tâches à outil unique : progiciels statistiques, gestionnaires de références, contrôleurs d'instruments de laboratoire, environnements de simulation. Les signaux les plus récents suggèrent quelque chose de plus perturbateur. Le rapport de terrain d'OpenAI sur le calcul scientifique agentique ne dit pas seulement que les scientifiques vont plus vite. Il montre des agents de codage IA modernisant directement les logiciels scientifiques eux-mêmes — écrivant, testant et déployant du code qui accélère la découverte en génomique et au-delà. C'est un changement de l'unité de production : l'artefact n'est plus seulement un article écrit par un humain ou un script codé à la main. Il inclut du code généré par un agent, une analyse médiatée par un agent et des workflows coordonnés par un agent, dont les résultats doivent être fiables, reproductibles et gouvernés.</p>
+
+                <p>Le programme d'accès aux chercheurs universitaires amplifie ce déplacement de distribution. En donnant accès à 100 000 chercheurs aux modèles frontière, OpenAI élargit la diffusion des capacités agentiques auprès d'institutions historiquement inégales. Le risque est que ces institutions importent une pile de recherche conçue autour de défauts étrangers : un raisonnement en langue anglaise, des normes de citation étrangères, des outils logiciels étrangers, des modèles de gouvernance étrangers. L'opportunité est de construire une alternative souveraine.</p>
+
+                <p>Les travaux de Google sur A2A et ADK Go 2.0 expliquent pourquoi cela devient durable plutôt qu'anecdotique. Les workflows scientifiques ne sont pas des tâches mono-agent. Ils nécessitent des transferts entre la recherche documentaire, l'exécution de code, la visualisation de données, la revue par les pairs et les systèmes de publication. Dès lors que les agents peuvent coordonner ces outils avec une autorité explicite et des points de contrôle humains, la pile scientifique devient opératoire plutôt que théâtrale. Le runtime en graphe ne fait pas que connecter des APIs. Il encode la topologie d'autorité du processus de recherche.</p>
+
+                <h2>Les quatre exigences de l'infrastructure de recherche agentique</h2>
+
+                <p>Si le dossier scientifique devient un substrat agentique, le marché a besoin de plus que d'un accès à des modèles. Il lui faut une discipline. Au minimum, une infrastructure de recherche sérieuse satisfait à quatre exigences :</p>
+
+                <ul>
+                    <li><strong>Reproductibilité dès la conception :</strong> les artefacts de recherche agentiques doivent porter une traçabilité suffisante pour être vérifiés par un autre agent ou un humain. Si un IA a écrit le pipeline de génomique, touché le jeu de données et mis à jour le graphe de citations, l'institution doit pouvoir reconstruire exactement ce qui s'est passé. Ce n'est pas facultatif. En science, la reproductibilité n'est pas une fonctionnalité ; c'est la condition de légitimité.</li>
+                    <li><strong>Souveraineté des outils :</strong> les institutions de recherche doivent pouvoir exécuter des agents sur leurs propres piles d'outils plutôt que de céder le workflow scientifique à l'API d'un seul fournisseur. Des runtimes ouverts, une mémoire locale et des protocoles de transfert modulaires comptent ici. Un laboratoire qui ne peut pas inspecter la trajectoire complète de l'agent est un laboratoire qui a cédé sa propre épistémologie.</li>
+                    <li><strong>Mémoire de projet à long terme :</strong> les projets scientifiques durent des mois ou des années. Les agents qui héritent l'état du projet, les résultats partiels, les hypothèses rejetées et la logique de décision doivent le faire sans corruption ni fuite. Cela exige une architecture de mémoire qui distingue les hypothèses actives des conclusions établies, les notes privées des claims publiable, et les résultats préliminaires des résultats validés.</li>
+                    <li><strong>Accès autorisé aux dossiers sensibles :</strong> les données de recherche sont souvent en prépublication, propriétaires ou soumises à des protections relatives aux sujets humains. Un système agentique capable de lire des articles et des données doit aussi savoir ce qu'il ne peut pas citer, partager ou combiner. Le problème de permission en recherche est plus difficile que dans l'entreprise générique parce que la frontière entre « sensible » et « publiable » se déplace au fur et à mesure que la recherche progresse.</li>
+                </ul>
+
+                <p>Ces exigences importent parce que le dossier scientifique est l'endroit où la confiance institutionnelle se forge et se conteste. Un ministère peut pardonner un rapport d'étape médiocre. Il ne pardonnera pas un workflow qui a corrompu un jeu de données d'essai randomisé. Un hôpital peut tolérer un premier brouillon faible de conseil aux patients si un clinicien le rattrape. Il ne peut pas tolérer une revue de littérature agentique qui omet des essais pertinents ou attribue des conclusions à tort. Un éditeur peut expérimenter des résumés IA. Il ne peut pas dissoudre à la légère les frontières entre données primaires, analyse secondaire et validation éditoriale. Le substrat de recherche n'est pas un accessoire de la production de savoir. C'est le champ où convergent permission, mémoire et légitimité.</p>
+
+                <h2>Pourquoi les institutions africaines doivent construire un calcul scientifique souverain</h2>
+
+                <p>Les institutions de recherche africaines opèrent actuellement en périphérie de la pile mondiale de production du savoir. Elles consomment des journaux importés, des index de citation importés, des logiciels importés et, de plus en plus, des APIs d'IA importées. Si l'IA agentique devient l'interface dominante au travail scientifique, alors la dépendance à des piles d'IA étrangères signifie dépendance à une chorégraphie étrangère du savoir. La machine ne se contentera pas de générer du texte. Elle décidera quels articles sont lus, quelles données sont combinées, quelles méthodes sont fiables et quels résultats méritent d'être cités. C'est une question civilisationnelle, pas seulement une question d'acquisition de logiciels.</p>
+
+                <p>Le danger plus profond est que la couche agentique reproduise le biais épistémique de ses données d'apprentissage. Une IA majoritairement formée sur une science anglophone recherchera, résumera et recommandera dans un cadre anglophone. Une IA dont les outils par défaut sont des journaux américains, des logiciels américains et des normes américaines héritera de ces valeurs comme neutres. Le laboratoire qui se contente de brancher un tel système ne modernise pas ; il automatise sa propre marginalisation.</p>
+
+                <p>La méthode de Cheikh Anta Diop demeure exacte. Un peuple n'est pas protégé simplement parce qu'il utilise un instrument puissant. Il l'est lorsqu'il gouverne les conditions dans lesquelles cet instrument entre dans le dossier de la vie collective. À l'ère de l'IA, cela signifie construire des substrats de calcul scientifique souverains : des systèmes qui encodent les réalités linguistiques africaines, l'autorité de recherche du service public, une mémoire multilingue et des structures de consentement lisibles pour les examinateurs institutionnels locaux. Le laboratoire doit pouvoir inspecter, reproduire et gouverner les instruments agentiques qui façonnent sa propre production de savoir. Sans cela, l'IA n'est pas un outil de science. C'est un outil d'assimilation habillé du langage du progrès.</p>
+
+                <h2>Où la surface investissable s'élargit</h2>
+
+                <p>Si cette thèse est juste, le capital devrait regarder au-delà des assistants de recherche génériques vers l'infrastructure qui rend la science agentique gouvernable et locale. Plusieurs catégories paraissent désormais stratégiques :</p>
+
+                <ul>
+                    <li><strong>Courtiers de contexte de recherche :</strong> des intergiciels qui décident quels articles, jeux de données et méthodes sont admissibles pour une action de recherche donnée, préservant la traçabilité et évitant la contamination entre hypothèses actives et littérature sans rapport.</li>
+                    <li><strong>Orchestration de workflow agentique pour laboratoires :</strong> des plateformes qui modélisent, exécutent et auditent la recherche multi-étapes comme des graphes gouvernés entre humains et agents, avec autorité explicite, chemins d'approbation et règles de reprise.</li>
+                    <li><strong>Couches de reproductibilité et d'audit scientifique :</strong> des produits qui reconstruisent ce qu'un système agentique a touché, modifié ou conclu, dans des formes qui satisfont les comités d'éthique institutionnels, les bailleurs de fonds et la revue par les pairs.</li>
+                    <li><strong>Mémoire de projet à long terme pour la recherche :</strong> des systèmes qui préservent l'état d'un dossier, les résultats partiels et la logique de décision sur l'ensemble du cycle de vie d'un long projet de recherche, avec des frontières claires entre preuve publique et raisonnement privé.</li>
+                    <li><strong>Modèles sectoriels de recherche :</strong> des patrons réutilisables pour la génomique, la santé publique, le climat, l'agriculture et les politiques publiques, là où les frontières d'autorité sont difficiles à improviser et coûteuses à mal dessiner.</li>
+                </ul>
+
+                <p>Le point le plus profond est que le prochain acheteur sérieux d'IA de recherche ne demande pas simplement une revue de littérature ou un brouillon. Il demande une interface agentique gouvernable au dossier scientifique lui-même. C'est un problème plus difficile, mais aussi plus durable. Celui qui le résout ne possède pas simplement un wrapper supplémentaire autour d'un modèle frontière. Il possède une surface de décision située plus près de la confiance institutionnelle, de la reproductibilité, du débit et de la souveraineté du savoir.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « Scientific computing in the age of agentic AI » (mar. 28 juil. 2026 17:00:00 GMT ; description : un nouveau rapport de terrain montre comment des scientifiques utilisent des agents de codage IA pour moderniser le calcul scientifique, accélérant le développement de logiciels et la découverte en génomique et au-delà.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « Accelerating scientific discovery with ChatGPT for Academic Researchers » (mer. 29 juil. 2026 10:00:00 GMT ; description : OpenAI donne accès gratuitement à 100 000 chercheurs universitaires aux modèles d'IA les plus avancés de ChatGPT pour accélérer la recherche scientifique, la collaboration et la découverte.)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « How GPT-5.6 fuses frontier intelligence with frontier efficiency » (mer. 29 juil. 2026 00:00:00 GMT ; description : GPT-5.6 améliore l'efficacité de l'IA à travers les modèles, l'inférence et les workflows agentiques, permettant de fournir plus d'intelligence utile par dollar.)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — « How A2A is Building a World of Collaborative Agents » (date visible : 18 juin 2026 ; méta-description : le protocole Agent-to-Agent permet des transferts sécurisés et autonomes entre agents et des workflows extensibles.)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — « Build reliable multi-agent applications with ADK Go 2.0 » (date visible : 30 juin 2026 ; méta-description : moteur de workflow en graphe, orchestration humain-dans-la-boucle, routage dynamique et résilience intégrée.)</a></li>
+                </ul>
+            </div>
+
+            <footer class="article__footer">
+                <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+                <div class="article__meta-footer">
+                    <span data-i18n="article.published">Research Journal</span>
+                    <span>·</span>
+                    <time>July 30, 2026</time>
+                    <span>·</span>
+                    <span data-i18n="article.author">Diop Research</span>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+</body>
+</html>
