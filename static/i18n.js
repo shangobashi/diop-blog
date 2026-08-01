@@ -103,6 +103,8 @@
         'article.entry073':     { en: 'Diop Daily #073 — July 2026', fr: 'Diop Quotidien n°073 — Juillet 2026' },
         'article.entry074':     { en: 'Diop Daily #074 — July 2026', fr: 'Diop Quotidien n°074 — Juillet 2026' },
         'article.entry075':     { en: 'Diop Daily #075 — July 2026', fr: 'Diop Quotidien n°075 — Juillet 2026' },
+        'article.entry076':     { en: 'Diop Daily #076 — July 2026', fr: 'Diop Quotidien n°076 — Juillet 2026' },
+        'article.entry077':     { en: 'Diop Daily #077 — August 2026', fr: 'Diop Quotidien n°077 — Août 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -127,17 +129,27 @@
     }
 },
 
+'diop-daily-076': {
+    title: {
+        en: "The Efficiency Line: Why AI's Market Structure Shifts When Intelligence Gets Cheap",
+        fr: "La ligne d'efficacité : pourquoi la structure de marché de l'IA se déplace quand l'intelligence devient bon marché"
+    },
+    excerpt: {
+        en: "OpenAI's GPT-5.6 price-performance cuts, Project Camellia, and the EU's push for AI infrastructure all point to the same inflection: AI is moving from a capability arms race to an efficiency war. The decisive question is whether institutions can govern inference as a sovereign, auditable, cost-controlled infrastructure layer — or remain dependent on a foreign stack whose prices shift without warning.",
+        fr: "Les baisses de prix de GPT-5.6, Project Camellia et la poussée de l'UE vers des infrastructures IA convergent vers le même point d'inflexion : l'IA passe d'une course aux capacités à une guerre d'efficacité. La question décisive est de savoir si les institutions peuvent gouverner l'inférence comme une couche souveraine, auditable et maîtrisée en coût."
+    }
+},
+
 'diop-daily-075': {
     title: {
         en: "Scientific Computing Is the New Sovereign AI Frontier",
         fr: "Le calcul scientifique est la nouvelle frontière souveraine de l'IA"
     },
     excerpt: {
-        en: "OpenAI's signals on agentic scientific computing and 100,000 researcher access, combined with Google's A2A runtime, point to a clear shift: the decisive AI layer is moving into the research substrate itself. The strategic question is whether institutions can govern an agentic interface to the scientific record without importing foreign knowledge choreography.",
+        en: "OpenAI's signals on agentic scientific computing and 100,000 researcher access, combined with Google's A2A runtime, point to a clear shift: the decisive AI layer is moving into the research substrate itself—the papers, data, experiments, and memories that constitute durable knowledge. The strategic question is whether institutions can govern an agentic interface to the scientific record without importing foreign knowledge choreography.",
         fr: "Les signaux d'OpenAI sur le calcul scientifique agentique et l'accès à 100 000 chercheurs, combinés au runtime A2A de Google, convergent vers un déplacement clair : la couche décisive de l'IA se déplace vers le substrat de recherche lui-même. La question stratégique est de savoir si les institutions peuvent gouverner une interface agentique au dossier scientifique sans importer une chorégraphie étrangère du savoir."
     }
 },
-
 'diop-daily-073': {
     title: {
         en: "The Org Chart Is Becoming a Workflow Graph",
@@ -321,7 +333,18 @@
                 fr: 'Ce journal s\'ouvre sur une déclaration : ce qu\'est ce front de recherche, pourquoi il existe, et quel standard de pensée gouvernera ces entrées. Pas un manifeste. Une charte de travail.'
             }
         },
-        'diop-daily-002': {
+'diop-daily-077': {
+    title: {
+        en: "The Provenance Stack: From Trust Claim to Execution Primitive",
+        fr: "La pile de provenance : du claim de confiance au primitive d'exécution"
+    },
+    excerpt: {
+        en: "C2PA's July 31 implementation guide, W3C's Verifiable Credentials v1.1 draft, and OpenAI's European provenance push all point to the same shift: provenance is hardening from a trust claim into an execution primitive—the grammar that lets agents transact, route, and contest machine-made work.",
+        fr: "Le guide d'implémentation C2PA du 31 juillet, la note de groupe W3C Verifiable Credentials v1.1 et la poussée de provenance européenne d'OpenAI convergent vers le même déplacement : la provenance se durcit, passant d'un claim de confiance à un primitive d'exécution — la grammaire qui permet aux agents de transiger, router et contester le travail produit par machine."
+    }
+},
+
+                'diop-daily-002': {
             title: {
                 en: "Memory’s Infrastructure: An Architecture for Autonomous Recall",
                 fr: "L’infrastructure de la mémoire : une architecture pour le rappel autonome"
