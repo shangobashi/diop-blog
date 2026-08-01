@@ -111,6 +111,14 @@ def verify_post_integrity(posts):
             if ratio >= 0.80:
                 failures.append(f"near-duplicate English body ({ratio:.3f}): {left['id']} vs {right['id']}")
 
+    for post in posts:
+        post_path = POSTS_DIR / post['filename']
+        text = post_path.read_text(encoding='utf-8')
+        if 'site.js' not in text:
+            failures.append(f"{post['id']}: missing site.js include")
+        if 'i18n.js' not in text:
+            failures.append(f"{post['id']}: missing i18n.js include")
+
     if failures:
         print("ERROR: post integrity check failed", file=sys.stderr)
         for failure in failures:
