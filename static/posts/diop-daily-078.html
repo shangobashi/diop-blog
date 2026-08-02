@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Live Institution: Why AI's Next Execution Layer Is Real-Time Presence — Diop Research</title>
+    <meta name="description" content="OpenAI's avatarin retail agent, GPT-Realtime, and the A2A protocol all point to the same shift: AI is graduating from async query-response to real-time, embodied presence. The investable surface is the infrastructure that makes machines live representatives — low-latency voice, session governance, escalation logic, and sovereign real-time stacks for institutions that cannot afford foreign latency."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry078">Diop Daily #078 — August 2026</div>
+                <div class="article__meta-line">
+                    <time>August 3, 2026</time>
+                    <span>·</span>
+                    <span data-rt="11">11 min read</span>
+                    <span>·</span>
+                    <span>real-time AI · agent presence · institutional interface</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Live Institution: Why AI's Next Execution Layer Is Real-Time Presence</h1>
+
+                <p>The market has spent the last two years optimizing for the right answer. It is about to discover that the right answer, delivered too late, is the wrong answer. On July 30, OpenAI published an account of how avatarin deployed a 24/7 multilingual retail agent using GPT-Realtime at Yamada Denki stores. In two weeks, thirty thousand people used the agent. Ninety-two percent of survey responses were positive. The headline number is not the user count. It is the cadence: the agent answered in real time, in the language of the shopper, at the moment of purchase intent, without a human intermediary queuing the response.</p>
+
+                <p>This is a phase change, not a feature upgrade. The first generation of enterprise AI was asynchronous: a user submitted a prompt, a model returned a completion, and the institution recorded the transaction. The latency was measured in seconds. The interface was text. The agent had no presence beyond the window of the request. That model served advisory workloads well: drafting emails, summarizing reports, generating code. It failed at operational workloads where timing is part of the product. A customer who waits twelve seconds for a service agent to answer does not feel assisted. He feels abandoned. A supply-chain controller who receives a disruption alert three minutes after the event has lost the window to reroute. A patient who cannot explain symptoms in real time to a diagnostic agent does not receive triage. He receives a script.</p>
+
+                <blockquote>
+                    <p>The decisive AI layer of the next decade is not the model that reasons best. It is the system that can reason, respond, and act in the time budget that the institution's operations demand.</p>
+                </blockquote>
+
+                <h2>What real-time changes architecturally</h2>
+
+                <p>Realtime is not a faster version of the same stack. It is a different stack with different failure modes. When an AI agent operates in real time — through voice, video, or continuous text streams — the system must maintain session state under latency pressure, handle interruptions and barge-in, manage turn-taking without losing context, and escalate to a human without breaking the conversational contract. None of these were primary design constraints for the async prompt-response paradigm.</p>
+
+                <p>The OpenAI avatarin deployment illustrates the difference. The agent is embedded in a physical retail environment where shoppers speak Japanese, ask questions spontaneously, and expect immediate answers. The agent must handle overlapping speech, ambient noise, product-specific vocabulary, and the emotional tone of a customer who cannot find what they want. It must also know when to hand off to a human associate without making the customer feel transferred. These are not model problems alone. They are orchestration, session management, audio pipeline, and escalation-design problems. The model is the reasoning engine. The real-time stack is the nervous system that connects that engine to the world.</p>
+
+                <p>Google's Agent-to-Agent (A2A) protocol adds the handoff dimension. When multiple agents operate in real time across an institution, the protocol that governs their handoffs must preserve timing, context, and authority without introducing bottlenecks. A2A is significant because it treats the handoff as a first-class operation with its own integrity requirements, not as a casual message pass. That framing matters for real-time workflows: if an agent hands off a customer to a specialist mid-conversation, the receiving agent must inherit the session state, the emotional context, and the authority boundaries without restarting the interaction. The customer should never hear: "Let me transfer you to an agent who actually knows what you're talking about." He should hear: "I'm bringing in a specialist. Here is what we already discussed."</p>
+
+                <h2>The infrastructure that real-time demands</h2>
+
+                <p>If real-time presence is becoming an execution layer, the market needs more than better models. It needs a new infrastructure discipline. The components are already visible in early deployments:</p>
+
+                <ul>
+                    <li><strong>Low-latency inference with session continuity:</strong> the model must respond within the conversational latency budget while preserving session state across turns. This requires inference optimization, session-aware routing, and caching strategies that do not treat each turn as isolated.</li>
+                    <li><strong>Multimodal input pipelines:</strong> voice, video, and text must be processed in parallel, with the agent capable of interpreting tone, gesture, and context alongside semantic content. The pipeline must be robust to noise, accent variation, and code-switching.</li>
+                    <li><strong>Escalation and handoff governance:</strong> real-time agents must know when to hand off, to whom, and with what context preserved. The handoff protocol must carry authority, history, and emotional state without leaking unrelated data.</li>
+                    <li><strong>Real-time observability:</strong> institutions must be able to audit what the agent said, what it heard, what it escalated, and what it decided — in the moment, not in a batch report six hours later. Observability must be as fast as the interaction itself.</li>
+                    <li><strong>Language sovereignty:</strong> real-time agents that cannot operate in the local languages of the institution's users are not assistants. They are advertisements for a foreign stack. Sovereign real-time infrastructure includes models, pipelines, and vocabularies that remain under institutional control.</li>
+                </ul>
+
+                <h2>Why this matters for African institutional sovereignty</h2>
+
+                <p>African institutions face a specific trap with real-time AI. The vendors selling these systems will deploy them first in markets where the return on investment is fastest: retail chains, contact centers, and public-service hotlines in major economies. African institutions will be offered these systems as finished products — black-box agents with limited African-language support, foreign escalation paths, and remote inference that depends on undersea cable latency. The promise is modernization. The reality is a new dependency layer that sits between the institution and its customers, patients, citizens, or constituents in the most time-sensitive interactions.</p>
+
+                <p>The deeper risk is cultural. A real-time agent that cannot recognize the rhetorical patterns, honorifics, or indirect request structures of a Swahili-speaking customer, or that misinterprets the emotional register of a Hausa-speaking patient, does not merely provide bad service. It reproduces the colonial hierarchy of attention: the institution's most intimate touchpoints with its people are mediated by a machine that was not built to know them. Cheikh Anta Diop's imperative applies precisely here. The laboratory must govern the instruments that mediate its relationships with its own population. That does not mean building every model from scratch. It means owning the real-time stack — the language layer, the escalation logic, the session governance, and the observability surface — so that the agent's behavior reflects institutional values rather than vendor defaults.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If the thesis is correct, capital should look at the layers that make real-time AI governable, sovereign, and commercially deployable:</p>
+
+                <ul>
+                    <li><strong>Real-time orchestration platforms:</strong> middleware that manages session state, handoffs, escalation, and multimodal pipelines across voice, video, and text interfaces in ways that survive production load and regulatory audit.</li>
+                    <li><strong>Sovereign voice and language stacks:</strong> real-time models, tokenizers, and acoustic models for African and diasporic languages that can be deployed locally without depending on foreign inference endpoints. The value is not merely linguistic inclusion. It is latency independence and cultural fidelity.</li>
+                    <li><strong>Physical AI interface infrastructure:</strong> the hardware, networking, and edge-compute layers that place real-time agents in retail, health, and public-service environments where connectivity is intermittent and the interaction is face-to-face.</li>
+                    <li><strong>Real-time observability and compliance:</strong> tools that let institutions audit agent behavior in the moment — what was said, what was heard, what escalated, and under what authority — for regulatory compliance and liability management.</li>
+                    <li><strong>Handoff and escalation markets:</strong> the protocol layer that governs when and how AI hands work to humans or other agents, preserving context, authority, and emotional state without leakage. This is the connective tissue of the live institution.</li>
+                </ul>
+
+                <p>The deeper point is that real-time AI is not a better chatbot. It is a new institutional interface with its own execution constraints, failure modes, and governance requirements. The firms that win will not be the ones with the lowest-latency model alone. They will be the ones that can construct, govern, and operate the full stack that makes machine presence trustworthy, sovereign, and commercially sustainable. That stack is harder to build than a demo, but it is also more durable. Demos expire. Institutional trust in real time compounds.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/index/avatarin" target="_blank" rel="noopener">OpenAI — "How avatarin built a 24/7 retail agent with GPT-Realtime" (July 30, 2026; description: avatarin uses GPT-Realtime to give Yamada Denki shoppers 24/7 multilingual support; 30,000 people used the agent in two weeks, 92% positive survey responses.)</a></li>
+                    <li><a href="https://openai.com/index/building-abundant-intelligence" target="_blank" rel="noopener">OpenAI — "Building abundant intelligence" (July 31, 2026; description: a full-stack approach to making advanced AI more capable, more affordable, and more widely useful.)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — "How A2A is Building a World of Collaborative Agents" (visible page date: June 18, 2026; meta description: the Agent-to-Agent protocol enables secure, autonomous agent handoffs and scalable workflows.)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L'institution vivante : pourquoi la prochaine couche d'exécution de l'IA est la présence en temps réel</h1>
+
+                <p>Le marché a passé les deux dernières années à optimiser pour la bonne réponse. Il est sur le point de découvrir que la bonne réponse, livrée trop tard, est la mauvaise réponse. Le 30 juillet, OpenAI a publié un compte rendu de la manière dont avatarin a déployé un agent commercial 24h/24 et 7j/7 multilingue utilisant GPT-Realtime dans les magasins Yamada Denki. En deux semaines, trente mille personnes ont utilisé l'agent. Quatre-vingt-douze pour cent des réponses aux sondages étaient positives. Le chiffre à la une n'est pas le nombre d'utilisateurs. C'est le cadencement : l'agent a répondu en temps réel, dans la langue du client, au moment même de l'intention d'achat, sans intermédiaire humain qui file la réponse.</p>
+
+                <p>C'est un changement de phase, pas une mise à niveau de fonctionnalité. La première génération d'IA en entreprise était asynchrone : un utilisateur soumettait une requête, un modèle renvoyait une complétion, et l'institution enregistrait la transaction. La latence se mesurait en secondes. L'interface était textuelle. L'agent n'avait aucune présence au-delà de la fenêtre de la requête. Ce modèle servait bien les workloads de conseil : rédiger des emails, résumer des rapports, générer du code. Il échouait sur les workloads opérationnels où le timing fait partie du produit. Un client qui attend douze secondes pour qu'un agent de service réponde ne se sent pas assisté. Il se sent abandonné. Un responsable de chaîne d'approvisionnement qui reçoit une alerte de perturbation trois minutes après l'événement a perdu la fenêtre de reroutage. Un patient qui ne peut pas expliquer ses symptômes en temps réel à un agent de diagnostic ne reçoit pas de triage. Il reçoit un script.</p>
+
+                <blockquote>
+                    <p>La couche décisive de l'IA de la prochaine décennie n'est pas le modèle qui raisonne le mieux. C'est le système qui peut raisonner, répondre et agir dans le budget de temps que demandent les opérations de l'institution.</p>
+                </blockquote>
+
+                <h2>Ce que le temps réel change architecturlement</h2>
+
+                <p>Le temps réel n'est pas une version plus rapide de la même pile. C'est une pile différente avec des modes de défaillance différents. Lorsqu'un agent IA opère en temps réel — par la voix, la vidéo ou des flux de texte continus — le système doit maintenir l'état de session sous pression de latence, gérer les interruptions et les prises de parole, manager le tour de parole sans perdre le contexte, et escalader vers un humain sans briser le contrat conversationnel. Rien de cela n'était une contrainte de conception primaire pour le paradigme asynchrone requête-réponse.</p>
+
+                <p>Le déploiement avatarin d'OpenAI illustre la différence. L'agent est intégré dans un environnement commercial physique où les clients parlent japonais, posent des questions spontanément et attendent des réponses immédiates. L'agent doit gérer la parole superposée, le bruit ambiant, le vocabulaire spécifique aux produits et le ton émotionnel d'un client qui ne trouve pas ce qu'il veut. Il doit aussi savoir quand transférer à un associé humain sans faire sentir au client qu'il est transféré. Ce ne sont pas seulement des problèmes de modèle. Ce sont des problèmes d'orchestration, de gestion de session, de pipeline audio et de conception d'escalade. Le modèle est le moteur de raisonnement. La pile temps réel est le système nerveux qui connecte ce moteur au monde.</p>
+
+                <p>Le protocole Agent-to-Agent (A2A) de Google ajoute la dimension de transfert. Lorsque plusieurs agents opèrent en temps réel au sein d'une institution, le protocole qui gouverne leurs transferts doit préserver le timing, le contexte et l'autorité sans introduire de goulots d'étranglement. A2A est significatif parce qu'il traite le transfert comme une opération de première classe avec ses propres exigences d'intégrité, et non comme un passage de message informel. Ce cadrage compte pour les workflows temps réel : si un agent transfère un client à un spécialiste en pleine conversation, l'agent receveur doit hériter de l'état de session, du contexte émotionnel et des limites d'autorité sans redémarrer l'interaction. Le client ne devrait jamais entendre : « Je vous transfère à un agent qui sait réellement de quoi vous parlez. » Il devrait entendre : « Je fais appel à un spécialiste. Voici ce que nous avons déjà discuté. »</p>
+
+                <h2>L'infrastructure que le temps réel exige</h2>
+
+                <p>Si la présence en temps réel devient une couche d'exécution, le marché a besoin de plus que de meilleurs modèles. Il a besoin d'une nouvelle discipline d'infrastructure. Les composants sont déjà visibles dans les premiers déploiements :</p>
+
+                <ul>
+                    <li><strong>Inférence basse latence avec continuité de session :</strong> le modèle doit répondre dans le budget de latence conversationnelle tout en préservant l'état de session entre les tours. Cela nécessite une optimisation de l'inférence, un routage sensible à la session et des stratégies de mise en cache qui ne traitent pas chaque tour comme isolé.</li>
+                    <li><strong>Pipeline multimodaux :</strong> la voix, la vidéo et le texte doivent être traités en parallèle, l'agent étant capable d'interpréter le ton, le geste et le contexte parallèlement au contenu sémantique. Le pipeline doit être robuste au bruit, à la variation d'accent et au code-switching.</li>
+                    <li><strong>Gouvernance de l'escalade et des transferts :</strong> les agents temps réel doivent savoir quand transférer, à qui et avec quel contexte préservé. Le protocole de transfert doit porter l'autorité, l'historique et l'état émotionnel sans fuite de données sans rapport.</li>
+                    <li><strong>Observabilité en temps réel :</strong> les institutions doivent pouvoir auditer ce que l'agent a dit, ce qu'il a entendu, ce qu'il a escaladé et ce qu'il a décidé — au moment même, pas dans un rapport de lot six heures plus tard. L'observabilité doit être aussi rapide que l'interaction elle-même.</li>
+                    <li><strong>Souveraineté linguistique :</strong> les agents temps réel qui ne peuvent pas opérer dans les langues locales des utilisateurs de l'institution ne sont pas des assistants. Ce sont des publicités pour une pile étrangère. L'infrastructure temps réel souveraine inclut des modèles, des pipelines et des vocabulaires qui restent sous contrôle institutionnel.</li>
+                </ul>
+
+                <h2>Pourquoi cela compte pour la souveraineté institutionnelle africaine</h2>
+
+                <p>Les institutions africaines font face à un piège spécifique avec l'IA temps réel. Les vendeurs de ces systèmes les déploieront d'abord sur les marchés où le retour sur investissement est le plus rapide : chaînes de vente au détail, centres de contact et lignes d'assistance des services publics dans les grandes économies. Les institutions africaines se verront proposer ces systèmes comme des produits finis — agents en boîte noire avec un support limité des langues africaines, des chemins d'escalade étrangers et une inférence distante qui dépend de la latence des câbles sous-marins. La promesse est la modernisation. La réalité est une nouvelle couche de dépendance qui se glisse entre l'institution et ses clients, patients, citoyens ou électeurs dans les interactions les plus sensibles au timing.</p>
+
+                <p>Le risque plus profond est culturel. Un agent temps réel qui ne reconnaît pas les schémas rhétoriques, les marques d'honneur ou les structures de demande indirecte d'un client swahili, ou qui interprète mal le registre émotionnel d'un patient haoussa, ne fournit pas simplement un mauvais service. Il reproduit la hiérarchie coloniale de l'attention : les points de contact les plus intimes de l'institution avec son peuple sont médiatisés par une machine qui n'a pas été construite pour les connaître. L'impératif de Cheikh Anta Diop s'applique précisément ici. Le laboratoire doit gouverner les instruments qui médiatisent ses relations avec sa propre population. Cela ne signifie pas construire chaque modèle à partir de zéro. Cela signifie posséder la pile temps réel — la couche linguistique, la logique d'escalade, la gouvernance de session et la surface d'observabilité — pour que le comportement de l'agent reflète les valeurs institutionnelles plutôt que les valeurs par défaut des vendeurs.</p>
+
+                <h2>Où la surface d'investissement s'élargit</h2>
+
+                <p>Si la thèse est correcte, le capital doit regarder les couches qui rendent l'IA temps réel gouvernable, souveraine et commercialement déployable :</p>
+
+                <ul>
+                    <li><strong>Plateformes d'orchestration temps réel :</strong> middleware qui gère l'état de session, les transferts, l'escalade et les pipelines multimodaux à travers des interfaces vocales, vidéo et textuelles de manière à survivre à la charge de production et à l'audit réglementaire.</li>
+                    <li><strong>Piles vocales et linguistiques souveraines :</strong> modèles temps réel, tokenizers et modèles acoustiques pour les langues africaines et diasporiques déployables localement sans dépendre de points d'extrapolation étrangers. La valeur n'est pas seulement l'inclusion linguistique. C'est l'indépendance de latence et la fidélité culturelle.</li>
+                    <li><strong>Infrastructure d'interface physique pour l'IA :</strong> couches matérielles, réseau et edge computing qui placent les agents temps réel dans des environnements de vente au détail, de santé et de services publics où la connectivité est intermittente et l'interaction en face-à-face.</li>
+                    <li><strong>Observabilité et conformité en temps réel :</strong> outils qui permettent aux institutions d'auditer le comportement de l'agent au moment même — ce qui a été dit, ce qui a été entendu, ce qui a été escaladé et sous quelle autorité — pour la conformité réglementaire et la gestion de la responsabilité.</li>
+                    <li><strong>Marchés de transfert et d'escalade :</strong> la couche de protocole qui gouverne quand et comment l'IA transfère le travail aux humains ou à d'autres agents, en préservant le contexte, l'autorité et l'état émotionnel sans fuite. C'est le tissu connectif de l'institution vivante.</li>
+                </ul>
+
+                <p>Le point plus profond est que l'IA temps réel n'est pas un meilleur chatbot. C'est une nouvelle interface institutionnelle avec ses propres contraintes d'exécution, modes de défaillance et exigences de gouvernance. Les entreprises qui gagneront ne seront pas celles avec le modèle à la latence la plus faible seules. Elles seront celles qui peuvent construire, gouverner et opérer la pile complète qui rend la présence machine digne de confiance, souveraine et commercialement durable. Cette pile est plus dure à construire qu'une démo, mais elle est aussi plus durable. Les démos expirent. La confiance institutionnelle en temps réel, elle, s'accumule.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/index/avatarin" target="_blank" rel="noopener">OpenAI — « How avatarin built a 24/7 retail agent with GPT-Realtime » (30 juillet 2026 ; description : avatarin utilise GPT-Realtime pour offrir aux clients de Yamada Denki un support multilingue 24/7. En deux semaines, 30 000 personnes ont utilisé l'agent et 92 % des réponses aux sondages étaient positives.)</a></li>
+                    <li><a href="https://openai.com/index/building-abundant-intelligence" target="_blank" rel="noopener">OpenAI — « Building abundant intelligence » (31 juillet 2026 ; description : une approche full-stack pour rendre l'IA avancée plus capable, plus abordable et plus largement utile.)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — « How A2A is Building a World of Collaborative Agents » (date visible : 18 juin 2026 ; méta description : le protocole Agent-to-Agent permet des transferts d'agents sécurisés et autonomes et des workflows évolutifs.)</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

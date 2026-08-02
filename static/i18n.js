@@ -105,6 +105,7 @@
         'article.entry075':     { en: 'Diop Daily #075 — July 2026', fr: 'Diop Quotidien n°075 — Juillet 2026' },
         'article.entry076':     { en: 'Diop Daily #076 — July 2026', fr: 'Diop Quotidien n°076 — Juillet 2026' },
         'article.entry077':     { en: 'Diop Daily #077 — August 2026', fr: 'Diop Quotidien n°077 — Août 2026' },
+        'article.entry078':     { en: 'Diop Daily #078 — August 2026', fr: 'Diop Quotidien n°078 — Août 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -333,6 +334,16 @@
                 fr: 'Ce journal s\'ouvre sur une déclaration : ce qu\'est ce front de recherche, pourquoi il existe, et quel standard de pensée gouvernera ces entrées. Pas un manifeste. Une charte de travail.'
             }
         },
+'diop-daily-078': {
+    title: {
+        en: "The Live Institution: Why AI's Next Execution Layer Is Real-Time Presence",
+        fr: "L'institution vivante : pourquoi la prochaine couche d'exécution de l'IA est la présence en temps réel"
+    },
+    excerpt: {
+        en: "OpenAI's avatarin retail agent, GPT-Realtime, and the A2A protocol all point to the same shift: AI is graduating from async query-response to real-time, embodied presence. The investable surface is the infrastructure that makes machines live representatives — low-latency voice, session governance, escalation logic, and sovereign real-time stacks for institutions that cannot afford foreign latency.",
+        fr: "L'agent commercial avatarin d'OpenAI, GPT-Realtime et le protocole A2A convergent vers le même déplacement : l'IA passe du mode asynchrone requête-réponse à la présence incarnée en temps réel. La surface d'investissement est l'infrastructure qui fait des machines des représentants vivants — voix basse latence, gouvernance de session, logique d'escalade et piles temps réel souveraines pour les institutions qui ne peuvent pas supporter la latence étrangère."
+    }
+},
 'diop-daily-077': {
     title: {
         en: "The Provenance Stack: From Trust Claim to Execution Primitive",
