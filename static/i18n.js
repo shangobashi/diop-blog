@@ -11,6 +11,9 @@
 
     var translations = {
         'meta.post074.title':  { en: 'Before the Answer, the Record: AI’s Next Gate Is Live Context — Diop Research', fr: 'Avant la réponse, le dossier : le prochain seuil de l’IA est le contexte vivant — Diop Research' },
+        'meta.post079.title':  { en: 'Substrate: Why the Agentic Future Depends on the Transport Nobody Is Talking About — Diop Research', fr: 'Substrat : pourquoi l\'avenir de l\'IA agentique dépend du transport dont personne ne parle — Diop Research' },
+        'meta.post079.description': { en: 'W3C\'s July 30 WebTransport implementations invitation, OpenAI\'s GPT-Live turnless voice system, and the avatarin retail agent all point to the same shift: the decisive AI layer is becoming the network substrate — the transport that carries agentic traffic without breaking session state, corrupting handoffs, or introducing foreign latency.', fr: 'L\'invitation aux implémentations de WebTransport du W3C du 30 juillet, le système vocal sans tour GPT-Live d\'OpenAI et l\'agent commercial avatarin convergent vers le même déplacement : la couche décisive de l\'IA devient le substrat réseau — le transport qui porte le trafic agentique sans briser l\'état de session, corrompre les transferts ou introduire de la latence étrangère.' },
+
         'meta.post074.description': { en: 'Health in ChatGPT, OpenAI Presence, and Google’s agent runtime stack all point to the same shift: the decisive AI layer is the context gate that decides which live records a machine may touch, under what authority, and with what recovery path.', fr: 'Health in ChatGPT, OpenAI Presence et la pile d’exécution agentique de Google convergent vers le même déplacement : la couche décisive de l’IA devient la porte du contexte, qui décide quels dossiers vivants une machine peut toucher, sous quelle autorité, et avec quel chemin de reprise.' },
 
         'meta.post075.title':  { en: 'Scientific Computing Is the New Sovereign AI Frontier — Diop Research', fr: 'Le calcul scientifique est la nouvelle frontière souveraine de l’IA — Recherche Diop' },
@@ -106,6 +109,7 @@
         'article.entry076':     { en: 'Diop Daily #076 — July 2026', fr: 'Diop Quotidien n°076 — Juillet 2026' },
         'article.entry077':     { en: 'Diop Daily #077 — August 2026', fr: 'Diop Quotidien n°077 — Août 2026' },
         'article.entry078':     { en: 'Diop Daily #078 — August 2026', fr: 'Diop Quotidien n°078 — Août 2026' },
+        'article.entry079':     { en: 'Diop Daily #079 — August 2026', fr: 'Diop Quotidien n°079 — Août 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -118,6 +122,16 @@
     };
 
     var postTranslations = {
+'diop-daily-079': {
+    title: {
+        en: "Substrate: Why the Agentic Future Depends on the Transport Nobody Is Talking About",
+        fr: "Substrat : pourquoi l'avenir de l'IA agentique dépend du transport dont personne ne parle"
+    },
+    excerpt: {
+        en: "W3C's July 30 WebTransport implementations invitation, OpenAI's GPT-Live turnless voice system, and the avatarin retail agent all point to the same shift: the decisive AI layer is becoming the network substrate — the transport that carries agentic traffic without breaking session state, corrupting handoffs, or introducing foreign latency. The investable surface is sovereign WebTransport gateways, stream-level observability, and African network stacks.",
+        fr: "L'invitation aux implémentations de WebTransport du W3C du 30 juillet, le système vocal sans tour GPT-Live d'OpenAI et l'agent commercial avatarin convergent vers le même déplacement : la couche décisive de l'IA devient le substrat réseau — le transport qui porte le trafic agentique sans briser l'état de session, corrompre les transferts ou introduire de la latence étrangère. La surface d'investissement est les passerelles WebTransport souveraines, l'observabilité au niveau du flux et les stacks réseau africains."
+    }
+},
 
 'diop-daily-074': {
     title: {
