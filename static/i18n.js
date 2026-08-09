@@ -374,14 +374,58 @@
     }
 },
 
-'diop-daily-084': {
+'diop-daily-080': {
     title: {
-        en: "The Credential Stack: Why AI Models Need Verifiable Identity Before They Enter the Institution",
-        fr: "La pile de credentials : pourquoi les modèles IA ont besoin d'identité vérifiable avant d'entrer dans l'institution"
+        en: "The Invoice Is the Product",
+        fr: "La facture est le produit"
     },
     excerpt: {
-        en: "W3C's DID Resolution v1 Candidate Recommendation and Verifiable Credentials v1.1 draft, combined with OpenAI's provenance disclosures, point to a new infrastructure layer: the credential stack that gives AI models verifiable identity, chain-of-custody, and auditable provenance before they reach an institution. The investable surface is model-provenance infrastructure, sovereign credentialing labs, and standards that make trust portable.",
-        fr: "La Candidate Recommendation du W3C pour DID Resolution v1 et l'ébauche de Verifiable Credentials v1.1, combinées aux divulgations de provenance d'OpenAI, convergent vers une nouvelle couche d'infrastructure : la pile de credentials qui donne aux modèles IA une identité vérifiable, une chaîne de custody et une provenance auditable avant d'atteindre une institution. La surface d'investissement est l'infrastructure de provenance de modèles, les laboratoires de credentialing souverains et les standards qui rendent la confiance portable."
+        en: "OpenAI's scorecard language changes the unit of AI economics from tokens to completed work. This field note follows the hidden cost of exceptions and asks what an African institution should put on its own ledger before it calls an agent productive.",
+        fr: "La formulation des scorecards d'OpenAI déplace l'unité de l'économie de l'IA des tokens vers le travail accompli. Cette note de terrain suit le coût caché des exceptions et demande ce qu'une institution africaine doit inscrire dans son propre registre avant de déclarer un agent productif."
+    }
+},
+
+'diop-daily-081': {
+    title: {
+        en: "A Memo to the Next Operator",
+        fr: "Note au prochain opérateur"
+    },
+    excerpt: {
+        en: "An agent that forgets the organization after every session is not an operating system. This letter examines the memory of decisions, procedures, permissions, and obligations that an institution must own before it automates.",
+        fr: "Un agent qui oublie l'organisation après chaque session n'est pas un système d'exploitation. Cette lettre examine la mémoire des décisions, procédures, permissions et obligations qu'une institution doit posséder avant d'automatiser."
+    }
+},
+
+'diop-daily-082': {
+    title: {
+        en: "The Tokenization Gap: Why African Languages Are the Unfinished Layer of Global AI",
+        fr: "Le fossé de tokenisation : pourquoi les langues africaines sont la couche inachevée de l'IA mondiale"
+    },
+    excerpt: {
+        en: "The global AI stack was built on English-dominant tokenization. For African languages, that creates a cost and meaning gap across inference, speech, code-switching, and institutional use. The question is who will build language infrastructure that preserves sense.",
+        fr: "La pile mondiale de l'IA a été construite autour d'une tokenisation dominée par l'anglais. Pour les langues africaines, cela crée un écart de coût et de sens dans l'inférence, la voix, le code-switching et l'usage institutionnel. La question est de savoir qui construira une infrastructure linguistique qui préserve le sens."
+    }
+},
+
+'diop-daily-083': {
+    title: {
+        en: "The Two-Key Machine",
+        fr: "La machine à deux clés"
+    },
+    excerpt: {
+        en: "A payment at 02:13 is a better test of autonomy than a polished demo. This essay explains approval-as-code: how agents can prepare consequential work at machine speed while a second, independent key preserves human authority.",
+        fr: "Un paiement à 2 h 13 est un meilleur test de l'autonomie qu'une démonstration soignée. Cet essai explique l'approbation comme code : comment les agents peuvent préparer un travail lourd de conséquences à la vitesse de la machine tandis qu'une seconde clé indépendante préserve l'autorité humaine."
+    }
+},
+
+'diop-daily-084': {
+    title: {
+        en: "Passport Control for Models",
+        fr: "Le contrôle des passeports des modèles"
+    },
+    excerpt: {
+        en: "DID Resolution and Verifiable Credentials suggest a practical rule for institutional AI: no model should cross the deployment boundary without a portable, revocable record of identity, evaluation, and custody.",
+        fr: "DID Resolution et les Verifiable Credentials suggèrent une règle pratique pour l'IA institutionnelle : aucun modèle ne devrait franchir la frontière de déploiement sans un dossier portable et révocable d'identité, d'évaluation et de garde."
     }
 },
 
