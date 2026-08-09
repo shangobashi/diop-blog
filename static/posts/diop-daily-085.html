@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Exit Is Part of the Product — Diop Research</title>
+    <meta name="description" content="As AI moves from chat into repeatable work, the product is not only capability but reversibility. A field note on portable identity, memory, authority, and exit infrastructure for institutions."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </span>
+                <span class="theme-icon theme--moon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry085">Diop Daily #085 — August 2026</div>
+                <div class="article__meta-line">
+                    <time>August 10, 2026</time>
+                    <span>·</span>
+                    <span data-rt="8">8 min read</span>
+                    <span>·</span>
+                    <span>interoperability · portability · institutional sovereignty · AI infrastructure</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Exit Is Part of the Product</h1>
+                <p>A software company can buy access to a model in minutes. The harder question is whether it can leave.</p>
+                <p>That question has been treated as a procurement footnote, a legal clause, or an unpleasant scenario to discuss after the pilot. It should be treated as a product requirement. When AI moves from a chat window into repeatable institutional work, the buyer is no longer acquiring only inference. The buyer is entrusting a system with memory, authority, workflow definitions, records, and the interpretation of exceptions. If those things cannot move, the vendor is no longer merely providing a tool. It is becoming the institution's operating environment.</p>
+                <blockquote><p>An AI system is not sovereign because it can act alone. It is sovereign when an institution can change its mind without losing itself.</p></blockquote>
+
+                <h2>Capability is portable; institutional state is not</h2>
+                <p>Model access is becoming easier to compare. A buyer can test latency, price, context length, tool use, and benchmark performance. The difficult asset is the state that accumulates around the model: the vocabulary learned from the organization, the routing rules that decide which agent receives a task, the approval thresholds, the evidence attached to decisions, the unresolved questions, and the record of what was corrected.</p>
+                <p>This is why the language of vendor switching understates the problem. Switching a model is not the same as moving an institution. A model may be replaceable while the surrounding interpretation is quietly trapped in proprietary prompts, hidden ranking systems, undocumented tool schemas, or dashboards that cannot export the reasons behind a decision.</p>
+                <p>OpenAI's August 6 Signals item, “From asking to doing: How the world is putting ChatGPT to work,” describes a market moving toward repeated workplace use rather than isolated questions. Its same-week role signal about HSP GRUPPE places ChatGPT Enterprise inside tax advisory and client service. The more work becomes repeatable, the more expensive it becomes to discover that the operating state was never designed to travel.</p>
+
+                <h2>Interoperability is the beginning, not the exit</h2>
+                <p>Google's A2A work gives the market an important technical direction: agents need a common way to discover one another, hand off work, and participate in workflows that are larger than any single model. That is necessary. It is not sufficient.</p>
+                <p>A handoff protocol answers how one agent communicates with another. An exit protocol must answer what the institution owns when the agent changes. It must preserve the meaning of the handoff, the authority that permitted it, the evidence that supported it, and the obligations that remain after the original runtime has disappeared.</p>
+                <p>The distinction is the difference between moving messages and moving responsibility. A portable system cannot export only JSON while leaving the semantics of approval, expiration, local terminology, and contested decisions behind. Interoperability becomes institutional portability only when the receiving system can reconstruct not just the data, but the reasons and boundaries that made the data actionable.</p>
+
+                <h2>What must survive the move?</h2>
+                <p>An institution should be able to demand a migration manifest before it signs a serious AI contract. At minimum, the manifest should identify:</p>
+                <ul>
+                    <li><strong>Identity:</strong> which models, tools, agents, and human authorities participated in each consequential action.</li>
+                    <li><strong>Memory:</strong> which facts, decisions, procedures, and exceptions were carried forward, with version history and expiration.</li>
+                    <li><strong>Authority:</strong> which permission, role, threshold, or second key allowed an action to proceed.</li>
+                    <li><strong>Evidence:</strong> which records, sources, and evaluations supported the output, including uncertainty and disagreement.</li>
+                    <li><strong>Artifacts:</strong> which prompts, schemas, policies, outputs, and receipts are required to reproduce or contest the work.</li>
+                </ul>
+                <p>This list is not a demand for infinite archival storage. It is a demand for a clear boundary between what the institution owns and what the vendor merely renders. Without that boundary, a buyer may possess its files while renting the grammar that gives those files meaning.</p>
+
+                <h2>Portable credentials turn claims into objects</h2>
+                <p>The current standards work is useful because it moves portability away from a slogan. W3C's August 6 announcement on DID Resolution describes a process for obtaining a DID document and accompanying metadata for a specific identifier. W3C's July 30 Group Note Draft on Verifiable Credentials describes credentials that can be cryptographically secure, privacy respecting, and machine-verifiable. These are not complete answers to institutional exit, but they provide the grammar for making identity and claims inspectable across systems.</p>
+                <p>The practical implication is simple: a migration should not require the receiving vendor to trust a screenshot of the old system. It should be able to verify the identity of an artifact, the issuer of a claim, the scope of an evaluation, and the status of a permission. A portable credential is valuable precisely because it can be checked outside the environment that produced it.</p>
+                <p>But credentials must remain modest. A signed claim is not a guarantee of truth, and portability is not proof of fitness. The receiving institution still needs local tests, local language coverage, local legal interpretation, and a way to revoke a claim when conditions change. Exit infrastructure should make disagreement easier to carry, not hide it behind a clean export.</p>
+
+                <h2>Regulation will make exit an operating question</h2>
+                <p>The European Commission describes the AI Act as a legal framework addressing the risks of AI and establishing obligations around the systems placed on the market. Whatever one's view of the policy's details, the direction is significant: AI governance is moving from voluntary assurances toward documented responsibilities, technical evidence, and accountability attached to actual use.</p>
+                <p>That direction increases the value of portability. If an institution changes a model provider, it cannot afford to lose the evidence that explains how a system was evaluated, what human oversight existed, which data boundaries applied, and which incidents or corrections changed the risk posture. Compliance that lives only in a vendor dashboard is not durable compliance. It is dependency wearing a regulatory costume.</p>
+                <p>The serious buyer will therefore ask a question that sounds operational but is constitutional: can we preserve our obligations if the runtime changes? A vendor that makes exit impossible is not merely creating switching costs. It is concentrating institutional authority in a place the buyer may not control.</p>
+
+                <h2>African sovereignty requires the right to leave</h2>
+                <p>For African institutions, this is not an abstract concern about procurement efficiency. A ministry, bank, hospital, university, or media organization may operate across languages, borders, legal systems, and unreliable connectivity. Its AI layer must be able to survive vendor price changes, foreign policy changes, regional requirements, and the simple fact that a local institution may eventually need to build a better system for itself.</p>
+                <p>Scientific sovereignty is often described as the ability to build. It is also the ability to refuse permanent dependence. A federation of African institutions should be able to share standards for identity, evidence, policy, and handoff without being forced into one vendor's private ontology. Local systems can then differ in language, authority, and social purpose while remaining capable of exchanging commitments.</p>
+                <p>That is the constructive meaning of interoperability. It is not the flattening of difference into a universal interface. It is the ability to coordinate without surrendering the right to interpret, amend, or leave.</p>
+
+                <h2>Where the investable surface is widening</h2>
+                <p>If the exit thesis is correct, capital should look beyond model wrappers toward the infrastructure that makes institutional reversibility measurable:</p>
+                <ul>
+                    <li><strong>Migration compilers:</strong> systems that translate prompts, tool schemas, memory records, and policy logic between runtimes while exposing what cannot be translated safely.</li>
+                    <li><strong>Portable memory and policy stores:</strong> vendor-neutral layers that preserve versioned context, authority, expiration, and disagreement rather than exporting only documents.</li>
+                    <li><strong>Conformance and exit tests:</strong> independent test suites that measure whether an institution can reproduce, audit, revoke, and contest work after a provider change.</li>
+                    <li><strong>Credential and receipt bridges:</strong> services that let identity, evaluation, approval, and provenance claims remain verifiable across organizations and jurisdictions.</li>
+                    <li><strong>Regional sovereign infrastructure:</strong> hosting, language, and connectivity layers that give African institutions a credible alternative when foreign systems become too costly, opaque, or politically misaligned.</li>
+                </ul>
+                <p>The valuable company in this category will not promise that every system is interchangeable. That promise would be false. It will show exactly what can move, what must be revalidated, what loses meaning, and what evidence proves the difference. The product is the controlled transition.</p>
+
+                <h2>The institution should own the future tense</h2>
+                <p>Every AI contract contains an implied future: the vendor will remain available, affordable, compatible, lawful, and aligned with the institution's purposes. Mature infrastructure makes that future conditional rather than assumed. It lets the buyer say: if the conditions change, our work, obligations, and memory can continue elsewhere.</p>
+                <p>That is why the exit is part of the product. Not because departure is always desirable, but because the right to depart disciplines the relationship while it is still intact. A system that can be left must earn continued trust. A system that cannot be left can quietly convert convenience into authority.</p>
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “From asking to doing: How the world is putting ChatGPT to work” (August 6, 2026; description: OpenAI Signals data on worldwide use, country-level adoption, usage trends, and evolving behavior)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “How HSP GRUPPE builds AI capabilities for tax advisory” (August 7, 2026; description: ChatGPT Enterprise use in tax advisory, productivity, work quality, and client service)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — “How A2A is Building a World of Collaborative Agents” (June 18, 2026; description: the Agent-to-Agent protocol enables secure agent handoffs and scalable collaborative workflows)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/w3c-invites-implementations-of-decentralized-identifier-resolution-did-resolution-v1/" target="_blank" rel="noopener">W3C — “Decentralized Identifier Resolution (DID Resolution) v1” (August 6, 2026; description: obtaining a DID document and accompanying metadata for a specific identifier)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/group-note-draft-verifiable-credentials-overview-v1-1/" target="_blank" rel="noopener">W3C — “Verifiable Credentials Overview v1.1” Group Note Draft (July 30, 2026; description: cryptographically secure, privacy-respecting, machine-verifiable credentials on the Web)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">European Commission — “AI Act” (accessed August 10, 2026; description: a legal framework addressing AI risks and positioning Europe to play a leading role globally)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La sortie fait partie du produit</h1>
+                <p>Une entreprise peut acheter l'accès à un modèle en quelques minutes. La question plus difficile est de savoir si elle peut en sortir.</p>
+                <p>Cette question a été traitée comme une note de bas de page dans les achats, une clause juridique ou un scénario désagréable à discuter après le pilote. Elle devrait être traitée comme une exigence produit. Lorsque l'IA passe d'une fenêtre de conversation à un travail institutionnel répétable, l'acheteur n'acquiert plus seulement de l'inférence. Il confie à un système une mémoire, une autorité, des définitions de workflow, des dossiers et l'interprétation des exceptions. Si ces éléments ne peuvent pas être déplacés, le fournisseur ne fournit plus seulement un outil. Il devient l'environnement d'exploitation de l'institution.</p>
+                <blockquote><p>Un système d'IA n'est pas souverain parce qu'il peut agir seul. Il est souverain lorsqu'une institution peut changer d'avis sans se perdre elle-même.</p></blockquote>
+
+                <h2>La capacité est portable ; l'état institutionnel ne l'est pas</h2>
+                <p>L'accès aux modèles devient plus facile à comparer. Un acheteur peut tester la latence, le prix, la longueur du contexte, l'usage des outils et les performances aux benchmarks. L'actif difficile est l'état qui s'accumule autour du modèle : le vocabulaire appris de l'organisation, les règles de routage qui décident quel agent reçoit une tâche, les seuils d'approbation, les preuves attachées aux décisions, les questions non résolues et l'historique des corrections.</p>
+                <p>C'est pourquoi le langage du changement de fournisseur minimise le problème. Changer de modèle n'est pas la même chose que déplacer une institution. Un modèle peut être remplaçable tandis que l'interprétation qui l'entoure reste enfermée dans des prompts propriétaires, des systèmes de classement cachés, des schémas d'outils non documentés ou des tableaux de bord incapables d'exporter les raisons d'une décision.</p>
+                <p>L'item Signals d'OpenAI du 6 août, « From asking to doing: How the world is putting ChatGPT to work », décrit un marché qui s'oriente vers un usage professionnel répété plutôt que vers des questions isolées. Le signal publié la même semaine sur HSP GRUPPE place ChatGPT Enterprise dans le conseil fiscal et le service client. Plus le travail devient répétable, plus il devient coûteux de découvrir que l'état opératoire n'a jamais été conçu pour voyager.</p>
+
+                <h2>L'interopérabilité est un commencement, pas une sortie</h2>
+                <p>Le travail de Google sur A2A donne au marché une direction technique importante : les agents ont besoin d'un moyen commun pour se découvrir, se transmettre le travail et participer à des workflows plus vastes qu'un modèle unique. C'est nécessaire. Ce n'est pas suffisant.</p>
+                <p>Un protocole de transfert répond à la question de savoir comment un agent communique avec un autre. Un protocole de sortie doit répondre à la question de savoir ce que l'institution possède lorsque l'agent change. Il doit préserver le sens du transfert, l'autorité qui l'a permis, les preuves qui l'ont soutenu et les obligations qui subsistent après la disparition du runtime initial.</p>
+                <p>La distinction sépare le déplacement de messages du déplacement de la responsabilité. Un système portable ne peut pas exporter uniquement du JSON en laissant derrière lui la sémantique de l'approbation, de l'expiration, de la terminologie locale et des décisions contestées. L'interopérabilité devient une portabilité institutionnelle seulement lorsque le système receveur peut reconstruire non seulement les données, mais aussi les raisons et les limites qui les rendaient actionnables.</p>
+
+                <h2>Qu'est-ce qui doit survivre au déplacement ?</h2>
+                <p>Une institution devrait pouvoir exiger un manifeste de migration avant de signer un contrat IA sérieux. Ce manifeste devrait au minimum identifier :</p>
+                <ul>
+                    <li><strong>Identité :</strong> les modèles, outils, agents et autorités humaines qui ont participé à chaque action lourde de conséquences.</li>
+                    <li><strong>Mémoire :</strong> les faits, décisions, procédures et exceptions transmis, avec leur historique de versions et leur expiration.</li>
+                    <li><strong>Autorité :</strong> la permission, le rôle, le seuil ou la seconde clé qui a permis à l'action d'avancer.</li>
+                    <li><strong>Preuves :</strong> les dossiers, sources et évaluations qui soutenaient le résultat, y compris l'incertitude et le désaccord.</li>
+                    <li><strong>Artefacts :</strong> les prompts, schémas, politiques, sorties et reçus nécessaires pour reproduire ou contester le travail.</li>
+                </ul>
+                <p>Cette liste n'exige pas un stockage archivistique infini. Elle exige une frontière claire entre ce que l'institution possède et ce que le fournisseur ne fait que rendre. Sans cette frontière, un acheteur peut posséder ses fichiers tout en louant la grammaire qui leur donne un sens.</p>
+
+                <h2>Les credentials portables transforment les affirmations en objets</h2>
+                <p>Les travaux actuels de normalisation sont utiles parce qu'ils éloignent la portabilité du slogan. L'annonce du W3C du 6 août sur DID Resolution décrit un processus permettant d'obtenir un document DID et les métadonnées qui l'accompagnent pour un identifiant donné. Le projet de Group Note du W3C du 30 juillet sur les Verifiable Credentials décrit des credentials pouvant être sécurisés cryptographiquement, respectueux de la vie privée et vérifiables par machine. Ce ne sont pas des réponses complètes à la sortie institutionnelle, mais ils fournissent une grammaire pour rendre l'identité et les affirmations examinables entre systèmes.</p>
+                <p>L'implication pratique est simple : une migration ne devrait pas exiger que le fournisseur receveur fasse confiance à une capture d'écran de l'ancien système. Il devrait pouvoir vérifier l'identité d'un artefact, l'émetteur d'une affirmation, le périmètre d'une évaluation et le statut d'une permission. Un credential portable a de la valeur précisément parce qu'il peut être contrôlé en dehors de l'environnement qui l'a produit.</p>
+                <p>Mais les credentials doivent rester modestes. Une affirmation signée ne garantit pas la vérité, et la portabilité ne prouve pas l'aptitude. L'institution receveuse a toujours besoin de tests locaux, d'une couverture des langues locales, d'une interprétation juridique locale et d'un moyen de révoquer une affirmation lorsque les conditions changent. L'infrastructure de sortie doit rendre le désaccord plus facile à transporter, pas le dissimuler derrière un export propre.</p>
+
+                <h2>La régulation fera de la sortie une question d'exploitation</h2>
+                <p>La Commission européenne décrit l'AI Act comme un cadre juridique qui traite les risques de l'IA et établit des obligations pour les systèmes mis sur le marché. Quelle que soit l'appréciation portée sur les détails de cette politique, la direction est importante : la gouvernance de l'IA passe d'assurances volontaires à des responsabilités documentées, des preuves techniques et une obligation de rendre des comptes attachée à l'usage réel.</p>
+                <p>Cette direction accroît la valeur de la portabilité. Si une institution change de fournisseur de modèles, elle ne peut pas se permettre de perdre les preuves qui expliquent comment un système a été évalué, quelle supervision humaine existait, quelles limites de données s'appliquaient et quels incidents ou corrections ont modifié le profil de risque. Une conformité qui ne vit que dans le tableau de bord d'un fournisseur n'est pas une conformité durable. C'est une dépendance vêtue d'un costume réglementaire.</p>
+                <p>L'acheteur sérieux posera donc une question qui semble opérationnelle mais qui est constitutionnelle : pouvons-nous préserver nos obligations si le runtime change ? Un fournisseur qui rend la sortie impossible ne crée pas seulement des coûts de changement. Il concentre l'autorité institutionnelle dans un lieu que l'acheteur ne contrôle peut-être pas.</p>
+
+                <h2>La souveraineté africaine exige le droit de partir</h2>
+                <p>Pour les institutions africaines, il ne s'agit pas d'une préoccupation abstraite d'efficacité des achats. Un ministère, une banque, un hôpital, une université ou une organisation médiatique peut opérer à travers des langues, des frontières, des systèmes juridiques et une connectivité peu fiable. Sa couche IA doit pouvoir survivre aux changements de prix des fournisseurs, aux changements de politique étrangers, aux exigences régionales et au fait simple qu'une institution locale pourra un jour devoir construire elle-même un meilleur système.</p>
+                <p>La souveraineté scientifique est souvent décrite comme la capacité de construire. Elle est aussi la capacité de refuser une dépendance permanente. Une fédération d'institutions africaines devrait pouvoir partager des standards d'identité, de preuve, de politique et de transfert sans être forcée d'adopter l'ontologie privée d'un fournisseur unique. Les systèmes locaux peuvent alors différer par leur langue, leur autorité et leur finalité sociale tout en restant capables d'échanger des engagements.</p>
+                <p>C'est le sens constructif de l'interopérabilité. Il ne s'agit pas d'aplatir les différences dans une interface universelle. Il s'agit de pouvoir coordonner sans renoncer au droit d'interpréter, de modifier ou de partir.</p>
+
+                <h2>Où la surface d'investissement s'élargit</h2>
+                <p>Si la thèse de la sortie est correcte, le capital doit regarder au-delà des wrappers de modèles, vers l'infrastructure qui rend la réversibilité institutionnelle mesurable :</p>
+                <ul>
+                    <li><strong>Compilateurs de migration :</strong> systèmes qui traduisent prompts, schémas d'outils, enregistrements de mémoire et logique de politiques entre runtimes, tout en exposant ce qui ne peut pas être traduit sans risque.</li>
+                    <li><strong>Magasins portables de mémoire et de politiques :</strong> couches neutres qui préservent le contexte versionné, l'autorité, l'expiration et le désaccord au lieu d'exporter uniquement des documents.</li>
+                    <li><strong>Tests de conformité et de sortie :</strong> suites indépendantes qui mesurent si une institution peut reproduire, auditer, révoquer et contester le travail après un changement de fournisseur.</li>
+                    <li><strong>Ponts de credentials et de reçus :</strong> services permettant à des affirmations d'identité, d'évaluation, d'approbation et de provenance de rester vérifiables entre organisations et juridictions.</li>
+                    <li><strong>Infrastructure souveraine régionale :</strong> couches d'hébergement, de langue et de connectivité donnant aux institutions africaines une alternative crédible lorsque les systèmes étrangers deviennent trop coûteux, opaques ou politiquement mal alignés.</li>
+                </ul>
+                <p>L'entreprise de valeur dans cette catégorie ne promettra pas que tous les systèmes sont interchangeables. Cette promesse serait fausse. Elle montrera exactement ce qui peut être déplacé, ce qui doit être revalidé, ce qui perd son sens et quelles preuves établissent la différence. Le produit, c'est la transition contrôlée.</p>
+
+                <h2>L'institution doit posséder le futur</h2>
+                <p>Tout contrat IA contient un futur implicite : le fournisseur restera disponible, abordable, compatible, légal et aligné sur les finalités de l'institution. Une infrastructure mature rend ce futur conditionnel plutôt que présumé. Elle permet à l'acheteur de dire : si les conditions changent, notre travail, nos obligations et notre mémoire peuvent continuer ailleurs.</p>
+                <p>C'est pourquoi la sortie fait partie du produit. Non parce que le départ est toujours souhaitable, mais parce que le droit de partir discipline la relation lorsqu'elle est encore intacte. Un système que l'on peut quitter doit mériter la confiance continue. Un système que l'on ne peut pas quitter peut convertir silencieusement la commodité en autorité.</p>
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « From asking to doing: How the world is putting ChatGPT to work » (6 août 2026 ; description : données Signals d'OpenAI sur l'usage mondial, l'adoption par pays, les tendances d'utilisation et l'évolution des comportements)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « How HSP GRUPPE builds AI capabilities for tax advisory » (7 août 2026 ; description : usage de ChatGPT Enterprise dans le conseil fiscal, la productivité, la qualité du travail et le service client)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — « How A2A is Building a World of Collaborative Agents » (18 juin 2026 ; description : le protocole Agent-to-Agent permet des transferts d'agents sécurisés et des workflows collaboratifs évolutifs)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/w3c-invites-implementations-of-decentralized-identifier-resolution-did-resolution-v1/" target="_blank" rel="noopener">W3C — « Decentralized Identifier Resolution (DID Resolution) v1 » (6 août 2026 ; description : obtention d'un document DID et des métadonnées accompagnantes pour un identifiant donné)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/group-note-draft-verifiable-credentials-overview-v1-1/" target="_blank" rel="noopener">W3C — « Verifiable Credentials Overview v1.1 » projet de Group Note (30 juillet 2026 ; description : credentials sécurisés cryptographiquement, respectueux de la vie privée et vérifiables par machine sur le Web)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">Commission européenne — « AI Act » (consulté le 10 août 2026 ; description : cadre juridique traitant les risques de l'IA et positionnant l'Europe pour jouer un rôle mondial de premier plan)</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>August 10, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

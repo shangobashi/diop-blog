@@ -115,6 +115,7 @@
         'article.entry082':     { en: 'Diop Daily #082 — August 2026', fr: 'Diop Quotidien n°082 — Août 2026' },
         'article.entry083':     { en: 'Diop Daily #083 — August 2026', fr: 'Diop Quotidien n°083 — Août 2026' },
         'article.entry084':     { en: 'Diop Daily #084 — August 2026', fr: 'Diop Quotidien n°084 — Août 2026' },
+        'article.entry085':     { en: 'Diop Daily #085 — August 2026', fr: 'Diop Quotidien n°085 — Août 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -426,6 +427,17 @@
     excerpt: {
         en: "DID Resolution and Verifiable Credentials suggest a practical rule for institutional AI: no model should cross the deployment boundary without a portable, revocable record of identity, evaluation, and custody.",
         fr: "DID Resolution et les Verifiable Credentials suggèrent une règle pratique pour l'IA institutionnelle : aucun modèle ne devrait franchir la frontière de déploiement sans un dossier portable et révocable d'identité, d'évaluation et de garde."
+    }
+},
+
+'diop-daily-085': {
+    title: {
+        en: "The Exit Is Part of the Product",
+        fr: "La sortie fait partie du produit"
+    },
+    excerpt: {
+        en: "When AI moves from chat into repeatable institutional work, the product is not only capability but reversibility. This field note asks what must remain portable—identity, memory, authority, evidence, and policy—when an institution changes its runtime.",
+        fr: "Lorsque l'IA passe de la conversation au travail institutionnel répétable, le produit n'est pas seulement la capacité, mais la réversibilité. Cette note demande ce qui doit rester portable — identité, mémoire, autorité, preuves et politiques — lorsqu'une institution change de runtime."
     }
 },
 
