@@ -110,6 +110,11 @@
         'article.entry077':     { en: 'Diop Daily #077 — August 2026', fr: 'Diop Quotidien n°077 — Août 2026' },
         'article.entry078':     { en: 'Diop Daily #078 — August 2026', fr: 'Diop Quotidien n°078 — Août 2026' },
         'article.entry079':     { en: 'Diop Daily #079 — August 2026', fr: 'Diop Quotidien n°079 — Août 2026' },
+        'article.entry080':     { en: 'Diop Daily #080 — August 2026', fr: 'Diop Quotidien n°080 — Août 2026' },
+        'article.entry081':     { en: 'Diop Daily #081 — August 2026', fr: 'Diop Quotidien n°081 — Août 2026' },
+        'article.entry082':     { en: 'Diop Daily #082 — August 2026', fr: 'Diop Quotidien n°082 — Août 2026' },
+        'article.entry083':     { en: 'Diop Daily #083 — August 2026', fr: 'Diop Quotidien n°083 — Août 2026' },
+        'article.entry084':     { en: 'Diop Daily #084 — August 2026', fr: 'Diop Quotidien n°084 — Août 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -366,6 +371,17 @@
     excerpt: {
         en: "C2PA's July 31 implementation guide, W3C's Verifiable Credentials v1.1 draft, and OpenAI's European provenance push all point to the same shift: provenance is hardening from a trust claim into an execution primitive—the grammar that lets agents transact, route, and contest machine-made work.",
         fr: "Le guide d'implémentation C2PA du 31 juillet, la note de groupe W3C Verifiable Credentials v1.1 et la poussée de provenance européenne d'OpenAI convergent vers le même déplacement : la provenance se durcit, passant d'un claim de confiance à un primitive d'exécution — la grammaire qui permet aux agents de transiger, router et contester le travail produit par machine."
+    }
+},
+
+'diop-daily-084': {
+    title: {
+        en: "The Credential Stack: Why AI Models Need Verifiable Identity Before They Enter the Institution",
+        fr: "La pile de credentials : pourquoi les modèles IA ont besoin d'identité vérifiable avant d'entrer dans l'institution"
+    },
+    excerpt: {
+        en: "W3C's DID Resolution v1 Candidate Recommendation and Verifiable Credentials v1.1 draft, combined with OpenAI's provenance disclosures, point to a new infrastructure layer: the credential stack that gives AI models verifiable identity, chain-of-custody, and auditable provenance before they reach an institution. The investable surface is model-provenance infrastructure, sovereign credentialing labs, and standards that make trust portable.",
+        fr: "La Candidate Recommendation du W3C pour DID Resolution v1 et l'ébauche de Verifiable Credentials v1.1, combinées aux divulgations de provenance d'OpenAI, convergent vers une nouvelle couche d'infrastructure : la pile de credentials qui donne aux modèles IA une identité vérifiable, une chaîne de custody et une provenance auditable avant d'atteindre une institution. La surface d'investissement est l'infrastructure de provenance de modèles, les laboratoires de credentialing souverains et les standards qui rendent la confiance portable."
     }
 },
 

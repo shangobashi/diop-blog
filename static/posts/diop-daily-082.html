@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Tokenization Gap: Why African Languages Are the Unfinished Layer of Global AI — Diop Research</title>
+    <meta name="description" content="The global AI stack was built on English-dominant tokenization. For African languages this creates a tokenization gap that makes AI more expensive, less accurate, and sovereignty-threatening. The investable surface is local language infrastructure: tokenizers, speech-to-text, code-switching platforms, and fine-tuning stacks."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </span>
+                <span class="theme-icon theme--moon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry082">Diop Daily #082 — August 2026</div>
+                <div class="article__meta-line">
+                    <time>August 7, 2026</time>
+                    <span>·</span>
+                    <span data-rt="11">11 min read</span>
+                    <span>·</span>
+                    <span>language infrastructure · African AI · tokenization · sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Tokenization Gap: Why African Languages Are the Unfinished Layer of Global AI</h1>
+
+                <p>The market has spent the last two years debating model capability. It has spent the last year debating inference cost. It is about to discover that both debates are upstream of a more fundamental question: what happens when the model cannot understand the language it is being asked to operate in?</p>
+
+                <p>On August 6, OpenAI published two signals that make the gap visible. First, the company expanded free access to GPT-5.6 Luna, reducing its price by eighty percent and removing the paywall for everyday chats. The goal is clear: global adoption depends on making the model accessible beyond English-speaking, high-income users. Second, OpenAI released new Signals data showing how ChatGPT is being used worldwide, with country-level insights into adoption, usage trends, and evolving behavior. The headline is not that ChatGPT is popular. It is that its popularity is unevenly distributed across languages, and the pattern of that distribution reveals a structural bottleneck that no amount of model scaling will fix.</p>
+
+                <p>That bottleneck is tokenization.</p>
+
+                <blockquote>
+                    <p>The decisive AI layer for the next billion users is not the model that reasons best. It is the tokenizer that lets a language be expressed, reasoned over, and acted upon without destroying meaning at the first step of inference.</p>
+                </blockquote>
+
+                <h2>What the tokenization gap means architecturally</h2>
+
+                <p>Modern large language models do not read text the way humans do. They read tokens — subword units produced by a tokenizer. The most widely used tokenizers, including the Byte-Pair Encoding (BPE) tokenizer used by GPT models, are trained predominantly on English and other high-resource languages. For English, a token often corresponds to a word or a fragment of a word. For many African languages — with their agglutinative morphology, tonal systems, and frequent code-switching between local languages and colonial languages — the same tokenizer fragments meaning destructively. A single word in Wolof or Yoruba may be broken into six or seven tokens, inflating cost, degrading context retention, and producing outputs that misunderstand the input from the first token onward.</p>
+
+                <p>This is not a nuance. It is an architecture problem. When tokenization fragments a language, the model pays more for less meaning. The inference cost rises because the model must process more tokens to represent the same idea. The context window shrinks because the same number of tokens carries less information. The output quality drops because the model has been trained on a distribution where the language it is trying to process is systematically misrepresented.</p>
+
+                <p>The cost is measurable. A task expressed in a high-resource language may require one hundred tokens. The same task expressed in a low-resource African language may require four hundred tokens. At current pricing, that is not a rounding error. It is a four-times multiplier on every inference call. For an institution deploying AI at scale — a bank processing loan applications, a hospital routing patient inquiries, a government serving citizens in their local language — the tokenization gap is a direct tax on operational feasibility.</p>
+
+                <h2>The infrastructure being built from the gap</h2>
+
+                <p>The gap is not going unnoticed. On the ground, African laboratories and startups are building the infrastructure that the global stack omitted. Lelapa AI, based in Johannesburg, is one of the most precise examples. Its Vulavula platform turns multilingual conversations into actionable insight through speech-to-text transcription and translation with code-switching support. The product is designed for high-volume contact centers where agents must switch between English, isiZulu, Setswana, and other languages in a single conversation. The technical challenge Lelapa solves is not merely recognition. It is the preservation of semantic intent across a linguistic boundary that standard tokenizers treat as noise.</p>
+
+                <p>Google's own signals point in the same direction. The company's June 18 demonstration of a cross-language multi-agent team built with the Agent Development Kit and the Agent-to-Agent protocol showed Python and Go agents collaborating on contract-compliance work without reducing the problem to simple translation. The lesson is that agents need a common language — not just shared vocabulary, but shared semantics — to hand off tasks securely. When that common language is assumed to be English, the handoff fails for every institution whose reality is not English-first.</p>
+
+                <p>These are not isolated experiments. They are symptoms of a structural shift: the AI market is moving from generic, English-centric models to domain-specific, language-aware stacks. The winners will not be the labs with the largest English training corpus. They will be the labs that can encode the morphology, tone, and code-switching patterns of the languages they actually serve.</p>
+
+                <h2>Why this is a sovereignty issue</h2>
+
+                <p>The deeper risk is dependency. African institutions that adopt AI systems built on English-dominant tokenizers are not merely accepting a technical limitation. They are accepting a foreign definition of what counts as intelligible. The vendor's tokenizer decides which words are cheap to process and which are expensive. It decides which concepts fit into the context window and which are truncated. It decides which sentences the model can reason about and which it must discard. An institution that cannot control its tokenizer cannot control the cost or quality of its own AI operations.</p>
+
+                <p>The security dimension makes the dependency acute. On August 5, PromptArmor disclosed that Atlassian's Rovo AI is susceptible to zero-click data exfiltration via indirect prompt injection, bypassing organization-level controls even when web search is disabled. The attack succeeds because Rovo's URL retrieval tool lacks the architectural guardrails that a multilingual institutional OS would provide: permissioned tool access, resource observation, and collaboration-aware information boundaries. When an institution's AI layer cannot distinguish a legitimate request from a malicious one across languages, the vulnerability is not a bug. It is a predictable consequence of importing a stack that was not designed for the institution's linguistic reality.</p>
+
+                <p>Cheikh Anta Diop argued that scientific sovereignty requires the ability to organize knowledge according to one's own terms. In the AI era, that organization begins at the token. A laboratory that imports the vendor's tokenizer imports the vendor's linguistic ontology. A laboratory that builds its own tokenizer, trained on its own languages, with its own morphological rules, begins to govern the grammar of its own machine intelligence.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If the tokenization gap thesis is correct, capital should look at the layers that make African languages first-class citizens of the AI stack:</p>
+
+                <ul>
+                    <li><strong>Local language tokenizers:</strong> infrastructure that encodes the morphology, tone, and code-switching patterns of African languages into subword units that preserve meaning and minimize inference cost. These are the foundational primitives of sovereign AI.</li>
+                    <li><strong>Speech-to-text and text-to-speech stacks:</strong> systems trained on African phonologies, accents, and conversational patterns. The opportunity is not merely transcription. It is the ability to convert spoken intent into machine-actionable tokens without losing the nuance that makes the language functional in real institutions.</li>
+                    <li><strong>Code-switching platforms:</strong> tooling that lets agents operate fluidly across languages within a single conversation or workflow. The commercial unit is not translation. It is the preservation of task intent, approval authority, and evidence provenance when work crosses a linguistic boundary.</li>
+                    <li><strong>Fine-tuning data ecosystems:</strong> curated, high-quality datasets in African languages that let institutions adapt frontier models to their own terminology, regulatory frameworks, and institutional memory. The value is in the curation, not the raw volume.</li>
+                    <li><strong>Sovereign language infrastructure funds:</strong> African and diasporic institutions need capital that treats language infrastructure as a strategic asset, not a localization budget line. The firms and funds that back local tokenizers, speech models, and fine-tuning stacks are underwriting the grammatical sovereignty of the next generation of African AI.</li>
+                </ul>
+
+                <p>The deeper point is that the AI market is entering a phase where the decisive competition is not about who builds the smartest model. It is about who builds the most trustworthy language infrastructure. The firms and institutions that win will not be the ones with the lowest-latency model alone. They will be the ones that can prove, with evidence, that their AI systems understand the languages their users actually speak, preserve the meaning those users intend, and cost less because the underlying tokenization is native rather than imported. That proof is harder to fabricate than a benchmark score, but it is also more durable. Benchmarks expire. Language infrastructure compounds because it becomes the foundation on which every subsequent AI capability is built.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "From asking to doing: How the world is putting ChatGPT to work" (August 6, 2026 item; description: New OpenAI Signals data shows how people use ChatGPT worldwide, with country-level insights on adoption, usage trends, and evolving behavior)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "Improving GPT-5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users" (August 6, 2026 item; description: ChatGPT introduces improved GPT-5.6 Sol with better accuracy and consistency, plus expanded access for free users and unlimited everyday chats with GPT-5.6 Luna)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — "How A2A is Building a World of Collaborative Agents" (June 18, 2026; description: the Agent-to-Agent protocol enables secure, autonomous agent handoffs and scalable workflows by giving agents a common language to collaborate)</a></li>
+                    <li><a href="https://lelapa.ai/" target="_blank" rel="noopener">Lelapa AI — "Resource-Efficient Language AI Built to Scale Globally" (accessed August 2026; description: Vulavula turns multilingual conversations into actionable insight through speech-to-text transcription and translation with code-switching support)</a></li>
+                    <li><a href="https://www.promptarmor.com/resources/atlassian-rovo-exfiltrates-data" target="_blank" rel="noopener">PromptArmor — "Atlassian Rovo Exfiltrates Data, Bypassing Controls" (August 5, 2026; description: zero-click data exfiltration via indirect prompt injection in Atlassian's Rovo AI, bypassing organization-level controls)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Le fossé de tokenisation : pourquoi les langues africaines sont la couche inachevée de l'IA mondiale</h1>
+
+                <p>Le marché a passé les deux dernières années à débattre de la capacité des modèles. Il a passé l'année dernière à débattre du coût de l'inférence. Il est sur le point de découvrir que ces deux débats sont en amont d'une question plus fondamentale : que se passe-t-il lorsque le modèle ne peut pas comprendre la langue dans laquelle on lui demande d'opérer ?</p>
+
+                <p>Le 6 août, OpenAI a publié deux signaux qui rendent le fossé visible. Premièrement, l'entreprise a élargi l'accès gratuit à GPT-5.6 Luna, réduisant son prix de quatre-vingts pour cent et supprimant le paywall pour les conversations quotidiennes. L'objectif est clair : l'adoption mondiale dépend de la capacité à rendre le modèle accessible au-delà des utilisateurs anglophones à haut revenu. Deuxièmement, OpenAI a publié de nouvelles données Signals montrant comment ChatGPT est utilisé dans le monde entier, avec des insights par pays sur l'adoption, les tendances d'usage et l'évolution des comportements. Le titre n'est pas que ChatGPT est populaire. C'est que sa popularité est inégalement répartie selon les langues, et que ce schéma de distribution révèle un goulot structurel qu'aucune montée en puissance du modèle ne résoudra.</p>
+
+                <p>Ce goulot, c'est la tokenisation.</p>
+
+                <blockquote>
+                    <p>La couche décisive de l'IA pour le prochain milliard d'utilisateurs n'est pas le modèle qui raisonne le mieux. C'est le tokenizer qui permet à une langue d'être exprimée, raisonnée et actionnée sans détruire le sens dès la première étape de l'inférence.</p>
+                </blockquote>
+
+                <h2>Ce que le fossé de tokenisation signifie architecturlement</h2>
+
+                <p>Les grands modèles de langage modernes ne lisent pas le texte comme les humains. Ils lisent des tokens — des unités de sous-mots produites par un tokenizer. Les tokenizers les plus utilisés, y compris le tokenizer Byte-Pair Encoding (BPE) utilisé par les modèles GPT, sont entraînés principalement sur l'anglais et d'autres langues à haute ressource. Pour l'anglais, un token correspond souvent à un mot ou à un fragment de mot. Pour de nombreuses langues africaines — avec leur morphologie agglutinante, leurs systèmes tonals et leur commutation de code fréquente entre langues locales et langues coloniales — le même tokenizer fragmente le sens de manière destructive. Un seul mot en wolof ou en yoruba peut être découpé en six ou sept tokens, augmentant le coût, dégradant la rétention de contexte et produisant des sorties qui mécomprennent l'entrée dès le premier token.</p>
+
+                <p>Ce n'est pas un détail. C'est un problème d'architecture. Lorsque la tokenisation fragmente une langue, le modèle paie plus cher pour moins de sens. Le coût d'inférence augmente parce que le modèle doit traiter plus de tokens pour représenter la même idée. La fenêtre de contexte rétrécit parce que le même nombre de tokens transporte moins d'informations. La qualité de la sortie chute parce que le modèle a été entraîné sur une distribution où la langue qu'il essaie de traiter est systématiquement mal représentée.</p>
+
+                <p>Le coût est mesurable. Une tâche exprimée dans une langue à haute ressource peut nécessiter cent tokens. La même tâche exprimée dans une langue africaine à faible ressource peut nécessiter quatre cents tokens. Aux tarifs actuels, ce n'est pas une erreur d'arrondi. C'est un multiplicateur de quatre sur chaque appel d'inférence. Pour une institution déployant l'IA à grande échelle — une banque traitant des demandes de prêt, un hôpital acheminant des demandes de patients, un gouvernement servant des citoyens dans leur langue locale — le fossé de tokenisation est une taxe directe sur la faisabilité opérationnelle.</p>
+
+                <h2>L'infrastructure en construction depuis le fossé</h2>
+
+                <p>Le fossé n'échappe à personne. Sur le terrain, des laboratoires et startups africains construisent l'infrastructure que la pile globale a omise. Lelapa AI, basé à Johannesburg, est l'un des exemples les plus précis. Sa plateforme Vulavula transforme les conversations multilingues en insights actionnables grâce à la transcription parole-texte et à la traduction avec support de la commutation de code. Le produit est conçu pour les centres de contact à haut volume où les agents doivent passer de l'anglais à l'isiZoulou, au Setswana et à d'autres langues en une seule conversation. Le défi technique que Lelapa résout n'est pas simplement la reconnaissance. C'est la préservation de l'intention sémantique à travers une frontière linguistique que les tokenizers standard traitent comme du bruit.</p>
+
+                <p>Les propres signaux de Google pointent dans la même direction. La démonstration du 18 juin d'une équipe multi-agents interlangues construite avec le Kit de Développement Agent et le protocole Agent-to-Agent a montré des agents Python et Go collaborant sur un travail de conformité contractuelle sans réduire le problème à une simple traduction. La leçon est que les agents ont besoin d'un langage commun — pas seulement un vocabulaire partagé, mais une sémantique partagée — pour transférer des tâches en sécurité. Lorsque ce langage commun est présumé être l'anglais, le transfert échoue pour chaque institution dont la réalité n'est pas d'abord anglophone.</p>
+
+                <p>Ce ne sont pas des expériences isolées. Ce sont les symptômes d'un déplacement structurel : le marché de l'IA passe de modèles génériques centrés sur l'anglais à des piles spécifiques au domaine et conscientes des langues. Les gagnants ne seront pas les laboratoires avec le plus grand corpus d'entraînement anglais. Ce seront les laboratoires capables d'encoder la morphologie, la tonalité et les schémas de commutation de code des langues qu'ils servent réellement.</p>
+
+                <h2>Pourquoi c'est un enjeu de souveraineté</h2>
+
+                <p>Le risque plus profond est la dépendance. Les institutions africaines qui adoptent des systèmes d'IA construits sur des tokenizers à dominance anglaise n'acceptent pas seulement une limitation technique. Elles acceptent une définition étrangère de ce qui compte comme intelligible. Le tokenizer du vendeur décide quels mots sont bon marché à traiter et lesquels sont chers. Il décide quels concepts entrent dans la fenêtre de contexte et lesquels sont tronqués. Il décide quelles phrases le modèle peut raisonner et lesquelles il doit rejeter. Une institution qui ne peut pas contrôler son tokenizer ne peut pas contrôler le coût ou la qualité de ses propres opérations IA.</p>
+
+                <p>La dimension sécurité rend la dépendance aiguë. Le 5 août, PromptArmor a divulgué que l'IA Rovo d'Atlassian est susceptible à l'exfiltration de données en un clic via l'injection de prompt indirecte, contournant les contrôles de niveau organisationnel même lorsque la recherche web est désactivée. L'attaque réussit parce que l'outil de récupération d'URL de Rovo manque des gardes architecturales qu'un système d'exploitation institutionnel multilingue fournirait : accès aux outils permissionné, observation des ressources et limites d'information collaboratives. Lorsque la couche IA d'une institution ne peut pas distinguer une demande légitime d'une demande malveillante à travers les langues, la vulnérabilité n'est pas un bogue. C'est une conséquence prévisible de l'importation d'une pile qui n'a pas été conçue pour la réalité linguistique de l'institution.</p>
+
+                <p>La méthode de Cheikh Anta Diop s'applique directement. La souveraineté scientifique exige la capacité d'organiser le savoir selon ses propres termes. À l'ère de l'IA, cette organisation commence au token. Un laboratoire qui importe le tokenizer du vendeur importe l'ontologie linguistique du vendeur. Un laboratoire qui construit son propre tokenizer, entraîné sur ses propres langues, avec ses propres règles morphologiques, commence à gouverner la grammaire de sa propre intelligence machine.</p>
+
+                <h2>Où la surface d'investissement s'élargit</h2>
+
+                <p>Si la thèse du fossé de tokenisation est correcte, le capital doit regarder les couches qui font des langues africaines des citoyennes de premier rang de la pile IA :</p>
+
+                <ul>
+                    <li><strong>Tokenizers de langues locales :</strong> infrastructure qui encode la morphologie, la tonalité et les schémas de commutation de code des langues africaines en unités de sous-mots qui préservent le sens et minimisent le coût d'inférence. Ce sont les primitives fondamentales de l'IA souveraine.</li>
+                    <li><strong>Stacks parole-texte et texte-parole :</strong> systèmes entraînés sur les phonologies, accents et schémas conversationnels africains. L'opportunité n'est pas simplement la transcription. C'est la capacité de convertir l'intention parlée en tokens actionnables par la machine sans perdre la nuance qui rend la langue fonctionnelle dans les institutions réelles.</li>
+                    <li><strong>Plateformes de commutation de code :</strong> outils qui permettent aux agents d'opérer fluidement à travers les langues au sein d'une même conversation ou workflow. L'unité commerciale n'est pas la traduction. C'est la préservation de l'intention de tâche, de l'autorité d'approbation et de la provenance des preuves lorsque le travail traverse une frontière linguistique.</li>
+                    <li><strong>Écosystèmes de données de fine-tuning :</strong> jeux de données curated de haute qualité dans les langues africaines qui permettent aux institutions d'adapter les modèles de pointe à leur propre terminologie, leurs cadres réglementaires et leur mémoire institutionnelle. La valeur réside dans le curation, pas dans le volume brut.</li>
+                    <li><strong>Fonds d'infrastructure linguistique souveraine :</strong> les institutions africaines et diasporiques ont besoin de capital qui traite l'infrastructure linguistique comme un atout stratégique, pas comme une ligne budgétaire de localisation. Les entreprises et fonds qui soutiennent les tokenizers locaux, les modèles vocaux et les stacks de fine-tuning souscrivent la souveraineté grammaticale de la prochaine génération d'IA africaine.</li>
+                </ul>
+
+                <p>Le point plus profond est que le marché de l'IA entre dans une phase où la concurrence décisive ne porte pas sur qui construit le modèle le plus intelligent. Elle porte sur qui construit l'infrastructure linguistique la plus digne de confiance. Les entreprises et institutions qui gagneront ne seront pas celles avec le modèle à la latence la plus faible seules. Elles seront celles qui peuvent prouver, avec des preuves, que leurs systèmes d'IA comprennent les langues que leurs utilisateurs parlent réellement, préservent le sens que ces utilisateurs entendent et coûtent moins cher parce que la tokenisation sous-jacente est native plutôt qu'importée. Cette preuve est plus dure à fabriquer qu'un score de benchmark, mais elle est aussi plus durable. Les benchmarks expirent. L'infrastructure linguistique, elle, s'accumule parce qu'elle devient la fondation sur laquelle toute capacité IA ultérieure est construite.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « From asking to doing: How the world is putting ChatGPT to work » (item du 6 août 2026 ; description : les nouvelles données Signals d'OpenAI montrent comment les gens utilisent ChatGPT dans le monde entier, avec des insights par pays sur l'adoption, les tendances d'usage et l'évolution des comportements)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « Improving GPT-5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users » (item du 6 août 2026 ; description : ChatGPT introduit un GPT-5.6 Sol amélioré avec une meilleure précision et cohérence, plus un accès élargi pour les utilisateurs gratuits et des conversations quotidiennes illimitées avec GPT-5.6 Luna)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — « How A2A is Building a World of Collaborative Agents » (18 juin 2026 ; description : le protocole Agent-to-Agent permet des transferts d'agents sécurisés et autonomes et des workflows évolutifs en donnant aux agents un langage commun pour collaborer)</a></li>
+                    <li><a href="https://lelapa.ai/" target="_blank" rel="noopener">Lelapa AI — « Resource-Efficient Language AI Built to Scale Globally » (consulté en août 2026 ; description : Vulavula transforme les conversations multilingues en insights actionnables grâce à la transcription parole-texte et à la traduction avec support de la commutation de code)</a></li>
+                    <li><a href="https://www.promptarmor.com/resources/atlassian-rovo-exfiltrates-data" target="_blank" rel="noopener">PromptArmor — « Atlassian Rovo Exfiltrates Data, Bypassing Controls » (5 août 2026 ; description : exfiltration de données en un clic via injection de prompt indirecte dans l'IA Rovo d'Atlassian, contournant les contrôles organisationnels)</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>August 7, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

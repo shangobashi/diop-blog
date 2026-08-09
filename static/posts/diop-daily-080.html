@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Scorecard State: Why AI Depends on Measurable Underwriting — Diop Research</title>
+    <meta name="description" content="OpenAI's July 17 scorecard for the AI age, GPT-5.6's price-performance shifts, and GPT-Red's automated red-teaming all point to the same shift: AI is graduating from capability demonstrations to measurable, underwritable outputs. The investable surface is scorecard infrastructure, dependability telemetry, and African sovereign measurement stacks."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry080">Diop Daily #080 — August 2026</div>
+                <div class="article__meta-line">
+                    <time>August 5, 2026</time>
+                    <span>·</span>
+                    <span data-rt="11">11 min read</span>
+                    <span>·</span>
+                    <span>scorecards · measurable AI · underwriting</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Scorecard State: Why AI Depends on Measurable Underwriting</h1>
+
+                <p>The market has spent the last two years debating models. It has spent the last year debating inference cost. It is about to discover that both debates are upstream of a more fundamental question: how do you know whether an AI system is actually worth deploying? On July 17, Sarah Friar, CFO of OpenAI, published a scorecard for the AI age. Her framework does not measure tokens or parameters. It measures useful work, cost per successful task, dependability, and return on compute. Those four metrics are not accounting jargon. They are the grammar of a new asset class. They are also the signal that AI is transitioning from a capability demonstration to an underwritable infrastructure.</p>
+
+                <p>This is a measurement problem, not a model problem. The previous entries in this journal have examined the execution layers — real-time presence, provenance stacks, transport substrates, custody and recovery. Each of those layers depends on a measurement layer that lets the institution say, with evidence, whether the system is performing. Without that measurement, presence is theater, provenance is branding, and custody is guesswork. The scorecard state is the condition under which all the other layers become governable, auditable, and commercially sustainable.</p>
+
+                <blockquote>
+                    <p>The decisive AI layer of the next decade is not the model that reasons best. It is the scorecard that lets an institution prove, with evidence, that the model's work is useful, its cost is controlled, its failures are recoverable, and its compute is justified.</p>
+                </blockquote>
+
+                <h2>What the scorecard state means architecturally</h2>
+
+                <p>What Friar's scorecard names is a shift in what the market is actually underwriting. The first generation of enterprise AI was sold on capability: the model could draft emails, summarize reports, generate code. The buyer underwrote the model based on benchmark scores and vendor demonstrations. That model worked for advisory workloads because the cost of a wrong answer was low and the latency tolerance was high. It fails for operational workloads — customer triage, financial transactions, supply-chain decisions — where the cost of a wrong answer is high, the latency tolerance is low, and the institution must prove to regulators, insurers, and partners that the system is safe to operate.</p>
+
+                <p>The scorecard state changes the buyer's question. Instead of asking "What can this model do?" the institution asks "How do I prove what this model did?" The answer requires instrumentation that most current AI products do not ship. It requires accounting for useful work — not tokens generated, but tasks completed successfully. It requires cost-per-task telemetry — not API spend, but the real marginal cost of each successful completion, including retries, escalations, and human interventions. It requires dependability measurement — not uptime percentages, but failure modes, recovery rates, and the distribution of time-to-recovery. And it requires return-on-compute analytics — relating the quality of output to the energy, GPU-hours, and infrastructure consumed.</p>
+
+                <p>OpenAI's own signals confirm the shift. On July 29, the company disclosed that two API settings tripled its scores on the ARC-AGI-3 benchmark by retaining reasoning and enabling compaction. The lesson is not that GPT-5.6 is smarter. The lesson is that dependability is a configuration problem, not a model problem. The scorecard that captures that configuration — which settings were used, under what load, at what cost — is the infrastructure that lets an institution reproduce, govern, and underwrite the result. A model that is not measured is not a product. It is a promise. A scorecard turns promises into auditable infrastructure.</p>
+
+                <h2>The four components of a production-grade scorecard stack</h2>
+
+                <p>If the scorecard state is becoming the condition of trustworthy AI deployment, the market needs more than a spreadsheet. It needs an infrastructure discipline. At minimum, a serious scorecard stack has four coupled components:</p>
+
+                <ul>
+                    <li><strong>Useful-work accounting:</strong> the system must define and measure what "useful" means for each institutional workload. A customer-service resolution is useful. A generated paragraph that does not resolve the case is not. An insurance triage that correctly routes a claim is useful. A generated policy summary that does not affect the payout decision is not. Useful-work accounting requires the institution to encode its own definitions of completion, not inherit the vendor's token-counting default.</li>
+                    <li><strong>Cost-per-task instrumentation:</strong> every successful task must carry its true marginal cost — API fees, retries, escalations to humans, rework, and the compute consumed by the reasoning trace. Without this, the institution cannot distinguish a cheap task from an expensive one, cannot detect when a "cheap" model is actually burning compute through retries, and cannot govern its inference budget with evidence rather than hope.</li>
+                    <li><strong>Dependability telemetry:</strong> the system must track not only whether the agent succeeded, but how it failed when it did not. What was the failure mode? How long did recovery take? What escalation path was used? Did the failure corrupt downstream state? Dependability telemetry is the raw material for the scorecard's most important metric: the probability that the next task will succeed under similar conditions.</li>
+                    <li><strong>Return-on-compute analytics:</strong> the institution must relate output quality to the energy and compute consumed. This is not an environmental afterthought. It is a capital-allocation metric. If a model produces marginally better outputs by consuming ten times the compute, the scorecard must make that tradeoff visible so that capital can be allocated to the efficient frontier rather than the prestige frontier.</li>
+                </ul>
+
+                <p>These four components are coupled in ways that vendors often overlook. A useful-work metric that does not carry cost-per-task data produces hero narratives without capital discipline. A cost-per-task system that does not measure dependability produces efficiency without resilience. A dependability dashboard that does not feed back into model selection produces recovery without improvement. A return-on-compute model that does not encode institutional definitions of usefulness produces optimization for the wrong objective. The scorecard stack is not a dashboard. It is an operating system for AI capital allocation.</p>
+
+                <h2>Why this matters for African institutional sovereignty</h2>
+
+                <p>African institutions face a specific vulnerability with scorecard infrastructure. The vendors selling AI systems on the continent typically provide dashboards that measure vendor-centric metrics: tokens processed, API uptime, latency percentiles. These metrics are designed to make the vendor's product look healthy, not to let the institution govern its own AI capital allocation. An institution that accepts the vendor's scorecard as its own measurement layer has outsourced the most important financial and operational decision — whether the AI is worth deploying — to the party that profits from its continued use.</p>
+
+                <p>The deeper risk is cultural. A scorecard built around Western work patterns, Western languages, and Western regulatory definitions of success will systematically misrepresent the performance of AI systems operating in African contexts. A model that scores well on English-language customer-service benchmarks may fail on code-switching, honorific speech, or communal dispute-resolution patterns. A dependability metric that does not account for intermittent connectivity, power instability, or cross-border data flows will produce false confidence in infrastructure that cannot survive its actual operating environment. A cost-per-task model that does not include the foreign-exchange and routing costs of inference through distant data centers will systematically underestimate the true cost of foreign AI dependency.</p>
+
+                <p>Cheikh Anta Diop's method applies directly. Sovereignty is not the rejection of measurement. It is the construction of measurement systems that encode the institution's own values, operating conditions, and strategic objectives. In AI, that means building scorecard infrastructure that defines useful work in local languages, measures dependability against local infrastructure conditions, and calculates return on compute against local energy and data costs. A laboratory that imports the vendor's scorecard imports the vendor's definition of success. A laboratory that builds its own scorecard begins to govern the grammar of its own AI performance.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If the scorecard state thesis is correct, capital should look at the layers that make AI measurable, auditable, and underwritable:</p>
+
+                <ul>
+                    <li><strong>Useful-work accounting platforms:</strong> infrastructure that defines and tracks task completion from the institution's perspective, not the vendor's. These platforms encode institutional definitions of success, link them to agent outputs, and produce the evidence that scorecards require.</li>
+                    <li><strong>Cost-per-task observability:</strong> tooling that tracks the true marginal cost of each successful AI completion, including retries, escalations, rework, and compute. This is the capital-discipline layer of the scorecard stack.</li>
+                    <li><strong>Dependability telemetry and failure-mode analytics:</strong> systems that capture how agents fail, how quickly they recover, and what escalation paths they use. This is the risk-underwriting layer — the data that lets insurers, regulators, and institutional buyers assess the probability of operational harm.</li>
+                    <li><strong>Return-on-compute analytics:</strong> platforms that relate output quality to energy and compute consumption, letting institutions optimize for the efficient frontier and expose vendor claims about "cheap inference" to empirical test.</li>
+                    <li><strong>Sovereign scorecard infrastructure:</strong> African and diasporic institutions need measurement stacks that encode local languages, local infrastructure conditions, local regulatory definitions, and local cost structures. The value is not merely local customization. It is operational sovereignty over the criteria that determine whether AI systems are allowed to operate.</li>
+                </ul>
+
+                <p>The deeper point is that the AI market is entering a phase where the decisive competition is not about who builds the smartest model. It is about who builds the most trustworthy measurement system. The firms and institutions that win will not be the ones with the lowest-latency model alone. They will be the ones that can prove, with evidence, that their AI systems do useful work at sustainable cost, recover from failure, and justify the compute they consume. That proof is harder to fabricate than a benchmark score, but it is also more durable. Benchmarks expire. Scorecard infrastructure compounds because it generates the data that underwrites the next generation of deployment.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "A scorecard for the AI age" (July 17, 2026 item; description: Sarah Friar, CFO of OpenAI, introduces a practical AI scorecard to measure ROI through useful work, cost per successful task, dependability, and return on compute)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "How GPT-5.6 fuses frontier intelligence with frontier efficiency" (July 29, 2026 item; description: GPT-5.6 improves AI efficiency across models, inference, and agentic workflows, helping deliver more useful intelligence per dollar)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark" (July 29, 2026 item; description: How two API settings improved GPT-5.6 performance on ARC-AGI-3, boosting scores and efficiency by retaining reasoning and enabling compaction)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — "GPT-Red: Unlocking Self-Improvement for Robustness" (July 15, 2026 item; description: GPT-Red, OpenAI's automated red teaming system, uses self-play to improve AI safety, alignment, and prompt injection robustness)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — "How A2A is Building a World of Collaborative Agents" (visible page date: June 18, 2026; meta description: the Agent-to-Agent protocol enables secure, autonomous agent handoffs and scalable workflows)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L'État-Scorecard : pourquoi l'IA dépend d'une souscription mesurable</h1>
+
+                <p>Le marché a passé les deux dernières années à débattre des modèles. Il a passé l'année dernière à débattre du coût de l'inférence. Il est sur le point de découvrir que ces deux débats sont en amont d'une question plus fondamentale : comment savoir si un système d'IA vaut vraiment la peine d'être déployé ? Le 17 juillet, Sarah Friar, directrice financière d'OpenAI, a publié un scorecard pour l'ère de l'IA. Son cadre ne mesure pas les tokens ni les paramètres. Il mesure le travail utile, le coût par tâche réussie, la fiabilité et le retour sur calcul. Ces quatre métriques ne sont pas du jargon comptable. Ce sont la grammaire d'une nouvelle classe d'actifs. Ce sont aussi le signal que l'IA passe d'une démonstration de capacité à une infrastructure souscriptible.</p>
+
+                <p>C'est un problème de mesure, pas un problème de modèle. Les entrées récentes de ce journal ont examiné les couches d'exécution — présence en temps réel, piles de provenance, substrats de transport, garde et reprise. Chacune de ces couches dépend d'une couche de mesure qui permet à l'institution de dire, avec preuves à l'appui, si le système fonctionne. Sans cette mesure, la présence est du théâtre, la provenance est du branding et la garde est du pari. L'état-scorecard est la condition sous laquelle toutes les autres couches deviennent gouvernables, auditables et commercialement durables.</p>
+
+                <blockquote>
+                    <p>La couche décisive de l'IA de la prochaine décennie n'est pas le modèle qui raisonne le mieux. C'est le scorecard qui permet à une institution de prouver, avec preuves à l'appui, que le travail du modèle est utile, que son coût est maîtrisé, que ses échecs sont récupérables et que son calcul est justifié.</p>
+                </blockquote>
+
+                <h2>Ce que l'état-scorecard signifie architecturlement</h2>
+
+                <p>Ce que le scorecard de Friar nomme, c'est un déplacement de ce que le marché souscrit réellement. La première génération d'IA entreprise était vendue sur la capacité : le modèle pouvait rédiger des courriels, résumer des rapports, générer du code. L'acheteur souscrivait le modèle sur la base de scores de benchmark et de démonstrations de vendeur. Ce modèle fonctionnait pour les charges de travail consultatives car le coût d'une mauvaise réponse était faible et la tolérance de latence élevée. Il échoue pour les charges de travail opérationnelles — triage client, transactions financières, décisions de chaîne d'approvisionnement — où le coût d'une mauvaise réponse est élevé, la tolérance de latence faible et l'institution doit prouver aux régulateurs, assureurs et partenaires que le système est sûr à opérer.</p>
+
+                <p>L'état-scorecard change la question de l'acheteur. Au lieu de demander « Que peut faire ce modèle ? », l'institution demande « Comment prouver ce que ce modèle a fait ? » La réponse nécessite une instrumentation que la plupart des produits d'IA actuels n'incluent pas. Elle nécessite une comptabilité du travail utile — pas les tokens générés, mais les tâches accomplies avec succès. Elle nécessite une instrumentation du coût par tâche — pas la dépense API, mais le vrai coût marginal de chaque accomplissement réussi, y compris les nouvelles tentatives, les escalades et les interventions humaines. Elle nécessite une mesure de la fiabilité — pas les pourcentages de temps de fonctionnement, mais les modes d'échec, les taux de reprise et la distribution des temps de reprise. Et elle nécessite une analytique du retour sur calcul — reliant la qualité de la sortie à l'énergie et au calcul consommés.</p>
+
+                <p>Les propres signaux d'OpenAI confirment le déplacement. Le 29 juillet, l'entreprise a divulgué que deux paramètres API avaient triplé ses scores sur le benchmark ARC-AGI-3 en retenant le raisonnement et en permettant la compaction. La leçon n'est pas que GPT-5.6 est plus intelligent. La leçon est que la fiabilité est un problème de configuration, pas un problème de modèle. Le scorecard qui capture cette configuration — quels paramètres ont été utilisés, sous quelle charge, à quel coût — est l'infrastructure qui permet à une institution de reproduire, gouverner et souscrire le résultat. Un modèle qui n'est pas mesuré n'est pas un produit. C'est une promesse. Un scorecard transforme les promesses en infrastructure auditable.</p>
+
+                <h2>Les quatre composants d'une vraie pile de scorecard</h2>
+
+                <p>Si l'état-scorecard devient la condition d'un déploiement d'IA digne de confiance, le marché a besoin de plus qu'un tableur. Il a besoin d'une discipline d'infrastructure. Au minimum, une vraie pile de scorecard a quatre composants couplés :</p>
+
+                <ul>
+                    <li><strong>Comptabilité du travail utile :</strong> le système doit définir et mesurer ce que « utile » signifie pour chaque charge de travail institutionnelle. Une résolution de service client est utile. Un paragraphe généré qui ne résout pas le cas ne l'est pas. Un triage d'assurance qui achemine correctement une demande est utile. Un résumé de police généré qui n'affecte pas la décision de paiement ne l'est pas. La comptabilité du travail utile nécessite que l'institution encode ses propres définitions d'achèvement, plutôt que d'hériter de la valeur par défaut de comptage de tokens du vendeur.</li>
+                    <li><strong>Instrumentation du coût par tâche :</strong> chaque tâche réussie doit porter son vrai coût marginal — frais API, nouvelles tentatives, escalades vers des humains, retravail et calcul consommé par la trace de raisonnement. Sans cela, l'institution ne peut pas distinguer une tâche bon marché d'une tâche coûteuse, ne peut pas détecter quand un modèle « bon marché » consomme en réalité du calcul par des tentatives répétées, et ne peut pas gouverner son budget d'inférence avec des preuves plutôt qu'avec de l'espoir.</li>
+                    <li><strong>Métrologie de la fiabilité :</strong> le système doit suivre non seulement si l'agent a réussi, mais comment il a échoué quand il n'a pas réussi. Quel était le mode d'échec ? Combien de temps a duré la reprise ? Quel chemin d'escalade a été utilisé ? L'échec a-t-il corrompu l'état en aval ? La métrologie de la fiabilité est la matière première de la métrique la plus importante du scorecard : la probabilité que la prochaine tâche réussisse dans des conditions similaires.</li>
+                    <li><strong>Analytique du retour sur calcul :</strong> l'institution doit relier la qualité de la sortie à l'énergie et au calcul consommés. Ce n'est pas une réflexion environnementale annexe. C'est une métrique d'allocation de capital. Si un modèle produit des sorties marginalement meilleures en consommant dix fois plus de calcul, le scorecard doit rendre ce compromis visible pour que le capital puisse être alloué à la frontière efficace plutôt qu'à la frontière de prestige.</li>
+                </ul>
+
+                <p>Ces quatre composants sont couplés de manière que les vendeurs oublient souvent. Une métrique de travail utile qui ne porte pas de données de coût par tâche produit des récits héroïques sans discipline de capital. Un système de coût par tâche qui ne mesure pas la fiabilité produit de l'efficacité sans résilience. Un tableau de bord de fiabilité qui ne réalimente pas la sélection de modèle produit de la reprise sans amélioration. Un modèle de retour sur calcul qui n'encode pas les définitions institutionnelles d'utilité produit de l'optimisation pour le mauvais objectif. La pile de scorecard n'est pas un tableau de bord. C'est un système d'exploitation pour l'allocation de capital IA.</p>
+
+                <h2>Pourquoi cela compte pour la souveraineté institutionnelle africaine</h2>
+
+                <p>Les institutions africaines font face à une vulnérabilité spécifique avec l'infrastructure de scorecard. Les vendeurs qui vendent des systèmes d'IA sur le continent fournissent généralement des tableaux de bord qui mesurent des métriques centrées sur le vendeur : tokens traités, temps de fonctionnement API, percentiles de latence. Ces métriques sont conçues pour rendre le produit du vendeur sain, pas pour permettre à l'institution de gouverner sa propre allocation de capital IA. Une institution qui accepte le scorecard du vendeur comme sa propre couche de mesure a externalisé la décision la plus importante sur le plan financier et opérationnel — savoir si l'IA vaut la peine d'être déployée — à la partie qui profite de son utilisation continue.</p>
+
+                <p>Le risque plus profond est culturel. Un scorecard construit autour des modèles de travail occidentaux, des langues occidentales et des définitions réglementaires occidentales de la réussite représentera systématiquement mal la performance des systèmes d'IA opérant dans des contextes africains. Un modèle qui obtient de bons scores sur des benchmarks de service client en anglais peut échouer sur le code-switching, le discours honorifique ou les modes de résolution de conflits communautaires. Une métrique de fiabilité qui ne tient pas compte de la connectivité intermittente, de l'instabilité électrique ou des flux de données transfrontaliers produira une fausse confiance dans une infrastructure qui ne peut pas survivre à son environnement opérationnel réel. Un modèle de coût par tâche qui n'inclut pas les coûts de change et de routage de l'inférence par des centres de données distants sous-estimera systématiquement le vrai coût de la dépendance IA étrangère.</p>
+
+                <p>La méthode de Cheikh Anta Diop s'applique directement. La souveraineté n'est pas le rejet de la mesure. C'est la construction de systèmes de mesure qui encodent les propres valeurs, conditions opérationnelles et objectifs stratégiques de l'institution. Dans l'IA, cela signifie construire une infrastructure de scorecard qui définit le travail utile dans les langues locales, mesure la fiabilité par rapport aux conditions d'infrastructure locales et calcule le retour sur calcul par rapport aux coûts énergétiques et de données locaux. Un laboratoire qui importe le scorecard du vendeur importe la définition du vendeur du succès. Un laboratoire qui construit son propre scorecard commence à gouverner la grammaire de sa propre performance IA.</p>
+
+                <h2>Où la surface d'investissement s'élargit</h2>
+
+                <p>Si cette thèse est correcte, le capital doit regarder les couches qui rendent l'IA mesurable, auditable et souscriptible :</p>
+
+                <ul>
+                    <li><strong>Plateformes de comptabilité du travail utile :</strong> infrastructure qui définit et suit l'achèvement des tâches du point de vue de l'institution, pas du vendeur. Ces plateformes encodent les définitions institutionnelles de succès, les lient aux sorties de l'agent et produisent les preuves que les scorecards requièrent.</li>
+                    <li><strong>Observabilité du coût par tâche :</strong> outils qui suivent le vrai coût marginal de chaque accomplissement réussi de l'IA, y compris les nouvelles tentatives, les escalades, les retravaux et le calcul. C'est la couche de discipline de capital de la pile de scorecard.</li>
+                    <li><strong>Métrologie de la fiabilité et analytique des modes d'échec :</strong> systèmes qui capturent comment les agents échouent, à quelle vitesse ils se rétablissent et quels chemins d'escalade ils utilisent. C'est la couche de souscription de risque — les données qui permettent aux assureurs, régulateurs et acheteurs institutionnels d'évaluer la probabilité de préjudice opérationnel.</li>
+                    <li><strong>Analytique du retour sur calcul :</strong> plateformes qui relient la qualité de la sortie à la consommation d'énergie et de calcul, permettant aux institutions d'optimiser pour la frontière efficace et de soumettre les affirmations des vendeurs sur « l'inférence bon marché » à un test empirique.</li>
+                    <li><strong>Infrastructure de scorecard souveraine :</strong> les institutions africaines et diasporiques ont besoin de piles de mesure qui encodent les langues locales, les conditions d'infrastructure locales, les définitions réglementaires locales et les structures de coûts locales. La valeur n'est pas seulement la personnalisation locale. C'est la souveraineté opérationnelle sur les critères qui déterminent si les systèmes d'IA sont autorisés à opérer.</li>
+                </ul>
+
+                <p>Le point plus profond est que le marché de l'IA entre dans une phase où la concurrence décisive ne porte pas sur qui construit le modèle le plus intelligent. Elle porte sur qui construit le système de mesure le plus digne de confiance. Les entreprises et institutions qui gagneront ne seront pas celles avec le modèle à la latence la plus faible seules. Elles seront celles qui peuvent prouver, avec des preuves, que leurs systèmes d'IA accomplissent un travail utile à un coût durable, récupèrent après un échec et justifient le calcul qu'ils consomment. Cette preuve est plus dure à fabriquer qu'un score de benchmark, mais elle est aussi plus durable. Les benchmarks expirent. L'infrastructure de scorecard, elle, s'accumule parce qu'elle génère les données qui souscrivent la prochaine génération de déploiement.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « A scorecard for the AI age » (item du 17 juillet 2026 ; description : Sarah Friar, directrice financière d'OpenAI, présente un scorecard pratique pour mesurer le ROI par le travail utile, le coût par tâche réussie, la fiabilité et le retour sur calcul)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « How GPT-5.6 fuses frontier intelligence with frontier efficiency » (item du 29 juillet 2026 ; description : GPT-5.6 améliore l'efficacité de l'IA across modèles, inférence et workflows agentiques, aidant à fournir plus d'intelligence utile par dollar)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « How enabling two settings tripled our scores on the ARC-AGI-3 benchmark » (item du 29 juillet 2026 ; description : deux paramètres API ont amélioré la performance de GPT-5.6 sur ARC-AGI-3, augmentant les scores et l'efficacité en retenant le raisonnement et en permettant la compaction)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « GPT-Red: Unlocking Self-Improvement for Robustness » (item du 15 juillet 2026 ; description : GPT-Red, le système de red teaming automatisé d'OpenAI, utilise l'auto-jeu pour améliorer la sécurité, l'alignement et la robustesse à l'injection de prompts)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — « How A2A is Building a World of Collaborative Agents » (date visible : 18 juin 2026 ; méta description : le protocole Agent-to-Agent permet des transferts d'agents sécurisés et autonomes et des workflows évolutifs)</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
