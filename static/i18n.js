@@ -116,6 +116,7 @@
         'article.entry083':     { en: 'Diop Daily #083 — August 2026', fr: 'Diop Quotidien n°083 — Août 2026' },
         'article.entry084':     { en: 'Diop Daily #084 — August 2026', fr: 'Diop Quotidien n°084 — Août 2026' },
         'article.entry085':     { en: 'Diop Daily #085 — August 2026', fr: 'Diop Quotidien n°085 — Août 2026' },
+        'article.entry086':     { en: 'Diop Daily #086 — August 2026', fr: 'Diop Quotidien n°086 — Août 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -438,6 +439,17 @@
     excerpt: {
         en: "When AI moves from chat into repeatable institutional work, the product is not only capability but reversibility. This field note asks what must remain portable—identity, memory, authority, evidence, and policy—when an institution changes its runtime.",
         fr: "Lorsque l'IA passe de la conversation au travail institutionnel répétable, le produit n'est pas seulement la capacité, mais la réversibilité. Cette note demande ce qui doit rester portable — identité, mémoire, autorité, preuves et politiques — lorsqu'une institution change de runtime."
+    }
+},
+
+'diop-daily-086': {
+    title: {
+        en: "A Spreadsheet Is a Small Constitution",
+        fr: "Un tableur est une petite constitution"
+    },
+    excerpt: {
+        en: "The accountable unit of institutional AI is becoming the editable artifact: a workbook, deck, or report that carries evidence, controls, revision, and human judgment beyond the conversation that produced it. The investable surface is artifact-native infrastructure for traceability, recovery, local templates, and governed circulation.",
+        fr: "L'unité responsable de l'IA institutionnelle devient l'artefact modifiable : un classeur, une présentation ou un rapport qui porte les preuves, les contrôles, les révisions et le jugement humain au-delà de la conversation qui l'a produit. La surface d'investissement est l'infrastructure native des artefacts pour la traçabilité, la reprise, les modèles locaux et la circulation gouvernée."
     }
 },
 
