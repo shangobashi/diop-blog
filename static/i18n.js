@@ -116,6 +116,7 @@
         'article.entry083':     { en: 'Diop Daily #083 — August 2026', fr: 'Diop Quotidien n°083 — Août 2026' },
         'article.entry084':     { en: 'Diop Daily #084 — August 2026', fr: 'Diop Quotidien n°084 — Août 2026' },
         'article.entry085':     { en: 'Diop Daily #085 — August 2026', fr: 'Diop Quotidien n°085 — Août 2026' },
+        'article.entry087':     { en: 'Diop Daily #087 — August 2026', fr: 'Diop Quotidien n°087 — Août 2026' },
         'article.entry086':     { en: 'Diop Daily #086 — August 2026', fr: 'Diop Quotidien n°086 — Août 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
@@ -439,6 +440,18 @@
     excerpt: {
         en: "When AI moves from chat into repeatable institutional work, the product is not only capability but reversibility. This field note asks what must remain portable—identity, memory, authority, evidence, and policy—when an institution changes its runtime.",
         fr: "Lorsque l'IA passe de la conversation au travail institutionnel répétable, le produit n'est pas seulement la capacité, mais la réversibilité. Cette note demande ce qui doit rester portable — identité, mémoire, autorité, preuves et politiques — lorsqu'une institution change de runtime."
+    }
+},
+
+
+'diop-daily-087': {
+    title: {
+        en: "Who Is Allowed to Carry the Model?",
+        fr: "Qui a le droit de porter le modèle ?"
+    },
+    excerpt: {
+        en: "As powerful models move into cybersecurity and institutional workflows, the decisive market layer is the trusted operator: the channel that binds capability to authorization, domain context, human review, and accountability. For Africa, the question is whether regional carriers will own context or merely resell foreign intelligence.",
+        fr: "À mesure que les modèles puissants entrent dans la cybersécurité et les workflows institutionnels, la couche de marché décisive est l'opérateur de confiance : le canal qui lie capacité, autorisation, contexte de domaine, revue humaine et responsabilité. Pour l'Afrique, la question est de savoir si les porteurs régionaux posséderont le contexte ou revendront simplement une intelligence étrangère."
     }
 },
 
