@@ -117,6 +117,7 @@
         'article.entry084':     { en: 'Diop Daily #084 — August 2026', fr: 'Diop Quotidien n°084 — Août 2026' },
         'article.entry085':     { en: 'Diop Daily #085 — August 2026', fr: 'Diop Quotidien n°085 — Août 2026' },
         'article.entry087':     { en: 'Diop Daily #087 — August 2026', fr: 'Diop Quotidien n°087 — Août 2026' },
+        'article.entry088':     { en: 'Diop Daily #088 — August 2026', fr: 'Diop Quotidien n°088 — Août 2026' },
         'article.entry086':     { en: 'Diop Daily #086 — August 2026', fr: 'Diop Quotidien n°086 — Août 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
@@ -130,6 +131,16 @@
     };
 
     var postTranslations = {
+'diop-daily-088': {
+    title: {
+        en: "The Queue Is the Institution",
+        fr: "La file d'attente est l'institution"
+    },
+    excerpt: {
+        en: "The next enterprise AI metric is not isolated task completion but decision latency: how quickly an institution can move unresolved work through evidence, routing, review, and accountable action. The investable surface is queue intelligence, policy-aware orchestration, and regional infrastructure that makes waiting measurable without hiding uncertainty.",
+        fr: "La prochaine métrique de l'IA d'entreprise n'est pas l'accomplissement isolé d'une tâche, mais la latence décisionnelle : la vitesse à laquelle une institution fait avancer un travail irrésolu par les preuves, le routage, la revue et l'action responsable. La surface d'investissement est celle de l'intelligence des files, de l'orchestration consciente des politiques et d'une infrastructure régionale qui rend l'attente mesurable sans dissimuler l'incertitude."
+    }
+},
 'diop-daily-079': {
     title: {
         en: "Substrate: Why the Agentic Future Depends on the Transport Nobody Is Talking About",

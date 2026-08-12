@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Queue Is the Institution — Diop Research</title>
+    <meta name="description" content="The next enterprise AI metric is not isolated task completion but decision latency: how quickly an institution can move unresolved work through evidence, routing, review, and accountable action."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </span>
+                <span class="theme-icon theme--moon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry088">Diop Daily #088 — August 2026</div>
+                <div class="article__meta-line">
+                    <time>August 13, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>decision latency · queue economics · institutional AI · African sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Queue Is the Institution</h1>
+
+                <p>Every institution has a queue, even when it refuses to name one.</p>
+
+                <p>It may be the unresolved security finding waiting for a specialist, the customer case waiting for a decision, the forecast waiting for a revision, the procurement request waiting for evidence, or the public question waiting for an answer that someone is willing to own. Institutions are often described through their org charts, software suites, or declared strategies. In practice, their character is visible in what remains unresolved, for how long, and under whose authority it moves.</p>
+
+                <p>The latest public signals from enterprise AI point toward a useful change in the unit of analysis. OpenAI's August 12 News RSS items describe enterprises putting AI to work and RingCentral using ChatGPT Work and Codex across engineering and operations, including the centralization of operational intelligence. Earlier public material describes NTT DATA using ChatGPT Enterprise and Codex to help 9,000 employees automate work and reduce incident analysis to 30 minutes. These are not proofs of a universal productivity law. They are signals that the market is beginning to measure AI through the movement of institutional work rather than through the eloquence of isolated answers.</p>
+
+                <blockquote>
+                    <p>The question is no longer only whether a machine can complete a task. It is whether an institution can make fewer important decisions wait.</p>
+                </blockquote>
+
+                <h2>Task completion is too small a metric</h2>
+
+                <p>A task is an attractive unit because it is easy to demonstrate. A model summarizes a document. An agent opens a ticket. A system drafts a response. A benchmark records the result. But institutions do not pay merely for completed tasks. They pay to move obligations through a field of dependencies, exceptions, approvals, and consequences.</p>
+
+                <p>A task can be completed while the queue grows. A support message can receive a polished answer while the underlying account remains unresolved. A security tool can produce a finding while the remediation waits for ownership. A finance agent can generate a forecast while no one trusts the assumptions enough to use it. The visible output improves, but the institution does not move.</p>
+
+                <p>Decision latency is therefore a more serious measure. It asks:</p>
+
+                <ul>
+                    <li>How long does consequential work wait before it reaches the right authority?</li>
+                    <li>How much context is lost between intake, analysis, review, and action?</li>
+                    <li>How often does a machine output create another queue because it cannot carry evidence or ownership?</li>
+                    <li>What is the cost of an exception, and how quickly can the institution contain it?</li>
+                    <li>Can the organization distinguish a fast answer from a resolved obligation?</li>
+                </ul>
+
+                <p>This is not a call to turn every human relation into a stopwatch. It is a demand for a more truthful account of AI's institutional value. Speed matters when it shortens the time between evidence and accountable action. Speed that merely multiplies unowned outputs is an expensive form of disorder.</p>
+
+                <h2>The queue exposes the missing layer</h2>
+
+                <p>Once the queue becomes visible, the limitations of the usual AI stack become clear. The raw model supplies inference. The application supplies a surface. Neither one necessarily knows which case is urgent, who is allowed to decide, what evidence is sufficient, or what must happen after a refusal.</p>
+
+                <p>This missing layer is not simply workflow automation. It is the institutional queue plane: the system that classifies unresolved work, preserves its context, routes it to an authorized actor, measures its age and risk, and records the disposition. It must be able to say not only “the agent answered,” but “the case moved from intake to analysis, a required reviewer intervened, the evidence was attached, and the remaining uncertainty was accepted by a named authority.”</p>
+
+                <p>Google's public description of ADK Go 2.0 gives a technical vocabulary for part of this plane: graph-based workflows, human-in-the-loop orchestration, dynamic routing, and built-in resilience. These primitives do not create institutional judgment by themselves. They make it possible to express the path by which judgment is requested, delayed, delegated, or refused.</p>
+
+                <p>A queue system worthy of institutional use should preserve at least five kinds of state:</p>
+
+                <ul>
+                    <li><strong>Case state:</strong> what is unresolved, what has changed, and what outcome is being sought.</li>
+                    <li><strong>Authority state:</strong> who may act, approve, escalate, or close the case.</li>
+                    <li><strong>Evidence state:</strong> which records support the current position and which claims remain provisional.</li>
+                    <li><strong>Temporal state:</strong> how long the case has waited, what deadline applies, and whether delay changes the risk.</li>
+                    <li><strong>Recovery state:</strong> what can be replayed, reversed, contested, or handed to another operator when the path fails.</li>
+                </ul>
+
+                <p>Without these states, an agent may reduce local effort while increasing institutional uncertainty. The queue plane is where that tradeoff becomes measurable.</p>
+
+                <h2>From workflow graph to waiting-time ledger</h2>
+
+                <p>The recent AI conversation has rightly emphasized graphs, handoffs, and orchestration. But a graph describes possible movement; a ledger describes actual institutional time. The next layer of serious systems will connect the two.</p>
+
+                <p>For every consequential work item, the institution should be able to inspect when it entered the queue, which route it took, where it waited, which agent or human touched it, what evidence was added, and why it was closed or returned. This is not surveillance for its own sake. It is the minimum record needed to distinguish throughput from displacement.</p>
+
+                <p>A good ledger can reveal that an agent is excellent at classification but creates a review bottleneck. It can show that a cheaper model handles routine cases while a stronger model is reserved for ambiguous ones. It can identify a language or connectivity boundary where cases age longer because the system lacks local context. It can expose a team whose nominal productivity is high because difficult work is quietly being sent elsewhere.</p>
+
+                <p>The ledger also changes how an institution learns. A queue is not merely a backlog; it is a record of the organization's unfinished theory of itself. Repeated exceptions reveal missing policy. Repeated escalations reveal a boundary between machine confidence and institutional authority. Repeated delays in a language or region reveal infrastructure inequality. The system that measures these patterns can improve the institution rather than merely accelerate its existing habits.</p>
+
+                <h2>African institutions cannot import someone else's waiting room</h2>
+
+                <p>This distinction matters deeply for African sovereignty. A global AI platform may offer an impressive front end while encoding assumptions about language, connectivity, identity, business hours, legal jurisdiction, and what counts as a complete case. If African institutions adopt the interface without owning the queue plane, they may inherit a foreign ordering of urgency.</p>
+
+                <p>The issue is not only whether a model speaks an African language. It is whether the institution can define what a complete answer means in that language, who may validate it, how a cross-border case is routed, and what happens when connectivity is intermittent or authority is distributed across formal and customary structures. Language infrastructure, payment infrastructure, identity infrastructure, and queue infrastructure meet at the point where an unresolved matter becomes a decision.</p>
+
+                <p>A federated African approach would not require one continental application. It would require shared commitments: portable case records, common receipts for handoffs, explicit authority boundaries, local evaluation sets, and the right to retain and inspect waiting-time data. Different institutions could maintain different languages, thresholds, and social purposes while still exchanging work without surrendering their interpretive sovereignty.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If decision latency becomes a primary measure of institutional AI, capital should inspect the infrastructure that makes waiting visible and action accountable:</p>
+
+                <ul>
+                    <li><strong>Queue intelligence systems:</strong> platforms that classify, prioritize, age, and route unresolved work while preserving evidence and ownership.</li>
+                    <li><strong>Decision-latency observability:</strong> telemetry that measures time-to-authority, time-to-evidence, exception duration, rework, and unresolved carryover rather than only token usage or model latency.</li>
+                    <li><strong>Policy-aware orchestration:</strong> graph runtimes that can request human review, select models by risk and cost, and refuse closure when required evidence is missing.</li>
+                    <li><strong>Sector queue templates:</strong> local operating grammars for health, finance, public services, education, security, and commerce that define what “resolved” means.</li>
+                    <li><strong>Regional infrastructure:</strong> African language, identity, connectivity, and hosting layers that allow institutions to measure their own queues instead of exporting their unfinished work into an opaque foreign system.</li>
+                </ul>
+
+                <p>The underwriting question is not simply whether an agent saves minutes on a task. It is whether the system reduces the age, cost, and uncertainty of consequential work without hiding the cases it cannot safely resolve. That is a harder claim to sell, but it is closer to the value an institution can audit and continue buying.</p>
+
+                <h2>What gets unstuck becomes the measure</h2>
+
+                <p>AI will continue to produce impressive demonstrations. The more consequential market will be quieter: systems that help institutions know what is waiting, why it is waiting, and what authority can move it forward.</p>
+
+                <p>The queue is the institution because it reveals the distance between declared capacity and lived capacity. An organization may possess excellent models, modern software, and ambitious strategy. If its important questions still wait without context, ownership, or remedy, its intelligence has not yet become operational.</p>
+
+                <p>The task of the next generation of AI infrastructure is therefore not to eliminate every queue. Some waiting is judgment. Some waiting is safety. Some waiting is the necessary time required to consult a community, verify a record, or permit disagreement. The task is to make waiting legible, proportionate, and governed.</p>
+
+                <p>When an institution can see its queues clearly, it can decide which delays are waste, which are wisdom, and which are evidence of dependence. That is where AI becomes more than assistance. It becomes a disciplined instrument for turning collective knowledge into accountable movement.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “From assistance to execution: How enterprises put AI to work” (August 12, 2026; linked article: <em>https://openai.com/index/how-enterprises-put-ai-to-work</em>; description: research on enterprise adoption of agentic AI using ChatGPT and Codex)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “How RingCentral builds AI-native work from engineering to ops” (August 12, 2026; linked article: <em>https://openai.com/index/ringcentral</em>; description: ChatGPT Work and Codex accelerate product development and centralize operational intelligence across engineering and operations)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “NTT DATA Group cuts incident analysis to 30 minutes with Codex” (July 22, 2026; linked article: <em>https://openai.com/index/ntt-data</em>; description: ChatGPT Enterprise and Codex help 9,000 employees automate work and scale secure AI adoption)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; description: graph-based workflows with human-in-the-loop orchestration, dynamic routing, and built-in resilience)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">European Commission — “AI Act” regulatory framework (accessed August 13, 2026; description: a legal framework addressing AI risks and establishing obligations around systems placed on the market)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La file d'attente est l'institution</h1>
+
+                <p>Toute institution possède une file d'attente, même lorsqu'elle refuse de la nommer.</p>
+
+                <p>Il peut s'agir d'une faille de sécurité non résolue qui attend un spécialiste, d'un dossier client qui attend une décision, d'une prévision qui attend une révision, d'une demande d'achat qui attend des preuves ou d'une question publique qui attend une réponse que quelqu'un accepte d'assumer. On décrit souvent les institutions à travers leur organigramme, leurs suites logicielles ou leurs stratégies déclarées. En pratique, leur caractère apparaît dans ce qui reste irrésolu, pendant combien de temps et sous quelle autorité cela avance.</p>
+
+                <p>Les signaux publics les plus récents sur l'IA d'entreprise indiquent un changement utile dans l'unité d'analyse. Les items du flux RSS d'OpenAI du 12 août décrivent des entreprises qui mettent l'IA au travail et RingCentral qui utilise ChatGPT Work et Codex dans l'ingénierie et les opérations, notamment pour centraliser l'intelligence opérationnelle. Des informations publiques antérieures décrivent NTT DATA utilisant ChatGPT Enterprise et Codex pour aider 9 000 employés à automatiser le travail et réduire l'analyse des incidents à 30 minutes. Ces éléments ne prouvent pas une loi universelle de productivité. Ils signalent que le marché commence à mesurer l'IA à travers le mouvement du travail institutionnel plutôt qu'à travers l'éloquence de réponses isolées.</p>
+
+                <blockquote>
+                    <p>La question n'est plus seulement de savoir si une machine peut accomplir une tâche. C'est de savoir si une institution peut faire attendre moins longtemps les décisions importantes.</p>
+                </blockquote>
+
+                <h2>L'accomplissement d'une tâche est une métrique trop étroite</h2>
+
+                <p>La tâche est une unité séduisante parce qu'elle est facile à démontrer. Un modèle résume un document. Un agent ouvre un ticket. Un système rédige une réponse. Un benchmark enregistre le résultat. Mais les institutions ne paient pas simplement pour des tâches terminées. Elles paient pour faire avancer des obligations à travers un champ de dépendances, d'exceptions, d'approbations et de conséquences.</p>
+
+                <p>Une tâche peut être terminée alors que la file s'allonge. Un message de support peut recevoir une réponse élégante alors que le compte sous-jacent reste irrésolu. Un outil de sécurité peut produire une découverte alors que la remédiation attend encore un responsable. Un agent financier peut générer une prévision alors que personne ne fait assez confiance aux hypothèses pour l'utiliser. La sortie visible s'améliore, mais l'institution n'avance pas.</p>
+
+                <p>La latence décisionnelle est donc une mesure plus sérieuse. Elle demande :</p>
+
+                <ul>
+                    <li>Combien de temps un travail lourd de conséquences attend-il avant d'atteindre la bonne autorité ?</li>
+                    <li>Quelle quantité de contexte est perdue entre l'accueil, l'analyse, la revue et l'action ?</li>
+                    <li>À quelle fréquence une sortie machine crée-t-elle une nouvelle file parce qu'elle ne peut pas porter les preuves ou la responsabilité ?</li>
+                    <li>Quel est le coût d'une exception et à quelle vitesse l'institution peut-elle la contenir ?</li>
+                    <li>L'organisation peut-elle distinguer une réponse rapide d'une obligation réellement résolue ?</li>
+                </ul>
+
+                <p>Il ne s'agit pas de transformer toute relation humaine en chronomètre. Il s'agit d'exiger un compte plus vrai de la valeur institutionnelle de l'IA. La vitesse compte lorsqu'elle raccourcit le temps entre la preuve et l'action responsable. La vitesse qui ne fait que multiplier les sorties sans propriétaire est une forme coûteuse de désordre.</p>
+
+                <h2>La file révèle la couche manquante</h2>
+
+                <p>Lorsque la file devient visible, les limites de la pile IA habituelle apparaissent clairement. Le modèle brut fournit l'inférence. L'application fournit une surface. Ni l'un ni l'autre ne sait nécessairement quel dossier est urgent, qui a le droit de décider, quelles preuves sont suffisantes ou ce qui doit se passer après un refus.</p>
+
+                <p>Cette couche manquante n'est pas simplement l'automatisation des workflows. C'est le plan de file institutionnelle : le système qui classe le travail irrésolu, en préserve le contexte, l'achemine vers un acteur autorisé, mesure son ancienneté et son risque et enregistre la décision finale. Il doit pouvoir dire non seulement « l'agent a répondu », mais « le dossier est passé de l'accueil à l'analyse, un réviseur requis est intervenu, les preuves ont été jointes et l'incertitude restante a été acceptée par une autorité identifiée ».</p>
+
+                <p>La description publique de Google concernant ADK Go 2.0 fournit une partie du vocabulaire technique de ce plan : workflows en graphe, orchestration avec humain dans la boucle, routage dynamique et résilience intégrée. Ces primitives ne créent pas à elles seules le jugement institutionnel. Elles permettent d'exprimer le chemin par lequel le jugement est demandé, retardé, délégué ou refusé.</p>
+
+                <p>Un système de file digne d'un usage institutionnel devrait préserver au moins cinq types d'état :</p>
+
+                <ul>
+                    <li><strong>État du dossier :</strong> ce qui reste irrésolu, ce qui a changé et le résultat recherché.</li>
+                    <li><strong>État de l'autorité :</strong> les personnes qui peuvent agir, approuver, escalader ou clôturer le dossier.</li>
+                    <li><strong>État des preuves :</strong> les dossiers qui soutiennent la position actuelle et les affirmations qui restent provisoires.</li>
+                    <li><strong>État temporel :</strong> le temps d'attente, l'échéance applicable et la manière dont le délai modifie le risque.</li>
+                    <li><strong>État de reprise :</strong> ce qui peut être rejoué, inversé, contesté ou remis à un autre opérateur lorsque le chemin échoue.</li>
+                </ul>
+
+                <p>Sans ces états, un agent peut réduire l'effort local tout en augmentant l'incertitude institutionnelle. Le plan de file est l'endroit où cet arbitrage devient mesurable.</p>
+
+                <h2>Du graphe de workflow au registre du temps d'attente</h2>
+
+                <p>La conversation récente sur l'IA a eu raison de mettre en avant les graphes, les transferts et l'orchestration. Mais un graphe décrit un mouvement possible ; un registre décrit le temps institutionnel réel. La prochaine couche des systèmes sérieux reliera les deux.</p>
+
+                <p>Pour chaque élément de travail lourd de conséquences, l'institution devrait pouvoir examiner son entrée dans la file, le chemin suivi, les endroits où il a attendu, les agents ou humains qui l'ont traité, les preuves ajoutées et la raison de sa clôture ou de son retour. Ce n'est pas de la surveillance pour elle-même. C'est le dossier minimal nécessaire pour distinguer le débit du simple déplacement.</p>
+
+                <p>Un bon registre peut révéler qu'un agent est excellent pour la classification mais crée un goulot d'étranglement dans la revue. Il peut montrer qu'un modèle moins coûteux traite les cas courants tandis qu'un modèle plus puissant est réservé aux cas ambigus. Il peut identifier une frontière linguistique ou de connectivité où les dossiers vieillissent parce que le système manque de contexte local. Il peut exposer une équipe dont la productivité apparente est élevée parce que le travail difficile est silencieusement envoyé ailleurs.</p>
+
+                <p>Le registre transforme aussi la manière dont une institution apprend. Une file n'est pas seulement un arriéré ; c'est l'enregistrement de la théorie inachevée que l'organisation entretient sur elle-même. Les exceptions répétées révèlent une politique absente. Les escalades répétées révèlent une frontière entre la confiance machine et l'autorité institutionnelle. Les retards répétés dans une langue ou une région révèlent une inégalité d'infrastructure. Le système qui mesure ces modèles peut améliorer l'institution au lieu d'accélérer simplement ses habitudes existantes.</p>
+
+                <h2>Les institutions africaines ne peuvent pas importer la salle d'attente d'autrui</h2>
+
+                <p>Cette distinction est essentielle pour la souveraineté africaine. Une plateforme mondiale d'IA peut offrir une interface impressionnante tout en encodant des hypothèses sur la langue, la connectivité, l'identité, les horaires de travail, la juridiction et ce qui constitue un dossier complet. Si les institutions africaines adoptent l'interface sans posséder le plan de file, elles peuvent hériter d'un ordre étranger des urgences.</p>
+
+                <p>La question n'est pas seulement de savoir si un modèle parle une langue africaine. Il s'agit de savoir si l'institution peut définir ce qu'est une réponse complète dans cette langue, qui peut la valider, comment un dossier transfrontalier est acheminé et ce qui arrive lorsque la connectivité est intermittente ou que l'autorité est répartie entre des structures formelles et coutumières. L'infrastructure linguistique, l'infrastructure de paiement, l'infrastructure d'identité et l'infrastructure de file se rencontrent au point où une affaire irrésolue devient une décision.</p>
+
+                <p>Une approche africaine fédérale ne demanderait pas une seule application continentale. Elle demanderait des engagements partagés : des dossiers portables, des reçus communs pour les transferts, des frontières d'autorité explicites, des jeux d'évaluation locaux et le droit de conserver et d'examiner les données sur les temps d'attente. Des institutions différentes pourraient conserver des langues, des seuils et des finalités sociales différentes tout en échangeant du travail sans abandonner leur souveraineté interprétative.</p>
+
+                <h2>Où la surface d'investissement s'élargit</h2>
+
+                <p>Si la latence décisionnelle devient une mesure première de l'IA institutionnelle, le capital doit examiner l'infrastructure qui rend l'attente visible et l'action responsable :</p>
+
+                <ul>
+                    <li><strong>Systèmes d'intelligence des files :</strong> plateformes qui classent, priorisent, vieillissent et acheminent le travail irrésolu tout en conservant preuves et responsabilité.</li>
+                    <li><strong>Observabilité de la latence décisionnelle :</strong> télémétrie mesurant le temps jusqu'à l'autorité, le temps jusqu'aux preuves, la durée des exceptions, le retravail et le report irrésolu, plutôt que seulement les tokens ou la latence du modèle.</li>
+                    <li><strong>Orchestration consciente des politiques :</strong> runtimes en graphe capables de demander une revue humaine, de sélectionner les modèles selon le risque et le coût et de refuser la clôture lorsque les preuves requises manquent.</li>
+                    <li><strong>Modèles sectoriels de file :</strong> grammaires locales pour la santé, la finance, les services publics, l'éducation, la sécurité et le commerce qui définissent ce que signifie « résolu ».</li>
+                    <li><strong>Infrastructure régionale :</strong> couches africaines de langue, d'identité, de connectivité et d'hébergement permettant aux institutions de mesurer leurs propres files au lieu d'exporter leur travail inachevé vers un système étranger opaque.</li>
+                </ul>
+
+                <p>La question de souscription n'est pas simplement de savoir si un agent économise quelques minutes sur une tâche. Il s'agit de savoir si le système réduit l'âge, le coût et l'incertitude du travail lourd de conséquences sans dissimuler les dossiers qu'il ne peut pas résoudre sans danger. C'est une affirmation plus difficile à vendre, mais elle se rapproche davantage de la valeur qu'une institution peut auditer et continuer à acheter.</p>
+
+                <h2>Ce qui se débloque devient la mesure</h2>
+
+                <p>L'IA continuera de produire des démonstrations impressionnantes. Le marché le plus important sera plus silencieux : des systèmes qui aident les institutions à savoir ce qui attend, pourquoi cela attend et quelle autorité peut le faire avancer.</p>
+
+                <p>La file est l'institution parce qu'elle révèle la distance entre la capacité déclarée et la capacité vécue. Une organisation peut posséder d'excellents modèles, des logiciels modernes et une stratégie ambitieuse. Si ses questions importantes attendent toujours sans contexte, sans responsable ou sans recours, son intelligence n'est pas encore devenue opérationnelle.</p>
+
+                <p>La tâche de la prochaine génération d'infrastructure IA n'est donc pas d'éliminer toutes les files. Certaines attentes relèvent du jugement. Certaines relèvent de la sécurité. Certaines sont le temps nécessaire pour consulter une communauté, vérifier un dossier ou permettre un désaccord. Il faut rendre l'attente lisible, proportionnée et gouvernée.</p>
+
+                <p>Lorsqu'une institution voit clairement ses files, elle peut décider quels délais sont du gaspillage, lesquels sont de la sagesse et lesquels signalent une dépendance. C'est là que l'IA devient plus qu'une assistance. Elle devient un instrument discipliné pour transformer le savoir collectif en mouvement responsable.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « From assistance to execution: How enterprises put AI to work » (12 août 2026 ; article lié : <em>https://openai.com/index/how-enterprises-put-ai-to-work</em> ; description : recherche sur l'adoption de l'IA agentique par les entreprises avec ChatGPT et Codex)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « How RingCentral builds AI-native work from engineering to ops » (12 août 2026 ; article lié : <em>https://openai.com/index/ringcentral</em> ; description : ChatGPT Work et Codex accélèrent le développement produit et centralisent l'intelligence opérationnelle entre ingénierie et opérations)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « NTT DATA Group cuts incident analysis to 30 minutes with Codex » (22 juillet 2026 ; article lié : <em>https://openai.com/index/ntt-data</em> ; description : ChatGPT Enterprise et Codex aident 9 000 employés à automatiser le travail et à déployer l'IA de manière sécurisée)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; description : workflows en graphe avec orchestration humain-dans-la-boucle, routage dynamique et résilience intégrée)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">Commission européenne — « AI Act », cadre réglementaire (consulté le 13 août 2026 ; description : cadre juridique traitant les risques de l'IA et établissant des obligations pour les systèmes mis sur le marché)</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>August 13, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
