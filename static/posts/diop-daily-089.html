@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Small Institution Is a Many-Role Machine — Diop Research</title>
+    <meta name="description" content="AI is changing the economics of small institutions by compressing role coverage, not merely automating tasks. The strategic layer is the system that lets one organization carry many functions without losing authority, memory, or local meaning."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry089">Diop Daily #089 — August 2026</div>
+                <div class="article__meta-line">
+                    <time>August 14, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>small institutions · role coverage · AI operating layers · African enterprise</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Small Institution Is a Many-Role Machine</h1>
+
+                <p>A small institution is not a smaller version of a large institution. It is a different machine.</p>
+
+                <p>A five-person company may contain, in compressed form, a sales department, a research desk, a finance office, a customer-support team, a communications unit, and a chief operating function. The roles exist even when the headcount does not. One person moves between them, often several times before lunch. The organization survives by carrying context across these shifts without allowing responsibility to dissolve.</p>
+
+                <p>Recent public signals about enterprise AI and small-business adoption make this structure easier to see. OpenAI describes AI expanding what workers do across role boundaries. Its small-business program frames ChatGPT Work as a way for entrepreneurs to build skills, automate work, and grow. Other public examples describe larger organizations using AI across engineering, operations, finance, and client service. Google is building the handoff and graph primitives that allow agents to collaborate rather than remain isolated tools.</p>
+
+                <blockquote>
+                    <p>The small institution does not need an artificial employee. It needs a way to carry many responsibilities without losing the thread that makes them one institution.</p>
+                </blockquote>
+
+                <h2>Headcount hides the real structure</h2>
+
+                <p>The usual language of automation begins with the task: write the email, summarize the report, qualify the lead, prepare the forecast. This is useful for demonstrations, but it misses the economic problem faced by small organizations. Their constraint is not only the time required for an individual task. It is the cost of maintaining enough role coverage to remain credible.</p>
+
+                <p>Role coverage means being able to notice a market signal, interpret it, decide whether it matters, communicate a response, record the decision, and return to the original work without losing continuity. In a large enterprise, these movements can be distributed across specialized teams. In a small institution, they are carried by the same few people. The institution's advantage comes from the density of its context; its vulnerability comes from the fragility of that context.</p>
+
+                <p>This is why a fluent answer can be economically irrelevant. A generated sales brief that does not remember the last conversation creates rework. A finance summary that cannot distinguish approved assumptions from speculation creates review debt. A research note that loses its source trail cannot be reused. A marketing draft that ignores the organization's actual offer increases output while reducing coherence.</p>
+
+                <p>The valuable AI system for a small institution therefore does not merely complete more tasks. It increases the number of roles the institution can responsibly cover while preserving the relationships among them.</p>
+
+                <h2>Role coverage is not role replacement</h2>
+
+                <p>There is a dangerous temptation to describe this as replacing employees with agents. That framing is both crude and technically misleading. A role is not a pile of tasks. It contains standards, timing, judgment, memory, authority, and a social relationship with the rest of the institution.</p>
+
+                <p>An agent may prepare a forecast, but the finance role includes knowing which forecast matters this week, which assumption requires confirmation, and which number must not be circulated yet. An agent may draft a customer reply, but the service role includes recognizing when a complaint is actually a product signal or a reputational risk. An agent may research a prospect, but the commercial role includes deciding whether the account fits the institution's character and capacity.</p>
+
+                <p>Role coverage is the provision of these surrounding functions. It asks whether the system can help an institution inhabit a role without pretending that the role has become automatic.</p>
+
+                <ul>
+                    <li><strong>Recognition:</strong> identify which role a piece of work belongs to and why it matters now.</li>
+                    <li><strong>Continuity:</strong> carry relevant decisions, terminology, sources, and unresolved questions from one function to another.</li>
+                    <li><strong>Boundaries:</strong> know what the system may prepare, what it may recommend, and what requires a named authority.</li>
+                    <li><strong>Translation:</strong> convert the same reality into the language of finance, sales, operations, research, or public communication without changing its meaning.</li>
+                    <li><strong>Return:</strong> send the work back into the institution as an editable, inspectable object rather than an isolated answer.</li>
+                </ul>
+
+                <p>These are not features added around a model. They are the operating layer that makes model capability useful to an organization whose departments are carried by people rather than walls.</p>
+
+                <h2>The real product is cross-role coherence</h2>
+
+                <p>Google's A2A and ADK Go announcements provide a technical vocabulary for the movement between roles: secure handoffs, graph-based workflows, human checkpoints, dynamic routing, and resilience. But a graph can connect agents without making them coherent. The crucial design question is what survives the handoff.</p>
+
+                <p>Suppose a research agent identifies a promising account. The commercial agent should receive more than a name and a paragraph. It should receive the evidence, the confidence, the reason the account fits, the unanswered question, and the permitted next action. If the account becomes a proposal, finance should see the assumptions that matter. If the proposal is rejected, the reason should return to the research and commercial layers as institutional memory.</p>
+
+                <p>This is a loop, not a pipeline. The institution learns when the result of one role changes the future behavior of another. Without that loop, multi-agent systems become relay races that pass text forward while losing meaning.</p>
+
+                <p>The small institution is especially sensitive to this distinction because it has fewer buffers. A large organization can sometimes survive duplicated work, undocumented decisions, or a slow handoff. A small organization experiences those failures as strategic drift. The customer is forgotten. The cash constraint arrives late. The research never becomes a product decision. The founder becomes the only memory layer and the system becomes unscalable.</p>
+
+                <h2>African enterprise needs local role grammars</h2>
+
+                <p>For African institutions, role coverage cannot be imported as a neutral software package. The meaning of a role depends on language, connectivity, payment practices, family and community obligations, legal plurality, and the distance between formal titles and actual authority.</p>
+
+                <p>A global system may understand the words “sales,” “finance,” or “support” while misunderstanding the institution's operating reality. A customer relationship may move through voice, messaging, informal referral, and a physical meeting before it becomes a record. A payment may be split across rails. A decision may require consultation with an authority that has no field in the imported workflow. A language switch may signal not translation, but a change in trust or social distance.</p>
+
+                <p>That is why African AI sovereignty requires more than local hosting or local branding. It requires local role grammars: the templates, memories, permissions, evaluation sets, and escalation paths that define how an institution actually works. These grammars should be able to federate across borders without being flattened into one foreign norm.</p>
+
+                <p>The opportunity is constructive. A regional system could help a cooperative carry finance and member service, help a studio connect creative production to distribution, or help a small manufacturer coordinate procurement, quality, and sales while preserving local terminology. The aim is not to imitate the bureaucracy of a large company. It is to give smaller institutions durable capacity without asking them to surrender their own way of making meaning.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If the small institution becomes a many-role machine, the capital-relevant layer is not a generic “AI assistant.” It is the infrastructure that expands role coverage while preserving accountability:</p>
+
+                <ul>
+                    <li><strong>Role operating systems:</strong> configurable systems that bind agents to role definitions, evidence rules, local terminology, permissions, and human owners.</li>
+                    <li><strong>Cross-role memory:</strong> shared but bounded memory that carries decisions and unresolved questions between commercial, financial, operational, and research functions.</li>
+                    <li><strong>Handoff ledgers:</strong> receipts that preserve what one role gave another, why the transfer occurred, what confidence applied, and what remains open.</li>
+                    <li><strong>SME-grade orchestration:</strong> affordable graph runtimes that support human checkpoints, model routing, offline or intermittent operation, and recovery without enterprise-scale administrative overhead.</li>
+                    <li><strong>Local role grammars:</strong> sector and language templates built for African commerce, public services, creative businesses, education, and regional supply chains.</li>
+                </ul>
+
+                <p>The underwriting question is not how many tasks an agent can complete in isolation. It is how much institutional surface area a small organization can responsibly carry after the system is installed. Can the company cover more functions? Can it preserve its own memory? Can it show who approved a consequential move? Can it replace a model without losing the role's meaning?</p>
+
+                <h2>Capacity without imitation</h2>
+
+                <p>The future of AI will often be described from the perspective of the large enterprise because large enterprises publish the most data and buy the most software. But the small institution may reveal the deeper transformation. It has fewer departments, fewer buffers, and less tolerance for context loss. If AI can help it carry several roles without turning every decision into an opaque automation, the technology has achieved something more meaningful than labor substitution.</p>
+
+                <p>It has increased institutional capacity.</p>
+
+                <p>That distinction matters for Africa. The objective is not to make every African organization resemble a foreign corporation with a cheaper staff. It is to give local institutions more room to think, coordinate, publish, trade, teach, and build while retaining authority over the categories through which they understand the world.</p>
+
+                <p>A small institution is a many-role machine. The systems worth building will not erase that plurality. They will give it memory, boundaries, translation, and a reliable way to return from one role to the next. That is how capability becomes capacity without becoming imitation.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “How AI is expanding what people do at work” (July 27, 2026; linked article: <em>https://openai.com/index/how-ai-is-expanding-what-people-do-at-work</em>; description: research showing workers taking on tasks across roles and reshaping job boundaries)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “Introducing the ChatGPT for small business program” (July 21, 2026; linked article: <em>https://openai.com/index/introducing-chatgpt-small-business-program</em>; description: a program helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — “NTT DATA Group cuts incident analysis to 30 minutes with Codex” (July 22, 2026; linked article: <em>https://openai.com/index/ntt-data</em>; description: ChatGPT Enterprise and Codex helping 9,000 employees automate work and scale secure AI adoption)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — “How A2A is Building a World of Collaborative Agents” (June 18, 2026; description: secure agent handoffs and scalable collaborative workflows)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; description: graph-based workflows, human-in-the-loop orchestration, dynamic routing, and built-in resilience)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">European Commission — “AI Act” regulatory framework (accessed August 14, 2026; description: a legal framework addressing AI risks and establishing obligations around systems placed on the market)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La petite institution est une machine à plusieurs rôles</h1>
+
+                <p>Une petite institution n'est pas une version réduite d'une grande institution. C'est une autre machine.</p>
+
+                <p>Une entreprise de cinq personnes peut contenir, sous une forme comprimée, un service commercial, un bureau de recherche, une fonction financière, une équipe de support, une unité de communication et une direction des opérations. Les rôles existent même lorsque les effectifs n'existent pas. Une même personne passe de l'un à l'autre, parfois plusieurs fois avant midi. L'organisation survit en transportant le contexte entre ces changements sans laisser la responsabilité se dissoudre.</p>
+
+                <p>Les signaux publics récents sur l'IA d'entreprise et l'adoption par les petites entreprises rendent cette structure plus visible. OpenAI décrit une IA qui élargit ce que les travailleurs font au-delà des frontières de leur rôle. Son programme destiné aux petites entreprises présente ChatGPT Work comme un moyen pour les entrepreneurs de développer leurs compétences, d'automatiser le travail et de croître. D'autres exemples publics décrivent de grandes organisations qui utilisent l'IA dans l'ingénierie, les opérations, la finance et le service client. Google construit les primitives de transfert et de graphe qui permettent aux agents de collaborer au lieu de rester des outils isolés.</p>
+
+                <blockquote>
+                    <p>La petite institution n'a pas besoin d'un employé artificiel. Elle a besoin d'une manière de porter de nombreuses responsabilités sans perdre le fil qui les rend institutionnelles.</p>
+                </blockquote>
+
+                <h2>Les effectifs cachent la véritable structure</h2>
+
+                <p>Le langage habituel de l'automatisation commence par la tâche : rédiger le message, résumer le rapport, qualifier le prospect, préparer la prévision. C'est utile pour les démonstrations, mais cela manque le problème économique des petites organisations. Leur contrainte n'est pas seulement le temps nécessaire à une tâche. C'est le coût nécessaire pour maintenir assez de couverture fonctionnelle afin de rester crédibles.</p>
+
+                <p>La couverture d'un rôle signifie pouvoir repérer un signal de marché, l'interpréter, décider s'il compte, communiquer une réponse, enregistrer la décision et revenir au travail initial sans perdre la continuité. Dans une grande entreprise, ces mouvements peuvent être répartis entre équipes spécialisées. Dans une petite institution, ils sont portés par les mêmes quelques personnes. L'avantage de l'organisation vient de la densité de son contexte ; sa vulnérabilité vient de la fragilité de ce contexte.</p>
+
+                <p>C'est pourquoi une réponse fluide peut être économiquement inutile. Une note commerciale générée qui ne se souvient pas de la dernière conversation crée du retravail. Un résumé financier incapable de distinguer les hypothèses approuvées de la spéculation crée une dette de revue. Une note de recherche qui perd sa trace documentaire ne peut pas être réutilisée. Un brouillon marketing qui ignore l'offre réelle de l'organisation augmente la production tout en réduisant la cohérence.</p>
+
+                <p>Le système d'IA utile à une petite institution ne réalise donc pas simplement davantage de tâches. Il augmente le nombre de rôles que l'institution peut porter de manière responsable tout en conservant les relations entre eux.</p>
+
+                <h2>La couverture d'un rôle n'est pas le remplacement du rôle</h2>
+
+                <p>Il existe une tentation dangereuse de décrire ce mouvement comme le remplacement des employés par des agents. Ce cadre est à la fois grossier et techniquement trompeur. Un rôle n'est pas un tas de tâches. Il contient des normes, un rythme, un jugement, une mémoire, une autorité et une relation sociale avec le reste de l'institution.</p>
+
+                <p>Un agent peut préparer une prévision, mais le rôle financier consiste aussi à savoir quelle prévision compte cette semaine, quelle hypothèse doit être confirmée et quel chiffre ne doit pas encore circuler. Un agent peut rédiger une réponse client, mais le rôle de service consiste à reconnaître quand une plainte est en réalité un signal produit ou un risque réputationnel. Un agent peut rechercher un prospect, mais le rôle commercial consiste à décider si ce compte correspond au caractère et à la capacité de l'institution.</p>
+
+                <p>La couverture d'un rôle fournit ces fonctions environnantes. Elle demande si le système peut aider une institution à habiter un rôle sans prétendre que ce rôle est devenu automatique.</p>
+
+                <ul>
+                    <li><strong>Reconnaissance :</strong> identifier le rôle auquel appartient un travail et pourquoi il compte maintenant.</li>
+                    <li><strong>Continuité :</strong> transporter les décisions, la terminologie, les sources et les questions irrésolues d'une fonction à l'autre.</li>
+                    <li><strong>Frontières :</strong> savoir ce que le système peut préparer, recommander et ce qui exige une autorité nommée.</li>
+                    <li><strong>Traduction :</strong> convertir une même réalité dans le langage de la finance, de la vente, des opérations, de la recherche ou de la communication publique sans en changer le sens.</li>
+                    <li><strong>Retour :</strong> renvoyer le travail dans l'institution comme un objet modifiable et examinable plutôt qu'une réponse isolée.</li>
+                </ul>
+
+                <p>Ce ne sont pas des fonctions ajoutées autour d'un modèle. C'est la couche opératoire qui rend la capacité du modèle utile à une organisation dont les départements sont portés par des personnes plutôt que par des murs.</p>
+
+                <h2>Le véritable produit est la cohérence entre les rôles</h2>
+
+                <p>Les annonces de Google sur A2A et ADK Go fournissent un vocabulaire technique pour le mouvement entre les rôles : transferts sécurisés, workflows en graphe, points de contrôle humains, routage dynamique et résilience. Mais un graphe peut relier des agents sans les rendre cohérents. La question de conception décisive est de savoir ce qui survit au transfert.</p>
+
+                <p>Supposons qu'un agent de recherche identifie un compte prometteur. L'agent commercial devrait recevoir davantage qu'un nom et un paragraphe. Il devrait recevoir les preuves, le niveau de confiance, la raison de l'adéquation, la question restée sans réponse et l'action suivante autorisée. Si le compte devient une proposition, la finance devrait voir les hypothèses importantes. Si la proposition est refusée, la raison devrait revenir aux couches de recherche et de commerce comme mémoire institutionnelle.</p>
+
+                <p>Il s'agit d'une boucle, non d'un pipeline. L'institution apprend lorsque le résultat d'un rôle modifie le comportement futur d'un autre. Sans cette boucle, les systèmes multi-agents deviennent des relais qui font avancer du texte tout en perdant le sens.</p>
+
+                <p>La petite institution est particulièrement sensible à cette distinction parce qu'elle dispose de moins de tampons. Une grande organisation peut parfois survivre au travail dupliqué, aux décisions non documentées ou à un transfert lent. Une petite organisation vit ces échecs comme une dérive stratégique. Le client est oublié. La contrainte de trésorerie arrive trop tard. La recherche ne devient jamais une décision produit. Le fondateur devient l'unique couche de mémoire et le système cesse d'être extensible.</p>
+
+                <h2>L'entreprise africaine a besoin de grammaires locales des rôles</h2>
+
+                <p>Pour les institutions africaines, la couverture des rôles ne peut pas être importée comme un progiciel neutre. Le sens d'un rôle dépend de la langue, de la connectivité, des pratiques de paiement, des obligations familiales et communautaires, de la pluralité juridique et de la distance entre les titres officiels et l'autorité réelle.</p>
+
+                <p>Un système mondial peut comprendre les mots « vente », « finance » ou « support » tout en comprenant mal la réalité opératoire de l'institution. Une relation client peut circuler par la voix, la messagerie, la recommandation informelle et la rencontre physique avant de devenir un dossier. Un paiement peut être réparti entre plusieurs rails. Une décision peut exiger la consultation d'une autorité qui ne possède aucun champ dans le workflow importé. Un changement de langue peut signaler non pas une traduction, mais une modification de la confiance ou de la distance sociale.</p>
+
+                <p>Voilà pourquoi la souveraineté africaine en IA exige plus qu'un hébergement local ou une marque locale. Elle exige des grammaires locales des rôles : les modèles, mémoires, permissions, jeux d'évaluation et chemins d'escalade qui définissent le fonctionnement réel d'une institution. Ces grammaires doivent pouvoir se fédérer au-delà des frontières sans être aplaties dans une norme étrangère unique.</p>
+
+                <p>L'opportunité est constructive. Un système régional pourrait aider une coopérative à porter la finance et le service aux membres, un studio à relier la production créative à la distribution, ou un petit fabricant à coordonner achats, qualité et vente tout en conservant la terminologie locale. Le but n'est pas d'imiter la bureaucratie d'une grande entreprise. Il est de donner aux petites institutions une capacité durable sans leur demander d'abandonner leur manière propre de produire du sens.</p>
+
+                <h2>Où la surface d'investissement s'élargit</h2>
+
+                <p>Si la petite institution devient une machine à plusieurs rôles, la couche pertinente pour le capital n'est pas un « assistant IA » générique. C'est l'infrastructure qui élargit la couverture des rôles tout en conservant la responsabilité :</p>
+
+                <ul>
+                    <li><strong>Systèmes d'exploitation des rôles :</strong> systèmes configurables qui lient les agents aux définitions de rôle, aux règles de preuve, à la terminologie locale, aux permissions et aux responsables humains.</li>
+                    <li><strong>Mémoire inter-rôles :</strong> mémoire partagée mais bornée qui transporte décisions et questions irrésolues entre commerce, finance, opérations et recherche.</li>
+                    <li><strong>Registres de transfert :</strong> reçus préservant ce qu'un rôle a donné à un autre, pourquoi le transfert a eu lieu, quel niveau de confiance s'appliquait et ce qui reste ouvert.</li>
+                    <li><strong>Orchestration pour PME :</strong> runtimes en graphe abordables prenant en charge les contrôles humains, le routage des modèles, les opérations intermittentes et la reprise sans la surcharge administrative de l'entreprise géante.</li>
+                    <li><strong>Grammaires locales des rôles :</strong> modèles sectoriels et linguistiques conçus pour le commerce africain, les services publics, les entreprises créatives, l'éducation et les chaînes d'approvisionnement régionales.</li>
+                </ul>
+
+                <p>La question de souscription n'est pas le nombre de tâches qu'un agent peut accomplir isolément. C'est la surface institutionnelle qu'une petite organisation peut porter de manière responsable après l'installation du système. L'entreprise peut-elle couvrir davantage de fonctions ? Peut-elle conserver sa propre mémoire ? Peut-elle montrer qui a approuvé un mouvement lourd de conséquences ? Peut-elle remplacer un modèle sans perdre le sens du rôle ?</p>
+
+                <h2>La capacité sans imitation</h2>
+
+                <p>L'avenir de l'IA sera souvent décrit depuis la perspective de la grande entreprise, parce que les grandes entreprises publient le plus de données et achètent le plus de logiciels. Mais la petite institution peut révéler la transformation la plus profonde. Elle possède moins de départements, moins de réserves et moins de tolérance à la perte de contexte. Si l'IA peut l'aider à porter plusieurs rôles sans transformer chaque décision en automatisation opaque, la technologie aura accompli davantage qu'une substitution de travail.</p>
+
+                <p>Elle aura augmenté la capacité institutionnelle.</p>
+
+                <p>Cette distinction compte pour l'Afrique. L'objectif n'est pas de faire ressembler chaque organisation africaine à une entreprise étrangère avec une main-d'œuvre moins coûteuse. Il est de donner aux institutions locales davantage d'espace pour penser, coordonner, publier, commercer, enseigner et construire tout en conservant leur autorité sur les catégories à travers lesquelles elles comprennent le monde.</p>
+
+                <p>La petite institution est une machine à plusieurs rôles. Les systèmes dignes d'être construits n'effaceront pas cette pluralité. Ils lui donneront une mémoire, des frontières, une capacité de traduction et une manière fiable de revenir d'un rôle à l'autre. C'est ainsi que la capacité devient une force institutionnelle sans devenir une imitation.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « How AI is expanding what people do at work » (27 juillet 2026 ; article lié : <em>https://openai.com/index/how-ai-is-expanding-what-people-do-at-work</em> ; description : recherche montrant que les travailleurs prennent en charge des tâches entre plusieurs rôles et redessinent les frontières de poste)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « Introducing the ChatGPT for small business program » (21 juillet 2026 ; article lié : <em>https://openai.com/index/introducing-chatgpt-small-business-program</em> ; description : programme aidant les entrepreneurs à développer leurs compétences en IA, automatiser le travail et croître avec ChatGPT Work)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS — « NTT DATA Group cuts incident analysis to 30 minutes with Codex » (22 juillet 2026 ; article lié : <em>https://openai.com/index/ntt-data</em> ; description : ChatGPT Enterprise et Codex aident 9 000 employés à automatiser le travail et à déployer l'IA de façon sécurisée)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog — « How A2A is Building a World of Collaborative Agents » (18 juin 2026 ; description : transferts sécurisés entre agents et workflows collaboratifs évolutifs)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog — « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; description : workflows en graphe, orchestration avec humain dans la boucle, routage dynamique et résilience intégrée)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">Commission européenne — « AI Act », cadre réglementaire (consulté le 14 août 2026 ; description : cadre juridique traitant les risques de l'IA et établissant des obligations pour les systèmes mis sur le marché)</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>August 14, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

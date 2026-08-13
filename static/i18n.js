@@ -118,6 +118,7 @@
         'article.entry085':     { en: 'Diop Daily #085 — August 2026', fr: 'Diop Quotidien n°085 — Août 2026' },
         'article.entry087':     { en: 'Diop Daily #087 — August 2026', fr: 'Diop Quotidien n°087 — Août 2026' },
         'article.entry088':     { en: 'Diop Daily #088 — August 2026', fr: 'Diop Quotidien n°088 — Août 2026' },
+        'article.entry089':     { en: 'Diop Daily #089 — August 2026', fr: 'Diop Quotidien n°089 — Août 2026' },
         'article.entry086':     { en: 'Diop Daily #086 — August 2026', fr: 'Diop Quotidien n°086 — Août 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
@@ -131,6 +132,16 @@
     };
 
     var postTranslations = {
+'diop-daily-089': {
+    title: {
+        en: "The Small Institution Is a Many-Role Machine",
+        fr: "La petite institution est une machine à plusieurs rôles"
+    },
+    excerpt: {
+        en: "AI is changing the economics of small institutions by compressing role coverage, not merely automating tasks. The strategic layer is the system that lets one organization carry many functions without losing authority, memory, or local meaning.",
+        fr: "L'IA change l'économie des petites institutions en comprimant la couverture des rôles, et pas seulement en automatisant des tâches. La couche stratégique est le système qui permet à une organisation de porter plusieurs fonctions sans perdre son autorité, sa mémoire ou son sens local."
+    }
+},
 'diop-daily-088': {
     title: {
         en: "The Queue Is the Institution",
