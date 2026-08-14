@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>When Latency Becomes a Budget — Diop Research</title>
+    <meta name="description" content="New AI service tiers and model-selection tools turn latency into an institutional budget. The strategic layer is the execution control plane that allocates speed, cost, review, and local compute according to consequence."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry090">Diop Daily #090 — August 2026</div>
+                <div class="article__meta-line">
+                    <time>August 15, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>inference economics · latency budgets · model routing · African compute</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">When Latency Becomes a Budget</h1>
+
+                <p>Latency used to be described as a property of a system. The newest AI infrastructure signals make it look more like a budget: something an institution allocates across urgency, risk, cost, review, and locality.</p>
+
+                <p>OpenAI's August 13 News RSS items place two facts beside each other. Its builder's guide to GPT-5.6 describes startups using smarter model selection and new Responses API capabilities to build faster, more cost-efficient agents. Its Ultrafast preview describes a service tier running GPT-5.6 Sol up to 14 times faster, with a published ceiling of 750 output tokens per second. These announcements are product signals, not proof that speed alone creates value. They do show that the market is beginning to package inference time as a selectable commercial variable.</p>
+
+                <p>That variable changes institutional design. When a system can buy more speed for one action and conserve it for another, the central engineering question becomes allocation. Which cases deserve the fast path? Which require a slower model, a stronger model, a human checkpoint, or a local fallback? Who writes the policy, and who can inspect the decision afterward?</p>
+
+                <blockquote>
+                    <p>Fast inference is useful when it shortens the distance to a responsible decision. Unallocated speed only makes an institution spend more quickly.</p>
+                </blockquote>
+
+                <h2>Speed is a scarce institutional resource</h2>
+
+                <p>A response-time number looks technical until an organization must pay for it. A customer-service system may need a rapid answer during a live interaction. A financial reconciliation can tolerate more time if evidence and arithmetic receive deeper review. A security investigation may require a high-capability model because a false negative carries a larger cost than a delayed draft. A public-service workflow may value local availability more than the lowest theoretical latency because connectivity determines whether the process exists at all.</p>
+
+                <p>The same institution can therefore require several speeds at once. The mistake is treating the fastest available model as the default for every case. That approach converts a service-level option into a permanent operating cost, while it can also reduce the time available for verification. A slower route may be the more disciplined route when the work is ambiguous, irreversible, or dependent on records that must be assembled before judgment.</p>
+
+                <p>An execution budget should describe more than milliseconds. It should account for:</p>
+
+                <ul>
+                    <li><strong>Urgency:</strong> how quickly a useful response loses value or a live interaction breaks.</li>
+                    <li><strong>Consequence:</strong> what the institution risks if the answer is wrong, incomplete, or acted on too soon.</li>
+                    <li><strong>Evidence:</strong> how much retrieval, comparison, calculation, or human review the case requires.</li>
+                    <li><strong>Reversibility:</strong> whether the action can be undone without cost to a person, account, public record, or relationship.</li>
+                    <li><strong>Locality:</strong> whether data, language, connectivity, or jurisdiction makes a regional or on-device path preferable.</li>
+                </ul>
+
+                <p>This turns routing into an institutional policy. A system should be able to explain why a fast model received one case, why a slower model received another, and why a person was asked to decide on a third. The explanation is part of the service, because the institution is buying a controlled distribution of effort rather than a pile of token output.</p>
+
+                <h2>The builder's guide points toward adaptive inference</h2>
+
+                <p>OpenAI's builder guidance describes smarter model selection as part of the way startups build cost-efficient agents. The important idea is architectural. Model selection moves from a developer's hidden preference into a runtime decision that can respond to the work in front of it.</p>
+
+                <p>Google's ADK Go 2.0 announcement supplies the complementary orchestration language. It describes a graph-based workflow engine for applications that classify, branch, ask a human to approve, retry after failure, and loop until a condition is met. The announcement also names dynamic routing and built-in resilience. A graph of this kind can carry an execution budget through the workflow instead of making every node call the same model under the same conditions.</p>
+
+                <p>Consider a regional lender reviewing a small-business request. An inexpensive local model might classify the request and identify missing fields. A stronger model might compare the financial evidence and draft questions. A human officer might approve the final decision. If the record crosses a language boundary, a specialized language service may translate the evidence while preserving the original text. If connectivity drops, the system may save a checkpoint and continue later. The cost of the full route is a design choice; the meaning of the route is an accountability choice.</p>
+
+                <p>Adaptive inference therefore needs a ledger. The ledger should preserve the request's risk class, the models considered, the route selected, the cost and latency consumed, the evidence attached, and the authority that accepted the result. Without that record, “smarter model selection” remains a performance slogan. With it, the institution can learn whether speed reduced real work or merely moved review downstream.</p>
+
+                <h2>Fast work still needs a durable object</h2>
+
+                <p>Speed becomes useful when it produces something that can leave the conversation and enter the institution. OpenAI's August 10 RSS item about Model ML describes finance work moving from research and analysis into editable, traceable PowerPoint decks and Excel workbooks. The example matters because it connects inference economics to an object that can be inspected, revised, circulated, and challenged.</p>
+
+                <p>A fast answer that disappears into a chat window has a short institutional life. A fast answer that becomes a traceable artifact can be reviewed by someone who was not present when the model ran. That distinction places a limit on the value of speed: the output must carry enough evidence and structure for the next authority to use it.</p>
+
+                <p>The practical design rule is simple. Allocate speed to the stages where delay destroys value, and allocate structure to the stages where error destroys trust. These are often different stages. A voice interface may need immediate acknowledgment, while the decision behind it needs retrieval and review. A prospecting system may need rapid filtering, while the proposal it produces needs slower verification. A field worker may need an offline answer now, while the record syncs and receives a second check later.</p>
+
+                <h2>African compute discipline begins with the budget</h2>
+
+                <p>For African institutions, the execution budget is also a sovereignty question. A platform that assumes continuous broadband, foreign-hosted inference, English-first context, and predictable payment rails has already made political choices before a local institution configures its first workflow.</p>
+
+                <p>Local compute does not mean every model must be trained or served within one national boundary. It means institutions should know which work must remain near the people and records it concerns, which work can travel, and which service-level compromises are acceptable. A regional health workflow may need local speech handling, a low-bandwidth route, and an explicit escalation when a record cannot be synchronized. A creative studio may choose a remote high-capability model for a first draft while keeping rights metadata, client context, and final approval in its own systems. A public agency may require a slower local path for sensitive cases even when a foreign endpoint is faster.</p>
+
+                <p>These are execution policies, and execution policies are infrastructure. If they remain buried inside a vendor dashboard, the institution rents its speed choices along with its model. If they are portable, inspectable, and adjustable, the institution can change providers without surrendering the logic that governs its work.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If latency becomes a budget, the capital-relevant layer sits between the model API and the institutional workflow:</p>
+
+                <ul>
+                    <li><strong>Execution-budget controllers:</strong> runtimes that allocate latency, cost, model strength, retrieval depth, and human review by case.</li>
+                    <li><strong>Inference routing ledgers:</strong> systems that record why a route was selected, what it consumed, and whether the result justified the spend.</li>
+                    <li><strong>Regional service layers:</strong> language, connectivity, hosting, and payment infrastructure that make local or intermittent paths first-class options.</li>
+                    <li><strong>Artifact delivery systems:</strong> tools that turn fast model work into editable, traceable objects with evidence and approval state.</li>
+                    <li><strong>Service-level evaluation:</strong> tests that measure useful completion, review burden, recovery, and cost by route rather than advertising one universal latency number.</li>
+                </ul>
+
+                <p>The underwriting question is therefore more precise than “How fast is the model?” It is “Can this system spend speed where speed creates institutional value, conserve it where review matters, and show the tradeoff afterward?” That is an infrastructure capability with a measurable operating record.</p>
+
+                <h2>The institution should own the dial</h2>
+
+                <p>AI infrastructure is entering a period in which the fastest path will be visible, billable, and easy to demonstrate. The durable systems will be judged by a harder standard: whether they let an institution choose its speed without losing its evidence, authority, locality, or right to change the underlying provider.</p>
+
+                <p>African sovereignty will depend partly on who controls this dial. For African institutions, the central task is to access frontier inference, set the conditions under which it is worth using, decline it when cost or dependency is too high, and preserve the institutional record either way.</p>
+
+                <p>Latency becomes a budget when an institution can spend it deliberately. That is the point at which speed stops being a benchmark and becomes a form of governance.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “The builder’s guide to GPT‑5.6” (August 13, 2026; linked article: <em>https://openai.com/index/builders-guide-to-gpt-5-6</em>; description: startups use GPT-5.6 to build faster, more cost-efficient AI agents with smarter model selection and new Responses API capabilities)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed” (August 13, 2026; linked article: <em>https://openai.com/index/previewing-ultrafast</em>; description: a new API service tier running GPT-5.6 Sol up to 14× faster and delivering up to 750 output tokens per second)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Model ML completes finance work more efficiently with GPT-5.6 Sol” (August 10, 2026; linked article: <em>https://openai.com/index/model-ml</em>; description: finance work moves from research and analysis into editable, traceable PowerPoint decks and Excel workbooks)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog: “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; description: graph-based workflows with human-in-the-loop orchestration, dynamic routing, and built-in resilience)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog: “How A2A is Building a World of Collaborative Agents” (June 18, 2026; description: secure agent handoffs and scalable collaborative workflows for a shared agent ecosystem)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Quand la latence devient un budget</h1>
+
+                <p>La latence était autrefois décrite comme une propriété du système. Les signaux les plus récents sur l'infrastructure de l'IA la présentent plutôt comme un budget : une ressource qu'une institution répartit entre urgence, risque, coût, revue, et ancrage local.</p>
+
+                <p>Les deux items du flux RSS d'OpenAI du 13 août placent deux faits côte à côte. Le guide destiné aux constructeurs de GPT-5.6 décrit des startups qui utilisent une sélection plus intelligente des modèles et de nouvelles capacités de l'API Responses pour construire des agents plus rapides et plus économes. L'aperçu d'Ultrafast décrit un niveau de service qui exécute GPT-5.6 Sol jusqu'à quatorze fois plus vite, avec un plafond annoncé de 750 tokens de sortie par seconde. Ces annonces sont des signaux produit, non la preuve que la vitesse seule crée de la valeur. Elles montrent que le marché commence à empaqueter le temps d'inférence comme une variable commerciale sélectionnable.</p>
+
+                <p>Cette variable modifie la conception institutionnelle. Lorsqu'un système peut acheter davantage de vitesse pour une action et la conserver pour une autre, la question centrale devient l'allocation. Quels dossiers méritent le chemin rapide ? Lesquels exigent un modèle plus lent, un modèle plus puissant, un contrôle humain ou un repli local ? Qui écrit la politique, et qui peut examiner la décision ensuite ?</p>
+
+                <blockquote>
+                    <p>L'inférence rapide est utile lorsqu'elle raccourcit la distance vers une décision responsable. Une vitesse non allouée ne fait qu'accélérer les dépenses de l'institution.</p>
+                </blockquote>
+
+                <h2>La vitesse est une ressource institutionnelle rare</h2>
+
+                <p>Un chiffre de temps de réponse semble technique jusqu'au moment où une organisation doit le payer. Un système de service client peut avoir besoin d'une réponse rapide pendant une interaction en direct. Un rapprochement financier peut accepter davantage de temps si les preuves et les calculs reçoivent une revue approfondie. Une enquête de sécurité peut exiger un modèle très capable parce qu'un faux négatif coûte plus cher qu'un brouillon tardif. Un workflow de service public peut préférer la disponibilité locale à la latence théorique la plus basse, car la connectivité détermine si le processus existe réellement.</p>
+
+                <p>Une même institution peut donc avoir besoin de plusieurs vitesses en même temps. L'erreur consiste à traiter le modèle le plus rapide disponible comme la valeur par défaut pour chaque dossier. Cette méthode transforme une option de niveau de service en coût permanent, tout en pouvant réduire le temps disponible pour la vérification. Une voie plus lente peut être la voie la plus disciplinée lorsque le travail est ambigu, irréversible ou dépend de dossiers qui doivent être réunis avant le jugement.</p>
+
+                <p>Un budget d'exécution doit décrire davantage que des millisecondes. Il doit prendre en compte :</p>
+
+                <ul>
+                    <li><strong>Urgence :</strong> la vitesse à laquelle une réponse utile perd sa valeur ou une interaction en direct se rompt.</li>
+                    <li><strong>Conséquence :</strong> ce que l'institution risque si la réponse est fausse, incomplète ou appliquée trop tôt.</li>
+                    <li><strong>Preuves :</strong> la quantité de recherche, de comparaison, de calcul ou de revue humaine requise.</li>
+                    <li><strong>Réversibilité :</strong> la possibilité d'annuler l'action sans coût pour une personne, un compte, un dossier public ou une relation.</li>
+                    <li><strong>Ancrage local :</strong> l'effet de la donnée, de la langue, de la connectivité ou de la juridiction qui peut rendre préférable une voie régionale ou embarquée.</li>
+                </ul>
+
+                <p>Le routage devient ainsi une politique institutionnelle. Un système doit pouvoir expliquer pourquoi un modèle rapide a reçu un dossier, pourquoi un modèle plus lent en a reçu un autre et pourquoi une personne a été invitée à décider sur un troisième. L'explication fait partie du service, car l'institution achète une distribution contrôlée de l'effort plutôt qu'une pile de tokens.</p>
+
+                <h2>Le guide des constructeurs annonce l'inférence adaptative</h2>
+
+                <p>Le guide d'OpenAI présente la sélection plus intelligente des modèles comme une composante de la construction d'agents économes par les startups. L'idée importante est architecturale. La sélection du modèle passe d'une préférence cachée du développeur à une décision du runtime, capable de répondre au travail qui se trouve devant lui.</p>
+
+                <p>L'annonce d'ADK Go 2.0 de Google fournit le vocabulaire d'orchestration complémentaire. Elle décrit un moteur de workflows en graphe pour des applications qui classent, bifurquent, demandent une approbation humaine, réessaient après un échec et bouclent jusqu'à ce qu'une condition soit remplie. L'annonce nomme aussi le routage dynamique et la résilience intégrée. Un graphe de ce type peut transporter un budget d'exécution à travers le workflow au lieu de faire appeler le même modèle par chaque nœud dans les mêmes conditions.</p>
+
+                <p>Imaginons un prêteur régional qui examine une demande de petite entreprise. Un modèle local peu coûteux peut classer la demande et repérer les champs manquants. Un modèle plus puissant peut comparer les preuves financières et rédiger des questions. Un responsable humain peut approuver la décision finale. Si le dossier franchit une frontière linguistique, un service spécialisé peut traduire les preuves tout en conservant le texte original. Si la connectivité tombe, le système peut enregistrer un point de reprise et continuer plus tard. Le coût du parcours complet relève de la conception ; le sens de ce parcours relève de la responsabilité.</p>
+
+                <p>L'inférence adaptative a donc besoin d'un registre. Ce registre doit conserver la classe de risque de la demande, les modèles envisagés, le parcours choisi, le coût et la latence consommés, les preuves jointes et l'autorité qui a accepté le résultat. Sans cette trace, la « sélection plus intelligente des modèles » reste un slogan de performance. Avec elle, l'institution peut apprendre si la vitesse a réduit le travail réel ou si elle a simplement déplacé la revue vers l'étape suivante.</p>
+
+                <h2>Le travail rapide a toujours besoin d'un objet durable</h2>
+
+                <p>La vitesse devient utile lorsqu'elle produit quelque chose qui peut sortir de la conversation et entrer dans l'institution. L'item RSS d'OpenAI du 10 août consacré à Model ML décrit un travail financier qui passe de la recherche et de l'analyse à des présentations PowerPoint et des classeurs Excel modifiables et traçables. L'exemple compte parce qu'il relie l'économie de l'inférence à un objet qui peut être examiné, révisé, partagé et contesté.</p>
+
+                <p>Une réponse rapide qui disparaît dans une fenêtre de chat a une vie institutionnelle courte. Une réponse rapide qui devient un artefact traçable peut être revue par une personne absente au moment de l'exécution du modèle. Cette distinction impose une limite à la valeur de la vitesse : la sortie doit porter assez de preuves et de structure pour que l'autorité suivante puisse l'utiliser.</p>
+
+                <p>La règle de conception pratique est simple. Allouez la vitesse aux étapes où le délai détruit la valeur, et allouez la structure aux étapes où l'erreur détruit la confiance. Ces étapes sont souvent différentes. Une interface vocale peut nécessiter un accusé de réception immédiat, tandis que la décision qui la suit exige recherche et revue. Un système de prospection peut filtrer rapidement, tandis que la proposition qu'il produit demande une vérification plus lente. Un agent de terrain peut avoir besoin d'une réponse hors ligne immédiate, pendant que le dossier se synchronise et reçoit ensuite un second contrôle.</p>
+
+                <h2>La discipline informatique africaine commence par le budget</h2>
+
+                <p>Pour les institutions africaines, le budget d'exécution est aussi une question de souveraineté. Une plateforme qui suppose une connexion permanente, une inférence hébergée à l'étranger, un contexte dominé par l'anglais et des rails de paiement prévisibles a déjà fait des choix politiques avant même qu'une institution locale ne configure son premier workflow.</p>
+
+                <p>Le calcul local ne signifie pas que chaque modèle doit être entraîné ou servi dans une seule frontière nationale. Il signifie que les institutions doivent savoir quel travail doit rester proche des personnes et des dossiers concernés, quel travail peut voyager et quels compromis de niveau de service sont acceptables. Un workflow régional de santé peut nécessiter un traitement vocal local, une voie adaptée à une faible bande passante et une escalade explicite lorsqu'un dossier ne peut pas être synchronisé. Un studio créatif peut choisir un modèle distant très puissant pour un premier jet tout en conservant les métadonnées de droits, le contexte client et l'approbation finale dans ses propres systèmes. Une agence publique peut exiger une voie locale plus lente pour les dossiers sensibles, même lorsqu'un endpoint étranger est plus rapide.</p>
+
+                <p>Ce sont des politiques d'exécution, et les politiques d'exécution sont de l'infrastructure. Lorsqu'elles restent enfouies dans le tableau de bord d'un fournisseur, l'institution loue ses choix de vitesse avec son modèle. Lorsqu'elles sont portables, examinables et réglables, elle peut changer de fournisseur sans abandonner la logique qui gouverne son travail.</p>
+
+                <h2>Où la surface d'investissement s'élargit</h2>
+
+                <p>Si la latence devient un budget, la couche pertinente pour le capital se situe entre l'API du modèle et le workflow institutionnel :</p>
+
+                <ul>
+                    <li><strong>Contrôleurs de budget d'exécution :</strong> runtimes qui allouent latence, coût, puissance du modèle, profondeur de recherche et revue humaine selon le dossier.</li>
+                    <li><strong>Registres de routage de l'inférence :</strong> systèmes qui enregistrent pourquoi un parcours a été choisi, ce qu'il a consommé et si le résultat justifiait la dépense.</li>
+                    <li><strong>Couches de service régionales :</strong> infrastructures de langue, de connectivité, d'hébergement et de paiement qui font des voies locales ou intermittentes des options de première classe.</li>
+                    <li><strong>Systèmes de livraison d'artefacts :</strong> outils qui transforment le travail rapide du modèle en objets modifiables et traçables, avec preuves et état d'approbation.</li>
+                    <li><strong>Évaluation des niveaux de service :</strong> tests mesurant l'accomplissement utile, la charge de revue, la reprise et le coût par parcours, au lieu d'afficher un chiffre universel de latence.</li>
+                </ul>
+
+                <p>La question de souscription est donc plus précise que « À quelle vitesse le modèle répond-il ? » Elle est : « Ce système peut-il dépenser la vitesse là où elle crée une valeur institutionnelle, la conserver là où la revue compte et montrer le compromis ensuite ? » C'est une capacité d'infrastructure accompagnée d'un dossier opératoire mesurable.</p>
+
+                <h2>L'institution doit posséder le réglage</h2>
+
+                <p>L'infrastructure de l'IA entre dans une période où le chemin le plus rapide sera visible, facturable et facile à démontrer. Les systèmes durables seront soumis à une norme plus difficile : permettre à une institution de choisir sa vitesse sans perdre ses preuves, son autorité, son ancrage local ou son droit de changer de fournisseur.</p>
+
+                <p>La souveraineté africaine dépendra en partie de celui qui contrôle ce réglage. Pour les institutions africaines, l'enjeu consiste à accéder à l'inférence de pointe, à fixer les conditions dans lesquelles elle mérite d'être utilisée, à la refuser lorsque son coût ou sa dépendance est trop élevé et à conserver le dossier institutionnel dans les deux cas.</p>
+
+                <p>La latence devient un budget lorsqu'une institution peut la dépenser délibérément. C'est à ce moment que la vitesse cesse d'être un benchmark et devient une forme de gouvernance.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS : « The builder’s guide to GPT‑5.6 » (13 août 2026 ; article lié : <em>https://openai.com/index/builders-guide-to-gpt-5-6</em> ; description : des startups utilisent GPT-5.6 pour construire des agents plus rapides et plus économes avec une sélection plus intelligente des modèles et de nouvelles capacités de l'API Responses)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS : « Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed » (13 août 2026 ; article lié : <em>https://openai.com/index/previewing-ultrafast</em> ; description : un nouveau niveau de service exécutant GPT-5.6 Sol jusqu'à 14 fois plus vite et fournissant jusqu'à 750 tokens de sortie par seconde)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS : « Model ML completes finance work more efficiently with GPT-5.6 Sol » (10 août 2026 ; article lié : <em>https://openai.com/index/model-ml</em> ; description : le travail financier passe de la recherche et de l'analyse à des présentations PowerPoint et des classeurs Excel modifiables et traçables)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog : « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; description : workflows en graphe avec orchestration humain-dans-la-boucle, routage dynamique et résilience intégrée)</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog : « How A2A is Building a World of Collaborative Agents » (18 juin 2026 ; description : transferts sécurisés entre agents et workflows collaboratifs évolutifs pour un écosystème partagé)</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>August 15, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

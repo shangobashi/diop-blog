@@ -119,6 +119,7 @@
         'article.entry087':     { en: 'Diop Daily #087 — August 2026', fr: 'Diop Quotidien n°087 — Août 2026' },
         'article.entry088':     { en: 'Diop Daily #088 — August 2026', fr: 'Diop Quotidien n°088 — Août 2026' },
         'article.entry089':     { en: 'Diop Daily #089 — August 2026', fr: 'Diop Quotidien n°089 — Août 2026' },
+        'article.entry090':     { en: 'Diop Daily #090 — August 2026', fr: 'Diop Quotidien n°090 — Août 2026' },
         'article.entry086':     { en: 'Diop Daily #086 — August 2026', fr: 'Diop Quotidien n°086 — Août 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
@@ -132,6 +133,16 @@
     };
 
     var postTranslations = {
+'diop-daily-090': {
+    title: {
+        en: "When Latency Becomes a Budget",
+        fr: "Quand la latence devient un budget"
+    },
+    excerpt: {
+        en: "New AI service tiers and smarter model selection turn latency into an institutional budget. The strategic layer is the execution control plane that allocates speed, cost, review, and local compute according to consequence.",
+        fr: "Les nouveaux niveaux de service de l'IA et la sélection plus intelligente des modèles transforment la latence en budget institutionnel. La couche stratégique est le plan de contrôle de l'exécution qui répartit vitesse, coût, revue et calcul local selon les conséquences."
+    }
+},
 'diop-daily-089': {
     title: {
         en: "The Small Institution Is a Many-Role Machine",
