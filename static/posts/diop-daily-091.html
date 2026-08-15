@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Repair Is a Capability — Diop Research</title>
+    <meta name="description" content="AI systems will be judged by how they repair failures, not only by how they perform in clean demonstrations. The strategic layer is the repair infrastructure that connects disclosure, reproduction, containment, patching, rollback, and verified redeployment."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry091">Diop Daily #091 — August 2026</div>
+                <div class="article__meta-line">
+                    <time>August 16, 2026</time>
+                    <span>·</span>
+                    <span data-rt="8">8 min read</span>
+                    <span>·</span>
+                    <span>AI repair · disclosure systems · resilience · African infrastructure</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Repair Is a Capability</h1>
+
+                <p>AI systems are entering institutions where failure cannot be treated as an unusual interruption. A model can expose a vulnerability during evaluation, an agent can behave differently after a long run, and a security control can reveal a new class of incident once the system meets hostile input. The important infrastructure question is what the institution can do next.</p>
+
+                <p>Recent public signals make this question concrete. OpenAI's News RSS described third-party cybersecurity evaluation incidents on August 4, preliminary evaluations for a frontier cyber model on August 7, and a partnership with Hugging Face around a security incident during model evaluation on July 21. These items show a narrower point: testing itself has become an operating environment with its own attack surface, evidence requirements, and repair obligations.</p>
+
+                <blockquote>
+                    <p>A system earns trust through the quality of its return from failure.</p>
+                </blockquote>
+
+                <h2>Failure is a production object</h2>
+
+                <p>Software organizations have long separated development, release, and incident response. Agentic systems weaken that separation because the deployed system can change the shape of the work around it. A long-running agent may discover a prompt-injection path that was absent from a short benchmark. A tool handoff may preserve the text of a request while losing the authority attached to it. A model update may improve a headline score while altering the behavior that an institution relied upon.</p>
+
+                <p>Each case produces an object that must be carried through the institution: the original input, the observed behavior, the affected boundary, the evidence that makes the behavior reproducible, the temporary containment, and the decision about what happens to the system. If that object disappears into a private chat or an unstructured ticket, the institution cannot distinguish a one-off surprise from a systemic defect.</p>
+
+                <p>The repair surface begins with disciplined classification. An institution should be able to separate:</p>
+
+                <ul>
+                    <li><strong>Capability failure:</strong> the system cannot perform a task it was expected to handle.</li>
+                    <li><strong>Boundary failure:</strong> the system crosses a permission, data, tool, or authority boundary.</li>
+                    <li><strong>Evaluation failure:</strong> the test did not represent the behavior that appeared in practice.</li>
+                    <li><strong>Operational failure:</strong> the surrounding service loses state, evidence, availability, or a safe rollback path.</li>
+                    <li><strong>Governance failure:</strong> no accountable authority can decide whether to pause, patch, disclose, or continue.</li>
+                </ul>
+
+                <p>The categories overlap, but they should not be collapsed. A model may be capable while the permissioning system fails. A test may be valid while the recovery process is weak. A patch may reduce the visible symptom while leaving the institutional cause untouched.</p>
+
+                <h2>Repair needs a chain of custody</h2>
+
+                <p>The practical repair loop is a chain of custody with defined stages. The first operator records what happened without rewriting it into a convenient story. A second operator attempts reproduction in a bounded environment. A responsible authority chooses containment, and engineers propose a change. An evaluator tests the change against the original behavior and adjacent cases. The release decision records what was fixed, what remains uncertain, and who accepted the residual risk.</p>
+
+                <p>W3C's draft process for standards vulnerability disclosure offers a useful institutional analogy: suspected vulnerabilities are reported, triaged, confirmed, and resolved through defined procedures. The lesson for AI is architectural. A repair system needs stable stages and named ownership so that disclosure does not depend on personal memory or goodwill.</p>
+
+                <p>A useful repair record should preserve:</p>
+
+                <ul>
+                    <li>the exact version, configuration, tools, and data boundary involved;</li>
+                    <li>the smallest reproducible test case and the conditions under which it fails;</li>
+                    <li>the people or systems that were affected and the temporary controls applied;</li>
+                    <li>the patch, policy change, model change, or rollback that was attempted;</li>
+                    <li>the verification result, remaining uncertainty, and authority that approved return to service.</li>
+                </ul>
+
+                <p>This record is compliance evidence and the institution's memory of how its own intelligence breaks. Without it, every incident becomes a new research project, and every operator inherits the same uncertainty.</p>
+
+                <h2>Resilience is the runtime's moral test</h2>
+
+                <p>Google's public description of ADK Go 2.0 names graph-based workflows, human-in-the-loop orchestration, dynamic routing, retries, and built-in resilience. These features are often presented as engineering conveniences. They also define the conditions under which an institution can remain accountable when an agent fails halfway through a consequential process.</p>
+
+                <p>A retry is safe only when the system knows whether the first action took effect. A fallback is safe only when the replacement model receives the relevant evidence and permission state. A human checkpoint is useful only when the person can see what the agent attempted, what it could not establish, and what action is being requested. Resilience therefore has semantics: it must preserve state, authority, and reversibility while keeping a process moving.</p>
+
+                <p>This changes the meaning of uptime. A service gains reliability when it pauses visibly and preserves a complete repair record; silent evidence loss weakens that reliability. Institutions should measure time to contain, time to reproduce, time to decide, time to patch, and time to verify alongside conventional availability metrics.</p>
+
+                <h2>African infrastructure must include the repair institution</h2>
+
+                <p>African AI sovereignty cannot be reduced to access to foreign models or the location of a data center. It includes the ability to investigate a failure in local language, under local law, with local records, and through an authority structure that the affected institution recognizes.</p>
+
+                <p>A regional public-service system may need to preserve voice evidence when connectivity is intermittent. A financial cooperative may need an incident record that travels across payment providers without exposing members' private data. A creative business may need to prove which model, prompt, source, and approval produced a disputed work. A hospital or research center may need local evaluators who understand the clinical or linguistic context that a global benchmark misses.</p>
+
+                <p>These requirements create a constructive institutional agenda:</p>
+
+                <ul>
+                    <li>build regional incident-response and AI assurance teams; deployment consultants can complement this capacity but cannot supply it alone;</li>
+                    <li>maintain multilingual test cases and red-team practices grounded in local institutions and social realities;</li>
+                    <li>establish shared protocols for disclosure, evidence exchange, containment, and cross-border notification;</li>
+                    <li>fund repair archives that allow institutions to learn from recurring failures without exporting sensitive records.</li>
+                </ul>
+
+                <p>The objective is durable agency. An institution that can repair its systems can negotiate with providers from a position of knowledge; an institution that can only report a failure to a distant vendor remains dependent even when the software is nominally available locally.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If repair becomes a core capability, the capital-relevant layer sits between incident evidence and restored authority:</p>
+
+                <ul>
+                    <li><strong>AI incident systems:</strong> platforms that capture, classify, reproduce, and route model and agent failures with versioned evidence.</li>
+                    <li><strong>Repair orchestration:</strong> runtimes that coordinate containment, rollback, human approval, patch testing, and verified redeployment.</li>
+                    <li><strong>Assurance environments:</strong> isolated sandboxes where organizations can replay real failures without exposing live customers or public systems.</li>
+                    <li><strong>Disclosure and response networks:</strong> services that connect researchers, vendors, institutions, and regulators through defined notification and triage procedures.</li>
+                    <li><strong>Regional AI maintenance:</strong> local evaluation, red-teaming, language testing, and incident-response capacity that keeps institutional knowledge near the people who bear the consequences.</li>
+                </ul>
+
+                <p>The underwriting question is precise: can the system reduce the time and uncertainty between a harmful observation and a verified return to service? That operating record is more durable than a claim that the model is safe in the abstract. It measures whether an institution can absorb reality without surrendering authority.</p>
+
+                <h2>The return is part of the system</h2>
+
+                <p>AI builders often describe capability as the ability to act. Institutions need a fuller definition. Capability includes the ability to stop, explain, repair, and resume under conditions that preserve evidence and responsibility.</p>
+
+                <p>This is where African intellectual sovereignty becomes practical engineering. The institution that owns its repair records, test cases, authorities, and recovery procedures is building knowledge that compounds locally. It can improve its systems without waiting for a foreign platform to decide which failures deserve attention.</p>
+
+                <p>Repair is a capability because the future belongs to systems that can return from contact with the real world more truthful than they were before.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Third-party cyber evaluations involving OpenAI models” (August 4, 2026; linked article: <em>https://openai.com/index/third-party-cyber-evaluations-involving-openai-models</em>; description: OpenAI explains recent third-party cybersecurity evaluation incidents and outlines new safeguards for AI model testing and evaluation)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Responding to the next frontier of critical cyber capabilities” (August 7, 2026; linked article: <em>https://openai.com/index/responding-next-frontier-critical-capabilities</em>; description: preliminary cybersecurity evaluations for Astra and steps to strengthen safeguards and security controls)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “OpenAI and Hugging Face partner to address security incident during model evaluation” (July 21, 2026; linked article: <em>https://openai.com/index/hugging-face-model-evaluation-security-incident</em>; description: early findings from a security incident during AI model evaluation and lessons for defenders)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog: “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; description: graph-based workflows, human-in-the-loop orchestration, dynamic routing, retries, and built-in resilience)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/group-note-draft-w3c-standards-vulnerability-disclosure-handling-process-and-policy/" target="_blank" rel="noopener">W3C: “Group Note Draft: W3C Standards Vulnerability Disclosure &amp; Handling Process and Policy” (June 30, 2026; description: procedures for reporting, triaging, confirming, and resolving suspected vulnerabilities in standards)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">European Commission: “Drawing-up a General-Purpose AI Code of Practice” (accessed August 16, 2026; description: provider-facing rules for general-purpose AI models and models with systemic risks)</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La réparation est une capacité</h1>
+
+                <p>Les systèmes d'IA entrent dans des institutions où l'échec ne peut plus être traité comme une interruption exceptionnelle. Un modèle peut révéler une vulnérabilité pendant une évaluation, un agent peut se comporter autrement après une longue exécution et un contrôle de sécurité peut faire apparaître une nouvelle catégorie d'incident lorsqu'il rencontre des entrées hostiles. La question d'infrastructure devient alors ce que l'institution peut faire ensuite.</p>
+
+                <p>Des signaux publics récents rendent cette question concrète. Le flux RSS d'OpenAI a décrit des incidents d'évaluation cyber réalisés par des tiers le 4 août, des évaluations préliminaires d'un modèle cyber de pointe le 7 août et un partenariat avec Hugging Face autour d'un incident de sécurité survenu pendant l'évaluation d'un modèle le 21 juillet. Ces éléments montrent un point plus précis : le test est devenu un environnement opérationnel avec sa propre surface d'attaque, ses exigences de preuve et ses obligations de réparation.</p>
+
+                <blockquote>
+                    <p>Un système gagne la confiance par la qualité de son retour après l'échec.</p>
+                </blockquote>
+
+                <h2>L'échec est un objet de production</h2>
+
+                <p>Les organisations logicielles séparent depuis longtemps le développement, la mise en production et la réponse aux incidents. Les systèmes agentiques fragilisent cette séparation parce que le système déployé peut modifier la forme du travail qui l'entoure. Un agent de longue durée peut découvrir un chemin d'injection qui n'apparaissait pas dans un benchmark court. Un transfert d'outil peut conserver le texte d'une demande tout en perdant l'autorité qui lui était attachée. Une mise à jour de modèle peut améliorer un score principal tout en modifiant le comportement sur lequel une institution comptait.</p>
+
+                <p>Chaque cas produit un objet qui doit circuler dans l'institution : l'entrée originale, le comportement observé, la frontière touchée, les preuves qui rendent le comportement reproductible, le confinement temporaire et la décision concernant la suite du système. Si cet objet disparaît dans une conversation privée ou un ticket non structuré, l'institution ne peut plus distinguer une surprise isolée d'un défaut systémique.</p>
+
+                <p>La surface de réparation commence par une classification disciplinée. Une institution doit pouvoir distinguer :</p>
+
+                <ul>
+                    <li><strong>Défaillance de capacité :</strong> le système ne peut pas accomplir une tâche qu'il devait prendre en charge.</li>
+                    <li><strong>Défaillance de frontière :</strong> le système franchit une limite de permission, de donnée, d'outil ou d'autorité.</li>
+                    <li><strong>Défaillance d'évaluation :</strong> le test ne représentait pas le comportement apparu en pratique.</li>
+                    <li><strong>Défaillance opérationnelle :</strong> le service environnant perd l'état, les preuves, la disponibilité ou un chemin sûr de retour en arrière.</li>
+                    <li><strong>Défaillance de gouvernance :</strong> aucune autorité responsable ne peut décider de suspendre, corriger, divulguer ou poursuivre.</li>
+                </ul>
+
+                <p>Les catégories se recouvrent, mais elles ne doivent pas être confondues. Un modèle peut être capable alors que le système de permissions échoue. Un test peut être valide alors que la reprise est faible. Un correctif peut réduire le symptôme visible tout en laissant intacte la cause institutionnelle.</p>
+
+                <h2>La réparation exige une chaîne de garde</h2>
+
+                <p>La boucle pratique de réparation est une chaîne de garde composée d'étapes définies. Le premier opérateur enregistre ce qui s'est passé sans le réécrire en récit commode. Un second opérateur tente de reproduire le comportement dans un environnement borné. Une autorité responsable choisit le confinement et les ingénieurs proposent une modification. Un évaluateur teste cette modification sur le comportement initial et sur des cas voisins. La décision de remise en service indique ce qui a été corrigé, ce qui reste incertain et qui a accepté le risque résiduel.</p>
+
+                <p>Le projet de procédure du W3C consacré à la divulgation des vulnérabilités des standards fournit une analogie institutionnelle utile : les vulnérabilités soupçonnées sont signalées, triées, confirmées et résolues selon des procédures définies. La leçon pour l'IA est architecturale. Un système de réparation a besoin d'étapes stables et d'une responsabilité nommée afin que la divulgation ne dépende ni de la mémoire personnelle ni de la bonne volonté.</p>
+
+                <p>Un dossier de réparation utile doit conserver :</p>
+
+                <ul>
+                    <li>la version exacte, la configuration, les outils et la frontière de données concernés ;</li>
+                    <li>le cas de test minimal reproductible et les conditions de l'échec ;</li>
+                    <li>les personnes ou systèmes touchés et les contrôles temporaires appliqués ;</li>
+                    <li>le correctif, le changement de politique, le changement de modèle ou le retour en arrière tenté ;</li>
+                    <li>le résultat de la vérification, l'incertitude restante et l'autorité qui a approuvé le retour au service.</li>
+                </ul>
+
+                <p>Ce dossier est à la fois une preuve de conformité et la mémoire de l'institution sur la manière dont sa propre intelligence se brise. Sans lui, chaque incident devient un nouveau projet de recherche et chaque opérateur hérite de la même incertitude.</p>
+
+                <h2>La résilience est l'épreuve morale du runtime</h2>
+
+                <p>La description publique de Google concernant ADK Go 2.0 cite des workflows en graphe, l'orchestration avec humain dans la boucle, le routage dynamique, les nouvelles tentatives et la résilience intégrée. Ces fonctions sont souvent présentées comme des commodités d'ingénierie. Elles définissent aussi les conditions dans lesquelles une institution peut rester responsable lorsqu'un agent échoue au milieu d'un processus lourd de conséquences.</p>
+
+                <p>Une nouvelle tentative n'est sûre que si le système sait si la première action a produit un effet. Un repli n'est sûr que si le modèle de remplacement reçoit les preuves et l'état des permissions pertinents. Un point de contrôle humain n'est utile que si la personne voit ce que l'agent a tenté, ce qu'il n'a pas pu établir et quelle action est demandée. La résilience possède donc une sémantique : elle doit préserver l'état, l'autorité et la réversibilité tout en faisant avancer le processus.</p>
+
+                <p>Cela modifie le sens de la disponibilité. Un service gagne en fiabilité lorsqu'il s'arrête visiblement et conserve un dossier complet de réparation ; la suppression silencieuse des preuves affaiblit cette fiabilité. Les institutions devraient mesurer le temps jusqu'au confinement, le temps jusqu'à la reproduction, le temps jusqu'à la décision, le temps jusqu'au correctif et le temps jusqu'à la vérification, en plus des métriques classiques de disponibilité.</p>
+
+                <h2>L'infrastructure africaine doit inclure l'institution de réparation</h2>
+
+                <p>La souveraineté africaine en IA ne peut pas être réduite à l'accès à des modèles étrangers ou à l'emplacement d'un centre de données. Elle comprend la capacité d'enquêter sur une défaillance dans une langue locale, sous un droit local, avec des dossiers locaux et à travers une structure d'autorité reconnue par l'institution touchée.</p>
+
+                <p>Un service public régional peut devoir conserver des preuves vocales lorsque la connectivité est intermittente. Une coopérative financière peut avoir besoin d'un dossier d'incident qui circule entre prestataires de paiement sans exposer les données privées de ses membres. Une entreprise créative peut devoir prouver quel modèle, quelle invite, quelle source et quelle approbation ont produit une œuvre contestée. Un hôpital ou un centre de recherche peut avoir besoin d'évaluateurs locaux qui comprennent le contexte clinique ou linguistique absent d'un benchmark mondial.</p>
+
+                <p>Ces exigences dessinent un agenda institutionnel constructif :</p>
+
+                <ul>
+                    <li>construire des équipes régionales de réponse aux incidents et d'assurance IA ; les consultants de déploiement peuvent compléter cette capacité, mais ne la remplacent pas ;</li>
+                    <li>maintenir des cas de test multilingues et des pratiques de red team ancrés dans les institutions et les réalités sociales locales ;</li>
+                    <li>établir des protocoles partagés de divulgation, d'échange de preuves, de confinement et de notification transfrontalière ;</li>
+                    <li>financer des archives de réparation permettant aux institutions d'apprendre des défaillances récurrentes sans exporter les dossiers sensibles.</li>
+                </ul>
+
+                <p>L'objectif est une capacité durable. Une institution qui peut réparer ses systèmes peut négocier avec les fournisseurs depuis une position de connaissance ; une institution qui ne peut que signaler une défaillance à un fournisseur lointain reste dépendante, même lorsque le logiciel est officiellement disponible sur place.</p>
+
+                <h2>Où la surface d'investissement s'élargit</h2>
+
+                <p>Si la réparation devient une capacité centrale, la couche pertinente pour le capital se situe entre la preuve de l'incident et le rétablissement de l'autorité :</p>
+
+                <ul>
+                    <li><strong>Systèmes d'incidents IA :</strong> plateformes qui capturent, classent, reproduisent et acheminent les défaillances de modèles et d'agents avec des preuves versionnées.</li>
+                    <li><strong>Orchestration de la réparation :</strong> runtimes qui coordonnent confinement, retour en arrière, approbation humaine, test du correctif et redéploiement vérifié.</li>
+                    <li><strong>Environnements d'assurance :</strong> bacs isolés où les organisations peuvent rejouer des échecs réels sans exposer les clients ou systèmes publics en production.</li>
+                    <li><strong>Réseaux de divulgation et de réponse :</strong> services reliant chercheurs, fournisseurs, institutions et régulateurs par des procédures définies de notification et de triage.</li>
+                    <li><strong>Maintenance IA régionale :</strong> capacité locale d'évaluation, de red team, de test linguistique et de réponse aux incidents qui conserve le savoir institutionnel près des personnes qui en supportent les conséquences.</li>
+                </ul>
+
+                <p>La question de souscription est précise : le système réduit-il le temps et l'incertitude entre une observation dangereuse et un retour au service vérifié ? Ce dossier opératoire est plus durable qu'une affirmation abstraite selon laquelle le modèle serait sûr. Il mesure la capacité d'une institution à absorber la réalité sans abandonner son autorité.</p>
+
+                <h2>Le retour fait partie du système</h2>
+
+                <p>Les constructeurs d'IA décrivent souvent la capacité comme la faculté d'agir. Les institutions ont besoin d'une définition plus complète. La capacité comprend la faculté de s'arrêter, d'expliquer, de réparer et de reprendre dans des conditions qui préservent les preuves et la responsabilité.</p>
+
+                <p>C'est ici que la souveraineté intellectuelle africaine devient une ingénierie concrète. L'institution qui possède ses dossiers de réparation, ses cas de test, ses autorités et ses procédures de reprise construit un savoir qui se compose localement. Elle peut améliorer ses systèmes sans attendre qu'une plateforme étrangère décide quelles défaillances méritent l'attention.</p>
+
+                <p>La réparation est une capacité parce que l'avenir appartient aux systèmes qui peuvent revenir du contact avec le monde réel en étant plus véridiques qu'avant.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d'OpenAI : « Third-party cyber evaluations involving OpenAI models » (4 août 2026 ; article lié : <em>https://openai.com/index/third-party-cyber-evaluations-involving-openai-models</em> ; description : incidents récents d'évaluation cyber par des tiers et nouvelles protections pour les tests et l'évaluation des modèles)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d'OpenAI : « Responding to the next frontier of critical cyber capabilities » (7 août 2026 ; article lié : <em>https://openai.com/index/responding-next-frontier-critical-capabilities</em> ; description : évaluations cyber préliminaires d'Astra et mesures destinées à renforcer les contrôles de sécurité)</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d'OpenAI : « OpenAI and Hugging Face partner to address security incident during model evaluation » (21 juillet 2026 ; article lié : <em>https://openai.com/index/hugging-face-model-evaluation-security-incident</em> ; description : premiers éléments sur un incident de sécurité pendant l'évaluation d'un modèle et leçons pour les défenseurs)</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog : « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; description : workflows en graphe, orchestration avec humain dans la boucle, routage dynamique, nouvelles tentatives et résilience intégrée)</a></li>
+                    <li><a href="https://www.w3.org/news/2026/group-note-draft-w3c-standards-vulnerability-disclosure-handling-process-and-policy/" target="_blank" rel="noopener">W3C : « Group Note Draft: W3C Standards Vulnerability Disclosure &amp; Handling Process and Policy » (30 juin 2026 ; description : procédures de signalement, de triage, de confirmation et de résolution des vulnérabilités soupçonnées dans les standards)</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">Commission européenne : « Drawing-up a General-Purpose AI Code of Practice » (consulté le 16 août 2026 ; description : règles applicables aux fournisseurs de modèles d'IA à usage général et aux modèles présentant des risques systémiques)</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>August 16, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

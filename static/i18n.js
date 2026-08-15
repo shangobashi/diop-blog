@@ -119,6 +119,7 @@
         'article.entry087':     { en: 'Diop Daily #087 — August 2026', fr: 'Diop Quotidien n°087 — Août 2026' },
         'article.entry088':     { en: 'Diop Daily #088 — August 2026', fr: 'Diop Quotidien n°088 — Août 2026' },
         'article.entry089':     { en: 'Diop Daily #089 — August 2026', fr: 'Diop Quotidien n°089 — Août 2026' },
+        'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
         'article.entry090':     { en: 'Diop Daily #090 — August 2026', fr: 'Diop Quotidien n°090 — Août 2026' },
         'article.entry086':     { en: 'Diop Daily #086 — August 2026', fr: 'Diop Quotidien n°086 — Août 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
@@ -133,6 +134,16 @@
     };
 
     var postTranslations = {
+'diop-daily-091': {
+    title: {
+        en: "Repair Is a Capability",
+        fr: "La réparation est une capacité"
+    },
+    excerpt: {
+        en: "Clean demonstrations are insufficient: AI systems will be judged by how they repair failures. The strategic layer is the repair infrastructure that connects disclosure, reproduction, containment, patching, rollback, and verified redeployment.",
+        fr: "Les démonstrations propres sont insuffisantes : les systèmes d'IA seront jugés par leur manière de réparer les défaillances. La couche stratégique est l'infrastructure de réparation qui relie divulgation, reproduction, confinement, correction, retour en arrière et redéploiement vérifié."
+    }
+},
 'diop-daily-090': {
     title: {
         en: "When Latency Becomes a Budget",
