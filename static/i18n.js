@@ -119,6 +119,7 @@
         'article.entry087':     { en: 'Diop Daily #087 — August 2026', fr: 'Diop Quotidien n°087 — Août 2026' },
         'article.entry088':     { en: 'Diop Daily #088 — August 2026', fr: 'Diop Quotidien n°088 — Août 2026' },
         'article.entry089':     { en: 'Diop Daily #089 — August 2026', fr: 'Diop Quotidien n°089 — Août 2026' },
+        'article.entry092':     { en: 'Diop Daily #092 — August 2026', fr: 'Diop Quotidien n°092 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
         'article.entry090':     { en: 'Diop Daily #090 — August 2026', fr: 'Diop Quotidien n°090 — Août 2026' },
         'article.entry086':     { en: 'Diop Daily #086 — August 2026', fr: 'Diop Quotidien n°086 — Août 2026' },
@@ -134,6 +135,16 @@
     };
 
     var postTranslations = {
+'diop-daily-092': {
+    title: {
+        en: "The AI Budget Needs an Auditor",
+        fr: "Le budget de l'IA a besoin d'un auditeur"
+    },
+    excerpt: {
+        en: "AI spending is moving from experimentation into institutional finance. The strategic layer is the control ledger that records model cost, review, rework, risk, and the evidence behind every claim of return.",
+        fr: "Les dépenses d'IA quittent l'expérimentation pour entrer dans la finance institutionnelle. La couche stratégique est le registre de contrôle qui enregistre le coût des modèles, la revue, le retravail, le risque et les preuves derrière chaque affirmation de rendement."
+    }
+},
 'diop-daily-091': {
     title: {
         en: "Repair Is a Capability",
