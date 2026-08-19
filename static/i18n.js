@@ -120,6 +120,7 @@
         'article.entry088':     { en: 'Diop Daily #088 — August 2026', fr: 'Diop Quotidien n°088 — Août 2026' },
         'article.entry089':     { en: 'Diop Daily #089 — August 2026', fr: 'Diop Quotidien n°089 — Août 2026' },
         'article.entry092':     { en: 'Diop Daily #092 — August 2026', fr: 'Diop Quotidien n°092 — Août 2026' },
+        'article.entry093':     { en: 'Diop Daily #093 — August 2026', fr: 'Diop Quotidien n°093 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
         'article.entry090':     { en: 'Diop Daily #090 — August 2026', fr: 'Diop Quotidien n°090 — Août 2026' },
         'article.entry086':     { en: 'Diop Daily #086 — August 2026', fr: 'Diop Quotidien n°086 — Août 2026' },
@@ -135,6 +136,16 @@
     };
 
     var postTranslations = {
+'diop-daily-093': {
+    title: {
+        en: "The Data the Model Cannot See",
+        fr: "Les Données que le Modèle Ne Peut Pas Voir"
+    },
+    excerpt: {
+        en: "Zero Data Retention is becoming a priced feature of frontier AI, not a default. The strategic layer is privacy-preserving infrastructure that lets institutions prove what the model cannot see and where data travels.",
+        fr: "La rétention zéro de données devient une fonction à prix de l'IA frontière, et non un défaut. La couche stratégique est une infrastructure préservant la confidentialité qui permet aux institutions de prouver ce que le modèle ne peut pas voir et où les données voyagent."
+    }
+},
 'diop-daily-092': {
     title: {
         en: "The AI Budget Needs an Auditor",
