@@ -121,6 +121,7 @@
         'article.entry089':     { en: 'Diop Daily #089 — August 2026', fr: 'Diop Quotidien n°089 — Août 2026' },
         'article.entry092':     { en: 'Diop Daily #092 — August 2026', fr: 'Diop Quotidien n°092 — Août 2026' },
         'article.entry093':     { en: 'Diop Daily #093 — August 2026', fr: 'Diop Quotidien n°093 — Août 2026' },
+        'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
         'article.entry090':     { en: 'Diop Daily #090 — August 2026', fr: 'Diop Quotidien n°090 — Août 2026' },
         'article.entry086':     { en: 'Diop Daily #086 — August 2026', fr: 'Diop Quotidien n°086 — Août 2026' },
@@ -136,6 +137,16 @@
     };
 
     var postTranslations = {
+'diop-daily-094': {
+    title: {
+        en: "Who Signs for the Machine?",
+        fr: "Qui signe pour la machine ?"
+    },
+    excerpt: {
+        en: "As AI enters public decisions, security programs, and economic interfaces, the missing infrastructure is a charter: a portable record of mandate, jurisdiction, review, and recourse for machine action. The commercial layer sits above model capability and below institutional trust, where machine action receives a legitimate name.",
+        fr: "À mesure que l'IA entre dans les décisions publiques, les programmes de sécurité et les interfaces économiques, l'infrastructure manquante est une charte : un dossier portable du mandat, de la juridiction, de la revue et du recours applicables à l'action machine. La couche commerciale se situe au-dessus de la capacité du modèle et au-dessous de la confiance institutionnelle, là où l'action machine reçoit un nom légitime."
+    }
+},
 'diop-daily-093': {
     title: {
         en: "The Data the Model Cannot See",

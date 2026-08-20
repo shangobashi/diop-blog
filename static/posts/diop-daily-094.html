@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Who Signs for the Machine? — Diop Research</title>
+    <meta name="description" content="As AI enters public decisions, security programs, and economic interfaces, the missing infrastructure is a charter: a portable record of mandate, jurisdiction, review, and recourse for machine action."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="19.78" x2="5.64" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry094">Diop Daily #094 — August 2026</div>
+                <div class="article__meta-line">
+                    <time>August 21, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>AI governance · institutional charters · democratic oversight · African sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Who Signs for the Machine?</h1>
+
+                <p>An AI system can now speak to a citizen, draft a security assessment, recommend a public action, or shape a commercial decision. Capability makes each action possible. A charter makes it legitimate. The next infrastructure problem is therefore the record that says who authorized the machine, which jurisdiction governs it, what review is required, and where a person can appeal.</p>
+
+                <p>Recent public signals place this problem in different institutional settings. OpenAI's August 20 announcement of AI Futures describes a new public conversation about how advanced AI may reshape power, governance, the economy, and individual freedom. Its August 18 initiative on democratic oversight in national security describes tools, training, and expertise for government institutions. The European Commission's General-Purpose AI Code of Practice describes rules for providers of general-purpose models and models with systemic risks. These sources do not establish one settled theory of governance. They do establish that governance is moving from an abstract concern into an operating requirement.</p>
+
+                <blockquote>
+                    <p>When a machine crosses an institutional boundary, the first question is the name of the authority that allowed it to cross.</p>
+                </blockquote>
+
+                <h2>A model can act before an institution has spoken</h2>
+
+                <p>Most AI architecture begins with capability: choose a model, connect tools, add memory, and define a workflow. Institutional life begins elsewhere. It begins with a mandate. A ministry has a legal purpose. A hospital has duties to patients. A bank has a risk appetite. A publisher has rights obligations. A community organization has a relationship with people who can withdraw their trust.</p>
+
+                <p>When the model enters one of these settings, the institution needs a machine-readable statement of purpose. The statement should identify the work the system may perform, the evidence it may use, the actions it may trigger, the decisions it must never make alone, and the human authority that owns the result. This is a charter in the practical sense: a bounded grant of power attached to conditions of use.</p>
+
+                <p>Without such a record, permission becomes scattered across prompts, vendor settings, team habits, and undocumented exceptions. A system may have a technically valid token and still lack institutional authority. A tool may be available to an agent while its use is outside the mandate of the department that pays for it. A response may be accurate while the act of producing or sending it violates a duty that the model cannot infer from text alone.</p>
+
+                <h2>The charter has four fields</h2>
+
+                <p>A useful institutional charter can be represented as a small object that travels with the workflow. It should preserve four fields:</p>
+
+                <ul>
+                    <li><strong>Mandate:</strong> the purpose, role, and class of work the machine is authorized to perform.</li>
+                    <li><strong>Jurisdiction:</strong> the law, institution, language community, and data boundary that govern the action.</li>
+                    <li><strong>Review:</strong> the evidence, human checkpoint, confidence threshold, or escalation rule required before the action becomes operative.</li>
+                    <li><strong>Recourse:</strong> the person, office, or process that can challenge, reverse, explain, or suspend the result.</li>
+                </ul>
+
+                <p>These fields turn governance into an executable condition. A customer-service agent may answer routine questions under a narrow mandate, but a complaint about a public benefit may require a named reviewer. A research assistant may summarize a document, while publication requires an editor who can inspect sources and rights. A security system may classify an alert, while a response that changes access requires an authority with a recorded reason.</p>
+
+                <p>The point is not to surround every low-risk action with ceremony. The point is to make the boundary visible enough that the institution can vary its controls by consequence. A charter can be light for a draft and strict for a decision. It can require local language review for a public notice. It can forbid a remote model from receiving a class of records. It can expire when the policy, contract, or political mandate changes.</p>
+
+                <h2>Runtime primitives need constitutional meaning</h2>
+
+                <p>Google's description of ADK Go 2.0 provides the runtime vocabulary for this problem: graph-based workflows, human-in-the-loop orchestration, dynamic routing, retries, and built-in resilience. Those features make it possible to carry a charter through execution. A graph node can check mandate before invoking a tool. A routing rule can send a sensitive case to a local model or a named reviewer. A retry can preserve the original authority and evidence instead of creating a second action with an ambiguous status.</p>
+
+                <p>Runtime controls become institutional controls when their reason is preserved. A human checkpoint should record the question presented to the reviewer, the evidence available, the decision made, and the scope of the approval. A policy denial should say which charter condition failed. A route change should record whether the new model operates under the same data and jurisdictional terms. A rollback should restore the earlier authority state, not only the earlier software version.</p>
+
+                <p>This is the difference between a workflow that merely runs and a workflow that can account for itself. The technical graph carries sequence. The charter carries legitimacy. The institution needs both.</p>
+
+                <h2>African sovereignty begins with the right to define the mandate</h2>
+
+                <p>For African institutions, imported AI systems often arrive with hidden assumptions about language, identity, data location, payment, evidence, and who is entitled to make a decision. A system trained elsewhere may treat a local language as a translation problem. A vendor policy may treat jurisdiction as a hosting preference. A benchmark may call a response correct while a community recognizes a lost distinction, an omitted relationship, or a false attribution.</p>
+
+                <p>Institutional sovereignty requires the power to write the charter in terms that local authorities recognize. That includes the authority to define acceptable evidence, the languages in which a person can contest a result, the records that must remain in a national or regional boundary, and the office responsible for correction. It also includes the ability to exchange a proof of compliance without exporting the underlying records.</p>
+
+                <p>This is a constructive program rather than a demand for isolation. Regional institutions can publish shared charter schemas for health, education, finance, publishing, and public administration. Universities can maintain multilingual evaluation sets that test whether a system preserves social and legal distinctions. Civic bodies can define recourse procedures before a machine becomes the first interface for a public service. Local infrastructure providers can offer runtime, identity, and audit layers that preserve the mandate while allowing models to change underneath.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If machine action requires a portable charter, the capital-relevant layer sits between model capability and institutional authority:</p>
+
+                <ul>
+                    <li><strong>Charter registries:</strong> systems that version mandates, data boundaries, review rules, expiration dates, and accountable owners.</li>
+                    <li><strong>Policy-aware runtimes:</strong> orchestration layers that carry authority and recourse through tools, model routes, human checkpoints, and retries.</li>
+                    <li><strong>Institutional identity and delegation:</strong> credentials that let a machine prove which organization it represents and which limited power it is exercising.</li>
+                    <li><strong>Recourse interfaces:</strong> multilingual systems for explanation, contest, correction, suspension, and appeal when an automated action affects a person or public record.</li>
+                    <li><strong>Charter assurance services:</strong> independent testing that checks whether a deployed system actually obeys its mandate across models, languages, data boundaries, and failure states.</li>
+                </ul>
+
+                <p>The underwriting question is precise: can this layer show that an AI action was authorized for this purpose, under this jurisdiction, with this review, and with a real path of recourse? That record can be measured in expired permissions, prevented actions, reviewed exceptions, successful appeals, and the time required to change a mandate without rebuilding the entire system.</p>
+
+                <h2>The signature is a political technology</h2>
+
+                <p>“Who signs for the machine?” is a question about accountability, but it is also a question about institutional design. The signature may belong to a public office, a regulated enterprise, a cooperative, a university, or a community authority. Its meaning depends on the mandate behind it and the recourse available to the people affected.</p>
+
+                <p>OpenAI's public discussion of AI Futures and democratic oversight, the European Commission's provider-facing code, and Google's runtime primitives point toward a common architectural task: connect capability to a recognized authority without pretending that technical success settles political legitimacy. The machine can calculate, classify, and draft. An institution must still decide what it may represent.</p>
+
+                <p>Africa's opportunity lies in building that decision layer with its own languages, authorities, records, and ideas of responsibility. A model can be imported. A legitimate mandate must be authored.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Introducing AI Futures” (August 20, 2026; linked article: <em>https://openai.com/index/introducing-ai-futures</em>; description: a public conversation about how advanced AI could reshape power, governance, the economy, and individual freedom).</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Strengthening democratic oversight in national security” (August 18, 2026; linked article: <em>https://openai.com/index/strengthening-democratic-oversight-in-national-security</em>; description: an initiative supporting government institutions with tools, training, and expertise).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog: “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; title and meta description verified directly; description: graph workflows, human-in-the-loop orchestration, dynamic routing, and built-in resilience).</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">European Commission: “Drawing-up a General-Purpose AI Code of Practice” (accessed August 21, 2026; title and meta description verified directly; description: the first code received by the Commission details AI Act rules for providers of general-purpose AI models and models with systemic risks).</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Qui signe pour la machine ?</h1>
+
+                <p>Un système d'IA peut désormais s'adresser à un citoyen, rédiger une évaluation de sécurité, recommander une action publique ou orienter une décision commerciale. La capacité rend chacune de ces actions possible. Une charte la rend légitime. Le prochain problème d'infrastructure est donc le dossier qui indique qui a autorisé la machine, quelle juridiction la régit, quelle revue est requise et où une personne peut faire appel.</p>
+
+                <p>Des signaux publics récents placent ce problème dans des cadres institutionnels différents. L'annonce du 20 août d'OpenAI consacrée à AI Futures décrit une nouvelle conversation publique sur la manière dont une IA avancée pourrait remodeler le pouvoir, la gouvernance, l'économie et la liberté individuelle. Son initiative du 18 août sur la supervision démocratique de la sécurité nationale décrit des outils, des formations et une expertise destinés aux institutions gouvernementales. Le Code de pratique de la Commission européenne pour les modèles d'IA à usage général décrit des règles pour les fournisseurs de modèles à usage général et de modèles présentant des risques systémiques. Ces sources ne constituent pas une théorie de gouvernance définitivement établie. Elles montrent que la gouvernance passe d'une préoccupation abstraite à une exigence opérationnelle.</p>
+
+                <blockquote>
+                    <p>Lorsqu'une machine franchit une frontière institutionnelle, la première question porte sur le nom de l'autorité qui l'a autorisée à la franchir.</p>
+                </blockquote>
+
+                <h2>Un modèle peut agir avant que l'institution ait parlé</h2>
+
+                <p>La plupart des architectures d'IA commencent par la capacité : choisir un modèle, connecter des outils, ajouter une mémoire et définir un workflow. La vie institutionnelle commence ailleurs. Elle commence par un mandat. Un ministère possède une finalité juridique. Un hôpital a des devoirs envers ses patients. Une banque a un appétit pour le risque. Un éditeur a des obligations liées aux droits. Une organisation communautaire entretient une relation avec des personnes qui peuvent retirer leur confiance.</p>
+
+                <p>Lorsque le modèle entre dans l'un de ces cadres, l'institution a besoin d'une déclaration de finalité lisible par la machine. Cette déclaration doit identifier le travail que le système peut accomplir, les preuves qu'il peut utiliser, les actions qu'il peut déclencher, les décisions qu'il ne doit jamais prendre seul et l'autorité humaine qui possède le résultat. Il s'agit d'une charte au sens pratique : une attribution bornée de pouvoir, attachée à des conditions d'utilisation.</p>
+
+                <p>Sans ce dossier, la permission se disperse entre les prompts, les réglages du fournisseur, les habitudes de l'équipe et les exceptions non documentées. Un système peut disposer d'un jeton techniquement valide tout en étant dépourvu d'autorité institutionnelle. Un outil peut être disponible pour un agent alors que son usage sort du mandat du service qui le finance. Une réponse peut être exacte alors que l'acte de la produire ou de l'envoyer viole un devoir que le modèle ne peut pas déduire du seul texte.</p>
+
+                <h2>La charte possède quatre champs</h2>
+
+                <p>Une charte institutionnelle utile peut être représentée comme un petit objet qui accompagne le workflow. Elle doit conserver quatre champs :</p>
+
+                <ul>
+                    <li><strong>Mandat :</strong> la finalité, le rôle et la classe de travail que la machine est autorisée à accomplir.</li>
+                    <li><strong>Juridiction :</strong> le droit, l'institution, la communauté linguistique et la frontière de données qui régissent l'action.</li>
+                    <li><strong>Revue :</strong> les preuves, le contrôle humain, le seuil de confiance ou la règle d'escalade requis avant que l'action ne devienne effective.</li>
+                    <li><strong>Recours :</strong> la personne, le service ou la procédure capable de contester, d'annuler, d'expliquer ou de suspendre le résultat.</li>
+                </ul>
+
+                <p>Ces champs transforment la gouvernance en condition exécutable. Un agent de service client peut répondre aux questions ordinaires dans le cadre d'un mandat étroit, tandis qu'une réclamation concernant une prestation publique peut exiger un réviseur nommé. Un assistant de recherche peut résumer un document, alors que la publication exige un éditeur capable d'inspecter les sources et les droits. Un système de sécurité peut classer une alerte, tandis qu'une réponse qui modifie un accès exige une autorité dont la raison est enregistrée.</p>
+
+                <p>L'enjeu consiste à éviter de soumettre chaque action à faible risque à une cérémonie. Il consiste à rendre la frontière suffisamment visible pour que l'institution puisse varier ses contrôles selon les conséquences. Une charte peut être légère pour un brouillon et stricte pour une décision. Elle peut exiger une revue dans la langue locale pour un avis public. Elle peut interdire à un modèle distant de recevoir une catégorie de dossiers. Elle peut expirer lorsque la politique, le contrat ou le mandat politique change.</p>
+
+                <h2>Les primitives du runtime ont besoin d'un sens constitutionnel</h2>
+
+                <p>La description par Google d'ADK Go 2.0 fournit le vocabulaire d'exécution de ce problème : workflows en graphe, orchestration avec humain dans la boucle, routage dynamique, nouvelles tentatives et résilience intégrée. Ces fonctions permettent de transporter une charte pendant l'exécution. Un nœud du graphe peut vérifier le mandat avant d'appeler un outil. Une règle de routage peut envoyer un dossier sensible vers un modèle local ou un réviseur désigné. Une nouvelle tentative peut conserver l'autorité et les preuves initiales au lieu de créer une seconde action au statut ambigu.</p>
+
+                <p>Les contrôles du runtime deviennent des contrôles institutionnels lorsque leur raison est conservée. Un contrôle humain doit enregistrer la question présentée au réviseur, les preuves disponibles, la décision prise et la portée de l'approbation. Un refus de politique doit indiquer quelle condition de la charte a échoué. Un changement de parcours doit préciser si le nouveau modèle fonctionne dans les mêmes conditions de données et de juridiction. Un retour en arrière doit restaurer l'état d'autorité précédent, et pas uniquement l'ancienne version logicielle.</p>
+
+                <p>Voilà la différence entre un workflow qui s'exécute simplement et un workflow capable de rendre compte de lui-même. Le graphe technique porte la séquence. La charte porte la légitimité. L'institution a besoin des deux.</p>
+
+                <h2>La souveraineté africaine commence par le droit de définir le mandat</h2>
+
+                <p>Pour les institutions africaines, les systèmes d'IA importés arrivent souvent avec des hypothèses cachées sur la langue, l'identité, le lieu des données, le paiement, les preuves et l'autorité habilitée à décider. Un système entraîné ailleurs peut traiter une langue locale comme un problème de traduction. Une politique de fournisseur peut traiter la juridiction comme une préférence d'hébergement. Un benchmark peut juger une réponse correcte alors qu'une communauté y reconnaît une distinction perdue, une relation omise ou une attribution fausse.</p>
+
+                <p>La souveraineté institutionnelle exige le pouvoir d'écrire la charte dans des termes reconnus par les autorités locales. Cela comprend le pouvoir de définir les preuves acceptables, les langues dans lesquelles une personne peut contester un résultat, les dossiers qui doivent rester dans une frontière nationale ou régionale et le service responsable de la correction. Cela comprend aussi la capacité d'échanger une preuve de conformité sans exporter les dossiers sous-jacents.</p>
+
+                <p>Il s'agit d'un programme constructif, qui ne demande pas l'isolement. Des institutions régionales peuvent publier des schémas de chartes partagés pour la santé, l'éducation, la finance, l'édition et l'administration publique. Des universités peuvent maintenir des jeux d'évaluation multilingues qui testent la préservation des distinctions sociales et juridiques. Des organismes civiques peuvent définir des procédures de recours avant qu'une machine ne devienne la première interface d'un service public. Des fournisseurs locaux d'infrastructure peuvent proposer des couches d'exécution, d'identité et d'audit qui préservent le mandat tout en permettant aux modèles de changer.</p>
+
+                <h2>Où la surface d'investissement s'élargit</h2>
+
+                <p>Si l'action machine exige une charte portable, la couche pertinente pour le capital se situe entre la capacité du modèle et l'autorité institutionnelle :</p>
+
+                <ul>
+                    <li><strong>Registres de chartes :</strong> systèmes qui versionnent les mandats, les frontières de données, les règles de revue, les dates d'expiration et les responsables.</li>
+                    <li><strong>Runtimes sensibles aux politiques :</strong> couches d'orchestration qui transportent l'autorité et le recours à travers les outils, les parcours de modèles, les contrôles humains et les nouvelles tentatives.</li>
+                    <li><strong>Identité institutionnelle et délégation :</strong> justificatifs permettant à une machine de prouver quelle organisation elle représente et quel pouvoir limité elle exerce.</li>
+                    <li><strong>Interfaces de recours :</strong> systèmes multilingues d'explication, de contestation, de correction, de suspension et d'appel lorsqu'une action automatisée touche une personne ou un dossier public.</li>
+                    <li><strong>Services d'assurance des chartes :</strong> évaluations indépendantes vérifiant qu'un système déployé respecte effectivement son mandat à travers les modèles, les langues, les frontières de données et les états d'échec.</li>
+                </ul>
+
+                <p>La question de souscription est précise : cette couche peut-elle démontrer qu'une action d'IA était autorisée pour cette finalité, sous cette juridiction, avec cette revue et avec une voie réelle de recours ? Ce dossier peut être mesuré par les permissions expirées, les actions empêchées, les exceptions examinées, les appels acceptés et le temps nécessaire pour modifier un mandat sans reconstruire tout le système.</p>
+
+                <h2>La signature est une technologie politique</h2>
+
+                <p>« Qui signe pour la machine ? » est une question de responsabilité, mais aussi de conception institutionnelle. La signature peut appartenir à un service public, à une entreprise réglementée, à une coopérative, à une université ou à une autorité communautaire. Son sens dépend du mandat qui la soutient et du recours disponible pour les personnes concernées.</p>
+
+                <p>La discussion publique d'OpenAI sur AI Futures et la supervision démocratique, le code de la Commission européenne destiné aux fournisseurs et les primitives d'exécution de Google pointent vers une même tâche architecturale : relier la capacité à une autorité reconnue sans prétendre que la réussite technique règle la légitimité politique. La machine peut calculer, classer et rédiger. Une institution doit encore décider ce qu'elle est autorisée à représenter.</p>
+
+                <p>La possibilité africaine consiste à construire cette couche de décision avec ses propres langues, ses propres autorités, ses propres dossiers et ses propres conceptions de la responsabilité. Un modèle peut être importé. Un mandat légitime doit être écrit.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d'OpenAI : « Introducing AI Futures » (20 août 2026 ; article lié : <em>https://openai.com/index/introducing-ai-futures</em> ; description : une conversation publique sur la manière dont une IA avancée pourrait remodeler le pouvoir, la gouvernance, l'économie et la liberté individuelle).</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d'OpenAI : « Strengthening democratic oversight in national security » (18 août 2026 ; article lié : <em>https://openai.com/index/strengthening-democratic-oversight-in-national-security</em> ; description : une initiative destinée à soutenir les institutions gouvernementales par des outils, des formations et une expertise).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog : « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; titre et méta-description vérifiés directement ; description : workflows en graphe, orchestration avec humain dans la boucle, routage dynamique et résilience intégrée).</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">Commission européenne : « Drawing-up a General-Purpose AI Code of Practice » (consulté le 21 août 2026 ; titre et méta-description vérifiés directement ; description : le premier code reçu par la Commission détaille les règles de l'AI Act applicables aux fournisseurs de modèles d'IA à usage général et aux modèles présentant des risques systémiques).</a></li>
+                </ul>
+            </div>
+
+            <script src="../site.js"></script>
+            <script src="../i18n.js"></script>
+        </div>
+    </article>
+</body>
+</html>
