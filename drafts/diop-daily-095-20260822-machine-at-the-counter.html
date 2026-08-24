@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Machine at the Counter — Diop Research</title>
+    <meta name="description" content="AI is moving from a productivity tool inside the institution to the primary interface for commercial transactions. The strategic layer is the trust, settlement, and provenance infrastructure that makes machine-mediated commerce legible and underwritable."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.78" y1="19.78" x2="5.64" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry095">Diop Daily #095 — August 2026</div>
+                <div class="article__meta-line">
+                    <time>August 22, 2026</time>
+                    <span>·</span>
+                    <span data-rt="7">7 min read</span>
+                    <span>·</span>
+                    <span>commerce infrastructure · agent transactions · African sovereignty · provenance · payment rails</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Machine at the Counter</h1>
+
+                <p>A model can now place an advertisement, draft a sales reply, recommend a procurement, or initiate a refund without a human queuing the response. These are not productivity improvements inside the institution. They are changes in where the institution meets the market. The counter has moved from the reception desk, the call center, the storefront, and the procurement office to a model endpoint. That shift is invisible in most productivity metrics. It is visible in the liability, the settlement record, and the customer's ability to appeal.</p>
+
+                <p>Recent public signals make this concrete. OpenAI's August 18 announcement that ChatGPT Ads is expanding to 31 European markets places AI-generated or AI-placed advertising in front of consumers during search, comparison, and purchase decisions. The August 20 Stampli account describes a finance and operations team using ChatGPT Work and Codex to compress weeks of launch production into days. Replit's August 19 introduction of Free Mode, powered by GPT-5.6 Luna, removes token-cost friction from the entry point of software creation and distribution. NVIDIA's August 18 item describes teams using ChatGPT Work to reduce manual tasks and connect fast-moving signals across global operations. Asana's August 18 account describes replacing an outdated testing system in two weeks with OpenAI Codex, completing work expected to take five years for roughly twelve thousand dollars. Together these items describe a single commercial movement: the machine is becoming the first responder for tasks that previously required a person at the point of commercial contact.</p>
+
+                <blockquote>
+                    <p>When a model generates the ad, drafts the reply, procures the component, or refunds the order, the institution's problem is no longer speed. It is accountability at the speed of the machine.</p>
+                </blockquote>
+
+                <h2>The transaction has new layers</h2>
+
+                <p>A commercial transaction used to travel through identifiable roles: a seller, a buyer, a record, a payment instruction, a dispute path. When a model enters that chain, it adds new layers without removing the old obligations. The model can generate an offer, but the institution still owns the warranty. The model can route a complaint, but the institution still carries the regulatory duty. The model can select an advertisement, but the institution remains liable for what the ad promises or implies.</p>
+
+                <p>These obligations do not dissolve because the interface changed. They become harder to see. A fast model response can feel like a completed transaction while the underlying record is incomplete. A generated reply can satisfy the customer while violating a disclosure rule. An ad optimized for engagement can land in a jurisdiction where the claim is unproven or the product is ineligible. A procurement recommendation can look efficient while the supplier has not been vetted for the institution's actual compliance requirements.</p>
+
+                <p>The useful response is not to slow the machine down. It is to attach governance to the transaction path so that the institution can inspect, correct, and recover after the model has acted. A commerce-aware runtime should record the evidence behind the model's choice, the authority that approved the commercial action, and the path a customer can use to dispute it. Without those records, the transaction is fast but ungovernable.</p>
+
+                <p>Speed without evidence creates liability that appears only after the interaction has been forgotten. The customer receives a refund confirmation in seconds. The finance team assumes the dispute is closed. Three weeks later, the customer discovers the refund was issued against the wrong invoice, and the institution has no recoverable record of which model, prompt, or policy selected that outcome. The machine's speed is real. The institution's exposure is also real, and it grows whenever the transaction outruns its record.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If machine-mediated commerce becomes normal, the capital-relevant layer sits between the model's output and the institution's ledger:</p>
+
+                <ul>
+                    <li><strong>Commerce-aware runtimes:</strong> orchestration that treats a transaction as a governed object with inputs, approvals, evidence, and settlement rules rather than a single model call. These systems should enforce policy before a model sends an ad, accepts an order, or commits the institution to a supplier.</li>
+                    <li><strong>Provenance for machine-generated commercial content:</strong> credentials that record which model, prompt, policy, and authority produced an ad, offer, or reply, and whether the result has been reviewed. Provenance becomes a commercial requirement when a customer, regulator, or partner can demand proof that the machine acted within mandate.</li>
+                    <li><strong>Agent payment and settlement rails:</strong> payment infrastructure that can route, split, refund, and reconcile money when an agent rather than a person initiates or approves the movement of funds. This layer must preserve the audit trail while handling the speed and volume that machine-initiated commerce requires.</li>
+                    <li><strong>Language and jurisdiction layers:</strong> interfaces that translate, localize, and validate commercial content against the legal and cultural expectations of the buyer's jurisdiction. A model optimized for global English may generate a technically correct response that is commercially or legally wrong in a specific market.</li>
+                    <li><strong>Recourse and dispute systems:</strong> multilingual paths for explanation, correction, refund, and appeal when an automated commercial action affects a customer or supplier. The dispute system is the institution's proof that it can govern its own machine after the transaction has closed.</li>
+                </ul>
+
+                <p>The underwriting question is precise: can this layer show that a machine-mediated transaction was authorized, evidence-bearing, jurisdiction-compliant, and reversible if required? The strongest products will make the machine's commercial action legible to a finance officer, regulator, or customer without reducing the speed that makes the interaction valuable.</p>
+
+                <h2>African commerce needs its own settlement grammar</h2>
+
+                <p>For African and diasporic institutions, imported commerce systems often carry hidden assumptions about currency, payment rails, language, identity, dispute resolution, and the relationship between a commercial promise and a legal remedy. A model trained to optimize engagement may treat a local language as a translation problem. A payment system may assume a single rail when the market operates across mobile money, bank transfer, and informal settlement. A dispute process may require a form of identification that the customer does not hold. An advertisement may promise a delivery timeline that the local logistics network cannot meet.</p>
+
+                <p>Institutional sovereignty in commerce means the power to define the settlement grammar: the languages in which a contract is readable, the payment rails that are valid, the identity documents that are acceptable, the evidence that counts as proof of delivery, and the office that can hear a complaint against a machine-generated decision. Regional bodies can publish shared schemas for agent-mediated transactions. Universities can test whether commercial models preserve social and legal distinctions. Local infrastructure providers can offer runtime, payment, and audit layers that carry the transaction inside the jurisdiction while allowing the model to be updated elsewhere.</p>
+
+                <p>The same logic applies to creative and research commerce. A publisher that uses a model to draft a book description, translate a press release, or recommend a licensing decision must preserve the original language, the review path, and the authority that approved the final version. A research institution that receives a machine-generated summary of a public document must be able to show whether the summary preserves the distinctions that matter for local policy. These are not abstract quality concerns. They are commercial requirements because they determine whether the output can be trusted, disputed, or reused.</p>
+
+                <p>The goal is not to isolate the market. It is to make the machine's commercial action accountable to local standards before it becomes irreversible.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: "ChatGPT Ads expands across Europe" (August 18, 2026; linked article: <em>https://openai.com/index/chatgpt-ads-expands-across-europe</em>; description: ChatGPT Ads expands to 31 European markets for advertisers reaching people during exploration, comparison, and purchase decisions).</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: "Stampli cuts launch hours by 68% using ChatGPT Work" (August 20, 2026; linked article: <em>https://openai.com/index/stampli</em>; description: Stampli used ChatGPT Work and Codex to compress weeks of launch production into days).</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: "Replit expands access to software creation with GPT-5.6 Luna" (August 19, 2026; linked article: <em>https://openai.com/index/replit</em>; description: Replit introduces Free Mode powered by GPT-5.6 Luna so anyone can turn ideas into working software without token-cost friction).</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: "How NVIDIA scales expertise with ChatGPT Work" (August 18, 2026; linked article: <em>https://openai.com/index/nvidia/chatgpt-work</em>; description: NVIDIA teams use ChatGPT Work to reduce manual tasks and scale successful workflows globally).</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: "Asana cleared 5 years of engineering work in 2 weeks with Codex" (August 18, 2026; linked article: <em>https://openai.com/index/asana</em>; description: Asana used OpenAI Codex to replace an outdated testing system in two weeks for about $12K).</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La machine au comptoir</h1>
+
+                <p>Un modèle peut désormais placer une publicité, rédiger une réponse commerciale, recommander un achat ou initier un remboursement sans qu'une personne ne file la réponse. Ce ne sont pas des améliorations de productivité à l'intérieur de l'institution. Ce sont des déplacements du point où l'institution rencontre le marché. Le comptoir est passé du bureau d'accueil, du centre d'appels, du magasin et du service des achats à un point de terminaison de modèle. Ce déplacement est invisible dans la plupart des mesures de productivité. Il est visible dans la responsabilité, le registre de règlement et la capacité du client à faire appel.</p>
+
+                <p>Des signaux publics récents rendent cela concret. L'annonce du 18 août d'OpenAI selon laquelle ChatGPT Ads s'étend à trente et un marchés européens place une publicité générée ou placée par l'IA devant les consommateurs au moment de la recherche, de la comparaison et de la décision d'achat. Le compte rendu du 20 août de Stampli décrit une équipe financière et opérationnelle utilisant ChatGPT Work et Codex pour compresser des semaines de production de lancement en quelques jours. L'introduction du 19 août par Replit du mode Free, alimenté par GPT-5.6 Luna, supprime la friction des coûts par jeton au point d'entrée de la création et de la distribution de logiciels. L'élément du 18 août de NVIDIA décrit des équipes utilisant ChatGPT Work pour réduire les tâches manuelles et relier des signaux rapides à travers des opérations mondiales. Le compte rendu du 18 août d'Asana décrit le remplacement d'un système de test obsolète en deux semaines avec OpenAI Codex, accomplissant un travail dont on attendait cinq ans pour environ douze mille dollars. Ensemble, ces éléments décrivent un mouvement commercial unique : la machine devient le premier répondant pour des tâches qui nécessitaient auparavant une personne au point de contact commercial.</p>
+
+                <blockquote>
+                    <p>Lorsqu'un modèle génère la publicité, rédige la réponse, procure le composant ou rembourse la commande, le problème de l'institution n'est plus la vitesse. C'est la responsabilité à la vitesse de la machine.</p>
+                </blockquote>
+
+                <h2>La transaction possède de nouvelles couches</h2>
+
+                <p>Une transaction commerciale passait autrefois par des rôles identifiables : un vendeur, un acheteur, un registre, une instruction de paiement, un chemin de contestation. Lorsqu'un modèle entre dans cette chaîne, il ajoute de nouvelles couches sans supprimer les anciennes obligations. Le modèle peut générer une offre, mais l'institution reste propriétaire de la garantie. Le modèle peut router une plainte, mais l'institution conserve le devoir réglementaire. Le modèle peut sélectionner une publicité, mais l'institution reste responsable de ce que l'annonce promet ou implique.</p>
+
+                <p>Ces obligations ne se dissolvent pas parce que l'interface a changé. Elles deviennent plus difficiles à voir. Une réponse rapide du modèle peut ressembler à une transaction terminée tandis que le registre sous-jacent est incomplet. Une réponse générée peut satisfaire le client tout en violant une règle de divulgation. Une publicité optimisée pour l'engagement peut atterrir dans une juridiction où l'affirmation n'est pas prouvée ou le produit non éligible. Une recommandation d'achat peut sembler efficace tandis que le fournisseur n'a pas été vérifié quant aux exigences réelles de conformité de l'institution.</p>
+
+                <p>La réponse utile n'est pas de ralentir la machine. C'est d'attacher la gouvernance au chemin de transaction pour que l'institution puisse inspecter, corriger et récupérer après que le modèle a agi. Un runtime sensible au commerce doit enregistrer les preuves derrière le choix du modèle, l'autorité qui a approuvé l'action commerciale et le chemin qu'un client peut utiliser pour la contester. Sans ces registres, la transaction est rapide mais ingouvernable.</p>
+
+                <p>La vitesse sans preuve crée une responsabilité qui n'apparaît qu'après que l'interaction a été oubliée. Le client reçoit une confirmation de remboursement en quelques secondes. L'équipe financière suppose que le litige est clos. Trois semaines plus tard, le client découvre que le remboursement a été émis contre la mauvaise facture, et l'institution n'a aucun registre récupérable indiquant quel modèle, quel prompt ou quelle politique a sélectionné ce résultat. La vitesse de la machine est réelle. L'exposition de l'institution est aussi réelle, et elle grandit chaque fois que la transaction devance son registre.</p>
+
+                <h2>Où la surface d'investissement s'élargit</h2>
+
+                <p>Si le commerce médiatisé par machine devient normal, la couche pertinente pour le capital se situe entre la sortie du modèle et le registre de l'institution :</p>
+
+                <ul>
+                    <li><strong>Runtimes sensibles au commerce :</strong> orchestration qui traite une transaction comme un objet gouverné avec intrants, approbations, preuves et règles de règlement plutôt qu'un seul appel de modèle. Ces systèmes doivent appliquer la politique avant qu'un modèle n'envoie une publicité, n'accepte une commande ou n'engage l'institution auprès d'un fournisseur.</li>
+                    <li><strong>Provenance pour le contenu commercial généré par machine :</strong> justificatifs qui enregistrent quel modèle, prompt, politique et autorité a produit une publicité, une offre ou une réponse, et si le résultat a été revu. La provenance devient une exigence commerciale lorsqu'un client, un régulateur ou un partenaire peut exiger la preuve que la machine a agi dans le cadre de son mandat.</li>
+                    <li><strong>Rails de paiement et de règlement pour agents :</strong> infrastructure de paiement capable de router, diviser, rembourser et rapprocher des fonds lorsqu'un agent plutôt qu'une personne initie ou approuve le mouvement de fonds. Cette couche doit préserver la piste d'audit tout en gérant la vitesse et le volume que le commerce initié par machine requiert.</li>
+                    <li><strong>Couches de langue et de juridiction :</strong> interfaces qui traduisent, localisent et valident le contenu commercial selon les attentes juridiques et culturelles de la juridiction de l'acheteur. Un modèle optimisé pour l'anglais mondial peut générer une réponse techniquement correcte qui est commercialement ou légalement fausse sur un marché spécifique.</li>
+                    <li><strong>Systèmes de recours et de contestation :</strong> chemins multilingues d'explication, de correction, de remboursement et d'appel lorsqu'une action commerciale automatisée touche un client ou un fournisseur. Le système de contestation est la preuve que l'institution peut gouverner sa propre machine après la clôture de la transaction.</li>
+                </ul>
+
+                <p>La question de souscription est précise : cette couche peut-elle démontrer qu'une transaction médiatisée par machine était autorisée, porteuse de preuves, conforme à la juridiction et réversible si nécessaire ? Les produits les plus forts rendront l'action commerciale de la machine lisible par un responsable financier, un régulateur ou un client sans réduire la vitesse qui rend l'interaction précieuse.</p>
+
+                <h2>Le commerce africain a besoin de sa propre grammaire de règlement</h2>
+
+                <p>Pour les institutions africaines et diasporiques, les systèmes de commerce importés portent souvent des hypothèses cachées sur la monnaie, les rails de paiement, la langue, l'identité, la résolution des litiges et la relation entre une promesse commerciale et un recours juridique. Un modèle entraîné pour optimiser l'engagement peut traiter une langue locale comme un problème de traduction. Un système de paiement peut supposer un seul rail lorsque le marché opère sur l'argent mobile, le virement bancaire et le règlement informel. Un processus de contestation peut exiger une forme d'identification que le client ne possède pas. Une publicité peut promettre un délai de livraison que le réseau logistique local ne peut pas respecter.</p>
+
+                <p>La souveraineté institutionnelle dans le commerce signifie le pouvoir de définir la grammaire de règlement : les langues dans lesquelles un contrat est lisible, les rails de paiement valides, les documents d'identité acceptables, les preuves qui valent comme preuve de livraison, et le service capable d'entendre une plainte contre une décision commerciale générée par une machine. Des organismes régionaux peuvent publier des schémas partagés pour les transactions médiatisées par agents. Des universités peuvent tester si les modèles commerciaux préservent les distinctions sociales et juridiques. Des fournisseurs locaux d'infrastructure peuvent proposer des couches d'exécution, de paiement et d'audit qui maintiennent la transaction à l'intérieur de la juridiction tout en permettant au modèle d'être mis à jour ailleurs.</p>
+
+                <p>La même logique s'applique au commerce créatif et à la recherche. Un éditeur qui utilise un modèle pour rédiger la description d'un livre, traduire un communiqué de presse ou recommander une décision de licence doit préserver la langue originale, le chemin de revue et l'autorité qui a approuvé la version finale. Une institution de recherche qui reçoit un résumé généré par machine d'un document public doit pouvoir montrer si le résumé préserve les distinctions qui importent pour la politique locale. Ce ne sont pas des préoccupations de qualité abstraites. Ce sont des exigences commerciales parce qu'elles déterminent si le résultat peut être fiable, contesté ou réutilisé.</p>
+
+                <p>Le but n'est pas d'isoler le marché. C'est de rendre l'action commerciale de la machine responsable vis-à-vis de normes locales avant qu'elle ne devienne irréversible.</p>
+
+                <p>Un modèle peut générer une réponse avant que l'institution n'ait défini ce que cette réponse doit au marché. Le comptoir est maintenant un modèle. La grammaire de règlement est le prochain projet d'infrastructure de l'institution.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS : « ChatGPT Ads expands across Europe », 18 août 2026. Article lié : <em>https://openai.com/index/chatgpt-ads-expands-across-europe</em>. Description : ChatGPT Ads s'étend à trente et un marchés européens pour que les annonceurs atteignent les personnes pendant l'exploration, la comparaison et la décision d'achat.</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS : « Stampli cuts launch hours by 68% using ChatGPT Work », 20 août 2026. Article lié : <em>https://openai.com/index/stampli</em>. Description : Stampli a utilisé ChatGPT Work et Codex pour compresser des semaines de production de lancement en quelques jours.</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS : « Replit expands access to software creation with GPT-5.6 Luna », 19 août 2026. Article lié : <em>https://openai.com/index/replit</em>. Description : Replit introduit le mode Free alimenté par GPT-5.6 Luna pour que chacun puisse transformer des idées en logiciel fonctionnel sans friction de coût par jeton.</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS : « How NVIDIA scales expertise with ChatGPT Work », 18 août 2026. Article lié : <em>https://openai.com/index/nvidia/chatgpt-work</em>. Description : les équipes NVIDIA utilisent ChatGPT Work pour réduire les tâches manuelles et étendre les workflows performants à l'échelle mondiale.</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS : « Asana cleared 5 years of engineering work in 2 weeks with Codex », 18 août 2026. Article lié : <em>https://openai.com/index/asana</em>. Description : Asana a utilisé OpenAI Codex pour remplacer un système de test obsolète en deux semaines pour environ 12 000 dollars.</a></li>
+                </ul>
+            </div>
+
+            <script src="../site.js"></script>
+            <script src="../i18n.js"></script>
+        </div>
+    </article>
+</body>
+</html>

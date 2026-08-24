@@ -121,6 +121,7 @@
         'article.entry089':     { en: 'Diop Daily #089 — August 2026', fr: 'Diop Quotidien n°089 — Août 2026' },
         'article.entry092':     { en: 'Diop Daily #092 — August 2026', fr: 'Diop Quotidien n°092 — Août 2026' },
         'article.entry093':     { en: 'Diop Daily #093 — August 2026', fr: 'Diop Quotidien n°093 — Août 2026' },
+        'article.entry095':     { en: 'Diop Daily #095 — August 2026', fr: 'Diop Quotidien n°095 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
         'article.entry090':     { en: 'Diop Daily #090 — August 2026', fr: 'Diop Quotidien n°090 — Août 2026' },
@@ -137,6 +138,16 @@
     };
 
     var postTranslations = {
+'diop-daily-095': {
+    title: {
+        en: "The Model Catalogue Is Part of the Institution",
+        fr: "Le catalogue de modèles fait partie de l'institution"
+    },
+    excerpt: {
+        en: "As institutions route work across faster, cheaper, and specialized models, model choice becomes a procurement decision with consequences for evidence, language, jurisdiction, cost, and accountability. The investable layer is the catalogue and substitution infrastructure that lets an institution change models without losing its standard.",
+        fr: "À mesure que les institutions font circuler le travail entre des modèles plus rapides, moins coûteux et spécialisés, le choix du modèle devient une décision d'achat qui touche les preuves, la langue, la juridiction, le coût et la responsabilité. La couche d'investissement est l'infrastructure de catalogue et de substitution qui permet à une institution de changer de modèle sans perdre sa norme."
+    }
+},
 'diop-daily-094': {
     title: {
         en: "Who Signs for the Machine?",

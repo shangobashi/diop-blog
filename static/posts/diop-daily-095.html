@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Model Catalogue Is Part of the Institution — Diop Research</title>
+    <meta name="description" content="As institutions route work across faster, cheaper, and specialized models, the strategic object is a catalogue that records capability, cost, jurisdiction, evidence, and substitution conditions."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry095">Diop Daily #095 — August 2026</div>
+                <div class="article__meta-line">
+                    <time>August 25, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>model procurement · substitution evidence · AI infrastructure · African sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Model Catalogue Is Part of the Institution</h1>
+
+                <p>An institution that cannot explain why it chose one model over another cannot fully explain its own machine decisions. The choice may appear in a developer setting, a vendor dashboard, or a routing rule, yet the consequences reach the budget, the data boundary, the quality standard, the language of service, and the person accountable for the result. Model selection has become a procurement question with an execution trail.</p>
+
+                <p>Recent public signals make the shift measurable. OpenAI's August 24 RSS item on GPT-5.6 in Kiro describes better price-performance for software planning, building, review, and testing. Its August 13 builder's guide describes smarter model selection alongside new Responses API capabilities. A separate August 13 announcement previews an Ultrafast service tier for GPT-5.6 Sol, with up to fourteen times the speed and up to 750 output tokens per second. Google's direct description of ADK Go 2.0 supplies the runtime vocabulary around graph workflows, dynamic routing, human checkpoints, and resilience. The European Commission's General-Purpose AI Code of Practice supplies a regulatory reference for provider obligations under the AI Act.</p>
+
+                <blockquote>
+                    <p>A model catalogue is the institution's memory of what each machine may be trusted to do, under which conditions, and at what cost.</p>
+                </blockquote>
+
+                <h2>Model choice is a purchasing decision</h2>
+
+                <p>A model is often introduced as if it were a replaceable component. The interface remains stable, the prompt remains similar, and the workflow appears to continue. The institution experiences a different reality. A model change can alter the evidence it cites, the languages it handles, the refusals it produces, the data it retains, the latency it imposes, the review burden it creates, and the commercial promises it can safely support.</p>
+
+                <p>This is why a model catalogue belongs beside procurement records and operating policies. It should answer the questions that a serious buyer asks before approving a supplier:</p>
+
+                <ul>
+                    <li><strong>Capability:</strong> which tasks, languages, formats, tools, and reasoning demands have been tested.</li>
+                    <li><strong>Evidence:</strong> which evaluations, source sets, human reviews, and failure cases support the capability claim.</li>
+                    <li><strong>Cost:</strong> the full price of inference, storage, retrieval, integration, review, correction, and local connectivity.</li>
+                    <li><strong>Boundary:</strong> where data is processed, how long it is retained, which keys control access, and which jurisdiction governs the route.</li>
+                    <li><strong>Behaviour:</strong> how the model handles ambiguity, refusal, uncertainty, sensitive content, and requests outside its mandate.</li>
+                    <li><strong>Substitution:</strong> which alternative model can take the work, what evidence must be rerun, and which standards may change.</li>
+                    <li><strong>Owner:</strong> the person or institution responsible for approving the model, monitoring drift, and retiring the route.</li>
+                </ul>
+
+                <p>The catalogue is useful because it preserves relationships among these fields. A fast model may require more human review. A cheap model may perform well in English and fail on a local language. A powerful model may process sensitive material under terms that the institution cannot accept. A local model may cost more per call while reducing cross-border transfer, translation repair, or connectivity dependence. Procurement becomes rational when the institution can compare the entire route.</p>
+
+                <h2>The substitution problem is a continuity problem</h2>
+
+                <p>Model providers change prices, service tiers, context limits, safety behaviour, and infrastructure partners. Institutions also change their own routes as budgets, laws, and data classifications change. Substitution is therefore part of ordinary operations. The question is whether a replacement preserves the standard that made the original route acceptable.</p>
+
+                <p>Consider a public research office that uses a model to summarize policy documents in French and Wolof before a human editor prepares a public brief. A substitute model may be faster and cheaper, yet it may flatten a legal distinction, lose a source citation, or move sensitive text through a different jurisdiction. The workflow can still complete successfully in a technical sense while the institution's standard has changed. A model catalogue makes that change visible before the new route becomes the default.</p>
+
+                <p>Substitution evidence should travel with the route. It should record the task set, the accepted outputs, the unacceptable failures, the reviewer decision, and the date after which the comparison expires. The record should also name the dimensions that cannot be traded away. A health service may accept slower inference to preserve local processing. A publisher may accept a higher cost to retain rights metadata. A financial cooperative may prioritize reconciliation accuracy over conversational fluency.</p>
+
+                <p>This record turns vendor mobility into institutional mobility. The organization can change a model without losing the reasoning that justified its earlier choice. It can negotiate with a provider from a position of knowledge. It can maintain a local fallback without pretending that every model is equivalent.</p>
+
+                <h2>Runtime routing needs catalogue knowledge</h2>
+
+                <p>Google's ADK Go 2.0 announcement describes graph-based workflows, human-in-the-loop orchestration, dynamic routing, retries, and built-in resilience. These primitives become more useful when the runtime can read a model catalogue instead of treating every route as an opaque endpoint.</p>
+
+                <p>A routing node can ask whether the model is approved for the data class, whether its evaluation is still current, whether the task requires a local language checkpoint, and whether the available budget supports the route. A retry can choose a documented fallback rather than repeating the same failure. A human checkpoint can see why the system selected the model and which evidence supports the substitution. A retirement rule can block a route whose privacy terms or evaluation window has expired.</p>
+
+                <p>The catalogue therefore sits between the institution's charter and its runtime. The charter answers what the machine is authorized to do. The catalogue answers which model is permitted to perform that work and under what proven conditions. The distinction matters because authority without model evidence is too broad, while model evidence without authority is directionless.</p>
+
+                <p>The European Commission's public description of the General-Purpose AI Code of Practice adds another reason to keep this record. Provider obligations and institutional obligations meet at deployment. A provider can document the characteristics of a general-purpose model, while a deployer must still know how that model entered a particular workflow, what data it encountered, what review surrounded it, and what local standard the institution applied. The catalogue is the bridge between general model information and a specific institutional decision.</p>
+
+                <h2>African institutions need a catalogue written in their own conditions</h2>
+
+                <p>Imported AI stacks often arrive with an imported procurement grammar. That grammar prices access in a foreign currency, concentrates evaluation in English, assumes stable connectivity, centralizes identity, treats data residency as a cloud setting, and designs payment and support channels around a market that may not resemble the one adopting the system.</p>
+
+                <p>A sovereignty-oriented catalogue records the operating conditions that determine whether a model is genuinely useful. It can preserve local language test sets, translation review, intermittent-connectivity behaviour, mobile-money or bank-settlement costs, regional hosting, key ownership, and the evidence required by a public authority or community institution. The catalogue gives local institutions a way to compare foreign and domestic routes on the same terms.</p>
+
+                <p>This is a constructive path to technological independence. African institutions can evaluate external models against locally authored fields, publish shared evaluation schemas, and maintain fallback routes that preserve language and jurisdiction. A model earns a place in the catalogue when it meets that standard, while vendor defaults remain inputs to the decision rather than the decision itself.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If model choice becomes a continuing institutional decision, the capital-relevant layer sits between model providers and deployed workflows:</p>
+
+                <ul>
+                    <li><strong>Model registries and procurement systems:</strong> catalogues that connect capability claims to evaluation evidence, pricing, data terms, owners, and expiration dates.</li>
+                    <li><strong>Substitution and regression harnesses:</strong> test systems that compare models on the institution's real tasks, languages, failure cases, review burden, and policy requirements.</li>
+                    <li><strong>Policy-aware model gateways:</strong> routing layers that enforce data, jurisdiction, cost, and approval rules before a model receives an institutional request.</li>
+                    <li><strong>Regional model assurance:</strong> independent evaluation services and local test infrastructure for African languages, public-sector records, financial workflows, and connectivity constraints.</li>
+                    <li><strong>Model continuity and exit services:</strong> tools that preserve prompts, evaluation sets, decisions, evidence, and fallback routes when a provider changes its terms or a customer changes its architecture.</li>
+                </ul>
+
+                <p>The underwriting question is concrete: can this product show why a model was selected, which evidence supports the choice, what would invalidate it, and how the institution can move to another route without losing its standard? A system that answers those questions reduces supplier dependence and makes model spending legible to finance, operations, regulators, and local authorities.</p>
+
+                <h2>The catalogue is a record of institutional judgment</h2>
+
+                <p>Model capability will continue to improve, and model prices will continue to move. An institution that treats each change as a fresh improvisation will accumulate hidden risk. An institution that maintains a living catalogue can compare, approve, substitute, retire, and recover with a memory of why each decision was made.</p>
+
+                <p>The catalogue gives procurement a technical spine and gives infrastructure a political context. It says that a model is more than an endpoint, because every endpoint carries assumptions about evidence, language, jurisdiction, cost, and responsibility. When those assumptions are written down and tested against local work, an institution can use global intelligence without surrendering the right to define its own standard.</p>
+
+                <p>A model may be rented from elsewhere. The judgment that places it inside an institution must be authored, evidenced, and kept portable.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Advancing price-performance for developers with GPT-5.6 in Kiro” (August 24, 2026; linked article: <em>https://openai.com/index/gpt-5-6-in-kiro</em>; description: GPT-5.6 helps developers plan, build, review, and test software with better price-performance).</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “The builder’s guide to GPT-5.6” (August 13, 2026; linked article: <em>https://openai.com/index/builders-guide-to-gpt-5-6</em>; description: startups use GPT-5.6 to build faster, more cost-efficient AI agents with smarter model selection and new Responses API capabilities).</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed” (August 13, 2026; linked article: <em>https://openai.com/index/previewing-ultrafast</em>; description: a new service tier runs GPT-5.6 Sol up to fourteen times faster and delivers up to 750 output tokens per second).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog: “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; title and meta description verified directly; description: graph-based workflows, human-in-the-loop orchestration, dynamic routing, and built-in resilience).</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">European Commission: “Drawing-up a General-Purpose AI Code of Practice” (accessed August 25, 2026; title and meta description verified directly; description: the first code received by the Commission details AI Act rules for providers of general-purpose AI models and models with systemic risks).</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Le catalogue de modèles fait partie de l'institution</h1>
+
+                <p>Une institution qui ne peut pas expliquer pourquoi elle a choisi un modèle plutôt qu'un autre ne peut pas expliquer entièrement ses propres décisions machine. Le choix peut apparaître dans un réglage de développeur, un tableau de bord fournisseur ou une règle de routage, alors que ses conséquences atteignent le budget, la frontière des données, la norme de qualité, la langue du service et la personne responsable du résultat. La sélection d'un modèle est devenue une question d'achat dotée d'une trace d'exécution.</p>
+
+                <p>Des signaux publics récents rendent ce déplacement mesurable. L'item RSS d'OpenAI du 24 août consacré à GPT-5.6 dans Kiro décrit un meilleur rapport prix-performance pour la planification, la construction, la revue et le test de logiciels. Son guide du 13 août destiné aux constructeurs décrit une sélection plus intelligente des modèles associée à de nouvelles capacités de l'API Responses. Une annonce distincte du 13 août présente en avant-première un service Ultrafast pour GPT-5.6 Sol, avec une vitesse jusqu'à quatorze fois supérieure et jusqu'à 750 tokens de sortie par seconde. La description directe par Google d'ADK Go 2.0 fournit le vocabulaire d'exécution autour des workflows en graphe, du routage dynamique, des contrôles humains et de la résilience. La description par la Commission européenne de son Code de pratique pour les modèles d'IA à usage général fournit une référence réglementaire pour les obligations des fournisseurs au titre de l'AI Act.</p>
+
+                <blockquote>
+                    <p>Un catalogue de modèles est la mémoire de l'institution sur ce que chaque machine peut faire de manière fiable, dans quelles conditions et à quel coût.</p>
+                </blockquote>
+
+                <h2>Le choix du modèle est une décision d'achat</h2>
+
+                <p>Un modèle est souvent présenté comme un composant interchangeable. L'interface reste stable, le prompt paraît similaire et le workflow semble continuer. L'institution fait l'expérience d'une réalité différente. Un changement de modèle peut modifier les sources citées, les langues traitées, les refus produits, les données conservées, la latence imposée, la charge de revue créée et les promesses commerciales que l'organisation peut soutenir sans danger.</p>
+
+                <p>Voilà pourquoi un catalogue de modèles doit côtoyer les dossiers d'achat et les politiques de fonctionnement. Il doit répondre aux questions qu'un acheteur sérieux pose avant d'approuver un fournisseur :</p>
+
+                <ul>
+                    <li><strong>Capacité :</strong> les tâches, langues, formats, outils et exigences de raisonnement qui ont été testés.</li>
+                    <li><strong>Preuves :</strong> les évaluations, jeux de sources, revues humaines et cas d'échec qui soutiennent l'affirmation de capacité.</li>
+                    <li><strong>Coût :</strong> le prix complet de l'inférence, du stockage, de la recherche, de l'intégration, de la revue, de la correction et de la connectivité locale.</li>
+                    <li><strong>Frontière :</strong> le lieu de traitement des données, leur durée de conservation, les clés qui contrôlent l'accès et la juridiction qui régit le parcours.</li>
+                    <li><strong>Comportement :</strong> la manière dont le modèle traite l'ambiguïté, le refus, l'incertitude, le contenu sensible et les demandes situées hors de son mandat.</li>
+                    <li><strong>Substitution :</strong> le modèle alternatif capable de reprendre le travail, les preuves à rejouer et les normes susceptibles de changer.</li>
+                    <li><strong>Responsable :</strong> la personne ou l'institution qui approuve le modèle, surveille sa dérive et retire le parcours.</li>
+                </ul>
+
+                <p>Le catalogue est utile parce qu'il conserve les relations entre ces champs. Un modèle rapide peut exiger davantage de revue humaine. Un modèle bon marché peut bien fonctionner en anglais et échouer dans une langue locale. Un modèle puissant peut traiter des contenus sensibles selon des conditions que l'institution ne peut pas accepter. Un modèle local peut coûter davantage par appel tout en réduisant le transfert transfrontalier, les corrections de traduction ou la dépendance à la connectivité. L'achat devient rationnel lorsque l'institution peut comparer le parcours complet.</p>
+
+                <h2>Le problème de substitution est un problème de continuité</h2>
+
+                <p>Les fournisseurs de modèles changent leurs prix, leurs niveaux de service, leurs limites de contexte, leur comportement de sécurité et leurs partenaires d'infrastructure. Les institutions modifient aussi leurs parcours selon les budgets, les lois et les classifications de données. La substitution appartient donc aux opérations ordinaires. La question est de savoir si un remplacement conserve la norme qui rendait le parcours initial acceptable.</p>
+
+                <p>Imaginons un service public de recherche qui utilise un modèle pour résumer des documents de politique en français et en wolof avant qu'un éditeur humain prépare une note publique. Un modèle de remplacement peut être plus rapide et moins coûteux, tout en aplatissant une distinction juridique, en perdant une citation ou en faisant passer un texte sensible par une autre juridiction. Le workflow peut continuer à s'achever avec succès au sens technique, tandis que la norme de l'institution a changé. Un catalogue de modèles rend ce changement visible avant que le nouveau parcours ne devienne la norme.</p>
+
+                <p>Les preuves de substitution doivent accompagner le parcours. Elles doivent enregistrer le jeu de tâches, les sorties acceptées, les échecs inacceptables, la décision du réviseur et la date d'expiration de la comparaison. Le dossier doit aussi nommer les dimensions qui ne peuvent pas être échangées. Un service de santé peut accepter une inférence plus lente pour préserver le traitement local. Un éditeur peut accepter un coût supérieur pour conserver les métadonnées de droits. Une coopérative financière peut privilégier la précision du rapprochement à la fluidité conversationnelle.</p>
+
+                <p>Ce dossier transforme la mobilité entre fournisseurs en mobilité institutionnelle. L'organisation peut changer de modèle sans perdre le raisonnement qui justifiait son choix précédent. Elle peut négocier avec un fournisseur depuis une position de connaissance. Elle peut maintenir un recours local sans prétendre que tous les modèles sont équivalents.</p>
+
+                <h2>Le routage du runtime a besoin du savoir du catalogue</h2>
+
+                <p>L'annonce de Google sur ADK Go 2.0 décrit des workflows en graphe, une orchestration avec humain dans la boucle, un routage dynamique, des nouvelles tentatives et une résilience intégrée. Ces primitives deviennent plus utiles lorsque le runtime peut lire un catalogue de modèles au lieu de traiter chaque parcours comme un point de terminaison opaque.</p>
+
+                <p>Un nœud de routage peut demander si le modèle est approuvé pour la classe de données, si son évaluation est encore à jour, si la tâche exige un contrôle dans une langue locale et si le budget disponible autorise le parcours. Une nouvelle tentative peut choisir un recours documenté au lieu de répéter le même échec. Un contrôle humain peut voir pourquoi le système a sélectionné le modèle et quelles preuves soutiennent la substitution. Une règle de retrait peut bloquer un parcours dont les conditions de confidentialité ou la fenêtre d'évaluation ont expiré.</p>
+
+                <p>Le catalogue se situe donc entre la charte de l'institution et son runtime. La charte répond à la question de ce que la machine est autorisée à faire. Le catalogue répond à celle du modèle autorisé à accomplir ce travail et des conditions prouvées qui l'accompagnent. La distinction compte parce qu'une autorité sans preuve sur le modèle est trop large, tandis qu'une preuve sur le modèle sans autorité reste sans direction.</p>
+
+                <p>La description publique par la Commission européenne du Code de pratique pour les modèles d'IA à usage général fournit une raison supplémentaire de conserver ce dossier. Les obligations du fournisseur et celles de l'institution se rencontrent au moment du déploiement. Un fournisseur peut documenter les caractéristiques d'un modèle général, tandis qu'un déployeur doit encore savoir comment ce modèle est entré dans un workflow précis, quelles données il a rencontrées, quelle revue l'entourait et quelle norme locale l'institution appliquait. Le catalogue relie l'information générale sur le modèle à une décision institutionnelle déterminée.</p>
+
+                <h2>Les institutions africaines ont besoin d'un catalogue écrit dans leurs propres conditions</h2>
+
+                <p>Les stacks d'IA importées arrivent souvent avec une grammaire d'achat importée. Cette grammaire chiffre l'accès dans une devise étrangère, concentre l'évaluation sur l'anglais, suppose une connectivité stable, centralise l'identité, traite la résidence des données comme un réglage cloud et conçoit les canaux de paiement et de support autour d'un marché qui peut ne pas ressembler à celui qui adopte le système.</p>
+
+                <p>Un catalogue orienté vers la souveraineté enregistre les conditions de fonctionnement qui déterminent l'utilité réelle d'un modèle. Il peut conserver des jeux de test dans les langues locales, la revue de traduction, le comportement en connectivité intermittente, les coûts de l'argent mobile ou du règlement bancaire, l'hébergement régional, la propriété des clés et les preuves demandées par une autorité publique ou une institution communautaire. Le catalogue donne aux institutions locales un moyen de comparer les parcours étrangers et domestiques selon les mêmes conditions.</p>
+
+                <p>C'est une voie constructive vers l'indépendance technologique. Les institutions africaines peuvent évaluer les modèles externes selon des champs définis localement, publier des schémas d'évaluation partagés et maintenir des parcours de secours qui préservent la langue et la juridiction. Un modèle mérite sa place dans le catalogue lorsqu'il respecte cette norme. Les réglages par défaut du fournisseur deviennent alors des données d'entrée, tandis que l'institution conserve la décision.</p>
+
+                <h2>Où la surface d'investissement s'élargit</h2>
+
+                <p>Si le choix d'un modèle devient une décision institutionnelle continue, la couche pertinente pour le capital se situe entre les fournisseurs de modèles et les workflows déployés :</p>
+
+                <ul>
+                    <li><strong>Registres de modèles et systèmes d'achat :</strong> catalogues qui relient les affirmations de capacité aux preuves d'évaluation, aux prix, aux conditions de données, aux responsables et aux dates d'expiration.</li>
+                    <li><strong>Harnais de substitution et de régression :</strong> systèmes qui comparent les modèles sur les tâches réelles de l'institution, ses langues, ses cas d'échec, sa charge de revue et ses exigences de politique.</li>
+                    <li><strong>Passerelles de modèles sensibles aux politiques :</strong> couches de routage qui appliquent les règles de données, de juridiction, de coût et d'approbation avant qu'un modèle ne reçoive une demande institutionnelle.</li>
+                    <li><strong>Assurance régionale des modèles :</strong> services d'évaluation indépendants et infrastructures locales de test pour les langues africaines, les dossiers publics, les workflows financiers et les contraintes de connectivité.</li>
+                    <li><strong>Services de continuité et de sortie des modèles :</strong> outils qui préservent prompts, jeux d'évaluation, décisions, preuves et parcours de secours lorsqu'un fournisseur change ses conditions ou qu'un client change d'architecture.</li>
+                </ul>
+
+                <p>La question de souscription est concrète : ce produit peut-il montrer pourquoi un modèle a été choisi, quelles preuves soutiennent ce choix, ce qui l'invaliderait et comment l'institution peut passer à un autre parcours sans perdre sa norme ? Un système qui répond à ces questions réduit la dépendance au fournisseur et rend les dépenses de modèles lisibles par la finance, les opérations, les régulateurs et les autorités locales.</p>
+
+                <h2>Le catalogue est un registre du jugement institutionnel</h2>
+
+                <p>La capacité des modèles continuera de progresser et leurs prix continueront de bouger. Une institution qui traite chaque changement comme une improvisation nouvelle accumulera un risque invisible. Une institution qui entretient un catalogue vivant peut comparer, approuver, substituer, retirer et reprendre un parcours en conservant la mémoire de chaque décision.</p>
+
+                <p>Le catalogue donne une ossature technique à l'achat et un contexte politique à l'infrastructure. Il indique qu'un modèle est plus qu'un point de terminaison, car chaque point de terminaison porte des hypothèses sur les preuves, la langue, la juridiction, le coût et la responsabilité. Lorsque ces hypothèses sont écrites et testées sur le travail local, une institution peut utiliser une intelligence mondiale sans abandonner le droit de définir sa propre norme.</p>
+
+                <p>Un modèle peut être loué ailleurs. Le jugement qui le place dans une institution doit être écrit, prouvé et conservé dans une forme portable.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d'OpenAI : « Advancing price-performance for developers with GPT-5.6 in Kiro » (24 août 2026 ; article lié : <em>https://openai.com/index/gpt-5-6-in-kiro</em> ; description : GPT-5.6 aide les développeurs à planifier, construire, revoir et tester des logiciels avec un meilleur rapport prix-performance).</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d'OpenAI : « The builder’s guide to GPT-5.6 » (13 août 2026 ; article lié : <em>https://openai.com/index/builders-guide-to-gpt-5-6</em> ; description : des startups utilisent GPT-5.6 pour construire des agents plus rapides et plus efficients grâce à une sélection plus intelligente des modèles et à de nouvelles capacités de l'API Responses).</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d'OpenAI : « Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed » (13 août 2026 ; article lié : <em>https://openai.com/index/previewing-ultrafast</em> ; description : un nouveau niveau de service exécute GPT-5.6 Sol jusqu'à quatorze fois plus vite et fournit jusqu'à 750 tokens de sortie par seconde).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog : « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; titre et méta-description vérifiés directement ; description : workflows en graphe, orchestration avec humain dans la boucle, routage dynamique et résilience intégrée).</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice" target="_blank" rel="noopener">Commission européenne : « Drawing-up a General-Purpose AI Code of Practice » (consulté le 25 août 2026 ; titre et méta-description vérifiés directement ; description : le premier code reçu par la Commission détaille les règles de l'AI Act applicables aux fournisseurs de modèles d'IA à usage général et aux modèles présentant des risques systémiques).</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>August 25, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
