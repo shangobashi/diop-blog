@@ -122,6 +122,7 @@
         'article.entry092':     { en: 'Diop Daily #092 — August 2026', fr: 'Diop Quotidien n°092 — Août 2026' },
         'article.entry093':     { en: 'Diop Daily #093 — August 2026', fr: 'Diop Quotidien n°093 — Août 2026' },
         'article.entry095':     { en: 'Diop Daily #095 — August 2026', fr: 'Diop Quotidien n°095 — Août 2026' },
+        'article.entry096':     { en: 'Diop Daily #096 — August 2026', fr: 'Diop Quotidien n°096 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
         'article.entry090':     { en: 'Diop Daily #090 — August 2026', fr: 'Diop Quotidien n°090 — Août 2026' },
@@ -138,6 +139,16 @@
     };
 
     var postTranslations = {
+'diop-daily-096': {
+    title: {
+        en: "Give the Machine a Back Office",
+        fr: "Donner un bureau de gestion à la machine"
+    },
+    excerpt: {
+        en: "As AI enters shared institutional work, the first durable control surface may be administration: permissions, membership, limits, usage, exceptions, and the records that keep machine action governable. The investable layer is the administration plane that turns a fleet of models and agents into an operated system without outsourcing local authority.",
+        fr: "À mesure que l'IA entre dans le travail institutionnel partagé, la première surface de contrôle durable pourrait être l'administration : permissions, membres, limites, usages, exceptions et dossiers qui rendent l'action machine gouvernable. La couche d'investissement est le plan d'administration qui transforme un parc de modèles et d'agents en système exploité sans externaliser l'autorité locale."
+    }
+},
 'diop-daily-095': {
     title: {
         en: "The Model Catalogue Is Part of the Institution",
