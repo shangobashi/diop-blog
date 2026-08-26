@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Machine Needs a Power Ledger — Diop Research</title>
+    <meta name="description" content="AI infrastructure is becoming an allocation problem for electricity, capacity, latency, cost, locality, and consequence. The strategic layer is a power ledger that lets institutions schedule inference without surrendering sovereignty to opaque capacity markets."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="18.36" x2="5.64" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry097">Diop Daily #097 — August 2026</div>
+                <div class="article__meta-line">
+                    <time>August 27, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>power-aware inference · capacity allocation · sovereign compute · institutional AI</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Machine Needs a Power Ledger</h1>
+
+                <p>Every serious AI system eventually meets a physical question: how much machine work can this institution afford to run, at which hour, through which route, with what consequence for the grid and the service? Model selection is usually recorded as a software decision. In practice, it is also a decision about electricity, cooling, network capacity, hardware availability, and the time at which an answer must arrive. The institution that cannot see those conditions cannot manage its intelligence budget.</p>
+
+                <p>Two OpenAI items published on August 25 make the movement visible from different angles. The RSS description for Jalapeño, a custom inference chip, emphasizes faster and more power-efficient inference, with higher throughput and lower latency for modern models. The same day’s “full stack behind abundant intelligence” describes chips, compute, models, and products as a compounding system that aims to deliver more useful intelligence at greater scale and lower cost. These are vendor descriptions, not a complete theory of infrastructure. They do establish a fact that buyers should take seriously: the unit economics of intelligence is being shaped below the model layer.</p>
+
+                <blockquote>
+                    <p>A model request consumes a place, a time, and a quantity of power before it becomes an answer.</p>
+                </blockquote>
+
+                <h2>Power is part of the execution context</h2>
+
+                <p>Software architecture often treats compute as an abstract pool. An API call enters a queue, a model returns tokens, and a billing system records usage. That abstraction is useful until an institution operates at a scale where capacity, electricity, or network access becomes a binding condition. At that point, the request carries a physical context whether the software records it or not.</p>
+
+                <p>A public service translating documents during a daytime peak, a newsroom generating transcripts overnight, and a research laboratory running a large batch have different power and scheduling profiles. They may use the same model while creating different costs and different risks. A local model on constrained hardware may be the correct route for a sensitive task during a connectivity interruption. A remote model may be the correct route for a time-critical request when local capacity is saturated. The route cannot be chosen by model quality alone.</p>
+
+                <p>This is where the power ledger begins. It records the conditions under which machine work is requested and completed:</p>
+
+                <ul>
+                    <li><strong>Capacity:</strong> available accelerator time, memory, network throughput, storage, and local fallback capacity.</li>
+                    <li><strong>Power:</strong> estimated energy draw, cooling demand, site constraints, and the timing of available electricity.</li>
+                    <li><strong>Consequence:</strong> the service level, deadline, safety requirement, and human review attached to the work.</li>
+                    <li><strong>Locality:</strong> where data, computation, keys, and operational records are allowed to remain.</li>
+                    <li><strong>Substitution:</strong> which model, device, or provider can take the work when the preferred route is unavailable.</li>
+                </ul>
+
+                <p>The ledger is an execution record, not an environmental report added after the architecture is complete; it lets the institution decide whether a request should run now, later, locally, remotely, at lower precision, or with a different model. It turns a hidden physical constraint into a visible policy variable.</p>
+
+                <h2>Abundance at the top can produce scarcity underneath</h2>
+
+                <p>OpenAI’s language of abundant intelligence describes a system in which improvements across chips, compute, models, and products reinforce one another. That compounding can reduce the cost of useful work. It can also increase demand for the underlying resources. When a cheaper or faster route makes more workflows economically possible, the institution may send more work into the system. The demand curve does not disappear because the individual call becomes cheaper.</p>
+
+                <p>This creates an infrastructure paradox. Efficiency can release capacity for new uses while raising the importance of capacity planning. A model that answers twice as fast can support a service that was previously impossible, yet the service may fail if its operator never reserved power, network headroom, review time, and storage for the additional volume. The successful organization therefore measures the complete route, including the capacity that a lower unit price makes tempting to consume.</p>
+
+                <p>The difference matters for African institutions operating under uneven grids, expensive connectivity, and limited access to specialized hardware. An imported dashboard may show tokens and dollars while hiding the practical question: when the connection weakens or the local generator is constrained, which public, educational, financial, or cultural work receives priority? A power ledger gives the institution a way to answer that question before an outage or price change answers it by force.</p>
+
+                <p>Power allocation is also a political decision. A ministry may reserve capacity for emergency translation and public records. A university may schedule large research runs around local generation and network availability. A cooperative may prioritize member services over speculative experimentation. A cultural archive may keep sensitive language data on local equipment even when a remote provider offers lower monetary cost. The ledger makes the rule explicit and gives the institution evidence when the rule is contested.</p>
+
+                <h2>Routing should read the ledger</h2>
+
+                <p>Google’s ADK Go 2.0 announcement describes graph-based workflows, human-in-the-loop orchestration, dynamic routing, retries, and built-in resilience. These primitives offer the execution grammar for a power-aware system. A routing node can read the current capacity and policy state before selecting a model. A graph can send a batch to a local accelerator when external connectivity is poor. A human checkpoint can approve a high-energy run when the work has scientific or public value. A retry can wait for a defined capacity window instead of multiplying a failing request.</p>
+
+                <p>The important design change is that the runtime should carry the reason for a route. “Model B was selected” is a weak record. “Model B was selected because local capacity was available, the data had to remain in the jurisdiction, the deadline permitted a slower path, and the estimated power envelope was within the institution’s limit” is an operational decision. It can be reviewed, compared with the outcome, and revised when the institution learns.</p>
+
+                <p>A power-aware router needs more than a live wattage number. It needs a policy model that links physical conditions to institutional priorities:</p>
+
+                <ol>
+                    <li>Classify the work by urgency, sensitivity, consequence, and expected review.</li>
+                    <li>Read current capacity, power, connectivity, price, and locality constraints.</li>
+                    <li>Select a route whose resource profile fits the work and whose evidence is current.</li>
+                    <li>Record the choice, the estimate, the actual consumption where available, and the result.</li>
+                    <li>Reconcile the estimate with the outcome so future scheduling improves.</li>
+                </ol>
+
+                <p>This record also prevents a common accounting error. A route that looks cheap at the API boundary may transfer cost into network traffic, local backup, human correction, cooling, procurement delay, or institutional risk. A route that looks expensive per call may preserve data locality, reduce translation repair, or keep a public service available during a regional disruption. The ledger must therefore record the cost of continuity, not only the cost of inference.</p>
+
+                <h2>Capacity is a sovereignty question</h2>
+
+                <p>The European Commission’s public approach to artificial intelligence identifies large-scale AI data and computing infrastructures as a strategic priority. That policy language confirms that compute is becoming a matter of public capability, not simply a procurement line for private software teams. The question for African institutions is how to participate in that infrastructure without reducing sovereignty to the possession of a server.</p>
+
+                <p>Sovereign compute means being able to make meaningful choices about allocation. It includes local or regional hardware, but it also includes scheduling rules, energy contracts, network routes, data boundaries, languages, maintenance capacity, and the authority to decide which work receives scarce capacity. A country can host a data center and remain dependent if its most important workloads are priced, prioritized, and governed elsewhere. Conversely, a smaller institution can increase its sovereignty by owning a clear allocation policy, a portable record of workloads, and a tested fallback path.</p>
+
+                <p>The ledger should be written in the institution’s own categories. A national research network may track capacity by laboratory and grant. A hospital may track it by clinical urgency and privacy class. A publisher may track it by rights status, deadline, and language. A multilingual public service may treat French, Wolof, Amharic, Hausa, Yoruba, or other languages as operational fields rather than metadata decoration. A route that is efficient in English but creates heavy repair work in a local language has consumed more institutional capacity than its token count reveals.</p>
+
+                <p>This is a place where African technical sovereignty can become concrete rather than symbolic. Build regional test sets. Measure local language repair. Record energy and connectivity constraints. Publish schemas for workload priority. Negotiate capacity agreements that include outage behaviour and data locality. Train operators who can read both the model trace and the power condition. The aim is to make computation answerable to the institution that bears its consequences.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If power and capacity become execution variables, the capital-relevant layer sits between infrastructure providers and the applications that consume intelligence:</p>
+
+                <ul>
+                    <li><strong>Power-aware inference control planes:</strong> routers that allocate work across models, devices, providers, and time windows using capacity, energy, latency, locality, and consequence.</li>
+                    <li><strong>Compute and energy observability:</strong> systems that connect workload identity to accelerator time, estimated energy, cooling, network use, cost, and service outcome.</li>
+                    <li><strong>Capacity reservation and failover:</strong> contracts and software that preserve critical workloads through hardware scarcity, connectivity loss, grid instability, or provider changes.</li>
+                    <li><strong>Regional scheduling infrastructure:</strong> locally governed compute exchanges for universities, public services, cultural institutions, and small enterprises that cannot each build a full stack.</li>
+                    <li><strong>Workload assurance:</strong> evaluation services that compare models and hardware on the institution’s real languages, data classes, deadlines, repair burden, and power envelope.</li>
+                </ul>
+
+                <p>The underwriting question is precise: can this system show which work consumed which capacity, why that route was selected, what the institution received in return, and what happens when the preferred route disappears? A product that answers those questions is closer to infrastructure than to an analytics dashboard. Its measurable outputs include avoided overload, successful local failover, accurate energy estimates, preserved data boundaries, reduced correction work, and the time required to reprioritize a fleet.</p>
+
+                <h2>The ledger gives abundance a discipline</h2>
+
+                <p>The future of AI will contain both cheaper intelligence and harder allocation decisions. Hardware improvements, model improvements, and product improvements can widen the field of possible work. Institutions still need a method for deciding which work runs, where it runs, and what resource claim it is allowed to make.</p>
+
+                <p>A power ledger is that method. It joins the abstract model request to the physical conditions that make the request possible. It lets a builder design for failure, a finance team see the full route cost, an operator defend a priority rule, and a public institution retain authority over the intelligence it consumes. It also gives investors a clearer object to underwrite: the control layer that turns scarce capacity into dependable institutional service.</p>
+
+                <p>Machines will become more capable. The institutions that endure will be the ones that know what their capability costs in power, place, time, and responsibility.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Jalapeño’s first results show industry-leading speed and efficiency in AI inference” (August 25, 2026; linked article: <em>https://openai.com/index/jalapeno-first-results</em>; description: Jalapeño is a custom inference chip delivering faster, more power-efficient inference, with higher throughput and lower latency for modern models).</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “The full stack behind abundant intelligence” (August 25, 2026; linked article: <em>https://openai.com/index/the-full-stack-behind-abundant-intelligence</em>; description: advances across chips, compute, models, and products compound to deliver more useful intelligence at greater scale and lower cost).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog: “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; title and meta description verified directly; description: graph workflows, human-in-the-loop orchestration, dynamic routing, and built-in resilience).</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" target="_blank" rel="noopener">European Commission: “European approach to artificial intelligence” (accessed August 27, 2026; policy page describes large-scale AI data and computing infrastructures as a strategic priority).</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La machine a besoin d'un registre énergétique</h1>
+
+                <p>Tout système d'IA sérieux finit par rencontrer une question physique : quelle quantité de travail machine cette institution peut-elle faire fonctionner, à quelle heure, par quel parcours, et avec quelles conséquences pour le réseau et le service ? La sélection d'un modèle est généralement enregistrée comme une décision logicielle. En pratique, il s'agit aussi d'une décision concernant l'électricité, le refroidissement, la capacité du réseau, la disponibilité du matériel et l'heure à laquelle une réponse doit arriver. Une institution qui ne voit pas ces conditions ne peut pas gérer son budget d'intelligence.</p>
+
+                <p>Deux items d'OpenAI publiés le 25 août rendent ce déplacement visible sous deux angles. La description RSS de Jalapeño, une puce d'inférence personnalisée, met l'accent sur une inférence plus rapide et plus économe en énergie, avec davantage de débit et une latence réduite pour les modèles modernes. Le texte du même jour consacré à la « full stack behind abundant intelligence » décrit les puces, le calcul, les modèles et les produits comme un système cumulatif qui vise une intelligence plus utile à plus grande échelle et à moindre coût. Ces descriptions de fournisseur ne constituent pas une théorie complète de l'infrastructure. Elles établissent néanmoins un fait que les acheteurs doivent prendre au sérieux : l'économie de l'intelligence se forme sous la couche du modèle.</p>
+
+                <blockquote>
+                    <p>Une requête de modèle consomme un lieu, un moment et une quantité d'énergie avant de devenir une réponse.</p>
+                </blockquote>
+
+                <h2>L'énergie fait partie du contexte d'exécution</h2>
+
+                <p>L'architecture logicielle traite souvent le calcul comme un pool abstrait. Un appel API entre dans une file, un modèle renvoie des tokens et un système de facturation enregistre l'usage. Cette abstraction est utile jusqu'au moment où une institution fonctionne à une échelle où la capacité, l'électricité ou l'accès au réseau deviennent des conditions contraignantes. À ce moment-là, la requête porte un contexte physique, que le logiciel l'enregistre ou non.</p>
+
+                <p>Un service public qui traduit des documents pendant un pic diurne, une rédaction qui génère des transcriptions pendant la nuit et un laboratoire qui lance un traitement massif ont des profils différents d'énergie et de planification. Ils peuvent utiliser le même modèle tout en créant des coûts et des risques différents. Un modèle local sur du matériel contraint peut être le bon parcours pour une tâche sensible pendant une interruption de connectivité. Un modèle distant peut être le bon parcours pour une demande urgente lorsque la capacité locale est saturée. Le parcours ne peut pas être choisi par la seule qualité du modèle.</p>
+
+                <p>C'est ici que commence le registre énergétique. Il enregistre les conditions dans lesquelles le travail machine est demandé et accompli :</p>
+
+                <ul>
+                    <li><strong>Capacité :</strong> temps d'accélérateur disponible, mémoire, débit réseau, stockage et capacité locale de secours.</li>
+                    <li><strong>Énergie :</strong> consommation estimée, besoin de refroidissement, contraintes du site et horaires de disponibilité de l'électricité.</li>
+                    <li><strong>Conséquence :</strong> niveau de service, délai, exigence de sûreté et revue humaine associés au travail.</li>
+                    <li><strong>Localité :</strong> lieux où les données, le calcul, les clés et les dossiers d'exploitation peuvent rester.</li>
+                    <li><strong>Substitution :</strong> modèle, appareil ou fournisseur capable de reprendre le travail lorsque le parcours préféré est indisponible.</li>
+                </ul>
+
+                <p>Le registre est un dossier d'exécution, non un rapport environnemental ajouté après la fin de l'architecture ; il permet à l'institution de décider si une requête doit fonctionner maintenant, plus tard, localement, à distance, avec une précision moindre ou avec un autre modèle. Il transforme une contrainte physique cachée en variable de politique visible.</p>
+
+                <h2>L'abondance au sommet peut produire une rareté en dessous</h2>
+
+                <p>Le vocabulaire d'OpenAI sur l'intelligence abondante décrit un système où les progrès des puces, du calcul, des modèles et des produits se renforcent mutuellement. Cette accumulation peut réduire le coût du travail utile. Elle peut aussi accroître la demande pour les ressources sous-jacentes. Lorsqu'un parcours moins cher ou plus rapide rend économiquement possibles de nouveaux workflows, l'institution peut envoyer davantage de travail dans le système. La courbe de demande ne disparaît pas parce que l'appel individuel coûte moins cher.</p>
+
+                <p>Un paradoxe d'infrastructure apparaît alors. L'efficacité peut libérer de la capacité pour de nouveaux usages tout en rendant la planification de la capacité plus importante. Un modèle qui répond deux fois plus vite peut soutenir un service auparavant impossible, mais ce service peut échouer si son opérateur n'a pas réservé d'électricité, de marge réseau, de temps de revue et de stockage pour le volume supplémentaire. L'organisation efficace mesure donc le parcours complet, y compris la capacité qu'un prix unitaire plus bas rend tentante de consommer.</p>
+
+                <p>Cette distinction compte pour les institutions africaines qui fonctionnent avec des réseaux inégaux, une connectivité coûteuse et un accès limité au matériel spécialisé. Un tableau de bord importé peut afficher des tokens et des dollars tout en cachant la question pratique : lorsque la connexion faiblit ou que le générateur local est limité, quel travail public, éducatif, financier ou culturel reçoit la priorité ? Un registre énergétique donne à l'institution un moyen de répondre avant qu'une panne ou une variation de prix ne le fasse à sa place.</p>
+
+                <p>La répartition de l'énergie est aussi une décision politique. Un ministère peut réserver une capacité aux traductions d'urgence et aux archives publiques. Une université peut planifier de grands calculs de recherche selon la production locale et la disponibilité du réseau. Une coopérative peut donner la priorité aux services de ses membres plutôt qu'à l'expérimentation spéculative. Une archive culturelle peut conserver des données linguistiques sensibles sur du matériel local même lorsqu'un fournisseur distant propose un coût monétaire inférieur. Le registre rend la règle explicite et fournit des preuves lorsque cette règle est contestée.</p>
+
+                <h2>Le routage doit lire le registre</h2>
+
+                <p>L'annonce de Google sur ADK Go 2.0 décrit des workflows en graphe, une orchestration avec humain dans la boucle, un routage dynamique, des nouvelles tentatives et une résilience intégrée. Ces primitives offrent la grammaire d'exécution d'un système conscient de l'énergie. Un nœud de routage peut lire l'état actuel de la capacité et des politiques avant de sélectionner un modèle. Un graphe peut envoyer un traitement vers un accélérateur local lorsque la connectivité externe est mauvaise. Un contrôle humain peut approuver un calcul énergivore lorsque le travail possède une valeur scientifique ou publique. Une nouvelle tentative peut attendre une fenêtre de capacité définie au lieu de multiplier une requête en échec.</p>
+
+                <p>Le changement de conception essentiel est que le runtime doit conserver la raison du parcours. « Le modèle B a été sélectionné » est un dossier faible. « Le modèle B a été sélectionné parce que la capacité locale était disponible, que les données devaient rester dans la juridiction, que le délai autorisait un parcours plus lent et que l'enveloppe énergétique estimée respectait la limite de l'institution » décrit une décision opérationnelle. Cette décision peut être examinée, comparée au résultat et révisée lorsque l'institution apprend.</p>
+
+                <p>Un routeur conscient de l'énergie a besoin de plus qu'un nombre instantané de watts. Il lui faut un modèle de politique qui relie les conditions physiques aux priorités de l'institution :</p>
+
+                <ol>
+                    <li>Classer le travail selon l'urgence, la sensibilité, la conséquence et la revue attendue.</li>
+                    <li>Lire les contraintes actuelles de capacité, d'énergie, de connectivité, de prix et de localité.</li>
+                    <li>Choisir un parcours dont le profil de ressources correspond au travail et dont les preuves sont à jour.</li>
+                    <li>Enregistrer le choix, l'estimation, la consommation réelle lorsqu'elle est disponible et le résultat.</li>
+                    <li>Comparer l'estimation au résultat afin d'améliorer la planification future.</li>
+                </ol>
+
+                <p>Ce dossier évite aussi une erreur comptable courante. Un parcours qui paraît bon marché à la frontière de l'API peut déplacer le coût vers le trafic réseau, la sauvegarde locale, la correction humaine, le refroidissement, le délai d'achat ou le risque institutionnel. Un parcours qui paraît coûteux par appel peut préserver la localité des données, réduire la correction de traduction ou maintenir un service public pendant une perturbation régionale. Le registre doit donc consigner le coût de la continuité, et pas seulement celui de l'inférence.</p>
+
+                <h2>La capacité est une question de souveraineté</h2>
+
+                <p>L'approche publique de la Commission européenne envers l'intelligence artificielle identifie les infrastructures de données et de calcul IA à grande échelle comme une priorité stratégique. Ce langage politique confirme que le calcul devient une capacité publique, et plus seulement une ligne d'achat pour les équipes logicielles privées. La question pour les institutions africaines est de participer à cette infrastructure sans réduire la souveraineté à la possession d'un serveur.</p>
+
+                <p>Le calcul souverain signifie pouvoir prendre des décisions importantes sur la répartition. Il comprend le matériel local ou régional, mais aussi les règles de planification, les contrats énergétiques, les routes réseau, les frontières de données, les langues, la capacité de maintenance et l'autorité qui décide quel travail reçoit une capacité rare. Un pays peut héberger un centre de données et rester dépendant si ses charges de travail les plus importantes sont tarifées, priorisées et gouvernées ailleurs. À l'inverse, une petite institution peut accroître sa souveraineté en possédant une politique claire de répartition, un dossier portable des charges de travail et un parcours de secours testé.</p>
+
+                <p>Le registre doit être écrit dans les propres catégories de l'institution. Un réseau national de recherche peut suivre la capacité par laboratoire et par subvention. Un hôpital peut la suivre par urgence clinique et par classe de confidentialité. Un éditeur peut la suivre par statut des droits, délai et langue. Un service public multilingue peut traiter le français, le wolof, l'amharique, le haoussa, le yoruba et d'autres langues comme des champs opérationnels plutôt que comme une décoration des métadonnées. Un parcours efficace en anglais mais qui crée un lourd travail de correction dans une langue locale a consommé davantage de capacité institutionnelle que son nombre de tokens ne le révèle.</p>
+
+                <p>La souveraineté technique africaine peut devenir concrète ici, plutôt que symbolique. Il faut construire des jeux de test régionaux, mesurer la correction dans les langues locales, enregistrer les contraintes d'énergie et de connectivité, publier des schémas de priorité des charges de travail, négocier des accords de capacité qui incluent le comportement en panne et la localité des données, et former des opérateurs capables de lire à la fois la trace du modèle et la condition énergétique. Le but est de rendre le calcul responsable devant l'institution qui en porte les conséquences.</p>
+
+                <h2>Où la surface d'investissement s'élargit</h2>
+
+                <p>Si l'énergie et la capacité deviennent des variables d'exécution, la couche pertinente pour le capital se situe entre les fournisseurs d'infrastructure et les applications qui consomment l'intelligence :</p>
+
+                <ul>
+                    <li><strong>Plans de contrôle d'inférence sensibles à l'énergie :</strong> routeurs répartissant le travail entre modèles, appareils, fournisseurs et créneaux selon la capacité, l'énergie, la latence, la localité et la conséquence.</li>
+                    <li><strong>Observabilité du calcul et de l'énergie :</strong> systèmes reliant l'identité d'une charge de travail au temps d'accélérateur, à l'énergie estimée, au refroidissement, au réseau, au coût et au résultat du service.</li>
+                    <li><strong>Réservation de capacité et reprise :</strong> contrats et logiciels qui préservent les charges critiques face à la rareté du matériel, à la perte de connectivité, à l'instabilité du réseau ou aux changements de fournisseur.</li>
+                    <li><strong>Infrastructures régionales de planification :</strong> échanges de calcul gouvernés localement pour les universités, services publics, institutions culturelles et petites entreprises qui ne peuvent pas chacune construire une pile complète.</li>
+                    <li><strong>Assurance des charges de travail :</strong> services évaluant les modèles et le matériel sur les langues, classes de données, délais, travaux de correction et enveloppes énergétiques réels de l'institution.</li>
+                </ul>
+
+                <p>La question de souscription est précise : ce système peut-il montrer quel travail a consommé quelle capacité, pourquoi ce parcours a été choisi, ce que l'institution a reçu en retour et ce qui se passe lorsque le parcours préféré disparaît ? Un produit qui répond à ces questions est plus proche de l'infrastructure que d'un tableau de bord analytique. Ses résultats mesurables comprennent la surcharge évitée, la reprise locale réussie, la précision des estimations d'énergie, le maintien des frontières de données, la réduction du travail de correction et le temps nécessaire pour reprioriser un parc.</p>
+
+                <h2>Le registre donne une discipline à l'abondance</h2>
+
+                <p>L'avenir de l'IA contiendra à la fois une intelligence moins coûteuse et des décisions de répartition plus difficiles. Les progrès du matériel, des modèles et des produits peuvent élargir le champ du travail possible. Les institutions auront toujours besoin d'une méthode pour décider quel travail fonctionne, où il fonctionne et quelle revendication de ressources il est autorisé à formuler.</p>
+
+                <p>Un registre énergétique est cette méthode. Il relie la requête abstraite du modèle aux conditions physiques qui la rendent possible. Il permet au bâtisseur de concevoir pour la panne, à l'équipe financière de voir le coût complet du parcours, à l'opérateur de défendre une règle de priorité et à l'institution publique de conserver son autorité sur l'intelligence qu'elle consomme. Il donne aussi aux investisseurs un objet plus clair à souscrire : la couche de contrôle qui transforme une capacité rare en service institutionnel fiable.</p>
+
+                <p>Les machines deviendront plus capables. Les institutions qui dureront seront celles qui sauront ce que leur capacité coûte en énergie, en lieu, en temps et en responsabilité.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d'OpenAI : « Jalapeño’s first results show industry-leading speed and efficiency in AI inference » (25 août 2026 ; article lié : <em>https://openai.com/index/jalapeno-first-results</em> ; description : Jalapeño est une puce d'inférence personnalisée offrant une inférence plus rapide et plus économe en énergie, avec davantage de débit et une latence réduite pour les modèles modernes).</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d'OpenAI : « The full stack behind abundant intelligence » (25 août 2026 ; article lié : <em>https://openai.com/index/the-full-stack-behind-abundant-intelligence</em> ; description : les progrès des puces, du calcul, des modèles et des produits se composent pour fournir une intelligence plus utile à plus grande échelle et à moindre coût).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog : « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; titre et méta-description vérifiés directement ; description : workflows en graphe, orchestration avec humain dans la boucle, routage dynamique et résilience intégrée).</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" target="_blank" rel="noopener">Commission européenne : « European approach to artificial intelligence » (consulté le 27 août 2026 ; la page de politique décrit les infrastructures de données et de calcul IA à grande échelle comme une priorité stratégique).</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>August 27, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

@@ -123,6 +123,7 @@
         'article.entry093':     { en: 'Diop Daily #093 — August 2026', fr: 'Diop Quotidien n°093 — Août 2026' },
         'article.entry095':     { en: 'Diop Daily #095 — August 2026', fr: 'Diop Quotidien n°095 — Août 2026' },
         'article.entry096':     { en: 'Diop Daily #096 — August 2026', fr: 'Diop Quotidien n°096 — Août 2026' },
+        'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
         'article.entry090':     { en: 'Diop Daily #090 — August 2026', fr: 'Diop Quotidien n°090 — Août 2026' },
@@ -139,6 +140,16 @@
     };
 
     var postTranslations = {
+'diop-daily-097': {
+    title: {
+        en: "The Machine Needs a Power Ledger",
+        fr: "La machine a besoin d'un registre énergétique"
+    },
+    excerpt: {
+        en: "AI infrastructure is becoming an allocation problem for electricity, capacity, latency, locality, and consequence. The strategic layer is a power-aware inference control plane that lets institutions schedule machine work without surrendering sovereignty to opaque capacity markets.",
+        fr: "L'infrastructure d'IA devient un problème de répartition de l'électricité, de la capacité, de la latence, de la localité et des conséquences. La couche stratégique est un plan de contrôle de l'inférence conscient de l'énergie, qui permet aux institutions de planifier le travail machine sans abandonner leur souveraineté à des marchés de capacité opaques."
+    }
+},
 'diop-daily-096': {
     title: {
         en: "Give the Machine a Back Office",
