@@ -123,6 +123,7 @@
         'article.entry093':     { en: 'Diop Daily #093 — August 2026', fr: 'Diop Quotidien n°093 — Août 2026' },
         'article.entry095':     { en: 'Diop Daily #095 — August 2026', fr: 'Diop Quotidien n°095 — Août 2026' },
         'article.entry096':     { en: 'Diop Daily #096 — August 2026', fr: 'Diop Quotidien n°096 — Août 2026' },
+        'article.entry098':     { en: 'Diop Daily #098 — August 2026', fr: 'Diop Quotidien n°098 — Août 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -140,6 +141,16 @@
     };
 
     var postTranslations = {
+'diop-daily-098': {
+    title: {
+        en: "The Release Desk Is the New Factory",
+        fr: "Le bureau de mise en production est la nouvelle usine"
+    },
+    excerpt: {
+        en: "As software creation spreads across roles, the scarce institutional layer shifts to release capacity: evidence, review, rollback, ownership, and the authority to admit machine-generated change into live work. The investable surface is the release desk that converts many proposals into admissible institutional action.",
+        fr: "À mesure que la création logicielle se diffuse entre les métiers, la couche institutionnelle rare se déplace vers la capacité de mise en production : preuves, revue, retour en arrière, responsabilité et autorité d'admettre une modification produite par une machine dans le travail réel. La surface d'investissement est le bureau de mise en production qui transforme de nombreuses propositions en actions institutionnelles admissibles."
+    }
+},
 'diop-daily-097': {
     title: {
         en: "The Machine Needs a Power Ledger",
