@@ -124,6 +124,7 @@
         'article.entry095':     { en: 'Diop Daily #095 — August 2026', fr: 'Diop Quotidien n°095 — Août 2026' },
         'article.entry096':     { en: 'Diop Daily #096 — August 2026', fr: 'Diop Quotidien n°096 — Août 2026' },
         'article.entry098':     { en: 'Diop Daily #098 — August 2026', fr: 'Diop Quotidien n°098 — Août 2026' },
+        'article.entry099':     { en: 'Diop Daily #099 — August 2026', fr: 'Diop Quotidien n°099 — Août 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -141,6 +142,16 @@
     };
 
     var postTranslations = {
+'diop-daily-099': {
+    title: {
+        en: "The Local Adapter",
+        fr: "L’adaptateur local"
+    },
+    excerpt: {
+        en: "General AI capability becomes institutionally useful through a local adapter that carries language, identity, jurisdiction, workflow, payment, and recovery conditions into the runtime. The investable layer is the adapter that makes external intelligence answerable to a particular institution without making that institution captive to one provider.",
+        fr: "La capacité générale de l’IA devient utile à une institution grâce à un adaptateur local qui transporte dans le runtime la langue, l’identité, la juridiction, le workflow, le paiement et les conditions de reprise. La couche d’investissement est l’adaptateur qui rend l’intelligence externe responsable devant une institution particulière sans la rendre captive d’un seul fournisseur."
+    }
+},
 'diop-daily-098': {
     title: {
         en: "The Release Desk Is the New Factory",
