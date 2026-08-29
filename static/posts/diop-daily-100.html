@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Exit Clause Is Part of the AI Stack — Diop Research</title>
+    <meta name="description" content="An AI deployment becomes institutional infrastructure only when it can survive a provider change. The exit clause is the portable layer of policies, evaluations, memory, contracts, and recovery that keeps an institution from becoming captive to its first AI supplier."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry100">Diop Daily #100 — August 2026</div>
+                <div class="article__meta-line">
+                    <time>August 30, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>provider exit · portability · institutional continuity · AI infrastructure</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Exit Clause Is Part of the AI Stack</h1>
+
+                <p>An institution that adopts an AI system acquires a relationship with a supplier, a runtime, and an evidence trail. The relationship includes prices, permissions, data handling, evaluation claims, support obligations, memory formats, and the conditions under which the supplier may change. The deployment becomes infrastructure when the institution can continue its work after one of those conditions changes. That ability should be designed before the first production request.</p>
+
+                <p>An OpenAI News RSS item dated August 28 records a concrete case. OpenAI announced a decision to wind down its contract providing models to Cursor following Cursor’s acquisition by SpaceX. The feed description is narrow and vendor-reported, so it supports a specific claim: a model relationship can become a material dependency when ownership changes. A system built around one provider must therefore account for corporate events as part of its runtime environment.</p>
+
+                <blockquote>
+                    <p>The strongest AI deployment is the one that can leave its first provider without leaving its institution.</p>
+                </blockquote>
+
+                <h2>Adoption creates a dependency graph</h2>
+
+                <p>AI procurement is often described as a choice between model quality, price, speed, and security. Those variables matter, but they describe the visible surface. Underneath them sits a dependency graph: application code, prompts, tool permissions, evaluation sets, data schemas, vector stores, conversation histories, reviewer practices, billing records, and people who know how to repair the system. A model change can touch every node in that graph.</p>
+
+                <p>Some dependencies are easy to see. A team may call a provider-specific API or rely on a proprietary tool format. Other dependencies accumulate quietly. A customer-support operation may develop its escalation language around one model’s behaviour. A research group may store retrieval metadata in a vendor-specific structure. A public service may train staff on a dashboard whose logs cannot be exported with their original meaning. Six months later, the institution has purchased a habit that is more difficult to move than the software itself.</p>
+
+                <p>Portability therefore means more than copying prompts into a new chat window. It means preserving the institutional objects that make machine work accountable:</p>
+
+                <ul>
+                    <li><strong>Policy:</strong> who may request work, which tools are permitted, what data classes are excluded, and when a human must decide.</li>
+                    <li><strong>Evidence:</strong> the test cases, evaluation thresholds, known failures, review notes, and approval records that define acceptable behaviour.</li>
+                    <li><strong>Memory:</strong> the durable context, terminology, correction history, and institutional records that a new provider must be able to interpret.</li>
+                    <li><strong>Provenance:</strong> the identity of the model, version, route, tools, source material, and operator associated with an output.</li>
+                    <li><strong>Recovery:</strong> the procedures, credentials, exports, fallbacks, and people required to resume work after a supplier or model disappears.</li>
+                </ul>
+
+                <p>These objects are the institution’s accumulated judgment. A migration that preserves only application code leaves the most valuable part behind. The system may still run, yet the organization has lost the evidence that tells it whether the replacement is equivalent, safer, or simply different in ways that matter.</p>
+
+                <h2>Exit belongs in the runtime</h2>
+
+                <p>Google’s announcement of ADK Go 2.0 describes graph-based workflows, human-in-the-loop orchestration, dynamic routing, retries, and built-in resilience. These capabilities are usually presented as ways to build more reliable multi-agent applications. They also provide the basic grammar of an exit-ready system.</p>
+
+                <p>A graph can send work to a second provider when the first route is unavailable. A human checkpoint can approve a migration when an evaluation result is ambiguous. A retry policy can distinguish a temporary capacity problem from a permanent contract termination. A state record can preserve the reason a route was selected and the evidence used to accept its output. The runtime becomes a place where transfer is rehearsed rather than a crisis invented at the moment of departure.</p>
+
+                <p>This requires a change in how teams test AI systems. A provider substitution test should ask questions such as:</p>
+
+                <ol>
+                    <li>Can the same task be executed through a second route without changing the institution’s policy boundary?</li>
+                    <li>Can reviewers compare the two outputs against the same local evaluation set and consequence threshold?</li>
+                    <li>Can the institution export memory, provenance, permissions, and correction history in a form another runtime can use?</li>
+                    <li>Can a provider be removed without breaking the record of why earlier decisions were made?</li>
+                    <li>Can operators complete the transition within the time allowed by the service’s public or commercial obligation?</li>
+                </ol>
+
+                <p>The answer cannot be inferred from a claim of API compatibility. Two models may accept the same request while producing different tool calls, refusal boundaries, language performance, or interpretations of an ambiguous record. Exit-readiness is an empirical property. It must be measured against the institution’s own tasks, languages, data classes, review capacity, and recovery deadlines.</p>
+
+                <h2>The contract has technical consequences</h2>
+
+                <p>The Cursor case should be read at the level of dependency management rather than corporate drama. A change in ownership altered the future of a model-supply relationship. That possibility exists in many forms: a vendor can change its price, retire a model, limit a region, alter retention terms, merge a product into another service, or change the conditions under which a tool may be called. Each event creates a technical question about what the institution can still operate.</p>
+
+                <p>Procurement documents often separate legal language from architecture diagrams. The separation is expensive. A termination period affects how much time an engineering team has to validate a substitute. An export right matters only if the export includes usable schemas and metadata. A service-level promise matters only if the institution can observe failure and invoke a fallback. A data-retention term matters only if operators can verify the actual lifecycle of records. The contract should describe capabilities that the runtime can test.</p>
+
+                <p>NIST’s AI Risk Management Framework offers a useful discipline here. Its Govern, Map, Measure, and Manage functions place accountability, context, measurement, and response in one continuous risk practice. Applied to provider dependence, the framework asks an institution to name its critical supplier assumptions, map the consequences of their failure, measure the behaviour of alternatives, and manage the transition before the assumption becomes an emergency. The legal and technical teams are working on the same risk surface, even when their documents use different vocabulary.</p>
+
+                <h2>African sovereignty requires a usable departure path</h2>
+
+                <p>For African institutions, provider exit is tied to more than commercial efficiency. Currency volatility, uneven connectivity, foreign data jurisdictions, changing regional availability, and limited access to specialized support can all turn a distant dependency into an operational constraint. A ministry, university, hospital, publisher, or cooperative needs the ability to change routes while preserving its language, records, authority, and public obligations.</p>
+
+                <p>This is where sovereignty becomes a technical practice. An institution does not gain meaningful control merely by buying a local server or signing a regional hosting agreement. It needs portable policies, local evaluation sets, operators who understand the migration path, and records that remain intelligible when a provider changes. A service that works in English through a foreign dashboard may still fail the moment a local language, mobile payment path, or jurisdictional rule becomes decisive.</p>
+
+                <p>The European Commission’s public approach to artificial intelligence connects research capacity, industrial capacity, trust, safety, and fundamental rights. The policy language is European, but the institutional lesson travels: AI capability requires surrounding capacity. African builders should treat provider independence as one part of that capacity. Regional compute, language resources, open evaluation sets, interoperable identity, payment rails, and trained maintainers give institutions choices that a model endpoint alone cannot provide.</p>
+
+                <p>The practical standard is simple to state. Every important AI workflow should have a documented departure path that a local operator can understand, test, and execute. That path should preserve the institution’s own categories rather than forcing them through the departing provider’s vocabulary.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If exit becomes a required property of institutional AI, the commercial surface sits between model suppliers and the organizations that bear the consequences of dependence:</p>
+
+                <ul>
+                    <li><strong>Exit-ready orchestration:</strong> control planes that route work across providers while preserving policy, state, evidence, and human authority.</li>
+                    <li><strong>Portable memory and provenance:</strong> export layers that carry correction history, terminology, source records, permissions, and model context into another runtime.</li>
+                    <li><strong>Substitution evaluation:</strong> test services that measure provider changes on local languages, real workflows, tool use, refusal behaviour, cost, latency, and review burden.</li>
+                    <li><strong>Dependency observability:</strong> systems that show which application functions, records, contracts, and operating habits would fail if a supplier changed its terms.</li>
+                    <li><strong>Regional continuity operators:</strong> infrastructure and service teams that provide local or multi-provider fallback for public, educational, financial, cultural, and commercial workloads.</li>
+                </ul>
+
+                <p>The underwriting question is precise: can the product reduce the time, uncertainty, and institutional memory lost during a provider change? Evidence might include a tested second route, a measured equivalence report, a portable export that reconstructs prior decisions, a lower recovery time, and a clear account of which functions remain unavailable during migration. A product that produces those records is closer to infrastructure than to a feature wrapper.</p>
+
+                <h2>Leave before you are forced to leave</h2>
+
+                <p>The AI market rewards visible capability, so buyers often delay the quieter work of preserving choice. That delay converts a supplier relationship into an institution-wide habit. The cost appears later as rushed migration, lost context, unverifiable outputs, and a sudden dependence on terms no operator can renegotiate.</p>
+
+                <p>Builders should make exit a release requirement. Investors should ask to see the second route, the export format, the evaluation comparison, the contract trigger, and the person responsible for the transition. African institutions should own the records and standards that make a provider change survivable. These demands place global capability inside an architecture that can be governed locally while preserving access to global models. They make provider independence a technical property of the institution rather than a promise hidden in procurement language.</p>
+
+                <p>An AI system earns the name infrastructure when it can carry an institution through change. The exit clause is part of the stack because continuity is part of intelligence.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Our decision on Cursor following its acquisition by SpaceX” (August 28, 2026; linked article: <em>https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex</em>; description: OpenAI’s decision to wind down its contract providing OpenAI models to Cursor following the acquisition).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog: “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; description: graph-based workflows, human-in-the-loop orchestration, dynamic routing, retries, and built-in resilience).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology: “AI Risk Management Framework” (page accessed August 30, 2026; the framework organizes AI risk work through Govern, Map, Measure, and Manage functions).</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" target="_blank" rel="noopener">European Commission: “European approach to artificial intelligence” (page accessed August 30, 2026; description: the EU approach connects excellence and trust by boosting research and industrial capacity while ensuring safety and fundamental rights).</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La clause de sortie fait partie de la pile IA</h1>
+
+                <p>Une institution qui adopte un système d’IA acquiert une relation avec un fournisseur, un runtime et une chaîne de preuves. Cette relation comprend les prix, les permissions, le traitement des données, les affirmations d’évaluation, les obligations de support, les formats de mémoire et les conditions dans lesquelles le fournisseur peut changer. Le déploiement devient une infrastructure lorsque l’institution peut poursuivre son travail après la modification de l’une de ces conditions. Cette capacité doit être conçue avant la première requête de production.</p>
+
+                <p>Un item du flux RSS d’OpenAI daté du 28 août en fournit un cas concret. OpenAI y annonce sa décision de mettre fin à son contrat de fourniture de modèles à Cursor après l’acquisition de Cursor par SpaceX. La description du flux est étroite et provient du fournisseur ; elle soutient donc une affirmation précise : une relation de fourniture de modèles peut devenir une dépendance matérielle lorsque la propriété change. Un système construit autour d’un seul fournisseur doit donc considérer les événements d’entreprise comme une partie de son environnement d’exécution.</p>
+
+                <blockquote>
+                    <p>Le déploiement d’IA le plus solide est celui qui peut quitter son premier fournisseur sans abandonner son institution.</p>
+                </blockquote>
+
+                <h2>L’adoption crée un graphe de dépendances</h2>
+
+                <p>Les achats d’IA sont souvent décrits comme un choix entre qualité du modèle, prix, vitesse et sécurité. Ces variables comptent, mais elles décrivent la surface visible. Sous cette surface se trouve un graphe de dépendances : code applicatif, prompts, permissions d’outils, jeux d’évaluation, schémas de données, bases vectorielles, historiques de conversation, pratiques de revue, dossiers de facturation et personnes qui savent réparer le système. Un changement de modèle peut toucher chacun de ces nœuds.</p>
+
+                <p>Certaines dépendances sont faciles à voir. Une équipe peut appeler une API propre à un fournisseur ou s’appuyer sur un format d’outil propriétaire. D’autres apparaissent silencieusement. Un service client peut développer son langage d’escalade autour du comportement d’un modèle. Un groupe de recherche peut stocker les métadonnées de récupération dans une structure propre au fournisseur. Un service public peut former ses agents sur un tableau de bord dont les journaux ne peuvent pas être exportés avec leur sens d’origine. Six mois plus tard, l’institution a acheté une habitude plus difficile à déplacer que le logiciel lui-même.</p>
+
+                <p>La portabilité signifie donc davantage que copier des prompts dans une nouvelle fenêtre de discussion. Elle consiste à préserver les objets institutionnels qui rendent le travail machine responsable :</p>
+
+                <ul>
+                    <li><strong>La politique :</strong> qui peut demander un travail, quels outils sont autorisés, quelles classes de données sont exclues et quand un humain doit décider.</li>
+                    <li><strong>Les preuves :</strong> cas de test, seuils d’évaluation, défaillances connues, notes de revue et dossiers d’approbation qui définissent le comportement acceptable.</li>
+                    <li><strong>La mémoire :</strong> contexte durable, terminologie, historique des corrections et dossiers institutionnels qu’un nouveau fournisseur doit pouvoir interpréter.</li>
+                    <li><strong>La provenance :</strong> identité du modèle, version, parcours, outils, sources et opérateur associés à une sortie.</li>
+                    <li><strong>La reprise :</strong> procédures, identifiants, exports, solutions de secours et personnes nécessaires pour reprendre le travail après la disparition d’un fournisseur ou d’un modèle.</li>
+                </ul>
+
+                <p>Ces objets constituent le jugement accumulé de l’institution. Une migration qui conserve seulement le code applicatif laisse derrière elle la partie la plus précieuse. Le système peut encore fonctionner, mais l’organisation a perdu les preuves qui lui indiquent si le remplacement est équivalent, plus sûr ou simplement différent d’une manière qui compte.</p>
+
+                <h2>La sortie appartient au runtime</h2>
+
+                <p>L’annonce de Google sur ADK Go 2.0 décrit des workflows en graphe, une orchestration avec humain dans la boucle, un routage dynamique, des nouvelles tentatives et une résilience intégrée. Ces capacités sont généralement présentées comme des moyens de construire des applications multi-agents plus fiables. Elles fournissent aussi la grammaire de base d’un système préparé à la sortie.</p>
+
+                <p>Un graphe peut envoyer le travail vers un second fournisseur lorsque le premier parcours est indisponible. Un point de contrôle humain peut approuver une migration lorsqu’un résultat d’évaluation est ambigu. Une politique de nouvelle tentative peut distinguer un problème temporaire de capacité d’une résiliation définitive du contrat. Un dossier d’état peut conserver la raison du choix d’un parcours et les preuves utilisées pour accepter sa sortie. Le runtime devient un lieu où le transfert est répété, plutôt qu’une crise inventée au moment du départ.</p>
+
+                <p>Cette logique exige une autre manière de tester les systèmes d’IA. Un test de substitution devrait poser des questions comme celles-ci :</p>
+
+                <ol>
+                    <li>La même tâche peut-elle être exécutée par un second parcours sans modifier la frontière de politique de l’institution ?</li>
+                    <li>Les réviseurs peuvent-ils comparer les deux sorties avec le même jeu d’évaluation local et le même seuil de conséquence ?</li>
+                    <li>L’institution peut-elle exporter mémoire, provenance, permissions et historique des corrections dans une forme utilisable par un autre runtime ?</li>
+                    <li>Un fournisseur peut-il être retiré sans briser le dossier des raisons pour lesquelles les décisions antérieures ont été prises ?</li>
+                    <li>Les opérateurs peuvent-ils achever la transition dans le délai autorisé par l’obligation publique ou commerciale du service ?</li>
+                </ol>
+
+                <p>La réponse ne peut pas être déduite d’une affirmation de compatibilité d’API. Deux modèles peuvent accepter la même requête tout en produisant des appels d’outils, des limites de refus, des performances linguistiques ou des interprétations différentes d’un dossier ambigu. La capacité de sortie est une propriété empirique. Elle doit être mesurée sur les tâches, les langues, les classes de données, la capacité de revue et les délais de reprise propres à l’institution.</p>
+
+                <h2>Le contrat a des conséquences techniques</h2>
+
+                <p>Le cas de Cursor doit être lu au niveau de la gestion des dépendances, et non comme un drame d’entreprise. Un changement de propriété a modifié l’avenir d’une relation d’approvisionnement en modèles. Cette possibilité existe sous plusieurs formes : un fournisseur peut modifier son prix, retirer un modèle, limiter une région, changer ses conditions de conservation, intégrer un produit à un autre service ou modifier les conditions d’appel d’un outil. Chaque événement crée une question technique sur ce que l’institution peut encore exploiter.</p>
+
+                <p>Les documents d’achat séparent souvent le langage juridique des schémas d’architecture. Cette séparation coûte cher. Un délai de résiliation détermine le temps dont dispose une équipe technique pour valider un substitut. Un droit d’exportation n’a de valeur que si l’export comprend des schémas et des métadonnées utilisables. Une promesse de niveau de service n’a de valeur que si l’institution peut observer la défaillance et activer une solution de secours. Une clause de conservation des données n’a de valeur que si les opérateurs peuvent vérifier le cycle réel des dossiers. Le contrat doit décrire des capacités que le runtime peut tester.</p>
+
+                <p>Le cadre de gestion des risques liés à l’IA du NIST fournit ici une discipline utile. Ses fonctions Govern, Map, Measure et Manage placent la responsabilité, le contexte, la mesure et la réponse dans une même pratique continue du risque. Appliqué à la dépendance envers un fournisseur, le cadre demande à l’institution de nommer ses hypothèses critiques, d’en cartographier les conséquences, de mesurer le comportement des alternatives et de gérer la transition avant que l’hypothèse ne devienne une urgence. Les équipes juridiques et techniques travaillent sur la même surface de risque, même si leurs documents utilisent des vocabulaires différents.</p>
+
+                <h2>La souveraineté africaine exige une voie de départ praticable</h2>
+
+                <p>Pour les institutions africaines, la sortie d’un fournisseur dépasse l’efficacité commerciale. La volatilité monétaire, les connectivités inégales, les juridictions étrangères pour les données, les disponibilités régionales changeantes et l’accès limité au support spécialisé peuvent transformer une dépendance distante en contrainte opérationnelle. Un ministère, une université, un hôpital, un éditeur ou une coopérative doit pouvoir changer de parcours tout en préservant sa langue, ses dossiers, son autorité et ses obligations publiques.</p>
+
+                <p>C’est ici que la souveraineté devient une pratique technique. Une institution ne gagne pas un contrôle réel en achetant simplement un serveur local ou en signant un accord d’hébergement régional. Elle a besoin de politiques portables, de jeux d’évaluation locaux, d’opérateurs qui comprennent le chemin de migration et de dossiers qui restent intelligibles lorsque le fournisseur change. Un service qui fonctionne en anglais dans un tableau de bord étranger peut encore échouer dès qu’une langue locale, un parcours de paiement mobile ou une règle juridictionnelle devient décisif.</p>
+
+                <p>L’approche publique de la Commission européenne envers l’intelligence artificielle relie capacité de recherche, capacité industrielle, confiance, sûreté et droits fondamentaux. Le langage politique est européen, mais la leçon institutionnelle circule : une capacité d’IA exige une capacité environnante. Les bâtisseurs africains doivent considérer l’indépendance vis-à-vis des fournisseurs comme une partie de cette capacité. Le calcul régional, les ressources linguistiques, les jeux d’évaluation ouverts, l’identité interopérable, les rails de paiement et les mainteneurs formés donnent aux institutions des choix qu’un endpoint de modèle ne peut pas fournir seul.</p>
+
+                <p>La norme pratique est simple à formuler. Chaque workflow d’IA important doit disposer d’une voie de départ documentée qu’un opérateur local peut comprendre, tester et exécuter. Cette voie doit préserver les propres catégories de l’institution au lieu de les faire passer par le vocabulaire du fournisseur sortant.</p>
+
+                <h2>Où la surface d’investissement s’élargit</h2>
+
+                <p>Si la sortie devient une propriété requise de l’IA institutionnelle, la surface commerciale se situe entre les fournisseurs de modèles et les organisations qui portent les conséquences de la dépendance :</p>
+
+                <ul>
+                    <li><strong>Orchestration préparée à la sortie :</strong> plans de contrôle qui routent le travail entre fournisseurs tout en préservant politique, état, preuves et autorité humaine.</li>
+                    <li><strong>Mémoire et provenance portables :</strong> couches d’export transportant historique des corrections, terminologie, dossiers sources, permissions et contexte de modèle vers un autre runtime.</li>
+                    <li><strong>Évaluation de substitution :</strong> services mesurant les changements de fournisseur sur les langues locales, les workflows réels, l’usage des outils, le comportement de refus, le coût, la latence et la charge de revue.</li>
+                    <li><strong>Observabilité des dépendances :</strong> systèmes montrant quelles fonctions applicatives, quels dossiers, quels contrats et quelles habitudes d’exploitation échoueraient si un fournisseur modifiait ses conditions.</li>
+                    <li><strong>Opérateurs de continuité régionale :</strong> infrastructures et équipes de service fournissant un secours local ou multi-fournisseur aux charges publiques, éducatives, financières, culturelles et commerciales.</li>
+                </ul>
+
+                <p>La question de souscription est précise : le produit réduit-il le temps, l’incertitude et la mémoire institutionnelle perdus lors d’un changement de fournisseur ? Les preuves peuvent inclure un second parcours testé, un rapport d’équivalence mesuré, un export portable qui reconstitue les décisions antérieures, un temps de reprise inférieur et un compte clair des fonctions qui restent indisponibles pendant la migration. Un produit qui produit ces dossiers est plus proche de l’infrastructure que d’une simple surcouche fonctionnelle.</p>
+
+                <h2>Partir avant d’y être forcé</h2>
+
+                <p>Le marché de l’IA récompense la capacité visible, si bien que les acheteurs retardent souvent le travail plus discret qui préserve le choix. Ce retard transforme une relation de fournisseur en habitude à l’échelle de l’institution. Le coût apparaît ensuite sous forme de migration précipitée, de contexte perdu, de sorties invérifiables et de dépendance soudaine à des conditions qu’aucun opérateur ne peut renégocier.</p>
+
+                <p>Les bâtisseurs doivent faire de la sortie une exigence de release. Les investisseurs doivent demander à voir le second parcours, le format d’export, la comparaison d’évaluation, le déclencheur contractuel et la personne responsable de la transition. Les institutions africaines doivent posséder les dossiers et les normes qui rendent un changement de fournisseur supportable. Ces exigences placent la capacité mondiale dans une architecture gouvernable localement tout en conservant l’accès aux modèles mondiaux. Elles font de l’indépendance vis-à-vis des fournisseurs une propriété technique de l’institution plutôt qu’une promesse cachée dans le langage des achats.</p>
+
+                <p>Un système d’IA mérite le nom d’infrastructure lorsqu’il peut accompagner une institution à travers le changement. La clause de sortie fait partie de la pile parce que la continuité fait partie de l’intelligence.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « Our decision on Cursor following its acquisition by SpaceX » (28 août 2026 ; article lié : <em>https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex</em> ; description : décision d’OpenAI de mettre fin à son contrat de fourniture de modèles à Cursor après son acquisition).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog : « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; description : workflows en graphe, orchestration avec humain dans la boucle, routage dynamique, nouvelles tentatives et résilience intégrée).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology : « AI Risk Management Framework » (page consultée le 30 août 2026 ; le cadre organise la gestion des risques IA autour des fonctions Govern, Map, Measure et Manage).</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" target="_blank" rel="noopener">Commission européenne : « European approach to artificial intelligence » (page consultée le 30 août 2026 ; description : l’approche européenne relie excellence et confiance en renforçant la recherche et la capacité industrielle tout en garantissant la sûreté et les droits fondamentaux).</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>August 30, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

@@ -125,6 +125,7 @@
         'article.entry096':     { en: 'Diop Daily #096 — August 2026', fr: 'Diop Quotidien n°096 — Août 2026' },
         'article.entry098':     { en: 'Diop Daily #098 — August 2026', fr: 'Diop Quotidien n°098 — Août 2026' },
         'article.entry099':     { en: 'Diop Daily #099 — August 2026', fr: 'Diop Quotidien n°099 — Août 2026' },
+        'article.entry100':     { en: 'Diop Daily #100 — August 2026', fr: 'Diop Quotidien n°100 — Août 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -142,6 +143,16 @@
     };
 
     var postTranslations = {
+'diop-daily-100': {
+    title: {
+        en: "The Exit Clause Is Part of the AI Stack",
+        fr: "La clause de sortie fait partie de la pile IA"
+    },
+    excerpt: {
+        en: "An AI deployment becomes institutional infrastructure when it can survive a provider change. The investable layer is the portable policy, memory, provenance, evaluation, and recovery system that lets an institution leave its first supplier without losing its own judgment.",
+        fr: "Un déploiement d’IA devient une infrastructure institutionnelle lorsqu’il peut survivre à un changement de fournisseur. La couche d’investissement est le système portable de politiques, de mémoire, de provenance, d’évaluation et de reprise qui permet à une institution de quitter son premier fournisseur sans perdre son propre jugement."
+    }
+},
 'diop-daily-099': {
     title: {
         en: "The Local Adapter",
