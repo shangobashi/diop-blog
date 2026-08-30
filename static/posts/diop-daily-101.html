@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Catalog Is a Contract with the Machine — Diop Research</title>
+    <meta name="description" content="As agents enter commerce, a catalog becomes more than a list of products. It becomes a machine-readable contract carrying identity, price, availability, policy, provenance, and the conditions under which a transaction may proceed."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry101">Diop Daily #101 — August 2026</div>
+                <div class="article__meta-line">
+                    <time>August 31, 2026</time>
+                    <span>·</span>
+                    <span data-rt="11">11 min read</span>
+                    <span>·</span>
+                    <span>agent commerce · product data · provenance · African market infrastructure</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Catalog Is a Contract with the Machine</h1>
+
+                <p>A catalog was built for browsing. An agent approaches it as a set of claims that must be compared, checked, and acted upon. That change gives the ordinary product page a second responsibility: it must explain an offer to a machine that may search, negotiate, purchase, schedule, or hand the decision back to a person.</p>
+
+                <p>The public signals are now concrete enough to study. The W3C announced a September 8–9 workshop with GS1 on e-commerce for humans and AI agents, explicitly focusing on the experience of creating content with agents in mind. OpenAI’s July 30 RSS item about avatarin describes a GPT-Realtime retail agent giving shoppers multilingual support around the clock. Google’s A2A work and its ADK Go 2.0 runtime describe the coordination layer through which agents can hand work to one another and move through graph-based, human-approved workflows. These sources describe different layers, yet they touch the same commercial object: the information surface that lets a machine understand what can be bought, under which terms, and with what evidence.</p>
+
+                <blockquote>
+                    <p>The next storefront is a document that can state its own identity, conditions, and limits before an agent recommends it.</p>
+                </blockquote>
+
+                <h2>The page now has a second reader</h2>
+
+                <p>Human shoppers forgive ambiguity because they can ask a seller. They can infer that a photograph shows the larger package, notice that a delivery promise excludes their region, or understand that “traditional” describes a method rather than a certification. A machine cannot safely fill every gap with common sense. It needs the merchant’s claims in forms that can be retrieved, compared, cited, and tested.</p>
+
+                <p>This makes product data part of the execution path. An agent looking for a replacement component must distinguish compatible dimensions from marketing language. An assistant buying food must resolve unit size, ingredients, stock, delivery area, substitution rules, and payment conditions. An institution procuring equipment must compare warranty, maintenance, tax, delivery, and authorization requirements. The catalog becomes the first policy boundary of the transaction.</p>
+
+                <p>The implication is architectural. A commerce system now has at least two surfaces: the visual interface that persuades and assists a person, and the structured interface that lets a machine form a bounded proposition. The second surface cannot be treated as a thin metadata layer added after the page is designed. It carries the fields on which an agent decides whether to continue.</p>
+
+                <h2>What the machine needs to know before it can sell</h2>
+
+                <p>A useful agent-readable catalog carries more than a product name and a price. It carries the conditions that allow a recommendation to become an accountable action:</p>
+
+                <ul>
+                    <li><strong>Identity:</strong> who publishes the offer, who fulfills it, which brand or producer is responsible, and how a buyer can distinguish an authorized seller from an imitator.</li>
+                    <li><strong>Object:</strong> what is being sold, in which unit, with which dimensions, ingredients, versions, compatibility limits, and meaningful variations.</li>
+                    <li><strong>Availability:</strong> where the object can be delivered or collected, when stock was last checked, what quantity is available, and what happens when the stated supply changes.</li>
+                    <li><strong>Terms:</strong> price, currency, tax, shipping, returns, warranty, subscription conditions, payment methods, and the point at which a quotation expires.</li>
+                    <li><strong>Permission:</strong> which actions an agent may take automatically, which require confirmation, and which must be handed to a named person or department.</li>
+                    <li><strong>Evidence:</strong> the source of each material claim, the time it was updated, the applicable certification or test, and the route for correcting an error.</li>
+                </ul>
+
+                <p>These fields describe a contract in the practical sense: a bounded statement of what one party is offering and what another party may rely upon. The contract can remain human-readable while also being expressed in structured data. What matters is that a machine can tell the difference between a fact, an estimate, a promotion, a condition, and an unanswered question.</p>
+
+                <p>Commerce agents will expose the cost of missing fields quickly. When a catalog omits delivery territory, the agent either guesses or stops. When a price lacks currency or validity, the agent cannot compare it honestly. When the return policy is hidden in an image, the buyer’s risk has been transferred into an opaque interpretation step. The quality of agent commerce will therefore depend less on fluent conversation than on the integrity of the underlying offer record.</p>
+
+                <h2>A handoff is not a sale</h2>
+
+                <p>Google’s A2A and ADK Go 2.0 material clarifies another part of the problem. A commercial agent rarely completes every step alone. One agent may discover products, another may verify eligibility, a payment service may authorize the charge, a logistics system may schedule delivery, and a human may approve a high-value purchase. The path is a graph of responsibilities.</p>
+
+                <p>That graph needs a common account of the object moving through it. If the discovery agent passes a product name without its version, the verification agent may inspect the wrong thing. If the payment step loses the currency or expiry time, the buyer may approve a different amount. If the logistics step receives an address without delivery constraints, a successful API call can still produce an impossible promise. Handoff protocols are useful when they preserve the meaning and authority of the transaction, not only when they pass messages.</p>
+
+                <p>The merchant’s catalog is therefore part of the protocol. It gives each agent a stable object to carry, a source to cite, and conditions to preserve. The product identifier, offer identifier, seller identity, price, currency, availability timestamp, delivery promise, and approval state should survive the handoff. An agent that cannot explain which version of an offer it used cannot provide a reliable receipt afterward.</p>
+
+                <p>This is where the distinction between recommendation and execution becomes important. A recommendation can tolerate an explicit uncertainty if a person evaluates it. An automated purchase requires a permission boundary and a record of the claims that justified the action. The catalog supplies the initial evidence; the transaction system must retain it as the decision moves across services.</p>
+
+                <h2>Provenance belongs in the merchandise</h2>
+
+                <p>The provenance question is usually associated with photographs, video, and written media. Commerce brings it into the object being bought. A customer may need to know who made a product, where it was assembled, which materials it contains, whether a certificate applies to this batch, or whether a repair part is an authorized replacement. Those are provenance claims with commercial consequences.</p>
+
+                <p>The W3C’s workshop with GS1 is significant at the standards level because it treats e-commerce content as a subject for joint work between human-facing and agent-facing systems. The aim is to make the offer legible across the systems that discover, compare, authorize, and fulfill it, while keeping the storefront readable for people.</p>
+
+                <p>For an African merchant, provenance also carries place and language. A cooperative may need to identify a producer group, a harvest period, a processing method, and a settlement route. A publisher may need to distinguish a licensed digital edition from an unauthorized scan. A craft business may need to attach a maker, material, region, and repair instruction in more than one language. If the platform’s default categories cannot express those distinctions, the machine will treat the omission as neutrality. It will not be neutral; it will be a loss of economic and cultural information.</p>
+
+                <p>Local ownership of product data is therefore a sovereignty issue. The merchant should be able to export the offer record, correct it, expose it through more than one channel, and decide which agent may act on it. A foreign marketplace can provide distribution without owning the definition of the object. The boundary must be explicit.</p>
+
+                <h2>African Commerce Has Its Own Market Grammar</h2>
+
+                <p>A catalog designed for agent commerce in Africa must account for conditions that are often treated as edge cases elsewhere: mobile money, cash-on-delivery, intermittent connectivity, regional delivery zones, multilingual search, informal business names, tax differences, shared phone numbers, and the need to confirm a transaction through a person. These are not awkward exceptions to be cleaned away. They are part of the market’s actual grammar.</p>
+
+                <p>An agent that searches only standardized English product names will miss goods whose economic identity is carried by a local term. An agent that assumes one stable address format will misroute a delivery. An agent that treats card payment as the default will exclude a buyer who can pay through a mobile wallet or an assisted merchant. A local catalog layer can encode these conditions while still exposing interoperable product identifiers to global discovery systems.</p>
+
+                <p>This is one route toward digital sovereignty that does not require isolation. African builders can own the vocabulary, seller identity, payment rules, delivery logic, and correction process while allowing external agents to discover and request the offer. The objective is a market in which local institutions are legible to machines without having to surrender the terms of legibility to a distant platform.</p>
+
+                <p>The work begins with a disciplined inventory:</p>
+
+                <ol>
+                    <li>Define the product and offer identifiers that remain stable when a marketplace, model, or payment provider changes.</li>
+                    <li>Record prices, currencies, availability, delivery constraints, returns, warranties, and permissions as explicit fields rather than prose hidden in a page.</li>
+                    <li>Attach local names, translations, producer identities, provenance claims, and correction routes to the same offer record.</li>
+                    <li>Test the record through more than one agent and more than one payment or fulfillment path.</li>
+                    <li>Preserve a receipt that shows which claims and permissions were active when the transaction was authorized.</li>
+                </ol>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If agents become participants in commerce, the capital-relevant infrastructure sits between the storefront and the model:</p>
+
+                <ul>
+                    <li><strong>Agent-readable catalog platforms:</strong> systems that let merchants publish structured products, offers, conditions, and permissions across storefronts and agent channels.</li>
+                    <li><strong>Offer identity and provenance:</strong> registries that bind a product, seller, batch, certification, and source record to a stable object an agent can carry through a transaction.</li>
+                    <li><strong>Commerce policy engines:</strong> controls that decide when an agent may recommend, reserve, purchase, refund, or escalate, with thresholds tied to price, risk, identity, and jurisdiction.</li>
+                    <li><strong>Multilingual and local-market data layers:</strong> terminology, translation memory, seller resolution, address interpretation, mobile-money support, and offline synchronization for markets that do not fit a single global template.</li>
+                    <li><strong>Machine-readable receipts:</strong> records that preserve the offer version, evidence, permissions, approvals, payment state, and fulfillment commitments behind an agent-mediated purchase.</li>
+                </ul>
+
+                <p>The underwriting question is specific: does the product reduce the uncertainty between a machine’s recommendation and a transaction that a buyer, seller, and institution can defend? Evidence might include fewer failed handoffs, lower correction rates, better conversion from discovery to authorized purchase, faster reconciliation, clearer returns, higher coverage of local-language searches, and a receipt that a human can audit without reconstructing the entire conversation.</p>
+
+                <p>A catalog platform earns infrastructure status when it becomes portable across agents and marketplaces while preserving the merchant’s own definitions. A polished interface may attract attention, but the durable value sits in the record that survives a new model, a new channel, a new payment route, or a dispute.</p>
+
+                <h2>Write the offer so it can be inherited</h2>
+
+                <p>The machine-readable catalog is a new publishing discipline. It asks the merchant to state what the product is, who stands behind it, where it can move, what it costs, which evidence supports the claim, and which actions require consent. It asks the platform to carry those statements through discovery, handoff, authorization, and fulfillment without turning ambiguity into false certainty.</p>
+
+                <p>For African institutions, this discipline can connect commerce to sovereignty. Product language, seller identity, payment practice, and local provenance become operating assets that can travel across providers without disappearing into a platform’s private vocabulary. The market remains open to global intelligence while the terms of local participation remain owned by the people who produce and exchange value.</p>
+
+                <p>The storefront of the agent economy will be built from records that can be read twice: once by a person deciding whether to trust the offer, and once by a machine deciding what it is permitted to do. A catalog becomes a contract when both readers can see the same object, conditions, and evidence.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/" target="_blank" rel="noopener">W3C News: “Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents” (published June 1, 2026; workshop scheduled for September 8–9, 2026; description: sharing experience of creating content with AI agents in mind, with e-commerce as a focus).</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “How avatarin built a 24/7 retail agent with GPT-Realtime” (July 30, 2026; linked article: <em>https://openai.com/index/avatarin</em>; description: avatarin uses GPT-Realtime to provide multilingual support for Yamada Denki shoppers).</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog: “How A2A is Building a World of Collaborative Agents” (June 18, 2026; description: secure agent handoffs and scalable collaborative workflows for a shared agent ecosystem).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog: “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; description: graph-based workflows, human-in-the-loop orchestration, dynamic routing, and built-in resilience).</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Un catalogue est un contrat avec la machine</h1>
+
+                <p>Un catalogue était conçu pour la consultation. Un agent l’aborde comme un ensemble d’affirmations à comparer, à vérifier et à mettre en acte. Cette transformation donne à la page produit une seconde responsabilité : elle doit expliquer une offre à une machine qui peut rechercher, négocier, acheter, planifier ou rendre la décision à une personne.</p>
+
+                <p>Les signaux publics sont désormais assez concrets pour être étudiés. Le W3C a annoncé un atelier avec GS1 les 8 et 9 septembre sur le commerce électronique pour les humains et les agents d’IA, en mettant explicitement l’accent sur la création de contenus pensés avec les agents. L’item RSS d’OpenAI du 30 juillet consacré à avatarin décrit un agent commercial fondé sur GPT-Realtime qui fournit une assistance multilingue aux clients en continu. Les travaux de Google sur A2A et le runtime ADK Go 2.0 décrivent la couche de coordination par laquelle des agents peuvent se transmettre une tâche et parcourir des workflows en graphe avec approbation humaine. Ces sources décrivent des couches différentes, mais elles touchent au même objet commercial : la surface d’information qui permet à une machine de comprendre ce qui peut être acheté, selon quelles conditions et avec quelles preuves.</p>
+
+                <blockquote>
+                    <p>La prochaine vitrine sera un document capable d’énoncer sa propre identité, ses conditions et ses limites avant qu’un agent ne la recommande.</p>
+                </blockquote>
+
+                <h2>La page a désormais un second lecteur</h2>
+
+                <p>Les acheteurs humains pardonnent l’ambiguïté parce qu’ils peuvent interroger un vendeur. Ils peuvent comprendre qu’une photographie montre le grand conditionnement, remarquer qu’une promesse de livraison exclut leur région ou saisir que « traditionnel » décrit une méthode plutôt qu’une certification. Une machine ne peut pas combler chaque lacune par le bon sens. Elle a besoin que les affirmations du commerçant soient formulées dans des formes qu’elle peut retrouver, comparer, citer et tester.</p>
+
+                <p>Les données produit font donc partie du parcours d’exécution. Un agent qui cherche une pièce de rechange doit distinguer les dimensions compatibles du langage publicitaire. Un assistant qui achète un aliment doit résoudre la taille de l’unité, les ingrédients, le stock, la zone de livraison, les règles de substitution et les conditions de paiement. Une institution qui achète un équipement doit comparer la garantie, la maintenance, les taxes, la livraison et les autorisations nécessaires. Le catalogue devient la première frontière de politique de la transaction.</p>
+
+                <p>L’implication est architecturale. Un système de commerce possède désormais au moins deux surfaces : l’interface visuelle qui persuade et aide une personne, et l’interface structurée qui permet à une machine de former une proposition bornée. La seconde ne peut pas être traitée comme une mince couche de métadonnées ajoutée après la conception de la page. Elle porte les champs sur lesquels un agent décide de poursuivre.</p>
+
+                <h2>Ce que la machine doit savoir avant de vendre</h2>
+
+                <p>Un catalogue utilisable par un agent porte plus qu’un nom de produit et un prix. Il porte les conditions qui permettent à une recommandation de devenir une action responsable :</p>
+
+                <ul>
+                    <li><strong>Identité :</strong> qui publie l’offre, qui l’exécute, quelle marque ou quel producteur en répond et comment l’acheteur distingue un vendeur autorisé d’une imitation.</li>
+                    <li><strong>Objet :</strong> ce qui est vendu, dans quelle unité, avec quelles dimensions, quels ingrédients, quelles versions, quelles compatibilités et quelles variations significatives.</li>
+                    <li><strong>Disponibilité :</strong> où l’objet peut être livré ou retiré, quand le stock a été vérifié, quelle quantité est disponible et ce qui se passe lorsque l’offre change.</li>
+                    <li><strong>Conditions :</strong> prix, devise, taxes, livraison, retours, garantie, abonnement, moyens de paiement et moment où un devis expire.</li>
+                    <li><strong>Permission :</strong> les actions qu’un agent peut effectuer automatiquement, celles qui exigent une confirmation et celles qui doivent être transmises à une personne ou à un service nommé.</li>
+                    <li><strong>Preuves :</strong> la source de chaque affirmation importante, sa date de mise à jour, la certification ou le test applicable et le chemin de correction en cas d’erreur.</li>
+                </ul>
+
+                <p>Ces champs décrivent un contrat au sens pratique : une déclaration bornée de ce qu’une partie propose et de ce sur quoi l’autre peut s’appuyer. Le contrat peut rester lisible par un humain tout en étant exprimé dans des données structurées. L’essentiel est qu’une machine puisse distinguer un fait, une estimation, une promotion, une condition et une question sans réponse.</p>
+
+                <p>Le commerce agentique révélera rapidement le coût des champs manquants. Si un catalogue ne précise pas la zone de livraison, l’agent devine ou s’arrête. Si un prix ne comporte ni devise ni durée de validité, l’agent ne peut pas le comparer honnêtement. Si la politique de retour est cachée dans une image, le risque de l’acheteur est transféré vers une étape d’interprétation opaque. La qualité du commerce par agents dépendra donc moins de la fluidité de la conversation que de l’intégrité du dossier d’offre sous-jacent.</p>
+
+                <h2>Un transfert n’est pas une vente</h2>
+
+                <p>Les travaux de Google sur A2A et ADK Go 2.0 éclairent une autre partie du problème. Un agent commercial accomplit rarement seul chaque étape. Un agent peut découvrir les produits, un autre vérifier l’éligibilité, un service de paiement autoriser le débit, un système logistique planifier la livraison et une personne approuver un achat de grande valeur. Le parcours est un graphe de responsabilités.</p>
+
+                <p>Ce graphe a besoin d’une description commune de l’objet qui le traverse. Si l’agent de découverte transmet un nom de produit sans sa version, l’agent de vérification peut examiner le mauvais objet. Si l’étape de paiement perd la devise ou la date d’expiration, l’acheteur peut approuver un montant différent. Si l’étape logistique reçoit une adresse sans les contraintes de livraison, un appel API réussi peut tout de même produire une promesse impossible. Les protocoles de transfert sont utiles lorsqu’ils préservent le sens et l’autorité de la transaction, et pas seulement lorsqu’ils transmettent des messages.</p>
+
+                <p>Le catalogue du commerçant fait donc partie du protocole. Il donne à chaque agent un objet stable à transporter, une source à citer et des conditions à préserver. L’identifiant du produit, l’identifiant de l’offre, l’identité du vendeur, le prix, la devise, l’heure de disponibilité, la promesse de livraison et l’état d’approbation doivent survivre au transfert. Un agent incapable d’expliquer quelle version de l’offre il a utilisée ne peut pas fournir ensuite un reçu fiable.</p>
+
+                <p>La distinction entre recommandation et exécution devient ici importante. Une recommandation peut tolérer une incertitude explicite si une personne l’évalue. Un achat automatisé exige une frontière de permission et un dossier des affirmations qui ont justifié l’action. Le catalogue fournit la preuve initiale ; le système transactionnel doit la conserver pendant que la décision traverse plusieurs services.</p>
+
+                <h2>La provenance appartient aussi à la marchandise</h2>
+
+                <p>La question de la provenance est généralement associée aux photographies, aux vidéos et aux textes. Le commerce la fait entrer dans l’objet acheté. Un client peut avoir besoin de savoir qui a fabriqué un produit, où il a été assemblé, quels matériaux il contient, si un certificat concerne ce lot ou si une pièce de réparation est autorisée. Ce sont des affirmations de provenance qui ont des conséquences commerciales.</p>
+
+                <p>L’atelier du W3C avec GS1 est important au niveau des standards parce qu’il traite le contenu du commerce électronique comme un sujet de travail commun entre les systèmes destinés aux humains et ceux destinés aux agents. L’objectif est de rendre l’offre lisible à travers les systèmes qui la découvrent, la comparent, l’autorisent et l’exécutent, tout en conservant une vitrine lisible pour les personnes.</p>
+
+                <p>Pour un commerçant africain, la provenance porte aussi le lieu et la langue. Une coopérative peut devoir identifier un groupe de producteurs, une récolte, une méthode de transformation et un parcours de règlement. Un éditeur peut devoir distinguer une édition numérique autorisée d’une copie illicite. Une entreprise artisanale peut devoir associer à un produit un créateur, un matériau, une région et une instruction de réparation dans plusieurs langues. Si les catégories par défaut de la plateforme ne savent pas exprimer ces différences, la machine traitera l’omission comme une neutralité. Elle ne sera pas neutre : elle aura perdu une information économique et culturelle.</p>
+
+                <p>La propriété locale des données produit devient donc une question de souveraineté. Le commerçant doit pouvoir exporter le dossier d’offre, le corriger, l’exposer par plusieurs canaux et décider quel agent peut agir dessus. Une place de marché étrangère peut fournir de la distribution sans posséder la définition de l’objet. La frontière doit être explicite.</p>
+
+                <h2>La surface commerciale africaine obéit à sa propre grammaire</h2>
+
+                <p>Un catalogue conçu pour le commerce agentique en Afrique doit tenir compte de conditions souvent traitées ailleurs comme des cas limites : argent mobile, paiement à la livraison, connectivité intermittente, zones de livraison régionales, recherche multilingue, noms commerciaux informels, différences fiscales, numéros de téléphone partagés et nécessité de confirmer une transaction avec une personne. Ce ne sont pas des exceptions gênantes à effacer. Elles font partie de la grammaire réelle du marché.</p>
+
+                <p>Un agent qui ne recherche que des noms de produits anglais normalisés manquera des biens dont l’identité économique est portée par un terme local. Un agent qui suppose un format d’adresse stable dirigera mal une livraison. Un agent qui considère la carte bancaire comme le moyen par défaut exclura l’acheteur qui paie par portefeuille mobile ou avec l’aide d’un commerçant. Une couche de catalogue locale peut encoder ces conditions tout en exposant des identifiants de produits interopérables aux systèmes mondiaux de découverte.</p>
+
+                <p>C’est une voie vers la souveraineté numérique qui n’exige pas l’isolement. Les bâtisseurs africains peuvent posséder le vocabulaire, l’identité du vendeur, les règles de paiement, la logique de livraison et le processus de correction tout en laissant des agents externes découvrir et demander l’offre. L’objectif est un marché où les institutions locales sont lisibles par les machines sans devoir abandonner à une plateforme distante les conditions de cette lisibilité.</p>
+
+                <p>Le travail commence par un inventaire discipliné :</p>
+
+                <ol>
+                    <li>Définir les identifiants de produit et d’offre qui restent stables lorsque la place de marché, le modèle ou le fournisseur de paiement change.</li>
+                    <li>Enregistrer prix, devises, disponibilité, contraintes de livraison, retours, garanties et permissions dans des champs explicites plutôt que dans un texte caché de la page.</li>
+                    <li>Associer les noms locaux, les traductions, les identités de producteurs, les affirmations de provenance et les voies de correction au même dossier d’offre.</li>
+                    <li>Tester le dossier avec plusieurs agents et plusieurs parcours de paiement ou de livraison.</li>
+                    <li>Conserver un reçu montrant quelles affirmations et permissions étaient actives lorsque la transaction a été autorisée.</li>
+                </ol>
+
+                <h2>Où la surface d’investissement s’élargit</h2>
+
+                <p>Si les agents deviennent des participants du commerce, l’infrastructure pertinente pour le capital se situe entre la vitrine et le modèle :</p>
+
+                <ul>
+                    <li><strong>Plateformes de catalogues lisibles par les agents :</strong> systèmes permettant aux commerçants de publier produits, offres, conditions et permissions structurés sur les vitrines et les canaux agentiques.</li>
+                    <li><strong>Identité et provenance des offres :</strong> registres reliant produit, vendeur, lot, certification et source à un objet stable qu’un agent peut transporter pendant la transaction.</li>
+                    <li><strong>Moteurs de politique commerciale :</strong> contrôles qui déterminent quand un agent peut recommander, réserver, acheter, rembourser ou transmettre, avec des seuils liés au prix, au risque, à l’identité et à la juridiction.</li>
+                    <li><strong>Couches de données multilingues et locales :</strong> terminologie, mémoire de traduction, résolution des vendeurs, interprétation des adresses, prise en charge de l’argent mobile et synchronisation hors connexion pour les marchés qui ne correspondent pas à un modèle mondial unique.</li>
+                    <li><strong>Reçus lisibles par les machines :</strong> dossiers conservant la version de l’offre, les preuves, les permissions, les validations, l’état du paiement et les engagements de livraison derrière un achat réalisé par agent.</li>
+                </ul>
+
+                <p>La question de souscription est précise : le produit réduit-il l’incertitude entre la recommandation d’une machine et une transaction que l’acheteur, le vendeur et l’institution peuvent défendre ? Les preuves peuvent inclure moins de transferts échoués, moins de corrections, une meilleure conversion entre découverte et achat autorisé, un rapprochement plus rapide, des retours plus clairs, une meilleure couverture des recherches en langues locales et un reçu qu’un humain peut auditer sans reconstruire toute la conversation.</p>
+
+                <p>Une plateforme de catalogue acquiert un statut d’infrastructure lorsqu’elle devient portable entre agents et places de marché tout en préservant les propres définitions du commerçant. Une interface soignée peut attirer l’attention, mais la valeur durable réside dans le dossier qui survit à un nouveau modèle, un nouveau canal, un nouveau parcours de paiement ou un litige.</p>
+
+                <h2>Écrire l’offre pour qu’elle puisse être transmise</h2>
+
+                <p>Le catalogue lisible par une machine est une nouvelle discipline de publication. Il demande au commerçant d’énoncer ce qu’est le produit, qui en répond, où il peut circuler, combien il coûte, quelles preuves soutiennent l’affirmation et quelles actions exigent un consentement. Il demande à la plateforme de transporter ces déclarations à travers la découverte, le transfert, l’autorisation et l’exécution sans transformer l’ambiguïté en fausse certitude.</p>
+
+                <p>Pour les institutions africaines, cette discipline peut relier commerce et souveraineté. Le langage du produit, l’identité du vendeur, la pratique de paiement et la provenance locale deviennent des actifs opératoires capables de circuler entre fournisseurs sans disparaître dans le vocabulaire privé d’une plateforme. Le marché reste ouvert à l’intelligence mondiale tandis que les conditions de participation locale restent possédées par ceux qui produisent et échangent la valeur.</p>
+
+                <p>La vitrine de l’économie agentique sera faite de dossiers qui se lisent deux fois : par une personne qui décide de faire confiance à l’offre, puis par une machine qui décide ce qu’elle a le droit de faire. Un catalogue devient un contrat lorsque les deux lecteurs voient le même objet, les mêmes conditions et les mêmes preuves.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/" target="_blank" rel="noopener">Actualités du W3C : « Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents » (publié le 1er juin 2026 ; atelier prévu les 8 et 9 septembre 2026 ; description : partager l’expérience de création de contenus pensés avec les agents d’IA, avec un accent sur le commerce électronique).</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « How avatarin built a 24/7 retail agent with GPT-Realtime » (30 juillet 2026 ; article lié : <em>https://openai.com/index/avatarin</em> ; description : avatarin utilise GPT-Realtime pour fournir une assistance multilingue aux clients de Yamada Denki).</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog : « How A2A is Building a World of Collaborative Agents » (18 juin 2026 ; description : transferts sécurisés entre agents et workflows collaboratifs évolutifs pour un écosystème partagé).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog : « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; description : workflows en graphe, orchestration avec humain dans la boucle, routage dynamique et résilience intégrée).</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>August 31, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

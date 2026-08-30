@@ -126,6 +126,7 @@
         'article.entry098':     { en: 'Diop Daily #098 — August 2026', fr: 'Diop Quotidien n°098 — Août 2026' },
         'article.entry099':     { en: 'Diop Daily #099 — August 2026', fr: 'Diop Quotidien n°099 — Août 2026' },
         'article.entry100':     { en: 'Diop Daily #100 — August 2026', fr: 'Diop Quotidien n°100 — Août 2026' },
+        'article.entry101':     { en: 'Diop Daily #101 — August 2026', fr: 'Diop Quotidien n°101 — Août 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -143,6 +144,16 @@
     };
 
     var postTranslations = {
+'diop-daily-101': {
+    title: {
+        en: "A Catalog Is a Contract with the Machine",
+        fr: "Un catalogue est un contrat avec la machine"
+    },
+    excerpt: {
+        en: "As agents enter commerce, a catalog becomes more than a list of products: it becomes a machine-readable contract carrying identity, price, availability, policy, provenance, and permission. The investable layer is the commerce infrastructure that lets local merchants remain legible to machines without surrendering the terms of exchange.",
+        fr: "À mesure que les agents entrent dans le commerce, un catalogue devient davantage qu’une liste de produits : il devient un contrat lisible par les machines, qui porte l’identité, le prix, la disponibilité, la politique, la provenance et les permissions. La couche d’investissement est l’infrastructure commerciale qui permet aux commerçants locaux d’être lisibles par les machines sans abandonner les conditions de l’échange."
+    }
+},
 'diop-daily-100': {
     title: {
         en: "The Exit Clause Is Part of the AI Stack",
