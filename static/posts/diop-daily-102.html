@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A City Needs an Answerable Machine — Diop Research</title>
+    <meta name="description" content="Municipal AI becomes durable when it can search administrative knowledge, respect public authority, expose its evidence, and hand uncertain decisions to people. The investable layer is the civic operator that makes machine capability answerable to a city."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry102">Diop Daily #102 — September 2026</div>
+                <div class="article__meta-line">
+                    <time>September 1, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>public AI · civic knowledge · municipal infrastructure · accountability</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A City Needs an Answerable Machine</h1>
+
+                <p>The first serious public-sector AI systems will be judged at the point where an answer becomes an administrative act. A resident asks about a permit, a planner searches a regulation, a clerk checks an eligibility rule, or a council office prepares a response. The machine must retrieve the right record, identify the authority behind it, show the evidence it used, and leave a path for correction. Fluency is useful inside that chain, but it cannot carry the chain by itself.</p>
+
+                <p>An OpenAI News RSS item dated August 31 gives this thesis a current public signal. It describes Polimill using GPT models and Codex to help municipalities search and use administrative knowledge while accelerating development. The item establishes a narrow vendor-reported fact about a product direction. It does not prove municipal adoption at scale. It does show where a capable model meets a hard institutional problem: public knowledge is scattered across procedures, ordinances, forms, prior decisions, and people who know which exception matters.</p>
+
+                <blockquote>
+                    <p>A public AI system earns authority by making its answer traceable to the institution that must stand behind it.</p>
+                </blockquote>
+
+                <h2>The civic record is the real substrate</h2>
+
+                <p>Municipal knowledge is rarely a single database waiting for a search box. It is a layered record assembled over time. A zoning rule sits beside a map, a planning decision, a date-sensitive exception, a public notice, and an office responsible for interpretation. A housing request may depend on household status, an address, a benefit rule, an inspection, and a deadline. A business permit may cross health, fire, land, tax, and payment systems. The answer is distributed before the model begins to reason over it.</p>
+
+                <p>This distribution creates a different engineering requirement from ordinary retrieval. The system must preserve the status of each record. It should distinguish a binding rule from a draft, a current form from an archived one, a public statement from an internal note, and a general policy from a decision that applies only to one case. It must also preserve the version and date that made a record operative. A response that cites a true document from the wrong period can still send a resident in the wrong direction.</p>
+
+                <p>The civic operator is the layer that turns this record into a controlled working environment. It performs retrieval, but it also carries authority, scope, timing, provenance, and escalation. It knows which office owns a question, which source can settle it, and what the machine may do when the evidence is incomplete. Its output is therefore closer to a case file than to a chat message.</p>
+
+                <h2>What an answerable machine must carry</h2>
+
+                <p>A municipal AI system needs a public operating model that remains legible to residents and maintainers. At minimum, each material interaction should carry:</p>
+
+                <ul>
+                    <li><strong>Mandate:</strong> the service, office, program, or legal purpose that authorizes the machine to answer.</li>
+                    <li><strong>Record:</strong> the documents, data fields, maps, forms, and prior decisions that were consulted, with their version and effective date.</li>
+                    <li><strong>Identity:</strong> the resident, official, department, or delegated role associated with the request and the authority attached to that role.</li>
+                    <li><strong>Boundary:</strong> the actions the machine may take, the information it may disclose, the decisions it must not make, and the conditions that require a human.</li>
+                    <li><strong>Reason:</strong> the explanation, uncertainty, conflict, or missing evidence that shaped the response.</li>
+                    <li><strong>Recourse:</strong> the person, office, time window, and procedure through which an answer can be challenged or corrected.</li>
+                </ul>
+
+                <p>These fields are a civic equivalent of a transaction ledger. They give an institution a way to reconstruct what happened without replaying an entire conversation. They also give a resident a meaningful response when the machine is wrong. “The system said so” is not an administrative reason. A source, a rule, a scope, and an appeal route are reasons.</p>
+
+                <p>NIST’s AI Risk Management Framework offers a useful vocabulary for this work through its Govern, Map, Measure, and Manage functions. The framework is not a municipal product specification, yet its structure clarifies the operating cycle. The city must govern responsibility, map the social and technical context, measure performance and risk, and manage the system after deployment. The civic operator makes those functions executable at the level of individual requests.</p>
+
+                <h2>Search is not public service</h2>
+
+                <p>A search result points toward a record. A public service must help someone complete a legitimate task. That difference changes the product surface.</p>
+
+                <p>Suppose a resident asks whether a small food business can operate from a particular address. A search engine may retrieve a zoning page, a licensing page, and a health inspection form. An answerable machine must establish which jurisdiction applies, whether the address is in the relevant zone, which permits are required, which sequence comes first, and which office confirms the unresolved point. If the records conflict, the response should expose the conflict and route it to an accountable person. The machine has reduced administrative distance only when the resident knows what to do next.</p>
+
+                <p>This is why public-sector AI cannot be evaluated by answer accuracy alone. A plausible answer can still fail through stale evidence, wrong jurisdiction, missing language, or an absent appeal path. The useful measures sit across the whole interaction:</p>
+
+                <ol>
+                    <li>Was the correct current record retrieved for the person’s place and case?</li>
+                    <li>Could the resident or official see the sources, dates, and limits behind the response?</li>
+                    <li>Did the system identify uncertainty and send the case to the right human office?</li>
+                    <li>Was the interaction recorded in a way that supports audit, correction, and service improvement?</li>
+                    <li>Did the person complete the next legitimate step with fewer avoidable handoffs?</li>
+                </ol>
+
+                <p>These measures turn public AI from a demonstration into an operating capability. They also make procurement more honest. A city is buying a reduction in administrative ambiguity, not a poetic conversation with a model.</p>
+
+                <h2>The operator must be local even when the model is global</h2>
+
+                <p>The European Commission describes its approach to AI through a connection between excellence and trust, research and industrial capacity, safety, and fundamental rights. That framing points to a general institutional lesson: model access is one component of capacity, surrounded by records, skills, safeguards, and accountable organizations.</p>
+
+                <p>A city in Africa should apply that lesson without importing the assumption that its administrative reality is a defective copy of another place. Local names, languages, street systems, customary land relations, informal businesses, payment methods, seasonal conditions, and the division of authority between national and local offices all shape what a correct answer means. A model trained elsewhere may assist with language and reasoning, but the civic operator must be grounded in the city’s own record and public obligations.</p>
+
+                <p>This is a sovereignty question expressed through architecture. The institution should own its administrative ontology: the names it recognizes, the categories it uses, the evidence it accepts, the languages through which people can ask for help, and the offices that can correct a record. Global models can be invited into that environment under controlled permissions. They should not define the environment by default.</p>
+
+                <p>The strongest public systems will therefore separate model capability from civic authority. A model may summarize a regulation, translate a notice, classify a request, or draft a response. The operator decides which records are eligible, which tools can be called, which confidence threshold requires escalation, and which person signs the final act. That division makes substitution possible too: a city can change models while preserving its records, rules, measurements, and public interface.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If municipal AI becomes a durable category, the capital-relevant layer sits between general models and public administration:</p>
+
+                <ul>
+                    <li><strong>Civic knowledge systems:</strong> versioned repositories that connect ordinances, forms, maps, decisions, offices, dates, and local terminology in a structure agents can use.</li>
+                    <li><strong>Accountable retrieval and case orchestration:</strong> software that binds an answer to jurisdiction, authority, evidence, escalation, and the resident’s next legitimate step.</li>
+                    <li><strong>Public-sector evaluation networks:</strong> local test sets and review services that measure language coverage, record freshness, retrieval quality, refusal behaviour, correction time, and unequal error across neighborhoods.</li>
+                    <li><strong>Administrative identity and permission rails:</strong> systems that represent residents, officials, departments, delegated roles, and revocable authority without turning a single vendor account into the institution’s identity system.</li>
+                    <li><strong>Regional service operators:</strong> local teams that maintain data, language resources, integrations, archives, and human escalation for cities that cannot staff every layer internally.</li>
+                </ul>
+
+                <p>The underwriting question is precise: does the product make public decisions more traceable while reducing the time required to reach the right human or record? Useful evidence includes a lower rate of stale citations, faster resolution of ambiguous requests, higher completion of multilingual service journeys, clearer case ownership, shorter correction cycles, and exports that another provider can operate. A vendor that supplies only a model endpoint leaves the hardest institutional risks with the city. A civic operator earns infrastructure status when it carries those risks in an observable form.</p>
+
+                <h2>Build the public machine as an institution</h2>
+
+                <p>Google’s work on A2A and ADK Go 2.0 describes secure agent handoffs, graph-based workflows, human-in-the-loop orchestration, dynamic routing, retries, and resilience. These runtime primitives matter in a municipality because public work crosses offices. A planning request may move from intake to records, from records to inspection, from inspection to payment, and from payment to a person authorized to approve. Each handoff must preserve the case identity, evidence, authority, and unresolved questions.</p>
+
+                <p>The public machine should be built around a small set of durable disciplines:</p>
+
+                <ol>
+                    <li>Publish a civic data map showing which records exist, who owns them, when they become effective, and how a resident can request correction.</li>
+                    <li>Define a permission matrix before connecting models to live systems, with explicit limits for disclosure, drafting, recommendation, and execution.</li>
+                    <li>Build evaluation sets from real local language, addresses, names, forms, exceptions, and disputed cases rather than relying on generic benchmarks.</li>
+                    <li>Record every material answer with its source set, model route, policy version, uncertainty, human handoff, and correction outcome.</li>
+                    <li>Train maintainers who can change the model, repair the record, inspect the logs, and explain the system to the public.</li>
+                </ol>
+
+                <p>That final discipline is decisive. Public AI cannot be a sealed product delivered to an administration that lacks the ability to inspect or alter it. The machine must leave behind knowledge that the institution can inherit. Without maintainers, an apparently intelligent service becomes another external dependency with a public-facing surface.</p>
+
+                <p>The future of civic AI will be decided in the joint between the model and the record. African cities have an opportunity to build that joint according to their own languages, jurisdictions, histories, and obligations. A city does not need a machine that sounds authoritative. It needs one that can show who authorized the answer, which record supports it, where uncertainty remains, and who can change the outcome.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Polimill builds Japan's next-generation public AI infrastructure” (August 31, 2026; linked article: <em>https://openai.com/index/polimill</em>; description: Polimill uses OpenAI GPT models and Codex to help municipalities search and use administrative knowledge while accelerating development).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology: “AI Risk Management Framework” (page accessed September 1, 2026; the framework organizes AI risk work through Govern, Map, Measure, and Manage functions).</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" target="_blank" rel="noopener">European Commission: “European approach to artificial intelligence” (page accessed September 1, 2026; description: the EU approach connects excellence and trust by boosting research and industrial capacity while ensuring safety and fundamental rights).</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog: “How A2A is Building a World of Collaborative Agents” (June 18, 2026; description: secure agent handoffs and scalable collaborative workflows).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog: “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; direct page title, date, and meta description verified September 1, 2026; description: graph-based workflows, human-in-the-loop orchestration, dynamic routing, and built-in resilience).</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Une ville a besoin d’une machine à laquelle elle peut demander des comptes</h1>
+
+                <p>Les premiers systèmes sérieux d’IA pour le secteur public seront jugés au moment où une réponse devient un acte administratif. Un habitant demande des informations sur un permis, un urbaniste recherche un règlement, un agent vérifie une règle d’éligibilité ou un cabinet municipal prépare une réponse. La machine doit retrouver le bon dossier, identifier l’autorité qui le porte, montrer les preuves utilisées et laisser un chemin de correction. La fluidité est utile à l’intérieur de cette chaîne, mais elle ne peut pas la porter seule.</p>
+
+                <p>Un item du flux RSS d’OpenAI daté du 31 août fournit un signal public actuel pour cette thèse. Il décrit Polimill utilisant des modèles GPT et Codex afin d’aider des municipalités à rechercher et exploiter des connaissances administratives tout en accélérant le développement. L’item établit un fait étroit rapporté par le fournisseur sur une orientation produit. Il ne prouve pas une adoption municipale à grande échelle. Il montre néanmoins le lieu où un modèle capable rencontre un problème institutionnel difficile : les connaissances publiques sont dispersées entre procédures, ordonnances, formulaires, décisions antérieures et personnes qui savent quelle exception compte.</p>
+
+                <blockquote>
+                    <p>Un système d’IA public acquiert son autorité en rendant sa réponse traçable jusqu’à l’institution qui doit en répondre.</p>
+                </blockquote>
+
+                <h2>Le dossier civique est le véritable substrat</h2>
+
+                <p>La connaissance municipale est rarement une base de données unique qui attend une boîte de recherche. C’est un dossier stratifié, assemblé au fil du temps. Une règle d’urbanisme se trouve à côté d’une carte, d’une décision de planification, d’une exception liée à une date, d’un avis public et du service chargé de l’interpréter. Une demande de logement peut dépendre de la situation du foyer, d’une adresse, d’une règle d’aide, d’une inspection et d’une échéance. Un permis commercial peut traverser les services de santé, de sécurité incendie, du foncier, des impôts et du paiement. La réponse est distribuée avant même que le modèle ne commence à raisonner dessus.</p>
+
+                <p>Cette dispersion crée une exigence d’ingénierie différente de la simple recherche documentaire. Le système doit conserver le statut de chaque dossier. Il doit distinguer une règle contraignante d’un projet, un formulaire actuel d’un formulaire archivé, une déclaration publique d’une note interne et une politique générale d’une décision applicable à un seul cas. Il doit aussi conserver la version et la date qui rendent un dossier opératoire. Une réponse qui cite un document vrai mais appartenant à la mauvaise période peut tout de même orienter un habitant dans la mauvaise direction.</p>
+
+                <p>L’opérateur civique est la couche qui transforme ce dossier en environnement de travail contrôlé. Il effectue la recherche, mais il transporte aussi l’autorité, le périmètre, le temps, la provenance et l’escalade. Il sait quel service possède une question, quelle source peut la trancher et ce que la machine peut faire lorsque les preuves sont incomplètes. Sa sortie ressemble donc davantage à un dossier de cas qu’à un message de conversation.</p>
+
+                <h2>Ce qu’une machine redevable doit transporter</h2>
+
+                <p>Un système d’IA municipal a besoin d’un modèle d’exploitation public qui reste lisible pour les habitants et les personnes chargées de sa maintenance. Chaque interaction importante devrait au minimum transporter :</p>
+
+                <ul>
+                    <li><strong>Mandat :</strong> le service, le bureau, le programme ou la finalité juridique qui autorise la machine à répondre.</li>
+                    <li><strong>Dossier :</strong> les documents, champs de données, cartes, formulaires et décisions antérieures consultés, avec leur version et leur date d’effet.</li>
+                    <li><strong>Identité :</strong> l’habitant, l’agent, le service ou le rôle délégué associé à la demande, ainsi que l’autorité liée à ce rôle.</li>
+                    <li><strong>Frontière :</strong> les actions que la machine peut effectuer, les informations qu’elle peut divulguer, les décisions qu’elle ne doit pas prendre et les conditions exigeant un humain.</li>
+                    <li><strong>Raison :</strong> l’explication, l’incertitude, le conflit ou la preuve manquante qui ont déterminé la réponse.</li>
+                    <li><strong>Recours :</strong> la personne, le service, le délai et la procédure par lesquels une réponse peut être contestée ou corrigée.</li>
+                </ul>
+
+                <p>Ces champs constituent l’équivalent civique d’un registre de transaction. Ils donnent à l’institution un moyen de reconstituer ce qui s’est passé sans rejouer toute une conversation. Ils donnent aussi à l’habitant une réponse utile lorsque la machine se trompe. « Le système l’a dit » n’est pas une raison administrative. Une source, une règle, un périmètre et une voie de recours en sont.</p>
+
+                <p>Le cadre de gestion des risques liés à l’IA du NIST fournit un vocabulaire utile avec ses fonctions Govern, Map, Measure et Manage. Le cadre n’est pas une spécification de produit municipal, mais sa structure clarifie le cycle d’exploitation. La ville doit gouverner les responsabilités, cartographier le contexte social et technique, mesurer la performance et le risque, puis gérer le système après son déploiement. L’opérateur civique rend ces fonctions exécutables au niveau de chaque demande.</p>
+
+                <h2>La recherche n’est pas un service public</h2>
+
+                <p>Un résultat de recherche pointe vers un dossier. Un service public doit aider quelqu’un à accomplir une tâche légitime. Cette différence transforme la surface du produit.</p>
+
+                <p>Imaginons qu’un habitant demande si une petite activité alimentaire peut fonctionner à une adresse donnée. Un moteur de recherche peut retrouver une page d’urbanisme, une page de licence et un formulaire d’inspection sanitaire. Une machine redevable doit établir quelle juridiction s’applique, si l’adresse se trouve dans la zone concernée, quels permis sont nécessaires, quelle étape vient en premier et quel service confirme le point encore incertain. Si les dossiers se contredisent, la réponse doit montrer le conflit et l’envoyer à une personne responsable. La machine ne réduit la distance administrative que lorsque l’habitant sait quelle est la prochaine action.</p>
+
+                <p>C’est pourquoi l’IA du secteur public ne peut pas être évaluée par la seule exactitude des réponses. Une réponse plausible peut échouer à cause d’une preuve obsolète, d’une mauvaise juridiction, d’une langue manquante ou d’une voie de recours absente. Les mesures utiles couvrent toute l’interaction :</p>
+
+                <ol>
+                    <li>Le dossier actuel et correct a-t-il été retrouvé pour le lieu et le cas de la personne ?</li>
+                    <li>L’habitant ou l’agent pouvait-il voir les sources, les dates et les limites qui soutenaient la réponse ?</li>
+                    <li>Le système a-t-il identifié l’incertitude et transmis le cas au bon service humain ?</li>
+                    <li>L’interaction a-t-elle été enregistrée de manière à permettre l’audit, la correction et l’amélioration du service ?</li>
+                    <li>La personne a-t-elle accompli l’étape légitime suivante avec moins de transferts évitables ?</li>
+                </ol>
+
+                <p>Ces mesures transforment l’IA publique, qui passe de la démonstration à une capacité d’exploitation. Elles rendent aussi l’achat plus honnête. Une ville achète une réduction de l’ambiguïté administrative, et non une conversation poétique avec un modèle.</p>
+
+                <h2>L’opérateur doit être local même lorsque le modèle est mondial</h2>
+
+                <p>La Commission européenne décrit son approche de l’IA en reliant excellence et confiance, capacité de recherche et capacité industrielle, sûreté et droits fondamentaux. Ce cadre indique une leçon institutionnelle générale : l’accès à un modèle est un élément de la capacité, entouré de dossiers, de compétences, de garde-fous et d’organisations responsables.</p>
+
+                <p>Une ville africaine doit appliquer cette leçon sans importer l’idée que sa réalité administrative serait une copie défectueuse d’un autre lieu. Les noms locaux, les langues, les systèmes de rue, les relations coutumières à la terre, les entreprises informelles, les moyens de paiement, les conditions saisonnières et le partage de l’autorité entre services nationaux et locaux déterminent tous ce que signifie une réponse correcte. Un modèle entraîné ailleurs peut aider pour la langue et le raisonnement, mais l’opérateur civique doit être ancré dans le dossier propre de la ville et dans ses obligations publiques.</p>
+
+                <p>Il s’agit d’une question de souveraineté exprimée par l’architecture. L’institution doit posséder son ontologie administrative : les noms qu’elle reconnaît, les catégories qu’elle utilise, les preuves qu’elle accepte, les langues dans lesquelles les habitants peuvent demander de l’aide et les services qui peuvent corriger un dossier. Les modèles mondiaux peuvent être invités dans cet environnement avec des permissions contrôlées. Ils ne doivent pas définir l’environnement par défaut.</p>
+
+                <p>Les systèmes publics les plus solides sépareront donc la capacité du modèle de l’autorité civique. Un modèle peut résumer un règlement, traduire un avis, classer une demande ou préparer une réponse. L’opérateur décide quels dossiers sont admissibles, quels outils peuvent être appelés, quel seuil de confiance exige une escalade et quelle personne signe l’acte final. Cette division rend aussi la substitution possible : une ville peut changer de modèle tout en conservant ses dossiers, ses règles, ses mesures et son interface publique.</p>
+
+                <h2>Où la surface d’investissement s’élargit</h2>
+
+                <p>Si l’IA municipale devient une catégorie durable, la couche pertinente pour le capital se situe entre les modèles généraux et l’administration publique :</p>
+
+                <ul>
+                    <li><strong>Systèmes de connaissance civique :</strong> référentiels versionnés reliant ordonnances, formulaires, cartes, décisions, services, dates et terminologie locale dans une structure utilisable par des agents.</li>
+                    <li><strong>Recherche responsable et orchestration de cas :</strong> logiciels liant une réponse à la juridiction, à l’autorité, aux preuves, à l’escalade et à la prochaine étape légitime de l’habitant.</li>
+                    <li><strong>Réseaux d’évaluation du secteur public :</strong> jeux de test locaux et services de revue mesurant la couverture linguistique, l’actualité des dossiers, la qualité de recherche, les refus, le temps de correction et les erreurs inégales entre quartiers.</li>
+                    <li><strong>Rails d’identité et de permissions administratives :</strong> systèmes représentant habitants, agents, services, rôles délégués et autorités révocables sans transformer un compte fournisseur en système d’identité de l’institution.</li>
+                    <li><strong>Opérateurs de services régionaux :</strong> équipes locales entretenant les données, les ressources linguistiques, les intégrations, les archives et l’escalade humaine pour les villes qui ne peuvent pas recruter chaque compétence en interne.</li>
+                </ul>
+
+                <p>La question de souscription est précise : le produit rend-il les décisions publiques plus traçables tout en réduisant le temps nécessaire pour atteindre le bon humain ou le bon dossier ? Les preuves utiles comprennent une baisse des citations obsolètes, une résolution plus rapide des demandes ambiguës, une meilleure réalisation des parcours multilingues, une attribution plus claire des cas, des cycles de correction plus courts et des exports qu’un autre fournisseur peut exploiter. Un fournisseur qui livre seulement un endpoint de modèle laisse les risques institutionnels les plus difficiles à la ville. Un opérateur civique acquiert un statut d’infrastructure lorsqu’il porte ces risques sous une forme observable.</p>
+
+                <h2>Construire la machine publique comme une institution</h2>
+
+                <p>Les travaux de Google sur A2A et ADK Go 2.0 décrivent des transferts sécurisés entre agents, des workflows en graphe, une orchestration avec humain dans la boucle, un routage dynamique, des nouvelles tentatives et une résilience intégrée. Ces primitives d’exécution comptent dans une municipalité parce que le travail traverse plusieurs services. Une demande d’urbanisme peut passer de l’accueil aux dossiers, des dossiers à l’inspection, de l’inspection au paiement, puis à une personne autorisée à approuver. Chaque transfert doit préserver l’identité du cas, les preuves, l’autorité et les questions non résolues.</p>
+
+                <p>La machine publique doit être construite autour de disciplines durables :</p>
+
+                <ol>
+                    <li>Publier une carte des données civiques indiquant quels dossiers existent, qui les possède, quand ils prennent effet et comment un habitant peut demander une correction.</li>
+                    <li>Définir une matrice de permissions avant de connecter des modèles aux systèmes actifs, avec des limites explicites pour la divulgation, la rédaction, la recommandation et l’exécution.</li>
+                    <li>Construire les jeux d’évaluation à partir des langues, adresses, noms, formulaires, exceptions et cas contestés locaux, plutôt que de dépendre de benchmarks génériques.</li>
+                    <li>Enregistrer chaque réponse importante avec son ensemble de sources, son parcours de modèle, sa version de politique, son incertitude, son transfert humain et son résultat de correction.</li>
+                    <li>Former des mainteneurs capables de changer le modèle, réparer le dossier, inspecter les journaux et expliquer le système au public.</li>
+                </ol>
+
+                <p>Cette dernière discipline est décisive. L’IA publique ne peut pas être un produit fermé remis à une administration qui ne possède pas la capacité de l’inspecter ou de la modifier. La machine doit laisser une connaissance que l’institution peut hériter. Sans mainteneurs, un service apparemment intelligent devient une nouvelle dépendance externe avec une surface tournée vers le public.</p>
+
+                <p>L’avenir de l’IA civique se décidera dans l’articulation entre le modèle et le dossier. Les villes africaines peuvent construire cette articulation selon leurs propres langues, juridictions, histoires et obligations. Une ville n’a pas besoin d’une machine qui parle avec autorité. Elle a besoin d’une machine qui peut montrer qui a autorisé la réponse, quel dossier la soutient, où demeure l’incertitude et qui peut modifier le résultat.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « Polimill builds Japan's next-generation public AI infrastructure » (31 août 2026 ; article lié : <em>https://openai.com/index/polimill</em> ; description : Polimill utilise des modèles GPT et Codex pour aider des municipalités à rechercher et exploiter les connaissances administratives tout en accélérant le développement).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology : « AI Risk Management Framework » (page consultée le 1er septembre 2026 ; le cadre organise la gestion des risques IA autour des fonctions Govern, Map, Measure et Manage).</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" target="_blank" rel="noopener">Commission européenne : « European approach to artificial intelligence » (page consultée le 1er septembre 2026 ; description : l’approche de l’UE relie excellence et confiance en renforçant la recherche et la capacité industrielle tout en garantissant la sûreté et les droits fondamentaux).</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog : « How A2A is Building a World of Collaborative Agents » (18 juin 2026 ; description : transferts sécurisés entre agents et workflows collaboratifs évolutifs).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog : « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; titre, date et méta-description de la page vérifiés le 1er septembre 2026 ; description : workflows en graphe, orchestration avec humain dans la boucle, routage dynamique et résilience intégrée).</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>September 1, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

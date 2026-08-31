@@ -127,6 +127,7 @@
         'article.entry099':     { en: 'Diop Daily #099 — August 2026', fr: 'Diop Quotidien n°099 — Août 2026' },
         'article.entry100':     { en: 'Diop Daily #100 — August 2026', fr: 'Diop Quotidien n°100 — Août 2026' },
         'article.entry101':     { en: 'Diop Daily #101 — August 2026', fr: 'Diop Quotidien n°101 — Août 2026' },
+        'article.entry102':     { en: 'Diop Daily #102 — September 2026', fr: 'Diop Quotidien n°102 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -144,6 +145,16 @@
     };
 
     var postTranslations = {
+'diop-daily-102': {
+    title: {
+        en: "A City Needs an Answerable Machine",
+        fr: "Une ville a besoin d’une machine à laquelle elle peut demander des comptes"
+    },
+    excerpt: {
+        en: "Municipal AI becomes durable when it can search administrative knowledge, respect public authority, expose its evidence, and hand uncertain decisions to people. The investable layer is the civic operator that makes machine capability answerable to a city.",
+        fr: "L’IA municipale devient durable lorsqu’elle peut rechercher les connaissances administratives, respecter l’autorité publique, exposer ses preuves et transmettre les décisions incertaines à des personnes. La couche d’investissement est l’opérateur civique qui rend la capacité machine responsable devant une ville."
+    }
+},
 'diop-daily-101': {
     title: {
         en: "A Catalog Is a Contract with the Machine",
