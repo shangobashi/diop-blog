@@ -128,6 +128,7 @@
         'article.entry100':     { en: 'Diop Daily #100 — August 2026', fr: 'Diop Quotidien n°100 — Août 2026' },
         'article.entry101':     { en: 'Diop Daily #101 — August 2026', fr: 'Diop Quotidien n°101 — Août 2026' },
         'article.entry102':     { en: 'Diop Daily #102 — September 2026', fr: 'Diop Quotidien n°102 — Septembre 2026' },
+        'article.entry103':     { en: 'Diop Daily #103 — September 2026', fr: 'Diop Quotidien n°103 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -145,6 +146,16 @@
     };
 
     var postTranslations = {
+'diop-daily-103': {
+    title: {
+        en: "The Institution Has More Than One Clock",
+        fr: "L’institution possède plusieurs horloges"
+    },
+    excerpt: {
+        en: "AI systems operate inside several clocks: model releases, record validity, human authority, service deadlines, and recovery windows. The investable layer is the temporal control infrastructure that keeps machine action aligned with the right moment and the right evidence.",
+        fr: "Les systèmes d’IA fonctionnent selon plusieurs horloges : mise en production des modèles, validité des dossiers, autorité humaine, échéances de service et fenêtres de reprise. La couche d’investissement est l’infrastructure de contrôle temporel qui maintient l’action machine dans le bon moment et au contact des bonnes preuves."
+    }
+},
 'diop-daily-102': {
     title: {
         en: "A City Needs an Answerable Machine",
