@@ -129,6 +129,7 @@
         'article.entry101':     { en: 'Diop Daily #101 — August 2026', fr: 'Diop Quotidien n°101 — Août 2026' },
         'article.entry102':     { en: 'Diop Daily #102 — September 2026', fr: 'Diop Quotidien n°102 — Septembre 2026' },
         'article.entry103':     { en: 'Diop Daily #103 — September 2026', fr: 'Diop Quotidien n°103 — Septembre 2026' },
+        'article.entry104':     { en: 'Diop Daily #104 — September 2026', fr: 'Diop Quotidien n°104 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -146,6 +147,16 @@
     };
 
     var postTranslations = {
+'diop-daily-104': {
+    title: {
+        en: "The Artifact Outlives the Prompt",
+        fr: "L’artefact survit à la consigne"
+    },
+    excerpt: {
+        en: "AI creates durable value when a request becomes an inspectable artifact: an inventory, report, decision record, or reusable operating component. The investable layer is the lineage that lets institutions verify, inherit, and improve what the machine produced.",
+        fr: "L’IA crée une valeur durable lorsqu’une demande devient un artefact vérifiable : un inventaire, un rapport, un dossier de décision ou un composant opératoire réutilisable. La couche d’investissement est la lignée qui permet aux institutions de vérifier, de recevoir et d’améliorer ce que la machine a produit."
+    }
+},
 'diop-daily-103': {
     title: {
         en: "The Institution Has More Than One Clock",
