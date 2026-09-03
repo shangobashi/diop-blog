@@ -130,6 +130,7 @@
         'article.entry102':     { en: 'Diop Daily #102 — September 2026', fr: 'Diop Quotidien n°102 — Septembre 2026' },
         'article.entry103':     { en: 'Diop Daily #103 — September 2026', fr: 'Diop Quotidien n°103 — Septembre 2026' },
         'article.entry104':     { en: 'Diop Daily #104 — September 2026', fr: 'Diop Quotidien n°104 — Septembre 2026' },
+        'article.entry105':     { en: 'Diop Daily #105 — September 2026', fr: 'Diop Quotidien n°105 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -147,6 +148,16 @@
     };
 
     var postTranslations = {
+'diop-daily-105': {
+    title: {
+        en: "A Protocol Is a Border",
+        fr: "Un protocole est une frontière"
+    },
+    excerpt: {
+        en: "Protocols decide which identities, actions, records, and rights can cross between machines. The investable layer is the conformance and translation infrastructure that lets institutions remain legible without surrendering their own terms.",
+        fr: "Les protocoles décident quelles identités, actions, dossiers et quels droits peuvent franchir la frontière entre les machines. La couche d’investissement est l’infrastructure de conformité et de traduction qui permet aux institutions de rester lisibles sans abandonner leurs propres conditions."
+    }
+},
 'diop-daily-104': {
     title: {
         en: "The Artifact Outlives the Prompt",

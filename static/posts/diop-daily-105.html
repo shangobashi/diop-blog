@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Protocol Is a Border — Diop Research</title>
+    <meta name="description" content="Protocols decide which identities, actions, records, and rights can cross between machines. As agents enter commerce, media, and essential services, the investable layer is the conformance and translation infrastructure that lets institutions remain legible without surrendering their own terms."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry105">Diop Daily #105 — September 2026</div>
+                <div class="article__meta-line">
+                    <time>September 4, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>protocols · interoperability · machine recognition · sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Protocol Is a Border</h1>
+
+                <p>A protocol appears to be a technical agreement: a set of fields, messages, permissions, and responses that allow separate systems to communicate. Its deeper function is political. A protocol decides which entities can be recognized, which actions can cross a boundary, which evidence travels with a claim, and which obligations remain attached to an exchange. Every machine-readable world has a border, even when the border is hidden inside a schema.</p>
+
+                <p>Several public signals now place this question in the path of real systems. The W3C and GS1 are convening a workshop on e-commerce for humans and AI agents, with a focus on creating content that agents can use. C2PA has published an implementation guide and continues to develop Content Credentials as an open provenance standard. Google’s A2A work describes secure handoffs between agents, while ADK Go 2.0 exposes graph workflows, human checkpoints, dynamic routing, and resilience. These efforts address different problems. Together they show that machine interaction is moving from isolated model calls toward negotiated participation in shared environments.</p>
+
+                <blockquote>
+                    <p>The question at a boundary is always the same: who is recognized, under which terms, and with what evidence?</p>
+                </blockquote>
+
+                <h2>Interoperability is a choice about recognition</h2>
+
+                <p>People often speak of interoperability as if it were a neutral property. Two systems interoperate when they exchange data successfully. That definition is too thin for agents. An agent does not only move a string from one endpoint to another. It may represent a buyer, a publisher, a public office, a creator, a researcher, or a service provider. It may request an action, accept a result, invoke a permission, or transfer a responsibility.</p>
+
+                <p>The receiving system must decide what the message means. Is the sender a person, a delegated software role, or an unverified process? Is a price an offer, a reference value, or a conditional estimate? Is a media file an original, an edited derivative, or an asset whose provenance has been stripped? Is a request authorized for one transaction, a time window, or an entire account? Interoperability therefore depends on a shared vocabulary of identity, authority, state, and consequence.</p>
+
+                <p>Without that vocabulary, integration becomes a series of private translations. Each platform builds an adapter for the other platform’s assumptions. The surface may look connected while the meaning degrades at every handoff. A field called “owner” can mean a legal rights-holder in one system, an account administrator in another, and the person who uploaded a file in a third. The network carries the word and loses the institution.</p>
+
+                <h2>Standards carry the memory of an exchange</h2>
+
+                <p>C2PA’s Content Credentials work is a useful example because provenance is a relationship rather than a decorative label. The C2PA specification describes a way to bind assertions about an asset to a signed manifest, allowing viewers and systems to inspect how content was created or changed. Its July 2026 announcements include a new implementation guide and a governance expansion involving TikTok. Those facts show continuing work on adoption and implementation. They do not prove that every platform will preserve provenance correctly. They do show why the standard must carry a history of transformation across systems.</p>
+
+                <p>The same logic applies to machine-assisted research, software, commerce, and administration. A message should carry enough context for the next participant to determine:</p>
+
+                <ul>
+                    <li><strong>Identity:</strong> which person, institution, role, or agent is represented.</li>
+                    <li><strong>Authority:</strong> which mandate permits the request and where that mandate stops.</li>
+                    <li><strong>State:</strong> whether the object is proposed, accepted, paid, reviewed, published, suspended, or withdrawn.</li>
+                    <li><strong>Evidence:</strong> which sources, calculations, signatures, or prior events support the claim.</li>
+                    <li><strong>Terms:</strong> which rights, restrictions, prices, languages, jurisdictions, and time windows govern reuse.</li>
+                </ul>
+
+                <p>This is the memory of an exchange. It makes a transaction portable because the receiving system can reconstruct what crossed the border and why. It also makes disagreement possible. A creator can contest a rights claim. A buyer can challenge a price condition. An institution can revoke a delegated action. An agent can refuse a request whose authority or provenance is incomplete.</p>
+
+                <h2>The agent economy will expose weak borders</h2>
+
+                <p>The W3C and GS1 workshop is significant for a precise reason: product information designed for human readers may require different structure when agents search, compare, and act on behalf of people. A page can be visually clear and machine-ambiguous. A catalog can name a product while omitting availability, jurisdiction, delivery conditions, or the authority behind a claim. An agent needs the conditions of exchange in a form it can inspect before it acts.</p>
+
+                <p>That requirement reaches beyond retail. A research archive needs to tell a machine whether a text is public, licensed, provisional, or superseded. A publisher needs to express which territories and formats a creator has approved. A cooperative needs to represent units, quality grades, delivery windows, and settlement status in terms that another system can understand. A public institution needs to expose which service owns a request and which decisions require a human signature.</p>
+
+                <p>The risk is unequal visibility. Large institutions can afford custom schemas, dedicated integrations, and legal teams that negotiate exceptions. A small publisher, a local merchant, a community archive, or an African-language service may appear unreliable simply because its meaning does not fit the dominant platform’s fields. When a system cannot represent an entity, the market often treats the entity as absent.</p>
+
+                <p>Protocol design therefore determines who can participate in the machine economy. A standard that recognizes only global identifiers, dominant currencies, formal addresses, or one language creates a border that excludes through omission. A standard with extension points, clear semantics, local mappings, and portable evidence can widen participation without pretending that every institution has the same structure.</p>
+
+                <h2>Handoffs require a jurisdiction, not only a connection</h2>
+
+                <p>Google’s A2A materials describe secure agent handoffs and collaborative workflows. ADK Go 2.0 adds graph-based composition, human-in-the-loop orchestration, dynamic routing, and resilience. Those runtime features solve an important mechanical problem: one agent can pass work to another without forcing the entire process into one opaque model context.</p>
+
+                <p>The institutional problem is harder. A handoff changes who sees the data, who may act, and who becomes responsible for the result. A translation agent may receive a confidential manuscript. A procurement agent may receive a budget ceiling. A public-service agent may receive a resident’s case. The protocol must carry the boundary conditions, not merely the payload.</p>
+
+                <p>Every serious handoff should answer a small set of questions:</p>
+
+                <ol>
+                    <li>Which jurisdiction governs the request and its data?</li>
+                    <li>Which role delegated the action, and can that delegation be revoked?</li>
+                    <li>What part of the context is necessary for this participant, and what must remain hidden?</li>
+                    <li>What output state can this participant create?</li>
+                    <li>Who receives the work when the evidence conflicts or the action exceeds permission?</li>
+                </ol>
+
+                <p>A protocol that cannot answer these questions creates connectivity without custody. The workflow moves, yet responsibility becomes difficult to locate. The result is an architecture that scales technical participation while weakening institutional control.</p>
+
+                <h2>African sovereignty begins at the schema</h2>
+
+                <p>For African institutions, protocol design is a sovereignty question because schemas often arrive with assumptions about how a society is organized. A foreign platform may expect a stable street address, a bank-card payment, a single official language, an individual account, and a continuous internet connection. Those assumptions describe one operating environment. They do not define the world.</p>
+
+                <p>A cooperative may organize authority through a committee and a seasonal cycle. A creator may work across oral, mobile, and written records. A local service may identify a person through a combination of names, community relationships, phone numbers, and documents. A payment may be initiated through mobile money and settled later. A multilingual institution may need one concept to retain different legal or cultural meanings across languages.</p>
+
+                <p>Owning the schema means retaining the power to define these relationships. Institutions should be able to publish local extensions, map them to wider standards, and carry the original meaning alongside the translation. The goal is participation without semantic surrender. A machine may understand a local term through a mapping, while the institution retains the authority to say where that mapping is incomplete.</p>
+
+                <p>NIST’s AI Risk Management Framework gives a practical discipline for this work through Govern, Map, Measure, and Manage. Applied to protocols, those functions require an institution to govern its vocabulary, map its boundaries, measure translation loss and failed handoffs, and manage changes when a standard or partner evolves. Protocol governance belongs in the same room as security, legal review, product design, and language stewardship.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If protocols become the borders of machine participation, capital should examine the layers that make those borders legible and fair:</p>
+
+                <ul>
+                    <li><strong>Conformance infrastructure:</strong> test suites, validators, certification services, and monitoring that show whether an implementation preserves a standard’s meaning rather than merely passing a schema check.</li>
+                    <li><strong>Semantic translation gateways:</strong> systems that map local identifiers, languages, currencies, rights, and institutional roles into shared protocols while retaining the source meaning and the limits of the mapping.</li>
+                    <li><strong>Portable identity and delegation:</strong> rails for representing people, institutions, software roles, revocable authority, and scoped permissions across agent ecosystems.</li>
+                    <li><strong>Provenance-preserving exchange:</strong> infrastructure that keeps evidence, transformations, signatures, and rights attached as an asset moves between tools, markets, and jurisdictions.</li>
+                    <li><strong>Protocol observability:</strong> products that detect dropped fields, altered semantics, unauthorized handoffs, failed translations, and unresolved responsibility at the boundary.</li>
+                </ul>
+
+                <p>The underwriting question is exact: does the product reduce the cost of crossing between systems while preserving identity, authority, evidence, and recourse? Useful measures include fewer failed transactions caused by semantic mismatch, lower manual reconciliation, faster certification of new partners, higher multilingual completion, fewer provenance breaks, and clean portability when an institution changes providers.</p>
+
+                <p>This is a different object from an API directory or an agent marketplace. Those surfaces help systems find one another. The protocol layer determines whether the systems can exchange a meaningful obligation. Its value grows when the network expands without forcing each participant to rebuild its identity and rules for every new connection.</p>
+
+                <h2>Build the border before opening the gate</h2>
+
+                <p>Institutions can begin with one consequential exchange. Choose a workflow that crosses an organizational boundary and document the terms before adding more agents:</p>
+
+                <ol>
+                    <li>Name every entity, role, object, and decision that crosses the boundary.</li>
+                    <li>Define which fields are authoritative, which are translated, and which remain uncertain.</li>
+                    <li>Attach permissions, expiry, provenance, and correction paths to the exchange.</li>
+                    <li>Create conformance tests with local language, edge cases, partial records, and disputed cases.</li>
+                    <li>Measure what the receiving system lost, misunderstood, or invented during the handoff.</li>
+                </ol>
+
+                <p>The strongest protocols are modest about what they know. They expose uncertainty instead of hiding it inside a successful status code. They leave room for a human institution to correct the record. They allow a participant to leave without taking the shared history hostage. These properties are technical, commercial, and political at the same time.</p>
+
+                <p>A protocol is a border because it decides what the machine world can recognize. The builders who control that border will shape who can transact, publish, govern, and inherit value across systems. African institutions should enter this work early, with their languages, authorities, archives, and forms of exchange present in the schema from the beginning. A connected future is worth building only when connection carries meaning across the line.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/" target="_blank" rel="noopener">W3C News: “Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents” (published June 1, 2026; workshop scheduled for September 8–9, 2026; description: sharing experience of creating content with AI agents in mind, with e-commerce as a focus).</a></li>
+                    <li><a href="https://c2pa.org/news/" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity: “A New Implementation Guide for Content Credentials” (July 31, 2026) and “C2PA Welcomes TikTok to Steering Committee” (July 28, 2026; announcements describe implementation guidance and continued work to scale digital transparency standards).</a></li>
+                    <li><a href="https://spec.c2pa.org/specifications/specifications/2.4/index.html" target="_blank" rel="noopener">C2PA Specifications, version 2.4 (public specification site accessed September 4, 2026; specification resources for signed content-provenance assertions and manifests).</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog: “How A2A is Building a World of Collaborative Agents” (June 18, 2026; description: the Agent-to-Agent protocol supports secure autonomous agent handoffs and scalable collaborative workflows).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog: “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; description: graph-based workflows, human-in-the-loop orchestration, dynamic routing, and built-in resilience).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology: “AI Risk Management Framework” (page published July 12, 2021; accessed September 4, 2026; framework functions: Govern, Map, Measure, and Manage).</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Daybreak for Frontline Defenders: $1B to protect essential services” (September 3, 2026; linked article: <em>https://openai.com/index/daybreak-for-frontline-defenders</em>; description: OpenAI announced a $1 billion commitment for frontier cyber AI, training, and support for essential services).</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Un protocole est une frontière</h1>
+
+                <p>Un protocole semble être un accord technique : un ensemble de champs, de messages, de permissions et de réponses qui permet à des systèmes distincts de communiquer. Sa fonction profonde est politique. Un protocole décide quelles entités peuvent être reconnues, quelles actions peuvent franchir une limite, quelles preuves accompagnent une affirmation et quelles obligations restent attachées à un échange. Tout monde lisible par les machines possède une frontière, même lorsque celle-ci est cachée dans un schéma.</p>
+
+                <p>Plusieurs signaux publics placent maintenant cette question sur le chemin de systèmes réels. Le W3C et GS1 organisent un atelier sur le commerce électronique pour les humains et les agents d’IA, consacré notamment à la création de contenus utilisables par les agents. La C2PA a publié un guide d’implémentation et poursuit le développement de Content Credentials comme standard ouvert de provenance. Les travaux de Google sur A2A décrivent des transferts sécurisés entre agents, tandis que ADK Go 2.0 expose des workflows en graphe, des points de contrôle humains, un routage dynamique et de la résilience. Ces initiatives traitent des problèmes différents. Ensemble, elles montrent que l’interaction machine passe des appels de modèles isolés à une participation négociée dans des environnements partagés.</p>
+
+                <blockquote>
+                    <p>À une frontière, la question reste toujours la même : qui est reconnu, selon quelles conditions et avec quelles preuves ?</p>
+                </blockquote>
+
+                <h2>L’interopérabilité est un choix de reconnaissance</h2>
+
+                <p>On parle souvent de l’interopérabilité comme d’une propriété neutre. Deux systèmes interopèrent lorsqu’ils échangent correctement des données. Cette définition est trop mince pour les agents. Un agent ne déplace pas seulement une chaîne de caractères d’un endpoint à un autre. Il peut représenter un acheteur, un éditeur, un service public, un créateur, un chercheur ou un fournisseur de services. Il peut demander une action, accepter un résultat, exercer une permission ou transférer une responsabilité.</p>
+
+                <p>Le système qui reçoit le message doit décider ce qu’il signifie. L’expéditeur est-il une personne, un rôle logiciel délégué ou un processus non vérifié ? Un prix est-il une offre, une valeur indicative ou une estimation conditionnelle ? Un fichier média est-il un original, un dérivé modifié ou un actif dont la provenance a disparu ? Une demande est-elle autorisée pour une transaction, une période ou un compte entier ? L’interopérabilité dépend donc d’un vocabulaire partagé de l’identité, de l’autorité, de l’état et des conséquences.</p>
+
+                <p>Sans ce vocabulaire, l’intégration devient une série de traductions privées. Chaque plateforme construit un adaptateur pour les hypothèses de l’autre. La surface paraît connectée tandis que le sens se dégrade à chaque transfert. Un champ appelé « propriétaire » peut désigner le titulaire légal des droits dans un système, l’administrateur d’un compte dans un autre et la personne ayant téléversé un fichier dans un troisième. Le réseau transporte le mot et perd l’institution.</p>
+
+                <h2>Les standards portent la mémoire d’un échange</h2>
+
+                <p>Le travail de la C2PA sur Content Credentials est un exemple utile parce que la provenance est une relation, et non une étiquette décorative. La spécification C2PA décrit une manière de lier des affirmations sur un actif à un manifeste signé, afin que les utilisateurs et les systèmes puissent examiner comment le contenu a été créé ou modifié. Les annonces de juillet 2026 comprennent un nouveau guide d’implémentation et l’élargissement de la gouvernance avec TikTok. Ces faits montrent un travail continu sur l’adoption et l’implémentation. Ils ne prouvent pas que chaque plateforme préservera correctement la provenance. Ils montrent pourquoi le standard doit transporter l’historique des transformations entre les systèmes.</p>
+
+                <p>La même logique s’applique à la recherche assistée par machine, au logiciel, au commerce et à l’administration. Un message devrait porter assez de contexte pour que le participant suivant puisse déterminer :</p>
+
+                <ul>
+                    <li><strong>Identité :</strong> la personne, l’institution, le rôle ou l’agent représenté.</li>
+                    <li><strong>Autorité :</strong> le mandat qui permet la demande et l’endroit où ce mandat s’arrête.</li>
+                    <li><strong>État :</strong> objet proposé, accepté, payé, relu, publié, suspendu ou retiré.</li>
+                    <li><strong>Preuves :</strong> sources, calculs, signatures ou événements antérieurs qui soutiennent l’affirmation.</li>
+                    <li><strong>Conditions :</strong> droits, restrictions, prix, langues, juridictions et périodes qui régissent la réutilisation.</li>
+                </ul>
+
+                <p>C’est la mémoire de l’échange. Elle rend une transaction portable parce que le système destinataire peut reconstituer ce qui a franchi la frontière et pourquoi. Elle rend aussi le désaccord possible. Un créateur peut contester une affirmation de droits. Un acheteur peut remettre en cause une condition de prix. Une institution peut révoquer une action déléguée. Un agent peut refuser une demande dont l’autorité ou la provenance est incomplète.</p>
+
+                <h2>L’économie des agents révélera les frontières faibles</h2>
+
+                <p>L’atelier W3C et GS1 est important pour une raison précise : des informations produit conçues pour des lecteurs humains peuvent demander une structure différente lorsque des agents recherchent, comparent et agissent au nom de personnes. Une page peut être claire visuellement et ambiguë pour une machine. Un catalogue peut nommer un produit sans préciser sa disponibilité, sa juridiction, ses conditions de livraison ou l’autorité qui soutient l’affirmation. Un agent a besoin des conditions de l’échange sous une forme qu’il peut examiner avant d’agir.</p>
+
+                <p>Cette exigence dépasse le commerce de détail. Une archive de recherche doit indiquer à une machine si un texte est public, sous licence, provisoire ou remplacé. Un éditeur doit exprimer les territoires et les formats approuvés par un créateur. Une coopérative doit représenter les unités, les qualités, les fenêtres de livraison et l’état du règlement dans des termes qu’un autre système peut comprendre. Une institution publique doit exposer quel service possède une demande et quelles décisions exigent une signature humaine.</p>
+
+                <p>Le risque est celui d’une visibilité inégale. Les grandes institutions peuvent financer des schémas personnalisés, des intégrations dédiées et des équipes juridiques capables de négocier des exceptions. Un petit éditeur, un commerçant local, une archive communautaire ou un service en langue africaine peut sembler peu fiable simplement parce que son sens n’entre pas dans les champs de la plateforme dominante. Lorsqu’un système ne peut pas représenter une entité, le marché traite souvent cette entité comme absente.</p>
+
+                <p>La conception des protocoles détermine donc qui peut participer à l’économie machine. Un standard qui ne reconnaît que les identifiants mondiaux, les monnaies dominantes, les adresses formelles ou une seule langue crée une frontière par omission. Un standard doté de points d’extension, d’une sémantique claire, de correspondances locales et de preuves portables peut élargir la participation sans prétendre que toutes les institutions ont la même structure.</p>
+
+                <h2>Les transferts exigent une juridiction, pas seulement une connexion</h2>
+
+                <p>Les documents de Google sur A2A décrivent des transferts sécurisés entre agents et des workflows collaboratifs. ADK Go 2.0 ajoute une composition en graphe, une orchestration avec humain dans la boucle, un routage dynamique et de la résilience. Ces fonctions d’exécution répondent à un problème mécanique important : un agent peut transmettre un travail à un autre sans enfermer tout le processus dans un contexte opaque de modèle.</p>
+
+                <p>Le problème institutionnel est plus difficile. Un transfert change qui voit les données, qui peut agir et qui devient responsable du résultat. Un agent de traduction peut recevoir un manuscrit confidentiel. Un agent d’achat peut recevoir un plafond budgétaire. Un agent de service public peut recevoir le dossier d’un habitant. Le protocole doit transporter les conditions de la frontière, et pas seulement la charge utile.</p>
+
+                <p>Chaque transfert sérieux devrait répondre à quelques questions :</p>
+
+                <ol>
+                    <li>Quelle juridiction régit la demande et ses données ?</li>
+                    <li>Quel rôle a délégué l’action et cette délégation peut-elle être révoquée ?</li>
+                    <li>Quelle partie du contexte est nécessaire à ce participant et que faut-il garder caché ?</li>
+                    <li>Quel état de sortie ce participant peut-il créer ?</li>
+                    <li>Qui reçoit le travail lorsque les preuves se contredisent ou que l’action dépasse la permission ?</li>
+                </ol>
+
+                <p>Un protocole incapable de répondre à ces questions crée une connectivité sans garde. Le workflow avance, mais la responsabilité devient difficile à localiser. L’architecture augmente la participation technique tout en affaiblissant le contrôle institutionnel.</p>
+
+                <h2>La souveraineté africaine commence dans le schéma</h2>
+
+                <p>Pour les institutions africaines, la conception des protocoles est une question de souveraineté parce que les schémas arrivent souvent avec des hypothèses sur l’organisation d’une société. Une plateforme étrangère peut attendre une adresse stable, un paiement par carte bancaire, une langue officielle unique, un compte individuel et une connexion continue. Ces hypothèses décrivent un environnement d’exploitation. Elles ne définissent pas le monde.</p>
+
+                <p>Une coopérative peut organiser l’autorité par un comité et un cycle saisonnier. Un créateur peut travailler entre des dossiers oraux, mobiles et écrits. Un service local peut identifier une personne par une combinaison de noms, de relations communautaires, de numéros de téléphone et de documents. Un paiement peut être lancé par argent mobile et réglé plus tard. Une institution multilingue peut avoir besoin de conserver des significations juridiques ou culturelles différentes pour un même concept selon la langue.</p>
+
+                <p>Posséder le schéma signifie conserver le pouvoir de définir ces relations. Les institutions doivent pouvoir publier des extensions locales, les relier aux standards plus larges et conserver le sens original à côté de la traduction. Le but est la participation sans abandon sémantique. Une machine peut comprendre un terme local par une correspondance, tandis que l’institution conserve le pouvoir d’indiquer où cette correspondance est incomplète.</p>
+
+                <p>Le cadre de gestion des risques liés à l’IA du NIST donne une discipline pratique avec Govern, Map, Measure et Manage. Appliquées aux protocoles, ces fonctions demandent à une institution de gouverner son vocabulaire, de cartographier ses frontières, de mesurer la perte de sens et les transferts échoués, puis de gérer les changements lorsqu’un standard ou un partenaire évolue. La gouvernance des protocoles appartient à la même pièce que la sécurité, la revue juridique, la conception produit et la protection des langues.</p>
+
+                <h2>Où la surface d’investissement s’élargit</h2>
+
+                <p>Si les protocoles deviennent les frontières de la participation machine, le capital doit examiner les couches qui rendent ces frontières lisibles et équitables :</p>
+
+                <ul>
+                    <li><strong>Infrastructure de conformité :</strong> suites de tests, validateurs, services de certification et surveillance montrant qu’une implémentation préserve le sens d’un standard au-delà d’une simple vérification de schéma.</li>
+                    <li><strong>Passerelles de traduction sémantique :</strong> systèmes reliant les identifiants, langues, monnaies, droits et rôles institutionnels locaux à des protocoles partagés tout en conservant le sens source et les limites de la correspondance.</li>
+                    <li><strong>Identité et délégation portables :</strong> rails représentant personnes, institutions, rôles logiciels, autorités révocables et permissions limitées entre écosystèmes d’agents.</li>
+                    <li><strong>Échange préservant la provenance :</strong> infrastructure gardant les preuves, transformations, signatures et droits attachés lorsqu’un actif passe entre outils, marchés et juridictions.</li>
+                    <li><strong>Observabilité des protocoles :</strong> produits détectant les champs supprimés, les sémantiques modifiées, les transferts non autorisés, les traductions échouées et la responsabilité non résolue à la frontière.</li>
+                </ul>
+
+                <p>La question de souscription est exacte : le produit réduit-il le coût du passage entre systèmes tout en préservant l’identité, l’autorité, les preuves et le recours ? Les mesures utiles comprennent moins de transactions échouées à cause d’un décalage sémantique, moins de rapprochements manuels, une certification plus rapide de nouveaux partenaires, un meilleur accomplissement multilingue, moins de ruptures de provenance et une portabilité propre lorsqu’une institution change de fournisseur.</p>
+
+                <p>Il s’agit d’un objet différent d’un annuaire d’API ou d’une place de marché d’agents. Ces surfaces aident les systèmes à se trouver. La couche protocolaire détermine s’ils peuvent échanger une obligation compréhensible. Sa valeur augmente lorsque le réseau s’étend sans obliger chaque participant à reconstruire son identité et ses règles pour chaque nouvelle connexion.</p>
+
+                <h2>Construire la frontière avant d’ouvrir la porte</h2>
+
+                <p>Les institutions peuvent commencer par un échange conséquent. Il faut choisir un workflow qui traverse une frontière organisationnelle et documenter ses conditions avant d’ajouter d’autres agents :</p>
+
+                <ol>
+                    <li>Nommer chaque entité, rôle, objet et décision qui franchit la frontière.</li>
+                    <li>Définir quels champs font autorité, lesquels sont traduits et lesquels restent incertains.</li>
+                    <li>Attacher permissions, expiration, provenance et voies de correction à l’échange.</li>
+                    <li>Créer des tests de conformité avec la langue locale, les cas limites, les dossiers incomplets et les cas contestés.</li>
+                    <li>Mesurer ce que le système destinataire a perdu, mal compris ou inventé pendant le transfert.</li>
+                </ol>
+
+                <p>Les protocoles les plus solides restent modestes sur ce qu’ils savent. Ils exposent l’incertitude au lieu de la cacher dans un code de réussite. Ils laissent à l’institution humaine le moyen de corriger le dossier. Ils permettent à un participant de partir sans prendre en otage l’histoire partagée. Ces propriétés sont techniques, commerciales et politiques en même temps.</p>
+
+                <p>Un protocole est une frontière parce qu’il décide ce que le monde machine peut reconnaître. Les bâtisseurs qui contrôlent cette frontière détermineront qui peut échanger, publier, gouverner et transmettre de la valeur entre les systèmes. Les institutions africaines doivent entrer tôt dans ce travail, avec leurs langues, leurs autorités, leurs archives et leurs formes d’échange présentes dans le schéma dès le départ. Un avenir connecté mérite d’être construit seulement lorsque la connexion transporte du sens d’un côté à l’autre.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/" target="_blank" rel="noopener">Actualités du W3C : « Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents » (publié le 1er juin 2026 ; atelier prévu les 8 et 9 septembre 2026 ; description : partage d’expériences sur la création de contenus pensés avec les agents d’IA, avec un accent sur le commerce électronique).</a></li>
+                    <li><a href="https://c2pa.org/news/" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity : « A New Implementation Guide for Content Credentials » (31 juillet 2026) et « C2PA Welcomes TikTok to Steering Committee » (28 juillet 2026 ; les annonces décrivent un guide d’implémentation et la poursuite du travail de mise à l’échelle des standards de transparence numérique).</a></li>
+                    <li><a href="https://spec.c2pa.org/specifications/specifications/2.4/index.html" target="_blank" rel="noopener">Spécifications C2PA, version 2.4 (site public consulté le 4 septembre 2026 ; ressources de spécification pour les assertions et manifestes signés de provenance des contenus).</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog : « How A2A is Building a World of Collaborative Agents » (18 juin 2026 ; description : le protocole Agent-to-Agent prend en charge des transferts autonomes sécurisés entre agents et des workflows collaboratifs évolutifs).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog : « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; description : workflows en graphe, orchestration avec humain dans la boucle, routage dynamique et résilience intégrée).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology : « AI Risk Management Framework » (page publiée le 12 juillet 2021 ; consultée le 4 septembre 2026 ; fonctions du cadre : Govern, Map, Measure et Manage).</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « Daybreak for Frontline Defenders: $1B to protect essential services » (3 septembre 2026 ; article lié : <em>https://openai.com/index/daybreak-for-frontline-defenders</em> ; description : OpenAI a annoncé un engagement d’un milliard de dollars pour l’IA cyber de pointe, la formation et le soutien aux services essentiels).</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>September 4, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
