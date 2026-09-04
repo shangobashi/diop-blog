@@ -131,6 +131,7 @@
         'article.entry103':     { en: 'Diop Daily #103 — September 2026', fr: 'Diop Quotidien n°103 — Septembre 2026' },
         'article.entry104':     { en: 'Diop Daily #104 — September 2026', fr: 'Diop Quotidien n°104 — Septembre 2026' },
         'article.entry105':     { en: 'Diop Daily #105 — September 2026', fr: 'Diop Quotidien n°105 — Septembre 2026' },
+        'article.entry106':     { en: 'Diop Daily #106 — September 2026', fr: 'Diop Quotidien n°106 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -148,6 +149,16 @@
     };
 
     var postTranslations = {
+'diop-daily-106': {
+    title: {
+        en: "The Machine Needs an Insurer",
+        fr: "La machine a besoin d’un assureur"
+    },
+    excerpt: {
+        en: "AI systems are moving into work where failure carries financial, civic, security, and reputational consequences. The investable layer is the risk-transfer system that turns model evidence, controls, and residual uncertainty into warranties, underwriting, and accountable coverage.",
+        fr: "Les systèmes d’IA entrent dans des travaux où l’échec entraîne des conséquences financières, civiques, sécuritaires et réputationnelles. La couche d’investissement est le système de transfert du risque qui transforme les preuves du modèle, les contrôles et le risque résiduel en garanties, souscription et couverture responsable."
+    }
+},
 'diop-daily-105': {
     title: {
         en: "A Protocol Is a Border",
