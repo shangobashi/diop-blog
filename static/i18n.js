@@ -132,6 +132,7 @@
         'article.entry104':     { en: 'Diop Daily #104 — September 2026', fr: 'Diop Quotidien n°104 — Septembre 2026' },
         'article.entry105':     { en: 'Diop Daily #105 — September 2026', fr: 'Diop Quotidien n°105 — Septembre 2026' },
         'article.entry106':     { en: 'Diop Daily #106 — September 2026', fr: 'Diop Quotidien n°106 — Septembre 2026' },
+        'article.entry107':     { en: 'Diop Daily #107 — September 2026', fr: 'Diop Quotidien n°107 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -149,6 +150,16 @@
     };
 
     var postTranslations = {
+'diop-daily-107': {
+    title: {
+        en: "Leave a Door in the Decision",
+        fr: "Laisser une porte dans la décision"
+    },
+    excerpt: {
+        en: "AI systems become institutional when a decision can be examined, challenged, and changed without destroying its history. The investable layer is the reversible state, review, and recourse infrastructure that keeps human agency alive after a machine acts.",
+        fr: "Les systèmes d’IA deviennent institutionnels lorsqu’une décision peut être examinée, contestée et modifiée sans détruire son histoire. La couche d’investissement est l’infrastructure réversible des états, de la revue et du recours qui maintient l’agence humaine après l’action d’une machine."
+    }
+},
 'diop-daily-106': {
     title: {
         en: "The Machine Needs an Insurer",
