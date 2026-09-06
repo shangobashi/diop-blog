@@ -133,6 +133,7 @@
         'article.entry105':     { en: 'Diop Daily #105 — September 2026', fr: 'Diop Quotidien n°105 — Septembre 2026' },
         'article.entry106':     { en: 'Diop Daily #106 — September 2026', fr: 'Diop Quotidien n°106 — Septembre 2026' },
         'article.entry107':     { en: 'Diop Daily #107 — September 2026', fr: 'Diop Quotidien n°107 — Septembre 2026' },
+        'article.entry108':     { en: 'Diop Daily #108 — September 2026', fr: 'Diop Quotidien n°108 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -150,6 +151,16 @@
     };
 
     var postTranslations = {
+'diop-daily-108': {
+    title: {
+        en: "The Experiment Must Leave a Trace",
+        fr: "L’expérience doit laisser une trace"
+    },
+    excerpt: {
+        en: "As coding agents increase research velocity, the scarce institutional layer becomes the experiment ledger: a durable record of hypotheses, branches, null results, evidence, and decisions. The investable surface is the infrastructure that lets laboratories learn from machine activity instead of merely producing more of it.",
+        fr: "À mesure que les agents de codage accélèrent la recherche, la couche institutionnelle rare devient le registre d’expériences : un dossier durable des hypothèses, des branches, des résultats nuls, des preuves et des décisions. La surface d’investissement est l’infrastructure qui permet aux laboratoires d’apprendre de l’activité machine plutôt que d’en produire simplement davantage."
+    }
+},
 'diop-daily-107': {
     title: {
         en: "Leave a Door in the Decision",

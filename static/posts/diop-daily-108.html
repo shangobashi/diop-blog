@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Experiment Must Leave a Trace — Diop Research</title>
+    <meta name="description" content="As coding agents increase research velocity, the scarce institutional layer becomes the experiment ledger: a durable record of hypotheses, branches, null results, evidence, and decisions that lets a laboratory learn rather than merely generate faster."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry108">Diop Daily #108 — September 2026</div>
+                <div class="article__meta-line">
+                    <time>September 7, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>experiment ledgers · research infrastructure · scientific memory · sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Experiment Must Leave a Trace</h1>
+
+                <p>Research becomes faster when a machine can write code, run an analysis, inspect a result, and propose the next test. The speed is easy to see. The institutional consequence is harder: a laboratory can accumulate more experiments than its people can remember. If each branch disappears into a terminal, a notebook, or a model conversation, the system gains velocity while losing the ability to know why it believes anything.</p>
+
+                <p>An OpenAI News RSS item dated September 6 describes coding agents reshaping AI research and points to early data on agent usage, experiment velocity, task complexity, and research acceleration. The description comes from the company’s internal view, so it does not establish a universal productivity measurement; it remains useful because it names the transition directly: agents are moving closer to the machinery of inquiry. Once they write and execute more of the work, the scarce layer is the record that allows a research institution to distinguish a promising result from a fast repetition of an old mistake.</p>
+
+                <blockquote>
+                    <p>A laboratory does not become more intelligent when it runs more experiments. It becomes more intelligent when each experiment changes what the laboratory can remember and test next.</p>
+                </blockquote>
+
+                <h2>Speed without memory is only acceleration</h2>
+
+                <p>Scientific work has always depended on records. A result without method cannot be reproduced. A method without conditions cannot be interpreted. A failed trial that is not recorded will return as a new hypothesis under a different name. The research notebook is therefore more than a place to store observations. It is a device for controlling the relationship between evidence and belief.</p>
+
+                <p>Agentic systems put pressure on that relationship because they can produce many plausible branches in a short period. An agent may alter a data-cleaning step, change a model route, run a new analysis, inspect the output, and generate another modification before a human has read the first diff. The central problem concerns both the correctness of the final result and whether anyone can reconstruct the path that made it appear credible.</p>
+
+                <p>A useful experiment ledger treats every run as a bounded claim. It records what the researcher expected, what changed, what was held constant, what the system observed, and what decision followed. This structure gives negative results a place beside successful ones. It also prevents a polished final artifact from hiding the branches that were abandoned along the way.</p>
+
+                <h2>An experiment is a chain, not a result</h2>
+
+                <p>The final chart or paragraph is only one state in a longer chain. A research-grade record should connect the question to the conditions under which an answer was produced. At minimum, each experiment needs:</p>
+
+                <ul>
+                    <li><strong>Hypothesis:</strong> the claim being tested, including the expected direction and the reason it deserves a test.</li>
+                    <li><strong>Inputs:</strong> the dataset, documents, code, prompts, instruments, permissions, and prior findings available at the start.</li>
+                    <li><strong>Intervention:</strong> the exact change introduced, whether it was a new model route, parameter, transformation, tool, or human instruction.</li>
+                    <li><strong>Controls:</strong> the baselines, comparison groups, fixed conditions, and evaluation measures that make the result interpretable.</li>
+                    <li><strong>Observations:</strong> outputs, errors, anomalies, resource use, and uncertainty, including results that do not support the hypothesis.</li>
+                    <li><strong>Decision:</strong> the next state of the work: continue, revise, suspend, publish, reject, or repeat under a new condition.</li>
+                </ul>
+
+                <p>These fields make the difference between an experiment and an execution trace. A trace says what the machine did. A ledger says what the action was supposed to establish and what the institution learned from the outcome. The distinction is essential when a research system uses several agents, because each handoff can otherwise detach an action from the question that justified it.</p>
+
+                <p>Google’s public description of ADK Go 2.0 supplies a relevant runtime signal. Its graph-based workflow engine includes human-in-the-loop orchestration, dynamic routing, retries, and built-in resilience. Those features can help a laboratory coordinate search, code execution, review, and publication, while scientific memory requires a ledger across the graph and preserve the relationship between a node’s action, the evidence it consumed, and the decision that came after it.</p>
+
+                <h2>Negative results are part of the institution</h2>
+
+                <p>Organizations often preserve success more carefully than failure. Published findings receive a title, a citation, and a location. Rejected hypotheses remain in private notes, deleted branches, or the memory of one researcher. This creates a costly asymmetry. The institution remembers what it chose to show and forgets what it already learned not to pursue.</p>
+
+                <p>Agentic research will intensify this problem unless the system gives failed branches a durable identity. A null result can reveal that a method is insensitive to a local condition. A failed data transformation can expose a hidden schema assumption. A discarded model route can show that a language, instrument, or population was poorly represented. Such findings are constraints on the next experiment, not editorial waste.</p>
+
+                <p>The ledger should therefore preserve rejected branches without confusing them with validated conclusions. A researcher must be able to ask which hypotheses were tested, under which conditions, with what evidence, and why the branch was closed. The answer should include uncertainty and ownership. A future agent can then avoid repeating the test, or reopen it when the data, method, or question has materially changed.</p>
+
+                <p>NIST’s AI Risk Management Framework gives this discipline a general vocabulary through Govern, Map, Measure, and Manage. Applied to experiment ledgers, Govern assigns ownership of the question and the record. Map identifies the people, data, systems, and obligations touched by the run. Measure records reproducibility, error, cost, and correction. Manage determines what happens when the result conflicts with prior evidence, the method changes, or a permission expires. The framework is a useful test rather than a laboratory notebook specification: it asks whether the research system can account for its own decisions.</p>
+
+                <h2>Agents change the rate of inquiry</h2>
+
+                <p>When a human team runs a small number of experiments, informal memory can appear sufficient. The team meets, compares notes, and carries a shared sense of what has already been tried. That arrangement weakens as agents increase the number of branches. More execution creates more state. More state creates more opportunities for duplicated work, contaminated comparisons, and forgotten assumptions.</p>
+
+                <p>The correct response is to make the narration part of the system instead of slowing every experiment until a person has manually narrated it. Agents should be required to declare the hypothesis they are testing, point to the baseline, attach the changed inputs, and record the reason for the next action. Human reviewers can then spend their attention on the meaning of the result rather than reconstructing basic chronology.</p>
+
+                <p>This also changes the meaning of research throughput. Counting runs is a weak measure. A better measure asks how many experiments become usable knowledge: how many can be reproduced, how many close a question, how many prevent duplicated work, how quickly a contradiction is surfaced, and how much of the record a new researcher can inherit without interviewing the original operator.</p>
+
+                <h2>African laboratories must own the record of inquiry</h2>
+
+                <p>Scientific sovereignty includes control over the memory of investigation. A laboratory that can access a foreign model but cannot export its hypotheses, failed branches, local terminology, evaluation sets, and reasons for rejecting a result has borrowed capability without securing knowledge.</p>
+
+                <p>This matters in African research environments where records may cross languages, institutions, funding cycles, and uneven technical infrastructure. A field study may combine community testimony, mobile data, paper forms, satellite imagery, and laboratory measurements. A model may process several of those sources while understanding only one language well. The experiment ledger must retain the original terms, the translation choices, the permissions, and the limits of the inference.</p>
+
+                <p>Local ownership means keeping the institutional question and the evidence chain under local authority while using external instruments where they help. An African research center should be able to move a ledger between model providers, audit it with its own reviewers, reproduce a result on available infrastructure, and decide which conclusions enter the public record. The machine can accelerate the inquiry while the institution retains the power to define what counts as knowledge.</p>
+
+                <p>Cheikh Anta Diop’s scientific method has a direct contemporary lesson here. Historical and scientific independence require more than access to instruments produced elsewhere. They require the capacity to compare evidence, expose assumptions, preserve the record, and build conclusions that can be tested by others. An experiment ledger is a small institution for that work. It gives a laboratory a memory that is structured enough to resist both erasure and false certainty.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If coding agents increase the rate of inquiry, capital should examine the infrastructure that turns experimental activity into inheritable research capacity:</p>
+
+                <ul>
+                    <li><strong>Experiment registries:</strong> systems that assign identity, version, ownership, status, and searchable relationships to hypotheses and runs.</li>
+                    <li><strong>Reproducibility runners:</strong> environments that snapshot code, data, model routes, dependencies, and permissions, then replay a result under declared conditions.</li>
+                    <li><strong>Branch and null-result management:</strong> tools that preserve rejected hypotheses and failed methods as reusable constraints without presenting them as validated findings.</li>
+                    <li><strong>Agent research control planes:</strong> orchestration layers that require hypothesis declarations, baseline references, approval gates, resource limits, and evidence-bearing handoffs.</li>
+                    <li><strong>Local scientific memory:</strong> multilingual, exportable systems that retain terminology, community permissions, evaluation sets, and institutional ownership across providers.</li>
+                </ul>
+
+                <p>The underwriting question is concrete: does the product increase the amount of research that a new person, agent, or institution can reproduce and extend? Useful measures include reconstruction time, duplicate-experiment rate, percentage of runs with a declared baseline, share of negative results that remain discoverable, time to identify a contradictory finding, and the fraction of records that can be exported and replayed outside the original provider.</p>
+
+                <p>This is a different commercial object from a generic research assistant, a finished-artifact registry, or a workflow graph. Those products help a system answer, preserve an output, or route work. The experiment ledger preserves the institution’s changing map of what it tried, what failed, what remains uncertain, and why the next question is worth asking.</p>
+
+                <h2>Build the ledger before adding another agent</h2>
+
+                <p>A laboratory can test this architecture with one bounded research question. Before increasing the number of agents, make the inquiry legible:</p>
+
+                <ol>
+                    <li>Write the hypothesis, expected observation, decision threshold, and owner before the run begins.</li>
+                    <li>Snapshot the inputs, code, model route, tools, permissions, and baseline used by the experiment.</li>
+                    <li>Require the system to record interventions, outputs, errors, resource use, and uncertainty as the run proceeds.</li>
+                    <li>Store successful, inconclusive, and rejected branches with distinct states and reasons.</li>
+                    <li>Reproduce one result on a second environment or provider, then record the differences rather than hiding them.</li>
+                </ol>
+
+                <p>These practices make speed accountable without making inquiry timid. They let agents explore more branches while keeping a human institution able to inspect the question, challenge the method, and inherit the conclusion. They also create a better boundary for capital: the buyer can evaluate whether the system produces durable research capacity instead of merely a larger stream of machine activity.</p>
+
+                <p>The experiment must leave a trace because a laboratory is built from remembered questions as much as from published answers. When every branch has a place, failure becomes evidence, and the next generation can begin from the real frontier rather than from the fragments that survived.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Research acceleration: The view inside OpenAI” (September 6, 2026; linked article: <em>https://openai.com/index/research-acceleration-view-inside-openai</em>; description: coding agents are reshaping AI research, with early data on agent usage, experiment velocity, task complexity, and research acceleration).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog: “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; description: a graph-based workflow engine with human-in-the-loop orchestration, dynamic routing, retries, and built-in resilience).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology: “AI Risk Management Framework” (page published July 12, 2021; accessed September 7, 2026; functions: Govern, Map, Measure, and Manage).</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L’expérience doit laisser une trace</h1>
+
+                <p>La recherche devient plus rapide lorsqu’une machine peut écrire du code, exécuter une analyse, examiner un résultat et proposer le test suivant. La vitesse se voit facilement. La conséquence institutionnelle est plus difficile à saisir : un laboratoire peut accumuler plus d’expériences que ses membres ne peuvent en retenir. Si chaque branche disparaît dans un terminal, un carnet ou une conversation avec un modèle, le système gagne en vitesse tout en perdant la capacité de savoir pourquoi il croit quoi que ce soit.</p>
+
+                <p>Un item du flux RSS d’OpenAI daté du 6 septembre décrit des agents de codage qui remodèlent la recherche en IA et signale des données préliminaires sur l’usage des agents, la vitesse des expériences, la complexité des tâches et l’accélération de la recherche. Cette description fournie par l’entreprise d’un état interne n’établit pas une mesure universelle de productivité, mais elle reste utile parce qu’elle nomme directement la transition : les agents se rapprochent de la mécanique de l’enquête. Lorsqu’ils écrivent et exécutent une plus grande partie du travail, la couche rare devient le dossier qui permet à une institution de recherche de distinguer un résultat prometteur de la répétition rapide d’une ancienne erreur.</p>
+
+                <blockquote>
+                    <p>Un laboratoire ne devient pas plus intelligent parce qu’il mène davantage d’expériences. Il devient plus intelligent lorsque chaque expérience modifie ce qu’il peut retenir et tester ensuite.</p>
+                </blockquote>
+
+                <h2>La vitesse sans mémoire n’est qu’une accélération</h2>
+
+                <p>Le travail scientifique a toujours dépendu de dossiers. Un résultat sans méthode ne peut pas être reproduit. Une méthode sans conditions ne peut pas être interprétée. Un essai échoué qui n’est pas consigné reviendra comme une nouvelle hypothèse sous un autre nom. Le carnet de recherche est donc davantage qu’un lieu de stockage des observations. C’est un instrument qui contrôle la relation entre les preuves et les convictions.</p>
+
+                <p>Les systèmes agentiques exercent une pression sur cette relation parce qu’ils peuvent produire de nombreuses branches plausibles en peu de temps. Un agent peut modifier une étape de nettoyage des données, changer un parcours de modèle, lancer une nouvelle analyse, examiner la sortie et générer une autre modification avant qu’un humain n’ait lu le premier diff. La question centrale porte à la fois sur la correction du résultat final et sur la possibilité pour quiconque de reconstituer le chemin qui l’a rendu crédible.</p>
+
+                <p>Un registre d’expériences utile traite chaque exécution comme une affirmation bornée. Il consigne ce que le chercheur attendait, ce qui a changé, ce qui est resté constant, ce que le système a observé et la décision qui a suivi. Cette structure donne aux résultats négatifs une place à côté des résultats positifs. Elle empêche aussi qu’un artefact final soigné dissimule les branches abandonnées en cours de route.</p>
+
+                <h2>Une expérience est une chaîne, pas un résultat</h2>
+
+                <p>Le graphique ou le paragraphe final n’est qu’un état dans une chaîne plus longue. Un dossier de niveau scientifique doit relier la question aux conditions dans lesquelles une réponse a été produite. Chaque expérience doit au minimum comprendre :</p>
+
+                <ul>
+                    <li><strong>Hypothèse :</strong> l’affirmation testée, avec la direction attendue et la raison pour laquelle elle mérite un test.</li>
+                    <li><strong>Entrées :</strong> jeu de données, documents, code, prompts, instruments, permissions et résultats antérieurs disponibles au départ.</li>
+                    <li><strong>Intervention :</strong> changement exact introduit, qu’il s’agisse d’un nouveau parcours de modèle, paramètre, transformation, outil ou instruction humaine.</li>
+                    <li><strong>Contrôles :</strong> références, groupes de comparaison, conditions fixes et mesures d’évaluation qui rendent le résultat interprétable.</li>
+                    <li><strong>Observations :</strong> sorties, erreurs, anomalies, consommation de ressources et incertitude, y compris les résultats qui ne soutiennent pas l’hypothèse.</li>
+                    <li><strong>Décision :</strong> état suivant du travail : poursuivre, réviser, suspendre, publier, rejeter ou répéter sous une nouvelle condition.</li>
+                </ul>
+
+                <p>Ces champs font la différence entre une expérience et une simple trace d’exécution. Une trace dit ce que la machine a fait. Un registre dit ce que l’action devait établir et ce que l’institution a appris du résultat. La distinction est essentielle lorsqu’un système de recherche utilise plusieurs agents, car chaque transfert peut sinon détacher une action de la question qui la justifiait.</p>
+
+                <p>La description publique de Google consacrée à ADK Go 2.0 fournit ici un signal d’exécution pertinent. Son moteur de workflow en graphe comprend une orchestration avec humain dans la boucle, un routage dynamique, des nouvelles tentatives et une résilience intégrée. Ces fonctions peuvent aider un laboratoire à coordonner la recherche documentaire, l’exécution du code, la revue et la publication ; la mémoire scientifique exige toutefois un registre qui traverse le graphe et conserver la relation entre l’action d’un nœud, les preuves qu’il a utilisées et la décision qui a suivi.</p>
+
+                <h2>Les résultats négatifs appartiennent à l’institution</h2>
+
+                <p>Les organisations conservent souvent les succès avec davantage de soin que les échecs. Les résultats publiés reçoivent un titre, une citation et un emplacement. Les hypothèses rejetées restent dans des notes privées, des branches supprimées ou la mémoire d’un seul chercheur. Cette asymétrie coûte cher. L’institution se souvient de ce qu’elle a choisi de montrer et oublie ce qu’elle avait déjà appris à ne pas poursuivre.</p>
+
+                <p>La recherche agentique intensifiera ce problème si le système ne donne pas une identité durable aux branches échouées. Un résultat nul peut révéler qu’une méthode est insensible à une condition locale. Une transformation de données échouée peut exposer une hypothèse cachée du schéma. Un parcours de modèle abandonné peut montrer qu’une langue, un instrument ou une population était mal représenté. Ces résultats constituent des contraintes pour le test suivant, et non des déchets éditoriaux.</p>
+
+                <p>Le registre doit donc conserver les branches rejetées sans les confondre avec des conclusions validées. Un chercheur doit pouvoir demander quelles hypothèses ont été testées, dans quelles conditions, avec quelles preuves et pourquoi la branche a été fermée. La réponse doit inclure l’incertitude et la responsabilité. Un agent futur peut alors éviter de répéter le test ou le rouvrir lorsque les données, la méthode ou la question ont changé de manière substantielle.</p>
+
+                <p>Le cadre de gestion des risques liés à l’IA du NIST donne à cette discipline un vocabulaire général avec Govern, Map, Measure et Manage. Appliqué aux registres d’expériences, Govern attribue la responsabilité de la question et du dossier. Map identifie les personnes, données, systèmes et obligations touchés par l’exécution. Measure consigne la reproductibilité, l’erreur, le coût et la correction. Manage détermine ce qui se passe lorsque le résultat contredit les preuves antérieures, que la méthode change ou qu’une permission expire. Le cadre fournit un test utile plutôt qu’une spécification de carnet de laboratoire : il demande si le système de recherche peut rendre compte de ses propres décisions.</p>
+
+                <h2>Les agents modifient le rythme de l’enquête</h2>
+
+                <p>Lorsqu’une équipe humaine mène un petit nombre d’expériences, la mémoire informelle peut sembler suffisante. L’équipe se réunit, compare ses notes et conserve une intuition commune de ce qui a déjà été tenté. Cette organisation se fragilise lorsque les agents augmentent le nombre de branches. Davantage d’exécution crée davantage d’états. Davantage d’états crée davantage de risques de travail dupliqué, de comparaisons contaminées et d’hypothèses oubliées.</p>
+
+                <p>La bonne réponse consiste à intégrer le récit au système au lieu de ralentir chaque expérience jusqu’à ce qu’une personne la raconte manuellement. Les agents doivent déclarer l’hypothèse testée, désigner la référence, joindre les entrées modifiées et consigner la raison de l’action suivante. Les réviseurs humains peuvent ainsi consacrer leur attention au sens du résultat plutôt qu’à la reconstitution de sa chronologie élémentaire.</p>
+
+                <p>Cela modifie également le sens du débit de recherche. Compter les exécutions est une mesure faible. Une mesure plus solide demande combien d’expériences deviennent un savoir utilisable : combien peuvent être reproduites, combien ferment une question, combien empêchent un travail dupliqué, à quelle vitesse une contradiction est détectée et quelle part du dossier un nouveau chercheur peut recevoir sans interroger l’opérateur initial.</p>
+
+                <h2>Les laboratoires africains doivent posséder le dossier de l’enquête</h2>
+
+                <p>La souveraineté scientifique comprend le contrôle de la mémoire de l’investigation. Un laboratoire qui peut accéder à un modèle étranger mais qui ne peut pas exporter ses hypothèses, ses branches échouées, sa terminologie locale, ses jeux d’évaluation et les raisons du rejet d’un résultat a emprunté une capacité sans sécuriser le savoir.</p>
+
+                <p>La question est importante dans des environnements de recherche africains où les dossiers peuvent traverser les langues, les institutions, les cycles de financement et des infrastructures techniques inégales. Une étude de terrain peut combiner témoignages communautaires, données mobiles, formulaires papier, imagerie satellitaire et mesures de laboratoire. Un modèle peut traiter plusieurs de ces sources tout en ne maîtrisant correctement qu’une seule langue. Le registre doit conserver les termes originaux, les choix de traduction, les permissions et les limites de l’inférence.</p>
+
+                <p>La propriété locale signifie conserver la question institutionnelle et la chaîne de preuves sous une autorité locale tout en utilisant les instruments extérieurs là où ils sont utiles. Un centre de recherche africain doit pouvoir déplacer un registre entre fournisseurs de modèles, le faire auditer par ses propres réviseurs, reproduire un résultat sur l’infrastructure disponible et décider quelles conclusions entrent dans le dossier public. La machine peut accélérer l’enquête tandis que l’institution garde le pouvoir de définir ce qui compte comme savoir.</p>
+
+                <p>La méthode de Cheikh Anta Diop offre ici une leçon contemporaine directe. L’indépendance historique et scientifique exige davantage que l’accès à des instruments produits ailleurs. Elle exige la capacité de comparer les preuves, d’exposer les hypothèses, de conserver le dossier et de bâtir des conclusions que d’autres peuvent tester. Un registre d’expériences est une petite institution pour ce travail. Il donne au laboratoire une mémoire assez structurée pour résister à la fois à l’effacement et à la fausse certitude.</p>
+
+                <h2>Où la surface d’investissement s’élargit</h2>
+
+                <p>Si les agents de codage augmentent le rythme de l’enquête, le capital doit examiner l’infrastructure qui transforme l’activité expérimentale en capacité de recherche transmissible :</p>
+
+                <ul>
+                    <li><strong>Registres d’expériences :</strong> systèmes attribuant une identité, une version, un responsable, un statut et des relations consultables aux hypothèses et aux exécutions.</li>
+                    <li><strong>Environnements de reproductibilité :</strong> environnements qui instantanent le code, les données, les parcours de modèle, les dépendances et les permissions, puis rejouent un résultat dans des conditions déclarées.</li>
+                    <li><strong>Gestion des branches et des résultats nuls :</strong> outils conservant les hypothèses rejetées et les méthodes échouées comme contraintes réutilisables sans les présenter comme des résultats validés.</li>
+                    <li><strong>Plans de contrôle pour la recherche agentique :</strong> couches d’orchestration exigeant des déclarations d’hypothèse, des références de base, des seuils d’approbation, des limites de ressources et des transferts porteurs de preuves.</li>
+                    <li><strong>Mémoire scientifique locale :</strong> systèmes multilingues et exportables qui retiennent la terminologie, les permissions communautaires, les jeux d’évaluation et la propriété institutionnelle entre les fournisseurs.</li>
+                </ul>
+
+                <p>La question de souscription est concrète : le produit augmente-t-il la quantité de recherche qu’une nouvelle personne, un nouvel agent ou une nouvelle institution peut reproduire et prolonger ? Les mesures utiles comprennent le temps de reconstitution, le taux d’expériences dupliquées, la part des exécutions dotées d’une référence déclarée, la part des résultats négatifs qui restent découvrables, le délai d’identification d’un résultat contradictoire et la proportion de dossiers exportables et rejouables en dehors du fournisseur initial.</p>
+
+                <p>Il s’agit d’un objet commercial différent d’un assistant de recherche générique, d’un registre d’artefacts terminés ou d’un graphe de workflow. Ces produits aident un système à répondre, à conserver une sortie ou à router le travail. Le registre d’expériences conserve la carte changeante de l’institution : ce qu’elle a essayé, ce qui a échoué, ce qui demeure incertain et pourquoi la prochaine question mérite d’être posée.</p>
+
+                <h2>Construire le registre avant d’ajouter un autre agent</h2>
+
+                <p>Un laboratoire peut tester cette architecture avec une question de recherche bornée. Avant d’augmenter le nombre d’agents, il faut rendre l’enquête lisible :</p>
+
+                <ol>
+                    <li>Écrire l’hypothèse, l’observation attendue, le seuil de décision et le responsable avant le début de l’exécution.</li>
+                    <li>Instantaner les entrées, le code, le parcours de modèle, les outils, les permissions et la référence utilisés par l’expérience.</li>
+                    <li>Exiger du système qu’il consigne au fil de l’exécution les interventions, sorties, erreurs, ressources utilisées et incertitudes.</li>
+                    <li>Stocker les branches fructueuses, indécises et rejetées avec des états et des raisons distincts.</li>
+                    <li>Reproduire un résultat dans un second environnement ou chez un second fournisseur, puis consigner les différences au lieu de les cacher.</li>
+                </ol>
+
+                <p>Ces pratiques rendent la vitesse responsable sans rendre l’enquête timide. Elles permettent aux agents d’explorer davantage de branches tout en conservant à une institution humaine la capacité d’examiner la question, de contester la méthode et de recevoir la conclusion. Elles créent aussi une meilleure frontière pour le capital : l’acheteur peut évaluer si le système produit une capacité de recherche durable plutôt qu’un flux plus important d’activité machine.</p>
+
+                <p>L’expérience doit laisser une trace parce qu’un laboratoire se construit autant avec les questions retenues qu’avec les réponses publiées. Lorsque chaque branche possède une place, l’échec devient une preuve et la génération suivante peut commencer au véritable front de recherche plutôt qu’à partir des fragments qui ont survécu.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « Research acceleration: The view inside OpenAI » (6 septembre 2026 ; article lié : <em>https://openai.com/index/research-acceleration-view-inside-openai</em> ; description : les agents de codage remodèlent la recherche en IA, avec des données préliminaires sur l’usage des agents, la vitesse des expériences, la complexité des tâches et l’accélération de la recherche).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog : « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; description : moteur de workflow en graphe avec orchestration humain dans la boucle, routage dynamique, nouvelles tentatives et résilience intégrée).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology : « AI Risk Management Framework » (page publiée le 12 juillet 2021 ; consultée le 7 septembre 2026 ; fonctions : Govern, Map, Measure et Manage).</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>September 7, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
