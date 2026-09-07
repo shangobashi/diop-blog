@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Newsroom Must Show Its Work — Diop Research</title>
+    <meta name="description" content="As AI enters journalism, the valuable output is a public claim with sources, rights, provenance, review, and a correction path. The strategic layer is editorial evidence infrastructure that lets independent newsrooms use machine assistance without outsourcing judgment."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry109">Diop Daily #109 — September 2026</div>
+                <div class="article__meta-line">
+                    <time>September 8, 2026</time>
+                    <span>·</span>
+                    <span data-rt="8">8 min read</span>
+                    <span>·</span>
+                    <span>editorial evidence · journalism infrastructure · provenance · public knowledge</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Newsroom Must Show Its Work</h1>
+
+                <p>A newsroom turns evidence into a public claim. Its readers may never see the source interview, the document comparison, the translation decision, or the editor’s final hesitation, yet those hidden steps determine whether a sentence deserves public trust. As machine assistance enters reporting, the newsroom’s central technology becomes the record that connects a published claim to the work that supports it.</p>
+
+                <p>OpenAI’s News RSS reported on September 7 that OpenAI, AIRPPU, and WAN-IFRA were launching an AI program to help Ukrainian news organizations strengthen innovation, resilience, and independent journalism. This is a vendor-reported program announcement, so it does not establish outcomes for journalism as a whole. It does show where capability is being placed: inside institutions whose value depends on public evidence and editorial independence.</p>
+
+                <blockquote>
+                    <p>A machine may help produce a sentence, but a newsroom must be able to answer why the sentence was published, which evidence supports it, and how the record changes when the evidence changes.</p>
+                </blockquote>
+
+                <h2>Showing the work is a public interface</h2>
+
+                <p>“Show your work” has a precise meaning in journalism. It does not require exposing a model’s private chain of thought. It requires preserving the editorial facts that a reader, editor, ombud, or future reporter may need: the source of a claim, the date and scope of that source, the machine contribution, the human approval, the rights attached to the material, and the correction path if a mistake survives publication.</p>
+
+                <p>That record has traditionally been distributed across notebooks, email, content-management systems, source folders, legal notes, and the memory of a desk editor. AI compresses the distance between research and publication, so the record must become more deliberate. A system may transcribe an interview, translate a statement, cluster documents, draft a timeline, suggest a headline, or produce a visual. Each operation changes the surface that readers encounter. The newsroom needs a way to preserve the relationship between those operations and the public claim.</p>
+
+                <p>The Coalition for Content Provenance and Authenticity provides a relevant standards signal. Its July 31 announcement for a new implementation guide says that people increasingly need to understand how digital assets were created or modified by AI. Its July 28 announcement about TikTok joining the steering committee describes implementation experience entering the governance of Content Credentials. These announcements do not prove that every platform preserves provenance correctly. They do show that the history of a digital asset is becoming a technical and institutional concern.</p>
+
+                <h2>The record behind a claim</h2>
+
+                <p>An editorial evidence system should bind a claim to a small set of durable fields. The fields can remain private when sources require protection, while their existence and status remain legible to the newsroom:</p>
+
+                <ul>
+                    <li><strong>Claim:</strong> the precise statement being prepared for publication, separated from interpretation and headline language.</li>
+                    <li><strong>Evidence:</strong> source documents, interviews, data, images, recordings, links, and the portions that support or weaken the claim.</li>
+                    <li><strong>Scope:</strong> date, geography, population, language, permission, and other conditions that limit what the evidence can establish.</li>
+                    <li><strong>Machine contribution:</strong> transcription, translation, retrieval, classification, drafting, transformation, or recommendation, with the relevant system and version.</li>
+                    <li><strong>Editorial authority:</strong> the person or desk that reviewed the evidence, accepted the wording, and owns the decision to publish.</li>
+                    <li><strong>Correction state:</strong> published, amended, disputed, withdrawn, or awaiting review, with the history of changes preserved.</li>
+                </ul>
+
+                <p>This is an editorial control surface, not a decorative badge. A provenance mark that does not lead to a usable record helps a reader recognize that something happened while leaving the institution unable to investigate what happened. A durable record lets the newsroom distinguish an original source from a derivative, a translation from a quotation, a generated image from a photograph, and an editor’s judgment from a model’s suggestion.</p>
+
+                <p>NIST’s AI Risk Management Framework gives this work a general operating vocabulary through Govern, Map, Measure, and Manage. Applied to a newsroom, Govern identifies who owns the editorial decision and the source record. Map identifies subjects, sources, rights, audiences, and affected communities. Measure tracks error, correction time, unsupported claims, and the reliability of machine-assisted steps. Manage defines what happens when a source is withdrawn, a translation is corrected, a model changes, or a published claim is challenged.</p>
+
+                <h2>Speed raises the price of a missing record</h2>
+
+                <p>Machine assistance can improve the economics of a small newsroom. One reporter can search more documents, translate more material, compare more versions, and prepare a first structure faster. That capacity matters where budgets are narrow and the public need for reliable reporting is large. The same speed can also multiply an unsupported assumption across languages, formats, and distribution channels before an editor sees the originating error.</p>
+
+                <p>The danger lies in propagation. A wrong date enters a timeline, becomes a paragraph, is translated into three languages, is quoted in a social card, and reaches a partner publication. Each derivative may look polished while preserving the same unsupported premise. Correction then becomes a graph problem: the newsroom must identify every dependent output, update the authoritative record, and make the change visible without erasing the original history.</p>
+
+                <p>Google’s public description of ADK Go 2.0 names graph workflows, human-in-the-loop orchestration, dynamic routing, retries, and resilience. Its description of A2A describes secure handoffs between agents. These runtime capabilities can support editorial systems, but they do not assign editorial authority. The newsroom still needs to specify which evidence travels with a handoff, which transformations are reversible, which steps require a person, and which outputs remain drafts until a named editor accepts responsibility.</p>
+
+                <h2>African newsrooms are knowledge infrastructure</h2>
+
+                <p>Newsrooms across Africa do more than report events. They preserve local names, languages, disputes, institutional memory, and evidence that may otherwise disappear from the formal record. Their archives can become inputs for researchers, civic institutions, schools, and future reporters. A machine system that extracts value from those archives without preserving context can increase visibility while weakening ownership.</p>
+
+                <p>The design problem is concrete. A local-language interview may contain a term whose meaning depends on a community distinction. A translated statement may carry a legal or political ambiguity that a general model smooths away. A photograph may have consent conditions that differ from the platform’s default rights field. A reporter may protect a source by withholding the original audio while still needing to prove to an editor that the published claim is supported. Editorial infrastructure must carry these conditions as part of the evidence, not leave them in a private conversation.</p>
+
+                <p>Independent journalism therefore offers a serious test for African AI sovereignty. The question is whether external models can assist local reporting while the newsroom retains the language, source relationships, editorial authority, correction history, and right to export its own record. The answer will depend less on access to one impressive model than on the institutions and tools surrounding its use.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If AI-assisted journalism becomes durable, capital should examine the infrastructure that keeps public claims inspectable:</p>
+
+                <ul>
+                    <li><strong>Editorial evidence ledgers:</strong> systems that bind claims to sources, scope, machine transformations, approvals, and correction states.</li>
+                    <li><strong>Provenance and rights services:</strong> tools that carry content credentials, consent, licensing, source protection, and derivative history across publishing channels.</li>
+                    <li><strong>Correction propagation:</strong> systems that locate dependent stories, translations, media assets, and syndication copies when an authoritative record changes.</li>
+                    <li><strong>Multilingual verification:</strong> review systems that compare original terms, translations, quotations, names, and local context without treating language as a cosmetic layer.</li>
+                    <li><strong>Newsroom control planes:</strong> workflow infrastructure that routes evidence to editors, records machine use, and blocks publication when a required check is absent.</li>
+                </ul>
+
+                <p>The underwriting question is precise: can the product lower the time required to verify a claim, trace a correction, protect a source, and train a replacement editor? Useful measures include unsupported-claim rate, source-to-claim reconstruction time, correction propagation time, percentage of machine transformations with a named reviewer, rights-field completeness, local-language error rate, and export completeness.</p>
+
+                <p>This is a different commercial object from a generic content generator or a finished-artifact registry. A generator increases the supply of text or media. An artifact registry preserves an output’s lineage. Editorial evidence infrastructure governs the public claim before and after publication, including the authority to publish, the duty to correct, and the memory required to explain a newsroom’s work.</p>
+
+                <h2>Build the evidence path before adding another model</h2>
+
+                <p>A newsroom can test this architecture with one recurring story type:</p>
+
+                <ol>
+                    <li>Choose a claim-heavy workflow and define which source, rights, language, and approval fields must exist before publication.</li>
+                    <li>Record every machine transformation from source material to draft, including the model, version, prompt boundary, and human intervention.</li>
+                    <li>Require an editor to approve the claim against the evidence while preserving the rejected wording and unresolved uncertainty.</li>
+                    <li>Publish a correction test by changing one source fact and tracing every dependent output that should change.</li>
+                    <li>Export the complete record and ask a replacement editor to reconstruct the decision without interviewing the original operator.</li>
+                </ol>
+
+                <p>These practices let a newsroom gain speed without surrendering its public function. They also give investors a better unit of analysis than content volume: the cost of producing a claim that can be checked, inherited, translated, corrected, and defended.</p>
+
+                <p>The newsroom must show its work because public knowledge depends on more than fluent output. It depends on a chain that a community can inspect and an institution can repair. When African newsrooms own that chain, machine assistance strengthens the archive instead of quietly replacing the authority that made the archive worth keeping.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Supporting independent journalism in Ukraine” (September 7, 2026; linked article: <em>https://openai.com/index/supporting-independent-journalism-in-ukraine</em>; description: OpenAI, AIRPPU, and WAN-IFRA launch an AI program to help Ukrainian news organizations strengthen innovation, resilience, and independent journalism).</a></li>
+                    <li><a href="https://c2pa.org/news/" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity: “A New Implementation Guide for Content Credentials” (July 31, 2026) and “C2PA Welcomes TikTok to Steering Committee, Advancing the Adoption of Content Credentials at a Global Scale” (July 28, 2026; page accessed September 8, 2026).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog: “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; description: graph-based workflows, human-in-the-loop orchestration, dynamic routing, retries, and built-in resilience).</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog: “How A2A is Building a World of Collaborative Agents” (June 18, 2026; description: the Agent-to-Agent protocol enables secure autonomous agent handoffs and scalable collaborative workflows).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology: “AI Risk Management Framework” (published July 12, 2021; accessed September 8, 2026; functions: Govern, Map, Measure, and Manage).</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La rédaction doit montrer son travail</h1>
+
+                <p>Une rédaction transforme des preuves en affirmation publique. Ses lecteurs ne verront peut-être jamais l’entretien source, la comparaison de documents, la décision de traduction ou l’hésitation finale de l’éditeur, alors que ces étapes cachées déterminent si une phrase mérite la confiance du public. À mesure que l’assistance machine entre dans le travail journalistique, la technologie centrale de la rédaction devient le dossier qui relie une affirmation publiée au travail qui la soutient.</p>
+
+                <p>Le flux RSS d’OpenAI a rapporté le 7 septembre qu’OpenAI, AIRPPU et WAN-IFRA lançaient un programme d’IA destiné à aider des organisations de presse ukrainiennes à renforcer l’innovation, la résilience et le journalisme indépendant. Il s’agit d’une annonce de programme rapportée par le fournisseur ; elle n’établit donc pas de résultats pour le journalisme en général. Elle montre toutefois où la capacité est placée : dans des institutions dont la valeur dépend des preuves publiques et de l’indépendance éditoriale.</p>
+
+                <blockquote>
+                    <p>Une machine peut aider à produire une phrase, mais une rédaction doit pouvoir répondre à la question de savoir pourquoi cette phrase a été publiée, quelles preuves la soutiennent et comment le dossier change lorsque les preuves changent.</p>
+                </blockquote>
+
+                <h2>Montrer le travail est une interface publique</h2>
+
+                <p>« Montrer son travail » possède un sens précis en journalisme. Il ne s’agit pas d’exposer la chaîne de pensée privée d’un modèle. Il s’agit de conserver les faits éditoriaux dont un lecteur, un éditeur, un médiateur ou un futur journaliste peut avoir besoin : la source d’une affirmation, la date et le périmètre de cette source, la contribution machine, l’approbation humaine, les droits attachés au contenu et le chemin de correction si une erreur survit à la publication.</p>
+
+                <p>Ce dossier était traditionnellement réparti entre carnets, courriels, systèmes de gestion de contenu, dossiers de sources, notes juridiques et mémoire d’un responsable de rubrique. L’IA raccourcit la distance entre recherche et publication ; le dossier doit donc devenir plus délibéré. Un système peut transcrire un entretien, traduire une déclaration, regrouper des documents, proposer une chronologie, suggérer un titre ou produire un visuel. Chaque opération modifie la surface rencontrée par les lecteurs. La rédaction a besoin d’un moyen de conserver le lien entre ces opérations et l’affirmation publique.</p>
+
+                <p>La Coalition for Content Provenance and Authenticity fournit ici un signal de normalisation pertinent. Son annonce du 31 juillet consacrée à un nouveau guide d’implémentation indique que chacun doit de plus en plus pouvoir comprendre comment les actifs numériques ont été créés ou modifiés par l’IA. Son annonce du 28 juillet sur l’entrée de TikTok au comité directeur décrit l’expérience d’implémentation qui rejoint la gouvernance de Content Credentials. Ces annonces ne prouvent pas que chaque plateforme conserve correctement la provenance. Elles montrent que l’histoire d’un actif numérique devient une question technique et institutionnelle.</p>
+
+                <h2>Le dossier derrière une affirmation</h2>
+
+                <p>Un système de preuves éditoriales doit relier une affirmation à un petit ensemble de champs durables. Ces champs peuvent rester privés lorsque les sources exigent une protection, tandis que leur existence et leur état restent lisibles pour la rédaction :</p>
+
+                <ul>
+                    <li><strong>Affirmation :</strong> énoncé précis préparé pour publication, séparé de l’interprétation et du langage du titre.</li>
+                    <li><strong>Preuves :</strong> documents sources, entretiens, données, images, enregistrements, liens et passages qui renforcent ou affaiblissent l’affirmation.</li>
+                    <li><strong>Périmètre :</strong> date, géographie, population, langue, permission et autres conditions qui limitent ce que les preuves peuvent établir.</li>
+                    <li><strong>Contribution machine :</strong> transcription, traduction, recherche, classification, rédaction, transformation ou recommandation, avec le système et la version pertinents.</li>
+                    <li><strong>Autorité éditoriale :</strong> personne ou rubrique ayant examiné les preuves, accepté la formulation et assumant la décision de publier.</li>
+                    <li><strong>État de correction :</strong> publié, modifié, contesté, retiré ou en attente de revue, avec l’historique des changements conservé.</li>
+                </ul>
+
+                <p>Il s’agit d’une surface de contrôle éditorial, et non d’un badge décoratif. Une marque de provenance qui ne mène pas à un dossier utilisable aide le lecteur à reconnaître qu’un traitement a eu lieu tout en laissant l’institution incapable d’enquêter sur ce traitement. Un dossier durable permet à la rédaction de distinguer une source originale d’un dérivé, une traduction d’une citation, une image produite d’une photographie et le jugement d’un éditeur de la suggestion d’un modèle.</p>
+
+                <p>Le cadre de gestion des risques liés à l’IA du NIST donne à ce travail un vocabulaire opératoire général avec Govern, Map, Measure et Manage. Appliqué à une rédaction, Govern identifie qui possède la décision éditoriale et le dossier source. Map identifie les sujets, les sources, les droits, les publics et les communautés touchées. Measure suit l’erreur, le temps de correction, les affirmations non soutenues et la fiabilité des étapes assistées par machine. Manage définit ce qui se passe lorsqu’une source est retirée, qu’une traduction est corrigée, qu’un modèle change ou qu’une affirmation publiée est contestée.</p>
+
+                <h2>La vitesse augmente le prix d’un dossier absent</h2>
+
+                <p>L’assistance machine peut améliorer l’économie d’une petite rédaction. Un journaliste peut rechercher davantage de documents, traduire davantage de matière, comparer davantage de versions et préparer plus rapidement une première structure. Cette capacité compte lorsque les budgets sont étroits et que le besoin public d’une information fiable reste important. La même vitesse peut multiplier une hypothèse non soutenue dans plusieurs langues, formats et canaux de distribution avant qu’un éditeur ne voie l’erreur initiale.</p>
+
+                <p>Le danger réside dans la propagation. Une mauvaise date entre dans une chronologie, devient un paragraphe, est traduite en trois langues, apparaît dans une carte sociale et atteint une publication partenaire. Chaque dérivé peut sembler soigné tout en conservant la même prémisse non établie. La correction devient alors un problème de graphe : la rédaction doit identifier chaque sortie dépendante, modifier le dossier faisant autorité et rendre le changement visible sans effacer l’histoire initiale.</p>
+
+                <p>La description publique d’ADK Go 2.0 par Google nomme les workflows en graphe, l’orchestration avec humain dans la boucle, le routage dynamique, les nouvelles tentatives et la résilience. Sa description d’A2A présente des transferts sécurisés entre agents. Ces capacités de runtime peuvent soutenir les systèmes éditoriaux, mais elles n’attribuent pas l’autorité éditoriale. La rédaction doit encore préciser quelles preuves accompagnent un transfert, quelles transformations sont réversibles, quelles étapes exigent une personne et quelles sorties restent des brouillons jusqu’à ce qu’un éditeur nommé en assume la responsabilité.</p>
+
+                <h2>Les rédactions africaines sont une infrastructure du savoir</h2>
+
+                <p>Les rédactions africaines ne font pas que rapporter les événements. Elles conservent des noms locaux, des langues, des conflits, une mémoire institutionnelle et des preuves qui pourraient autrement disparaître du dossier formel. Leurs archives peuvent devenir des sources pour les chercheurs, les institutions civiques, les écoles et les futurs journalistes. Un système qui extrait de la valeur de ces archives sans en conserver le contexte peut accroître la visibilité tout en affaiblissant la propriété.</p>
+
+                <p>Le problème de conception est concret. Un entretien en langue locale peut contenir un terme dont le sens dépend d’une distinction communautaire. Une déclaration traduite peut porter une ambiguïté juridique ou politique qu’un modèle général lisse. Une photographie peut être soumise à des conditions de consentement différentes du champ de droits par défaut d’une plateforme. Un journaliste peut protéger une source en gardant l’audio original confidentiel tout en devant prouver à un éditeur que l’affirmation publiée est soutenue. L’infrastructure éditoriale doit porter ces conditions avec les preuves au lieu de les laisser dans une conversation privée.</p>
+
+                <p>Le journalisme indépendant offre donc un test sérieux pour la souveraineté africaine en matière d’IA. La question est de savoir si des modèles externes peuvent assister le reportage local tandis que la rédaction conserve la langue, les relations avec les sources, l’autorité éditoriale, l’historique des corrections et le droit d’exporter son propre dossier. La réponse dépendra moins de l’accès à un modèle impressionnant que des institutions et des outils qui entourent son usage.</p>
+
+                <h2>Où la surface d’investissement s’élargit</h2>
+
+                <p>Si le journalisme assisté par IA devient durable, le capital doit examiner l’infrastructure qui maintient les affirmations publiques vérifiables :</p>
+
+                <ul>
+                    <li><strong>Registres de preuves éditoriales :</strong> systèmes reliant les affirmations aux sources, au périmètre, aux transformations machine, aux approbations et aux états de correction.</li>
+                    <li><strong>Services de provenance et de droits :</strong> outils transportant les justificatifs de contenu, le consentement, les licences, la protection des sources et l’histoire des dérivés à travers les canaux de publication.</li>
+                    <li><strong>Propagation des corrections :</strong> systèmes localisant les articles, traductions, actifs médias et copies syndiquées dépendants lorsqu’un dossier faisant autorité change.</li>
+                    <li><strong>Vérification multilingue :</strong> systèmes comparant les termes originaux, les traductions, les citations, les noms et le contexte local sans traiter la langue comme une couche cosmétique.</li>
+                    <li><strong>Plans de contrôle des rédactions :</strong> infrastructure dirigeant les preuves vers les éditeurs, enregistrant l’usage des machines et bloquant la publication lorsqu’un contrôle requis manque.</li>
+                </ul>
+
+                <p>La question de souscription est précise : le produit réduit-il le temps nécessaire pour vérifier une affirmation, suivre une correction, protéger une source et former un éditeur de remplacement ? Les mesures utiles comprennent le taux d’affirmations non soutenues, le temps de reconstitution entre source et affirmation, le délai de propagation d’une correction, la part des transformations machine ayant un réviseur nommé, l’exhaustivité des champs de droits, le taux d’erreur dans les langues locales et l’exhaustivité de l’export.</p>
+
+                <p>Cet objet commercial est différent d’un générateur de contenu général ou d’un registre d’artefacts terminés. Un générateur augmente l’offre de textes ou de médias. Un registre d’artefacts conserve la lignée d’une sortie. L’infrastructure de preuves éditoriales gouverne l’affirmation publique avant et après sa publication, avec l’autorité de publier, le devoir de corriger et la mémoire nécessaire pour expliquer le travail de la rédaction.</p>
+
+                <h2>Construire le chemin des preuves avant d’ajouter un autre modèle</h2>
+
+                <p>Une rédaction peut tester cette architecture avec un type d’article récurrent :</p>
+
+                <ol>
+                    <li>Choisir un workflow riche en affirmations et définir les champs de source, de droits, de langue et d’approbation qui doivent exister avant la publication.</li>
+                    <li>Enregistrer chaque transformation machine, de la matière source au brouillon, avec le modèle, la version, la limite de consigne et l’intervention humaine.</li>
+                    <li>Demander à un éditeur d’approuver l’affirmation au regard des preuves tout en conservant la formulation rejetée et l’incertitude non résolue.</li>
+                    <li>Publier un test de correction en modifiant un fait source et en suivant chaque sortie dépendante qui devrait changer.</li>
+                    <li>Exporter le dossier complet et demander à un éditeur remplaçant de reconstituer la décision sans interroger l’opérateur initial.</li>
+                </ol>
+
+                <p>Ces pratiques permettent à une rédaction de gagner en vitesse sans abandonner sa fonction publique. Elles offrent aussi aux investisseurs une meilleure unité d’analyse que le volume de contenu : le coût de produire une affirmation qui peut être vérifiée, reçue, traduite, corrigée et défendue.</p>
+
+                <p>La rédaction doit montrer son travail parce que le savoir public dépend de davantage qu’une sortie fluide. Il dépend d’une chaîne qu’une communauté peut inspecter et qu’une institution peut réparer. Lorsque les rédactions africaines possèdent cette chaîne, l’assistance machine renforce l’archive au lieu de remplacer silencieusement l’autorité qui la rendait digne d’être conservée.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « Supporting independent journalism in Ukraine » (7 septembre 2026 ; article lié : <em>https://openai.com/index/supporting-independent-journalism-in-ukraine</em> ; description : OpenAI, AIRPPU et WAN-IFRA lancent un programme d’IA pour aider des organisations de presse ukrainiennes à renforcer l’innovation, la résilience et le journalisme indépendant).</a></li>
+                    <li><a href="https://c2pa.org/news/" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity : « A New Implementation Guide for Content Credentials » (31 juillet 2026) et « C2PA Welcomes TikTok to Steering Committee, Advancing the Adoption of Content Credentials at a Global Scale » (28 juillet 2026 ; page consultée le 8 septembre 2026).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog : « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; description : workflows en graphe, orchestration avec humain dans la boucle, routage dynamique, nouvelles tentatives et résilience intégrée).</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog : « How A2A is Building a World of Collaborative Agents » (18 juin 2026 ; description : le protocole Agent-to-Agent permet des transferts sécurisés entre agents autonomes et des workflows collaboratifs à grande échelle).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology : « AI Risk Management Framework » (publié le 12 juillet 2021 ; consulté le 8 septembre 2026 ; fonctions : Govern, Map, Measure et Manage).</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>September 8, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

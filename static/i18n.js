@@ -134,6 +134,7 @@
         'article.entry106':     { en: 'Diop Daily #106 — September 2026', fr: 'Diop Quotidien n°106 — Septembre 2026' },
         'article.entry107':     { en: 'Diop Daily #107 — September 2026', fr: 'Diop Quotidien n°107 — Septembre 2026' },
         'article.entry108':     { en: 'Diop Daily #108 — September 2026', fr: 'Diop Quotidien n°108 — Septembre 2026' },
+        'article.entry109':     { en: 'Diop Daily #109 — September 2026', fr: 'Diop Quotidien n°109 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -151,7 +152,17 @@
     };
 
     var postTranslations = {
-'diop-daily-108': {
+    'diop-daily-109': {
+        title: {
+            en: "The Newsroom Must Show Its Work",
+            fr: "La rédaction doit montrer son travail"
+        },
+        excerpt: {
+            en: "As AI enters journalism, the valuable output is a public claim with sources, rights, provenance, review, and a correction path. The investable layer is the editorial evidence infrastructure that lets independent newsrooms use machine assistance without outsourcing judgment.",
+            fr: "À mesure que l’IA entre dans le journalisme, la sortie précieuse est une affirmation publique accompagnée de ses sources, de ses droits, de sa provenance, de sa revue et d’un chemin de correction. La couche d’investissement est l’infrastructure de preuves éditoriales qui permet aux rédactions indépendantes d’utiliser l’assistance machine sans externaliser leur jugement."
+        }
+    },
+    'diop-daily-108': {
     title: {
         en: "The Experiment Must Leave a Trace",
         fr: "L’expérience doit laisser une trace"
