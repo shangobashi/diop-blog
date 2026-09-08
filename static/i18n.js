@@ -135,6 +135,7 @@
         'article.entry107':     { en: 'Diop Daily #107 — September 2026', fr: 'Diop Quotidien n°107 — Septembre 2026' },
         'article.entry108':     { en: 'Diop Daily #108 — September 2026', fr: 'Diop Quotidien n°108 — Septembre 2026' },
         'article.entry109':     { en: 'Diop Daily #109 — September 2026', fr: 'Diop Quotidien n°109 — Septembre 2026' },
+        'article.entry110':     { en: 'Diop Daily #110 — September 2026', fr: 'Diop Quotidien n°110 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -152,6 +153,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-110': {
+        title: {
+            en: "The Proof Must Survive the Machine",
+            fr: "La preuve doit survivre à la machine"
+        },
+        excerpt: {
+            en: "As models produce increasingly technical claims, the scarce layer is a proof artifact that an independent checker can accept, reject, or replay. The investable surface is formal verification infrastructure for AI-generated science, software, and high-consequence decisions.",
+            fr: "À mesure que les modèles produisent des affirmations toujours plus techniques, la couche rare devient un artefact de preuve qu’un vérificateur indépendant peut accepter, rejeter ou rejouer. La surface d’investissement est l’infrastructure de vérification formelle pour la science, le logiciel et les décisions à fortes conséquences générés par l’IA."
+        }
+    },
     'diop-daily-109': {
         title: {
             en: "The Newsroom Must Show Its Work",
