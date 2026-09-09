@@ -136,6 +136,7 @@
         'article.entry108':     { en: 'Diop Daily #108 — September 2026', fr: 'Diop Quotidien n°108 — Septembre 2026' },
         'article.entry109':     { en: 'Diop Daily #109 — September 2026', fr: 'Diop Quotidien n°109 — Septembre 2026' },
         'article.entry110':     { en: 'Diop Daily #110 — September 2026', fr: 'Diop Quotidien n°110 — Septembre 2026' },
+        'article.entry111':     { en: 'Diop Daily #111 — September 2026', fr: 'Diop Quotidien n°111 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -153,6 +154,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-111': {
+        title: {
+            en: "A Machine Should Know What It May Touch",
+            fr: "Une machine doit savoir ce qu’elle a le droit de toucher"
+        },
+        excerpt: {
+            en: "As agents reach health records, archives, commerce, and public knowledge, permission must become a portable machine-readable object that travels with the record. The investable surface is the infrastructure that evaluates purpose, scope, consent, rights, and revocation before an agent acts.",
+            fr: "À mesure que les agents atteignent les dossiers de santé, les archives, le commerce et le savoir public, l’autorisation doit devenir un objet portable et lisible par machine qui voyage avec le dossier. La surface d’investissement est l’infrastructure qui évalue la finalité, le périmètre, le consentement, les droits et la révocation avant qu’un agent n’agisse."
+        }
+    },
     'diop-daily-110': {
         title: {
             en: "The Proof Must Survive the Machine",

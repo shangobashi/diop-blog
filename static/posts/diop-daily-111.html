@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Machine Should Know What It May Touch — Diop Research</title>
+    <meta name="description" content="As agents reach health records, archives, commerce, and public knowledge, permission must become a portable machine-readable object that travels with the record. The investable surface is the infrastructure that evaluates purpose, scope, consent, rights, and revocation before an agent acts."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="4.22" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry111">Diop Daily #111 — September 2026</div>
+                <div class="article__meta-line">
+                    <time>September 10, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>machine permissions · consent infrastructure · African sovereignty · agent systems</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Machine Should Know What It May Touch</h1>
+
+                <p>Every agent that reaches beyond its own computation encounters a question of permission. May it read this record? May it use the record for this purpose? May it translate, summarize, sell, publish, or retain what it has seen? As machine systems move into health data, archives, commerce, and public knowledge, permission must become an object that can travel with the thing being handled.</p>
+
+                <p>OpenAI’s News RSS reported on September 1 that ChatGPT could connect to trusted healthcare data, including electronic health records and additional industry sources, so clinicians could securely access patient context and medical research. This is a vendor-reported product signal, not independent evidence of clinical outcomes. It nevertheless identifies a consequential design problem: a connection to sensitive information is useful only when the system can evaluate who is asking, why the information is needed, what may be done with it, and how the connection can be withdrawn.</p>
+
+                <blockquote>
+                    <p>Permission is the part of a record that tells the next machine whether the record may cross the next boundary.</p>
+                </blockquote>
+
+                <h2>Access is a moment; permission is a history</h2>
+
+                <p>Traditional access control often answers a narrow question at one point in time: can this account open this database or call this endpoint? That answer matters, yet it says little about the life of the material after access. A document may be available for diagnosis and forbidden for training. A photograph may be viewable by an editor and restricted from commercial reuse. A community interview may be available to a researcher under a consent condition that excludes publication of the audio. A product offer may be visible to an agent while a price, delivery region, or customer segment remains conditional.</p>
+
+                <p>Permission therefore needs a richer shape than a yes-or-no gate. It must describe the relationship between a subject, a record, a purpose, an action, and a set of conditions. The decision should remain inspectable after the first request, because the same record may encounter another agent, another language, another institution, or another legal context.</p>
+
+                <p>NIST’s Privacy Framework describes itself as a tool that helps organizations improve individual privacy through enterprise risk management. Its importance here is practical. Privacy cannot remain a statement on a page while machine systems make dozens of downstream decisions. An institution needs a way to identify the data, understand the processing, measure exposure, and manage changes to the permission boundary.</p>
+
+                <h2>The permission receipt</h2>
+
+                <p>A permission receipt is a compact, signed or otherwise accountable record attached to data, media, an offer, or an institutional claim. It carries the conditions under which another system may handle the object without exposing private information by default, along with the evidence needed to explain that handling later.</p>
+
+                <p>A useful receipt can include:</p>
+
+                <ul>
+                    <li><strong>Subject and object:</strong> who granted, holds, or is affected by the permission, and which record or derivative it covers.</li>
+                    <li><strong>Purpose:</strong> the declared reason for access, such as care, translation, archival preservation, fulfillment, or public information.</li>
+                    <li><strong>Allowed actions:</strong> the operations permitted, including reading, transforming, routing, displaying, exporting, or creating a derivative.</li>
+                    <li><strong>Limits:</strong> prohibited uses, geographic or institutional scope, language conditions, audience restrictions, retention limits, and downstream-sharing rules.</li>
+                    <li><strong>Authority and evidence:</strong> the issuer, consent basis, contract, policy, or public mandate that makes the permission legitimate.</li>
+                    <li><strong>Revocation and correction:</strong> how the permission changes, who can withdraw it, and which dependent outputs must be located when it changes.</li>
+                </ul>
+
+                <p>The receipt changes the machine’s task. An agent must evaluate the intended action against the permission instead of treating possession as authority. A second agent must inherit the conditions with the handoff. A reviewer must be able to see whether the action was allowed when it occurred. A later correction must reach derivatives that would otherwise continue to circulate under an outdated permission.</p>
+
+                <h2>Provenance is not permission</h2>
+
+                <p>The Coalition for Content Provenance and Authenticity gives this problem an important standards context. C2PA’s public announcements describe implementation guidance for Content Credentials and the participation of platforms such as TikTok in the governance of digital transparency standards. Its 2.4 specifications describe manifests, assertions, identity, and other structures for recording how digital assets were created or modified. These resources help answer where an asset came from and what happened to it.</p>
+
+                <p>Origin and permission are related, yet they are different facts. A system may know that an image came from a particular camera and still lack the right to publish it. It may know that an audio file was generated by a model while lacking permission to use a person’s likeness. It may preserve a document’s lineage while failing to carry the restriction that limits its translation or commercial reuse. Provenance says what happened to the object. Permission says what the next actor may do with it.</p>
+
+                <p>That distinction matters for agents because agent chains multiply the number of possible transformations. A model may retrieve a record, another may summarize it, a third may translate the summary, and a fourth may place the result inside a customer or public-service workflow. Every step creates a possible rights boundary. The system needs to carry both the history of transformation and the conditions of legitimate use.</p>
+
+                <h2>Permission must survive translation</h2>
+
+                <p>For African institutions, the language problem is also a rights problem. A consent condition expressed in Wolof, Yoruba, Amharic, Arabic, Kiswahili, or another local language may contain distinctions that a general translation system smooths into a broader permission. A community may permit research while excluding commercial exploitation. A speaker may authorize a written quotation while withholding the original recording. A local archive may allow educational access while reserving authority over public display.</p>
+
+                <p>When a machine translates the content but drops the permission, the institution loses more than a metadata field. It loses the ability to enforce its own concept of a legitimate relationship. This is one reason intellectual sovereignty requires technical infrastructure rather than symbolic recognition. Local institutions must be able to define permission vocabularies, maintain the original terms, audit translations, and refuse a transformation that cannot preserve the condition.</p>
+
+                <p>The same principle applies to commerce and public administration. A merchant may authorize an agent to display an offer in a particular region without authorizing price scraping for a competitor. A public body may allow a service operator to retrieve a resident’s case record for one procedure without allowing unrelated profiling. A laboratory may share a dataset for a named study while excluding model training outside that study. Machine-readable permission turns these distinctions into executable institutional memory.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If agents become regular participants in sensitive workflows, capital should examine the systems that make permission portable, testable, and reversible:</p>
+
+                <ul>
+                    <li><strong>Permission receipt infrastructure:</strong> APIs and registries that issue, verify, inherit, and revoke machine-readable conditions across records and derivatives.</li>
+                    <li><strong>Policy evaluation at the point of action:</strong> runtimes that compare a proposed operation with purpose, authority, scope, language, retention, and downstream-use rules before execution.</li>
+                    <li><strong>Rights and provenance bridges:</strong> systems that connect Content Credentials and asset lineage to consent, licensing, identity, and permitted use.</li>
+                    <li><strong>Revocation propagation:</strong> tools that locate summaries, translations, models, offers, and public outputs dependent on a permission that has changed.</li>
+                    <li><strong>Sovereign permission registries:</strong> local infrastructure that lets African institutions define their own categories, preserve local-language conditions, and export the decision record without surrendering it to a foreign platform.</li>
+                </ul>
+
+                <p>The underwriting question is precise: does the product reduce the cost of proving that an agent used a record for an authorized purpose? Useful measures include permission-decision latency, unauthorized-action rate, revocation propagation time, percentage of handoffs carrying complete conditions, local-language fidelity, rights-field completeness, and the share of decisions that remain auditable after a provider change.</p>
+
+                <p>This commercial object differs from a protocol boundary, an artifact registry, and a charter for machine action. A protocol defines how systems exchange meaning. An artifact registry preserves the history of a finished object. A charter names who may act. Permission infrastructure follows the specific conditions attached to a record as it moves through those systems, and it can refuse an otherwise technically possible action.</p>
+
+                <h2>Build the permission path before widening access</h2>
+
+                <p>An institution can begin with one workflow where the cost of misuse is clear:</p>
+
+                <ol>
+                    <li>Choose a record class and write the legitimate purposes, allowed actions, prohibited uses, retention period, language conditions, and authority for each case.</li>
+                    <li>Issue a permission receipt that travels with the record and remains separate from the content itself when confidentiality requires that separation.</li>
+                    <li>Require every agent handoff to present the intended action and receive a decision against the inherited receipt.</li>
+                    <li>Test revocation by withdrawing one permission and tracing the summaries, translations, exports, and decisions that must change.</li>
+                    <li>Export the record of decisions and ask an independent reviewer to reconstruct why each action was allowed.</li>
+                </ol>
+
+                <p>This architecture gives a machine a disciplined answer to a question that humans have always had to answer in law, medicine, scholarship, commerce, and community life: what may be done with what we have been entrusted to hold? The answer must remain legible when the record changes hands, crosses languages, enters a new institution, or meets a stronger model.</p>
+
+                <p>A machine should know what it may touch because access without a durable permission is borrowed authority. Institutions that build the permission path can use external intelligence while retaining the right to define, limit, revoke, and remember the relationships on which their knowledge depends.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Healthcare organizations can now connect EHR and additional industry data to ChatGPT” (September 1, 2026; linked article: <em>https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources</em>; description: ChatGPT can connect to trusted healthcare data to help clinicians securely access patient context and medical research). This is a vendor-reported product-direction signal, not evidence of general clinical outcomes.</a></li>
+                    <li><a href="https://c2pa.org/news/" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity: public announcements including “A New Implementation Guide for Content Credentials” (July 31, 2026) and “C2PA Welcomes TikTok to Steering Committee” (July 28, 2026). The page was fetched September 10, 2026 and describes the need to understand how digital assets were created or modified by AI.</a></li>
+                    <li><a href="https://spec.c2pa.org/specifications/specifications/2.4/index.html" target="_blank" rel="noopener">C2PA Specifications 2.4: public technical specification index for Content Credentials, manifests, assertions, identity, and related implementation guidance (page fetched September 10, 2026).</a></li>
+                    <li><a href="https://www.nist.gov/privacy-framework" target="_blank" rel="noopener">National Institute of Standards and Technology: “Privacy Framework” (page fetched September 10, 2026; description: a tool to help organizations improve individuals’ privacy through enterprise risk management).</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" target="_blank" rel="noopener">European Commission: “European approach to artificial intelligence” (page fetched September 10, 2026; description: the EU approach promotes excellence and trust while ensuring safety and fundamental rights).</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Une machine doit savoir ce qu’elle a le droit de toucher</h1>
+
+                <p>Tout agent qui dépasse son propre calcul rencontre une question d’autorisation. Peut-il lire ce dossier et l’utiliser pour cette finalité ? Peut-il traduire, résumer, vendre, publier ou conserver ce qu’il a vu ? À mesure que les systèmes machine entrent dans les données de santé, les archives, le commerce et le savoir public, l’autorisation doit devenir un objet capable de voyager avec la chose manipulée.</p>
+
+                <p>Le flux RSS d’OpenAI a rapporté le 1er septembre que ChatGPT pouvait se connecter à des données de santé fiables, notamment aux dossiers médicaux électroniques et à des sources sectorielles supplémentaires, afin que des cliniciens accèdent de manière sécurisée au contexte d’un patient et à la recherche médicale. Il s’agit d’un signal produit rapporté par le fournisseur, et non d’une preuve indépendante de résultats cliniques. Il identifie néanmoins un problème de conception décisif : une connexion à des informations sensibles n’est utile que si le système peut évaluer qui demande l’accès, pourquoi l’information est nécessaire, ce qui peut en être fait et comment la connexion peut être retirée.</p>
+
+                <blockquote>
+                    <p>L’autorisation est la partie d’un dossier qui indique à la prochaine machine si le dossier peut franchir la prochaine frontière.</p>
+                </blockquote>
+
+                <h2>L’accès est un instant ; l’autorisation est une histoire</h2>
+
+                <p>Le contrôle d’accès traditionnel répond souvent à une question étroite à un moment précis : ce compte peut-il ouvrir cette base ou appeler ce point d’accès ? Cette réponse compte, mais elle dit peu de la vie du contenu après l’accès. Un document peut être disponible pour un diagnostic et interdit pour l’entraînement. Une photographie peut être visible par un éditeur et restreinte pour une réutilisation commerciale. Un entretien communautaire peut être accessible à un chercheur sous une condition de consentement qui exclut la publication de l’audio. Une offre commerciale peut être visible par un agent tandis que le prix, la région de livraison ou le segment de clientèle restent conditionnels.</p>
+
+                <p>L’autorisation doit donc avoir une forme plus riche qu’une porte oui-non. Elle doit décrire la relation entre un sujet, un dossier, une finalité, une action et un ensemble de conditions. La décision doit rester consultable après la première requête, car le même dossier peut rencontrer un autre agent, une autre langue, une autre institution ou un autre contexte juridique.</p>
+
+                <p>Le Privacy Framework du NIST se présente comme un outil permettant aux organisations d’améliorer la confidentialité des personnes grâce à la gestion des risques d’entreprise. Son importance est pratique. La confidentialité ne peut pas rester une déclaration sur une page lorsque des systèmes machine prennent des dizaines de décisions en aval. Une institution doit pouvoir identifier les données, comprendre leur traitement, mesurer l’exposition et gérer les changements de la frontière d’autorisation.</p>
+
+                <h2>Le reçu d’autorisation</h2>
+
+                <p>Un reçu d’autorisation est un dossier compact, signé ou autrement responsable, attaché à des données, un média, une offre ou une affirmation institutionnelle. Il n’expose pas automatiquement les informations privées. Il porte les conditions dans lesquelles un autre système peut manipuler l’objet et les preuves nécessaires pour expliquer cette manipulation ultérieurement.</p>
+
+                <p>Un reçu utile peut comprendre :</p>
+
+                <ul>
+                    <li><strong>Sujet et objet :</strong> personne ayant accordé, détenant ou subissant l’autorisation, et dossier ou dérivé couvert.</li>
+                    <li><strong>Finalité :</strong> raison déclarée de l’accès, par exemple soin, traduction, conservation, exécution d’une commande ou information publique.</li>
+                    <li><strong>Actions permises :</strong> opérations autorisées, notamment lire, transformer, router, afficher, exporter ou créer un dérivé.</li>
+                    <li><strong>Limites :</strong> usages interdits, périmètre géographique ou institutionnel, conditions linguistiques, restrictions d’audience, limites de conservation et règles de partage en aval.</li>
+                    <li><strong>Autorité et preuves :</strong> émetteur, base du consentement, contrat, politique ou mandat public qui rend l’autorisation légitime.</li>
+                    <li><strong>Révocation et correction :</strong> manière dont l’autorisation évolue, personne habilitée à la retirer et dérivés à retrouver lorsqu’elle change.</li>
+                </ul>
+
+                <p>Le reçu transforme la tâche de la machine. Un agent doit comparer l’action prévue avec l’autorisation au lieu de prendre la possession pour une autorité. Un second agent doit recevoir les conditions avec le transfert. Un réviseur doit pouvoir vérifier si l’action était permise au moment où elle a eu lieu. Une correction ultérieure doit atteindre les dérivés qui continueraient autrement à circuler sous une autorisation périmée.</p>
+
+                <h2>La provenance n’est pas l’autorisation</h2>
+
+                <p>La Coalition for Content Provenance and Authenticity fournit un contexte de normalisation important. Les annonces publiques de la C2PA décrivent un guide d’implémentation pour les Content Credentials et la participation de plateformes comme TikTok à la gouvernance des standards de transparence numérique. Ses spécifications 2.4 décrivent des manifestes, des assertions, l’identité et d’autres structures qui enregistrent la manière dont les actifs numériques ont été créés ou modifiés. Ces ressources aident à répondre à la question de l’origine d’un actif et de son historique de transformation.</p>
+
+                <p>L’origine et l’autorisation sont liées, mais elles constituent deux faits différents. Un système peut savoir qu’une image vient d’un appareil déterminé sans savoir si sa publication est permise. Il peut savoir qu’un fichier audio a été produit par un modèle sans posséder l’autorisation d’utiliser l’image d’une personne. Il peut conserver la lignée d’un document tout en perdant la restriction qui limite sa traduction ou sa réutilisation commerciale. La provenance dit ce qui est arrivé à l’objet. L’autorisation dit ce que l’acteur suivant peut en faire.</p>
+
+                <p>Cette distinction compte pour les agents parce que les chaînes d’agents multiplient les transformations possibles. Un modèle peut retrouver un dossier, un autre le résumer, un troisième traduire le résumé et un quatrième placer le résultat dans un workflow client ou de service public. Chaque étape crée une frontière possible des droits. Le système doit porter à la fois l’historique des transformations et les conditions de l’usage légitime.</p>
+
+                <h2>L’autorisation doit survivre à la traduction</h2>
+
+                <p>Pour les institutions africaines, la question linguistique est aussi une question de droits. Une condition de consentement exprimée en wolof, yoruba, amharique, arabe, kiswahili ou dans une autre langue locale peut contenir des distinctions qu’un système général de traduction transforme en autorisation plus large. Une communauté peut autoriser la recherche tout en excluant l’exploitation commerciale. Une personne peut autoriser une citation écrite tout en refusant la diffusion de l’enregistrement original. Une archive locale peut permettre l’accès éducatif tout en conservant son autorité sur l’exposition publique.</p>
+
+                <p>Lorsqu’une machine traduit le contenu mais abandonne l’autorisation, l’institution perd plus qu’un champ de métadonnées. Elle perd la capacité de faire respecter sa propre conception d’une relation légitime. C’est pourquoi la souveraineté intellectuelle exige une infrastructure technique plutôt qu’une reconnaissance symbolique. Les institutions locales doivent pouvoir définir des vocabulaires d’autorisation, conserver les termes originaux, auditer les traductions et refuser une transformation incapable de préserver la condition.</p>
+
+                <p>Le même principe vaut pour le commerce et l’administration publique. Un commerçant peut autoriser un agent à afficher une offre dans une région précise sans autoriser l’extraction des prix au bénéfice d’un concurrent. Un organisme public peut permettre à un opérateur de service de consulter le dossier d’un résident pour une procédure donnée sans autoriser un profilage sans rapport. Un laboratoire peut partager un jeu de données pour une étude nommée tout en excluant son utilisation pour l’entraînement d’un modèle extérieur à cette étude. L’autorisation lisible par machine transforme ces distinctions en mémoire institutionnelle exécutable.</p>
+
+                <h2>Où la surface d’investissement s’élargit</h2>
+
+                <p>Si les agents deviennent des participants réguliers aux workflows sensibles, le capital doit examiner les systèmes qui rendent l’autorisation portable, testable et réversible :</p>
+
+                <ul>
+                    <li><strong>Infrastructure des reçus d’autorisation :</strong> API et registres qui émettent, vérifient, transmettent et révoquent des conditions lisibles par machine entre dossiers et dérivés.</li>
+                    <li><strong>Évaluation de politique au point d’action :</strong> runtimes comparant l’opération prévue avec la finalité, l’autorité, le périmètre, la langue, la conservation et les règles d’usage ultérieur avant l’exécution.</li>
+                    <li><strong>Ponts entre droits et provenance :</strong> systèmes reliant les Content Credentials et la lignée des actifs au consentement, aux licences, à l’identité et à l’usage permis.</li>
+                    <li><strong>Propagation des révocations :</strong> outils localisant les résumés, traductions, modèles, offres et sorties publiques dépendant d’une autorisation modifiée.</li>
+                    <li><strong>Registres souverains d’autorisation :</strong> infrastructure locale permettant aux institutions africaines de définir leurs catégories, de préserver les conditions en langues locales et d’exporter le dossier de décision sans le céder à une plateforme étrangère.</li>
+                </ul>
+
+                <p>La question de souscription est précise : le produit réduit-il le coût de prouver qu’un agent a utilisé un dossier pour une finalité autorisée ? Les mesures utiles comprennent la latence de la décision d’autorisation, le taux d’actions non autorisées, le délai de propagation d’une révocation, la proportion de transferts portant des conditions complètes, la fidélité dans les langues locales, l’exhaustivité des champs de droits et la part des décisions qui restent auditables après un changement de fournisseur.</p>
+
+                <p>Cet objet commercial se distingue d’une frontière de protocole, d’un registre d’artefacts et d’une charte d’action machine. Un protocole définit la manière dont les systèmes échangent du sens. Un registre d’artefacts conserve l’histoire d’un objet terminé. Une charte désigne les personnes autorisées à agir. L’infrastructure d’autorisation suit les conditions attachées à un dossier pendant son passage dans ces systèmes et peut refuser une action techniquement possible.</p>
+
+                <h2>Construire le chemin de l’autorisation avant d’élargir l’accès</h2>
+
+                <p>Une institution peut commencer avec un workflow où le coût d’un usage abusif est clairement établi :</p>
+
+                <ol>
+                    <li>Choisir une classe de dossiers et écrire les finalités légitimes, les actions permises, les usages interdits, la durée de conservation, les conditions linguistiques et l’autorité applicable à chaque cas.</li>
+                    <li>Émettre un reçu d’autorisation qui voyage avec le dossier et reste séparé du contenu lorsque la confidentialité l’exige.</li>
+                    <li>Exiger que chaque transfert entre agents présente l’action prévue et obtienne une décision au regard du reçu hérité.</li>
+                    <li>Tester la révocation en retirant une autorisation et en suivant les résumés, traductions, exports et décisions qui doivent changer.</li>
+                    <li>Exporter le dossier des décisions et demander à un réviseur indépendant de reconstituer la raison pour laquelle chaque action a été permise.</li>
+                </ol>
+
+                <p>Cette architecture donne à la machine une réponse disciplinée à une question que les humains ont toujours dû traiter dans le droit, la médecine, la recherche, le commerce et la vie communautaire : que peut-on faire de ce qui nous a été confié ? La réponse doit rester lisible lorsque le dossier change de main, franchit des langues, entre dans une nouvelle institution ou rencontre un modèle plus puissant.</p>
+
+                <p>Une machine doit savoir ce qu’elle a le droit de toucher parce que l’accès sans autorisation durable est une autorité empruntée. Les institutions qui construisent ce chemin peuvent utiliser une intelligence extérieure tout en conservant le droit de définir, limiter, révoquer et mémoriser les relations dont dépend leur savoir.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « Healthcare organizations can now connect EHR and additional industry data to ChatGPT » (1er septembre 2026 ; article lié : <em>https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources</em> ; description : ChatGPT peut se connecter à des données de santé fiables pour aider les cliniciens à accéder de manière sécurisée au contexte des patients et à la recherche médicale). Il s’agit d’un signal de direction produit rapporté par le fournisseur, et non d’une preuve de résultats cliniques généraux.</a></li>
+                    <li><a href="https://c2pa.org/news/" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity : annonces publiques comprenant « A New Implementation Guide for Content Credentials » (31 juillet 2026) et « C2PA Welcomes TikTok to Steering Committee » (28 juillet 2026). Page consultée le 10 septembre 2026 ; elle décrit le besoin de comprendre comment les actifs numériques ont été créés ou modifiés par l’IA.</a></li>
+                    <li><a href="https://spec.c2pa.org/specifications/specifications/2.4/index.html" target="_blank" rel="noopener">C2PA Specifications 2.4 : index public de la spécification technique des Content Credentials, manifestes, assertions, identités et documents d’implémentation associés (page consultée le 10 septembre 2026).</a></li>
+                    <li><a href="https://www.nist.gov/privacy-framework" target="_blank" rel="noopener">National Institute of Standards and Technology : « Privacy Framework » (page consultée le 10 septembre 2026 ; description : outil destiné à aider les organisations à améliorer la confidentialité des personnes grâce à la gestion des risques d’entreprise).</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" target="_blank" rel="noopener">Commission européenne : « European approach to artificial intelligence » (page consultée le 10 septembre 2026 ; description : l’approche européenne promeut l’excellence et la confiance tout en assurant la sécurité et les droits fondamentaux).</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>September 10, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
