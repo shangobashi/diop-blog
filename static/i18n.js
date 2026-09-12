@@ -137,6 +137,7 @@
         'article.entry109':     { en: 'Diop Daily #109 — September 2026', fr: 'Diop Quotidien n°109 — Septembre 2026' },
         'article.entry110':     { en: 'Diop Daily #110 — September 2026', fr: 'Diop Quotidien n°110 — Septembre 2026' },
         'article.entry111':     { en: 'Diop Daily #111 — September 2026', fr: 'Diop Quotidien n°111 — Septembre 2026' },
+        'article.entry112':     { en: 'Diop Daily #112 — September 2026', fr: 'Diop Quotidien n°112 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -154,6 +155,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-112': {
+        title: {
+            en: "The Warehouse Behind the Answer",
+            fr: "L’entrepôt derrière la réponse"
+        },
+        excerpt: {
+            en: "As agents become long-running systems, the scarce infrastructure is the storage plane that preserves state, supports replay, controls locality and cost, and recovers after failure. The investable surface sits behind the interface: durable operational storage for machine work.",
+            fr: "À mesure que les agents deviennent des systèmes de longue durée, l’infrastructure rare est le plan de stockage qui conserve l’état, permet le rejeu, contrôle la localisation et le coût, puis récupère après une panne. La surface d’investissement se trouve derrière l’interface : un stockage opérationnel durable pour le travail machine."
+        }
+    },
     'diop-daily-111': {
         title: {
             en: "A Machine Should Know What It May Touch",

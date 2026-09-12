@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Warehouse Behind the Answer — Diop Research</title>
+    <meta name="description" content="As agents become long-running systems, the scarce infrastructure is the storage plane that preserves state, supports replay, controls locality and cost, and recovers after failure. The investable surface sits behind the interface: durable operational storage for machine work."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry112">Diop Daily #112 — September 2026</div>
+                <div class="article__meta-line">
+                    <time>September 13, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>operational storage · agent infrastructure · distributed systems · sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Warehouse Behind the Answer</h1>
+
+                <p>An answer reaches a user through an interface, but an agent reaches the world through state. It needs a place to keep a task alive across a timeout, a handoff, a model change, a retry, and a later correction. As agents become long-running systems, the strategic question moves behind the model and behind the screen: can the storage plane preserve the work well enough for another process to continue it, inspect it, or recover it?</p>
+
+                <p>OpenAI’s News RSS reported on September 11 that the company had evolved Habitat from a Python library into a globally distributed storage platform serving more than one billion ChatGPT users and 22 million requests per second. This is a vendor-reported description of one company’s infrastructure, not an independent benchmark of the whole industry. It is still a useful market signal because it places storage beside model capability as a first-order engineering problem. The same feed described a managed Agents API for orchestration, long-running sessions, and tool use. Long-running agency requires somewhere durable for those sessions, tool results, permissions, intermediate artifacts, and recovery decisions to exist.</p>
+
+                <blockquote>
+                    <p>The visible answer is a moment; the warehouse behind it determines whether the institution can continue, inspect, and recover the work.</p>
+                </blockquote>
+
+                <h2>State changes the economics of agency</h2>
+
+                <p>A one-shot completion can treat storage as a temporary implementation detail. A long-running agent cannot. It may wait for a person, receive a file hours later, call an external service, discover that a source has changed, or resume after a provider interruption. Each event creates state that must remain coherent enough for the next action.</p>
+
+                <p>This state has several layers. A session records the task and its current position. A work log records the tools called and the results returned. A materialized view presents the current status to a human or another service. A recovery record explains which steps completed before a failure. A retention policy decides what should remain, for how long, and under whose authority. These layers have different access patterns and durability requirements, even when a product calls all of them “memory.”</p>
+
+                <p>The distinction matters. Memory is an institutional interpretation of what should be retained and recalled. Operational storage is the machinery that makes state durable, addressable, concurrent, and recoverable. A laboratory may build a semantic memory layer on top of it. A newsroom may build an evidence ledger. A commerce system may build an order state machine. The storage plane remains the lower infrastructure that keeps these systems from collapsing when execution becomes asynchronous.</p>
+
+                <h2>The agent needs a place to resume</h2>
+
+                <p>Google’s public description of the Agent-to-Agent protocol presents secure handoffs between agents, modularity, and the reduction of context pollution. Its description of ADK Go 2.0 names graph-based workflows, human-in-the-loop orchestration, dynamic routing, retries, and resilience. These are execution primitives. Each primitive creates a storage obligation.</p>
+
+                <ul>
+                    <li><strong>Handoff state:</strong> the receiving agent needs the task identity, current objective, relevant inputs, authority, constraints, and an explicit boundary around what it should do next.</li>
+                    <li><strong>Idempotency state:</strong> a retrying agent needs to know whether a tool call already produced an external effect, so it can avoid turning a timeout into a duplicate payment, message, or record.</li>
+                    <li><strong>Checkpoint state:</strong> a long task needs resumable positions that distinguish completed work from proposed work and failed work.</li>
+                    <li><strong>Evidence state:</strong> a reviewer needs the inputs, outputs, model route, version, and decision attached to the transition under review.</li>
+                    <li><strong>Recovery state:</strong> an operator needs the last safe point, the compensating action, and the dependencies that must be replayed or quarantined.</li>
+                </ul>
+
+                <p>A handoff that carries only a natural-language summary creates a fragile continuation. The next agent may reconstruct the task differently, repeat a completed effect, or discard a constraint that was obvious to the previous process. A handoff backed by durable state can remain inspectable when the model changes. The storage system therefore becomes part of the agent’s contract with the institution.</p>
+
+                <h2>Throughput is only one measure</h2>
+
+                <p>High request volume makes storage visible, yet throughput alone is a poor measure of institutional fitness. A system can accept millions of writes and still make recovery expensive. It can offer low latency while weakening durability. It can replicate data widely while violating a local rule about where a record may be processed. It can reduce cost by retaining too little state for a later dispute.</p>
+
+                <p>A serious storage plane must make its trade-offs legible. The relevant dimensions include:</p>
+
+                <ol>
+                    <li><strong>Durability:</strong> whether a committed state survives machine, region, provider, or operator failure.</li>
+                    <li><strong>Consistency:</strong> which readers can observe a change, under what delay, and with which conflict rules.</li>
+                    <li><strong>Replayability:</strong> whether the institution can reconstruct the state transitions that produced the current view.</li>
+                    <li><strong>Locality:</strong> where data is stored and processed, and which jurisdiction or institutional rule controls it.</li>
+                    <li><strong>Cost visibility:</strong> how retention, replication, retrieval, egress, and recomputation affect the economics of the workflow.</li>
+                </ol>
+
+                <p>NIST’s AI Risk Management Framework gives this engineering problem a governance vocabulary through Govern, Map, Measure, and Manage. Govern identifies who owns the state and the recovery decision. Map identifies the data, systems, people, and obligations touched by each storage path. Measure records loss, delay, conflict, access, cost, and the time needed to reconstruct a disputed action. Manage defines what happens when a replica diverges, a retention rule changes, a provider becomes unavailable, or an institution must export its state.</p>
+
+                <h2>The African question is where the state lives</h2>
+
+                <p>For African institutions, storage location is an authority question. A model endpoint may be available from abroad while the records that make the institution intelligible are held in a system it cannot inspect, move, or govern. That arrangement can offer technical access while leaving the institution dependent on an external warehouse.</p>
+
+                <p>Local conditions sharpen the design. A research center may work across intermittent connections and shared devices. A cooperative may need to reconcile field transactions after delayed synchronization. A public archive may preserve material in several languages and distinguish community custody from public display. A publisher may need to keep its source files, rights conditions, translation history, and derivative inventory available even when a cloud provider changes its terms.</p>
+
+                <p>Sovereign storage does not require every byte to remain in one building. It requires the institution to control the rules that determine what is stored, where it is replicated, who can read or alter it, how conflicts are resolved, and how the complete state can be exported. African laboratories and enterprises can use external models while keeping the operational record under local authority. That division is more durable than a debate about whether a single model is “local” or “foreign.”</p>
+
+                <p>The historical lesson is direct. A people that cannot preserve its records must repeatedly negotiate with whoever holds them. The same principle applies to machine work. Storage is part of intellectual sovereignty because it determines whether a result can become an institutional possession instead of a temporary response rented from a platform.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If agents become long-running participants in research, commerce, public administration, and creative production, capital should examine the systems that make their state durable and governable:</p>
+
+                <ul>
+                    <li><strong>Agent state stores:</strong> databases designed for resumable sessions, checkpoints, tool effects, human approvals, and concurrent agent activity.</li>
+                    <li><strong>Replay and recovery systems:</strong> infrastructure that reconstructs state transitions, identifies the last safe point, and supports idempotent continuation after failure.</li>
+                    <li><strong>Locality and sovereignty controls:</strong> storage and routing layers that enforce jurisdiction, institutional custody, language requirements, and export rights.</li>
+                    <li><strong>Cost-aware retention:</strong> systems that connect storage tiers, replication, retrieval, recomputation, and retention decisions to the economics of a workflow.</li>
+                    <li><strong>Portable operational records:</strong> tools that export sessions, event histories, intermediate artifacts, permissions, and recovery context in a form another provider can use.</li>
+                </ul>
+
+                <p>The underwriting question is concrete: can the product reduce the cost and time required to resume a machine task without losing authority, evidence, or external-effect history? Useful measures include successful recovery rate, duplicate-effect rate after retries, replay time, state-export completeness, cross-provider resume rate, data-locality compliance, cost per durable task, and the proportion of long-running sessions with a tested checkpoint.</p>
+
+                <p>This is a distinct commercial object from an institutional memory system, a provenance registry, or a workflow graph. Memory decides what an institution should recall. Provenance describes how an artifact changed. A workflow graph routes work between steps. Operational storage keeps the live state that allows those steps to pause, resume, conflict, and recover. The value sits in the continuity of execution.</p>
+
+                <h2>Build the warehouse before widening the agency</h2>
+
+                <p>An institution can test the storage plane with one task that crosses a human boundary or an external effect:</p>
+
+                <ol>
+                    <li>Define the task states, owners, retention rules, locality constraints, and events that count as an external effect.</li>
+                    <li>Persist a checkpoint before and after each tool call, including an idempotency key and the result observed.</li>
+                    <li>Separate authoritative event history from the current view shown to operators, so a convenient interface does not erase the sequence behind it.</li>
+                    <li>Interrupt the task at several points, then resume it on another process or provider and compare the resulting state.</li>
+                    <li>Export the complete operational record and ask an independent operator to reconstruct what happened, what remains open, and who can authorize the next action.</li>
+                </ol>
+
+                <p>These tests expose the real cost of agentic scale. A system that produces many answers but cannot resume a task has shifted labor into recovery. A system that stores everything without locality, retention, and cost discipline has shifted risk into the balance sheet. A system that preserves durable state with clear authority can let institutions use machine speed while retaining the ability to continue the work on their own terms.</p>
+
+                <p>The warehouse behind the answer determines whether intelligence becomes capacity. When an institution controls that warehouse, a model may change, a provider may disappear, and an agent may fail without taking the work’s future with it.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Rapidly scaling online storage to serve over 1 billion ChatGPT users” (September 11, 2026; linked article: <em>https://openai.com/index/scaling-storage-one-billion-users-part-one</em>; description: OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion ChatGPT users and 22M requests per second). This is a vendor-reported infrastructure signal.</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Introducing the Agents API” (September 10, 2026; linked article: <em>https://openai.com/index/introducing-the-agents-api</em>; description: a managed service powered by the Codex harness for orchestration, long-running sessions, and tool use). This is a vendor-reported product-direction signal.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog: “How A2A is Building a World of Collaborative Agents” (June 18, 2026; description: the Agent-to-Agent protocol enables secure autonomous handoffs, modularity, reduced context pollution, and scalable collaborative workflows).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog: “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; description: graph-based workflows, human-in-the-loop orchestration, dynamic routing, retries, and built-in resilience).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology: “AI Risk Management Framework” (published July 12, 2021; page fetched September 13, 2026; functions: Govern, Map, Measure, and Manage).</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L’entrepôt derrière la réponse</h1>
+
+                <p>Une réponse atteint l’utilisateur par une interface, mais un agent atteint le monde par son état. Il lui faut un lieu où maintenir une tâche pendant un délai d’attente, un transfert, un changement de modèle, une nouvelle tentative ou une correction ultérieure. À mesure que les agents deviennent des systèmes de longue durée, la question stratégique se déplace derrière le modèle et derrière l’écran : le plan de stockage peut-il conserver le travail de manière assez solide pour qu’un autre processus le poursuive, l’examine ou le récupère ?</p>
+
+                <p>Le flux RSS d’OpenAI a rapporté le 11 septembre que l’entreprise avait fait évoluer Habitat, bibliothèque Python, en une plateforme de stockage distribuée à l’échelle mondiale servant plus d’un milliard d’utilisateurs de ChatGPT et 22 millions de requêtes par seconde. Il s’agit d’une description de l’infrastructure d’une entreprise fournie par le fournisseur, et non d’un benchmark indépendant de l’ensemble du secteur. Le signal reste utile parce qu’il place le stockage aux côtés de la capacité des modèles comme problème d’ingénierie de premier ordre. Le même flux décrivait une Agents API gérée pour l’orchestration, les sessions de longue durée et l’utilisation d’outils. Une agence qui dure exige un lieu durable pour ses sessions, ses résultats d’outils, ses permissions, ses artefacts intermédiaires et ses décisions de récupération.</p>
+
+                <blockquote>
+                    <p>La réponse visible est un instant ; l’entrepôt qui se trouve derrière elle détermine si l’institution peut poursuivre, examiner et récupérer le travail.</p>
+                </blockquote>
+
+                <h2>L’état modifie l’économie de l’agentivité</h2>
+
+                <p>Une complétion ponctuelle peut traiter le stockage comme un détail d’implémentation temporaire. Un agent de longue durée ne le peut pas. Il peut attendre une personne, recevoir un fichier plusieurs heures plus tard, appeler un service externe, découvrir qu’une source a changé ou reprendre son activité après une interruption du fournisseur. Chaque événement crée un état qui doit rester assez cohérent pour l’action suivante.</p>
+
+                <p>Cet état comporte plusieurs couches. Une session conserve la tâche et sa position actuelle. Un journal de travail consigne les outils appelés et les résultats reçus. Une vue matérialisée présente l’état courant à une personne ou à un autre service. Un dossier de récupération explique quelles étapes étaient terminées avant une panne. Une politique de conservation décide ce qui doit rester, pendant combien de temps et sous quelle autorité. Ces couches ont des modes d’accès et des exigences de durabilité différentes, même lorsqu’un produit les appelle toutes « mémoire ».</p>
+
+                <p>La distinction compte. La mémoire est l’interprétation institutionnelle de ce qui doit être conservé et rappelé. Le stockage opérationnel est la mécanique qui rend l’état durable, adressable, concurrent et récupérable. Un laboratoire peut construire une couche de mémoire sémantique au-dessus de cette mécanique. Une rédaction peut construire un registre de preuves. Un système commercial peut construire une machine à états de commande. Le plan de stockage reste l’infrastructure inférieure qui empêche ces systèmes de s’effondrer lorsque l’exécution devient asynchrone.</p>
+
+                <h2>L’agent a besoin d’un lieu pour reprendre</h2>
+
+                <p>La description publique par Google du protocole Agent-to-Agent présente des transferts sécurisés entre agents, la modularité et la réduction de la pollution du contexte. Sa description d’ADK Go 2.0 nomme les workflows en graphe, l’orchestration avec humain dans la boucle, le routage dynamique, les nouvelles tentatives et la résilience. Ce sont des primitives d’exécution. Chaque primitive crée une obligation de stockage.</p>
+
+                <ul>
+                    <li><strong>État du transfert :</strong> l’agent receveur a besoin de l’identité de la tâche, de l’objectif courant, des entrées pertinentes, de l’autorité, des contraintes et d’une limite explicite autour de ce qu’il doit faire ensuite.</li>
+                    <li><strong>État d’idempotence :</strong> un agent qui recommence doit savoir si un appel d’outil a déjà produit un effet externe, afin d’éviter qu’un délai d’attente ne devienne un paiement, un message ou un dossier en double.</li>
+                    <li><strong>État du point de reprise :</strong> une tâche longue a besoin de positions reprenables distinguant le travail terminé, proposé et échoué.</li>
+                    <li><strong>État des preuves :</strong> un réviseur a besoin des entrées, sorties, parcours du modèle, version et décision associés à la transition examinée.</li>
+                    <li><strong>État de récupération :</strong> un opérateur a besoin du dernier point sûr, de l’action compensatoire et des dépendances à rejouer ou à isoler.</li>
+                </ul>
+
+                <p>Un transfert qui ne porte qu’un résumé en langage naturel produit une continuation fragile. L’agent suivant peut reconstruire la tâche autrement, répéter un effet déjà réalisé ou abandonner une contrainte qui était évidente pour le processus précédent. Un transfert soutenu par un état durable reste examinable lorsque le modèle change. Le système de stockage devient ainsi une partie du contrat de l’agent avec l’institution.</p>
+
+                <h2>Le débit n’est qu’une mesure</h2>
+
+                <p>Le volume élevé de requêtes rend le stockage visible, mais le débit seul mesure mal l’aptitude institutionnelle. Un système peut accepter des millions d’écritures tout en rendant la récupération coûteuse. Il peut offrir une faible latence en affaiblissant la durabilité. Il peut répliquer largement les données en violant une règle locale sur le lieu où un dossier peut être traité. Il peut réduire le coût en conservant trop peu d’état pour une contestation ultérieure.</p>
+
+                <p>Un plan de stockage sérieux doit rendre ses compromis lisibles. Les dimensions pertinentes comprennent :</p>
+
+                <ol>
+                    <li><strong>Durabilité :</strong> capacité d’un état validé à survivre à une panne de machine, de région, de fournisseur ou d’opérateur.</li>
+                    <li><strong>Cohérence :</strong> lecteurs qui peuvent observer une modification, délai applicable et règles de résolution des conflits.</li>
+                    <li><strong>Rejouabilité :</strong> capacité de l’institution à reconstituer les transitions d’état qui ont produit la vue actuelle.</li>
+                    <li><strong>Localisation :</strong> lieu de stockage et de traitement des données, ainsi que la juridiction ou la règle institutionnelle qui les contrôle.</li>
+                    <li><strong>Visibilité du coût :</strong> effets de la conservation, de la réplication, de la récupération, de la sortie des données et du recalcul sur l’économie du workflow.</li>
+                </ol>
+
+                <p>Le cadre de gestion des risques liés à l’IA du NIST fournit à ce problème d’ingénierie un vocabulaire de gouvernance avec Govern, Map, Measure et Manage. Govern identifie le responsable de l’état et de la décision de récupération. Map identifie les données, systèmes, personnes et obligations touchés par chaque chemin de stockage. Measure consigne la perte, le délai, le conflit, l’accès, le coût et le temps nécessaire pour reconstituer une action contestée. Manage définit ce qui arrive lorsqu’une réplique diverge, qu’une règle de conservation change, qu’un fournisseur devient indisponible ou qu’une institution doit exporter son état.</p>
+
+                <h2>La question africaine est celle du lieu où vit l’état</h2>
+
+                <p>Pour les institutions africaines, le lieu de stockage est une question d’autorité. Un endpoint de modèle peut être disponible depuis l’étranger tandis que les dossiers qui rendent l’institution intelligible sont conservés dans un système qu’elle ne peut ni examiner, ni déplacer, ni gouverner. Cette organisation peut fournir un accès technique tout en laissant l’institution dépendante d’un entrepôt extérieur.</p>
+
+                <p>Les conditions locales rendent le choix plus précis. Un centre de recherche peut travailler avec une connexion intermittente et des appareils partagés. Une coopérative peut devoir réconcilier des transactions de terrain après une synchronisation retardée. Une archive publique peut conserver des documents en plusieurs langues et distinguer la garde communautaire de l’exposition publique. Un éditeur peut avoir besoin de garder ses fichiers sources, ses conditions de droits, son historique de traduction et l’inventaire de ses dérivés disponibles même lorsqu’un fournisseur cloud modifie ses conditions.</p>
+
+                <p>Un stockage souverain n’exige pas que chaque octet reste dans un même bâtiment. Il exige que l’institution contrôle les règles qui déterminent ce qui est stocké, où il est répliqué, qui peut le lire ou le modifier, comment les conflits sont résolus et comment l’état complet peut être exporté. Les laboratoires et entreprises africains peuvent utiliser des modèles externes tout en conservant le dossier opérationnel sous autorité locale. Cette division est plus durable qu’un débat sur le caractère « local » ou « étranger » d’un seul modèle.</p>
+
+                <p>La leçon historique est directe. Un peuple qui ne peut pas conserver ses dossiers doit négocier sans cesse avec ceux qui les détiennent. Le même principe vaut pour le travail machine. Le stockage fait partie de la souveraineté intellectuelle parce qu’il détermine si un résultat peut devenir une possession institutionnelle plutôt qu’une réponse temporaire louée à une plateforme.</p>
+
+                <h2>Où la surface d’investissement s’élargit</h2>
+
+                <p>Si les agents deviennent des participants de longue durée à la recherche, au commerce, à l’administration publique et à la production créative, le capital doit examiner les systèmes qui rendent leur état durable et gouvernable :</p>
+
+                <ul>
+                    <li><strong>Magasins d’état pour agents :</strong> bases conçues pour les sessions reprenables, les points de contrôle, les effets d’outils, les validations humaines et l’activité concurrente des agents.</li>
+                    <li><strong>Systèmes de rejeu et de récupération :</strong> infrastructure reconstituant les transitions d’état, identifiant le dernier point sûr et permettant une continuation idempotente après une panne.</li>
+                    <li><strong>Contrôles de localisation et de souveraineté :</strong> couches de stockage et de routage faisant respecter la juridiction, la garde institutionnelle, les exigences linguistiques et les droits d’exportation.</li>
+                    <li><strong>Conservation sensible au coût :</strong> systèmes reliant les niveaux de stockage, la réplication, la récupération, le recalcul et les décisions de conservation à l’économie d’un workflow.</li>
+                    <li><strong>Dossiers opérationnels portables :</strong> outils exportant sessions, historiques d’événements, artefacts intermédiaires, permissions et contexte de récupération dans un format utilisable par un autre fournisseur.</li>
+                </ul>
+
+                <p>La question de souscription est concrète : le produit réduit-il le coût et le temps nécessaires pour reprendre une tâche machine sans perdre l’autorité, les preuves ou l’historique des effets externes ? Les mesures utiles comprennent le taux de récupération réussie, le taux d’effets dupliqués après une nouvelle tentative, le temps de rejeu, l’exhaustivité de l’export d’état, le taux de reprise entre fournisseurs, la conformité de localisation, le coût par tâche durable et la proportion de sessions longues dotées d’un point de contrôle testé.</p>
+
+                <p>Cet objet commercial se distingue d’un système de mémoire institutionnelle, d’un registre de provenance ou d’un graphe de workflow. La mémoire décide ce qu’une institution doit rappeler. La provenance décrit comment un artefact a changé. Un graphe de workflow dirige le travail entre les étapes. Le stockage opérationnel conserve l’état vivant qui permet à ces étapes de s’arrêter, reprendre, entrer en conflit et se récupérer. Sa valeur tient à la continuité de l’exécution.</p>
+
+                <h2>Construire l’entrepôt avant d’élargir l’agentivité</h2>
+
+                <p>Une institution peut tester le plan de stockage avec une tâche qui franchit une limite humaine ou produit un effet externe :</p>
+
+                <ol>
+                    <li>Définir les états de la tâche, les responsables, les règles de conservation, les contraintes de localisation et les événements qui comptent comme effets externes.</li>
+                    <li>Conserver un point de contrôle avant et après chaque appel d’outil, avec une clé d’idempotence et le résultat observé.</li>
+                    <li>Séparer l’historique des événements faisant autorité de la vue actuelle présentée aux opérateurs, afin qu’une interface pratique n’efface pas la séquence qui la sous-tend.</li>
+                    <li>Interrompre la tâche à plusieurs moments, la reprendre dans un autre processus ou chez un autre fournisseur, puis comparer les états obtenus.</li>
+                    <li>Exporter le dossier opérationnel complet et demander à un opérateur indépendant de reconstituer ce qui s’est passé, ce qui reste ouvert et qui peut autoriser l’action suivante.</li>
+                </ol>
+
+                <p>Ces tests révèlent le coût réel de l’échelle agentique. Un système qui produit beaucoup de réponses mais ne peut pas reprendre une tâche déplace le travail vers la récupération. Un système qui conserve tout sans discipline de localisation, de conservation et de coût déplace le risque vers le bilan. Un système qui conserve un état durable avec une autorité claire permet aux institutions d’utiliser la vitesse machine tout en gardant la capacité de poursuivre le travail selon leurs propres termes.</p>
+
+                <p>L’entrepôt derrière la réponse détermine si l’intelligence devient une capacité. Lorsqu’une institution contrôle cet entrepôt, un modèle peut changer, un fournisseur peut disparaître et un agent peut échouer sans emporter avec lui l’avenir du travail.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « Rapidly scaling online storage to serve over 1 billion ChatGPT users » (11 septembre 2026 ; article lié : <em>https://openai.com/index/scaling-storage-one-billion-users-part-one</em> ; description : OpenAI a fait évoluer Habitat, bibliothèque Python, en plateforme de stockage distribuée à l’échelle mondiale servant un milliard d’utilisateurs de ChatGPT et 22 millions de requêtes par seconde). Il s’agit d’un signal d’infrastructure rapporté par le fournisseur.</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « Introducing the Agents API » (10 septembre 2026 ; article lié : <em>https://openai.com/index/introducing-the-agents-api</em> ; description : service géré fondé sur le Codex harness pour l’orchestration, les sessions longues et l’utilisation d’outils). Il s’agit d’un signal de direction produit rapporté par le fournisseur.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog : « How A2A is Building a World of Collaborative Agents » (18 juin 2026 ; description : le protocole Agent-to-Agent permet des transferts sécurisés entre agents autonomes, la modularité, une moindre pollution du contexte et des workflows collaboratifs à grande échelle).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog : « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; description : workflows en graphe, orchestration avec humain dans la boucle, routage dynamique, nouvelles tentatives et résilience intégrée).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology : « AI Risk Management Framework » (publié le 12 juillet 2021 ; page consultée le 13 septembre 2026 ; fonctions : Govern, Map, Measure et Manage).</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>September 13, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
