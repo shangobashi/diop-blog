@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Who Gets to Interrupt the Machine? — Diop Research</title>
+    <meta name="description" content="As agents work for longer periods with fewer check-ins, the scarce institutional resource becomes the supervision interval: the design that routes exceptions to accountable people without wasting their attention. The investable surface is exception management, observability, and human capacity allocation for autonomous systems."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry113">Diop Daily #113 — September 2026</div>
+                <div class="article__meta-line">
+                    <time>September 14, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>exception management · human oversight · agent operations · sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Who Gets to Interrupt the Machine?</h1>
+
+                <p>An autonomous system is defined as much by the interruptions it accepts as by the tasks it completes. A machine that can work for hours, change software, monitor a production system, or prepare a communication has crossed an important economic threshold: the human is no longer present at every step. The scarce resource becomes the supervision interval, the designed moment when a person is asked to decide whether the machine should continue, pause, change course, or stop.</p>
+
+                <p>OpenAI’s News RSS reported on September 14 that Perplexity uses GPT-6 Astra to write communications, change software, and monitor production systems, with people checking in much less frequently than with earlier models. This is a vendor-reported account of one deployment, not independent evidence of general reliability. It still names the market movement clearly. The product is being judged by the work that can proceed between interventions.</p>
+
+                <p>A second item in the same feed, published September 11, described Cognition using GPT-6 Astra to help Devin test its own work so engineers can review less code and ship more. Again, the claim belongs to the publisher and should be read narrowly. Its architectural implication is broader: the system is being asked to produce evidence that determines whether a human needs to look at the work at all.</p>
+
+                <blockquote>
+                    <p>Autonomy is a promise about elapsed time; supervision is the institution’s answer for what may happen during that time.</p>
+                </blockquote>
+
+                <h2>The human is moving from operator to exception authority</h2>
+
+                <p>Many discussions of agentic software still imagine a human operator who watches a stream of actions and approves each one. That arrangement can be useful during testing, but it does not describe a system intended to handle a meaningful volume of work. If a person must inspect every intermediate step, the machine has accelerated production without changing the labor model around it.</p>
+
+                <p>The alternative is exception-based supervision. The agent proceeds within a declared boundary and calls a person when a condition changes the risk, authority, or meaning of the task. A production monitor may escalate a persistent error rather than every normal metric. A software agent may request review when a proposed change touches an untested interface. A research assistant may pause when the evidence conflicts, the source is outside its authority, or the conclusion would affect a public decision.</p>
+
+                <p>This arrangement creates a new design obligation. The system must decide which events deserve scarce human attention, explain why they were routed, and preserve enough context for the person to make a decision without reconstructing the entire task. A notification that says “agent needs help” is an interruption without an institution behind it. A proper exception packet contains the state, the attempted action, the evidence, the policy boundary, the possible next moves, and the cost of waiting.</p>
+
+                <h2>Attention is a budget with a clock</h2>
+
+                <p>Human oversight is often described as a safety feature, as if its presence were sufficient. Its capacity is finite and its timing matters. A public-service officer may have ten minutes to resolve a case. A site-reliability engineer may need to decide whether an incident is spreading. A scientist may review a result before a laboratory allocates another day of instrument time. The same alert can be harmless at one moment and consequential at another.</p>
+
+                <p>A supervision system therefore needs a ledger for attention. It should record:</p>
+
+                <ul>
+                    <li><strong>Urgency:</strong> how quickly a person must respond before the available options narrow or the external effect becomes difficult to reverse.</li>
+                    <li><strong>Decision value:</strong> whether human judgment can materially change the outcome rather than merely acknowledge what already happened.</li>
+                    <li><strong>Context cost:</strong> how much information the reviewer must absorb before the exception is intelligible.</li>
+                    <li><strong>Authority:</strong> which role may approve, reject, delegate, or quarantine the next action.</li>
+                    <li><strong>Outcome:</strong> what the person decided, what the machine did afterward, and whether the route should change for future cases.</li>
+                </ul>
+
+                <p>The ledger makes supervision measurable. It can show that one team receives thousands of low-value alerts while another receives exceptions without enough context to act. It can reveal that a model appears autonomous because people have silently absorbed the recovery work. It can also show where a small improvement in evidence packaging would return hours of specialist attention each week.</p>
+
+                <h2>Interruption requires a packet, not a ping</h2>
+
+                <p>Google’s public description of ADK Go 2.0 presents graph-based workflows with human-in-the-loop orchestration, dynamic routing, retries, and built-in resilience. Its A2A material describes secure handoffs between agents and a shared language for collaboration. These runtime primitives make it possible to move work through a graph, yet they do not decide which interruption deserves a person’s time. That is an institutional and product decision at the edge of execution.</p>
+
+                <p>An exception packet should be treated as a first-class work object. It can carry:</p>
+
+                <ol>
+                    <li><strong>Situation:</strong> the task identity, current state, owner, deadline, and external systems involved.</li>
+                    <li><strong>Trigger:</strong> the exact observation or rule that caused the escalation, with the time and version that produced it.</li>
+                    <li><strong>Evidence:</strong> relevant inputs, tool results, tests, source records, and uncertainty, bounded so the reviewer can distinguish fact from inference.</li>
+                    <li><strong>Choices:</strong> the actions available, their consequences, and the action the agent recommends with its reasons.</li>
+                    <li><strong>Disposition:</strong> the human decision, the identity of the decision-maker, the next owner, and the correction to the routing policy if the case teaches one.</li>
+                </ol>
+
+                <p>This packet changes the economics of review. The reviewer no longer acts as a second operator who follows the machine’s entire trail. The reviewer becomes an authority who receives a bounded decision surface. The machine carries the burden of collection and explanation; the person retains the right to determine whether the next boundary may be crossed.</p>
+
+                <h2>Reliability is measured by the quality of interruption</h2>
+
+                <p>A system that checks in less frequently has created more time between actions. That time can produce leverage, or it can hide accumulated error. The relevant question is whether the machine recognizes the situations that require a person and presents them early enough for a meaningful response.</p>
+
+                <p>NIST’s AI Risk Management Framework gives this problem a useful discipline through Govern, Map, Measure, and Manage. Govern assigns the accountable role for each class of exception. Map identifies the data, people, systems, and obligations touched by the autonomous interval. Measure records missed escalations, unnecessary interruptions, response time, reviewer context load, and outcomes after intervention. Manage changes thresholds, routing, permissions, or the workflow itself when the evidence shows that the boundary is wrong.</p>
+
+                <p>The resulting metrics are more revealing than a simple approval rate:</p>
+
+                <ul>
+                    <li>the percentage of consequential exceptions surfaced before an external effect;</li>
+                    <li>the median time from trigger to an actionable packet;</li>
+                    <li>the proportion of packets resolved without reopening the entire task history;</li>
+                    <li>the false-interruption rate for events that needed no human judgment;</li>
+                    <li>the share of decisions whose routing policy was updated after review.</li>
+                </ul>
+
+                <p>These measures test whether autonomy is transferring judgment or merely transferring workload into an invisible queue. They also expose a difference between a reliable agent and a quiet agent. Silence can mean that the system is working within its authority. It can also mean that the escalation path is broken.</p>
+
+                <h2>The African institution must own the interruption rule</h2>
+
+                <p>For African institutions, the question of who may interrupt a machine is inseparable from the question of who has authority over the institution. An imported agent can run quickly inside a local workflow while foreign defaults decide what counts as unusual, urgent, credible, or worthy of escalation. The system may speak the local language and still misunderstand the local hierarchy of consequences.</p>
+
+                <p>A clinic, cooperative, archive, university, newsroom, or public office has its own thresholds. A delayed payment may be routine in one setting and a serious threat to a household in another. A translation ambiguity may be a minor inconvenience in a marketing workflow and a legal problem in a land record. A production error may be recoverable for a large platform while exhausting the only technical specialist available to a small institution.</p>
+
+                <p>Sovereignty therefore requires more than local hosting or access to a foreign model. It requires control over the vocabulary of exception, the roles that receive it, the evidence attached to it, the clock that governs response, and the record of what the institution learned. Local-language support matters because the reason for escalation must survive translation. Local authority matters because a machine cannot infer legitimacy from technical access. Local storage matters because an institution must retain the history of its own judgments.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If agents are trusted to work through longer intervals, capital should examine the infrastructure that allocates human attention without erasing human authority:</p>
+
+                <ul>
+                    <li><strong>Exception routers:</strong> systems that classify events by urgency, authority, reversibility, and required expertise before sending them to a person.</li>
+                    <li><strong>Decision packets:</strong> products that assemble state, evidence, policy, choices, and recommended action into a reviewable object with a durable history.</li>
+                    <li><strong>Supervision ledgers:</strong> observability tools that measure interruption volume, context cost, missed escalations, response time, and post-review learning.</li>
+                    <li><strong>Adaptive autonomy controls:</strong> runtimes that narrow or widen an agent’s operating interval as evidence changes, while preserving explicit checkpoints for consequential actions.</li>
+                    <li><strong>Local oversight infrastructure:</strong> systems that let African institutions define exception vocabularies, role hierarchies, language conditions, retention rules, and exportable decision records.</li>
+                </ul>
+
+                <p>The underwriting question is concrete: does the product increase the amount of machine work a qualified institution can safely supervise per unit of human attention? Useful evidence includes the rate of consequential failures caught before effect, reviewer minutes per resolved case, packet completeness, policy-change latency, cross-language fidelity, and the percentage of escalations that remain intelligible after a model or provider changes.</p>
+
+                <p>This commercial object differs from workflow routing, storage, permissions, insurance, and recourse. Workflow routing decides where a task travels, while storage preserves state. Permission infrastructure decides what an actor may do with a record. Insurance prices residual risk. Recourse preserves a path to challenge after a decision. Supervision infrastructure decides when a person should enter the active interval and gives that person a usable decision surface. Its unit of value is qualified human attention.</p>
+
+                <h2>Design the interruption before expanding the interval</h2>
+
+                <p>An institution can test this architecture with one workflow that already consumes expert time:</p>
+
+                <ol>
+                    <li>List the actions an agent may complete without intervention and the conditions that change the authority, risk, or meaning of the task.</li>
+                    <li>Define the roles that may receive each exception and the response window attached to it.</li>
+                    <li>Generate a packet containing the trigger, state, evidence, choices, recommendation, and uncertainty before asking for a decision.</li>
+                    <li>Run the workflow through ordinary and adversarial cases, then measure unnecessary alerts, missed escalations, review time, and downstream corrections.</li>
+                    <li>Export the decision history and let an independent reviewer determine whether the institution could reconstruct who interrupted the machine and why.</li>
+                </ol>
+
+                <p>Only after this path works should the autonomous interval become longer. A machine earns the right to continue by showing that its exceptions reach the right authority with enough time and evidence to matter. The future of agentic work will be decided inside those quiet hours between check-ins. Whoever owns the interruption rule owns the boundary between machine speed and institutional judgment.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Perplexity trusts GPT-6 Astra with end-to-end systems” (September 14, 2026; linked article: <em>https://openai.com/index/perplexity-improving-accuracy-with-astra</em>; description: Perplexity uses Astra to write communications, change software, and monitor production systems, with much less frequent check-ins than earlier models). This is a vendor-reported deployment signal, not an independent reliability benchmark.</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Cognition helps Devin test its own work with GPT‑6 Astra” (September 11, 2026; linked article: <em>https://openai.com/index/cognition-devin-testing-with-astra</em>; description: GPT‑6 Astra improves Devin’s ability to test software and show that it works, with the goal of helping engineers review less code and ship more). This is a vendor-reported product-direction signal.</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog: “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; page fetched September 14, 2026; description: graph-based workflows, human-in-the-loop orchestration, dynamic routing, retries, and built-in resilience).</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog: “How A2A is Building a World of Collaborative Agents” (June 18, 2026; page fetched September 14, 2026; description: secure autonomous agent handoffs, a common collaboration language, and scalable workflows).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology: “AI Risk Management Framework” (published July 12, 2021; page fetched September 14, 2026; functions: Govern, Map, Measure, and Manage).</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Qui peut interrompre la machine ?</h1>
+
+                <p>Un système autonome se définit autant par les interruptions qu’il accepte que par les tâches qu’il accomplit. Une machine capable de travailler pendant des heures, de modifier un logiciel, de surveiller un système en production ou de préparer une communication a franchi un seuil économique important : l’humain n’est plus présent à chaque étape. La ressource rare devient alors l’intervalle de supervision, le moment conçu pour demander à une personne si la machine doit continuer, faire une pause, changer de direction ou s’arrêter.</p>
+
+                <p>Le flux RSS d’OpenAI a rapporté le 14 septembre que Perplexity utilise GPT-6 Astra pour rédiger des communications, modifier des logiciels et surveiller des systèmes en production, avec des contrôles humains beaucoup moins fréquents qu’avec les modèles précédents. Il s’agit d’un récit fourni par le fournisseur à propos d’un déploiement, et non d’une preuve indépendante de fiabilité générale. Le mouvement de marché reste clairement formulé : le produit est désormais jugé par le travail qui peut avancer entre deux interventions.</p>
+
+                <p>Un second item du même flux, publié le 11 septembre, décrivait l’usage de GPT-6 Astra par Cognition pour aider Devin à tester son propre travail afin que les ingénieurs puissent examiner moins de code et en livrer davantage. Là encore, l’affirmation appartient à son éditeur et doit être lue avec précision. Sa conséquence architecturale est plus large : on demande au système de produire les preuves qui déterminent si un humain doit regarder le travail.</p>
+
+                <blockquote>
+                    <p>L’autonomie est une promesse sur le temps écoulé ; la supervision est la réponse de l’institution à ce qui peut arriver pendant ce temps.</p>
+                </blockquote>
+
+                <h2>L’humain devient une autorité des exceptions</h2>
+
+                <p>De nombreux discours sur les logiciels agentiques imaginent encore un opérateur humain qui observe un flux d’actions et approuve chacune d’elles. Cette organisation peut être utile pendant les essais, mais elle ne décrit pas un système destiné à traiter un volume significatif de travail. Si une personne doit inspecter chaque étape intermédiaire, la machine a accéléré la production sans modifier le modèle de travail qui l’entoure.</p>
+
+                <p>L’autre possibilité est la supervision par exception. L’agent avance dans une limite déclarée et appelle une personne lorsqu’une condition modifie le risque, l’autorité ou le sens de la tâche. Un moniteur de production peut signaler une erreur persistante plutôt que chaque métrique normale. Un agent logiciel peut demander une revue lorsqu’une modification touche une interface non testée. Un assistant de recherche peut suspendre son action lorsque les preuves se contredisent, que la source dépasse son autorité ou que la conclusion affecterait une décision publique.</p>
+
+                <p>Cette organisation crée une obligation de conception. Le système doit décider quels événements méritent l’attention humaine rare, expliquer pourquoi ils ont été orientés vers une personne et conserver assez de contexte pour que celle-ci décide sans reconstituer toute la tâche. Une notification disant « l’agent a besoin d’aide » est une interruption sans institution derrière elle. Un véritable paquet d’exception contient l’état, l’action tentée, les preuves, la limite de politique, les suites possibles et le coût de l’attente.</p>
+
+                <h2>L’attention est un budget soumis à une horloge</h2>
+
+                <p>La supervision humaine est souvent décrite comme une fonction de sécurité, comme si sa seule présence suffisait. Sa capacité est finie et son moment d’intervention compte. Un agent de service public peut disposer de dix minutes pour résoudre un dossier. Un ingénieur de fiabilité peut devoir décider si un incident se propage. Un scientifique peut examiner un résultat avant que le laboratoire ne consacre une nouvelle journée de temps instrument. La même alerte peut être bénigne à un moment et lourde de conséquences à un autre.</p>
+
+                <p>Un système de supervision a donc besoin d’un registre de l’attention. Il devrait consigner :</p>
+
+                <ul>
+                    <li><strong>Urgence :</strong> délai dont dispose une personne avant que les options disponibles ne se réduisent ou que l’effet externe ne devienne difficile à inverser.</li>
+                    <li><strong>Valeur de la décision :</strong> capacité du jugement humain à modifier réellement l’issue, au lieu de simplement constater ce qui s’est déjà produit.</li>
+                    <li><strong>Coût du contexte :</strong> quantité d’information que le réviseur doit absorber avant de comprendre l’exception.</li>
+                    <li><strong>Autorité :</strong> rôle qui peut approuver, rejeter, déléguer ou mettre en quarantaine l’action suivante.</li>
+                    <li><strong>Résultat :</strong> décision humaine, action de la machine ensuite et éventuelle modification du routage pour les cas futurs.</li>
+                </ul>
+
+                <p>Le registre rend la supervision mesurable. Il peut montrer qu’une équipe reçoit des milliers d’alertes de faible valeur tandis qu’une autre reçoit des exceptions sans contexte suffisant pour agir. Il peut révéler qu’un modèle paraît autonome parce que les personnes ont absorbé en silence le travail de récupération. Il peut aussi montrer où une petite amélioration de la présentation des preuves rendrait chaque semaine des heures d’attention spécialisée.</p>
+
+                <h2>L’interruption exige un paquet, pas un signal</h2>
+
+                <p>La description publique par Google d’ADK Go 2.0 présente des workflows en graphe avec orchestration humaine, routage dynamique, nouvelles tentatives et résilience intégrée. Ses documents sur A2A décrivent des transferts sécurisés entre agents et un langage commun de collaboration. Ces primitives rendent possible le déplacement du travail dans un graphe, mais elles ne décident pas quelle interruption mérite le temps d’une personne. Cette décision relève de l’institution et du produit, à la frontière de l’exécution.</p>
+
+                <p>Un paquet d’exception doit être traité comme un objet de travail de premier ordre. Il peut porter :</p>
+
+                <ol>
+                    <li><strong>Situation :</strong> identité de la tâche, état courant, responsable, échéance et systèmes externes concernés.</li>
+                    <li><strong>Déclencheur :</strong> observation ou règle exacte ayant provoqué l’escalade, avec l’heure et la version qui l’ont produite.</li>
+                    <li><strong>Preuves :</strong> entrées pertinentes, résultats d’outils, tests, dossiers sources et incertitude, délimités pour distinguer le fait de l’inférence.</li>
+                    <li><strong>Choix :</strong> actions disponibles, conséquences et action recommandée par l’agent avec ses raisons.</li>
+                    <li><strong>Décision :</strong> choix humain, identité du décideur, prochain responsable et correction de la politique de routage si le cas en enseigne une.</li>
+                </ol>
+
+                <p>Ce paquet transforme l’économie de la revue. Le réviseur n’agit plus comme un second opérateur qui suit toute la trajectoire de la machine. Il devient une autorité recevant une surface de décision délimitée. La machine porte la charge de collecte et d’explication ; la personne conserve le droit de décider si la prochaine frontière peut être franchie.</p>
+
+                <h2>La fiabilité se mesure à la qualité de l’interruption</h2>
+
+                <p>Un système qui consulte moins souvent a créé davantage de temps entre les actions. Ce temps peut produire un effet de levier ou dissimuler une erreur accumulée. La question pertinente est de savoir si la machine reconnaît les situations qui exigent une personne et les présente assez tôt pour qu’une réponse ait encore un sens.</p>
+
+                <p>Le cadre de gestion des risques liés à l’IA du NIST fournit une discipline utile avec Govern, Map, Measure et Manage. Govern attribue le rôle responsable de chaque classe d’exception. Map identifie les données, personnes, systèmes et obligations touchés pendant l’intervalle autonome. Measure consigne les escalades manquées, les interruptions inutiles, le temps de réponse, la charge de contexte du réviseur et les résultats après intervention. Manage modifie les seuils, le routage, les permissions ou le workflow lorsque les preuves montrent que la frontière est mal placée.</p>
+
+                <p>Les mesures qui en résultent sont plus révélatrices qu’un simple taux d’approbation :</p>
+
+                <ul>
+                    <li>proportion des exceptions lourdes de conséquences détectées avant un effet externe ;</li>
+                    <li>temps médian entre le déclencheur et un paquet exploitable ;</li>
+                    <li>proportion des paquets résolus sans rouvrir tout l’historique de la tâche ;</li>
+                    <li>taux de fausses interruptions pour les événements qui ne demandaient aucun jugement humain ;</li>
+                    <li>part des décisions dont la politique de routage a été mise à jour après la revue.</li>
+                </ul>
+
+                <p>Ces mesures vérifient si l’autonomie transfère réellement le jugement ou si elle déplace simplement le travail vers une file invisible. Elles exposent aussi la différence entre un agent fiable et un agent silencieux. Le silence peut signifier que le système agit dans son autorité. Il peut aussi signifier que le chemin d’escalade est brisé.</p>
+
+                <h2>L’institution africaine doit posséder la règle d’interruption</h2>
+
+                <p>Pour les institutions africaines, la question de savoir qui peut interrompre une machine est inséparable de celle de savoir qui détient l’autorité sur l’institution. Un agent importé peut fonctionner rapidement dans un workflow local tandis que des valeurs étrangères décident de ce qui est inhabituel, urgent, crédible ou digne d’une escalade. Le système peut parler la langue locale tout en comprenant mal la hiérarchie locale des conséquences.</p>
+
+                <p>Une clinique, une coopérative, une archive, une université, une rédaction ou un bureau public possède ses propres seuils. Un paiement retardé peut être routinier dans un environnement et constituer une menace sérieuse pour un ménage dans un autre. Une ambiguïté de traduction peut être un désagrément dans un workflow marketing et un problème juridique dans un registre foncier. Une erreur de production peut être récupérable pour une grande plateforme tout en épuisant l’unique spécialiste technique d’une petite institution.</p>
+
+                <p>La souveraineté exige donc davantage qu’un hébergement local ou qu’un accès à un modèle étranger. Elle exige le contrôle du vocabulaire des exceptions, des rôles qui les reçoivent, des preuves qui les accompagnent, de l’horloge qui gouverne la réponse et du dossier de ce que l’institution a appris. Le support des langues locales compte parce que la raison de l’escalade doit survivre à la traduction. L’autorité locale compte parce qu’une machine ne peut pas déduire la légitimité d’un accès technique. Le stockage local compte parce qu’une institution doit conserver l’histoire de ses propres jugements.</p>
+
+                <h2>Où la surface d’investissement s’élargit</h2>
+
+                <p>Si les agents sont autorisés à travailler pendant des intervalles plus longs, le capital doit examiner l’infrastructure qui répartit l’attention humaine sans effacer l’autorité humaine :</p>
+
+                <ul>
+                    <li><strong>Routeurs d’exceptions :</strong> systèmes classant les événements par urgence, autorité, réversibilité et expertise requise avant de les envoyer à une personne.</li>
+                    <li><strong>Paquets de décision :</strong> produits assemblant état, preuves, politique, choix et action recommandée dans un objet révisable doté d’une histoire durable.</li>
+                    <li><strong>Registres de supervision :</strong> outils d’observabilité mesurant le volume d’interruptions, le coût du contexte, les escalades manquées, le temps de réponse et l’apprentissage après revue.</li>
+                    <li><strong>Contrôles d’autonomie adaptatifs :</strong> runtimes resserrant ou élargissant l’intervalle d’action d’un agent lorsque les preuves changent, tout en conservant des points de contrôle explicites pour les actions lourdes de conséquences.</li>
+                    <li><strong>Infrastructure de supervision locale :</strong> systèmes permettant aux institutions africaines de définir les vocabulaires d’exception, les hiérarchies de rôle, les conditions linguistiques, les règles de conservation et les dossiers de décision exportables.</li>
+                </ul>
+
+                <p>La question de souscription est concrète : le produit augmente-t-il la quantité de travail machine qu’une institution qualifiée peut superviser en sécurité par unité d’attention humaine ? Les éléments utiles comprennent le taux d’échecs lourds de conséquences détectés avant effet, les minutes de revue par dossier résolu, l’exhaustivité du paquet, le délai de modification d’une politique, la fidélité entre langues et la proportion d’escalades qui restent intelligibles après un changement de modèle ou de fournisseur.</p>
+
+                <p>Cet objet commercial se distingue du routage de workflows, du stockage, des permissions, de l’assurance et du recours. Le routage décide où voyage une tâche, tandis que le stockage conserve l’état. L’infrastructure d’autorisation décide ce qu’un acteur peut faire d’un dossier. L’assurance évalue le risque résiduel. Le recours conserve une voie de contestation après une décision. L’infrastructure de supervision décide quand une personne doit entrer dans l’intervalle actif et lui fournit une surface de décision utilisable. Son unité de valeur est l’attention humaine qualifiée.</p>
+
+                <h2>Concevoir l’interruption avant d’étendre l’intervalle</h2>
+
+                <p>Une institution peut tester cette architecture avec un workflow qui consomme déjà du temps d’expert :</p>
+
+                <ol>
+                    <li>Énumérer les actions qu’un agent peut terminer sans intervention et les conditions qui changent l’autorité, le risque ou le sens de la tâche.</li>
+                    <li>Définir les rôles qui peuvent recevoir chaque exception et le délai de réponse qui lui est attaché.</li>
+                    <li>Générer un paquet contenant le déclencheur, l’état, les preuves, les choix, la recommandation et l’incertitude avant de demander une décision.</li>
+                    <li>Faire passer le workflow par des cas ordinaires et adverses, puis mesurer les alertes inutiles, les escalades manquées, le temps de revue et les corrections en aval.</li>
+                    <li>Exporter l’historique des décisions et demander à un réviseur indépendant de déterminer si l’institution pourrait reconstituer qui a interrompu la machine et pourquoi.</li>
+                </ol>
+
+                <p>Ce n’est qu’après le fonctionnement de ce chemin que l’intervalle autonome doit s’allonger. Une machine gagne le droit de continuer en montrant que ses exceptions atteignent la bonne autorité, avec assez de temps et de preuves pour compter. L’avenir du travail agentique se décidera dans ces heures calmes entre deux contrôles. Celui qui possède la règle d’interruption possède la frontière entre la vitesse machine et le jugement institutionnel.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « Perplexity trusts GPT-6 Astra with end-to-end systems » (14 septembre 2026 ; article lié : <em>https://openai.com/index/perplexity-improving-accuracy-with-astra</em> ; description : Perplexity utilise Astra pour rédiger des communications, modifier des logiciels et surveiller des systèmes en production, avec des contrôles beaucoup moins fréquents qu’avec les modèles précédents). Il s’agit d’un signal de déploiement rapporté par le fournisseur, et non d’un benchmark indépendant de fiabilité.</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « Cognition helps Devin test its own work with GPT‑6 Astra » (11 septembre 2026 ; article lié : <em>https://openai.com/index/cognition-devin-testing-with-astra</em> ; description : GPT‑6 Astra améliore la capacité de Devin à tester son travail et à montrer qu’il fonctionne, avec l’objectif d’aider les ingénieurs à examiner moins de code et à en livrer davantage). Il s’agit d’un signal de direction produit rapporté par le fournisseur.</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog : « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; page consultée le 14 septembre 2026 ; description : workflows en graphe, orchestration humaine, routage dynamique, nouvelles tentatives et résilience intégrée).</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog : « How A2A is Building a World of Collaborative Agents » (18 juin 2026 ; page consultée le 14 septembre 2026 ; description : transferts autonomes sécurisés entre agents, langage commun de collaboration et workflows évolutifs).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology : « AI Risk Management Framework » (publié le 12 juillet 2021 ; page consultée le 14 septembre 2026 ; fonctions : Govern, Map, Measure et Manage).</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>September 14, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

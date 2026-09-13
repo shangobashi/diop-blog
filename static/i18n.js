@@ -138,6 +138,7 @@
         'article.entry110':     { en: 'Diop Daily #110 — September 2026', fr: 'Diop Quotidien n°110 — Septembre 2026' },
         'article.entry111':     { en: 'Diop Daily #111 — September 2026', fr: 'Diop Quotidien n°111 — Septembre 2026' },
         'article.entry112':     { en: 'Diop Daily #112 — September 2026', fr: 'Diop Quotidien n°112 — Septembre 2026' },
+        'article.entry113':     { en: 'Diop Daily #113 — September 2026', fr: 'Diop Quotidien n°113 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -155,6 +156,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-113': {
+        title: {
+            en: "Who Gets to Interrupt the Machine?",
+            fr: "Qui peut interrompre la machine ?"
+        },
+        excerpt: {
+            en: "As agents work for longer periods with fewer check-ins, the scarce institutional resource becomes the supervision interval: the design that routes exceptions to accountable people without wasting their attention. The investable surface is exception management, observability, and human capacity allocation for autonomous systems.",
+            fr: "À mesure que les agents travaillent plus longtemps avec moins de contrôles, la ressource institutionnelle rare devient l’intervalle de supervision : la conception qui achemine les exceptions vers les bonnes autorités sans gaspiller leur attention. La surface d’investissement est la gestion des exceptions, l’observabilité et l’allocation de la capacité humaine pour les systèmes autonomes."
+        }
+    },
     'diop-daily-112': {
         title: {
             en: "The Warehouse Behind the Answer",
