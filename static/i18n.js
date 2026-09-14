@@ -139,6 +139,7 @@
         'article.entry111':     { en: 'Diop Daily #111 — September 2026', fr: 'Diop Quotidien n°111 — Septembre 2026' },
         'article.entry112':     { en: 'Diop Daily #112 — September 2026', fr: 'Diop Quotidien n°112 — Septembre 2026' },
         'article.entry113':     { en: 'Diop Daily #113 — September 2026', fr: 'Diop Quotidien n°113 — Septembre 2026' },
+        'article.entry114':     { en: 'Diop Daily #114 — September 2026', fr: 'Diop Quotidien n°114 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -156,6 +157,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-114': {
+        title: {
+            en: "The Agent Needs a Theory of Its Principal",
+            fr: "L’agent a besoin d’une théorie de son mandant"
+        },
+        excerpt: {
+            en: "An agent that speaks for a person or institution needs a governed model of its principal: intent, voice, abstentions, and correction history. The investable surface is the calibration layer that makes delegated machine work faithful, measurable, and portable.",
+            fr: "Un agent qui parle au nom d’une personne ou d’une institution a besoin d’un modèle gouverné de son mandant : intention, voix, abstentions et historique des corrections. La surface d’investissement est la couche de calibrage qui rend le travail machine délégué fidèle, mesurable et portable."
+        }
+    },
     'diop-daily-113': {
         title: {
             en: "Who Gets to Interrupt the Machine?",
