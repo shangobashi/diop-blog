@@ -140,6 +140,7 @@
         'article.entry112':     { en: 'Diop Daily #112 — September 2026', fr: 'Diop Quotidien n°112 — Septembre 2026' },
         'article.entry113':     { en: 'Diop Daily #113 — September 2026', fr: 'Diop Quotidien n°113 — Septembre 2026' },
         'article.entry114':     { en: 'Diop Daily #114 — September 2026', fr: 'Diop Quotidien n°114 — Septembre 2026' },
+        'article.entry115':     { en: 'Diop Daily #115 — September 2026', fr: 'Diop Quotidien n°115 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -157,6 +158,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-115': {
+        title: {
+            en: "The Machine Needs a Receipt",
+            fr: "Le reçu de la machine"
+        },
+        excerpt: {
+            en: "As agents cross institutional and commercial boundaries, trust needs a portable record of what was requested, delivered, evidenced, and left open. The investable surface is the transaction-record layer that makes agent-mediated work legible, contestable, and repairable.",
+            fr: "À mesure que les agents franchissent les frontières institutionnelles et commerciales, la confiance a besoin d’un dossier portable de ce qui a été demandé, livré, prouvé et laissé ouvert. La surface d’investissement est la couche de dossiers transactionnels qui rend le travail médié par machine lisible, contestable et réparable."
+        }
+    },
     'diop-daily-114': {
         title: {
             en: "The Agent Needs a Theory of Its Principal",

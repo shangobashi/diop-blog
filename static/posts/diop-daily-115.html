@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Machine Needs a Receipt — Diop Research</title>
+    <meta name="description" content="As agents cross organizational and commercial boundaries, the durable unit of trust is a machine-readable receipt: what was requested, under whose authority, what was delivered, which evidence travelled with it, and how the exchange can be challenged or repaired. The investable surface is the transaction-record layer for agent-mediated work."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry115">Diop Daily #115 — September 2026</div>
+                <div class="article__meta-line">
+                    <time>September 16, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>agent commerce · transaction records · provenance · institutional trust</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Machine Needs a Receipt</h1>
+
+                <p>An agent that crosses an institutional boundary needs more than a successful API response. It needs a receipt. The receipt records what was requested, under whose authority, according to which terms, with what evidence, and with which unresolved conditions. It gives the receiving institution a compact object that can be accepted, rejected, reconciled, audited, or repaired.</p>
+
+                <p>This becomes urgent as agents begin to work across company data, financial information, public records, creative assets, and other systems that were designed for human interpretation. OpenAI’s News RSS described a Data agent in ChatGPT Work that connects company data and builds interactive dashboards, alongside a financial-services product that combines financial data with model capability for research, modelling, and client-ready materials. These are vendor-reported product signals, not independent evidence of broad adoption or accuracy. They still reveal the direction of the interface: machine systems are being asked to produce work that another person or institution may rely on.</p>
+
+                <blockquote>
+                    <p>A response ends a conversation; a receipt begins an accountable exchange.</p>
+                </blockquote>
+
+                <h2>The answer is not the transaction</h2>
+
+                <p>A model can return a polished answer while leaving the exchange undefined. Did the system answer a question, make a recommendation, place an order, alter a record, create a derivative, or promise a future action? Which version of the source did it use? Which identity was allowed to request the work? What terms governed the result, and what may the next system safely assume?</p>
+
+                <p>Human institutions solve these questions with familiar records: an invoice, a ticket, a laboratory accession, a shipping manifest, a signed memo, a purchase order, or a court filing. Each record condenses a larger event into a form that survives the moment of exchange. It names parties, scope, timing, status, and obligations. It preserves a way to disagree without requiring every party to remember the event in the same way.</p>
+
+                <p>Agent-mediated work needs an equivalent record. A receipt for machine work may describe a completed deliverable, a declined action, a partial handoff, a source consultation, or a proposed transaction awaiting approval. Its value lies in the boundary it creates between an agent’s internal process and the institution that must decide what the process means.</p>
+
+                <h2>A receipt carries more than a result</h2>
+
+                <p>The smallest useful receipt should be readable by a person and processable by another system. Its exact schema will vary by domain, yet several fields recur:</p>
+
+                <ul>
+                    <li><strong>Identity:</strong> the requesting principal, the acting agent, the receiving institution, and the roles that may dispute or approve the exchange.</li>
+                    <li><strong>Mandate:</strong> the task, purpose, scope, permissions, expiry, and terms under which the work was attempted.</li>
+                    <li><strong>Inputs:</strong> the records, offers, files, sources, tools, and versions that materially shaped the result.</li>
+                    <li><strong>Outcome:</strong> what was delivered, changed, refused, deferred, or left uncertain, with a status that does not confuse recommendation with completion.</li>
+                    <li><strong>Evidence:</strong> citations, tests, signatures, content credentials, tool results, or other assertions that let a reviewer assess the claim.</li>
+                    <li><strong>Settlement:</strong> the price, allocation, usage, acknowledgement, or next obligation created by the exchange.</li>
+                    <li><strong>Recourse:</strong> the correction path, retention period, responsible authority, and information required to reopen the case.</li>
+                </ul>
+
+                <p>These fields prevent a common category error. A system may be able to generate a recommendation without being authorized to settle a transaction. It may be able to retrieve a record without being allowed to publish it. It may be able to create a derivative without possessing the rights to distribute it. A receipt keeps capability, authority, and completion separate.</p>
+
+                <p>The distinction is especially important when several agents collaborate. One agent may find an offer, another may compare terms, a third may check a permission, and a human may approve the final action. The handoff between them should carry a receipt or a receipt-in-progress. Otherwise the next process receives a story about what happened, rather than a bounded record of what it is entitled to rely upon.</p>
+
+                <h2>Standards are moving toward machine-readable counterparts</h2>
+
+                <p>The standards work around agents and digital assets points in this direction. A W3C and GS1 workshop held in September 2026 was explicitly organized around e-commerce for humans and AI agents, with a focus on creating content with agents in mind. The workshop is evidence of a standards and implementation concern, not proof that a universal agent-commerce format has already arrived. The question is becoming public: how should a product, service, offer, or right be represented so a machine can interpret it without silently discarding the conditions that matter?</p>
+
+                <p>C2PA’s public announcements make a related move for digital media. Its July 2026 implementation guide addresses how people can understand the extent to which an asset was created or modified by AI, while the organization’s specification defines signed assertions and manifests for content provenance. C2PA’s work does not guarantee that every platform will preserve provenance correctly. It does show that origin, transformation, and verification are being treated as technical objects rather than as explanatory prose added after publication.</p>
+
+                <p>Google’s public material on the Agent-to-Agent protocol describes secure autonomous handoffs and scalable collaborative workflows. Its ADK Go 2.0 announcement names graph-based workflows, human-in-the-loop orchestration, dynamic routing, retries, and resilience. These are runtime capabilities. A receipt supplies the institutional memory that lets a receiving process determine what crossed the boundary, which obligations remain open, and whether the handoff preserved the meaning of the original request.</p>
+
+                <p>NIST’s AI Risk Management Framework offers a governance vocabulary through Govern, Map, Measure, and Manage. Applied to receipts, Govern assigns ownership of the record and the correction path. Map identifies the people, systems, data, jurisdictions, and obligations touched by the exchange. Measure tracks missing fields, disputed outcomes, altered provenance, settlement errors, and time to resolution. Manage changes the schema, route, permission, provider, or human checkpoint when evidence shows that the receipt is insufficient.</p>
+
+                <h2>The receipt is where sovereignty becomes operational</h2>
+
+                <p>For African institutions, machine-readable receipts are a question of authority and continuity. A supplier may provide an excellent model while the local institution remains unable to prove what the model saw, which language carried the instruction, whose consent was present, or which terms governed the final output. Technical access without a portable record produces dependence at the point where the institution must answer for the result.</p>
+
+                <p>Consider a cooperative reconciling a delayed field transaction, a publisher commissioning a translation, a clinic requesting a summary from a patient record, or an archive deciding whether a community-held object may be displayed. The important record is the exchange itself: who asked, what authority existed, what source was consulted, what language and local category carried the meaning, what action was taken, and who may correct the record.</p>
+
+                <p>Local language belongs inside this design. A receipt that preserves only an English summary may erase the distinction between permission to read and permission to publish, between a customary name and an administrative label, or between a recommendation and a binding decision. Translation should carry the terms of the exchange, not merely its surface wording. African intellectual sovereignty requires institutions to retain the right to define these terms, store the receipts, and export them in forms that another local system can understand.</p>
+
+                <p>This is also a federal question. A regional research network, payment system, publisher, or public service does not need one central machine to create continuity. It needs a shared minimum record that allows independent institutions to recognize identity, authority, evidence, terms, status, and correction across their boundaries. Federation depends on mutual recognition. Receipts are one practical form of that recognition.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If agents become participants in commerce, research, administration, and creative production, capital should examine the infrastructure that makes machine-mediated exchanges legible:</p>
+
+                <ul>
+                    <li><strong>Receipt and settlement layers:</strong> systems that turn agent actions into records of status, price, usage, acceptance, and unresolved obligation.</li>
+                    <li><strong>Conformance and semantic adapters:</strong> tools that map local schemas, languages, product terms, rights, and authority rules without dropping material meaning at the boundary.</li>
+                    <li><strong>Evidence and provenance services:</strong> infrastructure that attaches sources, tests, signatures, content credentials, and transformation history to the receipt.</li>
+                    <li><strong>Dispute and correction systems:</strong> products that reopen a machine-mediated exchange, preserve the original state, assign responsibility, and record the repair.</li>
+                    <li><strong>Portable institutional ledgers:</strong> exportable records that let an organization change model, runtime, cloud, or regional partner without losing the history of its obligations.</li>
+                </ul>
+
+                <p>The underwriting question is concrete: can the product reduce the cost of accepting machine work while preserving the ability to challenge it? Useful evidence includes receipt completeness, semantic-loss rate across handoffs, provenance survival, settlement accuracy, dispute-resolution time, cross-language fidelity, export success, and the share of exchanges that can be reconstructed without access to the original provider.</p>
+
+                <p>This commercial object differs from the nearby layers in the archive. A catalog describes an offer before an exchange. A protocol defines how systems communicate. A permission layer defines what an actor may touch. Provenance follows the history of an asset. A workflow graph describes how work moves. A receipt records what a particular exchange meant after the boundary was crossed, including what remains unsettled. Its unit of value is accountable recognition.</p>
+
+                <h2>Build the receipt before widening the market</h2>
+
+                <p>An institution can test the design with one low-consequence exchange that already crosses a boundary:</p>
+
+                <ol>
+                    <li>Name the principals, agents, receiving systems, authority roles, language conditions, and terms that govern the exchange.</li>
+                    <li>Define the minimum receipt fields, including the difference between proposed, accepted, completed, refused, expired, and disputed.</li>
+                    <li>Attach the source records, versions, permissions, evidence, and tool results that materially shaped the outcome.</li>
+                    <li>Send the receipt to an independent reviewer or successor process and test whether it can determine what happened, what may happen next, and what remains uncertain.</li>
+                    <li>Reopen a deliberately flawed exchange, correct it without erasing the original, and export the full record into a second system.</li>
+                </ol>
+
+                <p>The result should be measured at the boundary. How often does a receiving system misunderstand the terms? How much context must a human reconstruct, and which fields disappear during translation or handoff? How quickly can the institution reverse an unauthorized action? The answers show whether the agent is extending institutional capacity or merely producing polished ambiguity.</p>
+
+                <p>A machine may speak fluently, search widely, and act quickly. The institution still needs to know what crossed into its world. The receipt is the modest object that makes that knowledge portable. When African institutions own the record of exchange, they can use external capabilities without surrendering the terms by which work becomes recognized, paid for, corrected, and remembered.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Now everyone can put data to work” (September 10, 2026; linked article: <em>https://openai.com/index/put-data-to-work</em>; description: the Data agent in ChatGPT Work connects company data, uncovers insights, and builds interactive dashboards). This is a vendor-reported product-direction signal.</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Introducing ChatGPT for Financial Services” (September 10, 2026; linked article: <em>https://openai.com/index/introducing-chatgpt-financial-services</em>; description: a product combining financial data and GPT-6 Astra for research, modelling, and client-ready materials). This is a vendor-reported product-direction signal.</a></li>
+                    <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/?output=1" target="_blank" rel="noopener">W3C: “Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents” (workshop September 8–9, 2026; page title and description verified from the accessible W3C endpoint: the workshop shares experience of creating content with AI agents in mind, with ecommerce as a focus).</a></li>
+                    <li><a href="https://c2pa.org/news/" target="_blank" rel="noopener">C2PA Announcements: “A New Implementation Guide for Content Credentials” (July 31, 2026) and “C2PA Welcomes TikTok to Steering Committee” (July 28, 2026); the page describes implementation guidance for understanding how digital assets were created or modified by AI and continued work on content-provenance specifications.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog: “How A2A is Building a World of Collaborative Agents” (June 18, 2026; page title and description verified: secure autonomous agent handoffs and scalable collaborative workflows).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog: “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; page title and description verified: graph-based workflows, human-in-the-loop orchestration, dynamic routing, and built-in resilience).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology: “AI Risk Management Framework” (published July 12, 2021; page title and publication date verified; functions: Govern, Map, Measure, and Manage).</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Le reçu de la machine</h1>
+
+                <p>Un agent qui franchit une frontière institutionnelle a besoin de plus qu’une réponse API réussie. Il lui faut un reçu. Le reçu consigne ce qui a été demandé, sous quelle autorité, selon quelles conditions, avec quelles preuves et quelles conditions restent ouvertes. Il donne à l’institution destinataire un objet compact qui peut être accepté, refusé, rapproché, audité ou réparé.</p>
+
+                <p>La question devient urgente à mesure que les agents travaillent avec des données d’entreprise, des informations financières, des archives publiques, des actifs créatifs et d’autres systèmes conçus pour l’interprétation humaine. Le flux RSS d’OpenAI décrivait un agent Data de ChatGPT Work qui connecte les données d’une entreprise et construit des tableaux de bord interactifs, ainsi qu’un produit destiné aux services financiers qui associe données financières et capacité de modèle pour la recherche, la modélisation et la préparation de documents destinés aux clients. Il s’agit de signaux produits rapportés par le fournisseur, et non d’une preuve indépendante d’adoption ou d’exactitude à grande échelle. Ils révèlent néanmoins la direction de l’interface : on demande aux systèmes machine de produire un travail sur lequel une personne ou une institution pourra s’appuyer.</p>
+
+                <blockquote>
+                    <p>Une réponse termine une conversation ; un reçu commence un échange responsable.</p>
+                </blockquote>
+
+                <h2>La réponse n’est pas la transaction</h2>
+
+                <p>Un modèle peut renvoyer une réponse polie tout en laissant l’échange indéfini. Le système a-t-il répondu à une question, formulé une recommandation, passé une commande, modifié un dossier, créé un dérivé ou promis une action ultérieure ? Quelle version de la source a-t-il utilisée ? Quelle identité était autorisée à demander le travail ? Quelles conditions gouvernaient le résultat, et que peut supposer sans danger le système suivant ?</p>
+
+                <p>Les institutions humaines résolvent ces questions avec des dossiers familiers : facture, ticket, entrée de laboratoire, manifeste d’expédition, note signée, bon de commande ou acte judiciaire. Chaque dossier condense un événement plus vaste dans une forme qui survit au moment de l’échange. Il nomme les parties, le périmètre, le temps, le statut et les obligations. Il préserve une possibilité de désaccord sans exiger que toutes les parties se souviennent de l’événement de la même manière.</p>
+
+                <p>Le travail médié par des agents a besoin d’un dossier équivalent. Un reçu de travail machine peut décrire un livrable terminé, une action refusée, un transfert partiel, une consultation de source ou une transaction proposée qui attend une approbation. Sa valeur tient à la frontière qu’il crée entre le processus interne d’un agent et l’institution qui doit décider du sens de ce processus.</p>
+
+                <h2>Un reçu porte plus qu’un résultat</h2>
+
+                <p>Le plus petit reçu utile doit être lisible par une personne et traitable par un autre système. Son schéma exact variera selon le domaine, mais plusieurs champs reviennent :</p>
+
+                <ul>
+                    <li><strong>Identité :</strong> mandant demandeur, agent agissant, institution destinataire et fonctions pouvant contester ou approuver l’échange.</li>
+                    <li><strong>Mandat :</strong> tâche, finalité, périmètre, permissions, expiration et conditions dans lesquelles le travail a été tenté.</li>
+                    <li><strong>Entrées :</strong> dossiers, offres, fichiers, sources, outils et versions ayant matériellement façonné le résultat.</li>
+                    <li><strong>Résultat :</strong> ce qui a été livré, modifié, refusé, différé ou laissé incertain, avec un statut qui ne confond pas recommandation et accomplissement.</li>
+                    <li><strong>Preuves :</strong> citations, tests, signatures, informations d’authenticité, résultats d’outils ou autres assertions permettant au réviseur d’évaluer l’affirmation.</li>
+                    <li><strong>Règlement :</strong> prix, allocation, usage, accusé de réception ou obligation suivante créée par l’échange.</li>
+                    <li><strong>Recours :</strong> chemin de correction, durée de conservation, autorité responsable et informations nécessaires pour rouvrir le dossier.</li>
+                </ul>
+
+                <p>Ces champs empêchent une confusion fréquente. Un système peut produire une recommandation sans être autorisé à régler une transaction. Il peut retrouver un dossier sans avoir le droit de le publier. Il peut créer un dérivé sans posséder les droits de le distribuer. Le reçu sépare capacité, autorité et accomplissement.</p>
+
+                <p>La distinction devient essentielle lorsque plusieurs agents collaborent. Un agent peut trouver une offre, un autre comparer les conditions, un troisième vérifier une permission et une personne approuver l’action finale. Le transfert entre eux devrait porter un reçu, ou un reçu en cours. Sinon, le processus suivant reçoit un récit de ce qui s’est passé plutôt qu’un dossier délimité de ce sur quoi il peut légitimement s’appuyer.</p>
+
+                <h2>Les standards avancent vers des équivalents lisibles par machine</h2>
+
+                <p>Les travaux de normalisation autour des agents et des actifs numériques vont dans cette direction. Un atelier W3C et GS1 tenu en septembre 2026 portait explicitement sur le commerce électronique pour les humains et les agents d’IA, avec un intérêt pour la création de contenus pensés pour les agents. L’atelier fournit une preuve d’une préoccupation de normalisation et de mise en œuvre, pas la preuve qu’un format universel du commerce agentique existe déjà. La question devient publique : comment représenter un produit, un service, une offre ou un droit pour qu’une machine puisse l’interpréter sans supprimer silencieusement les conditions importantes ?</p>
+
+                <p>Les annonces publiques de la C2PA opèrent un mouvement voisin pour les médias numériques. Son guide de mise en œuvre de juillet 2026 traite de la manière dont les personnes peuvent comprendre dans quelle mesure un actif a été créé ou modifié par l’IA, tandis que sa spécification définit des assertions signées et des manifestes de provenance. Le travail de la C2PA ne garantit pas que chaque plateforme conservera correctement la provenance. Il montre que l’origine, la transformation et la vérification sont traitées comme des objets techniques, et non comme une explication ajoutée après publication.</p>
+
+                <p>Les documents publics de Google sur le protocole Agent-to-Agent décrivent des transferts autonomes sécurisés et des workflows collaboratifs évolutifs. L’annonce d’ADK Go 2.0 nomme les workflows en graphe, l’orchestration avec humain dans la boucle, le routage dynamique, les nouvelles tentatives et la résilience. Ce sont des capacités de runtime. Le reçu fournit la mémoire institutionnelle qui permet au processus destinataire de déterminer ce qui a franchi la frontière, quelles obligations restent ouvertes et si le transfert a conservé le sens de la demande initiale.</p>
+
+                <p>Le cadre de gestion des risques liés à l’IA du NIST fournit un vocabulaire de gouvernance avec Govern, Map, Measure et Manage. Appliqué aux reçus, Govern attribue la propriété du dossier et du chemin de correction. Map identifie les personnes, systèmes, données, juridictions et obligations touchés par l’échange. Measure suit les champs manquants, les résultats contestés, la provenance altérée, les erreurs de règlement et le délai de résolution. Manage modifie le schéma, le routage, la permission, le fournisseur ou le point de contrôle humain lorsque les preuves montrent que le reçu est insuffisant.</p>
+
+                <h2>Le reçu rend la souveraineté opérationnelle</h2>
+
+                <p>Pour les institutions africaines, les reçus lisibles par machine sont une question d’autorité et de continuité. Un fournisseur peut proposer un excellent modèle tandis que l’institution locale reste incapable de prouver ce que le modèle a vu, quelle langue portait la consigne, quel consentement était présent ou quelles conditions gouvernaient la sortie finale. Un accès technique sans dossier portable crée une dépendance au moment où l’institution doit répondre du résultat.</p>
+
+                <p>Imaginons une coopérative rapprochant une transaction de terrain retardée, un éditeur commandant une traduction, une clinique demandant un résumé à partir d’un dossier patient ou une archive décidant si un objet gardé par une communauté peut être exposé. Le dossier important n’est pas le paragraphe fluide du modèle. C’est l’échange : qui a demandé, quelle autorité existait, quelle source a été consultée, quelle langue et quelle catégorie locale portaient le sens, quelle action a été prise et qui peut corriger le dossier.</p>
+
+                <p>La langue locale appartient à cette conception. Un reçu qui ne conserve qu’un résumé anglais peut effacer la différence entre le droit de lire et le droit de publier, entre un nom coutumier et une étiquette administrative ou entre une recommandation et une décision contraignante. La traduction doit porter les conditions de l’échange, pas seulement son vocabulaire de surface. La souveraineté intellectuelle africaine exige que les institutions gardent le droit de définir ces conditions, de conserver les reçus et de les exporter dans des formes qu’un autre système local puisse comprendre.</p>
+
+                <p>La question est aussi fédérale. Un réseau régional de recherche, un système de paiement, un éditeur ou un service public n’a pas besoin d’une machine centrale unique pour créer de la continuité. Il lui faut un dossier minimal partagé qui permette à des institutions indépendantes de reconnaître identité, autorité, preuves, conditions, statut et correction au-delà de leurs frontières. La fédération dépend de la reconnaissance mutuelle. Les reçus en sont une forme pratique.</p>
+
+                <h2>Où la surface d’investissement s’élargit</h2>
+
+                <p>Si les agents deviennent des participants au commerce, à la recherche, à l’administration et à la production créative, le capital doit examiner l’infrastructure qui rend les échanges médiés par machine lisibles :</p>
+
+                <ul>
+                    <li><strong>Couches de reçu et de règlement :</strong> systèmes transformant les actions d’agents en dossiers de statut, prix, usage, acceptation et obligation non résolue.</li>
+                    <li><strong>Adaptateurs de conformité et de sémantique :</strong> outils mettant en correspondance schémas locaux, langues, conditions de produits, droits et règles d’autorité sans perdre le sens matériel à la frontière.</li>
+                    <li><strong>Services de preuve et de provenance :</strong> infrastructure attachant au reçu sources, tests, signatures, informations d’authenticité et historique des transformations.</li>
+                    <li><strong>Systèmes de litige et de correction :</strong> produits rouvrant un échange médié par machine, conservant l’état original, attribuant la responsabilité et consignant la réparation.</li>
+                    <li><strong>Registres institutionnels portables :</strong> dossiers exportables permettant à une organisation de changer de modèle, de runtime, de cloud ou de partenaire régional sans perdre l’historique de ses obligations.</li>
+                </ul>
+
+                <p>La question de souscription est concrète : le produit réduit-il le coût d’acceptation d’un travail machine tout en conservant la possibilité de le contester ? Les preuves utiles comprennent l’exhaustivité du reçu, le taux de perte sémantique pendant les transferts, la survie de la provenance, l’exactitude du règlement, le délai de résolution des litiges, la fidélité entre langues, la réussite de l’export et la part des échanges qui peuvent être reconstitués sans accès au fournisseur initial.</p>
+
+                <p>Cet objet commercial se distingue des couches voisines de l’archive. Un catalogue décrit une offre avant l’échange. Un protocole définit la manière dont les systèmes communiquent. Une couche de permissions définit ce qu’un acteur peut toucher. La provenance suit l’histoire d’un actif. Un graphe de workflow décrit le déplacement du travail. Le reçu consigne ce que signifiait un échange particulier après le franchissement de la frontière, y compris ce qui reste à régler. Son unité de valeur est la reconnaissance responsable.</p>
+
+                <h2>Construire le reçu avant d’élargir le marché</h2>
+
+                <p>Une institution peut tester cette conception avec un échange peu lourd de conséquences qui franchit déjà une frontière :</p>
+
+                <ol>
+                    <li>Nommer les mandants, les agents, les systèmes destinataires, les fonctions d’autorité, les conditions linguistiques et les règles qui gouvernent l’échange.</li>
+                    <li>Définir les champs minimaux du reçu, en distinguant notamment proposé, accepté, terminé, refusé, expiré et contesté.</li>
+                    <li>Attacher les dossiers sources, les versions, les permissions, les preuves et les résultats d’outils qui ont matériellement façonné le résultat.</li>
+                    <li>Envoyer le reçu à un réviseur indépendant ou à un processus successeur et vérifier s’il peut déterminer ce qui s’est passé, ce qui peut arriver ensuite et ce qui reste incertain.</li>
+                    <li>Rouvrir un échange volontairement imparfait, le corriger sans effacer l’original et exporter le dossier complet dans un second système.</li>
+                </ol>
+
+                <p>Le résultat doit être mesuré à la frontière. À quelle fréquence le système destinataire comprend-il mal les conditions ? Quel volume de contexte une personne doit-elle reconstituer, et quels champs disparaissent pendant la traduction ou le transfert ? À quelle vitesse l’institution peut-elle inverser une action non autorisée ? Les réponses montrent si l’agent accroît la capacité institutionnelle ou produit seulement une ambiguïté bien écrite.</p>
+
+                <p>Une machine peut parler avec fluidité, chercher largement et agir rapidement. L’institution doit toujours savoir ce qui est entré dans son monde. Le reçu est l’objet modeste qui rend ce savoir portable. Lorsque les institutions africaines possèdent le dossier de l’échange, elles peuvent utiliser des capacités externes sans céder les conditions selon lesquelles le travail devient reconnu, payé, corrigé et mémorisé.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « Now everyone can put data to work » (10 septembre 2026 ; article lié : <em>https://openai.com/index/put-data-to-work</em> ; description : l’agent Data de ChatGPT Work connecte les données d’entreprise, fait émerger des informations et construit des tableaux de bord interactifs). Il s’agit d’un signal de direction produit rapporté par le fournisseur.</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « Introducing ChatGPT for Financial Services » (10 septembre 2026 ; article lié : <em>https://openai.com/index/introducing-chatgpt-financial-services</em> ; description : produit associant données financières et GPT-6 Astra pour la recherche, la modélisation et les documents destinés aux clients). Il s’agit d’un signal de direction produit rapporté par le fournisseur.</a></li>
+                    <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/?output=1" target="_blank" rel="noopener">W3C : « Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents » (atelier des 8 et 9 septembre 2026 ; titre et description vérifiés depuis l’endpoint W3C accessible : l’atelier partage des expériences de création de contenus pensés pour les agents d’IA, avec le commerce électronique comme axe).</a></li>
+                    <li><a href="https://c2pa.org/news/" target="_blank" rel="noopener">Annonces C2PA : « A New Implementation Guide for Content Credentials » (31 juillet 2026) et « C2PA Welcomes TikTok to Steering Committee » (28 juillet 2026) ; la page décrit un guide de mise en œuvre permettant de comprendre comment des actifs numériques ont été créés ou modifiés par l’IA et la poursuite du travail sur les spécifications de provenance.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog : « How A2A is Building a World of Collaborative Agents » (18 juin 2026 ; titre et description vérifiés : transferts autonomes sécurisés entre agents et workflows collaboratifs évolutifs).</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog : « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; titre et description vérifiés : workflows en graphe, orchestration avec humain dans la boucle, routage dynamique et résilience intégrée).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology : « AI Risk Management Framework » (publié le 12 juillet 2021 ; titre et date de publication vérifiés ; fonctions : Govern, Map, Measure et Manage).</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>September 16, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
