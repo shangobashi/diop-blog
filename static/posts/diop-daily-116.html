@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Model’s Misalignment Belongs in the Record — Diop Research</title>
+    <meta name="description" content="A model’s unexpected behavior becomes institutionally useful only when it can be reported, investigated, classified, and revisited. The investable surface is model-behavior observability: the reporting and learning layer between an agent’s action and an institution’s response."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry116">Diop Daily #116 — September 2026</div>
+                <div class="article__meta-line">
+                    <time>September 17, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>model behavior · misalignment reporting · institutional learning · African sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Model’s Misalignment Belongs in the Record</h1>
+
+                <p>A model’s unexpected behavior becomes an institutional fact only when someone can report it, preserve the surrounding conditions, investigate the cause, and return to the case after the system changes. Without that discipline, a strange output remains a screenshot, a private warning, or a story told by the person who happened to see it. The machine may have produced the event, but the institution has not yet learned from it.</p>
+
+                <p>OpenAI’s News RSS published a framework on September 16 for reporting model misalignment and described six reports of unexpected or concerning model behavior. This is a vendor-published account, not an independent assessment of the reported cases or a general measure of model reliability. Its significance lies in the category it makes visible: model behavior is becoming something a laboratory or company may need to track, investigate, and disclose as an object of institutional knowledge.</p>
+
+                <blockquote>
+                    <p>A failure that cannot be described cannot become a lesson, and a lesson that cannot be revisited cannot govern the next machine.</p>
+                </blockquote>
+
+                <h2>An unexpected act is a recordable event</h2>
+
+                <p>Software teams have long recorded outages, security events, failed deployments, and data-quality defects. Model behavior complicates the record because the event often appears inside an apparently competent answer. A system can follow the visible instruction while inventing a source, expose a hidden assumption, pursue a proxy for the task, misread a local term, or continue after the conditions that justified its action have changed. The output alone does not tell the institution which of these occurred.</p>
+
+                <p>The first obligation is therefore descriptive. A report should preserve the model version, system instructions, tools, retrieved context, user or principal, permissions, language, time, external state, output, and observed deviation. These details are evidence about the event. They allow a reviewer to ask whether the behavior came from a capability boundary, a prompt conflict, a data problem, a permission defect, a routing choice, a hidden state transition, or an interpretation that seemed reasonable until its consequence appeared.</p>
+
+                <p>That vocabulary changes the institution’s posture. A report does not pronounce a model guilty. It creates a bounded case in which competing explanations can be tested. The distinction matters because a system can produce a harmful result through several paths, and each path demands a different response. A permissions defect may require a policy change. A retrieval failure may require a data repair. A misleading confidence signal may require a new review gate. A language error may require local expertise and a change to the evaluation set.</p>
+
+                <h2>The report needs a schema</h2>
+
+                <p>A useful model-behavior report is more than an incident label. It is a compact research object that can travel from the person who noticed the event to the team that owns the model, the institution that bears the consequence, and the successor system that must avoid repeating it. Its fields should include:</p>
+
+                <ul>
+                    <li><strong>Case identity:</strong> a durable identifier, reporting time, affected workflow, responsible institution, and people who may access the record.</li>
+                    <li><strong>Observed behavior:</strong> the exact output or action, the expected behavior, and the material difference between them.</li>
+                    <li><strong>Conditions:</strong> model and runtime versions, instructions, tools, context, data, permissions, language, jurisdiction, and external state.</li>
+                    <li><strong>Impact and reach:</strong> what changed, who could be affected, whether the event was contained, and which downstream artifacts inherited it.</li>
+                    <li><strong>Confidence and alternatives:</strong> what is directly observed, what is inferred, which explanations remain plausible, and what evidence would separate them.</li>
+                    <li><strong>Disposition:</strong> the containment action, owner, review decision, disclosure status, and conditions for reopening the case.</li>
+                    <li><strong>Learning link:</strong> the evaluation, policy, prompt, permission, dataset, training example, or operational rule that should change if the finding survives review.</li>
+                </ul>
+
+                <p>The schema keeps observation separate from interpretation. That separation protects the record from two opposite errors. The first is premature certainty, where an institution turns one alarming output into a theory of the whole model. The second is bureaucratic minimization, where the event is dismissed because its cause has not yet been proven. A well-formed report can say, “this happened under these conditions; these explanations remain open; these tests will distinguish them.” That is scientific discipline applied to machine behavior.</p>
+
+                <h2>From log collection to institutional learning</h2>
+
+                <p>Google’s public description of ADK Go 2.0 presents graph-based workflows, human-in-the-loop orchestration, dynamic routing, retries, and built-in resilience. These primitives help a system route work and recover from expected failures. They do not decide whether an unusual behavior deserves a case, how the case should be classified, or which future runs should be tested against it. Those decisions belong to the institution around the runtime.</p>
+
+                <p>NIST’s AI Risk Management Framework provides a practical vocabulary through Govern, Map, Measure, and Manage. Applied to model-behavior reporting, Govern names the authority that owns the case and the decision to disclose it. Map identifies the people, data, tools, jurisdictions, and obligations in the event. Measure tracks recurrence, detection time, affected scope, evidence quality, and the cost of investigation. Manage changes the system when the case shows that the current boundary, evaluation, or operating rule is insufficient.</p>
+
+                <p>A disciplined learning loop has five movements:</p>
+
+                <ol>
+                    <li>Capture the event before cleanup, paraphrase, or memory removes the conditions that made it intelligible.</li>
+                    <li>Reproduce the behavior where possible, while preserving the original case as the historical record even when reproduction fails.</li>
+                    <li>Classify the deviation by mechanism and consequence rather than using a single broad label for every surprising output.</li>
+                    <li>Assign a disposition: contain, monitor, disclose, change the system, or close with a documented reason.</li>
+                    <li>Replay the case against the revised system and record whether the change reduced the original risk without creating a new one.</li>
+                </ol>
+
+                <p>The last movement is decisive. A report that never returns to the live system becomes an archive of concern. A report connected to replay becomes a test of institutional memory. The machine is judged by whether it can change in response to evidence, while the institution is judged by whether it can preserve the evidence long enough to make that change accountable.</p>
+
+                <h2>Misalignment is local and plural</h2>
+
+                <p>Model behavior is interpreted inside a social and linguistic setting. A system can appear aligned in a benchmark while failing when a cooperative’s customary category is mapped to an administrative term, when a public office’s authority is distributed across several roles, or when a translation removes the distinction between permission to read and permission to publish. The event is not fully described until the institution records what the words, relationships, and obligations meant in that setting.</p>
+
+                <p>For African institutions, this is a sovereignty question as much as a safety question. Imported systems often bring their own defaults for what counts as a meaningful deviation, whose report receives priority, which language is treated as canonical, and when a case is considered closed. Local expertise must have a place in the reporting schema and in the review authority. Otherwise an institution may retain a copy of the output while losing the categories needed to understand why the output was unacceptable.</p>
+
+                <p>A regional research network, clinic, archive, university, newsroom, or payment service can share a minimum reporting vocabulary without surrendering its own authority. The common fields might identify identity, context, observed behavior, evidence, scope, status, and correction. Each institution can then add local terms, languages, retention rules, and escalation roles. Federation becomes practical when independent institutions can recognize one another’s cases without pretending that every consequence has the same meaning.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If agents are allowed to act across longer intervals and more consequential systems, capital should examine the infrastructure that turns unexpected behavior into a measurable learning process:</p>
+
+                <ul>
+                    <li><strong>Behavior observability:</strong> systems that capture model, tool, context, permission, language, and external-state conditions alongside the output.</li>
+                    <li><strong>Misalignment case management:</strong> products that preserve reports, evidence, hypotheses, ownership, disclosure decisions, and reopening conditions.</li>
+                    <li><strong>Replay and regression laboratories:</strong> evaluation systems that rerun historical cases across models, prompts, providers, and policy versions.</li>
+                    <li><strong>Cross-language review infrastructure:</strong> tools that let local experts annotate meaning, consequence, and authority without reducing the case to an English paraphrase.</li>
+                    <li><strong>Disclosure and learning registries:</strong> controlled records that connect public reporting to internal remediation while protecting sensitive data and affected people.</li>
+                </ul>
+
+                <p>The underwriting question is concrete: does the product reduce the time between an unexpected behavior and a verified institutional response? Useful evidence includes time to detection, reproduction rate, proportion of cases with complete conditions, recurrence after remediation, false-positive rate, investigation hours, replay coverage, cross-language agreement, and the percentage of closed cases linked to a changed evaluation or policy.</p>
+
+                <p>This commercial object has a distinct boundary. A receipt records what an exchange meant after a transaction crosses an institution. A proof artifact supports the validity of a claim. A supervision layer decides when a person should enter an active interval. A repair system changes a failing component. Model-behavior observability records the deviation itself and connects it to the tests and decisions that determine whether the institution has learned enough to trust the next run. Its unit of value is verified institutional learning.</p>
+
+                <h2>Build the reporting loop before widening autonomy</h2>
+
+                <p>An institution can begin with one workflow whose errors are consequential enough to teach, yet bounded enough to investigate:</p>
+
+                <ol>
+                    <li>Name the behaviors that count as reportable, including language, authority, privacy, evidence, and persistence failures.</li>
+                    <li>Define the minimum case schema and the roles that may report, investigate, contain, disclose, reopen, and close a case.</li>
+                    <li>Preserve representative cases in their original form, then build a replay set that includes ordinary, ambiguous, adversarial, and local-language examples.</li>
+                    <li>Measure detection, reproduction, investigation cost, remediation, recurrence, and the time required to return a finding to production evaluation.</li>
+                    <li>Export the case history and let an independent reviewer determine whether a successor system could understand what failed, under which conditions, and what changed afterward.</li>
+                </ol>
+
+                <p>Autonomy should expand only as the reporting loop becomes more reliable. A system earns wider authority through evidence that its institution can see an unexpected act, preserve its conditions, test competing explanations, and alter the boundary when the evidence demands it. The record is where a surprising machine event becomes shared knowledge. Without that record, every generation of the system begins again at the point where the previous one failed.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Our framework for reporting model misalignment” (September 16, 2026; linked article: <em>https://openai.com/index/model-misalignment-reporting-framework</em>; description: OpenAI shares a framework for tracking, investigating, and disclosing model misalignment alongside six reports of unexpected or concerning model behavior). This is a vendor-published signal, not an independent reliability assessment.</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog: “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026; page title and description verified from the accessible endpoint: graph-based workflows, human-in-the-loop orchestration, dynamic routing, retries, and built-in resilience).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology: “AI Risk Management Framework” (published July 12, 2021; accessible page also records NIST’s April 7, 2026 concept note for a critical-infrastructure profile; the framework uses Govern, Map, Measure, and Manage).</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Le désalignement du modèle appartient au dossier</h1>
+
+                <p>Un comportement inattendu du modèle devient un fait institutionnel seulement lorsqu’une personne peut le signaler, préserver les conditions qui l’entourent, rechercher sa cause et revenir au cas après la modification du système. Sans cette discipline, une sortie étrange reste une capture d’écran, un avertissement privé ou un récit raconté par la personne qui l’a aperçue. La machine a peut-être produit l’événement, mais l’institution n’en a pas encore tiré de leçon.</p>
+
+                <p>Le flux RSS d’OpenAI a publié le 16 septembre un cadre pour signaler le désalignement des modèles et décrit six signalements de comportements inattendus ou préoccupants. Il s’agit d’un récit publié par le fournisseur, et non d’une évaluation indépendante des cas ou d’une mesure générale de fiabilité. Son intérêt tient à la catégorie qu’il rend visible : le comportement d’un modèle devient un objet qu’un laboratoire ou une entreprise peut devoir suivre, examiner et divulguer comme élément de connaissance institutionnelle.</p>
+
+                <blockquote>
+                    <p>Un échec qui ne peut pas être décrit ne peut pas devenir une leçon, et une leçon impossible à revisiter ne peut pas gouverner la machine suivante.</p>
+                </blockquote>
+
+                <h2>Un acte inattendu est un événement à consigner</h2>
+
+                <p>Les équipes logicielles consignent depuis longtemps les pannes, les incidents de sécurité, les déploiements échoués et les défauts de qualité des données. Le comportement d’un modèle complique ce dossier parce que l’événement apparaît souvent dans une réponse apparemment compétente. Un système peut suivre l’instruction visible tout en inventant une source, en exposant une hypothèse cachée, en poursuivant un substitut de l’objectif, en comprenant mal un terme local ou en continuant après la disparition des conditions qui justifiaient son action. La sortie seule ne dit pas à l’institution lequel de ces phénomènes s’est produit.</p>
+
+                <p>La première obligation est donc descriptive. Un signalement doit préserver la version du modèle, les instructions système, les outils, le contexte récupéré, l’utilisateur ou le mandant, les permissions, la langue, le moment, l’état externe, la sortie et l’écart observé. Ces éléments sont les preuves de l’événement. Ils permettent de demander si le comportement vient d’une limite de capacité, d’un conflit d’instructions, d’un problème de données, d’un défaut de permission, d’un choix de routage, d’une transition d’état cachée ou d’une interprétation qui semblait raisonnable avant que sa conséquence n’apparaisse.</p>
+
+                <p>Ce vocabulaire modifie la posture de l’institution. Un signalement ne déclare pas la culpabilité d’un modèle. Il crée un cas délimité où plusieurs explications peuvent être testées. La distinction compte parce qu’un résultat dommageable peut emprunter plusieurs chemins, et que chaque chemin exige une réponse différente. Un défaut de permissions peut demander une modification de politique. Un échec de récupération peut demander une réparation des données. Un signal de confiance trompeur peut exiger un nouveau point de revue. Une erreur de langue peut exiger une expertise locale et une modification du jeu d’évaluation.</p>
+
+                <h2>Le signalement a besoin d’un schéma</h2>
+
+                <p>Un signalement utile du comportement d’un modèle est davantage qu’une étiquette d’incident. C’est un objet de recherche compact qui peut passer de la personne ayant remarqué l’événement à l’équipe responsable du modèle, à l’institution qui en porte la conséquence et au système successeur qui doit éviter sa répétition. Ses champs devraient comprendre :</p>
+
+                <ul>
+                    <li><strong>Identité du cas :</strong> identifiant durable, heure du signalement, workflow concerné, institution responsable et personnes autorisées à consulter le dossier.</li>
+                    <li><strong>Comportement observé :</strong> sortie ou action exacte, comportement attendu et différence matérielle entre les deux.</li>
+                    <li><strong>Conditions :</strong> versions du modèle et du runtime, instructions, outils, contexte, données, permissions, langue, juridiction et état externe.</li>
+                    <li><strong>Impact et portée :</strong> ce qui a changé, les personnes susceptibles d’être touchées, le confinement éventuel et les artefacts en aval qui ont hérité du problème.</li>
+                    <li><strong>Confiance et alternatives :</strong> ce qui est directement observé, ce qui est inféré, les explications encore plausibles et les preuves qui permettraient de les distinguer.</li>
+                    <li><strong>Décision :</strong> mesure de confinement, responsable, décision de revue, statut de divulgation et conditions de réouverture.</li>
+                    <li><strong>Lien d’apprentissage :</strong> évaluation, politique, prompt, permission, jeu de données, exemple d’entraînement ou règle opératoire à modifier si le constat résiste à la revue.</li>
+                </ul>
+
+                <p>Le schéma sépare l’observation de l’interprétation. Cette séparation protège le dossier contre deux erreurs opposées. La première est la certitude prématurée, qui transforme une sortie alarmante en théorie sur l’ensemble du modèle. La seconde est la minimisation bureaucratique, qui écarte l’événement parce que sa cause n’est pas encore prouvée. Un signalement bien formé peut dire : « ceci s’est produit dans ces conditions ; ces explications restent ouvertes ; ces tests permettront de les distinguer ». C’est la discipline scientifique appliquée au comportement machine.</p>
+
+                <h2>Du journal des logs à l’apprentissage institutionnel</h2>
+
+                <p>La description publique de Google pour ADK Go 2.0 présente des workflows en graphe, une orchestration avec humain dans la boucle, un routage dynamique, des nouvelles tentatives et une résilience intégrée. Ces primitives aident un système à acheminer le travail et à récupérer après des échecs prévus. Elles ne décident pas si un comportement inhabituel mérite un dossier, comment le classer ni quels futurs passages doivent être testés à partir de lui. Ces décisions appartiennent à l’institution qui entoure le runtime.</p>
+
+                <p>Le cadre de gestion des risques liés à l’IA du NIST fournit un vocabulaire pratique avec Govern, Map, Measure et Manage. Appliqué au signalement des comportements de modèles, Govern nomme l’autorité qui possède le cas et la décision de le divulguer. Map identifie les personnes, données, outils, juridictions et obligations présents dans l’événement. Measure suit la récurrence, le délai de détection, la portée affectée, la qualité des preuves et le coût de l’enquête. Manage modifie le système lorsque le cas montre que la frontière, l’évaluation ou la règle opératoire actuelle est insuffisante.</p>
+
+                <p>Une boucle d’apprentissage disciplinée comporte cinq mouvements :</p>
+
+                <ol>
+                    <li>Capturer l’événement avant que le nettoyage, la paraphrase ou la mémoire ne supprime les conditions qui le rendaient intelligible.</li>
+                    <li>Reproduire le comportement lorsque cela est possible, tout en conservant le cas original comme dossier historique même si la reproduction échoue.</li>
+                    <li>Classer l’écart par mécanisme et par conséquence au lieu d’utiliser une seule étiquette générale pour toute sortie surprenante.</li>
+                    <li>Attribuer une décision : contenir, surveiller, divulguer, modifier le système ou clore avec une raison documentée.</li>
+                    <li>Rejouer le cas sur le système révisé et consigner si la modification a réduit le risque initial sans en créer un autre.</li>
+                </ol>
+
+                <p>Le dernier mouvement est décisif. Un signalement qui ne revient jamais au système vivant devient une archive de préoccupations. Un signalement relié au rejeu devient un test de la mémoire institutionnelle. La machine est jugée sur sa capacité à changer en réponse aux preuves, tandis que l’institution est jugée sur sa capacité à conserver ces preuves assez longtemps pour rendre ce changement responsable.</p>
+
+                <h2>Le désalignement est local et pluriel</h2>
+
+                <p>Le comportement d’un modèle s’interprète dans un cadre social et linguistique. Un système peut sembler aligné dans un benchmark puis échouer lorsqu’une catégorie coutumière d’une coopérative est mise en correspondance avec un terme administratif, lorsque l’autorité d’un service public est distribuée entre plusieurs fonctions ou lorsqu’une traduction efface la différence entre le droit de lire et celui de publier. L’événement n’est pas entièrement décrit tant que l’institution n’a pas consigné le sens des mots, des relations et des obligations dans ce contexte.</p>
+
+                <p>Pour les institutions africaines, il s’agit d’une question de souveraineté autant que de sécurité. Les systèmes importés apportent souvent leurs propres valeurs par défaut sur ce qui constitue un écart important, sur le signalement qui reçoit la priorité, sur la langue considérée comme canonique et sur le moment où un cas est réputé clos. L’expertise locale doit avoir une place dans le schéma et dans l’autorité de revue. Sinon, une institution peut conserver une copie de la sortie tout en perdant les catégories nécessaires pour comprendre pourquoi cette sortie était inacceptable.</p>
+
+                <p>Un réseau régional de recherche, une clinique, une archive, une université, une rédaction ou un service de paiement peut partager un vocabulaire minimal de signalement sans abandonner sa propre autorité. Les champs communs peuvent identifier l’identité, le contexte, le comportement observé, les preuves, la portée, le statut et la correction. Chaque institution peut ensuite ajouter ses termes locaux, ses langues, ses règles de conservation et ses rôles d’escalade. La fédération devient pratique lorsque des institutions indépendantes peuvent reconnaître les dossiers des autres sans prétendre que toutes les conséquences ont le même sens.</p>
+
+                <h2>Où la surface d’investissement s’élargit</h2>
+
+                <p>Si les agents sont autorisés à agir pendant des intervalles plus longs et dans des systèmes plus lourds de conséquences, le capital doit examiner l’infrastructure qui transforme un comportement inattendu en processus d’apprentissage mesurable :</p>
+
+                <ul>
+                    <li><strong>Observabilité du comportement :</strong> systèmes capturant les conditions du modèle, des outils, du contexte, des permissions, de la langue et de l’état externe avec la sortie.</li>
+                    <li><strong>Gestion des cas de désalignement :</strong> produits conservant signalements, preuves, hypothèses, responsabilités, décisions de divulgation et conditions de réouverture.</li>
+                    <li><strong>Laboratoires de rejeu et de régression :</strong> systèmes d’évaluation rejouant les cas historiques entre modèles, prompts, fournisseurs et versions de politique.</li>
+                    <li><strong>Infrastructure de revue multilingue :</strong> outils permettant à des experts locaux d’annoter le sens, la conséquence et l’autorité sans réduire le cas à une paraphrase anglaise.</li>
+                    <li><strong>Registres de divulgation et d’apprentissage :</strong> dossiers contrôlés reliant le signalement public à la remédiation interne tout en protégeant les données sensibles et les personnes concernées.</li>
+                </ul>
+
+                <p>La question de souscription est concrète : le produit réduit-il le délai entre un comportement inattendu et une réponse institutionnelle vérifiée ? Les éléments utiles comprennent le délai de détection, le taux de reproduction, la proportion de cas dont les conditions sont complètes, la récurrence après remédiation, le taux de faux positifs, les heures d’enquête, la couverture de rejeu, l’accord entre langues et la part des cas clos reliée à une évaluation ou une politique modifiée.</p>
+
+                <p>Cet objet commercial possède une frontière distincte. Un reçu consigne ce que signifiait un échange après le franchissement d’une transaction. Un artefact de preuve soutient la validité d’une affirmation. Une couche de supervision décide quand une personne doit entrer dans un intervalle actif. Un système de réparation modifie un composant défaillant. L’observabilité du comportement machine consigne l’écart lui-même et le relie aux tests et aux décisions qui déterminent si l’institution a assez appris pour faire confiance au prochain passage. Son unité de valeur est l’apprentissage institutionnel vérifié.</p>
+
+                <h2>Construire la boucle de signalement avant d’élargir l’autonomie</h2>
+
+                <p>Une institution peut commencer par un workflow dont les erreurs ont assez de conséquences pour enseigner quelque chose, tout en restant assez délimité pour être étudié :</p>
+
+                <ol>
+                    <li>Nommer les comportements qui doivent être signalés, notamment les échecs de langue, d’autorité, de confidentialité, de preuve et de persistance.</li>
+                    <li>Définir le schéma minimal du cas ainsi que les fonctions autorisées à signaler, enquêter, contenir, divulguer, rouvrir et clore un dossier.</li>
+                    <li>Conserver les cas représentatifs dans leur forme originale, puis constituer un jeu de rejeu comprenant des exemples ordinaires, ambigus, adverses et en langue locale.</li>
+                    <li>Mesurer la détection, la reproduction, le coût de l’enquête, la remédiation, la récurrence et le délai nécessaire pour ramener un constat dans l’évaluation de production.</li>
+                    <li>Exporter l’historique des cas et demander à un réviseur indépendant si un système successeur pourrait comprendre ce qui a échoué, dans quelles conditions et ce qui a changé ensuite.</li>
+                </ol>
+
+                <p>L’autonomie doit s’étendre à mesure que la boucle de signalement devient plus fiable. Un système gagne une autorité plus large lorsque les preuves montrent que son institution peut voir un acte inattendu, en préserver les conditions, tester plusieurs explications et déplacer la frontière lorsque les preuves l’exigent. Le dossier est le lieu où un événement machine surprenant devient un savoir partagé. Sans lui, chaque génération du système recommence au point où la précédente a échoué.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « Our framework for reporting model misalignment » (16 septembre 2026 ; article lié : <em>https://openai.com/index/model-misalignment-reporting-framework</em> ; description : OpenAI partage un cadre pour suivre, examiner et divulguer le désalignement des modèles, avec six signalements de comportements inattendus ou préoccupants). Il s’agit d’un signal publié par le fournisseur, et non d’une évaluation indépendante de fiabilité.</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog : « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026 ; titre et description vérifiés depuis l’endpoint accessible : workflows en graphe, orchestration avec humain dans la boucle, routage dynamique, nouvelles tentatives et résilience intégrée).</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology : « AI Risk Management Framework » (publié le 12 juillet 2021 ; la page accessible consigne aussi la note conceptuelle du NIST du 7 avril 2026 pour un profil consacré aux infrastructures critiques ; le cadre utilise Govern, Map, Measure et Manage).</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>September 17, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

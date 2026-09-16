@@ -141,6 +141,7 @@
         'article.entry113':     { en: 'Diop Daily #113 — September 2026', fr: 'Diop Quotidien n°113 — Septembre 2026' },
         'article.entry114':     { en: 'Diop Daily #114 — September 2026', fr: 'Diop Quotidien n°114 — Septembre 2026' },
         'article.entry115':     { en: 'Diop Daily #115 — September 2026', fr: 'Diop Quotidien n°115 — Septembre 2026' },
+        'article.entry116':     { en: 'Diop Daily #116 — September 2026', fr: 'Diop Quotidien n°116 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -158,6 +159,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-116': {
+        title: {
+            en: "A Model’s Misalignment Belongs in the Record",
+            fr: "Le désalignement du modèle appartient au dossier"
+        },
+        excerpt: {
+            en: "A model’s unexpected behavior becomes institutionally useful when it can be reported, investigated, classified, and revisited. The investable surface is model-behavior observability: the learning layer between an agent’s action and an institution’s response.",
+            fr: "Un comportement inattendu du modèle devient utile à l’institution lorsqu’il peut être signalé, examiné, classé et revisité. La surface d’investissement est l’observabilité du comportement machine : la couche d’apprentissage entre l’action d’un agent et la réponse d’une institution."
+        }
+    },
     'diop-daily-115': {
         title: {
             en: "The Machine Needs a Receipt",
