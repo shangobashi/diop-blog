@@ -142,6 +142,7 @@
         'article.entry114':     { en: 'Diop Daily #114 — September 2026', fr: 'Diop Quotidien n°114 — Septembre 2026' },
         'article.entry115':     { en: 'Diop Daily #115 — September 2026', fr: 'Diop Quotidien n°115 — Septembre 2026' },
         'article.entry116':     { en: 'Diop Daily #116 — September 2026', fr: 'Diop Quotidien n°116 — Septembre 2026' },
+        'article.entry117':     { en: 'Diop Daily #117 — September 2026', fr: 'Diop Quotidien n°117 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -159,6 +160,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-117': {
+        title: {
+            en: "A Child Enters the Context Window",
+            fr: "Un enfant entre dans la fenêtre de contexte"
+        },
+        excerpt: {
+            en: "When a young person enters an AI system, age and vulnerability should become governed context before the answer is generated. The investable surface is protected-user infrastructure: privacy-preserving age assurance, differentiated safeguards, local-language review, and accountable recourse.",
+            fr: "Lorsqu’un jeune entre dans un système d’IA, l’âge et la vulnérabilité devraient devenir un contexte gouverné avant la génération de la réponse. La surface d’investissement est l’infrastructure des usagers protégés : vérification de l’âge respectueuse de la vie privée, protections différenciées, revue dans les langues locales et recours responsable."
+        }
+    },
     'diop-daily-116': {
         title: {
             en: "A Model’s Misalignment Belongs in the Record",

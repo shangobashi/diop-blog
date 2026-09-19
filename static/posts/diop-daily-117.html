@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Child Enters the Context Window — Diop Research</title>
+    <meta name="description" content="When a young person enters an AI system, age and vulnerability should become governed context at the point of inference, not a moderation patch after the answer. The investable surface is protected-user infrastructure: privacy-preserving age assurance, differentiated safeguards, local-language review, and accountable recourse."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry117">Diop Daily #117 — September 2026</div>
+                <div class="article__meta-line">
+                    <time>September 20, 2026</time>
+                    <span>·</span>
+                    <span data-rt="8">8 min read</span>
+                    <span>·</span>
+                    <span>youth safety · protected users · age assurance · African sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Child Enters the Context Window</h1>
+
+                <p>When a young person enters an AI system, the system has received more than a message. It has encountered a protected user whose age, vulnerability, rights, language, and surrounding authority may change what a safe answer means. Those conditions should become governed context at the point where the system decides how to respond, which tools to expose, what data to retain, and when to bring in a responsible adult or institution.</p>
+
+                <p>OpenAI’s News RSS published the Australian Youth Safety Blueprint on September 18 and described it as a six-pillar roadmap for safer AI experiences that protect and empower young people. This is a vendor-published commitment, not independent evidence that the proposed safeguards work in practice. It still marks a useful change in the public product question: youth safety is being described as a system design problem with several interacting layers, not as a single filter applied to a finished answer.</p>
+
+                <blockquote>
+                    <p>A protected user changes the meaning of the system around them.</p>
+                </blockquote>
+
+                <h2>Age is context with consequences</h2>
+
+                <p>An ordinary identity field answers “who is this account?” A protected-user system must also ask “which duties attach to this person in this setting?” A thirteen-year-old seeking homework help, a sixteen-year-old asking about mental health, and an adult using the same model may need different defaults, different escalation paths, and different limits on personalization. The model’s linguistic ability cannot settle those questions.</p>
+
+                <p>Age is only one signal. A young person may be in crisis, discussing abuse, sharing a family device, using a language the system handles poorly, or asking for information that becomes dangerous when combined with a location, a health condition, or a social pressure. The system may not know the whole situation. It should still know which uncertainty requires caution and which route can provide help.</p>
+
+                <p>This creates an architectural distinction. Safety cannot live solely in the generated text. It must reach the identity and policy layers before inference, the tool and memory layers during the interaction, and the review and recourse layers afterward. A child-safe assistant is therefore a coordinated system of context, policy, capability, and institutional response.</p>
+
+                <h2>The child-rights record is a design input</h2>
+
+                <p>UNICEF Innocenti’s Guidance on AI and children, version 3.0, frames AI policy and system design through recommendations that uphold child rights. The page is a rights-oriented public resource, not a software specification. Its importance for builders is methodological: the young person must be treated as a rights-bearing participant in the system, with interests that include safety, privacy, participation, non-discrimination, development, and a meaningful way to seek remedy.</p>
+
+                <p>That framing changes the shape of a product review. A team should be able to answer:</p>
+
+                <ul>
+                    <li>Which protected-user conditions does the system recognize, and which conditions remain unknown?</li>
+                    <li>Which decisions change when the user is a child or when vulnerability is plausibly present?</li>
+                    <li>Which data is needed for the safeguard, how long is it retained, and who can inspect or correct it?</li>
+                    <li>Which language, cultural, disability, and family contexts were represented in testing?</li>
+                    <li>Which human or institution receives an escalation, and what happens when that route fails?</li>
+                    <li>Can the young person understand the system’s limits and contest an incorrect classification?</li>
+                </ul>
+
+                <p>These questions turn rights into operational fields. They also prevent a common failure in AI product design: treating the user as a source of prompts while treating protection as a separate compliance document. A right that cannot influence runtime behavior remains outside the machine’s decision surface.</p>
+
+                <h2>Verification must protect privacy too</h2>
+
+                <p>Age assurance creates its own risk. A system may seek a birth date, an identity document, a face estimate, a voice signal, a device pattern, or a third-party attestation. Each method introduces error, exclusion, retention, and breach consequences. A safeguard that demands a permanent identity dossier may create a larger danger than the interaction it was meant to control.</p>
+
+                <p>The proper design question is narrower: what is the minimum evidence needed to activate the relevant protection, and can the system discard the identifying detail after receiving a revocable proof? A service may need to know that a user is below a threshold without learning the exact birth date. A school platform may need a verified guardian relationship for one action without making the relationship visible to every downstream model. A crisis route may need a region and language without preserving a complete conversation history.</p>
+
+                <p>This is where protected-user infrastructure meets the broader trust architecture of AI. The system needs a claim, a source, an expiry, a purpose, and a correction path. It also needs a clear distinction between “the platform has evidence of a condition” and “the model is entitled to infer everything about the person.” Minimal evidence is a technical discipline and a political safeguard.</p>
+
+                <h2>Safety is local before it is universal</h2>
+
+                <p>Many child-safety systems are designed around assumptions from the markets where their providers are headquartered. Those assumptions may concern family structure, school calendars, emergency services, legal age thresholds, acceptable speech, payment access, or the language in which a child can describe harm. A classifier that performs well in one environment may miss the meaning of a disclosure in another.</p>
+
+                <p>African institutions face a particular sovereignty problem. The safe response may depend on a local language, a community organization, a school counselor, a clinic, a national helpline, a trusted adult, or a customary authority. A global model can contribute reasoning and translation, yet the institution that defines the protective relationship must control the local categories, the escalation map, the retention rules, and the appeal process.</p>
+
+                <p>This does not require a separate foundation model for every community. It requires local ownership of the protected-user layer. Local teams should be able to define which signals count, review false positives and false negatives, add language-specific examples, set the authority hierarchy, and export the policy when a provider changes. African intellectual sovereignty is visible here as a capacity to define protection in one’s own terms, then encode those terms so a machine can respect them.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If AI systems serve younger users at scale, capital should examine the infrastructure that makes protection an executable property of the product:</p>
+
+                <ul>
+                    <li><strong>Privacy-preserving age assurance:</strong> revocable proofs and threshold claims that activate safeguards without creating unnecessary identity stores.</li>
+                    <li><strong>Protected-user policy engines:</strong> systems that map age, vulnerability, language, purpose, and jurisdiction to model, tool, memory, and escalation rules.</li>
+                    <li><strong>Child-rights evaluation suites:</strong> tests that examine safety, privacy, bias, comprehension, refusal quality, and recourse across realistic developmental and linguistic contexts.</li>
+                    <li><strong>Local escalation networks:</strong> infrastructure connecting a machine response to qualified people, services, guardians, schools, clinics, or public authorities with clear responsibility.</li>
+                    <li><strong>Safeguard observability:</strong> records showing which protection activated, what evidence supported it, what the system withheld or changed, and how a reviewer can correct the decision.</li>
+                </ul>
+
+                <p>The underwriting question is concrete: does the product reduce harm while reducing the amount of sensitive data required to operate the safeguard? Useful measures include false-protection and missed-protection rates, time to human escalation, age-assurance data retention, local-language agreement, comprehension of safety notices, successful correction of classifications, and the proportion of safety decisions that can be audited without exposing the child’s full history.</p>
+
+                <p>This commercial object has a distinct boundary. A permission system decides what an authorized actor may touch. A moderation system evaluates content. An identity service recognizes an account. Protected-user infrastructure connects a person’s risk-bearing context to differentiated system behavior while preserving privacy, local authority, and recourse. Its unit of value is safe capability under constrained knowledge.</p>
+
+                <h2>Build the safeguard before widening the audience</h2>
+
+                <p>An institution can begin with one bounded use case, such as educational assistance or a youth-facing information service:</p>
+
+                <ol>
+                    <li>Name the protected-user conditions that change the system’s duties, including age uncertainty, vulnerability, language, device sharing, and jurisdiction.</li>
+                    <li>Define the minimum evidence for each safeguard and the expiry, purpose, access, and correction rules attached to that evidence.</li>
+                    <li>Test ordinary requests, ambiguous disclosures, adversarial prompts, code-switched language, disability contexts, and cases where the correct action is to ask for help.</li>
+                    <li>Connect each escalation to a named human or institution, then measure response time, failure handling, and the quality of the handoff.</li>
+                    <li>Let an independent reviewer inspect the policy, the evidence, the retained data, and the user-facing explanation without requiring access to the model provider.</li>
+                </ol>
+
+                <p>NIST’s AI Risk Management Framework gives this work a useful rhythm through Govern, Map, Measure, and Manage. Govern names the authority responsible for youth protection. Map identifies the people, data, tools, jurisdictions, and harms in the interaction. Measure tests whether the safeguard works across groups and languages. Manage changes the policy, route, evidence requirement, or model when the record shows that the current design is insufficient.</p>
+
+                <p>A child entering the context window changes what the institution owes the person behind the prompt. The strongest systems will make that obligation visible in architecture: minimal evidence, differentiated capability, local meaning, accountable escalation, and a route to repair. Protection becomes real when it can alter the machine before the machine alters the child’s world.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Introducing the Australian Youth Safety Blueprint” (September 18, 2026; linked article: <em>https://openai.com/index/australian-youth-safety-blueprint</em>; description: OpenAI introduces a six-pillar roadmap for safer AI experiences that protect and empower young people). This is a vendor-published commitment, not independent evidence of effectiveness.</a></li>
+                    <li><a href="https://www.unicef.org/innocenti/reports/policy-guidance-ai-children" target="_blank" rel="noopener">UNICEF Innocenti: “Guidance on AI and children” (accessible endpoint; Version 3.0; page description: recommendations for AI policies and systems that uphold child rights). This is a rights-oriented guidance resource, not a product specification.</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology: “AI Risk Management Framework” (published July 12, 2021; accessible page; functions: Govern, Map, Measure, and Manage). The framework is used here as a governance vocabulary, not as proof of compliance.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Un enfant entre dans la fenêtre de contexte</h1>
+
+                <p>Lorsqu’un jeune entre dans un système d’IA, le système reçoit davantage qu’un message. Il rencontre une personne protégée dont l’âge, la vulnérabilité, les droits, la langue et l’autorité environnante peuvent modifier le sens d’une réponse sûre. Ces conditions devraient devenir un contexte gouverné au moment où le système décide comment répondre, quels outils exposer, quelles données conserver et quand faire intervenir un adulte ou une institution responsable.</p>
+
+                <p>Le flux RSS d’OpenAI a publié le 18 septembre l’Australian Youth Safety Blueprint et l’a décrit comme une feuille de route en six piliers pour des expériences d’IA plus sûres, destinées à protéger et à renforcer les capacités des jeunes. Il s’agit d’un engagement publié par un fournisseur, et non d’une preuve indépendante que les protections proposées fonctionnent en pratique. Le signal indique toutefois un changement utile dans la question posée au produit : la sécurité des jeunes est décrite comme un problème de conception systémique comportant plusieurs couches liées, et non comme un filtre unique appliqué à une réponse terminée.</p>
+
+                <blockquote>
+                    <p>Un usager protégé change le sens du système qui l’entoure.</p>
+                </blockquote>
+
+                <h2>L’âge est un contexte qui produit des conséquences</h2>
+
+                <p>Un champ d’identité ordinaire répond à la question « qui est ce compte ? ». Un système destiné aux personnes protégées doit aussi demander « quelles obligations s’attachent à cette personne dans ce contexte ? ». Un enfant de treize ans qui demande de l’aide pour ses devoirs, un jeune de seize ans qui pose une question de santé mentale et un adulte utilisant le même modèle peuvent avoir besoin de paramètres initiaux différents, de chemins d’escalade différents et de limites différentes sur la personnalisation. La capacité linguistique du modèle ne peut pas régler seule ces questions.</p>
+
+                <p>L’âge n’est qu’un signal. Un jeune peut être en crise, parler de maltraitance, partager un appareil familial, utiliser une langue que le système traite mal ou demander une information qui devient dangereuse lorsqu’elle se combine avec un lieu, un état de santé ou une pression sociale. Le système peut ignorer une grande partie de la situation. Il doit tout de même reconnaître quelle incertitude exige de la prudence et quel chemin peut apporter de l’aide.</p>
+
+                <p>Cette réalité crée une distinction architecturale. La sécurité ne peut pas vivre seulement dans le texte produit. Elle doit atteindre les couches d’identité et de politique avant l’inférence, les couches d’outils et de mémoire pendant l’interaction, puis les couches de revue et de recours après celle-ci. Un assistant sûr pour les enfants est donc un système coordonné de contexte, de politique, de capacité et de réponse institutionnelle.</p>
+
+                <h2>Le dossier des droits de l’enfant est une entrée de conception</h2>
+
+                <p>La Guidance on AI and children d’UNICEF Innocenti, version 3.0, formule des recommandations pour les politiques et les systèmes d’IA qui respectent les droits de l’enfant. Cette page est une ressource publique fondée sur les droits, et non une spécification logicielle. Son intérêt pour les bâtisseurs est méthodologique : le jeune doit être traité comme une personne porteuse de droits dans le système, avec des intérêts qui comprennent la sécurité, la vie privée, la participation, la non-discrimination, le développement et une possibilité réelle de demander réparation.</p>
+
+                <p>Cette approche modifie la forme d’une revue produit. Une équipe devrait pouvoir répondre aux questions suivantes :</p>
+
+                <ul>
+                    <li>Quelles conditions liées à l’usager protégé le système reconnaît-il, et lesquelles restent inconnues ?</li>
+                    <li>Quelles décisions changent lorsque l’usager est un enfant ou lorsqu’une vulnérabilité est plausible ?</li>
+                    <li>Quelles données sont nécessaires à la protection, combien de temps sont-elles conservées et qui peut les consulter ou les corriger ?</li>
+                    <li>Quels contextes linguistiques, culturels, de handicap et de famille ont été représentés dans les tests ?</li>
+                    <li>Quelle personne ou institution reçoit une escalade, et que se passe-t-il lorsque ce chemin échoue ?</li>
+                    <li>Le jeune peut-il comprendre les limites du système et contester une classification erronée ?</li>
+                </ul>
+
+                <p>Ces questions transforment les droits en champs opératoires. Elles empêchent aussi une erreur fréquente de conception : traiter l’usager comme une source de prompts et la protection comme un document de conformité séparé. Un droit qui ne peut pas modifier le comportement du runtime reste extérieur à la surface de décision de la machine.</p>
+
+                <h2>La vérification doit aussi protéger la vie privée</h2>
+
+                <p>La vérification de l’âge produit son propre risque. Un système peut demander une date de naissance, une pièce d’identité, une estimation faciale, un signal vocal, un profil d’appareil ou une attestation fournie par un tiers. Chaque méthode introduit des erreurs, de l’exclusion, de la conservation et des conséquences en cas de fuite. Une protection qui exige un dossier d’identité permanent peut créer un danger plus grand que l’interaction qu’elle devait encadrer.</p>
+
+                <p>La bonne question de conception est plus étroite : quelle preuve minimale faut-il pour activer la protection concernée, et le système peut-il supprimer le détail identifiant après avoir reçu une preuve révocable ? Un service peut avoir besoin de savoir qu’un usager se situe sous un seuil sans connaître sa date de naissance exacte. Une plateforme scolaire peut devoir vérifier une relation avec un tuteur pour une action précise sans rendre cette relation visible à tous les modèles en aval. Un dispositif de crise peut avoir besoin d’une région et d’une langue sans conserver l’historique complet de la conversation.</p>
+
+                <p>C’est ici que l’infrastructure des usagers protégés rejoint l’architecture générale de confiance de l’IA. Le système a besoin d’une assertion, d’une source, d’une expiration, d’une finalité et d’un chemin de correction. Il doit aussi distinguer « la plateforme dispose d’une preuve concernant une condition » de « le modèle est autorisé à tout déduire sur la personne ». La preuve minimale est une discipline technique et une protection politique.</p>
+
+                <h2>La sécurité est locale avant d’être universelle</h2>
+
+                <p>De nombreux systèmes de sécurité des enfants sont conçus à partir des hypothèses des marchés où leurs fournisseurs ont leur siège. Ces hypothèses peuvent concerner la structure familiale, le calendrier scolaire, les services d’urgence, les seuils légaux d’âge, la parole acceptable, l’accès au paiement ou la langue dans laquelle un enfant peut décrire un danger. Un classifieur performant dans un environnement peut manquer le sens d’un signalement dans un autre.</p>
+
+                <p>Les institutions africaines rencontrent ici un problème particulier de souveraineté. La réponse sûre peut dépendre d’une langue locale, d’une organisation communautaire, d’un conseiller scolaire, d’une clinique, d’une ligne d’aide nationale, d’un adulte de confiance ou d’une autorité coutumière. Un modèle mondial peut apporter du raisonnement et de la traduction, mais l’institution qui définit la relation de protection doit contrôler les catégories locales, la carte des escalades, les règles de conservation et le processus de recours.</p>
+
+                <p>Il ne s’agit pas de construire un modèle fondamental distinct pour chaque communauté. Il s’agit de posséder localement la couche dédiée aux usagers protégés. Les équipes locales doivent pouvoir définir les signaux pertinents, examiner les faux positifs et les faux négatifs, ajouter des exemples propres aux langues, établir la hiérarchie d’autorité et exporter la politique lorsqu’un fournisseur change. La souveraineté intellectuelle africaine apparaît ici comme la capacité de définir la protection dans ses propres termes, puis d’encoder ces termes pour qu’une machine les respecte.</p>
+
+                <h2>Où la surface d’investissement s’élargit</h2>
+
+                <p>Si les systèmes d’IA servent des usagers plus jeunes à grande échelle, le capital devrait examiner l’infrastructure qui transforme la protection en propriété exécutable du produit :</p>
+
+                <ul>
+                    <li><strong>Vérification de l’âge respectueuse de la vie privée :</strong> preuves révocables et assertions de seuil qui activent les protections sans créer de dépôts d’identité inutiles.</li>
+                    <li><strong>Moteurs de politique pour usagers protégés :</strong> systèmes reliant âge, vulnérabilité, langue, finalité et juridiction aux règles de modèle, d’outil, de mémoire et d’escalade.</li>
+                    <li><strong>Suites d’évaluation des droits de l’enfant :</strong> tests portant sur sécurité, vie privée, biais, compréhension, qualité des refus et recours dans des contextes développementaux et linguistiques réalistes.</li>
+                    <li><strong>Réseaux locaux d’escalade :</strong> infrastructure reliant une réponse machine à des personnes, services, tuteurs, écoles, cliniques ou autorités publiques qualifiés, avec une responsabilité claire.</li>
+                    <li><strong>Observabilité des protections :</strong> dossiers montrant quelle protection s’est activée, quelles preuves l’ont soutenue, ce que le système a retenu ou modifié et comment un réviseur peut corriger la décision.</li>
+                </ul>
+
+                <p>La question de souscription est concrète : le produit réduit-il le risque tout en réduisant la quantité de données sensibles nécessaire au fonctionnement de la protection ? Les mesures utiles comprennent les taux de protection excessive et de protection manquée, le délai d’escalade humaine, la durée de conservation des données d’assurance d’âge, l’accord dans les langues locales, la compréhension des avis de sécurité, la réussite de la correction des classifications et la part des décisions de sécurité qui peuvent être auditées sans exposer l’historique complet de l’enfant.</p>
+
+                <p>Cet objet commercial possède une frontière distincte. Un système de permissions décide ce qu’un acteur autorisé peut toucher. Un système de modération évalue le contenu. Un service d’identité reconnaît un compte. L’infrastructure des usagers protégés relie le contexte de risque d’une personne à un comportement différencié du système, tout en préservant vie privée, autorité locale et recours. Son unité de valeur est une capacité sûre sous connaissance contrainte.</p>
+
+                <h2>Construire la protection avant d’élargir le public</h2>
+
+                <p>Une institution peut commencer par un cas d’usage délimité, comme l’assistance éducative ou un service d’information destiné aux jeunes :</p>
+
+                <ol>
+                    <li>Nommer les conditions de protection qui modifient les obligations du système, notamment l’incertitude sur l’âge, la vulnérabilité, la langue, le partage d’appareil et la juridiction.</li>
+                    <li>Définir la preuve minimale pour chaque protection ainsi que les règles d’expiration, de finalité, d’accès et de correction qui s’y attachent.</li>
+                    <li>Tester les demandes ordinaires, les signalements ambigus, les prompts adverses, les langues mélangées, les situations de handicap et les cas où la bonne action consiste à demander de l’aide.</li>
+                    <li>Relier chaque escalade à une personne ou institution nommée, puis mesurer le délai de réponse, la gestion de l’échec et la qualité du transfert.</li>
+                    <li>Permettre à un réviseur indépendant d’inspecter la politique, les preuves, les données conservées et l’explication destinée à l’usager sans accéder au fournisseur du modèle.</li>
+                </ol>
+
+                <p>Le cadre de gestion des risques liés à l’IA du NIST donne à ce travail un rythme utile avec Govern, Map, Measure et Manage. Govern nomme l’autorité responsable de la protection des jeunes. Map identifie les personnes, les données, les outils, les juridictions et les risques de l’interaction. Measure vérifie si la protection fonctionne entre groupes et langues. Manage modifie la politique, le chemin, l’exigence de preuve ou le modèle lorsque le dossier montre que la conception actuelle est insuffisante.</p>
+
+                <p>Un enfant qui entre dans la fenêtre de contexte modifie ce que l’institution doit à la personne derrière le prompt. Les systèmes les plus solides rendront cette obligation visible dans leur architecture : preuve minimale, capacité différenciée, sens local, escalade responsable et chemin de réparation. La protection devient réelle lorsqu’elle peut modifier la machine avant que la machine ne modifie le monde de l’enfant.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « Introducing the Australian Youth Safety Blueprint » (18 septembre 2026 ; article lié : <em>https://openai.com/index/australian-youth-safety-blueprint</em> ; description : OpenAI introduit une feuille de route en six piliers pour des expériences d’IA plus sûres qui protègent et renforcent les capacités des jeunes). Il s’agit d’un engagement publié par un fournisseur, et non d’une preuve indépendante d’efficacité.</a></li>
+                    <li><a href="https://www.unicef.org/innocenti/reports/policy-guidance-ai-children" target="_blank" rel="noopener">UNICEF Innocenti : « Guidance on AI and children » (endpoint accessible ; version 3.0 ; description de la page : recommandations pour des politiques et systèmes d’IA qui respectent les droits de l’enfant). Il s’agit d’une ressource normative fondée sur les droits, et non d’une spécification produit.</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology : « AI Risk Management Framework » (publié le 12 juillet 2021 ; page accessible ; fonctions : Govern, Map, Measure et Manage). Le cadre est utilisé ici comme vocabulaire de gouvernance, et non comme preuve de conformité.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>September 20, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
