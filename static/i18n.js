@@ -143,6 +143,7 @@
         'article.entry115':     { en: 'Diop Daily #115 — September 2026', fr: 'Diop Quotidien n°115 — Septembre 2026' },
         'article.entry116':     { en: 'Diop Daily #116 — September 2026', fr: 'Diop Quotidien n°116 — Septembre 2026' },
         'article.entry117':     { en: 'Diop Daily #117 — September 2026', fr: 'Diop Quotidien n°117 — Septembre 2026' },
+        'article.entry118':     { en: 'Diop Daily #118 — September 2026', fr: 'Diop Quotidien n°118 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -160,6 +161,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-118': {
+        title: {
+            en: "A Paid Answer Must Declare Itself",
+            fr: "Une réponse sponsorisée doit se déclarer"
+        },
+        excerpt: {
+            en: "When an agent becomes a recommendation surface, sponsorship must become a machine-readable boundary between paid influence and the user’s intent. The investable surface is disclosure, preference, provenance, and audit infrastructure for sponsored agent experiences.",
+            fr: "Lorsqu’un agent devient une surface de recommandation, le sponsoring doit devenir une frontière lisible par machine entre l’influence payée et l’intention de l’usager. La surface d’investissement est l’infrastructure de divulgation, de préférences, de provenance et d’audit des expériences agentiques sponsorisées."
+        }
+    },
     'diop-daily-117': {
         title: {
             en: "A Child Enters the Context Window",
