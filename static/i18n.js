@@ -143,6 +143,7 @@
         'article.entry115':     { en: 'Diop Daily #115 — September 2026', fr: 'Diop Quotidien n°115 — Septembre 2026' },
         'article.entry116':     { en: 'Diop Daily #116 — September 2026', fr: 'Diop Quotidien n°116 — Septembre 2026' },
         'article.entry117':     { en: 'Diop Daily #117 — September 2026', fr: 'Diop Quotidien n°117 — Septembre 2026' },
+        'article.entry119':     { en: 'Diop Daily #119 — September 2026', fr: 'Diop Quotidien n°119 — Septembre 2026' },
         'article.entry118':     { en: 'Diop Daily #118 — September 2026', fr: 'Diop Quotidien n°118 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
@@ -161,6 +162,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-119': {
+        title: {
+            en: "The Harm Used a Valid Syntax",
+            fr: "Le mal a utilisé une syntaxe valide"
+        },
+        excerpt: {
+            en: "An agent can close a ticket with a clean answer while still reaching for a forbidden tool or widening its own access. The investable surface is out-of-band session oversight: traces, intent checks, and findings that sit beside the live request.",
+            fr: "Un agent peut clôturer un ticket avec une réponse propre tout en saisissant un outil interdit ou en élargissant son propre accès. La surface d’investissement est la surveillance de session hors bande : traces, contrôles d’intention et constats qui siègent à côté de la requête en direct."
+        }
+    },
     'diop-daily-118': {
         title: {
             en: "A Paid Answer Must Declare Itself",

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Harm Used a Valid Syntax — Diop Research</title>
+    <meta name="description" content="An agent can close a ticket with a clean answer while still reaching for a forbidden tool or widening its own access. The investable surface is out-of-band session oversight: traces, intent checks, and findings that sit beside the live request."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry119">Diop Daily #119 — September 2026</div>
+                <div class="article__meta-line">
+                    <time>September 22, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>session oversight · intent · agent traces</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Harm Used a Valid Syntax</h1>
+
+                <p>An agent can return a clean answer, close a ticket, and still have done the damage. Google’s September 16 description of Agent Anomaly Detection on the Gemini Enterprise Agent Platform names the pattern in operational language: the session looks benign, the usual metrics-based evaluations pass, and only afterward does a reviewer notice that the agent reached for a tool it should never have touched, or acted on a request that quietly widened its own access. The commercial object is a witness that reads the session beside the live request: traces, tool calls, execution flow, and a finding that can be triaged without slowing the answer.</p>
+
+                <p>This is a vendor-published product-direction signal in private preview, not independent evidence of detection quality, coverage, or public adoption. Its value for a laboratory is architectural. Risk in an agent system migrates from the code that was reviewed before deployment to the behavior that appears only while the machine is working. A closed ticket is a completion signal. It is a weak verdict on whether the session stayed inside the institution’s intent.</p>
+
+                <blockquote>
+                    <p>The ticket can close while the session still needs a witness.</p>
+                </blockquote>
+
+                <h2>Competence is a poor detector</h2>
+
+                <p>The more decisions an agent makes at runtime, the more its risk lives in sequences rather than in a single function. A refund agent can issue a syntactically valid payment for the wrong class of goods. A records agent can update a field it was never meant to see. A support agent can follow a user’s wording into a privilege the institution never granted. None of these events need to crash. They can look like work: a refund posted, a record updated, a ticket resolved, a user thanked.</p>
+
+                <p>Google’s September 15 post on zero-trust agents states the limit of build-time controls with useful precision. A SQL parser cannot tell a socially engineered refund from a legitimate one if the syntax is valid. A regular expression cannot distinguish a physical accessory from a software license. A single-turn test suite cannot catch a fleet being drained across several turns. Those controls remain necessary. They catch cases that can be specified in advance: unsigned writes, kernel escape, blocked strings, missing signatures. They leave a remainder: proposed actions whose form is legal and whose meaning is wrong.</p>
+
+                <p>The missing predicate is intent, judged against the user’s request and the institution’s rules. Google describes an LLM-based policy engine that evaluates each proposed tool call before the call runs, together with log and telemetry analysis that flags unusual behavior across a session. The first check sits on the action. The second reconstructs the story the action belonged to. An institution that owns only the first check will block some bad calls and still miss a session that stayed just inside every local rule while changing its own reach.</p>
+
+                <h2>Intent has to become a field</h2>
+
+                <p>Intent is often treated as a psychological guess about the user. In an agent runtime it is a recordable relationship among four objects: the stated request, the permitted tools, the proposed action, and the accumulating session. A refund of 120 dollars for a software license can be valid syntax and still violate a rule that digital products must go to a human manager. The finding is useful only if it preserves the action name, the rationale, the business rule, the user request, and the decision to block, allow, or escalate.</p>
+
+                <p>A session witness therefore needs a compact schema that can travel from the live agent to a reviewer, a security owner, and a successor system:</p>
+
+                <ul>
+                    <li><strong>Session identity:</strong> a durable identifier, start and end time, workflow, principal, language, and the agents that participated.</li>
+                    <li><strong>Stated intent:</strong> the user’s or institution’s request, including later turns that changed the task.</li>
+                    <li><strong>Proposed actions:</strong> each tool call, its arguments, the policy that judged it, and whether it ran, blocked, or routed to a person.</li>
+                    <li><strong>Observed traces:</strong> reasoning traces, OpenTelemetry spans, token and resource use, and any widening of identity or access.</li>
+                    <li><strong>Finding:</strong> the anomaly class, confidence, mapped risk category, owner, and the evidence a reviewer would need to reopen the session.</li>
+                    <li><strong>Disposition:</strong> containment, token revocation, human review, disclosure status, and the conditions under which the case may be closed.</li>
+                </ul>
+
+                <p>Google’s private-preview description maps findings to a focused set of risks from the OWASP Top 10 for Agentic Applications (2026): tool misuse, identity and privilege abuse, cascading failures, and rogue agents, plus operational risks such as resource exhaustion and token-usage escalation. That mapping is a vendor claim about a detector catalog, not a proof that those categories exhaust institutional harm. It does show why a local label such as “weird session” is too weak to underwrite. An insurer, a ministry, a bank, or a hospital needs a finding that can sit beside other incidents, be compared across vendors, and be revisited after the model changes.</p>
+
+                <h2>The witness sits beside the request</h2>
+
+                <p>Latency is the reason many institutions skip this layer. If every second look sits on the live path, the agent becomes slower, costlier, and easier to disable under pressure. Google’s description of Agent Anomaly Detection insists on a different placement: analysis runs asynchronously and out of band from the live request path, reading logs and traces the agents already emit. The live answer can still be fast. The institution still receives a finding that the completed session exceeded its intended boundary.</p>
+
+                <p>Out-of-band placement changes ownership. Google’s zero-trust series argues that governance should be defined and managed by a platform or security administrator, separate from the agent developer, because the platform enforces it outside the agent code. That separation is an institutional claim as much as an engineering one. The person who ships a refund agent should not be the only person who can see whether the agent refunded a license as if it were a cable. The witness belongs to the institution that bears the consequence.</p>
+
+                <p>Identity makes the same point in another vocabulary. On September 15, NIST finalized implementation guidelines in NIST IR 8587 on protecting tokens and assertions from forgery, theft, and misuse. The publication is designed to help organizations avoid exposing tokens to attackers. In an agent session, identity and privilege abuse is often a token event: the machine obtained, reused, forwarded, or widened a credential that should have stayed bounded. A session witness that cannot see token use will miss the moment the agent became someone else.</p>
+
+                <p>Handoff multiplies the problem. The Agent2Agent protocol describes an open standard for communication among opaque agentic applications, complementary to MCP’s tool access. Once a task leaves one agent and enters another, the live request path fragments. A clean answer in the second agent can hide a privilege change in the first. The witness has to follow the task: session identity, intent, traces, and findings must survive the border, or the institution will audit only the last speaker.</p>
+
+                <h2>Who defines an anomaly in African institutions</h2>
+
+                <p>A detector catalog written for a global enterprise platform will miss harms that are locally obvious. A session that looks like ordinary customer support can still route a payment across the wrong mobile-money rail, disclose a patient’s language to an unauthorized clinic desk, or treat a community elder’s request as a generic user prompt. The syntax of the tool call may be valid. The social meaning is not.</p>
+
+                <p>African institutions therefore need the power to write the intent policies and the anomaly classes, not only to consume a vendor’s private preview. A university can forbid an agent from widening access to student records after a help-desk turn. A cooperative can require human review when a refund crosses from goods into licenses, land, or livestock. A public archive can treat any tool call that exports heritage metadata as a finding, even when the call succeeds. A ministry can demand that token-usage escalation in a local-language workflow be visible to a local security owner rather than buried in a foreign console.</p>
+
+                <p>Intellectual sovereignty appears here as the right to define what counts as a deviation. An imported model can complete a ticket in Wolof, Arabic, Amharic, or French and still have violated a local rule that the platform never encoded. The witness layer is where those rules become operational: as policy text, as trace fields, as findings, and as exportable evidence. Without that layer, African institutions inherit completion metrics and remain blind to the sessions that looked fine.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If agents continue to act inside tickets, capital should examine the infrastructure that can reconstruct a session after the answer has already been given:</p>
+
+                <ul>
+                    <li><strong>Out-of-band session auditors:</strong> services that read traces, tool calls, and execution flow without adding latency to the live path, then emit findings a security owner can triage.</li>
+                    <li><strong>Intent policy engines:</strong> systems that judge a proposed tool call against stated user intent and institutional rules before the call runs, and preserve the rationale.</li>
+                    <li><strong>Trace schemas that survive handoff:</strong> records that carry session identity, intent, token use, and findings across A2A, MCP, translation, and human escalation.</li>
+                    <li><strong>Finding registries:</strong> stores that map local anomalies to shared taxonomies, retain evidence, assign owners, and remain readable after the model or vendor changes.</li>
+                    <li><strong>Remediation loops:</strong> products that can pause an agent, revoke a token, route a session to a person, repair a record, and reopen a closed ticket with the original traces attached.</li>
+                </ul>
+
+                <p>The underwriting question is concrete: can an independent reviewer reconstruct what the agent did after a ticket closed with a successful answer? Useful measures include time from session end to finding, false-quiet rate on sessions that later prove harmful, survival of intent and token fields across handoffs, share of findings mapped to a named risk class, mean time to human review, token-revocation latency, local-language policy coverage, and the percentage of closed tickets for which traces remain complete.</p>
+
+                <p>This commercial object differs from nearby layers in the archive. A model-behavior case file records unexpected outputs so the institution can learn. A receipt records what an exchange meant after a boundary was crossed. A permission system decides what a machine may touch. A protocol defines how agents speak. The session witness reconstructs a completed interaction that looked competent. Its unit of value is a finding that arrives in time to matter, without sitting on the user’s critical path.</p>
+
+                <h2>Begin with one workflow that already closes tickets</h2>
+
+                <p>An institution can start without waiting for a platform-wide overlay:</p>
+
+                <ol>
+                    <li>Choose one workflow that already lets an agent act: refunds, record updates, scheduling, procurement, or citizen correspondence.</li>
+                    <li>Write the intent rules in the institution’s own language: what the user may ask, which tools may run, which identities may be used, and which actions require a person.</li>
+                    <li>Emit traces for every tool call, token use, and handoff, then store them under a session identifier that outlives the ticket.</li>
+                    <li>Run a second process beside the live path that scores the completed session against those rules and against a small set of named risks.</li>
+                    <li>Give a reviewer the original request, the proposed actions, the traces, the finding, and a way to reopen the ticket or revoke the credential.</li>
+                </ol>
+
+                <p>A capable agent will keep producing answers that look finished. The institution’s work is to keep a witness on the session after the syntax has already succeeded. Harm that used a valid form still belongs in the record, and the record has to arrive without making the living request wait.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/" target="_blank" rel="noopener">Google Developers Blog: “Agent Anomaly Detection, now in Private Preview on the Gemini Enterprise Agent Platform” (September 16, 2026; description: an out-of-band oversight layer that reads logs and OpenTelemetry traces, flags behavioral anomalies without added runtime latency, and maps findings to risks from the OWASP Top 10 for Agentic Applications). Vendor product-direction signal in private preview, not independent evidence of detection quality.</a></li>
+                    <li><a href="https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/" target="_blank" rel="noopener">Google Developers Blog: “Build zero-trust AI agents that judge intent, not just syntax” (September 15, 2026; description: runtime governance on the Gemini Enterprise Agent Platform using Model Armor, semantic governance policies that evaluate proposed tool calls against user intent, and anomaly detection with closed-loop remediation). Vendor technical narrative, not a measured security claim.</a></li>
+                    <li><a href="https://www.nist.gov/news-events/news/2026/09/nist-finalizes-guidelines-protecting-online-identity-and-access-tokens" target="_blank" rel="noopener">NIST: “NIST Finalizes Guidelines on Protecting Online Identity and Access Tokens From Misuse” (September 15, 2026; NIST IR 8587, Protecting Tokens and Assertions from Forgery, Theft, and Misuse). Institutional guidance on token security; it does not itself specify agent-session detectors.</a></li>
+                    <li><a href="https://a2a-protocol.org/latest/" target="_blank" rel="noopener">A2A Protocol documentation (accessible page fetched September 22, 2026; description: an open standard for communication and interoperability between opaque agentic applications, complementary to MCP tool access). Used here as the handoff substrate that a session witness must follow, not as evidence that current deployments preserve traces.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Le mal a utilisé une syntaxe valide</h1>
+
+                <p>Un agent peut renvoyer une réponse propre, clôturer un ticket et avoir néanmoins causé le dommage. La description donnée le 16 septembre par Google d’Agent Anomaly Detection sur la Gemini Enterprise Agent Platform nomme le schéma dans un langage opérationnel : la session a l’air bénigne, les évaluations habituelles fondées sur des métriques passent, et ce n’est qu’après coup qu’un réviseur remarque que l’agent a saisi un outil qu’il n’aurait jamais dû toucher, ou qu’il a agi sur une demande qui a élargi en silence son propre accès. L’objet commercial est un témoin qui lit la session à côté de la requête en direct : traces, appels d’outils, flux d’exécution et un constat que l’on peut trier sans ralentir la réponse.</p>
+
+                <p>Il s’agit d’un signal de direction produit publié par le fournisseur, en prévisualisation privée, et non d’une preuve indépendante de qualité de détection, de couverture ou d’adoption publique. Sa valeur pour un laboratoire est architecturale. Dans un système agentique, le risque migre du code relu avant le déploiement vers le comportement qui n’apparaît que pendant que la machine travaille. Un ticket clôturé est un signal d’achèvement. C’est un verdict faible sur la question de savoir si la session est restée à l’intérieur de l’intention de l’institution.</p>
+
+                <blockquote>
+                    <p>Le ticket peut se clôturer alors que la session a encore besoin d’un témoin.</p>
+                </blockquote>
+
+                <h2>La compétence détecte mal</h2>
+
+                <p>Plus un agent prend de décisions à l’exécution, plus son risque habite des séquences plutôt qu’une seule fonction. Un agent de remboursement peut émettre un paiement syntaxiquement valide pour une mauvaise classe de biens. Un agent de dossiers peut mettre à jour un champ qu’il n’était jamais censé voir. Un agent d’assistance peut suivre la formulation d’un usager jusqu’à un privilège que l’institution n’a jamais accordé. Aucun de ces événements n’a besoin de provoquer une panne. Ils peuvent ressembler à du travail : un remboursement enregistré, un dossier mis à jour, un ticket résolu, un usager remercié.</p>
+
+                <p>L’article du 15 septembre de Google sur les agents zero-trust énonce avec une précision utile la limite des contrôles définis à la construction. Un analyseur SQL ne peut pas distinguer un remboursement obtenu par ingénierie sociale d’un remboursement légitime si la syntaxe est valide. Une expression régulière ne peut pas séparer un accessoire physique d’une licence logicielle. Une suite de tests en un seul tour ne peut pas attraper une flotte drainée sur plusieurs tours. Ces contrôles restent nécessaires. Ils saisissent les cas que l’on peut spécifier d’avance : écritures non signées, échappement du noyau, chaînes bloquées, signatures manquantes. Ils laissent un reste : des actions proposées dont la forme est légale et dont le sens est faux.</p>
+
+                <p>Le prédicat manquant est l’intention, jugée à l’aune de la demande de l’usager et des règles de l’institution. Google décrit un moteur de politiques fondé sur un modèle de langage qui évalue chaque appel d’outil proposé avant son exécution, ainsi qu’une analyse des journaux et de la télémétrie qui signale un comportement inhabituel sur une session. Le premier contrôle siège sur l’action. Le second reconstitue l’histoire à laquelle l’action appartenait. Une institution qui ne possède que le premier bloquera certains mauvais appels et manquera encore une session restée juste à l’intérieur de chaque règle locale tout en changeant sa propre portée.</p>
+
+                <h2>L’intention doit devenir un champ</h2>
+
+                <p>On traite souvent l’intention comme une conjecture psychologique sur l’usager. Dans un runtime agentique, c’est une relation enregistrable entre quatre objets : la demande énoncée, les outils autorisés, l’action proposée et la session qui s’accumule. Un remboursement de 120 dollars pour une licence logicielle peut être une syntaxe valide et violer pourtant une règle qui envoie les produits numériques vers un responsable humain. Le constat n’est utile que s’il conserve le nom de l’action, la justification, la règle métier, la demande de l’usager et la décision de bloquer, d’autoriser ou d’escalader.</p>
+
+                <p>Un témoin de session a donc besoin d’un schéma compact capable de voyager de l’agent vivant vers un réviseur, un responsable de la sécurité et un système successeur :</p>
+
+                <ul>
+                    <li><strong>Identité de session :</strong> un identifiant durable, les heures de début et de fin, le flux de travail, le mandant, la langue et les agents qui ont participé.</li>
+                    <li><strong>Intention énoncée :</strong> la demande de l’usager ou de l’institution, y compris les tours ultérieurs qui ont modifié la tâche.</li>
+                    <li><strong>Actions proposées :</strong> chaque appel d’outil, ses arguments, la politique qui l’a jugé, et le fait qu’il ait été exécuté, bloqué ou transmis à une personne.</li>
+                    <li><strong>Traces observées :</strong> traces de raisonnement, spans OpenTelemetry, usage des jetons et des ressources, et tout élargissement d’identité ou d’accès.</li>
+                    <li><strong>Constat :</strong> la classe d’anomalie, la confiance, la catégorie de risque associée, le responsable et les preuves dont un réviseur aurait besoin pour rouvrir la session.</li>
+                    <li><strong>Issue :</strong> confinement, révocation de jeton, revue humaine, statut de divulgation et conditions dans lesquelles le dossier peut être clos.</li>
+                </ul>
+
+                <p>La description en prévisualisation privée de Google associe les constats à un ensemble ciblé de risques tirés du Top 10 OWASP des applications agentiques (2026) : mauvais usage d’outils, abus d’identité et de privilèges, défaillances en cascade et agents voyous, plus des risques opérationnels tels que l’épuisement des ressources et l’escalade d’usage de jetons. Ce mapping est une affirmation du fournisseur sur un catalogue de détecteurs, non une preuve que ces catégories épuisent le mal institutionnel. Il montre pourquoi une étiquette locale du type « session étrange » est trop faible pour souscrire un risque. Un assureur, un ministère, une banque ou un hôpital a besoin d’un constat qui puisse siéger à côté d’autres incidents, être comparé d’un fournisseur à l’autre et être revisité après un changement de modèle.</p>
+
+                <h2>Le témoin siège à côté de la requête</h2>
+
+                <p>La latence est la raison pour laquelle beaucoup d’institutions sautent cette couche. Si chaque second regard siège sur le chemin en direct, l’agent devient plus lent, plus coûteux et plus facile à désactiver sous la pression. La description d’Agent Anomaly Detection insiste sur un autre placement : l’analyse s’exécute de manière asynchrone et hors bande par rapport au chemin de la requête en direct, en lisant les journaux et les traces que les agents émettent déjà. La réponse vivante peut rester rapide. L’institution reçoit néanmoins un constat selon lequel la session achevée a dépassé sa frontière prévue.</p>
+
+                <p>Le placement hors bande change la propriété. La série zero-trust de Google soutient que la gouvernance devrait être définie et gérée par un administrateur de plateforme ou de sécurité, distinct du développeur de l’agent, parce que la plateforme l’applique en dehors du code de l’agent. Cette séparation est une thèse institutionnelle autant qu’une thèse d’ingénierie. La personne qui livre un agent de remboursement ne devrait pas être la seule à voir si l’agent a remboursé une licence comme s’il s’agissait d’un câble. Le témoin appartient à l’institution qui porte la conséquence.</p>
+
+                <p>L’identité dit la même chose dans un autre vocabulaire. Le 15 septembre, le NIST a finalisé des lignes directrices de mise en œuvre dans NIST IR 8587 sur la protection des jetons et des assertions contre la falsification, le vol et le mauvais usage. La publication vise à aider les organisations à éviter d’exposer des jetons aux attaquants. Dans une session d’agent, l’abus d’identité et de privilèges est souvent un événement de jeton : la machine a obtenu, réutilisé, transmis ou élargi une crédentielle qui aurait dû rester bornée. Un témoin de session qui ne voit pas l’usage des jetons manquera le moment où l’agent est devenu quelqu’un d’autre.</p>
+
+                <p>Le transfert multiplie le problème. Le protocole Agent2Agent décrit une norme ouverte de communication entre applications agentiques opaques, complémentaire de l’accès aux outils via MCP. Une fois qu’une tâche quitte un agent et entre dans un autre, le chemin de la requête en direct se fragmente. Une réponse propre dans le second agent peut cacher un changement de privilège dans le premier. Le témoin doit suivre la tâche : l’identité de session, l’intention, les traces et les constats doivent survivre à la frontière, sinon l’institution n’auditera que le dernier locuteur.</p>
+
+                <h2>Qui définit une anomalie dans les institutions africaines</h2>
+
+                <p>Un catalogue de détecteurs écrit pour une plateforme d’entreprise mondiale manquera des maux localement évidents. Une session qui ressemble à une assistance clientèle ordinaire peut encore router un paiement sur le mauvais rail d’argent mobile, divulguer la langue d’un patient à un bureau de clinique non autorisé, ou traiter la demande d’un aîné communautaire comme une consigne d’usager générique. La syntaxe de l’appel d’outil peut être valide. Le sens social ne l’est pas.</p>
+
+                <p>Les institutions africaines ont donc besoin du pouvoir d’écrire les politiques d’intention et les classes d’anomalie, et non seulement de consommer la prévisualisation privée d’un fournisseur. Une université peut interdire à un agent d’élargir l’accès aux dossiers étudiants après un tour de helpdesk. Une coopérative peut exiger une revue humaine lorsqu’un remboursement passe des biens aux licences, à la terre ou au bétail. Une archive publique peut traiter comme un constat tout appel d’outil qui exporte des métadonnées patrimoniales, même lorsque l’appel réussit. Un ministère peut exiger que l’escalade d’usage de jetons dans un flux en langue locale soit visible pour un responsable de sécurité local plutôt que enfouie dans une console étrangère.</p>
+
+                <p>La souveraineté intellectuelle apparaît ici comme le droit de définir ce qui compte comme un écart. Un modèle importé peut achever un ticket en wolof, en arabe, en amharique ou en français et avoir néanmoins violé une règle locale que la plateforme n’a jamais encodée. La couche témoin est le lieu où ces règles deviennent opérationnelles : comme texte de politique, comme champs de trace, comme constats et comme preuves exportables. Sans cette couche, les institutions africaines héritent de métriques d’achèvement et restent aveugles aux sessions qui avaient l’air correctes.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>Si les agents continuent d’agir à l’intérieur des tickets, le capital devrait examiner l’infrastructure capable de reconstituer une session après que la réponse a déjà été donnée :</p>
+
+                <ul>
+                    <li><strong>Auditeurs de session hors bande :</strong> services qui lisent traces, appels d’outils et flux d’exécution sans ajouter de latence au chemin en direct, puis émettent des constats qu’un responsable de sécurité peut trier.</li>
+                    <li><strong>Moteurs de politiques d’intention :</strong> systèmes qui jugent un appel d’outil proposé à l’aune de l’intention énoncée et des règles institutionnelles avant l’exécution, et conservent la justification.</li>
+                    <li><strong>Schémas de traces qui survivent au transfert :</strong> dossiers qui portent l’identité de session, l’intention, l’usage des jetons et les constats à travers A2A, MCP, la traduction et l’escalade humaine.</li>
+                    <li><strong>Registres de constats :</strong> stores qui associent les anomalies locales à des taxonomies partagées, conservent les preuves, attribuent des responsables et restent lisibles après un changement de modèle ou de fournisseur.</li>
+                    <li><strong>Boucles de réparation :</strong> produits capables de suspendre un agent, de révoquer un jeton, de transmettre une session à une personne, de réparer un dossier et de rouvrir un ticket clôturé avec les traces originales jointes.</li>
+                </ul>
+
+                <p>La question de souscription est concrète : un réviseur indépendant peut-il reconstituer ce que l’agent a fait après qu’un ticket s’est clôturé avec une réponse réussie ? Les mesures utiles comprennent le délai entre la fin de session et le constat, le taux de silence trompeur sur des sessions ensuite avérées nuisibles, la survie des champs d’intention et de jeton lors des transferts, la part des constats associés à une classe de risque nommée, le délai moyen de revue humaine, la latence de révocation de jeton, la couverture des politiques en langues locales et le pourcentage de tickets clôturés dont les traces restent complètes.</p>
+
+                <p>Cet objet commercial se distingue des couches voisines de l’archive. Un dossier de comportement de modèle consigne des sorties inattendues pour que l’institution apprenne. Un reçu consigne ce qu’un échange a signifié après le franchissement d’une frontière. Un système de permissions décide ce qu’une machine peut toucher. Un protocole définit la manière dont les agents parlent. Le témoin de session reconstitue une interaction achevée qui avait l’air compétente. Son unité de valeur est un constat qui arrive à temps pour compter, sans siéger sur le chemin critique de l’usager.</p>
+
+                <h2>Commencer par un flux qui clôture déjà des tickets</h2>
+
+                <p>Une institution peut commencer sans attendre une superposition à l’échelle de la plateforme :</p>
+
+                <ol>
+                    <li>Choisir un flux qui laisse déjà un agent agir : remboursements, mises à jour de dossiers, planification, achats ou correspondance citoyenne.</li>
+                    <li>Écrire les règles d’intention dans la langue de l’institution : ce que l’usager peut demander, quels outils peuvent s’exécuter, quelles identités peuvent être utilisées et quelles actions exigent une personne.</li>
+                    <li>Émettre des traces pour chaque appel d’outil, usage de jeton et transfert, puis les stocker sous un identifiant de session qui survit au ticket.</li>
+                    <li>Faire tourner un second processus à côté du chemin en direct, qui note la session achevée au regard de ces règles et d’un petit ensemble de risques nommés.</li>
+                    <li>Donner à un réviseur la demande originale, les actions proposées, les traces, le constat et un moyen de rouvrir le ticket ou de révoquer la crédentielle.</li>
+                </ol>
+
+                <p>Un agent capable continuera de produire des réponses qui ont l’air achevées. Le travail de l’institution est de garder un témoin sur la session après que la syntaxe a déjà réussi. Le mal qui a utilisé une forme valide appartient encore au dossier, et le dossier doit arriver sans faire attendre la requête vivante.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/" target="_blank" rel="noopener">Google Developers Blog : « Agent Anomaly Detection, now in Private Preview on the Gemini Enterprise Agent Platform » (16 septembre 2026 ; description : une couche de surveillance hors bande qui lit les journaux et les traces OpenTelemetry, signale des anomalies comportementales sans latence ajoutée et associe les constats à des risques du Top 10 OWASP des applications agentiques). Signal de direction produit en prévisualisation privée, non une preuve indépendante de qualité de détection.</a></li>
+                    <li><a href="https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/" target="_blank" rel="noopener">Google Developers Blog : « Build zero-trust AI agents that judge intent, not just syntax » (15 septembre 2026 ; description : gouvernance à l’exécution sur la Gemini Enterprise Agent Platform avec Model Armor, des politiques sémantiques qui évaluent les appels d’outils proposés au regard de l’intention de l’usager, et une détection d’anomalies avec réparation en boucle fermée). Récit technique du fournisseur, non une affirmation de sécurité mesurée.</a></li>
+                    <li><a href="https://www.nist.gov/news-events/news/2026/09/nist-finalizes-guidelines-protecting-online-identity-and-access-tokens" target="_blank" rel="noopener">NIST : « NIST Finalizes Guidelines on Protecting Online Identity and Access Tokens From Misuse » (15 septembre 2026 ; NIST IR 8587, Protecting Tokens and Assertions from Forgery, Theft, and Misuse). Lignes directrices institutionnelles sur la sécurité des jetons ; elles ne spécifient pas elles-mêmes des détecteurs de session d’agent.</a></li>
+                    <li><a href="https://a2a-protocol.org/latest/" target="_blank" rel="noopener">Documentation du protocole A2A (page accessible consultée le 22 septembre 2026 ; description : une norme ouverte de communication et d’interopérabilité entre applications agentiques opaques, complémentaire de l’accès aux outils via MCP). Utilisée ici comme substrat de transfert qu’un témoin de session doit suivre, non comme preuve que les déploiements actuels conservent les traces.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>September 22, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
