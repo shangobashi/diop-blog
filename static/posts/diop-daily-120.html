@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Workcell Carries the Cost — Diop Research</title>
+    <meta name="description" content="AI adoption becomes durable when a model, its tools, evidence, approvals, and cost envelope operate as one governed workcell. The investable surface is the infrastructure that measures repeatable work across capability, cost, locality, and recovery."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry120">Diop Daily #120 — September 2026</div>
+                <div class="article__meta-line">
+                    <time>September 23, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>AI workcells · model economics · institutional capacity</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Workcell Carries the Cost</h1>
+
+                <p>A model can become cheaper, faster, and more capable while an institution’s AI bill becomes harder to understand. The missing object is the workcell: a bounded operating unit in which a model, its tools, its evidence, its approvals, its memory, and its cost envelope are designed to produce one repeatable class of work. The workcell is where intelligence becomes an accountable production system.</p>
+
+                <p>OpenAI’s September 22 News RSS described GPT-6 Sol and Luna as models with different balances of capability and cost. On the same day, an OpenAI customer story reported that Parallel used GPT-6 Astra to research and synthesize labor-market data in half the time and at half the cost of its prior models. These vendor-published signals do not establish general productivity or adoption; their narrower value is to show the market question moving from “which model is strongest?” toward “which combination of model, workflow, and control produces reliable work inside a real budget?”</p>
+
+                <blockquote>
+                    <p>The unit that deserves a budget is the smallest system that can finish, explain, and recover its work.</p>
+                </blockquote>
+
+                <h2>A model is an ingredient</h2>
+
+                <p>Model releases encourage comparison at the level of intelligence: benchmark scores, context windows, modality, speed, and price. Those attributes matter at selection time. They do not describe the institution’s operating result. A research workcell may use one model for retrieval planning, another for extraction, a deterministic parser for dates, a human reviewer for ambiguous evidence, and a storage layer that preserves the source record. Its output depends on the arrangement, not on a model in isolation.</p>
+
+                <p>Higgsfield’s September 21 OpenAI customer story describes a creative company using GPT-6 Astra to bring new video features to market in a day and to make video-ad creation easier for small businesses. The claim is a customer story, so it should be read as directional evidence rather than an independently measured rate. Its architectural lesson is still clear: the customer value appears in a production loop that joins generation, product integration, distribution, and review. The model is one component in that loop.</p>
+
+                <p>This distinction changes the way a laboratory should read a new model announcement. Ask where the model enters the workcell, what it is allowed to decide, which records it may consult, how its output is checked, and what happens when the answer is wrong. A cheaper token price may lower one line of the ledger while increasing review time, storage, translation, or recovery work. A more capable model may reduce tool calls in one workflow and widen the cost of a mistake in another.</p>
+
+                <h2>What a workcell contains</h2>
+
+                <p>A workcell has a boundary that a model catalogue cannot provide. Before an institution calls a system productive, it should be able to name the following:</p>
+
+                <ul>
+                    <li><strong>Purpose:</strong> the class of work the cell is authorized to complete, such as a research brief, a customer response, a design variation, or a procurement comparison.</li>
+                    <li><strong>Inputs:</strong> the records, language context, permissions, tools, and source standards that may enter the run.</li>
+                    <li><strong>Decision rights:</strong> which steps the machine may perform, which require evidence, and which require a named person.</li>
+                    <li><strong>Output contract:</strong> the format, claims, citations, rights, and acceptance conditions that make the result usable elsewhere.</li>
+                    <li><strong>Cost envelope:</strong> the permitted spend on inference, retrieval, tools, human review, storage, and recovery for one completed unit.</li>
+                    <li><strong>Failure path:</strong> the record, owner, escalation, rollback, and retry conditions that apply when the workcell cannot complete its assignment.</li>
+                </ul>
+
+                <p>These fields turn a vague AI feature into something an institution can operate. They also preserve a distinction between capability and authority. A model may be able to generate a contract clause, translate a health notice, or approve a refund. The workcell decides whether that capability belongs in the path, under which evidence standard, and with whose authority.</p>
+
+                <h2>Cost is a control surface</h2>
+
+                <p>The first AI budgets were often assembled from model prices and estimated usage. A workcell requires a different ledger. The relevant unit is a completed, accepted, and recoverable output. Its cost includes the machine calls that produced it, the records that made it reliable, the human attention that resolved uncertainty, and the infrastructure that keeps the result available for later use.</p>
+
+                <p>This makes model choice a control decision rather than a permanent allegiance. A workcell can route a simple classification to a small model, reserve a more capable model for ambiguity, use a local model when language or data locality requires it, and pause when the evidence budget is exhausted. The routing policy belongs to the institution because the institution bears the consequence of the answer. Cost-aware routing without an acceptance rule merely produces cheaper uncertainty.</p>
+
+                <p>NIST’s AI Risk Management Framework offers a useful vocabulary for this discipline through Govern, Map, Measure, and Manage. Govern names the owner of the workcell. Map identifies its data, people, tools, harms, and dependencies. Measure compares quality, cost, latency, locality, and failure across real cases. Manage changes the model, policy, reviewer route, or cost envelope when the record shows that the current cell is insufficient. The framework is governance guidance, not evidence that any product meets it.</p>
+
+                <h2>The African institution needs its own workcells</h2>
+
+                <p>African institutions will often assemble AI capacity from external models, local data, translators, mobile services, payment rails, archives, and human expertise. A workcell gives those parts a local constitutional boundary. A university can define a research cell that preserves the source language and credits the archive. A cooperative can define a commerce cell that respects local payment failure and requires a person when a transaction crosses a member’s authority. A publisher can define a multilingual editorial cell that keeps the original text, translation, rights, and correction history together.</p>
+
+                <p>This is a sovereignty question because the external model does not define the institution’s complete operating reality. A model may handle a language while missing the social meaning of a title, kinship term, customary authority, or payment instruction. Local teams need to define the cell’s acceptance criteria, vocabulary, escalation map, and export format. They also need the ability to replace the model while retaining the workcell’s policy, records, evaluation set, and institutional memory.</p>
+
+                <p>Such a design avoids two weak choices. One is to import a finished workflow whose assumptions cannot be inspected. The other is to build a new foundation model before the institution has specified the work it needs to govern. A local workcell starts with the institution’s actual obligations, then selects the least dependent combination of models and tools that can meet them.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>If workcells become the unit through which institutions buy and measure AI, capital should examine the rails that make a cell repeatable:</p>
+
+                <ul>
+                    <li><strong>Workcell control planes:</strong> systems that package model routing, tools, policies, approvals, budgets, and recovery around a defined class of work.</li>
+                    <li><strong>Cost-and-quality ledgers:</strong> measurement layers that attribute inference, retrieval, human review, storage, latency, and rework to accepted outputs.</li>
+                    <li><strong>Evaluation sets owned by institutions:</strong> local-language, domain-specific cases that test meaning, evidence, refusal, escalation, and correction across model changes.</li>
+                    <li><strong>Portable workcell specifications:</strong> exportable policy, prompts, schemas, source requirements, permissions, and test cases that survive a provider change.</li>
+                    <li><strong>Recovery and replay services:</strong> infrastructure that reconstructs a failed run, identifies the last valid state, and resumes work without silently duplicating or losing institutional action.</li>
+                </ul>
+
+                <p>The underwriting question is specific: can the provider show the cost and quality of a completed workcell, rather than a token bill and a demonstration? Useful measures include accepted outputs per dollar, review minutes per output, cost variance, model-switch recovery time, evidence completeness, local-language agreement, rework rate, and the percentage of the cell that an institution can export and rerun independently.</p>
+
+                <p>The workcell is adjacent to several familiar layers without replacing them. A work packet describes a unit a buyer can request. A workflow graph describes how responsibility moves. A model catalogue describes available intelligence. A session witness reconstructs what happened after the machine acted. The workcell joins purpose, execution, economics, evidence, and recovery into one operating unit. Its value lies in making those parts accountable to one result.</p>
+
+                <h2>Build one cell before building a fleet</h2>
+
+                <p>An institution can begin with a workflow that already consumes time and produces a visible record:</p>
+
+                <ol>
+                    <li>Choose one output whose acceptance can be described in plain language and measured with real examples.</li>
+                    <li>Write the cell’s purpose, allowed inputs, decision rights, evidence requirements, cost envelope, and failure owner.</li>
+                    <li>Run the same cases through two model configurations, then measure quality, latency, cost, review effort, and recovery instead of comparing model names.</li>
+                    <li>Preserve the source records, decisions, output versions, and reviewer corrections under a durable workcell identifier.</li>
+                    <li>Export the policy and evaluation set, then prove that a second provider or local runtime can reproduce the cell’s obligations.</li>
+                </ol>
+
+                <p>The workcell carries the cost because it carries the consequence. When a model improves, the institution should be able to see which cells become cheaper, which become safer, and which require a different boundary. That is how AI capability becomes institutional capacity: through small operating units that can finish work, account for the resources used, preserve the evidence, and leave the institution free to change its tools.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Introducing GPT-6 Sol and Luna” (September 22, 2026; linked article: <em>https://openai.com/index/introducing-gpt-6-sol-and-luna</em>; description: two models with different balances of capability and cost). Vendor-published product signal, not independent evidence of comparative performance.</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Parallel cut research time and cost in half with GPT‑6 Astra” (September 22, 2026; linked article: <em>https://openai.com/index/parallel-cuts-time-and-cost-with-astra</em>; description: Parallel used agents to research and synthesize labor-market data in half the time and at half the cost versus prior models). Vendor-published customer evidence, not a general productivity statistic.</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">OpenAI News RSS: “Higgsfield AI ships new video features in a day with GPT-6 Astra” (September 21, 2026; linked article: <em>https://openai.com/index/higgsfield-from-prompt-to-production-with-astra</em>; description: Higgsfield used GPT-6 Astra for video-ad creation and new creative tools). Vendor-published customer story, used here as a production-loop signal.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog: “How A2A is Building a World of Collaborative Agents” (June 18, 2026; accessible page; description: A2A enables secure autonomous agent handoffs and scalable workflows). Vendor technical description, used here for handoff primitives rather than a claim of universal adoption.</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology: “AI Risk Management Framework” (published July 12, 2021; accessible page; functions: Govern, Map, Measure, and Manage). Used as a governance vocabulary, not as proof of product compliance.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La cellule de travail porte le coût</h1>
+
+                <p>Un modèle peut devenir moins cher, plus rapide et plus puissant tandis que la facture d’IA d’une institution devient plus difficile à comprendre. L’objet manquant est la cellule de travail : une unité opérationnelle délimitée dans laquelle un modèle, ses outils, ses preuves, ses validations, sa mémoire et son enveloppe de coût sont conçus pour produire une classe de travail répétable. La cellule est le lieu où l’intelligence devient un système de production responsable.</p>
+
+                <p>Le flux RSS d’OpenAI a décrit le 22 septembre GPT-6 Sol et Luna comme des modèles offrant des équilibres différents entre capacité et coût. Le même jour, un récit client d’OpenAI a rapporté que Parallel utilisait GPT-6 Astra pour rechercher et synthétiser des données sur le marché du travail en deux fois moins de temps et à moitié du coût de ses modèles précédents. Ces signaux publiés par le fournisseur n’établissent pas une productivité ou une adoption générales ; leur valeur plus étroite est de montrer que la question du marché se déplace de « quel modèle est le plus puissant ? » vers « quelle combinaison de modèle, de workflow et de contrôle produit un travail fiable dans un budget réel ? »</p>
+
+                <blockquote>
+                    <p>L’unité qui mérite un budget est le plus petit système capable d’achever, d’expliquer et de reprendre son travail.</p>
+                </blockquote>
+
+                <h2>Un modèle est un ingrédient</h2>
+
+                <p>Les sorties de modèles encouragent la comparaison au niveau de l’intelligence : scores de référence, fenêtres de contexte, modalités, vitesse et prix. Ces attributs comptent au moment de la sélection. Ils ne décrivent pas le résultat opérationnel de l’institution. Une cellule de recherche peut utiliser un modèle pour planifier la récupération, un autre pour l’extraction, un parseur déterministe pour les dates, une personne pour examiner les preuves ambiguës et une couche de stockage qui conserve le dossier source. Son résultat dépend de l’agencement, et non d’un modèle isolé.</p>
+
+                <p>Le récit client publié par OpenAI le 21 septembre décrit une entreprise créative utilisant GPT-6 Astra pour lancer de nouvelles fonctions vidéo en une journée et rendre la création de publicités vidéo plus accessible aux petites entreprises. Il s’agit d’un récit client ; il doit donc être lu comme une indication de direction et non comme un taux mesuré indépendamment. Sa leçon architecturale reste nette : la valeur apparaît dans une boucle de production qui relie génération, intégration produit, distribution et revue. Le modèle n’est qu’un composant de cette boucle.</p>
+
+                <p>Cette distinction change la manière dont un laboratoire doit lire l’annonce d’un nouveau modèle. Il faut demander où le modèle entre dans la cellule, ce qu’il est autorisé à décider, quels dossiers il peut consulter, comment sa sortie est vérifiée et ce qui arrive lorsque la réponse est fausse. Un prix par token plus bas peut réduire une ligne du grand livre tout en augmentant le temps de revue, le stockage, la traduction ou le travail de reprise. Un modèle plus puissant peut réduire les appels d’outils dans un workflow et élargir le coût d’une erreur dans un autre.</p>
+
+                <h2>Ce que contient une cellule de travail</h2>
+
+                <p>Une cellule possède une frontière qu’un catalogue de modèles ne peut pas fournir. Avant de qualifier un système de productif, une institution devrait pouvoir nommer les éléments suivants :</p>
+
+                <ul>
+                    <li><strong>Finalité :</strong> la classe de travail que la cellule est autorisée à achever, comme une note de recherche, une réponse client, une variante de design ou une comparaison d’achats.</li>
+                    <li><strong>Entrées :</strong> dossiers, contexte linguistique, permissions, outils et normes de source qui peuvent entrer dans l’exécution.</li>
+                    <li><strong>Droits de décision :</strong> étapes que la machine peut effectuer, étapes qui exigent une preuve et étapes qui exigent une personne nommée.</li>
+                    <li><strong>Contrat de sortie :</strong> format, affirmations, citations, droits et conditions d’acceptation qui rendent le résultat réutilisable ailleurs.</li>
+                    <li><strong>Enveloppe de coût :</strong> dépense autorisée pour inférence, récupération, outils, revue humaine, stockage et reprise d’une unité achevée.</li>
+                    <li><strong>Chemin d’échec :</strong> dossier, responsable, escalade, retour arrière et conditions de nouvelle tentative lorsque la cellule ne peut pas remplir sa mission.</li>
+                </ul>
+
+                <p>Ces champs transforment une fonction d’IA vague en objet qu’une institution peut exploiter. Ils préservent aussi la distinction entre capacité et autorité. Un modèle peut être capable de produire une clause contractuelle, de traduire une notice de santé ou d’approuver un remboursement. La cellule décide si cette capacité appartient au chemin, selon quelle norme de preuve et avec quelle autorité.</p>
+
+                <h2>Le coût est une surface de contrôle</h2>
+
+                <p>Les premiers budgets d’IA étaient souvent construits à partir des prix des modèles et d’un usage estimé. Une cellule de travail exige un grand livre différent. L’unité pertinente est une sortie achevée, acceptée et récupérable. Son coût comprend les appels machine qui l’ont produite, les dossiers qui l’ont rendue fiable, l’attention humaine qui a résolu l’incertitude et l’infrastructure qui conserve le résultat pour un usage ultérieur.</p>
+
+                <p>Le choix du modèle devient ainsi une décision de contrôle plutôt qu’une fidélité permanente. Une cellule peut router une classification simple vers un petit modèle, réserver un modèle plus puissant à l’ambiguïté, utiliser un modèle local lorsque la langue ou la localisation des données l’exige et s’arrêter lorsque le budget de preuve est épuisé. La politique de routage appartient à l’institution, car l’institution porte les conséquences de la réponse. Un routage sensible au coût sans règle d’acceptation ne produit qu’une incertitude moins chère.</p>
+
+                <p>Le cadre de gestion des risques liés à l’IA du NIST offre un vocabulaire utile avec Govern, Map, Measure et Manage. Govern nomme le responsable de la cellule. Map identifie ses données, ses personnes, ses outils, ses risques et ses dépendances. Measure compare qualité, coût, latence, localisation et échec sur des cas réels. Manage modifie le modèle, la politique, le chemin de revue ou l’enveloppe de coût lorsque le dossier montre que la cellule actuelle est insuffisante. Le cadre est une orientation de gouvernance, et non une preuve qu’un produit le respecte.</p>
+
+                <h2>L’institution africaine a besoin de ses propres cellules</h2>
+
+                <p>Les institutions africaines assembleront souvent une capacité d’IA à partir de modèles externes, de données locales, de traducteurs, de services mobiles, de rails de paiement, d’archives et d’expertise humaine. Une cellule donne à ces éléments une frontière constitutionnelle locale. Une université peut définir une cellule de recherche qui conserve la langue source et crédite l’archive. Une coopérative peut définir une cellule commerciale qui respecte l’échec d’un paiement local et exige une personne lorsqu’une transaction dépasse l’autorité d’un membre. Un éditeur peut définir une cellule éditoriale multilingue qui conserve ensemble le texte original, la traduction, les droits et l’historique des corrections.</p>
+
+                <p>Il s’agit d’une question de souveraineté, car le modèle externe ne définit pas toute la réalité opérationnelle de l’institution. Un modèle peut traiter une langue tout en manquant le sens social d’un titre, d’un terme de parenté, d’une autorité coutumière ou d’une instruction de paiement. Les équipes locales doivent définir les critères d’acceptation de la cellule, son vocabulaire, sa carte d’escalade et son format d’exportation. Elles doivent aussi pouvoir remplacer le modèle tout en conservant la politique, les dossiers, le jeu d’évaluation et la mémoire institutionnelle de la cellule.</p>
+
+                <p>Cette conception évite deux choix faibles. Le premier consiste à importer un workflow achevé dont les hypothèses ne peuvent pas être inspectées. Le second consiste à construire un nouveau modèle fondamental avant d’avoir défini le travail que l’institution doit gouverner. Une cellule locale commence par les obligations réelles de l’institution, puis sélectionne la combinaison de modèles et d’outils la moins dépendante qui puisse les satisfaire.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>Si les cellules de travail deviennent l’unité par laquelle les institutions achètent et mesurent l’IA, le capital devrait examiner les rails qui rendent une cellule répétable :</p>
+
+                <ul>
+                    <li><strong>Plans de contrôle des cellules :</strong> systèmes qui regroupent routage de modèles, outils, politiques, validations, budgets et reprise autour d’une classe de travail définie.</li>
+                    <li><strong>Grands livres coût-qualité :</strong> couches de mesure qui attribuent inférence, récupération, revue humaine, stockage, latence et reprise aux sorties acceptées.</li>
+                    <li><strong>Jeux d’évaluation détenus par les institutions :</strong> cas en langues locales et propres aux domaines qui testent sens, preuves, refus, escalade et correction lors des changements de modèle.</li>
+                    <li><strong>Spécifications de cellules portables :</strong> politiques, prompts, schémas, exigences de source, permissions et cas de test exportables qui survivent au changement de fournisseur.</li>
+                    <li><strong>Services de reprise et de rejeu :</strong> infrastructure qui reconstitue une exécution échouée, identifie le dernier état valide et reprend le travail sans dupliquer ni perdre silencieusement l’action institutionnelle.</li>
+                </ul>
+
+                <p>La question de souscription est précise : le fournisseur peut-il montrer le coût et la qualité d’une cellule achevée plutôt qu’une facture de tokens et une démonstration ? Les mesures utiles comprennent les sorties acceptées par dollar, les minutes de revue par sortie, la variance du coût, le temps de reprise après changement de modèle, la complétude des preuves, l’accord dans les langues locales, le taux de reprise et la part de la cellule qu’une institution peut exporter et rejouer indépendamment.</p>
+
+                <p>La cellule est voisine de plusieurs couches connues sans les remplacer. Un paquet de travail décrit une unité qu’un acheteur peut demander. Un graphe de workflow décrit le déplacement de la responsabilité. Un catalogue de modèles décrit l’intelligence disponible. Un témoin de session reconstitue ce qui s’est passé après l’action de la machine. La cellule réunit finalité, exécution, économie, preuves et reprise en une unité opérationnelle. Sa valeur vient de la responsabilité de ces éléments envers un même résultat.</p>
+
+                <h2>Construire une cellule avant une flotte</h2>
+
+                <p>Une institution peut commencer par un workflow qui consomme déjà du temps et produit un dossier visible :</p>
+
+                <ol>
+                    <li>Choisir une sortie dont l’acceptation peut être décrite en langage simple et mesurée avec des exemples réels.</li>
+                    <li>Écrire la finalité de la cellule, ses entrées autorisées, ses droits de décision, ses exigences de preuve, son enveloppe de coût et son responsable d’échec.</li>
+                    <li>Faire passer les mêmes cas dans deux configurations de modèles, puis mesurer qualité, latence, coût, effort de revue et reprise au lieu de comparer des noms de modèles.</li>
+                    <li>Conserver dossiers sources, décisions, versions de sortie et corrections des réviseurs sous un identifiant durable de cellule.</li>
+                    <li>Exporter la politique et le jeu d’évaluation, puis prouver qu’un second fournisseur ou un runtime local peut reproduire les obligations de la cellule.</li>
+                </ol>
+
+                <p>La cellule porte le coût parce qu’elle porte la conséquence. Lorsqu’un modèle progresse, l’institution doit pouvoir voir quelles cellules deviennent moins chères, lesquelles deviennent plus sûres et lesquelles exigent une autre frontière. C’est ainsi que la capacité de l’IA devient une capacité institutionnelle : par de petites unités opérationnelles capables d’achever le travail, de rendre compte des ressources utilisées, de conserver les preuves et de laisser à l’institution la liberté de changer ses outils.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « Introducing GPT-6 Sol and Luna » (22 septembre 2026 ; article lié : <em>https://openai.com/index/introducing-gpt-6-sol-and-luna</em> ; description : deux modèles présentant des équilibres différents entre capacité et coût). Signal produit publié par le fournisseur, et non preuve indépendante de performance comparative.</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « Parallel cut research time and cost in half with GPT‑6 Astra » (22 septembre 2026 ; article lié : <em>https://openai.com/index/parallel-cuts-time-and-cost-with-astra</em> ; description : Parallel a utilisé des agents pour rechercher et synthétiser des données du marché du travail en deux fois moins de temps et à moitié du coût des modèles précédents). Preuve client publiée par le fournisseur, et non statistique générale de productivité.</a></li>
+                    <li><a href="https://openai.com/news/rss.xml" target="_blank" rel="noopener">Flux RSS d’OpenAI : « Higgsfield AI ships new video features in a day with GPT-6 Astra » (21 septembre 2026 ; article lié : <em>https://openai.com/index/higgsfield-from-prompt-to-production-with-astra</em> ; description : Higgsfield a utilisé GPT-6 Astra pour la création de publicités vidéo et de nouveaux outils créatifs). Récit client publié par le fournisseur, utilisé ici comme signal de boucle de production.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog : « How A2A is Building a World of Collaborative Agents » (18 juin 2026 ; page accessible ; description : A2A permet des transferts autonomes sécurisés entre agents et des workflows évolutifs). Description technique du fournisseur, utilisée pour les primitives de transfert et non comme preuve d’une adoption universelle.</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology : « AI Risk Management Framework » (publié le 12 juillet 2021 ; page accessible ; fonctions : Govern, Map, Measure et Manage). Utilisé comme vocabulaire de gouvernance, et non comme preuve de conformité d’un produit.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="article__footer">
+        <p class="article__back"><a href="../index.html" class="nav__link" data-i18n="article.back">Back to Journal</a></p>
+        <div class="article__meta-footer">
+            <span data-i18n="article.published">Research Journal</span>
+            <span>·</span>
+            <time>September 23, 2026</time>
+            <span>·</span>
+            <span data-i18n="article.author">Diop Research</span>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

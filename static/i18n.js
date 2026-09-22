@@ -145,6 +145,7 @@
         'article.entry117':     { en: 'Diop Daily #117 — September 2026', fr: 'Diop Quotidien n°117 — Septembre 2026' },
         'article.entry119':     { en: 'Diop Daily #119 — September 2026', fr: 'Diop Quotidien n°119 — Septembre 2026' },
         'article.entry118':     { en: 'Diop Daily #118 — September 2026', fr: 'Diop Quotidien n°118 — Septembre 2026' },
+        'article.entry120':     { en: 'Diop Daily #120 — September 2026', fr: 'Diop Quotidien n°120 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -162,6 +163,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-120': {
+        title: {
+            en: "The Workcell Carries the Cost",
+            fr: "La cellule de travail porte le coût"
+        },
+        excerpt: {
+            en: "AI adoption becomes durable when a model, its tools, evidence, approvals, and cost envelope operate as one governed workcell. The investable surface is the infrastructure that measures repeatable work across capability, cost, locality, and recovery.",
+            fr: "L’adoption de l’IA devient durable lorsqu’un modèle, ses outils, ses preuves, ses validations et son enveloppe de coût fonctionnent comme une seule cellule gouvernée. La surface d’investissement est l’infrastructure qui mesure le travail répétable selon capacité, coût, localisation et reprise."
+        }
+    },
     'diop-daily-119': {
         title: {
             en: "The Harm Used a Valid Syntax",
