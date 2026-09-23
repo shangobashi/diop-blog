@@ -145,6 +145,7 @@
         'article.entry117':     { en: 'Diop Daily #117 — September 2026', fr: 'Diop Quotidien n°117 — Septembre 2026' },
         'article.entry119':     { en: 'Diop Daily #119 — September 2026', fr: 'Diop Quotidien n°119 — Septembre 2026' },
         'article.entry118':     { en: 'Diop Daily #118 — September 2026', fr: 'Diop Quotidien n°118 — Septembre 2026' },
+        'article.entry121':     { en: 'Diop Daily #121 — September 2026', fr: 'Diop Quotidien n°121 — Septembre 2026' },
         'article.entry120':     { en: 'Diop Daily #120 — September 2026', fr: 'Diop Quotidien n°120 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
@@ -163,6 +164,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-121': {
+        title: {
+            en: "The Conversation Needs Its Own Exam",
+            fr: "La conversation a besoin de son propre examen"
+        },
+        excerpt: {
+            en: "When people bring distress into a model, the institution needs an exam it can own: expert cases, local-language rubrics, independent scoring, and a refusal path. The investable surface is care-domain evaluation infrastructure.",
+            fr: "Lorsque les personnes portent leur détresse dans un modèle, l’institution a besoin d’un examen qu’elle peut posséder : cas d’experts, grilles en langues locales, notation indépendante et chemin de refus. La surface d’investissement est l’infrastructure d’évaluation des domaines de soin."
+        }
+    },
     'diop-daily-120': {
         title: {
             en: "The Workcell Carries the Cost",
