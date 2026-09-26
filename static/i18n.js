@@ -146,8 +146,7 @@
         'article.entry119':     { en: 'Diop Daily #119 — September 2026', fr: 'Diop Quotidien n°119 — Septembre 2026' },
         'article.entry118':     { en: 'Diop Daily #118 — September 2026', fr: 'Diop Quotidien n°118 — Septembre 2026' },
         'article.entry121':     { en: 'Diop Daily #121 — September 2026', fr: 'Diop Quotidien n°121 — Septembre 2026' },
-        'article.entry120':     { en: 'Diop Daily #120 — September 2026', fr: 'Diop Quotidien n°120 — Septembre 2026' },        'article.entry124':     { en: 'Diop Daily #124 — September 2026', fr: 'Diop Quotidien n°124 — Septembre 2026' },        'article.entry123':     { en: 'Diop Daily #123 — September 2026', fr: 'Diop Quotidien n°123 — Septembre 2026' },
-        'article.entry122':     { en: 'Diop Daily #122 — September 2026', fr: 'Diop Quotidien n°122 — Septembre 2026' },
+        'article.entry120':     { en: 'Diop Daily #120 — September 2026', fr: 'Diop Quotidien n°120 — Septembre 2026' },        'article.entry122':     { en: 'Diop Daily #122 — September 2026', fr: 'Diop Quotidien n°122 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -165,16 +164,6 @@
     };
 
     var postTranslations = {
-    'diop-daily-124': {
-        title: {
-            en: "The Evaluation Room Is a Sovereignty Layer",
-            fr: "La salle d'évaluation est une couche de souveraineté"
-        },
-        excerpt: {
-            en: "When a frontier model crosses the Critical cybersecurity threshold, the evaluation environment itself becomes strategic infrastructure. The investable surface is evaluation sovereignty: independent assessments, preserved incident evidence, and institutional release authority that does not outsource judgment to a vendor's internal safety group.",
-            fr: "Lorsqu'un modèle de pointe franchit le seuil Critique de cybersécurité, l'environnement d'évaluation lui-même devient une infrastructure stratégique. La surface d'investissement est la souveraineté d'évaluation : évaluations indépendantes, preuves d'incidents conservées et autorité institutionnelle de publication qui ne délègue pas le jugement au groupe de sécurité interne du fournisseur."
-        }
-    },
     'diop-daily-123': {
         title: {
             en: "The Fallback Chain Is a Treaty, Not a Backup",
