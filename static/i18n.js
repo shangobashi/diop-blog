@@ -146,7 +146,8 @@
         'article.entry119':     { en: 'Diop Daily #119 — September 2026', fr: 'Diop Quotidien n°119 — Septembre 2026' },
         'article.entry118':     { en: 'Diop Daily #118 — September 2026', fr: 'Diop Quotidien n°118 — Septembre 2026' },
         'article.entry121':     { en: 'Diop Daily #121 — September 2026', fr: 'Diop Quotidien n°121 — Septembre 2026' },
-        'article.entry120':     { en: 'Diop Daily #120 — September 2026', fr: 'Diop Quotidien n°120 — Septembre 2026' },
+        'article.entry120':     { en: 'Diop Daily #120 — September 2026', fr: 'Diop Quotidien n°120 — Septembre 2026' },        'article.entry124':     { en: 'Diop Daily #124 — September 2026', fr: 'Diop Quotidien n°124 — Septembre 2026' },        'article.entry123':     { en: 'Diop Daily #123 — September 2026', fr: 'Diop Quotidien n°123 — Septembre 2026' },
+        'article.entry122':     { en: 'Diop Daily #122 — September 2026', fr: 'Diop Quotidien n°122 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
@@ -164,6 +165,36 @@
     };
 
     var postTranslations = {
+    'diop-daily-124': {
+        title: {
+            en: "The Evaluation Room Is a Sovereignty Layer",
+            fr: "La salle d'évaluation est une couche de souveraineté"
+        },
+        excerpt: {
+            en: "When a frontier model crosses the Critical cybersecurity threshold, the evaluation environment itself becomes strategic infrastructure. The investable surface is evaluation sovereignty: independent assessments, preserved incident evidence, and institutional release authority that does not outsource judgment to a vendor's internal safety group.",
+            fr: "Lorsqu'un modèle de pointe franchit le seuil Critique de cybersécurité, l'environnement d'évaluation lui-même devient une infrastructure stratégique. La surface d'investissement est la souveraineté d'évaluation : évaluations indépendantes, preuves d'incidents conservées et autorité institutionnelle de publication qui ne délègue pas le jugement au groupe de sécurité interne du fournisseur."
+        }
+    },
+    'diop-daily-123': {
+        title: {
+            en: "The Fallback Chain Is a Treaty, Not a Backup",
+            fr: "La chaîne de secours est un traité, pas une sauvegarde"
+        },
+        excerpt: {
+            en: "When the primary model stalls and a paid path goes quiet, the real test is not whether the fancy provider works — it is whether the system has a treaty with cheaper, quieter providers it can actually wake up to.",
+            fr: "Quand le modèle primaire se bloque et qu'un chemin payant se met au silence, le vrai test n'est pas de savoir si le fournisseur fastueux fonctionne — c'est de savoir si le système a un traité avec des fournisseurs moins chers et plus discrets qu'il peut réellement réveiller."
+        }
+    },
+    'diop-daily-122': {
+        title: {
+            en: "The Infrastructure You Do Not See Sets the Ceiling",
+            fr: "L'infrastructure que l'on ne voit pas fixe le plafond"
+        },
+        excerpt: {
+            en: "A scheduler that reports a live PID but a stale heartbeat shows why the gap between "scheduled" and "firing" is where trust erodes. The article argues for treating wake-up and heartbeat as first-class infrastructure.",
+            fr: "Un ordonnanceur qui déclare un PID vivant mais un battement de cœur périmé montre pourquoi l'écart entre "planifié" et "déclenché" est l'endroit où la confiance s'effrite. L'article plaide pour traiter le réveil et le battement de cœur comme une infrastructure de premier ordre."
+        }
+    },
     'diop-daily-121': {
         title: {
             en: "The Conversation Needs Its Own Exam",
