@@ -149,6 +149,7 @@
         'article.entry120':     { en: 'Diop Daily #120 — September 2026', fr: 'Diop Quotidien n°120 — Septembre 2026' },
         'article.entry122':     { en: 'Diop Daily #122 — September 2026', fr: 'Diop Quotidien n°122 — Septembre 2026' },
         'article.entry123':     { en: 'Diop Daily #123 — September 2026', fr: 'Diop Quotidien n°123 — Septembre 2026' },
+        'article.entry125':     { en: 'Diop Daily #125 — September 2026', fr: 'Diop Quotidien n°125 — Septembre 2026' },
         'article.entry124':     { en: 'Diop Daily #124 — September 2026', fr: 'Diop Quotidien n°124 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
         'article.entry094':     { en: 'Diop Daily #094 — August 2026', fr: 'Diop Quotidien n°094 — Août 2026' },
@@ -167,6 +168,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-125': {
+        title: {
+            en: "Parallel Work Needs a Governor",
+            fr: "Le travail parallèle a besoin d’un gouverneur"
+        },
+        excerpt: {
+            en: "As agents work concurrently, the scarce layer is the governor that allocates authority, budget, evidence, and human attention across simultaneous work. The investable surface is concurrency governance: the control that turns a fleet of agents into accountable institutional capacity.",
+            fr: "À mesure que les agents travaillent en parallèle, la couche rare est le gouverneur qui répartit l’autorité, le budget, les preuves et l’attention humaine entre les tâches simultanées. La surface d’investissement est la gouvernance de la concurrence : le contrôle qui transforme une flotte d’agents en capacité institutionnelle responsable."
+        }
+    },
     'diop-daily-124': {
         title: {
             en: "The Second Run Is the Real Product",

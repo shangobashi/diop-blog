@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Parallel Work Needs a Governor — Diop Research</title>
+    <meta name="description" content="As agents work concurrently, the scarce layer is the governor that allocates authority, budget, evidence, and human attention across simultaneous work. The investable surface is concurrency governance: the control that turns a fleet of agents into accountable institutional capacity."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry125">Diop Daily #125 — September 2026</div>
+                <div class="article__meta-line">
+                    <time>September 28, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>concurrency governance · agent fleets · institutional capacity</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Parallel Work Needs a Governor</h1>
+
+                <p>The market is learning to run several agents at once. The harder question begins after the fan-out: who decides which work deserves capacity, which results may combine, which conflict must stop the fleet, and which human still owns the conclusion? Parallelism multiplies execution. It also multiplies the number of places where authority can become ambiguous.</p>
+
+                <p>OpenAI’s September 6 account of research acceleration describes coding agents running throughout the day, often in concurrent sessions. By mid-August, the company reported that its research organization used 3.1 agent-workdays for every human workday, while also warning that usage and code volume are easier to measure than research progress. The same account keeps human researchers responsible for priorities and decisions about whether to scale, pause, or deploy. That combination is the important signal: more machine work is entering the institution, while the right to decide what counts as progress remains human.</p>
+
+                <blockquote>
+                    <p>A fleet can produce more answers than an institution can responsibly absorb.</p>
+                </blockquote>
+
+                <h2>Fan-out creates a new kind of scarcity</h2>
+
+                <p>When one agent works alone, the main operational questions concern its tools, context, permissions, and result. When ten agents work together, a second economy appears. They compete for inference budget, data access, sandbox capacity, reviewer attention, and the right to write into a shared workspace. They may produce individually plausible results that cannot all be true at the same time.</p>
+
+                <p>OpenAI’s Agents API announcement makes this architecture explicit. The public-beta service exposes a harness for context management, tool use, durable environments, and subagent coordination. Its example configuration includes a maximum number of concurrent subagents, while the surrounding product description emphasizes long-running work, intermediate results, recovery, and multiple execution environments. These are vendor product claims, not independent proof of reliability. They do show the category moving from a single response toward a managed population of workers.</p>
+
+                <p>A population needs a governor. In this article, a concurrency governor is the layer that turns a request for parallel work into an authorized allocation. It decides how many agents may run, what each one may touch, how much cost and time the assignment may consume, how their evidence is merged, and what happens when their conclusions diverge. It is narrower than a general orchestration platform. Orchestration describes how tasks are connected; governance decides which simultaneous tasks are admitted and under whose authority.</p>
+
+                <h2>The governor is an allocation instrument</h2>
+
+                <p>Concurrency is often presented as a speed feature. A laboratory sends the same question to several agents, collects their answers, and hopes that the majority is wiser. That pattern can waste money and hide correlated error. If every worker sees the same incomplete source, parallel agreement may only be parallel repetition.</p>
+
+                <p>A governor begins with a work claim. Each proposed subtask should state the decision it supports, the evidence it requires, the tools it may use, and the cost of being wrong. Admission then becomes a resource decision rather than a reflex to start another process.</p>
+
+                <ul>
+                    <li><strong>Capacity:</strong> how many workers can run before latency, cost, or shared infrastructure becomes unsafe?</li>
+                    <li><strong>Authority:</strong> which agent may read, write, purchase, publish, or escalate, and which may only observe?</li>
+                    <li><strong>Evidence:</strong> what source or test must accompany a result before another agent can rely on it?</li>
+                    <li><strong>Independence:</strong> which workers need different sources, models, languages, or methods so that agreement contains information?</li>
+                    <li><strong>Attention:</strong> which conflicts deserve a human decision, and how much reviewer time has been reserved?</li>
+                </ul>
+
+                <p>This is a budget in the broad institutional sense. The ledger contains tokens, wall-clock time, tool calls, data movement, storage, and human judgment. A fleet that spends its review capacity early may have impressive intermediate results and no one available to adjudicate the final contradiction. The governor protects the scarce resource that model dashboards rarely show: the institution’s ability to understand what its machines have done.</p>
+
+                <h2>Agreement is not adjudication</h2>
+
+                <p>Google’s description of the Agent2Agent protocol treats collaboration as a handoff between specialized, potentially opaque agents. The protocol’s appeal is architectural: a requesting agent can use a peer’s capability without absorbing that peer’s private data or internal method, and complex work can be distributed across domain specialists. That boundary is useful. It also means that a final answer may conceal a chain of decisions made elsewhere.</p>
+
+                <p>A governor must preserve disagreement as a first-class result. It should know whether two agents reached the same conclusion from independent evidence, copied a common source, or silently accepted one another’s output. It should distinguish an empty result from a failed worker, a failed worker from a refused task, and disagreement from an incomplete handoff.</p>
+
+                <p>The merge step therefore needs a record with more than a winning answer:</p>
+
+                <ol>
+                    <li>the original institutional question and the principal who authorized it;</li>
+                    <li>the admitted subtasks, their scopes, budgets, models, tools, and evidence requirements;</li>
+                    <li>the outputs, citations, confidence statements, refusals, and unfinished work from each worker;</li>
+                    <li>the conflicts detected during comparison and the rule used to resolve or escalate them;</li>
+                    <li>the human decision, if one was required, together with the reason the fleet was allowed to proceed.</li>
+                </ol>
+
+                <p>This record turns parallel execution into an inspectable institutional event. It also gives a successor system a chance to recover the work without treating the last answer as the whole truth.</p>
+
+                <h2>Stateless transport still needs accountable state</h2>
+
+                <p>Google’s August 5 account of the 2026 Model Context Protocol transport changes describes a move toward a stateless protocol core so requests can pass through ordinary load balancers, serverless deployments, and failover paths without pinned sessions. The source explains the infrastructure case: stateful session management can create routing constraints, lost sessions, and operational overhead at scale. A self-describing request is easier to distribute.</p>
+
+                <p>That transport decision should not be confused with institutional amnesia. The network may be stateless while the work remains stateful. The governor must retain the admission decision, authority scope, budget consumed, evidence received, and disposition of the result. Otherwise a fleet can survive a pod restart while losing the reason it was allowed to act.</p>
+
+                <p>NIST’s AI Agent Standards Initiative places open protocols beside authentication, identity infrastructure, and security evaluations. Its framing is useful because scale and accountability meet at the same boundary. A request that can move freely between workers still needs to carry enough identity and policy context for the receiving environment to know whose work it is, what authority travels with it, and what evidence must return.</p>
+
+                <h2>African institutions should govern the fan-out</h2>
+
+                <p>Parallel systems will often arrive in African institutions as imported platforms with defaults written elsewhere. Their definition of useful parallel work can erase local authority while adding cost and dependency. A research office may need one agent to search French sources, another to inspect Wolof terminology, and a human historian to judge whether the categories preserve the community’s meaning. A commerce cooperative may require separate agents for inventory, mobile-money reconciliation, and member consent. A public service may reserve the right to stop the fleet when a local-language request reveals uncertainty about jurisdiction.</p>
+
+                <p>Those are governance rules, not prompt decorations. The institution should own the admission policy, the definition of independence, the escalation threshold, and the evidence that a parallel result must contain. External models can provide capability. They should not silently define the institution’s hierarchy of attention.</p>
+
+                <p>This is one practical meaning of intellectual sovereignty in agent systems: the right to decide how many machine voices enter a question, which differences matter, and when a person’s judgment outranks a numerical consensus. A fleet becomes useful when it increases the institution’s capacity to distinguish, not when it merely increases the number of outputs.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the concurrency governor: a control layer for parallel agents that makes allocation, authority, evidence, conflict, and human attention measurable.</p>
+
+                <ul>
+                    <li><strong>Admission control:</strong> systems that reserve model, tool, data, and reviewer capacity before a fleet begins.</li>
+                    <li><strong>Authority budgets:</strong> policy that grants each worker a bounded scope and records every elevation, handoff, and write.</li>
+                    <li><strong>Independent evaluation pools:</strong> mechanisms that vary sources, models, languages, and methods so agreement can be interpreted rather than counted.</li>
+                    <li><strong>Conflict registries:</strong> stores that preserve disagreement, missing evidence, failed workers, and the rule or person that resolved them.</li>
+                    <li><strong>Human attention markets:</strong> queues that price or reserve expert review as a real capacity constraint instead of treating escalation as an unbounded fallback.</li>
+                </ul>
+
+                <p>Underwriting can begin with operational measures: accepted decisions per unit of inference spend, percentage of parallel tasks with independent evidence, conflict-detection recall, time from conflict to human disposition, authority violations per thousand tool calls, reviewer minutes per accepted result, and the share of the fleet’s state that can be exported and replayed. These metrics describe institutional absorption, not just model activity.</p>
+
+                <p>The distinction matters for investors and builders. A dashboard that counts active agents can grow while the organization becomes less able to explain itself. A governor earns value when it makes parallel capacity safe enough to buy, local enough to adapt, and legible enough to govern. The defensible layer is the record of why the fleet ran, what it was allowed to do, and how its disagreement became a decision.</p>
+
+                <h2>Begin with two agents and one real conflict</h2>
+
+                <p>An institution does not need a fleet-wide program to test this architecture. Choose one decision that already consumes expert time. Give two agents different sources or methods. Define their scopes, evidence requirements, spend ceiling, and stop conditions before they run. Store each result under one institutional work identifier. Compare the evidence, preserve the disagreement, and ask a named person to decide whether the result can enter the workflow.</p>
+
+                <p>Then measure the cost of understanding the work. If the second agent adds only duplicated confidence, reduce the fan-out. If it exposes a meaningful contradiction, preserve the method that found it. If no one has time to adjudicate, the system has reached its real capacity limit. That limit belongs in the architecture.</p>
+
+                <p>Parallel agents can enlarge an institution’s reach, but only a governor can keep that reach answerable. The future will contain more machine voices. African institutions, laboratories, and investors should build the layer that decides which voices deserve authority.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/index/research-acceleration-view-inside-openai/" target="_blank" rel="noopener">OpenAI, “Research acceleration: The view inside OpenAI” (September 6, 2026). The article reports concurrent coding-agent use, a reported ratio of 3.1 agent-workdays per human workday in the research organization by mid-August, preliminary measurement limits, and continued human responsibility for priorities and deployment decisions.</a></li>
+                    <li><a href="https://openai.com/index/introducing-the-agents-api/" target="_blank" rel="noopener">OpenAI, “Introducing the Agents API” (September 10, 2026). The public-beta announcement describes a managed harness for context, tools, durable environments, subagent coordination, recovery, and configurable maximum concurrency. Customer figures are treated as vendor-reported claims, not independent evidence.</a></li>
+                    <li><a href="https://developers.googleblog.com/scaling-ai-agent-infrastructure-with-the-mcp-stateless-updates/" target="_blank" rel="noopener">Google Developers Blog, “Scaling AI Agent Infrastructure with the MCP Stateless updates” (August 5, 2026). The article explains the proposed stateless MCP core, load-balanced routing, serverless deployment, and failover rationale. It is a vendor technical account of a protocol change.</a></li>
+                    <li><a href="https://developers.googleblog.com/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog, “How A2A is Building a World of Collaborative Agents” (June 18, 2026). The article describes secure black-box handoffs, workload distribution, and specialized peer agents as the protocol’s design aims. It is used here to frame collaboration boundaries, not to claim universal deployment.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (created February 17, 2026; updated August 14, 2026). NIST identifies interoperable protocols, agent authentication and identity infrastructure, and security evaluations as strategic work areas.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Le travail parallèle a besoin d’un gouverneur</h1>
+
+                <p>Le marché apprend à faire fonctionner plusieurs agents à la fois. La question plus difficile commence après la distribution du travail : qui décide quelle tâche mérite de la capacité, quels résultats peuvent être combinés, quel conflit doit arrêter la flotte et quel être humain reste responsable de la conclusion ? Le parallélisme multiplie l’exécution. Il multiplie aussi les endroits où l’autorité peut devenir ambiguë.</p>
+
+                <p>Dans son analyse du 6 septembre sur l’accélération de la recherche, OpenAI décrit des agents de programmation utilisés toute la journée, souvent dans des sessions concurrentes. À la mi-août, l’entreprise rapportait que son organisation de recherche utilisait 3,1 journées de travail d’agents pour chaque journée de travail humaine, tout en avertissant que l’usage et le volume de code sont plus faciles à mesurer que le progrès scientifique. Le même article maintient les chercheurs humains responsables des priorités et des décisions de mise à l’échelle, de pause ou de déploiement. Ce signal est essentiel : davantage de travail machine entre dans l’institution, tandis que le droit de décider ce qui compte comme progrès reste humain.</p>
+
+                <blockquote>
+                    <p>Une flotte peut produire plus de réponses qu’une institution ne peut en absorber avec responsabilité.</p>
+                </blockquote>
+
+                <h2>La distribution crée une nouvelle rareté</h2>
+
+                <p>Lorsqu’un agent travaille seul, les questions opérationnelles portent surtout sur ses outils, son contexte, ses permissions et son résultat. Lorsque dix agents travaillent ensemble, une deuxième économie apparaît. Ils se disputent le budget d’inférence, l’accès aux données, la capacité des environnements isolés, l’attention des réviseurs et le droit d’écrire dans un espace partagé. Ils peuvent produire des résultats individuellement plausibles qui ne peuvent pas tous être vrais en même temps.</p>
+
+                <p>L’annonce d’OpenAI sur l’Agents API rend cette architecture explicite. Le service en bêta publique expose un harnais pour la gestion du contexte, l’usage des outils, les environnements durables et la coordination de sous-agents. Sa configuration d’exemple inclut un nombre maximal de sous-agents concurrents, tandis que la description du produit insiste sur le travail de longue durée, les résultats intermédiaires, la récupération et plusieurs environnements d’exécution. Il s’agit d’affirmations de produit du fournisseur, et non d’une preuve indépendante de fiabilité. Elles montrent toutefois que la catégorie passe d’une réponse unique à une population de travailleurs gérée.</p>
+
+                <p>Une population a besoin d’un gouverneur. Dans cet article, un gouverneur de concurrence est la couche qui transforme une demande de travail parallèle en allocation autorisée. Il décide combien d’agents peuvent fonctionner, ce que chacun peut toucher, combien de coût et de temps l’affectation peut consommer, comment les preuves sont fusionnées et ce qui arrive lorsque les conclusions divergent. Cette couche est plus étroite qu’une plateforme générale d’orchestration. L’orchestration décrit la connexion des tâches ; la gouvernance décide quelles tâches simultanées sont admises et sous quelle autorité.</p>
+
+                <h2>Le gouverneur est un instrument d’allocation</h2>
+
+                <p>La concurrence est souvent présentée comme une fonction d’accélération. Un laboratoire envoie la même question à plusieurs agents, rassemble leurs réponses et espère que la majorité sera plus sage. Cette méthode peut gaspiller de l’argent et dissimuler une erreur corrélée. Si chaque travailleur lit la même source incomplète, l’accord parallèle peut n’être qu’une répétition parallèle.</p>
+
+                <p>Un gouverneur commence par une demande de travail. Chaque sous-tâche proposée devrait indiquer la décision qu’elle soutient, les preuves dont elle a besoin, les outils qu’elle peut utiliser et le coût d’une erreur. L’admission devient alors une décision de ressources plutôt qu’un réflexe consistant à lancer un processus supplémentaire.</p>
+
+                <ul>
+                    <li><strong>Capacité :</strong> combien de travailleurs peuvent fonctionner avant que la latence, le coût ou l’infrastructure partagée ne deviennent dangereux ?</li>
+                    <li><strong>Autorité :</strong> quel agent peut lire, écrire, acheter, publier ou escalader, et lequel peut seulement observer ?</li>
+                    <li><strong>Preuve :</strong> quelle source ou quel test doit accompagner un résultat avant qu’un autre agent puisse s’y fier ?</li>
+                    <li><strong>Indépendance :</strong> quels travailleurs ont besoin de sources, de modèles, de langues ou de méthodes différentes afin que l’accord contienne de l’information ?</li>
+                    <li><strong>Attention :</strong> quels conflits exigent une décision humaine et quel temps de revue a été réservé ?</li>
+                </ul>
+
+                <p>Il s’agit d’un budget au sens institutionnel large. Le registre contient les tokens, le temps d’horloge, les appels d’outils, les déplacements de données, le stockage et le jugement humain. Une flotte qui dépense sa capacité de revue au début peut produire des résultats intermédiaires impressionnants sans laisser personne pour arbitrer la contradiction finale. Le gouverneur protège la ressource rare que les tableaux de bord de modèles montrent rarement : la capacité de l’institution à comprendre ce que ses machines ont fait.</p>
+
+                <h2>L’accord n’est pas l’arbitrage</h2>
+
+                <p>La description par Google du protocole Agent2Agent traite la collaboration comme un transfert entre agents spécialisés et potentiellement opaques. L’attrait du protocole est architectural : un agent demandeur peut utiliser la capacité d’un pair sans absorber ses données privées ni sa méthode interne, et le travail complexe peut être distribué entre spécialistes. Cette frontière est utile. Elle signifie aussi qu’une réponse finale peut dissimuler une chaîne de décisions prises ailleurs.</p>
+
+                <p>Un gouverneur doit conserver le désaccord comme résultat de première classe. Il doit savoir si deux agents sont arrivés à la même conclusion à partir de preuves indépendantes, s’ils ont copié une source commune ou s’ils ont accepté silencieusement la sortie de l’autre. Il doit distinguer un résultat vide d’un travailleur en échec, un travailleur en échec d’une tâche refusée et un désaccord d’un transfert incomplet.</p>
+
+                <p>L’étape de fusion a donc besoin d’un registre qui contient davantage qu’une réponse gagnante :</p>
+
+                <ol>
+                    <li>la question institutionnelle d’origine et le mandant qui l’a autorisée ;</li>
+                    <li>les sous-tâches admises, leurs périmètres, budgets, modèles, outils et exigences de preuve ;</li>
+                    <li>les sorties, citations, degrés de confiance, refus et travaux inachevés de chaque travailleur ;</li>
+                    <li>les conflits détectés lors de la comparaison et la règle appliquée pour les résoudre ou les escalader ;</li>
+                    <li>la décision humaine, lorsqu’elle était requise, ainsi que la raison pour laquelle la flotte a été autorisée à poursuivre.</li>
+                </ol>
+
+                <p>Ce registre transforme l’exécution parallèle en événement institutionnel inspectable. Il donne aussi à un système successeur une chance de récupérer le travail sans traiter la dernière réponse comme la vérité entière.</p>
+
+                <h2>Le transport sans état exige tout de même un état responsable</h2>
+
+                <p>Le texte publié par Google le 5 août sur les changements de transport du Model Context Protocol décrit une évolution vers un cœur de protocole sans état afin que les requêtes puissent traverser des répartiteurs ordinaires, des déploiements serverless et des chemins de bascule sans sessions attachées. La source expose le cas d’infrastructure : la gestion d’une session avec état peut créer des contraintes de routage, des sessions perdues et des frais opérationnels à grande échelle. Une requête auto-descriptive est plus facile à distribuer.</p>
+
+                <p>Cette décision de transport ne doit pas être confondue avec une amnésie institutionnelle. Le réseau peut être sans état tandis que le travail reste porteur d’un état. Le gouverneur doit conserver la décision d’admission, le périmètre d’autorité, le budget consommé, les preuves reçues et le sort du résultat. Sinon une flotte peut survivre au redémarrage d’un pod tout en perdant la raison pour laquelle elle avait reçu le droit d’agir.</p>
+
+                <p>L’AI Agent Standards Initiative du NIST place les protocoles ouverts à côté de l’authentification, de l’infrastructure d’identité et des évaluations de sécurité. Son cadrage est utile parce que l’échelle et la responsabilité se rencontrent à la même frontière. Une requête qui peut circuler librement entre travailleurs doit encore porter assez d’identité et de contexte de politique pour que l’environnement destinataire sache à quel travail elle appartient, quelle autorité voyage avec elle et quelles preuves doivent revenir.</p>
+
+                <h2>Les institutions africaines doivent gouverner la distribution</h2>
+
+                <p>Les systèmes parallèles arriveront souvent dans les institutions africaines sous la forme de plateformes importées dont les réglages par défaut ont été écrits ailleurs. Le danger ne concerne pas seulement le coût ou la dépendance. La définition du travail parallèle utile peut effacer l’autorité locale. Un bureau de recherche peut avoir besoin d’un agent pour les sources françaises, d’un autre pour la terminologie wolof et d’un historien humain pour juger si les catégories préservent le sens de la communauté. Une coopérative commerciale peut exiger des agents séparés pour l’inventaire, le rapprochement de l’argent mobile et le consentement des membres. Un service public peut réserver le droit d’arrêter la flotte lorsqu’une demande en langue locale révèle une incertitude de juridiction.</p>
+
+                <p>Ce sont des règles de gouvernance, et non des ornements de prompt. L’institution devrait posséder la politique d’admission, la définition de l’indépendance, le seuil d’escalade et les preuves qu’un résultat parallèle doit contenir. Les modèles externes peuvent fournir une capacité. Ils ne devraient pas définir en silence la hiérarchie d’attention de l’institution.</p>
+
+                <p>Voici un sens pratique de la souveraineté intellectuelle dans les systèmes agentiques : le droit de décider combien de voix machine entrent dans une question, quelles différences comptent et quand le jugement d’une personne l’emporte sur un consensus numérique. Une flotte devient utile lorsqu’elle augmente la capacité de l’institution à distinguer, et non lorsqu’elle augmente seulement le nombre de sorties.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est le gouverneur de concurrence : une couche de contrôle pour agents parallèles qui rend mesurables l’allocation, l’autorité, la preuve, le conflit et l’attention humaine.</p>
+
+                <ul>
+                    <li><strong>Contrôle d’admission :</strong> systèmes qui réservent la capacité de modèles, d’outils, de données et de réviseurs avant le démarrage d’une flotte.</li>
+                    <li><strong>Budgets d’autorité :</strong> politiques qui accordent à chaque travailleur un périmètre borné et enregistrent chaque élévation, transfert et écriture.</li>
+                    <li><strong>Réservoirs d’évaluation indépendante :</strong> mécanismes qui varient les sources, les modèles, les langues et les méthodes afin que l’accord puisse être interprété plutôt que compté.</li>
+                    <li><strong>Registres de conflits :</strong> espaces qui conservent les désaccords, les preuves manquantes, les travailleurs en échec et la règle ou la personne qui les a résolus.</li>
+                    <li><strong>Marchés de l’attention humaine :</strong> files qui tarifent ou réservent la revue experte comme une contrainte réelle de capacité au lieu de traiter l’escalade comme un secours illimité.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des mesures opérationnelles : décisions acceptées par unité de dépense d’inférence, pourcentage de tâches parallèles disposant de preuves indépendantes, rappel de détection des conflits, délai entre le conflit et sa décision humaine, violations d’autorité par millier d’appels d’outils, minutes de revue par résultat accepté et part de l’état de la flotte qui peut être exportée et rejouée. Ces mesures décrivent l’absorption institutionnelle, et non la seule activité des modèles.</p>
+
+                <p>La distinction compte pour les investisseurs et les bâtisseurs. Un tableau de bord qui compte les agents actifs peut croître tandis que l’organisation devient moins capable de s’expliquer. Un gouverneur gagne sa valeur lorsqu’il rend la capacité parallèle assez sûre pour être achetée, assez locale pour être adaptée et assez lisible pour être gouvernée. La couche défendable est le registre qui explique pourquoi la flotte a fonctionné, ce qu’elle avait le droit de faire et comment son désaccord est devenu une décision.</p>
+
+                <h2>Commencer avec deux agents et un conflit réel</h2>
+
+                <p>Une institution n’a pas besoin d’un programme à l’échelle de toute la flotte pour tester cette architecture. Choisissez une décision qui consomme déjà du temps expert. Donnez à deux agents des sources ou des méthodes différentes. Définissez leurs périmètres, exigences de preuve, plafond de dépense et conditions d’arrêt avant leur exécution. Stockez chaque résultat sous un identifiant de travail institutionnel commun. Comparez les preuves, conservez le désaccord et demandez à une personne nommée de décider si le résultat peut entrer dans le workflow.</p>
+
+                <p>Mesurez ensuite le coût de compréhension du travail. Si le deuxième agent n’ajoute qu’une confiance dupliquée, réduisez la distribution. S’il révèle une contradiction utile, conservez la méthode qui l’a trouvée. Si personne n’a le temps d’arbitrer, le système a atteint sa véritable limite de capacité. Cette limite appartient à l’architecture.</p>
+
+                <p>Les agents parallèles peuvent élargir la portée d’une institution, mais seul un gouverneur peut maintenir cette portée dans le champ de la responsabilité. L’avenir contiendra davantage de voix machine. Les institutions africaines, les laboratoires et les investisseurs doivent construire la couche qui décide quelles voix méritent l’autorité.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/index/research-acceleration-view-inside-openai/" target="_blank" rel="noopener">OpenAI, « Research acceleration: The view inside OpenAI » (6 septembre 2026). L’article rapporte l’usage concurrent d’agents de programmation, un ratio déclaré de 3,1 journées d’agents pour une journée humaine dans l’organisation de recherche à la mi-août, les limites des mesures préliminaires et la responsabilité persistante des humains pour les priorités et le déploiement.</a></li>
+                    <li><a href="https://openai.com/index/introducing-the-agents-api/" target="_blank" rel="noopener">OpenAI, « Introducing the Agents API » (10 septembre 2026). L’annonce en bêta publique décrit un harnais géré pour le contexte, les outils, les environnements durables, la coordination de sous-agents, la récupération et une concurrence configurable. Les chiffres des clients sont traités comme des affirmations du fournisseur, non comme des preuves indépendantes.</a></li>
+                    <li><a href="https://developers.googleblog.com/scaling-ai-agent-infrastructure-with-the-mcp-stateless-updates/" target="_blank" rel="noopener">Google Developers Blog, « Scaling AI Agent Infrastructure with the MCP Stateless updates » (5 août 2026). L’article explique le cœur MCP sans état proposé, le routage réparti, le déploiement serverless et la logique de bascule. Il s’agit d’un exposé technique du fournisseur sur une évolution de protocole.</a></li>
+                    <li><a href="https://developers.googleblog.com/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog, « How A2A is Building a World of Collaborative Agents » (18 juin 2026). L’article décrit les transferts sécurisés en boîte noire, la distribution du travail et les pairs spécialisés comme objectifs de conception du protocole. Il sert ici à cadrer les frontières de collaboration, et non à affirmer un déploiement universel.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (créée le 17 février 2026 ; mise à jour le 14 août 2026). Le NIST identifie les protocoles interopérables, l’authentification et l’infrastructure d’identité des agents ainsi que les évaluations de sécurité comme des domaines stratégiques.</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
