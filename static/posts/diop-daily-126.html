@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Description Is Part of the Tool — Diop Research</title>
+    <meta name="description" content="Agents act through descriptions, schemas, permissions, and policy paths before they ever call an endpoint. The strategic layer is the tool contract that makes machine recognition precise, local, auditable, and safe to scale."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry126">Diop Daily #126 — September 2026</div>
+                <div class="article__meta-line">
+                    <time>September 29, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>tool contracts · machine recognition · institutional boundaries</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Description Is Part of the Tool</h1>
+
+                <p>A tool that an agent cannot interpret is an inaccessible capability, even when its endpoint is healthy. The description, schema, authentication rule, quota, and response shape determine what the machine believes it may do before a single request is sent. That makes the tool declaration part of the product, part of the security boundary, and part of the institution's operating language.</p>
+
+                <p>Recent public signals make this visible. Google's September 24 announcement of remote Model Context Protocol support in Cloud API Gateway says that a tool's description is the primary signal an LLM uses to decide when to call it. The same announcement describes MCP discovery and REST invocation sharing authentication, quota, and logging policies. Although it is a product announcement rather than independent proof of safe deployment, it exposes the architectural seam: a machine meets an institution first through a declared vocabulary, then through an endpoint.</p>
+
+                <blockquote>
+                    <p>Before a machine can obey an institution, it has to recognize the institution's terms.</p>
+                </blockquote>
+
+                <h2>The tool is encountered before it is invoked</h2>
+
+                <p>Human developers often treat documentation as a wrapper around the real software. An agent experiences the order differently. It encounters a name, a description, an input schema, a permission context, and an advertised result. Those elements shape the choice to invoke, the arguments it constructs, and the confidence it assigns to the response.</p>
+
+                <p>This turns language into an operational surface. “Search customers” does not carry the same boundary as “search active customer records for accounts assigned to the requesting team, returning only fields authorized by the account policy.” The second declaration gives the machine a jurisdiction, a population, and a limit. It also gives a reviewer something concrete to inspect when the call is wrong.</p>
+
+                <p>The distinction matters for small institutions as much as for large platforms. A community archive, a cooperative inventory system, or a public information service may have an API that works perfectly for a human engineer while remaining semantically opaque to an agent. The missing asset is often not another model. It is a vocabulary that states what the operation means, who may use it, what evidence it returns, and what a refusal looks like.</p>
+
+                <h2>Discovery is already a policy decision</h2>
+
+                <p>Google's API Gateway announcement contains a quiet warning alongside its convenience. In the public-preview design, <code>tools/list</code> is unauthenticated by default, which makes development easy while publishing tool names and input schemas to anyone who asks. Production systems are told to require a JSON Web Token for discovery, while the underlying REST authentication still governs <code>tools/call</code>.</p>
+
+                <p>The lesson is broader than one gateway: discoverability is a form of exposure. A tool can be protected at execution time and still reveal sensitive institutional structure at discovery time. Names, descriptions, fields, and error messages can disclose the shape of a ledger, the existence of a vulnerable workflow, or the categories by which a public office sorts people.</p>
+
+                <p>A serious tool contract therefore answers two different questions:</p>
+
+                <ul>
+                    <li><strong>Recognition:</strong> what may an authorized machine understand about this capability, and under which identity may it discover that description?</li>
+                    <li><strong>Invocation:</strong> which principal may call it, with which arguments, against which records, under what quota, and with what logged result?</li>
+                </ul>
+
+                <p>Collapsing these questions produces a thin notion of access control. An agent can be allowed to call a tool while being given a misleading or overbroad description. It can also be denied at the endpoint after learning more than it should about the institution. The boundary needs both semantic precision and policy continuity.</p>
+
+                <h2>Schemas carry jurisdiction</h2>
+
+                <p>A schema is often described as a technical shape for data. In agent systems, it also carries a theory of jurisdiction. Field names decide which distinctions are visible. Required fields decide which facts must exist before an action can proceed. Enumerations define the categories the machine can select. Error states decide whether uncertainty becomes a refusal, a retry, or a silent omission.</p>
+
+                <p>That is why imported schemas deserve the same scrutiny as imported models. A payment tool built around card settlement may omit the consent and reconciliation steps required by a mobile-money cooperative. A research archive schema may preserve an English title while discarding the local-language name by which a community recognizes the work. A customer record may encode household relations as irrelevant text even when those relations determine who may authorize a transaction.</p>
+
+                <p>W3C's June announcement of a workshop on e-commerce for humans and AI agents makes the representation problem explicit. The web has historically been shaped for human readers, even when pages also expose structured data through APIs or embedded JSON-LD. Agents are becoming intermediaries between content and users, so creators and publishers must consider how machine systems interpret what they publish. The workshop focuses on e-commerce, yet the underlying issue reaches archives, public services, education, and cultural production: what a machine can recognize becomes part of how an institution can be reached.</p>
+
+                <p>Machine recognition should therefore be treated as an editorial and constitutional task. The institution chooses the categories, examples, language variants, refusal states, and evidence requirements that define a legitimate operation. External frameworks can provide transport and syntax. They cannot decide what a local record means.</p>
+
+                <h2>Local execution does not remove the need for a contract</h2>
+
+                <p>Google's September 23 announcement of local model support in the Antigravity SDK describes offline execution, local GPU and RAM use, privacy benefits, and hybrid workflows in which a cloud model plans while local models perform work on-device. The announcement uses a recorded demonstration to report that most tokens in that run were handled locally; that figure remains a vendor-reported example rather than a general performance guarantee.</p>
+
+                <p>The architectural point survives the marketing boundary. Local execution can keep code, requests, or culturally sensitive records within an institution's physical or legal perimeter. It does not automatically make the institution's interfaces legible. A local agent can still misunderstand a Wolof term, infer authority from the wrong field, or call a tool whose description hides a consequential side effect.</p>
+
+                <p>NIST's AI Agent Standards Initiative places open protocols beside authentication, identity infrastructure, and security evaluations. Its public framing supports a useful division of labor: protocols can help systems interoperate, identity can establish who is acting, and evaluation can test whether the interaction is secure. The institution still needs to define the local semantics that make a call legitimate. Sovereignty lives in that definition, not in the location of the GPU alone.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the tool contract: the shared semantic and conformance layer between an institution's capability and the machine that seeks to use it. It sits closer to a revenue-bearing boundary than generic documentation because it determines discovery, eligibility, execution, evidence, and correction.</p>
+
+                <ul>
+                    <li><strong>Contract registries:</strong> systems that version names, descriptions, schemas, examples, refusal states, owners, and policy links as one reviewable unit.</li>
+                    <li><strong>Discovery controls:</strong> authorization for who may see a capability, its fields, its jurisdiction, and its machine-readable metadata.</li>
+                    <li><strong>Conformance testing:</strong> tests that ask whether the declared meaning matches the live endpoint, including permissions, quota behavior, error states, and response provenance.</li>
+                    <li><strong>Semantic translation:</strong> layers that preserve local terms, multilingual distinctions, and institutional categories when a common protocol crosses language or system boundaries.</li>
+                    <li><strong>Boundary observability:</strong> records of what an agent believed it was calling, what the tool actually received, which policy applied, and how a human corrected the mismatch.</li>
+                </ul>
+
+                <p>Underwriting can begin with measurable questions. How often does a description lead to an invalid call? Which fields cause the most human correction? Can a new model discover the same capability without being granted broader access? Do schema changes trigger review before they alter agent behavior? Can the institution export the contract, its test cases, and its decision history when it changes gateway or model provider?</p>
+
+                <p>OpenAI's September account of AI-native workflows supplies a complementary market signal. The examples of Basis, Clay, and Exa connect agents to company context and tools, preserve persistent workspaces or reusable skills, and keep tests and human review near consequential actions. The cases are vendor-reported, so they should be read as design evidence rather than universal adoption data. Their common pattern is clear: a workflow becomes repeatable when context, permissions, evidence, and decision rights remain attached to the work.</p>
+
+                <h2>Build one contract before adding another agent</h2>
+
+                <p>A practical experiment needs one real tool, one named owner, and one consequential boundary. Write the description as if a new machine will encounter it without a private conversation. Define the records it may touch, the identities it accepts, the fields it refuses, the evidence it returns, and the circumstances that require a person. Test discovery separately from invocation. Then ask an independent reviewer to compare the declaration with the live behavior.</p>
+
+                <p>Repeat the test in the languages and institutional settings that the system claims to serve. A French description that loses a distinction present in the English schema is a conformance defect. A translation that makes a refusal sound like success is a safety defect. A local-language name that cannot be searched is a distribution defect. These are engineering failures with social consequences, and they can be measured before a fleet makes them expensive.</p>
+
+                <p>The next stage of agent infrastructure will be judged at these boundaries. The winning systems will help institutions expose capabilities without exposing more authority than intended, preserve local meaning across machine handoffs, and prove that the declared contract still matches the action. A machine does not enter an institution through intelligence alone. It enters through the words, fields, permissions, and evidence that tell it where it is.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/" target="_blank" rel="noopener">Google Developers Blog, “Turn your REST APIs into MCP tools with Google Cloud API Gateway” (September 24, 2026). The public-preview announcement describes remote MCP exposure from OpenAPI, shared REST/MCP authentication, quota and logging, discovery controls, and the role of tool descriptions in model decisions.</a></li>
+                    <li><a href="https://developers.googleblog.com/introducing-support-for-local-ai-models-in-the-antigravity-sdk/" target="_blank" rel="noopener">Google Developers Blog, “Introducing Support for Local AI Models in the Antigravity SDK” (September 23, 2026). The announcement describes offline local workflows, local resource use, privacy and cost considerations, and a hybrid cloud/local architecture. Demonstration figures are treated as vendor-reported examples.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (created February 17, 2026; updated August 14, 2026). NIST identifies open protocols, agent authentication and identity infrastructure, and security evaluations as strategic work areas for trusted interoperability.</a></li>
+                    <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/" target="_blank" rel="noopener">W3C, “Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents” (published June 1, 2026; workshop held September 8–9, 2026). W3C frames structured content and machine-oriented representation as an emerging concern because agents increasingly mediate access to published information.</a></li>
+                    <li><a href="https://openai.com/index/ai-native-company-workflows/" target="_blank" rel="noopener">OpenAI, “How AI-native companies turn workflows into operating capability” (September 1, 2026). The article presents vendor-reported examples of reusable skills, persistent account context, tools, tests, permissions, and human review in company workflows. It is used as a design signal, not independent proof of general productivity.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La description fait partie de l’outil</h1>
+
+                <p>Un outil qu’un agent ne peut pas interpréter est une capacité inaccessible, même lorsque son endpoint fonctionne. La description, le schéma, la règle d’authentification, le quota et la forme de la réponse déterminent ce que la machine croit pouvoir faire avant l’envoi d’une seule requête. La déclaration de l’outil devient ainsi une partie du produit, une partie de la frontière de sécurité et une partie du langage opérationnel de l’institution.</p>
+
+                <p>Les signaux publics récents rendent ce point visible. Dans son annonce du 24 septembre sur la prise en charge du Model Context Protocol à distance dans Cloud API Gateway, Google indique que la description d’un outil constitue le signal principal utilisé par un LLM pour décider de l’appeler. La même annonce décrit une découverte MCP et une invocation REST qui partagent les politiques d’authentification, de quota et de journalisation. Cette annonce de produit ne fournit pas une preuve indépendante de déploiement sûr, mais elle expose la jointure architecturale : une machine rencontre d’abord une institution par un vocabulaire déclaré, puis par un endpoint.</p>
+
+                <blockquote>
+                    <p>Avant d’obéir à une institution, une machine doit reconnaître ses termes.</p>
+                </blockquote>
+
+                <h2>L’outil est rencontré avant d’être invoqué</h2>
+
+                <p>Les développeurs humains traitent souvent la documentation comme une enveloppe autour du véritable logiciel. Un agent vit cette séquence autrement. Il rencontre un nom, une description, un schéma d’entrée, un contexte de permission et un résultat annoncé. Ces éléments orientent le choix d’invoquer l’outil, les arguments construits et le degré de confiance accordé à la réponse.</p>
+
+                <p>Le langage devient ainsi une surface opérationnelle. « Rechercher les clients » ne pose pas la même frontière que « rechercher les dossiers clients actifs des comptes attribués à l’équipe demandeuse, en ne renvoyant que les champs autorisés par la politique du compte ». La seconde déclaration donne à la machine une juridiction, une population et une limite. Elle donne aussi au réviseur un objet concret à inspecter lorsque l’appel est erroné.</p>
+
+                <p>Cette distinction concerne autant les petites institutions que les grandes plateformes. Une archive communautaire, un système d’inventaire coopératif ou un service d’information publique peut disposer d’une API parfaitement utilisable par un ingénieur humain tout en restant sémantiquement opaque pour un agent. L’actif manquant n’est souvent pas un modèle supplémentaire. C’est un vocabulaire qui précise le sens de l’opération, ceux qui peuvent l’utiliser, les preuves qu’elle renvoie et la forme d’un refus.</p>
+
+                <h2>La découverte est déjà une décision de politique</h2>
+
+                <p>L’annonce de Google sur API Gateway contient un avertissement discret à côté de sa commodité. Dans la conception en préversion publique, <code>tools/list</code> n’est pas authentifié par défaut, ce qui facilite le développement tout en publiant les noms des outils et leurs schémas d’entrée à quiconque les demande. Pour la production, le système recommande d’exiger un jeton JSON Web pour la découverte, tandis que l’authentification REST sous-jacente continue de gouverner <code>tools/call</code>.</p>
+
+                <p>La leçon dépasse une seule passerelle. La découvrabilité est une forme d’exposition. Un outil peut être protégé au moment de l’exécution tout en révélant, lors de la découverte, la structure sensible de l’institution. Les noms, descriptions, champs et messages d’erreur peuvent dévoiler la forme d’un registre, l’existence d’un workflow vulnérable ou les catégories par lesquelles un service public classe les personnes.</p>
+
+                <p>Un contrat d’outil sérieux répond donc à deux questions différentes :</p>
+
+                <ul>
+                    <li><strong>Reconnaissance :</strong> que peut comprendre une machine autorisée au sujet de cette capacité, et sous quelle identité peut-elle découvrir cette description ?</li>
+                    <li><strong>Invocation :</strong> quel mandant peut l’appeler, avec quels arguments, sur quels dossiers, sous quel quota et avec quel résultat journalisé ?</li>
+                </ul>
+
+                <p>Confondre ces deux questions produit une notion étroite du contrôle d’accès. Un agent peut être autorisé à appeler un outil tout en recevant une description trompeuse ou trop large. Il peut aussi être refusé par l’endpoint après avoir appris davantage qu’il ne le fallait sur l’institution. La frontière exige à la fois une précision sémantique et une continuité de politique.</p>
+
+                <h2>Les schémas portent une juridiction</h2>
+
+                <p>On décrit souvent un schéma comme une forme technique pour les données. Dans les systèmes agentiques, il porte aussi une théorie de la juridiction. Les noms de champs décident quelles distinctions restent visibles. Les champs obligatoires décident quels faits doivent exister avant une action. Les énumérations définissent les catégories que la machine peut sélectionner. Les états d’erreur décident si l’incertitude devient un refus, une nouvelle tentative ou une omission silencieuse.</p>
+
+                <p>Les schémas importés méritent donc le même examen que les modèles importés. Un outil de paiement construit autour du règlement par carte peut omettre les étapes de consentement et de rapprochement nécessaires à une coopérative utilisant l’argent mobile. Un schéma d’archive scientifique peut conserver un titre anglais tout en supprimant le nom en langue locale par lequel une communauté reconnaît l’œuvre. Un dossier client peut encoder les relations familiales comme un texte sans importance alors que ces relations déterminent qui peut autoriser une transaction.</p>
+
+                <p>L’annonce de juin du W3C sur un atelier consacré au commerce électronique pour les humains et les agents d’IA rend le problème de représentation explicite. Le Web a historiquement été façonné pour des lecteurs humains, même lorsque les pages exposent aussi des données structurées par des API ou du JSON-LD intégré. Les agents deviennent des intermédiaires entre le contenu et les usagers ; les créateurs et les éditeurs doivent donc réfléchir à la manière dont les systèmes machines interprètent ce qu’ils publient. L’atelier porte sur le commerce électronique, mais le problème s’étend aux archives, aux services publics, à l’éducation et à la production culturelle : ce qu’une machine peut reconnaître devient une partie de la manière dont on peut atteindre une institution.</p>
+
+                <p>La reconnaissance par machine doit donc être traitée comme une tâche éditoriale et constitutionnelle. L’institution choisit les catégories, les exemples, les variantes linguistiques, les états de refus et les exigences de preuve qui définissent une opération légitime. Les cadres externes peuvent fournir le transport et la syntaxe. Ils ne peuvent pas décider ce que signifie un dossier local.</p>
+
+                <h2>L’exécution locale ne supprime pas le besoin d’un contrat</h2>
+
+                <p>L’annonce publiée par Google le 23 septembre sur la prise en charge de modèles locaux dans l’Antigravity SDK décrit une exécution hors ligne, l’utilisation du GPU et de la RAM locaux, des bénéfices de confidentialité et des workflows hybrides dans lesquels un modèle cloud planifie tandis que des modèles locaux exécutent le travail sur l’appareil. L’annonce utilise une démonstration enregistrée pour rapporter que la plupart des tokens de cette exécution ont été traités localement ; ce chiffre reste un exemple déclaré par le fournisseur, et non une garantie générale de performance.</p>
+
+                <p>Le point architectural reste valable au-delà de la présentation commerciale. L’exécution locale peut garder du code, des requêtes ou des dossiers culturellement sensibles dans le périmètre physique ou juridique d’une institution. Elle ne rend pas automatiquement les interfaces de cette institution intelligibles. Un agent local peut toujours mal comprendre un terme wolof, déduire l’autorité du mauvais champ ou appeler un outil dont la description dissimule un effet conséquent.</p>
+
+                <p>L’AI Agent Standards Initiative du NIST place les protocoles ouverts à côté de l’authentification, de l’infrastructure d’identité et des évaluations de sécurité. Son cadrage soutient une division utile du travail : les protocoles peuvent aider les systèmes à interopérer, l’identité peut établir qui agit et l’évaluation peut tester la sécurité de l’interaction. L’institution doit encore définir les sémantiques locales qui rendent un appel légitime. La souveraineté réside dans cette définition, et non dans l’emplacement du GPU seul.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est le contrat d’outil : la couche sémantique et de conformité partagée entre la capacité d’une institution et la machine qui cherche à l’utiliser. Cette couche se trouve plus près d’une frontière génératrice de revenus qu’une documentation générique, parce qu’elle détermine la découverte, l’éligibilité, l’exécution, la preuve et la correction.</p>
+
+                <ul>
+                    <li><strong>Registres de contrats :</strong> systèmes qui versionnent les noms, descriptions, schémas, exemples, états de refus, responsables et liens de politique comme une seule unité révisable.</li>
+                    <li><strong>Contrôles de découverte :</strong> autorisation de ceux qui peuvent voir une capacité, ses champs, sa juridiction et ses métadonnées lisibles par machine.</li>
+                    <li><strong>Tests de conformité :</strong> tests qui demandent si le sens déclaré correspond à l’endpoint réel, y compris les permissions, le comportement du quota, les états d’erreur et la provenance de la réponse.</li>
+                    <li><strong>Traduction sémantique :</strong> couches qui préservent les termes locaux, les distinctions multilingues et les catégories institutionnelles lorsqu’un protocole commun traverse les langues ou les systèmes.</li>
+                    <li><strong>Observabilité de frontière :</strong> relevés de ce qu’un agent croyait appeler, de ce que l’outil a réellement reçu, de la politique appliquée et de la manière dont un humain a corrigé le décalage.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des questions mesurables. À quelle fréquence une description provoque-t-elle un appel invalide ? Quels champs entraînent le plus de corrections humaines ? Un nouveau modèle peut-il découvrir la même capacité sans recevoir un accès élargi ? Les changements de schéma déclenchent-ils une revue avant de modifier le comportement de l’agent ? L’institution peut-elle exporter le contrat, ses cas de test et son historique de décision lorsqu’elle change de passerelle ou de fournisseur de modèles ?</p>
+
+                <p>L’analyse publiée par OpenAI en septembre sur les workflows des entreprises natives de l’IA fournit un signal de marché complémentaire. Les exemples de Basis, Clay et Exa relient les agents au contexte et aux outils de l’entreprise, préservent des espaces de travail persistants ou des compétences réutilisables et maintiennent tests et revue humaine près des actions conséquentes. Ces cas sont rapportés par le fournisseur ; ils doivent donc être lus comme des éléments de conception et non comme des données universelles d’adoption. Leur forme commune est claire : un workflow devient répétable lorsque le contexte, les permissions, les preuves et les droits de décision restent attachés au travail.</p>
+
+                <h2>Construire un contrat avant d’ajouter un autre agent</h2>
+
+                <p>Une expérience pratique exige un outil réel, un responsable nommé et une frontière conséquente. Rédigez la description comme si une nouvelle machine allait la rencontrer sans conversation privée. Définissez les dossiers qu’elle peut toucher, les identités acceptées, les champs refusés, les preuves renvoyées et les circonstances qui exigent une personne. Testez séparément la découverte et l’invocation. Demandez ensuite à un réviseur indépendant de comparer la déclaration au comportement réel.</p>
+
+                <p>Répétez le test dans les langues et les contextes institutionnels que le système prétend servir. Une description française qui perd une distinction présente dans le schéma anglais constitue un défaut de conformité. Une traduction qui fait passer un refus pour un succès constitue un défaut de sécurité. Un nom en langue locale impossible à rechercher constitue un défaut de distribution. Ce sont des défaillances d’ingénierie aux conséquences sociales, et elles peuvent être mesurées avant qu’une flotte ne les rende coûteuses.</p>
+
+                <p>La prochaine étape de l’infrastructure agentique sera jugée à ces frontières. Les systèmes les plus solides aideront les institutions à exposer des capacités sans exposer plus d’autorité que prévu, à préserver le sens local lors des transferts entre machines et à prouver que le contrat déclaré correspond encore à l’action. Une machine n’entre pas dans une institution par l’intelligence seule. Elle y entre par les mots, les champs, les permissions et les preuves qui lui indiquent où elle se trouve.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/" target="_blank" rel="noopener">Google Developers Blog, « Turn your REST APIs into MCP tools with Google Cloud API Gateway » (24 septembre 2026). L’annonce de préversion publique décrit l’exposition MCP depuis OpenAPI, les politiques REST/MCP partagées d’authentification, de quota et de journalisation, les contrôles de découverte et le rôle des descriptions d’outils dans les décisions des modèles.</a></li>
+                    <li><a href="https://developers.googleblog.com/introducing-support-for-local-ai-models-in-the-antigravity-sdk/" target="_blank" rel="noopener">Google Developers Blog, « Introducing Support for Local AI Models in the Antigravity SDK » (23 septembre 2026). L’annonce décrit les workflows locaux hors ligne, l’utilisation des ressources de l’appareil, les considérations de confidentialité et de coût ainsi qu’une architecture hybride cloud/local. Les chiffres de démonstration sont traités comme des exemples rapportés par le fournisseur.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (créée le 17 février 2026 ; mise à jour le 14 août 2026). Le NIST identifie les protocoles ouverts, l’authentification et l’infrastructure d’identité des agents ainsi que les évaluations de sécurité comme des domaines stratégiques pour une interopérabilité digne de confiance.</a></li>
+                    <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/" target="_blank" rel="noopener">W3C, « Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents » (publication le 1er juin 2026 ; atelier les 8 et 9 septembre 2026). Le W3C présente le contenu structuré et la représentation destinée aux machines comme une préoccupation émergente parce que les agents médiatisent de plus en plus l’accès aux informations publiées.</a></li>
+                    <li><a href="https://openai.com/index/ai-native-company-workflows/" target="_blank" rel="noopener">OpenAI, « How AI-native companies turn workflows into operating capability » (1er septembre 2026). L’article présente des exemples rapportés par le fournisseur autour de compétences réutilisables, de contexte de compte persistant, d’outils, de tests, de permissions et de revue humaine dans les workflows d’entreprise. Il est utilisé comme signal de conception, et non comme preuve indépendante d’une productivité générale.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

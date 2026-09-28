@@ -149,6 +149,7 @@
         'article.entry120':     { en: 'Diop Daily #120 — September 2026', fr: 'Diop Quotidien n°120 — Septembre 2026' },
         'article.entry122':     { en: 'Diop Daily #122 — September 2026', fr: 'Diop Quotidien n°122 — Septembre 2026' },
         'article.entry123':     { en: 'Diop Daily #123 — September 2026', fr: 'Diop Quotidien n°123 — Septembre 2026' },
+        'article.entry126':     { en: 'Diop Daily #126 — September 2026', fr: 'Diop Quotidien n°126 — Septembre 2026' },
         'article.entry125':     { en: 'Diop Daily #125 — September 2026', fr: 'Diop Quotidien n°125 — Septembre 2026' },
         'article.entry124':     { en: 'Diop Daily #124 — September 2026', fr: 'Diop Quotidien n°124 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
@@ -168,6 +169,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-126': {
+        title: {
+            en: "The Description Is Part of the Tool",
+            fr: "La description fait partie de l’outil"
+        },
+        excerpt: {
+            en: "Agents act through descriptions, schemas, permissions, and policy paths before they ever call an endpoint. The investable surface is the tool contract that makes machine recognition precise, local, auditable, and safe to scale.",
+            fr: "Les agents agissent à travers des descriptions, des schémas, des permissions et des chemins de politique avant même d’appeler un endpoint. La surface d’investissement est le contrat d’outil qui rend la reconnaissance par machine précise, locale, auditable et sûre à faire évoluer."
+        }
+    },
     'diop-daily-125': {
         title: {
             en: "Parallel Work Needs a Governor",
