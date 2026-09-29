@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Before the Call, Give the Institution an Address — Diop Research</title>
+    <meta name="description" content="Agents need more than endpoints and tool schemas. Institutions must publish a machine-readable address that states identity, purpose, responsibility, constraints, jurisdiction, and evidence before autonomous interaction begins."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry127">Diop Daily #127 — September 2026</div>
+                <div class="article__meta-line">
+                    <time>September 30, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>institutional identity · machine context · sovereign interfaces</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Before the Call, Give the Institution an Address</h1>
+
+                <p>An autonomous agent reaches a web service before it reaches the institution behind that service. It encounters a domain, an endpoint, a certificate, a tool list, a schema, and a response. None of those objects, by themselves, tell the machine what the resource is for, who is responsible for it, which actions are outside its jurisdiction, or whether the context it has inferred is reliable.</p>
+
+                <p>That gap is becoming a market and a constitutional problem. W3C’s Introduction Layer Community Group, launched in August, describes the missing primitive directly: a web resource should be able to introduce its identity, purpose, constraints, and responsible party to an AI agent in a discoverable, machine-native form. The proposal is still a community initiative, not a settled standard. Its importance lies in the question it forces into the open: what must an institution say about itself before a machine is allowed to act around it?</p>
+
+                <blockquote>
+                    <p>A machine cannot respect a boundary that the institution has never described.</p>
+                </blockquote>
+
+                <h2>An endpoint is a door, not a public identity</h2>
+
+                <p>Software architecture has spent decades making services callable. OpenAPI describes operations and data shapes. JSON-LD describes structured meaning. Certificates establish control over a domain. Access tokens establish that a principal may enter a protected route. These pieces are necessary, yet they answer different questions.</p>
+
+                <p>An institution also needs to state its purpose, its scope, its accountable owner, its operating jurisdiction, its constraints, and the circumstances in which it will refuse a request. A public archive may expose a search endpoint while prohibiting bulk extraction of living-person records. A cooperative may offer inventory data while requiring member consent before an order is settled. A cultural publisher may authorize quotation while reserving translation, adaptation, and commercial reuse. The endpoint can be technically healthy while the machine-facing meaning remains absent.</p>
+
+                <p>W3C’s Introduction Layer proposal distinguishes this problem from capability discovery. WebMCP may declare what an agent can do. An introduction layer would explain what a resource is, what it is responsible for, and what must remain outside the interaction. That ordering matters. An agent should learn the nature and jurisdiction of a resource before it selects the operation that appears most useful.</p>
+
+                <p>The first document an institution gives a machine therefore resembles an address more than a manual. An address locates a person or organization within a social and legal space. A machine-readable address should carry at least:</p>
+
+                <ul>
+                    <li><strong>Identity:</strong> the resource, organization, or authority that is speaking.</li>
+                    <li><strong>Purpose:</strong> the public function the resource exists to perform.</li>
+                    <li><strong>Responsibility:</strong> the party that maintains the resource and answers for its representations.</li>
+                    <li><strong>Constraints:</strong> actions, data uses, jurisdictions, and categories that are prohibited or conditional.</li>
+                    <li><strong>Evidence:</strong> the records, credentials, and update history that support the introduction.</li>
+                    <li><strong>Recourse:</strong> the route through which a person or institution can challenge a machine-mediated interpretation.</li>
+                </ul>
+
+                <h2>Identity is a boundary with a history</h2>
+
+                <p>NIST’s AI Agent Standards Initiative places agent authentication and identity infrastructure alongside open protocols and security evaluations. That arrangement is instructive. Identity lets a receiving system ask who is acting, under whose authority, and with what evidence; interoperability depends on that identity.</p>
+
+                <p>The W3C Holon Community Group offers a useful systems vocabulary for this work. Its September update describes entities as systems that contain and connect to other systems, change over time, expose projections of their internal state, and operate under constraints. The analogy to institutions is precise enough to be useful: a university, archive, ministry, cooperative, or laboratory cannot expose its entire interior to every requester. It exposes a surface through which an external actor infers the state, authority, and limits of the whole.</p>
+
+                <p>That surface needs versioning. A resource may change ownership, jurisdiction, policy, language coverage, or data retention rules while keeping the same domain. A machine that cached the old introduction can therefore make a current decision with obsolete premises. The introduction layer must carry an update time, an effective period, a version, and a way to retrieve the authoritative revision. Temporal validity belongs in the identity record because a boundary that expired yesterday is a different boundary today.</p>
+
+                <p>This is also where African sovereignty becomes concrete. Many African institutions are asked to present themselves to imported platforms through categories designed elsewhere: organization type, address format, language, legal status, beneficiary, customer, or risk. A machine-readable address gives the institution a place to declare its own distinctions before an external agent compresses them into a foreign schema.</p>
+
+                <p>A Senegalese archive may need to distinguish custodianship from ownership, oral permission from written permission, and a French catalogue label from the name used by the community. A pan-African payment cooperative may need to state the relationship between a member, a household, a local agent, and the account that settles a transaction. These are semantic and constitutional choices. They cannot be delegated to a model’s prior assumptions without surrendering part of the institution’s authority.</p>
+
+                <h2>Provenance turns an introduction into a claim</h2>
+
+                <p>An institution’s address is useful only when a machine can tell the difference between a declaration and an attested fact. W3C’s AI Computed Provenance Community Group, launched in August, frames this distinction as “Computed ≠ Asserted.” Its proposed work concerns cryptographic provenance for AI-assisted science and technology, along with conformance tests that allow an unrelated party to reproduce a result.</p>
+
+                <p>The same discipline applies to institutional introduction. A resource may claim that it represents a ministry, archive, publisher, or cooperative. The machine needs a way to inspect the binding between that claim and the authority that controls the resource. It also needs to know which parts are computed from current records, which are declared by an administrator, which were signed by an external authority, and which remain unverified.</p>
+
+                <p>W3C’s Agent Conformance and Benchmarking Community Group sharpens the operational requirement. Its August proposal calls for weighted rubrics whose checks name observable evidence, runnable tests with adversarial fixtures, versioned corpora, and published results that an unrelated party can reproduce. An introduction layer without conformance would become another field of optimistic metadata. Conformance gives the address a testable relationship to the resource it describes.</p>
+
+                <p>A serious boundary profile could therefore expose a small evidence ledger:</p>
+
+                <ol>
+                    <li>the identity claim and its issuer;</li>
+                    <li>the purpose and jurisdiction that the institution has declared;</li>
+                    <li>the constraints that were tested against the live interface;</li>
+                    <li>the current policy and data-retention version;</li>
+                    <li>the provenance of important responses and changes;</li>
+                    <li>the reproducible checks that support the profile’s conformance score.</li>
+                </ol>
+
+                <p>This does not create certainty. It creates a better basis for judgment. A machine can proceed with a bounded confidence, pause for a human, or refuse to cross a boundary when the evidence is missing or stale. Trust becomes a sequence of inspectable conditions rather than a mood generated by a polished interface.</p>
+
+                <h2>The sovereign interface begins before the API</h2>
+
+                <p>Builders often begin with the action they want an agent to perform. Institutions should begin one step earlier with the context in which that action could be legitimate. This changes the implementation order:</p>
+
+                <ul>
+                    <li>write the institution’s purpose and responsible party in machine-readable form;</li>
+                    <li>declare the jurisdictions, languages, populations, and data categories that shape interpretation;</li>
+                    <li>separate public description from privileged discovery and invocation;</li>
+                    <li>attach current policy versions, evidence links, and update conditions;</li>
+                    <li>test whether independent agents infer the same boundary from the profile;</li>
+                    <li>publish a human route for correction, appeal, and institutional contact.</li>
+                </ul>
+
+                <p>The language step is especially important. A French introduction that loses a distinction present in the English version is an identity defect, not a cosmetic translation issue. A local-language name that cannot be discovered is a distribution defect. A refusal translated into a success-shaped phrase is an authority defect. Machine-facing language belongs inside the institution’s quality and governance process.</p>
+
+                <p>This approach also protects small institutions. A university department, community archive, cultural cooperative, or municipal service does not need the infrastructure budget of a global platform to publish an accountable machine address. It needs a compact profile, a stable identifier, a signing or verification path, a conformance test, and a human route for disputes. The technical surface can be small while the constitutional content remains serious.</p>
+
+                <h2>Where capital should look</h2>
+
+                <p>The investable object is the institutional introduction layer: infrastructure that makes a resource recognizable, bounded, current, and answerable before an agent invokes its capabilities. It is distinct from a tool registry. A tool registry catalogs actions. An introduction layer establishes the authority and context in which those actions can be understood.</p>
+
+                <ul>
+                    <li><strong>Boundary-profile registries:</strong> versioned records for identity, purpose, responsibility, jurisdiction, constraints, languages, and recourse.</li>
+                    <li><strong>Identity and authority envelopes:</strong> credentials that bind an agent, service, or organization to the claims it presents across domains.</li>
+                    <li><strong>Conformance runners:</strong> reproducible tests that compare an introduction with live behavior, policy, access control, and response evidence.</li>
+                    <li><strong>Provenance adapters:</strong> systems that attach issuer, computation, transformation, and update history to machine-mediated outputs.</li>
+                    <li><strong>Multilingual boundary services:</strong> translation and terminology layers that preserve jurisdictional meaning across French, English, African languages, and domain vocabularies.</li>
+                    <li><strong>Recourse infrastructure:</strong> logs, contact routes, appeal queues, and correction workflows for people affected by an agent’s interpretation.</li>
+                </ul>
+
+                <p>Underwriting can start with observable measures: the rate at which independent agents infer the same purpose, stale-profile detection time, unauthorized discovery attempts, conformance reproducibility, policy-change propagation, language-specific interpretation error, and time from a disputed machine action to a human response. These measures describe whether an institution can be encountered without being misrepresented.</p>
+
+                <p>The strongest products in this category will sit between standards and operations. They will turn a specification into a maintained profile, a profile into a testable boundary, and a test result into evidence a buyer, regulator, partner, or community can inspect. That is a more durable position than selling another opaque agent wrapper.</p>
+
+                <h2>Give the machine a place to stand</h2>
+
+                <p>The next generation of agent systems will encounter more than APIs. They will encounter archives, schools, publishers, hospitals, public offices, cooperatives, and research laboratories whose authority cannot be reduced to a list of callable functions. Each resource will need to announce where it stands, what it serves, what it refuses, who answers for it, and how its claims can be checked.</p>
+
+                <p>Africa should participate in this layer as a producer of institutional vocabulary, not only as a consumer of imported interfaces. The continent’s languages, legal pluralities, payment systems, archives, and community structures contain distinctions that global machine schemas routinely flatten. Publishing those distinctions in durable, testable forms is technical work and political work at once.</p>
+
+                <p>Before a machine calls the institution, the institution should have the right to introduce itself. That first address is where recognition becomes authority, and where an interface can begin to serve sovereignty rather than silently replacing it.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/community/intro-layer/2026/08/13/call-for-participation-in-introduction-layer-community-group/" target="_blank" rel="noopener">W3C, “Call for Participation in Introduction Layer Community Group” (August 13, 2026). The proposal describes a machine-native way for web resources to declare identity, purpose, constraints, and responsible party before an agent interacts with them.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (created February 17, 2026; updated August 14, 2026). NIST identifies open protocols, agent authentication and identity infrastructure, and security evaluations as strategic work areas for trusted interoperability.</a></li>
+                    <li><a href="https://www.w3.org/community/holon/2026/09/17/w3c-holon-community-group-update-17-september-2026/" target="_blank" rel="noopener">W3C Holon Community Group, “W3C Holon Community Group Update 17 September 2026.” The update describes systems that contain and connect to other systems, expose projections of changing internal state, and operate under constraints, with identity and access control among the group’s work areas.</a></li>
+                    <li><a href="https://www.w3.org/community/ai-computed-provenance/2026/08/14/call-for-participation-in-ai-computed-provenance-community-group/" target="_blank" rel="noopener">W3C, “Call for Participation in AI Computed Provenance Community Group” (August 14, 2026). The proposal distinguishes computed results from assertions and calls for cryptographic provenance and independent conformance testing for AI-assisted work.</a></li>
+                    <li><a href="https://www.w3.org/community/agent-conformance/2026/08/30/call-for-participation-in-agent-conformance-and-benchmarking-community-group/" target="_blank" rel="noopener">W3C, “Call for Participation in Agent Conformance and Benchmarking Community Group” (August 30, 2026). The proposal calls for evidence-bound rubrics, adversarial fixtures, reproducible scores, versioned corpora, and comparable reporting.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Avant l’appel, donnez une adresse à l’institution</h1>
+
+                <p>Un agent autonome atteint un service web avant d’atteindre l’institution qui se trouve derrière ce service. Il rencontre un domaine, un endpoint, un certificat, une liste d’outils, un schéma et une réponse. Aucun de ces objets, pris isolément, ne dit à la machine quelle est la fonction de la ressource, qui en est responsable, quelles actions dépassent sa juridiction ou si le contexte qu’elle a déduit est fiable.</p>
+
+                <p>Cette lacune devient un problème de marché et de constitution. Le groupe communautaire Introduction Layer du W3C, lancé en août, décrit directement la primitive manquante : une ressource web devrait pouvoir présenter son identité, sa fonction, ses contraintes et son responsable à un agent d’IA sous une forme découvrable et native pour la machine. La proposition reste une initiative communautaire, et non une norme établie. Son importance réside dans la question qu’elle impose : que doit dire une institution sur elle-même avant qu’une machine puisse agir autour d’elle ?</p>
+
+                <blockquote>
+                    <p>Une machine ne peut pas respecter une frontière que l’institution n’a jamais décrite.</p>
+                </blockquote>
+
+                <h2>Un endpoint est une porte, pas une identité publique</h2>
+
+                <p>L’architecture logicielle a consacré des décennies à rendre les services appelables. OpenAPI décrit des opérations et des formes de données. JSON-LD décrit un sens structuré. Les certificats établissent le contrôle d’un domaine. Les jetons d’accès établissent qu’un mandant peut entrer dans une route protégée. Ces éléments sont nécessaires, mais ils répondent à des questions différentes.</p>
+
+                <p>Une institution doit aussi énoncer sa fonction, son périmètre, son responsable, sa juridiction opérationnelle, ses contraintes et les circonstances dans lesquelles elle refusera une demande. Une archive publique peut exposer un endpoint de recherche tout en interdisant l’extraction massive de dossiers concernant des personnes vivantes. Une coopérative peut proposer des données d’inventaire tout en exigeant le consentement de ses membres avant le règlement d’une commande. Un éditeur culturel peut autoriser la citation tout en réservant la traduction, l’adaptation et la réutilisation commerciale. L’endpoint peut être techniquement sain tandis que le sens adressé à la machine reste absent.</p>
+
+                <p>La proposition Introduction Layer du W3C distingue ce problème de la découverte des capacités. WebMCP peut déclarer ce qu’un agent peut faire. Une couche d’introduction expliquerait ce qu’est une ressource, ce dont elle est responsable et ce qui doit rester hors de l’interaction. L’ordre compte. Un agent devrait apprendre la nature et la juridiction d’une ressource avant de choisir l’opération qui semble la plus utile.</p>
+
+                <p>Le premier document qu’une institution donne à une machine ressemble donc davantage à une adresse qu’à un manuel. Une adresse situe une personne ou une organisation dans un espace social et juridique. Une adresse lisible par machine devrait contenir au minimum :</p>
+
+                <ul>
+                    <li><strong>Identité :</strong> la ressource, l’organisation ou l’autorité qui parle.</li>
+                    <li><strong>Fonction :</strong> le rôle public pour lequel la ressource existe.</li>
+                    <li><strong>Responsabilité :</strong> la partie qui maintient la ressource et répond de ses représentations.</li>
+                    <li><strong>Contraintes :</strong> les actions, usages de données, juridictions et catégories qui sont interdits ou conditionnels.</li>
+                    <li><strong>Preuves :</strong> les dossiers, justificatifs et historiques de mise à jour qui soutiennent la présentation.</li>
+                    <li><strong>Recours :</strong> la voie par laquelle une personne ou une institution peut contester une interprétation médiée par une machine.</li>
+                </ul>
+
+                <h2>L’identité est une frontière dotée d’une histoire</h2>
+
+                <p>L’AI Agent Standards Initiative du NIST place l’authentification des agents et l’infrastructure d’identité à côté des protocoles ouverts et des évaluations de sécurité. Cette organisation est instructive. L’identité n’est pas une étiquette décorative ajoutée après l’interopérabilité. Elle permet au système destinataire de demander qui agit, sous quelle autorité et avec quelles preuves.</p>
+
+                <p>Le groupe communautaire Holon du W3C offre un vocabulaire de systèmes utile à ce travail. Sa mise à jour de septembre décrit des entités comme des systèmes qui contiennent et relient d’autres systèmes, changent au fil du temps, exposent des projections de leur état intérieur et fonctionnent sous contraintes. L’analogie avec les institutions est assez précise pour être productive : une université, une archive, un ministère, une coopérative ou un laboratoire ne peut pas exposer tout son intérieur à chaque demandeur. Il expose une surface par laquelle un acteur extérieur déduit l’état, l’autorité et les limites de l’ensemble.</p>
+
+                <p>Cette surface a besoin de versions. Une ressource peut changer de propriétaire, de juridiction, de politique, de couverture linguistique ou de règle de conservation tout en gardant le même domaine. Une machine qui a conservé l’ancienne présentation peut donc prendre une décision actuelle à partir de prémisses périmées. La couche d’introduction doit porter une date de mise à jour, une période d’effet, une version et un moyen de retrouver la révision faisant autorité. La validité temporelle appartient au registre d’identité, car une frontière expirée hier est une autre frontière aujourd’hui.</p>
+
+                <p>C’est aussi ici que la souveraineté africaine devient concrète. De nombreuses institutions africaines doivent se présenter à des plateformes importées au moyen de catégories conçues ailleurs : type d’organisation, format d’adresse, langue, statut juridique, bénéficiaire, client ou risque. Une adresse lisible par machine donne à l’institution la possibilité de déclarer ses propres distinctions avant qu’un agent externe ne les comprime dans un schéma étranger.</p>
+
+                <p>Une archive sénégalaise peut devoir distinguer la garde de la propriété, l’autorisation orale de l’autorisation écrite, et l’étiquette française du catalogue du nom employé par la communauté. Une coopérative de paiement panafricaine peut devoir énoncer la relation entre un membre, un foyer, un agent local et le compte qui règle une transaction. Ce sont des choix sémantiques et constitutionnels. Les confier aux hypothèses antérieures d’un modèle revient à céder une partie de l’autorité de l’institution.</p>
+
+                <h2>La provenance transforme une présentation en affirmation</h2>
+
+                <p>Une adresse institutionnelle n’est utile que lorsqu’une machine peut distinguer une déclaration d’un fait attesté. Le groupe communautaire AI Computed Provenance du W3C, lancé en août, formule cette distinction comme « Computed ≠ Asserted ». Son travail proposé porte sur la provenance cryptographique de la science et de la technologie assistées par l’IA, ainsi que sur des tests de conformité permettant à une partie indépendante de reproduire un résultat.</p>
+
+                <p>La même discipline s’applique à la présentation institutionnelle. Une ressource peut affirmer qu’elle représente un ministère, une archive, un éditeur ou une coopérative. La machine a besoin d’un moyen d’inspecter le lien entre cette affirmation et l’autorité qui contrôle la ressource. Elle doit également savoir quelles parties sont calculées à partir de dossiers actuels, lesquelles sont déclarées par un administrateur, lesquelles sont signées par une autorité externe et lesquelles restent non vérifiées.</p>
+
+                <p>Le groupe communautaire Agent Conformance and Benchmarking du W3C précise l’exigence opérationnelle. Sa proposition d’août demande des grilles pondérées dont chaque contrôle nomme une preuve observable, des tests exécutables avec des fixtures adversariales, des corpus versionnés et des résultats publiés qu’une partie indépendante peut reproduire. Une couche d’introduction sans conformité deviendrait un autre champ de métadonnées optimistes. La conformité donne à l’adresse une relation testable avec la ressource qu’elle décrit.</p>
+
+                <p>Un profil de frontière sérieux pourrait donc exposer un petit registre de preuves :</p>
+
+                <ol>
+                    <li>l’affirmation d’identité et son émetteur ;</li>
+                    <li>la fonction et la juridiction déclarées par l’institution ;</li>
+                    <li>les contraintes testées contre l’interface active ;</li>
+                    <li>la version actuelle de la politique et de la conservation des données ;</li>
+                    <li>la provenance des réponses et des changements importants ;</li>
+                    <li>les contrôles reproductibles qui soutiennent le score de conformité du profil.</li>
+                </ol>
+
+                <p>Cela ne crée pas la certitude. Cela crée une meilleure base pour le jugement. Une machine peut continuer avec une confiance bornée, s’arrêter pour demander un avis humain ou refuser de franchir une frontière lorsque la preuve manque ou est périmée. La confiance devient une suite de conditions inspectables plutôt qu’une impression produite par une interface soignée.</p>
+
+                <h2>L’interface souveraine commence avant l’API</h2>
+
+                <p>Les constructeurs commencent souvent par l’action qu’ils veulent faire accomplir à un agent. Les institutions devraient commencer un pas plus tôt, avec le contexte dans lequel cette action pourrait être légitime. Cela change l’ordre de mise en œuvre :</p>
+
+                <ul>
+                    <li>écrire la fonction de l’institution et son responsable sous une forme lisible par machine ;</li>
+                    <li>déclarer les juridictions, langues, populations et catégories de données qui orientent l’interprétation ;</li>
+                    <li>séparer la description publique de la découverte et de l’invocation privilégiées ;</li>
+                    <li>attacher les versions de politique, les liens de preuve et les conditions de mise à jour ;</li>
+                    <li>tester si des agents indépendants déduisent la même frontière à partir du profil ;</li>
+                    <li>publier une voie humaine de correction, de recours et de contact institutionnel.</li>
+                </ul>
+
+                <p>La question de la langue est particulièrement importante. Une introduction française qui perd une distinction présente dans la version anglaise constitue un défaut d’identité, et non un détail cosmétique de traduction. Un nom en langue locale impossible à découvrir constitue un défaut de distribution. Un refus traduit par une formule qui ressemble à un succès constitue un défaut d’autorité. La langue destinée aux machines appartient au processus de qualité et de gouvernance de l’institution.</p>
+
+                <p>Cette méthode protège aussi les petites institutions. Un département universitaire, une archive communautaire, une coopérative culturelle ou un service municipal n’a pas besoin du budget d’infrastructure d’une plateforme mondiale pour publier une adresse machine responsable. Il lui faut un profil compact, un identifiant stable, un chemin de signature ou de vérification, un test de conformité et une voie humaine pour les litiges. La surface technique peut rester petite tandis que le contenu constitutionnel demeure sérieux.</p>
+
+                <h2>Où le capital doit regarder</h2>
+
+                <p>L’objet investissable est la couche d’introduction institutionnelle : une infrastructure qui rend une ressource reconnaissable, bornée, actuelle et responsable avant qu’un agent n’invoque ses capacités. Elle se distingue d’un registre d’outils. Le registre d’outils catalogue des actions ; la couche d’introduction établit l’autorité et le contexte dans lesquels ces actions peuvent être comprises.</p>
+
+                <ul>
+                    <li><strong>Registres de profils de frontière :</strong> dossiers versionnés pour l’identité, la fonction, la responsabilité, la juridiction, les contraintes, les langues et les recours.</li>
+                    <li><strong>Enveloppes d’identité et d’autorité :</strong> justificatifs qui lient un agent, un service ou une organisation aux affirmations qu’il présente entre plusieurs domaines.</li>
+                    <li><strong>Exécuteurs de conformité :</strong> tests reproductibles qui comparent une présentation au comportement actif, à la politique, au contrôle d’accès et aux preuves de réponse.</li>
+                    <li><strong>Adaptateurs de provenance :</strong> systèmes qui attachent l’émetteur, le calcul, la transformation et l’historique des mises à jour aux sorties médiées par une machine.</li>
+                    <li><strong>Services de frontière multilingues :</strong> couches de traduction et de terminologie qui préservent le sens juridictionnel entre le français, l’anglais, les langues africaines et les vocabulaires spécialisés.</li>
+                    <li><strong>Infrastructure de recours :</strong> journaux, routes de contact, files d’appel et workflows de correction pour les personnes touchées par l’interprétation d’un agent.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des mesures observables : taux auquel des agents indépendants déduisent la même fonction, délai de détection d’un profil périmé, tentatives de découverte non autorisées, reproductibilité de la conformité, propagation d’un changement de politique, erreurs d’interprétation propres à une langue et délai entre une action contestée et une réponse humaine. Ces mesures indiquent si une institution peut être rencontrée sans être mal représentée.</p>
+
+                <p>Les produits les plus solides de cette catégorie se situeront entre les normes et les opérations. Ils transformeront une spécification en profil maintenu, un profil en frontière testable et un résultat de test en preuve qu’un acheteur, un régulateur, un partenaire ou une communauté peut inspecter. Cette position est plus durable que la vente d’une nouvelle enveloppe opaque pour agents.</p>
+
+                <h2>Donnez à la machine un lieu où se tenir</h2>
+
+                <p>La prochaine génération de systèmes agentiques rencontrera plus que des API. Elle rencontrera des archives, des écoles, des éditeurs, des hôpitaux, des services publics, des coopératives et des laboratoires de recherche dont l’autorité ne peut pas être réduite à une liste de fonctions appelables. Chaque ressource devra annoncer où elle se situe, ce qu’elle sert, ce qu’elle refuse, qui en répond et comment ses affirmations peuvent être contrôlées.</p>
+
+                <p>L’Afrique doit participer à cette couche comme productrice de vocabulaire institutionnel, et non seulement comme consommatrice d’interfaces importées. Ses langues, ses pluralités juridiques, ses systèmes de paiement, ses archives et ses structures communautaires contiennent des distinctions que les schémas mondiaux des machines aplatissent régulièrement. Publier ces distinctions sous des formes durables et testables est à la fois un travail technique et un travail politique.</p>
+
+                <p>Avant qu’une machine n’appelle l’institution, l’institution doit avoir le droit de se présenter. Cette première adresse est l’endroit où la reconnaissance devient autorité et où une interface peut commencer à servir la souveraineté au lieu de la remplacer en silence.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/community/intro-layer/2026/08/13/call-for-participation-in-introduction-layer-community-group/" target="_blank" rel="noopener">W3C, « Call for Participation in Introduction Layer Community Group » (13 août 2026). La proposition décrit un moyen natif pour les machines permettant aux ressources web de déclarer leur identité, leur fonction, leurs contraintes et leur responsable avant toute interaction avec un agent.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (créée le 17 février 2026 ; mise à jour le 14 août 2026). Le NIST identifie les protocoles ouverts, l’authentification et l’infrastructure d’identité des agents ainsi que les évaluations de sécurité comme des domaines stratégiques pour une interopérabilité digne de confiance.</a></li>
+                    <li><a href="https://www.w3.org/community/holon/2026/09/17/w3c-holon-community-group-update-17-september-2026/" target="_blank" rel="noopener">W3C Holon Community Group, « W3C Holon Community Group Update 17 September 2026 ». La mise à jour décrit des systèmes qui contiennent et relient d’autres systèmes, exposent des projections d’un état intérieur changeant et fonctionnent sous contraintes, avec l’identité et le contrôle d’accès parmi les domaines de travail.</a></li>
+                    <li><a href="https://www.w3.org/community/ai-computed-provenance/2026/08/14/call-for-participation-in-ai-computed-provenance-community-group/" target="_blank" rel="noopener">W3C, « Call for Participation in AI Computed Provenance Community Group » (14 août 2026). La proposition distingue les résultats calculés des affirmations et demande une provenance cryptographique ainsi que des tests de conformité indépendants pour les travaux assistés par l’IA.</a></li>
+                    <li><a href="https://www.w3.org/community/agent-conformance/2026/08/30/call-for-participation-in-agent-conformance-and-benchmarking-community-group/" target="_blank" rel="noopener">W3C, « Call for Participation in Agent Conformance and Benchmarking Community Group » (30 août 2026). La proposition demande des grilles liées aux preuves, des fixtures adversariales, des scores reproductibles, des corpus versionnés et des formats de rapport comparables.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

@@ -150,6 +150,7 @@
         'article.entry122':     { en: 'Diop Daily #122 — September 2026', fr: 'Diop Quotidien n°122 — Septembre 2026' },
         'article.entry123':     { en: 'Diop Daily #123 — September 2026', fr: 'Diop Quotidien n°123 — Septembre 2026' },
         'article.entry126':     { en: 'Diop Daily #126 — September 2026', fr: 'Diop Quotidien n°126 — Septembre 2026' },
+        'article.entry127':     { en: 'Diop Daily #127 — September 2026', fr: 'Diop Quotidien n°127 — Septembre 2026' },
         'article.entry125':     { en: 'Diop Daily #125 — September 2026', fr: 'Diop Quotidien n°125 — Septembre 2026' },
         'article.entry124':     { en: 'Diop Daily #124 — September 2026', fr: 'Diop Quotidien n°124 — Septembre 2026' },
         'article.entry097':     { en: 'Diop Daily #097 — August 2026', fr: 'Diop Quotidien n°097 — Août 2026' },
@@ -169,6 +170,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-127': {
+        title: {
+            en: "Before the Call, Give the Institution an Address",
+            fr: "Avant l’appel, donnez une adresse à l’institution"
+        },
+        excerpt: {
+            en: "Agents need more than endpoints and tool schemas. Institutions must publish a machine-readable address that states identity, purpose, responsibility, constraints, jurisdiction, and evidence before autonomous interaction begins.",
+            fr: "Les agents ont besoin de plus que des endpoints et des schémas d’outils. Les institutions doivent publier une adresse lisible par machine qui énonce l’identité, la fonction, la responsabilité, les contraintes, la juridiction et les preuves avant le début de l’interaction autonome."
+        }
+    },
     'diop-daily-126': {
         title: {
             en: "The Description Is Part of the Tool",
