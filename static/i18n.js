@@ -158,6 +158,7 @@
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
         'article.entry090':     { en: 'Diop Daily #090 — August 2026', fr: 'Diop Quotidien n°090 — Août 2026' },
         'article.entry086':     { en: 'Diop Daily #086 — August 2026', fr: 'Diop Quotidien n°086 — Août 2026' },
+        'article.entry128':     { en: 'Diop Daily #128 — October 2026', fr: 'Diop Quotidien n°128 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -170,6 +171,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-128': {
+        title: {
+            en: "A Product Must Carry Its Own Passport",
+            fr: "Un produit doit porter son propre passeport"
+        },
+        excerpt: {
+            en: "An agent can complete discovery and payment while still selecting the wrong physical item. The investable layer is product truth: canonical identity, variant resolution, authority, provenance, and fresh evidence that travel across languages, markets, and payment rails.",
+            fr: "Un agent peut mener à bien la découverte et le paiement tout en sélectionnant le mauvais objet physique. La couche d’investissement est la vérité du produit : identité canonique, résolution des variantes, autorité, provenance et preuves actuelles qui circulent entre langues, marchés et rails de paiement."
+        }
+    },
     'diop-daily-127': {
         title: {
             en: "Before the Call, Give the Institution an Address",

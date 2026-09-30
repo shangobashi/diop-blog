@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Product Must Carry Its Own Passport — Diop Research</title>
+    <meta name="description" content="Agentic commerce can discover, compare, and pay while still selecting the wrong physical item. The missing layer is product truth: a canonical identity tied to variant, provenance, authority, freshness, and evidence that can travel across languages, markets, and payment rails."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry128">Diop Daily #128 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 1, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>product identity · agentic commerce · verifiable data</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Product Must Carry Its Own Passport</h1>
+
+                <p>An agent can search, compare, check out, and pay while still buying the wrong physical item. The failure can occur after every interface has behaved correctly: the offer was discoverable, the payment was authorized, and the receipt was generated. The missing layer is product truth, a durable identity that ties an object to its exact variant, claims, origin, authority, freshness, and permitted uses.</p>
+
+                <p>This is the next boundary in agentic commerce. The machine needs more than a catalog entry and more than a merchant endpoint. It needs a product that can answer for itself when the agent asks: Which thing is this? Who speaks for its data? Which version is on the shelf? Which claim is current? What evidence supports the answer? A product passport is the compact name for that bundle of identity and evidence.</p>
+
+                <blockquote>
+                    <p>Payment can authorize a purchase; only product truth can tell us what was purchased.</p>
+                </blockquote>
+
+                <h2>The last meter is where identity becomes economic</h2>
+
+                <p>Much of the public discussion about agentic commerce concentrates on the visible journey: discovery, comparison, checkout, payment, and order management. Google’s Universal Commerce Protocol describes this journey as a standardized set of commerce capabilities that can connect consumer surfaces, business backends, and payment providers. The protocol’s architecture addresses a genuine integration problem. A business needs a common way to expose what it can sell and how an agent can transact.</p>
+
+                <p>Yet a common transaction language does not automatically create a common object of reference. A product title can remain ambiguous across languages, package sizes, formulas, seasonal designs, geographic versions, or batches. An agent may complete the correct protocol exchange around the wrong interpretation. That is why the W3C/GS1 workshop held in September placed product identity, structured data, provenance, agent identity, and delegated authority beside the commerce protocol itself.</p>
+
+                <p>One workshop session described the exact physical item as the last-mile problem: an agent may search and pay successfully while selecting the wrong product. Another described consumer-pack-variant disambiguation, where a single trade-item identifier can cover reformulations, promotional packaging, or seasonal artwork that still require distinct machine-readable treatment. These are workshop contributions and implementation perspectives, not evidence that the market has solved the problem. They do show the standards community naming the boundary that a payment success screen hides.</p>
+
+                <p>The economic consequence is direct. If the agent cannot distinguish the item, the merchant bears the cost of returns, disputes, unsafe recommendations, inventory errors, and lost confidence. If the product carries a stable identity that resolves to current, authoritative information, the same transaction can support a chain of later actions: replenishment, warranty, safety instruction, recall, repair, resale, or provenance review.</p>
+
+                <h2>Identity is separate from information about the thing</h2>
+
+                <p>GS1’s Conformant Resolver standard makes a useful distinction. A GS1 Digital Link URI identifies the entity itself, while the information about that entity may change over time. The identifier can remain persistent as product pages, instructions, certifications, or other linked resources are updated. A resolver can expose several machine-discoverable and machine-actionable links without forcing every related asset into one database.</p>
+
+                <p>This separation is stronger than a static product page. It treats identity as a durable address and information as a governed, changing projection. The same object can therefore have different views for a consumer, a retailer, a customs process, a service technician, or an authorized agent, while the underlying identity remains stable enough to connect those views.</p>
+
+                <p>That pattern has particular value in multilingual and fragmented markets. A product’s name, instructions, and commercial description may travel through several languages and distribution channels. The identity should travel with it, while each authorized information source can provide the language and level of detail required by its audience. This is an architectural inference, not a claim about any specific market. It points toward a practical form of sovereignty: local institutions can publish the meanings and evidence attached to an identifier without surrendering the identifier to every platform that displays the product.</p>
+
+                <p>A product passport should therefore contain, or point to, at least these fields:</p>
+
+                <ul>
+                    <li><strong>Canonical identity:</strong> the identifier for the product, location, asset, batch, lot, or serial instance being discussed.</li>
+                    <li><strong>Variant and time:</strong> the size, formulation, language, market, expiry, revision, or packaging state that limits the claim.</li>
+                    <li><strong>Authority:</strong> the organization or person authorized to publish, update, revoke, or correct each important assertion.</li>
+                    <li><strong>Evidence and provenance:</strong> the source, transformation, certification, measurement, or signature that supports the assertion.</li>
+                    <li><strong>Resolution policy:</strong> the links, permissions, freshness rules, and refusal states that determine what an agent may learn or do next.</li>
+                </ul>
+
+                <p>The list is deliberately operational. “Organic,” “safe,” “available,” “compatible,” and “the customer’s requested item” are different kinds of statements. They need different authorities, evidence, time windows, and correction paths. A machine-readable product surface becomes trustworthy when it preserves those distinctions instead of flattening them into a persuasive description.</p>
+
+                <h2>Protocols move messages; passports preserve referents</h2>
+
+                <p>Recent protocol work can make commerce more interoperable while leaving the referent unstable. UCP describes discovery and capability schemas across consumer surfaces, businesses, and payment providers. W3C’s workshop agenda places this beside questions about product truth, trusted identity, agent reputation, and authority to speak for a product identifier. NIST’s AI Agent Standards Initiative adds the identity and authentication vocabulary required for secure human-agent and multi-agent interaction.</p>
+
+                <p>These layers should be kept distinct. The commerce protocol governs how a request travels. The agent identity layer helps establish who is acting and under whose authority. The product passport governs what object the request concerns and which claims may be relied upon. A payment credential answers whether a transaction may proceed. It does not answer whether the agent and merchant agreed on the same physical item.</p>
+
+                <p>Collapsing these layers creates predictable confusion. A merchant may prove that it authorized a checkout while the buyer disputes the variant. A platform may sign a product description while lacking authority over the brand’s underlying identifier. An agent may present a trusted identity while carrying stale product data. A system that preserves the transaction but loses the referent leaves the hardest question outside the record.</p>
+
+                <p>For African commerce and cultural production, the implication is larger than retail. Books, medicines, agricultural inputs, craft goods, educational materials, and creative licenses all require machine-readable distinctions that survive distribution. A local publisher should be able to state which edition an agent is recommending. A cooperative should be able to distinguish a product lot from a generic category. A rights holder should be able to identify the exact asset and the conditions under which it may be quoted, sold, or transformed. The infrastructure should support local terminology and local authority without making every institution rebuild a separate integration for every agent.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the product-truth layer: infrastructure that keeps identity, variant, evidence, authority, freshness, and machine-actionable resolution attached to the thing being offered.</p>
+
+                <ul>
+                    <li><strong>Identity registries:</strong> systems that issue, resolve, and maintain canonical identifiers across products, variants, lots, editions, and service assets.</li>
+                    <li><strong>Authority registries:</strong> records that distinguish who may speak for an identifier, who may update a claim, and how a disputed assertion is corrected or revoked.</li>
+                    <li><strong>Variant resolution:</strong> services that prevent a general identifier from hiding a formulation, language, market, batch, or packaging change that matters to the decision.</li>
+                    <li><strong>Evidence services:</strong> provenance-aware stores that bind claims to source documents, measurements, certifications, signatures, and validity windows.</li>
+                    <li><strong>Agent-readable distribution:</strong> interfaces that expose product truth through APIs, UCP, A2A, MCP, Web data, and human-readable pages without creating contradictory copies.</li>
+                </ul>
+
+                <p>Underwriting can begin with measurable questions. How often does a transaction resolve to the wrong variant? Can an agent retrieve the same product identity across two languages and two channels? How quickly does a revoked claim disappear from authorized surfaces? Can the merchant prove which evidence was current when the recommendation was made? Can a buyer export its identifiers, claims, provenance, and correction history when it changes platform?</p>
+
+                <p>The stronger companies in this layer will sell fewer promises and more durable references. Their customers will include brands, retailers, logistics networks, payment providers, publishers, manufacturers, regulators, and agents that need a shared answer to “what is this?” Revenue may arrive through verification, resolution, compliance, data infrastructure, or transaction support. The defensible asset is the network of maintained identities and authoritative relationships, not a prettier catalog.</p>
+
+                <h2>Build the passport before automating the purchase</h2>
+
+                <p>A serious institution can begin with one product family and one high-cost ambiguity. Choose the item that creates the most returns, disputes, unsafe confusion, or manual clarification. Assign it a canonical identity. Separate its variants. Name the authority for each claim. Attach evidence and validity dates. Publish a resolver that returns both human-readable and machine-actionable information. Then test an agent in English and French, with a refusal path for uncertainty.</p>
+
+                <p>The test should ask more than whether the agent completes checkout. It should ask whether the agent can explain which exact item it selected, which claims it relied on, who issued those claims, and what would cause the answer to change. A successful purchase with an untraceable referent is operationally incomplete.</p>
+
+                <p>Standards will help agents cross boundaries, but standards alone cannot decide who owns a product’s truth. That decision belongs to institutions that maintain the identifier, the evidence, the language, and the right of correction. The machine may carry the request across the market. The product must carry the passport that tells the market what it is.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/2026/ecommerce-agents/agenda.html" target="_blank" rel="noopener">W3C/GS1 Workshop on E-Commerce for Humans and AI Agents, agenda for 8–9 September 2026. The agenda records sessions on Universal Commerce Protocol, consumer-pack-variant disambiguation, verifiable product data, agent identity, delegated authority, and product identity at the last meter. These are workshop perspectives and implementation reports, not proof that the market has solved the problems described.</a></li>
+                    <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/" target="_blank" rel="noopener">W3C, “Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents” (published June 1, 2026). W3C describes agents as new intermediaries between published content and end users and frames machine-oriented content creation as a standards and implementation concern.</a></li>
+                    <li><a href="https://ref.gs1.org/standards/resolver/" target="_blank" rel="noopener">GS1, “GS1-Conformant Resolver Standard.” The standard distinguishes the persistent identity of an entity from changing information about that entity and defines machine-discoverable, machine-actionable resolution through GS1 Digital Link identifiers.</a></li>
+                    <li><a href="https://developers.googleblog.com/under-the-hood-universal-commerce-protocol-ucp/" target="_blank" rel="noopener">Google Developers Blog, “Under the Hood: Universal Commerce Protocol (UCP)” (January 11, 2026). The technical overview describes open commerce capabilities, discovery, product and checkout flows, multiple transports, and verifiable payment authorization. It is a vendor account of the protocol’s design, not independent proof of deployment outcomes.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). NIST identifies open protocols, agent authentication and identity infrastructure, and security evaluations as strategic work areas for trusted interoperability.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Un produit doit porter son propre passeport</h1>
+
+                <p>Un agent peut rechercher, comparer, passer la commande et payer tout en achetant le mauvais objet physique. L’échec peut survenir après le bon fonctionnement de chaque interface : l’offre était découvrable, le paiement était autorisé et le reçu avait été produit. La couche manquante est la vérité du produit, une identité durable qui relie un objet à sa variante exacte, à ses déclarations, à son origine, à son autorité, à son actualité et à ses usages autorisés.</p>
+
+                <p>Voici la prochaine frontière du commerce agentique. La machine a besoin de plus qu’une entrée de catalogue et de plus qu’un endpoint marchand. Elle a besoin d’un produit capable de répondre lorsqu’un agent demande : De quelle chose s’agit-il ? Qui parle au nom de ses données ? Quelle version se trouve sur l’étagère ? Quelle déclaration est actuelle ? Quelle preuve soutient la réponse ? Le passeport du produit est le nom compact de cet ensemble d’identité et de preuves.</p>
+
+                <blockquote>
+                    <p>Le paiement peut autoriser un achat ; seule la vérité du produit peut dire ce qui a été acheté.</p>
+                </blockquote>
+
+                <h2>Le dernier mètre est celui où l’identité devient économique</h2>
+
+                <p>Une grande partie du débat public sur le commerce agentique se concentre sur le parcours visible : découverte, comparaison, paiement, commande et gestion de la commande. Le Universal Commerce Protocol de Google décrit ce parcours comme un ensemble standardisé de capacités commerciales reliant surfaces destinées aux consommateurs, backends d’entreprise et fournisseurs de paiement. L’architecture répond à un vrai problème d’intégration. Une entreprise a besoin d’un moyen commun d’exposer ce qu’elle vend et la manière dont un agent peut effectuer une transaction.</p>
+
+                <p>Pourtant, un langage commun de transaction ne crée pas automatiquement un objet de référence commun. Un titre de produit peut rester ambigu entre les langues, les formats, les formulations, les emballages saisonniers, les marchés géographiques ou les lots. Un agent peut mener à bien l’échange prévu par le protocole tout en se fondant sur une mauvaise interprétation. C’est pourquoi l’atelier W3C/GS1 tenu en septembre a placé l’identité du produit, les données structurées, la provenance, l’identité des agents et l’autorité déléguée à côté du protocole commercial.</p>
+
+                <p>Une session de l’atelier a décrit l’objet physique exact comme le problème du dernier mètre : un agent peut chercher et payer correctement tout en sélectionnant le mauvais produit. Une autre a traité la distinction des variantes de conditionnement, lorsqu’un identifiant de produit peut couvrir des reformulations, des emballages promotionnels ou des visuels saisonniers qui exigent malgré tout un traitement lisible par machine. Ces contributions sont des perspectives d’atelier et d’implémentation, non la preuve que le marché a résolu le problème. Elles montrent cependant que la communauté des standards nomme la frontière que masque un écran de paiement réussi.</p>
+
+                <p>La conséquence économique est directe. Lorsque l’agent ne distingue pas l’objet, le marchand supporte le coût des retours, des litiges, des recommandations dangereuses, des erreurs d’inventaire et de la confiance perdue. Lorsque le produit porte une identité stable qui mène vers des informations actuelles et faisant autorité, la même transaction peut soutenir ensuite le réapprovisionnement, la garantie, les consignes de sécurité, le rappel, la réparation, la revente ou l’examen de provenance.</p>
+
+                <h2>L’identité est distincte de l’information sur la chose</h2>
+
+                <p>Le standard GS1 Conformant Resolver établit une distinction utile. Un URI GS1 Digital Link identifie l’entité elle-même, tandis que les informations relatives à cette entité peuvent changer au fil du temps. L’identifiant peut rester persistant lorsque les pages produit, les instructions, les certifications ou d’autres ressources liées sont mises à jour. Un resolver peut exposer plusieurs liens découvrables et exploitables par machine sans obliger tous les actifs associés à entrer dans une seule base de données.</p>
+
+                <p>Cette séparation est plus forte qu’une page produit statique. Elle traite l’identité comme une adresse durable et l’information comme une projection gouvernée et changeante. Le même objet peut ainsi avoir des vues différentes pour un consommateur, un détaillant, un service douanier, un technicien ou un agent autorisé, tandis que l’identité sous-jacente reste assez stable pour relier ces vues.</p>
+
+                <p>Cette forme a une valeur particulière dans les marchés multilingues et fragmentés. Le nom, les instructions et la description commerciale d’un produit peuvent circuler entre plusieurs langues et canaux de distribution. L’identité doit voyager avec lui, tandis que chaque source autorisée peut fournir la langue et le niveau de détail requis par son public. Il s’agit d’une inférence architecturale, non d’une affirmation sur un marché particulier. Elle indique une forme pratique de souveraineté : les institutions locales peuvent publier les significations et les preuves attachées à un identifiant sans abandonner cet identifiant à chaque plateforme qui affiche le produit.</p>
+
+                <p>Un passeport de produit devrait donc contenir, ou désigner, au moins les champs suivants :</p>
+
+                <ul>
+                    <li><strong>Identité canonique :</strong> l’identifiant du produit, du lieu, de l’actif, du lot ou de l’instance sérielle dont il est question.</li>
+                    <li><strong>Variante et temps :</strong> la taille, la formulation, la langue, le marché, l’expiration, la révision ou l’état d’emballage qui limite la déclaration.</li>
+                    <li><strong>Autorité :</strong> l’organisation ou la personne autorisée à publier, mettre à jour, révoquer ou corriger chaque assertion importante.</li>
+                    <li><strong>Preuve et provenance :</strong> la source, la transformation, la certification, la mesure ou la signature qui soutient l’assertion.</li>
+                    <li><strong>Politique de résolution :</strong> les liens, permissions, règles d’actualité et états de refus qui déterminent ce qu’un agent peut apprendre ou faire ensuite.</li>
+                </ul>
+
+                <p>La liste est volontairement opérationnelle. « Biologique », « sûr », « disponible », « compatible » et « l’article demandé par le client » sont des déclarations de nature différente. Elles exigent des autorités, des preuves, des fenêtres temporelles et des chemins de correction différents. Une surface produit lisible par machine devient digne de confiance lorsqu’elle préserve ces distinctions au lieu de les aplatir dans une description persuasive.</p>
+
+                <h2>Les protocoles déplacent les messages ; les passeports préservent les référents</h2>
+
+                <p>Les travaux récents sur les protocoles peuvent rendre le commerce plus interopérable tout en laissant le référent instable. UCP décrit la découverte et les schémas de capacité entre surfaces de consommateurs, entreprises et fournisseurs de paiement. L’agenda de l’atelier W3C place cela à côté des questions de vérité produit, d’identité de confiance, de réputation des agents et d’autorité pour parler au nom d’un identifiant produit. L’AI Agent Standards Initiative du NIST ajoute le vocabulaire d’identité et d’authentification nécessaire aux interactions sûres entre humains et agents, ainsi qu’entre agents.</p>
+
+                <p>Ces couches doivent rester distinctes. Le protocole commercial gouverne le déplacement d’une demande. La couche d’identité de l’agent aide à établir qui agit et sous quelle autorité. Le passeport du produit gouverne l’objet concerné et les déclarations auxquelles on peut se fier. Un identifiant de paiement répond à la question de savoir si la transaction peut continuer. Il ne dit pas si l’agent et le marchand parlent du même objet physique.</p>
+
+                <p>La fusion de ces couches crée une confusion prévisible. Un marchand peut prouver qu’il a autorisé une commande tandis que l’acheteur conteste la variante. Une plateforme peut signer une description de produit sans avoir autorité sur l’identifiant sous-jacent de la marque. Un agent peut présenter une identité fiable tout en transportant des données produit périmées. Un système qui conserve la transaction mais perd le référent laisse la question la plus difficile hors du dossier.</p>
+
+                <p>Pour le commerce et la production culturelle en Afrique, la conséquence dépasse le commerce de détail. Les livres, médicaments, intrants agricoles, objets artisanaux, supports éducatifs et licences créatives exigent tous des distinctions lisibles par machine qui survivent à la distribution. Un éditeur local devrait pouvoir préciser quelle édition un agent recommande. Une coopérative devrait pouvoir distinguer un lot d’un produit générique. Un titulaire de droits devrait pouvoir identifier l’actif exact et les conditions dans lesquelles il peut être cité, vendu ou transformé. L’infrastructure doit soutenir les termes et l’autorité locales sans obliger chaque institution à reconstruire une intégration pour chaque agent.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est la couche de vérité du produit : l’infrastructure qui maintient l’identité, la variante, la preuve, l’autorité, l’actualité et la résolution exploitable par machine attachées à la chose proposée.</p>
+
+                <ul>
+                    <li><strong>Registres d’identité :</strong> systèmes qui émettent, résolvent et maintiennent des identifiants canoniques pour les produits, variantes, lots, éditions et actifs de service.</li>
+                    <li><strong>Registres d’autorité :</strong> dossiers qui distinguent ceux qui peuvent parler au nom d’un identifiant, mettre à jour une déclaration et corriger ou révoquer une assertion contestée.</li>
+                    <li><strong>Résolution des variantes :</strong> services qui empêchent un identifiant général de dissimuler une formulation, une langue, un marché, un lot ou un changement d’emballage important pour la décision.</li>
+                    <li><strong>Services de preuve :</strong> espaces de provenance qui relient les déclarations aux documents sources, mesures, certifications, signatures et périodes de validité.</li>
+                    <li><strong>Distribution lisible par les agents :</strong> interfaces qui exposent la vérité produit par API, UCP, A2A, MCP, données Web et pages lisibles par l’humain sans créer de copies contradictoires.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des questions mesurables. À quelle fréquence une transaction aboutit-elle à la mauvaise variante ? Un agent peut-il retrouver la même identité produit dans deux langues et deux canaux ? À quelle vitesse une déclaration révoquée disparaît-elle des surfaces autorisées ? Le marchand peut-il prouver quelles preuves étaient actuelles au moment de la recommandation ? L’acheteur peut-il exporter ses identifiants, déclarations, provenances et historiques de correction lorsqu’il change de plateforme ?</p>
+
+                <p>Les entreprises les plus solides de cette couche vendront moins de promesses et davantage de références durables. Leurs clients incluront des marques, des détaillants, des réseaux logistiques, des fournisseurs de paiement, des éditeurs, des fabricants, des régulateurs et des agents qui ont besoin d’une réponse partagée à la question « qu’est-ce que ceci ? ». Les revenus peuvent venir de la vérification, de la résolution, de la conformité, de l’infrastructure de données ou du soutien à la transaction. L’actif défendable est le réseau d’identités maintenues et de relations faisant autorité, non un catalogue plus élégant.</p>
+
+                <h2>Construire le passeport avant d’automatiser l’achat</h2>
+
+                <p>Une institution sérieuse peut commencer avec une famille de produits et une ambiguïté coûteuse. Choisissez l’article qui produit le plus de retours, de litiges, de confusions dangereuses ou de demandes manuelles de clarification. Attribuez-lui une identité canonique. Séparez ses variantes. Nommez l’autorité de chaque déclaration. Attachez les preuves et les dates de validité. Publiez un resolver qui renvoie des informations lisibles par l’humain et exploitables par machine. Testez ensuite un agent en anglais et en français, avec un chemin de refus lorsque l’incertitude demeure.</p>
+
+                <p>Le test doit demander plus que la réussite du paiement. Il doit demander si l’agent peut expliquer quel objet exact il a sélectionné, quelles déclarations il a utilisées, qui les a émises et ce qui ferait changer la réponse. Un achat réussi dont le référent est impossible à retracer reste incomplet du point de vue opérationnel.</p>
+
+                <p>Les standards aideront les agents à franchir les frontières, mais les standards seuls ne peuvent pas décider qui possède la vérité d’un produit. Cette décision appartient aux institutions qui entretiennent l’identifiant, les preuves, la langue et le droit de correction. La machine peut transporter la demande à travers le marché. Le produit doit porter le passeport qui dit au marché ce qu’il est.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/2026/ecommerce-agents/agenda.html" target="_blank" rel="noopener">Atelier W3C/GS1 sur le commerce électronique pour les humains et les agents d’IA, agenda des 8 et 9 septembre 2026. L’agenda consigne des sessions sur le Universal Commerce Protocol, la distinction des variantes de conditionnement, les données produit vérifiables, l’identité des agents, l’autorité déléguée et l’identité du produit au dernier mètre. Il s’agit de perspectives d’atelier et de retours d’implémentation, non de la preuve que le marché a résolu ces problèmes.</a></li>
+                    <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/" target="_blank" rel="noopener">W3C, « Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents » (publication le 1er juin 2026). Le W3C décrit les agents comme de nouveaux intermédiaires entre le contenu publié et les usagers finaux et présente la création de contenu destiné aux machines comme une question de standards et d’implémentation.</a></li>
+                    <li><a href="https://ref.gs1.org/standards/resolver/" target="_blank" rel="noopener">GS1, « GS1-Conformant Resolver Standard ». Le standard distingue l’identité persistante d’une entité des informations changeantes qui la concernent et définit une résolution découvrable et exploitable par machine au moyen des identifiants GS1 Digital Link.</a></li>
+                    <li><a href="https://developers.googleblog.com/under-the-hood-universal-commerce-protocol-ucp/" target="_blank" rel="noopener">Google Developers Blog, « Under the Hood: Universal Commerce Protocol (UCP) » (11 janvier 2026). La présentation technique décrit des capacités commerciales ouvertes, la découverte, les parcours produit et paiement, plusieurs transports et l’autorisation de paiement vérifiable. Il s’agit du récit du fournisseur sur la conception du protocole, et non d’une preuve indépendante de résultats de déploiement.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mise à jour le 14 août 2026). Le NIST identifie les protocoles ouverts, l’authentification et l’infrastructure d’identité des agents ainsi que les évaluations de sécurité comme des domaines stratégiques pour une interopérabilité digne de confiance.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
