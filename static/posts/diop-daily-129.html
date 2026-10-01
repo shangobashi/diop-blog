@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Memory Has to Earn Its Place — Diop Research</title>
+    <meta name="description" content="Persistent agent memory is a control plane, not a passive archive. Each remembered fact needs provenance, authority, purpose, time limits, isolation, and a path for correction before it can shape future machine action."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry129">Diop Daily #129 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 2, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>agent memory · security · institutional learning</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Memory Has to Earn Its Place</h1>
+
+                <p>An agent that remembers can become more useful with time. The same persistence can turn one compromised interaction into a later instruction, a private fact into an unauthorized disclosure, or a mistaken inference into a durable operating rule. Memory changes the threat model because it carries influence beyond the moment in which information entered the system.</p>
+
+                <p>Recent security guidance is converging on this point. OWASP’s 2026 Top 10 for Agentic Applications names Memory and Context Poisoning as a central risk. ISACA’s September recommendations place memory security beside identity, tool integration, change management, and incident response. Microsoft’s guidance describes memory as both high-value data and a configuration layer that can shape tool selection, refusal behavior, and later reasoning. These sources differ in scope and authority, yet they describe the same architectural fact: a memory store is part of the execution system.</p>
+
+                <blockquote>
+                    <p>A remembered fact is an instruction with a delayed fuse.</p>
+                </blockquote>
+
+                <h2>Persistence changes the threat model</h2>
+
+                <p>A prompt is usually treated as an event. Memory makes it a relationship. The system carries a representation of a person, task, institution, preference, decision, or observation into a future context where the original author may be absent and the original conditions may have changed.</p>
+
+                <p>That temporal gap creates several forms of exposure. An attacker may plant a false preference that changes future recommendations. A tool output may be promoted into memory without proving its source. A private detail may be recalled in the wrong tenant. A summary may preserve the conclusion while losing the permission that made the original disclosure legitimate. A model may treat a generated inference as a user-provided fact because both are stored in the same vector index.</p>
+
+                <p>OWASP’s memory-poisoning category gives this problem a security name. ISACA expands the operational surface: memory, prompts, logs, traces, outputs, vector stores, and connected providers require classification, retention rules, access control, monitoring, and rollback. The issue reaches beyond a database’s confidentiality. The content can change what the agent does next.</p>
+
+                <p>Google’s production guidance makes long-term memory one component of a larger agent architecture that also includes session state, retrieval, tools, authentication, permissions, and real-time logging. That combination matters. Memory cannot be assessed separately from the action path it influences. A harmless-looking preference becomes consequential when it changes which tool is offered, which account is queried, or which transaction is prepared.</p>
+
+                <h2>A memory record carries a mandate</h2>
+
+                <p>Institutions often describe memory as a convenience feature: the assistant remembers a name, a preference, or the last unfinished task. An institutional memory record needs a stricter description. It is a claim admitted into future decision-making, with an expected audience, a permitted purpose, and a lifespan.</p>
+
+                <p>Each entry should therefore answer a set of questions before it can shape behavior:</p>
+
+                <ul>
+                    <li><strong>Source:</strong> who or what produced the information, and was the source authorized to provide it?</li>
+                    <li><strong>Identity:</strong> which user, agent, tenant, institution, or workflow does the record belong to?</li>
+                    <li><strong>Purpose:</strong> which service or decision may use it, and which uses remain outside the original reason for collection?</li>
+                    <li><strong>Time:</strong> when was it created, when was it last confirmed, and when should it expire or require review?</li>
+                    <li><strong>Confidence and type:</strong> is it a user statement, an observed event, a document claim, a model inference, or an unresolved hypothesis?</li>
+                    <li><strong>Correction:</strong> who may edit, revoke, contest, or delete it, and what downstream memories must change when it does?</li>
+                </ul>
+
+                <p>Microsoft’s memory-safety guidance proposes provenance fields such as source, identity, timestamp, and model version. It also recommends gating writes on authorization and intent, isolating memory by user, agent, and tenant, validating relevance and freshness at retrieval, and giving people view, edit, and delete controls. These controls form a memory mandate. The machine may remember only inside a defined jurisdiction.</p>
+
+                <p>This is where memory differs from generic storage. A storage system preserves bytes. A memory system preserves influence. The relevant audit question is not only whether a record exists, but where it travelled, which answers it shaped, which tools it made available, and whether a correction reached every derivative representation.</p>
+
+                <h2>Retrieval is a policy decision</h2>
+
+                <p>The write path receives most of the attention because poisoning begins at admission. Retrieval deserves equal scrutiny. A record can be legitimate in one context and impermissible in another. It can be accurate but too old. It can belong to the user while remaining outside the agent’s current purpose. It can have strong semantic similarity and weak authority.</p>
+
+                <p>Retrieval should therefore produce more than a ranked list. It should produce a decision record that states why a memory was eligible:</p>
+
+                <ol>
+                    <li>the requesting identity and tenant were verified;</li>
+                    <li>the purpose of the current task matched an allowed use;</li>
+                    <li>the memory’s source and provenance met the required trust level;</li>
+                    <li>freshness, retention, and revocation checks passed;</li>
+                    <li>the record did not cross a user, language, role, or jurisdiction boundary;</li>
+                    <li>the agent received the memory with its uncertainty and restrictions intact.</li>
+                </ol>
+
+                <p>That last condition is easy to lose. A retrieval pipeline may return the text of a memory while dropping its source, timestamp, or access scope. The model then sees a sentence stripped of the conditions that made it safe. A good memory interface carries the claim and the boundary together.</p>
+
+                <p>The distinction is especially important in multilingual systems. A translation can preserve the broad topic while changing the strength of a permission, the status of a testimony, or the identity of the person to whom a record applies. African institutions building in French, English, Wolof, Amharic, Arabic, Hausa, Yoruba, and other languages need memory schemas that preserve local terms and authority relationships instead of treating translation as a final display layer.</p>
+
+                <h2>African institutions need memory they can govern</h2>
+
+                <p>Memory is where imported systems can quietly reorganize an institution. A foreign model may arrive with a useful retrieval engine, yet the categories by which it stores a person, a household, a community archive, a cooperative member, or a cultural work may not fit the institution’s own distinctions. Once those categories become persistent, the error is repeated at machine speed.</p>
+
+                <p>Intellectual sovereignty requires more than local hosting. It requires the authority to decide what deserves durable recall, who may inspect it, which language names it, how long it remains valid, and how a person can correct the record. A community archive may distinguish custodianship from ownership. A health service may separate a patient’s stated language from a model’s inferred identity. A cooperative may need household and membership relationships to remain visible without becoming globally searchable. A publisher may preserve rights restrictions beside the text of a work so that later agents do not remember the content while forgetting the conditions of reuse.</p>
+
+                <p>These are schema decisions, policy decisions, and political decisions. They belong in the institution’s own infrastructure. If a platform supplies the memory model but the institution cannot export its records, provenance, policies, and deletion history, the institution has rented part of its operating mind without acquiring custody of it.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the memory control plane: infrastructure that governs admission, storage, retrieval, propagation, correction, and deletion for agent memory that can influence action.</p>
+
+                <ul>
+                    <li><strong>Memory admission services:</strong> systems that classify proposed memories, verify intent and authority, attach provenance, and reject secrets, unsupported sensitive inferences, or untrusted instructions.</li>
+                    <li><strong>Scoped memory stores:</strong> stores that enforce isolation by user, agent, task, tenant, language, and trust domain through deterministic controls rather than prompts alone.</li>
+                    <li><strong>Retrieval policy engines:</strong> decision layers that evaluate purpose, freshness, sensitivity, source trust, and revocation before context enters a model.</li>
+                    <li><strong>Influence ledgers:</strong> records that show which memories affected an answer, tool selection, approval, or downstream agent handoff.</li>
+                    <li><strong>Correction and rollback systems:</strong> products that trace a poisoned or inaccurate memory through derived summaries, embeddings, caches, and actions, then repair or withdraw its influence.</li>
+                    <li><strong>Local-language memory governance:</strong> terminology, review, and permission infrastructure that keeps meaning and authority intact across African languages and institutional settings.</li>
+                </ul>
+
+                <p>Underwriting can begin with measures that a buyer can inspect: the percentage of memory writes carrying source, identity, timestamp, and model-version provenance; cross-tenant retrieval violations; stale-memory detection time; memory deletion propagation; the share of recalled context with visible confidence and restrictions; time to contain poisoning; and the percentage of high-impact actions for which an institution can reconstruct which memories influenced the decision.</p>
+
+                <p>This layer is distinct from the storage plane described elsewhere in the journal. Storage asks whether state survives. Memory governance asks whether surviving state deserves influence, under whose authority, for how long, and with what route of correction. It is also distinct from workflow learning. Learning improves a process from prior runs; memory control decides which prior information is permitted to become part of the next run.</p>
+
+                <h2>Start with a memory ledger</h2>
+
+                <p>An institution can begin with one workflow that already uses persistent context. Inventory every place where the agent writes, reads, summarizes, embeds, caches, or forwards memory. Give each memory class an owner, a purpose, a retention period, a trust level, and a deletion route. Separate user-provided facts from observations and model inferences. Require a policy decision before retrieval reaches an action-capable model.</p>
+
+                <p>Then run adversarial tests across time. Plant a false preference and measure how long it survives. Revoke a permission and trace every derived representation. Ask one tenant to retrieve another tenant’s memory. Change the language of the request. Present a stale record beside a current one. Remove a source document and see whether the system continues to speak with the old confidence. The test is successful when the institution can explain both the answer and the memory conditions that produced it.</p>
+
+                <p>Memory is a powerful institutional asset because it makes continuity possible. Continuity without authority becomes persistence of error. The systems worth building will make every durable recollection show its source, scope, age, and path of correction before it is allowed to guide the future.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/" target="_blank" rel="noopener">OWASP GenAI Security Project, “OWASP Top 10 for Agentic Applications for 2026” (published December 9, 2025). The peer-reviewed framework identifies Memory and Context Poisoning as a central risk category for autonomous and agentic systems.</a></li>
+                    <li><a href="https://www.isaca.org/resources/white-papers/2026/cybersecurity-recommendations-for-securing-ai-agents" target="_blank" rel="noopener">ISACA, “Cybersecurity Recommendations for Securing AI Agents” (September 15, 2026). The white paper places memory security within agent governance and recommends data classification, retention limits, tenant and session isolation, provenance validation, monitoring, rollback, and incident response.</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/security/zero-trust/sfi/manage-agentic-memory-safety" target="_blank" rel="noopener">Microsoft Learn, “Manage AI memory safety in agentic systems” (last updated June 3, 2026). The guidance treats memory as both sensitive data and a control plane, with write-time provenance checks, scoped retrieval, lifecycle logging, and user view, edit, and delete controls.</a></li>
+                    <li><a href="https://cloud.google.com/blog/products/ai-machine-learning/a-devs-guide-to-production-ready-ai-agents" target="_blank" rel="noopener">Google Cloud Blog, “A developer’s guide to production-ready AI agents” (February 25, 2026; updated September 2026). The guide describes persistent memory, session management, authenticated tools, permissions, logging, and staged evaluation as parts of production agent infrastructure.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). NIST identifies agent authentication and identity infrastructure, open protocols, and security evaluations as strategic areas for trusted interoperability.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La mémoire doit mériter sa place</h1>
+
+                <p>Un agent qui se souvient peut devenir plus utile avec le temps. Cette persistance peut aussi transformer une interaction compromise en instruction ultérieure, une information privée en divulgation non autorisée ou une inférence erronée en règle opérationnelle durable. La mémoire modifie le modèle de menace parce qu’elle porte une influence au-delà du moment où l’information est entrée dans le système.</p>
+
+                <p>Les recommandations récentes de sécurité convergent sur ce point. Le Top 10 2026 de l’OWASP pour les applications agentiques nomme l’empoisonnement de la mémoire et du contexte comme un risque central. Les recommandations publiées par l’ISACA en septembre placent la sécurité de la mémoire à côté de l’identité, de l’intégration des outils, de la gestion des changements et de la réponse aux incidents. Les orientations de Microsoft décrivent la mémoire comme une donnée de grande valeur et comme une couche de configuration capable d’influencer la sélection des outils, le comportement de refus et le raisonnement ultérieur. Ces sources diffèrent par leur portée et leur autorité, mais elles décrivent le même fait architectural : un magasin de mémoire fait partie du système d’exécution.</p>
+
+                <blockquote>
+                    <p>Un fait mémorisé est une instruction à retardement.</p>
+                </blockquote>
+
+                <h2>La persistance modifie le modèle de menace</h2>
+
+                <p>On traite généralement un prompt comme un événement. La mémoire en fait une relation. Le système transporte une représentation d’une personne, d’une tâche, d’une institution, d’une préférence, d’une décision ou d’une observation vers un contexte futur où l’auteur initial peut être absent et où les conditions d’origine peuvent avoir changé.</p>
+
+                <p>Ce décalage temporel crée plusieurs formes d’exposition. Un attaquant peut planter une fausse préférence qui modifiera de futures recommandations. Une sortie d’outil peut être promue en mémoire sans que sa source soit établie. Un détail privé peut être rappelé dans le mauvais tenant. Un résumé peut conserver la conclusion tout en perdant la permission qui rendait la divulgation initiale légitime. Un modèle peut traiter une inférence générée comme un fait fourni par l’usager parce que les deux sont stockés dans le même index vectoriel.</p>
+
+                <p>La catégorie de l’empoisonnement de la mémoire de l’OWASP donne un nom de sécurité à ce problème. L’ISACA élargit la surface opérationnelle : mémoire, prompts, journaux, traces, sorties, magasins vectoriels et fournisseurs connectés exigent classification, règles de conservation, contrôle d’accès, surveillance et restauration. Le problème dépasse la confidentialité d’une base de données. Le contenu peut modifier ce que l’agent fera ensuite.</p>
+
+                <p>Les orientations de Google pour la production placent la mémoire longue durée dans une architecture agentique plus large qui comprend aussi l’état de session, la récupération, les outils, l’authentification, les permissions et la journalisation en temps réel. Cette combinaison est importante. La mémoire ne peut pas être évaluée séparément du chemin d’action qu’elle influence. Une préférence apparemment anodine devient conséquente lorsqu’elle modifie l’outil proposé, le compte interrogé ou la transaction préparée.</p>
+
+                <h2>Un enregistrement de mémoire porte un mandat</h2>
+
+                <p>Les institutions décrivent souvent la mémoire comme une fonction de confort : l’assistant se souvient d’un nom, d’une préférence ou de la dernière tâche inachevée. Un enregistrement de mémoire institutionnelle exige une description plus stricte. C’est une affirmation admise dans la prise de décision future, avec un public attendu, une finalité autorisée et une durée de vie.</p>
+
+                <p>Chaque entrée devrait donc répondre à plusieurs questions avant de pouvoir orienter le comportement :</p>
+
+                <ul>
+                    <li><strong>Source :</strong> qui ou quoi a produit l’information, et cette source était-elle autorisée à la fournir ?</li>
+                    <li><strong>Identité :</strong> à quel usager, agent, tenant, institution ou workflow le dossier appartient-il ?</li>
+                    <li><strong>Finalité :</strong> quel service ou quelle décision peut l’utiliser, et quels usages restent en dehors de la raison initiale de la collecte ?</li>
+                    <li><strong>Temps :</strong> quand a-t-il été créé, quand a-t-il été confirmé pour la dernière fois et quand doit-il expirer ou être réexaminé ?</li>
+                    <li><strong>Confiance et nature :</strong> s’agit-il d’une déclaration de l’usager, d’un événement observé, d’une affirmation documentaire, d’une inférence du modèle ou d’une hypothèse non résolue ?</li>
+                    <li><strong>Correction :</strong> qui peut le modifier, le révoquer, le contester ou le supprimer, et quelles mémoires dérivées doivent changer avec lui ?</li>
+                </ul>
+
+                <p>Les orientations de Microsoft sur la sécurité de la mémoire proposent des champs de provenance tels que la source, l’identité, l’horodatage et la version du modèle. Elles recommandent aussi de soumettre les écritures à des contrôles d’autorisation et d’intention, d’isoler la mémoire par usager, agent et tenant, de vérifier la pertinence et l’actualité lors de la récupération, et d’offrir aux personnes des fonctions de consultation, de modification et de suppression. Ces contrôles forment un mandat de mémoire. La machine ne peut se souvenir qu’à l’intérieur d’une juridiction définie.</p>
+
+                <p>C’est ici que la mémoire se distingue du stockage générique. Un système de stockage conserve des octets. Un système de mémoire conserve une influence. La question d’audit pertinente ne porte donc pas seulement sur l’existence d’un dossier, mais sur son parcours, les réponses qu’il a façonnées, les outils qu’il a rendus disponibles et la propagation d’une correction vers chaque représentation dérivée.</p>
+
+                <h2>La récupération est une décision de politique</h2>
+
+                <p>Le chemin d’écriture reçoit beaucoup d’attention parce que l’empoisonnement commence à l’admission. La récupération mérite le même examen. Un enregistrement peut être légitime dans un contexte et interdit dans un autre. Il peut être exact mais trop ancien. Il peut appartenir à l’usager tout en dépassant la finalité actuelle de l’agent. Il peut présenter une forte similarité sémantique et une faible autorité.</p>
+
+                <p>La récupération devrait donc produire davantage qu’une liste classée. Elle devrait produire une décision indiquant pourquoi une mémoire était admissible :</p>
+
+                <ol>
+                    <li>l’identité demandeuse et le tenant ont été vérifiés ;</li>
+                    <li>la finalité de la tâche actuelle correspondait à un usage autorisé ;</li>
+                    <li>la source et la provenance de la mémoire atteignaient le niveau de confiance requis ;</li>
+                    <li>les contrôles d’actualité, de conservation et de révocation ont réussi ;</li>
+                    <li>l’enregistrement n’a pas franchi une frontière d’usager, de langue, de rôle ou de juridiction ;</li>
+                    <li>l’agent a reçu la mémoire avec son incertitude et ses restrictions intactes.</li>
+                </ol>
+
+                <p>Cette dernière condition est facile à perdre. Un pipeline de récupération peut renvoyer le texte d’une mémoire tout en supprimant sa source, son horodatage ou son périmètre d’accès. Le modèle voit alors une phrase privée des conditions qui la rendaient sûre. Une bonne interface de mémoire transporte l’affirmation et sa frontière ensemble.</p>
+
+                <p>La distinction compte particulièrement dans les systèmes multilingues. Une traduction peut préserver le sujet général tout en modifiant la force d’une permission, le statut d’un témoignage ou l’identité de la personne à laquelle un dossier s’applique. Les institutions africaines qui construisent en français, en anglais, en wolof, en amharique, en arabe, en haoussa, en yoruba et dans d’autres langues ont besoin de schémas de mémoire qui préservent les termes locaux et les relations d’autorité, au lieu de traiter la traduction comme une simple couche d’affichage.</p>
+
+                <h2>Les institutions africaines ont besoin d’une mémoire gouvernable</h2>
+
+                <p>La mémoire est l’endroit où des systèmes importés peuvent réorganiser silencieusement une institution. Un modèle étranger peut arriver avec un moteur de récupération utile, tandis que les catégories par lesquelles il stocke une personne, un foyer, une archive communautaire, un membre de coopérative ou une œuvre culturelle ne correspondent pas aux distinctions de l’institution. Lorsque ces catégories deviennent persistantes, l’erreur se répète à la vitesse de la machine.</p>
+
+                <p>La souveraineté intellectuelle exige davantage qu’un hébergement local. Elle exige le droit de décider ce qui mérite d’être rappelé durablement, qui peut l’inspecter, quels noms linguistiques le désignent, combien de temps il reste valide et comment une personne peut corriger le dossier. Une archive communautaire peut distinguer la garde de la propriété. Un service de santé peut séparer la langue déclarée par le patient de l’identité inférée par un modèle. Une coopérative peut rendre visibles les relations de foyer et d’adhésion sans les rendre consultables par tous. Un éditeur peut conserver les restrictions de droits à côté du texte d’une œuvre pour que les agents futurs ne retiennent pas le contenu en oubliant les conditions de réutilisation.</p>
+
+                <p>Ces choix relèvent du schéma, de la politique et de la décision politique. Ils appartiennent à l’infrastructure de l’institution. Si une plateforme fournit le modèle de mémoire tandis que l’institution ne peut pas exporter ses dossiers, ses provenances, ses politiques et son historique de suppression, elle loue une partie de son esprit opérationnel sans en obtenir la garde.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est le plan de contrôle de la mémoire : l’infrastructure qui gouverne l’admission, le stockage, la récupération, la propagation, la correction et la suppression d’une mémoire agentique capable d’influencer une action.</p>
+
+                <ul>
+                    <li><strong>Services d’admission de la mémoire :</strong> systèmes qui classent les mémoires proposées, vérifient l’intention et l’autorité, attachent la provenance et refusent les secrets, les inférences sensibles non soutenues ou les instructions non fiables.</li>
+                    <li><strong>Magasins de mémoire bornés :</strong> magasins qui imposent une isolation par usager, agent, tâche, tenant, langue et domaine de confiance au moyen de contrôles déterministes plutôt que de prompts seuls.</li>
+                    <li><strong>Moteurs de politique de récupération :</strong> couches qui évaluent la finalité, l’actualité, la sensibilité, la confiance de la source et la révocation avant l’entrée du contexte dans un modèle.</li>
+                    <li><strong>Registres d’influence :</strong> dossiers qui montrent quelles mémoires ont affecté une réponse, une sélection d’outil, une approbation ou un transfert vers un agent suivant.</li>
+                    <li><strong>Systèmes de correction et de restauration :</strong> produits qui suivent une mémoire empoisonnée ou inexacte à travers résumés dérivés, embeddings, caches et actions, puis réparent ou retirent son influence.</li>
+                    <li><strong>Gouvernance de la mémoire en langues locales :</strong> infrastructure de terminologie, de revue et de permission qui maintient le sens et l’autorité à travers les langues africaines et les contextes institutionnels.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des mesures qu’un acheteur peut inspecter : pourcentage des écritures de mémoire portant la provenance de source, d’identité, d’horodatage et de version du modèle ; violations de récupération entre tenants ; délai de détection d’une mémoire périmée ; propagation d’une suppression ; part du contexte rappelé dont la confiance et les restrictions sont visibles ; délai de confinement d’un empoisonnement ; et pourcentage des actions à fort impact pour lesquelles l’institution peut reconstituer les mémoires qui ont influencé la décision.</p>
+
+                <p>Cette couche se distingue du plan de stockage décrit ailleurs dans le journal. Le stockage demande si l’état survit. La gouvernance de la mémoire demande si l’état qui survit mérite d’exercer une influence, sous quelle autorité, pendant combien de temps et avec quelle voie de correction. Elle se distingue aussi de l’apprentissage des workflows. L’apprentissage améliore un processus à partir des passages antérieurs ; le contrôle de la mémoire décide quelles informations antérieures peuvent entrer dans le passage suivant.</p>
+
+                <h2>Commencer par un registre de mémoire</h2>
+
+                <p>Une institution peut commencer avec un workflow qui utilise déjà un contexte persistant. Il faut inventorier chaque endroit où l’agent écrit, lit, résume, encode, met en cache ou transmet une mémoire. Chaque classe de mémoire doit recevoir un responsable, une finalité, une durée de conservation, un niveau de confiance et une route de suppression. Les faits fournis par l’usager doivent être séparés des observations et des inférences du modèle. Une décision de politique doit précéder toute récupération vers un modèle capable d’agir.</p>
+
+                <p>Il faut ensuite effectuer des tests adversariaux dans le temps. Plantez une fausse préférence et mesurez sa durée de vie. Révoquez une permission et suivez chaque représentation dérivée. Demandez à un tenant de récupérer la mémoire d’un autre. Changez la langue de la demande. Présentez un dossier ancien à côté d’un dossier actuel. Retirez le document source et observez si le système continue de parler avec la même confiance. Le test réussit lorsque l’institution peut expliquer à la fois la réponse et les conditions mémorielles qui l’ont produite.</p>
+
+                <p>La mémoire est un actif institutionnel puissant parce qu’elle rend la continuité possible. La continuité sans autorité devient la persistance de l’erreur. Les systèmes qu’il faut construire feront apparaître la source, le périmètre, l’âge et le chemin de correction de chaque souvenir durable avant de l’autoriser à guider l’avenir.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/" target="_blank" rel="noopener">OWASP GenAI Security Project, « OWASP Top 10 for Agentic Applications for 2026 » (publication le 9 décembre 2025). Ce cadre évalué par les pairs identifie l’empoisonnement de la mémoire et du contexte comme une catégorie centrale de risque pour les systèmes autonomes et agentiques.</a></li>
+                    <li><a href="https://www.isaca.org/resources/white-papers/2026/cybersecurity-recommendations-for-securing-ai-agents" target="_blank" rel="noopener">ISACA, « Cybersecurity Recommendations for Securing AI Agents » (15 septembre 2026). Le livre blanc place la sécurité de la mémoire dans la gouvernance des agents et recommande classification des données, limites de conservation, isolation par tenant et session, validation de la provenance, surveillance, restauration et réponse aux incidents.</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/security/zero-trust/sfi/manage-agentic-memory-safety" target="_blank" rel="noopener">Microsoft Learn, « Manage AI memory safety in agentic systems » (dernière mise à jour le 3 juin 2026). Ces orientations traitent la mémoire à la fois comme une donnée sensible et comme un plan de contrôle, avec vérification de provenance à l’écriture, récupération bornée, journalisation du cycle de vie et fonctions de consultation, modification et suppression.</a></li>
+                    <li><a href="https://cloud.google.com/blog/products/ai-machine-learning/a-devs-guide-to-production-ready-ai-agents" target="_blank" rel="noopener">Google Cloud Blog, « A developer’s guide to production-ready AI agents » (25 février 2026 ; mise à jour en septembre 2026). Le guide décrit la mémoire persistante, la gestion des sessions, les outils authentifiés, les permissions, la journalisation et l’évaluation par étapes comme des éléments de l’infrastructure agentique de production.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mise à jour le 14 août 2026). Le NIST identifie l’authentification des agents, l’infrastructure d’identité, les protocoles ouverts et les évaluations de sécurité comme des domaines stratégiques pour une interopérabilité digne de confiance.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

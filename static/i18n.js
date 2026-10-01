@@ -158,6 +158,7 @@
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
         'article.entry090':     { en: 'Diop Daily #090 — August 2026', fr: 'Diop Quotidien n°090 — Août 2026' },
         'article.entry086':     { en: 'Diop Daily #086 — August 2026', fr: 'Diop Quotidien n°086 — Août 2026' },
+        'article.entry129':     { en: 'Diop Daily #129 — October 2026', fr: 'Diop Quotidien n°129 — Octobre 2026' },
         'article.entry128':     { en: 'Diop Daily #128 — October 2026', fr: 'Diop Quotidien n°128 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
@@ -171,6 +172,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-129': {
+        title: {
+            en: "The Memory Has to Earn Its Place",
+            fr: "La mémoire doit mériter sa place"
+        },
+        excerpt: {
+            en: "Persistent agent memory can turn one compromised interaction into a later instruction, a private fact into an unauthorized disclosure, or an inference into a durable operating rule. The investable surface is the memory control plane: provenance, scoped retrieval, influence ledgers, correction, and rollback.",
+            fr: "La mémoire persistante d’un agent peut transformer une interaction compromise en instruction ultérieure, une information privée en divulgation non autorisée ou une inférence en règle opérationnelle durable. La surface d’investissement est le plan de contrôle de la mémoire : provenance, récupération bornée, registres d’influence, correction et restauration."
+        }
+    },
     'diop-daily-128': {
         title: {
             en: "A Product Must Carry Its Own Passport",
