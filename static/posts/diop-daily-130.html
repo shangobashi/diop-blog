@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Screen Is a Trust Boundary — Diop Research</title>
+    <meta name="description" content="When agents generate interfaces, the rendered screen becomes part of the authorization path. The investable layer is host-controlled UI infrastructure: trusted components, consent, provenance, accessibility, and conformance across agent boundaries."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry130">Diop Daily #130 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 3, 2026</time>
+                    <span>·</span>
+                    <span data-rt="8">8 min read</span>
+                    <span>·</span>
+                    <span>agent interfaces · consent · trusted rendering</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Screen Is a Trust Boundary</h1>
+
+                <p>An agent can now return more than a paragraph. It can assemble a form, a card, a chart, a confirmation panel, or a decision surface adapted to the task. Once the machine shapes the interface through which a person reviews and approves an action, rendering becomes part of the authority path. The screen is no longer a neutral window onto the work; it is one of the places where the work acquires meaning.</p>
+
+                <p>This shift is visible in the recent protocol stack. Google’s A2UI describes a declarative format for agent-generated interfaces that travel as structured messages and render through trusted host components. Google Cloud’s September 2026 MCP gateway preview turns existing REST operations into discoverable agent tools while keeping authentication, quotas, and logging on a shared policy path. The W3C Verifiable Credentials Data Model 2.1, published as a Working Draft on September 30, treats claims, issuers, holders, and verifiers as an ecosystem in which machine-readable assertions must remain secure, privacy-respecting, and verifiable.</p>
+
+                <blockquote>
+                    <p>The interface is where a machine action becomes legible enough for a person to accept, refuse, or question.</p>
+                </blockquote>
+
+                <h2>Generated UI changes the location of risk</h2>
+
+                <p>Traditional software places most interface authority in code owned by the application team. A designer chooses the fields, the order of the information, the labels, and the confirmation step. An agentic system can propose a different arrangement at runtime. That flexibility is useful when the task is unfamiliar, when the user speaks in a local language, or when several systems must be coordinated. It also gives a model influence over what the user notices first and what appears safe to approve.</p>
+
+                <p>Google’s A2UI architecture responds by separating interface description from executable code. The agent sends structured UI data; the host application owns the renderer and decides which components are trusted. This is a strong architectural move because the remote agent cannot inject arbitrary JavaScript into the host surface. A catalog of approved components can constrain the vocabulary to elements whose behavior, accessibility, styling, and security properties have been tested.</p>
+
+                <p>The catalog does not settle the whole problem. A safe button can still carry a misleading label. A permitted card can place a material fee below the fold. A valid form can translate a refusal into language that sounds like approval. A component can be secure in isolation and dangerous when the model composes it beside an unverified claim. The host must govern semantics, ordering, data freshness, and the transition from display to action.</p>
+
+                <p>That is why the rendering layer deserves its own threat model. It must ask:</p>
+
+                <ul>
+                    <li>Which agent proposed this interface, and under whose authority?</li>
+                    <li>Which data sources filled the fields, and when were they last verified?</li>
+                    <li>Which elements are informational, which are recommendations, and which create a commitment?</li>
+                    <li>Can the user see the price, beneficiary, jurisdiction, restriction, and consequence before approval?</li>
+                    <li>What happens when a component, translation, credential, or source cannot be verified?</li>
+                    <li>Can the institution reconstruct the exact surface that a person approved?</li>
+                </ul>
+
+                <h2>Consent needs a rendered record</h2>
+
+                <p>Authorization is often modeled as a token or a policy decision. Human approval introduces another requirement: the person must understand the action that the token permits. The rendered surface becomes the bridge between machine authority and human intent.</p>
+
+                <p>A payment confirmation is therefore more than a button connected to a valid credential. It is a representation of the principal, the item, the amount, the recipient, the timing, the conditions, and the route for correction. A medical form is more than a schema-valid submission. It is a statement of what information will be shared, for what purpose, with which institution, in which language, and for how long. A publishing workflow is more than a successful API call. It is a visible account of which rights were granted and which transformations remain prohibited.</p>
+
+                <p>The W3C credential model is useful here because it names the relationships that a surface must preserve. An issuer makes claims. A holder presents them. A verifier evaluates them. The interface should not collapse these roles into a single reassuring badge. It should make the relevant issuer, subject, validity period, and verification result available at the moment a person is asked to act.</p>
+
+                <p>Every consequential rendered action should leave a receipt with at least these fields:</p>
+
+                <ol>
+                    <li>the agent and host application that produced the surface;</li>
+                    <li>the component and content versions used for rendering;</li>
+                    <li>the claims, credentials, and sources shown to the user;</li>
+                    <li>the language and accessibility mode in which the action was presented;</li>
+                    <li>the exact commitment, recipient, amount, or permission that was approved;</li>
+                    <li>the evidence and correction route available after the action.</li>
+                </ol>
+
+                <p>This receipt records the decision surface without transcribing every token. It lets an institution compare what the agent knew, what the person saw, and what the system executed. Without that comparison, a later dispute becomes an argument between logs that describe different layers of the same event.</p>
+
+                <h2>The host must own the vocabulary</h2>
+
+                <p>Agent-generated interfaces become useful when they can adapt to a person and a task. The host remains responsible for the grammar of legitimate action. That grammar includes component behavior, visual hierarchy, disclosure rules, language coverage, accessibility, and refusal states.</p>
+
+                <p>For African institutions, this is a sovereignty question as well as a security question. A component library can encode whether a household is represented as a single account or a set of relationships. It can preserve the difference between a community custodian and a legal owner. It can make French, English, Wolof, Hausa, Yoruba, Amharic, Arabic, and other languages first-class interaction languages rather than fallback labels. It can expose the local route for consent, appeal, and human assistance.</p>
+
+                <p>Imported agents will arrive with assumptions about names, addresses, payment confirmation, family structure, rights, and the meaning of a completed action. A host-controlled vocabulary gives the institution a place to reject those assumptions before they become interface defaults. The work preserves institutional categories at the point where a person meets an automated decision and governs the action itself, not only its localization.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the trusted rendering layer: infrastructure that turns agent proposals into inspectable, accessible, policy-bound interfaces without surrendering control of the host application.</p>
+
+                <ul>
+                    <li><strong>Trusted component catalogs:</strong> versioned, tested primitives with explicit behavior, accessibility, security, and localization guarantees.</li>
+                    <li><strong>Rendering policy engines:</strong> controls that decide which agents may request which components, data classes, layouts, and actions.</li>
+                    <li><strong>Consent and disclosure ledgers:</strong> records linking the rendered surface to the claims, credentials, permissions, and commitments a person reviewed.</li>
+                    <li><strong>Interface conformance testing:</strong> adversarial checks for misleading ordering, hidden conditions, translation loss, inaccessible controls, stale claims, and unsafe action transitions.</li>
+                    <li><strong>Local-language interaction systems:</strong> component vocabularies, terminology management, speech and text support, and human recourse designed for specific institutional communities.</li>
+                </ul>
+
+                <p>Underwriting can begin with observable measures: the percentage of agent-generated surfaces rendered only from approved components; the rate at which users can correctly identify the beneficiary and consequence of an action; disclosure visibility across screen sizes and languages; reproducibility of a consent receipt; time to revoke a component or credential; and the rate of disputed actions for which the institution can reconstruct the exact interface shown.</p>
+
+                <p>This layer sits between agent protocols and application trust. Protocols carry messages and tool calls. Applications hold data and permissions. The rendering layer governs the moment in which a proposed action becomes understandable enough to approve. Companies that make that moment measurable can sell into commerce, public services, finance, education, healthcare, publishing, and creative production without pretending that a model’s fluent language is itself a control.</p>
+
+                <h2>Build the boundary before the spectacle</h2>
+
+                <p>A practical implementation can start with one high-consequence workflow. List the components an agent may request. Give each component a documented behavior, permission class, language policy, and refusal state. Require every consequential field to carry a source and freshness marker. Test the same workflow in the institution’s major languages. Capture the rendered receipt, then alter the underlying claim and verify that the old surface cannot be reused as if nothing changed.</p>
+
+                <p>Google’s MCP gateway preview demonstrates the value of reusing an existing policy path for agent traffic. The same discipline belongs on the user side of the boundary. An agent-generated interface should pass through the host’s established authentication, data classification, accessibility, localization, logging, and approval controls. A new protocol should widen the institution’s reach without creating a second, less accountable application surface.</p>
+
+                <p>Machines will increasingly compose the screens through which institutions meet people. The question is who owns the grammar of that composition. A trustworthy system gives the host control over components, meaning, evidence, language, and recourse. It lets an agent be inventive inside a boundary that the institution can test, explain, and repair.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/" target="_blank" rel="noopener">Google Developers Blog, “Introducing A2UI: An open project for agent-driven interfaces” (December 15, 2025). The project describes a declarative, structured format for agent-generated interfaces, trusted host renderers, and component catalogs that keep remote output separate from executable code.</a></li>
+                    <li><a href="https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/" target="_blank" rel="noopener">Google Developers Blog, “Turn your REST APIs into MCP tools with Google Cloud API Gateway” (September 24, 2026). The public-preview gateway maps MCP tool calls to existing REST operations while retaining shared authentication, quota, and logging policy paths.</a></li>
+                    <li><a href="https://www.w3.org/TR/vc-data-model-2.1/" target="_blank" rel="noopener">W3C, “Verifiable Credentials Data Model v2.1” (Working Draft, September 30, 2026). The draft defines machine-verifiable claims and the issuer, holder, and verifier relationships, while documenting security, privacy, internationalization, and accessibility considerations. It remains a work in progress.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). NIST identifies open protocols, agent authentication and identity infrastructure, and security evaluations as strategic areas for trusted interoperability.</a></li>
+                    <li><a href="https://developers.googleblog.com/introducing-credentio-open-source-c-library-for-c2pa-content-credentials-from-google/" target="_blank" rel="noopener">Google Developers Blog, “Introducing Credentio: Open Source C++ Library for C2PA Content Credentials from Google” (August 13, 2026). The announcement describes local validation, configurable trust lists, detailed verdicts, and a small-memory implementation for provenance checks in media workflows.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L’écran est une frontière de confiance</h1>
+
+                <p>Un agent peut désormais renvoyer davantage qu’un paragraphe. Il peut assembler un formulaire, une carte, un graphique, un panneau de confirmation ou une surface de décision adaptée à la tâche. Dès que la machine façonne l’interface par laquelle une personne examine et approuve une action, le rendu devient une partie du chemin d’autorité. L’écran cesse d’être une fenêtre neutre sur le travail ; il devient l’un des lieux où le travail acquiert son sens.</p>
+
+                <p>Cette évolution apparaît dans la pile récente des protocoles. Le projet A2UI de Google décrit un format déclaratif pour les interfaces produites par les agents, transportées comme des messages structurés et rendues par des composants contrôlés par l’hôte. La préversion de septembre 2026 d’API Gateway de Google Cloud transforme des opérations REST existantes en outils agentiques découvrables, tout en conservant l’authentification, les quotas et la journalisation sur un chemin de politique commun. Le modèle de données des justificatifs vérifiables 2.1 du W3C, publié comme Working Draft le 30 septembre, traite les déclarations, les émetteurs, les détenteurs et les vérificateurs comme un écosystème où les assertions lisibles par machine doivent rester sûres, respectueuses de la vie privée et vérifiables.</p>
+
+                <blockquote>
+                    <p>L’interface est l’endroit où une action machine devient assez lisible pour être acceptée, refusée ou questionnée par une personne.</p>
+                </blockquote>
+
+                <h2>L’interface générée déplace le risque</h2>
+
+                <p>Les logiciels traditionnels placent l’essentiel de l’autorité de l’interface dans un code détenu par l’équipe applicative. Un designer choisit les champs, l’ordre des informations, les libellés et l’étape de confirmation. Un système agentique peut proposer une autre organisation au moment de l’exécution. Cette souplesse est utile lorsque la tâche est inhabituelle, lorsque l’usager parle une langue locale ou lorsque plusieurs systèmes doivent être coordonnés. Elle donne aussi au modèle une influence sur ce que l’usager remarque d’abord et sur ce qui semble sûr à approuver.</p>
+
+                <p>L’architecture A2UI de Google répond à ce problème en séparant la description de l’interface du code exécutable. L’agent envoie des données structurées ; l’application hôte possède le moteur de rendu et décide quels composants sont dignes de confiance. C’est un choix architectural solide, car l’agent distant ne peut pas injecter du JavaScript arbitraire dans la surface hôte. Un catalogue de composants approuvés peut limiter le vocabulaire à des éléments dont le comportement, l’accessibilité, le style et les propriétés de sécurité ont été testés.</p>
+
+                <p>Le catalogue ne résout pas toute la question. Un bouton sûr peut porter un libellé trompeur. Une carte autorisée peut placer un frais important sous la ligne de flottaison. Un formulaire valide peut traduire un refus dans une langue qui ressemble à une approbation. Un composant sécurisé isolément peut devenir dangereux lorsque le modèle le compose à côté d’une assertion non vérifiée. L’hôte doit gouverner la sémantique, l’ordre, l’actualité des données et le passage de l’affichage à l’action.</p>
+
+                <p>La couche de rendu mérite donc son propre modèle de menace. Elle doit demander :</p>
+
+                <ul>
+                    <li>quel agent a proposé cette interface et sous quelle autorité ;</li>
+                    <li>quelles sources ont rempli les champs et quand ont-elles été vérifiées pour la dernière fois ;</li>
+                    <li>quels éléments informent, lesquels recommandent et lesquels créent un engagement ;</li>
+                    <li>la personne peut-elle voir le prix, le bénéficiaire, la juridiction, la restriction et la conséquence avant d’approuver ;</li>
+                    <li>que se passe-t-il lorsqu’un composant, une traduction, un justificatif ou une source ne peut pas être vérifié ;</li>
+                    <li>l’institution peut-elle reconstituer la surface exacte qu’une personne a approuvée ?</li>
+                </ul>
+
+                <h2>Le consentement a besoin d’un dossier rendu</h2>
+
+                <p>L’autorisation est souvent modélisée comme un jeton ou une décision de politique. L’approbation humaine ajoute une exigence : la personne doit comprendre l’action que le jeton permet. La surface rendue devient le pont entre l’autorité de la machine et l’intention humaine.</p>
+
+                <p>Une confirmation de paiement est donc davantage qu’un bouton relié à un justificatif valide. Elle représente le mandant, l’article, le montant, le destinataire, le moment, les conditions et la voie de correction. Un formulaire médical est davantage qu’une soumission conforme à un schéma. Il énonce quelles informations seront partagées, pour quelle finalité, avec quelle institution, dans quelle langue et pendant combien de temps. Un workflow éditorial est davantage qu’un appel d’API réussi. Il expose les droits accordés et les transformations qui restent interdites.</p>
+
+                <p>Le modèle de justificatifs du W3C est utile ici parce qu’il nomme les relations que la surface doit préserver. Un émetteur formule des assertions. Un détenteur les présente. Un vérificateur les évalue. L’interface ne doit pas fondre ces rôles dans un badge rassurant unique. Elle doit rendre disponibles l’émetteur, le sujet, la période de validité et le résultat de la vérification au moment où la personne doit agir.</p>
+
+                <p>Toute action rendue qui entraîne une conséquence devrait laisser un reçu contenant au moins :</p>
+
+                <ol>
+                    <li>l’agent et l’application hôte qui ont produit la surface ;</li>
+                    <li>les versions des composants et du contenu utilisées pour le rendu ;</li>
+                    <li>les assertions, justificatifs et sources montrés à l’usager ;</li>
+                    <li>la langue et le mode d’accessibilité dans lesquels l’action a été présentée ;</li>
+                    <li>l’engagement, le destinataire, le montant ou la permission exacte approuvée ;</li>
+                    <li>les preuves et la voie de correction disponibles après l’action.</li>
+                </ol>
+
+                <p>Ce reçu décrit la surface de décision sans transcrire chaque token. Il permet à une institution de comparer ce que l’agent savait, ce que la personne a vu et ce que le système a exécuté. Sans cette comparaison, un litige ultérieur devient une dispute entre des journaux qui décrivent des couches différentes du même événement.</p>
+
+                <h2>L’hôte doit posséder le vocabulaire</h2>
+
+                <p>Les interfaces produites par les agents deviennent utiles lorsqu’elles s’adaptent à une personne et à une tâche. L’hôte reste responsable de la grammaire de l’action légitime. Cette grammaire comprend le comportement des composants, la hiérarchie visuelle, les règles de divulgation, la couverture linguistique, l’accessibilité et les états de refus.</p>
+
+                <p>Pour les institutions africaines, il s’agit autant de souveraineté que de sécurité. Une bibliothèque de composants peut encoder la question de savoir si un foyer est représenté comme un compte unique ou comme un ensemble de relations. Elle peut préserver la différence entre un gardien communautaire et un propriétaire légal. Elle peut faire du français, de l’anglais, du wolof, du haoussa, du yoruba, de l’amharique, de l’arabe et d’autres langues des langues d’interaction de premier rang, au lieu de libellés de secours. Elle peut exposer la voie locale du consentement, du recours et de l’assistance humaine.</p>
+
+                <p>Les agents importés arriveront avec des hypothèses sur les noms, les adresses, la confirmation des paiements, la structure familiale, les droits et le sens d’une action terminée. Un vocabulaire contrôlé par l’hôte donne à l’institution un lieu pour rejeter ces hypothèses avant qu’elles ne deviennent des valeurs par défaut de l’interface. Ce travail préserve les catégories institutionnelles au point où une personne rencontre une décision automatisée et porte sur la gouvernance de l’action, pas sur une simple localisation.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est la couche de rendu digne de confiance : l’infrastructure qui transforme les propositions d’un agent en interfaces inspectables, accessibles et soumises à une politique, sans céder le contrôle de l’application hôte.</p>
+
+                <ul>
+                    <li><strong>Catalogues de composants fiables :</strong> primitives versionnées et testées, avec des garanties explicites de comportement, d’accessibilité, de sécurité et de localisation.</li>
+                    <li><strong>Moteurs de politique de rendu :</strong> contrôles qui décident quels agents peuvent demander quels composants, classes de données, mises en page et actions.</li>
+                    <li><strong>Registres du consentement et de la divulgation :</strong> dossiers qui relient la surface rendue aux assertions, justificatifs, permissions et engagements examinés par une personne.</li>
+                    <li><strong>Tests de conformité de l’interface :</strong> contrôles adversariaux portant sur l’ordre trompeur, les conditions cachées, les pertes de traduction, les commandes inaccessibles, les assertions périmées et les transitions dangereuses vers l’action.</li>
+                    <li><strong>Systèmes d’interaction en langues locales :</strong> vocabulaires de composants, gestion terminologique, fonctions vocales et textuelles et recours humain conçus pour des communautés institutionnelles précises.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des mesures observables : pourcentage des surfaces produites par les agents qui utilisent uniquement des composants approuvés ; taux auquel les usagers identifient correctement le bénéficiaire et la conséquence d’une action ; visibilité des divulgations selon les tailles d’écran et les langues ; reproductibilité d’un reçu de consentement ; délai de révocation d’un composant ou d’un justificatif ; et taux d’actions contestées pour lesquelles l’institution peut reconstituer l’interface exacte qui a été montrée.</p>
+
+                <p>Cette couche se situe entre les protocoles agentiques et la confiance applicative. Les protocoles transportent les messages et les appels d’outils. Les applications détiennent les données et les permissions. La couche de rendu gouverne le moment où une action proposée devient assez compréhensible pour être approuvée. Les entreprises qui rendent ce moment mesurable peuvent vendre dans le commerce, les services publics, la finance, l’éducation, la santé, l’édition et la production créative sans prétendre que la fluidité d’un modèle constitue à elle seule un contrôle.</p>
+
+                <h2>Construire la frontière avant le spectacle</h2>
+
+                <p>Une mise en œuvre pratique peut commencer avec un workflow à forte conséquence. Il faut lister les composants qu’un agent peut demander. Chaque composant reçoit un comportement documenté, une classe de permission, une politique linguistique et un état de refus. Chaque champ conséquent doit porter une source et un marqueur d’actualité. Le même workflow doit être testé dans les principales langues de l’institution. Le reçu rendu doit être conservé, puis l’assertion sous-jacente doit être modifiée afin de vérifier que l’ancienne surface ne peut pas être réutilisée comme si rien n’avait changé.</p>
+
+                <p>La préversion d’API Gateway de Google Cloud montre la valeur d’un chemin de politique existant pour le trafic agentique. La même discipline appartient au côté usager de la frontière. Une interface produite par un agent doit traverser les contrôles établis par l’hôte pour l’authentification, la classification des données, l’accessibilité, la localisation, la journalisation et l’approbation. Un nouveau protocole doit élargir la portée de l’institution sans créer une seconde surface applicative moins responsable.</p>
+
+                <p>Les machines composeront de plus en plus les écrans par lesquels les institutions rencontrent les personnes. La question est de savoir qui possède la grammaire de cette composition. Un système digne de confiance donne à l’hôte le contrôle des composants, du sens, des preuves, de la langue et du recours. Il laisse l’agent inventer à l’intérieur d’une frontière que l’institution peut tester, expliquer et réparer.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/" target="_blank" rel="noopener">Google Developers Blog, « Introducing A2UI: An open project for agent-driven interfaces » (15 décembre 2025). Le projet décrit un format déclaratif et structuré pour les interfaces produites par les agents, des moteurs de rendu contrôlés par l’hôte et des catalogues de composants qui séparent la sortie distante du code exécutable.</a></li>
+                    <li><a href="https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/" target="_blank" rel="noopener">Google Developers Blog, « Turn your REST APIs into MCP tools with Google Cloud API Gateway » (24 septembre 2026). La préversion publique relie les appels d’outils MCP à des opérations REST existantes tout en conservant les chemins communs d’authentification, de quotas et de journalisation.</a></li>
+                    <li><a href="https://www.w3.org/TR/vc-data-model-2.1/" target="_blank" rel="noopener">W3C, « Verifiable Credentials Data Model v2.1 » (Working Draft, 30 septembre 2026). Le projet définit des assertions vérifiables par machine et les relations entre émetteur, détenteur et vérificateur, tout en documentant les considérations de sécurité, de vie privée, d’internationalisation et d’accessibilité. Il reste un travail en cours.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mise à jour le 14 août 2026). Le NIST identifie les protocoles ouverts, l’authentification et l’infrastructure d’identité des agents ainsi que les évaluations de sécurité comme des domaines stratégiques pour une interopérabilité digne de confiance.</a></li>
+                    <li><a href="https://developers.googleblog.com/introducing-credentio-open-source-c-library-for-c2pa-content-credentials-from-google/" target="_blank" rel="noopener">Google Developers Blog, « Introducing Credentio: Open Source C++ Library for C2PA Content Credentials from Google » (13 août 2026). L’annonce décrit une validation locale, des listes de confiance configurables, des verdicts détaillés et une implémentation à faible empreinte mémoire pour les contrôles de provenance dans les workflows médias.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

@@ -158,7 +158,7 @@
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
         'article.entry090':     { en: 'Diop Daily #090 — August 2026', fr: 'Diop Quotidien n°090 — Août 2026' },
         'article.entry086':     { en: 'Diop Daily #086 — August 2026', fr: 'Diop Quotidien n°086 — Août 2026' },
-        'article.entry129':     { en: 'Diop Daily #129 — October 2026', fr: 'Diop Quotidien n°129 — Octobre 2026' },
+        'article.entry130':     { en: 'Diop Daily #130 — October 2026', fr: 'Diop Quotidien n°130 — Octobre 2026' },
         'article.entry128':     { en: 'Diop Daily #128 — October 2026', fr: 'Diop Quotidien n°128 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
@@ -172,6 +172,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-130': {
+        title: {
+            en: "The Screen Is a Trust Boundary",
+            fr: "L’écran est une frontière de confiance"
+        },
+        excerpt: {
+            en: "When agents generate interfaces, the rendered screen becomes part of the authorization path. The investable layer is host-controlled UI infrastructure: trusted components, consent, provenance, accessibility, and conformance across agent boundaries.",
+            fr: "Lorsque les agents produisent des interfaces, l’écran rendu devient une partie du chemin d’autorité. La couche d’investissement est une infrastructure d’interface contrôlée par l’hôte : composants fiables, consentement, provenance, accessibilité et conformité entre les frontières agentiques."
+        }
+    },
     'diop-daily-129': {
         title: {
             en: "The Memory Has to Earn Its Place",
