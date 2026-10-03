@@ -158,6 +158,7 @@
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
         'article.entry090':     { en: 'Diop Daily #090 — August 2026', fr: 'Diop Quotidien n°090 — Août 2026' },
         'article.entry086':     { en: 'Diop Daily #086 — August 2026', fr: 'Diop Quotidien n°086 — Août 2026' },
+        'article.entry131':     { en: 'Diop Daily #131 — October 2026', fr: 'Diop Quotidien n°131 — Octobre 2026' },
         'article.entry130':     { en: 'Diop Daily #130 — October 2026', fr: 'Diop Quotidien n°130 — Octobre 2026' },
         'article.entry128':     { en: 'Diop Daily #128 — October 2026', fr: 'Diop Quotidien n°128 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
@@ -172,6 +173,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-131': {
+        title: {
+            en: "Law Has to Become a Runtime",
+            fr: "Le droit doit devenir un runtime"
+        },
+        excerpt: {
+            en: "AI governance becomes operational when legal duties become versioned, testable policy artifacts that can travel through agent runtimes. The investable layer is policy compilation, conformance evidence, and jurisdiction-aware enforcement.",
+            fr: "La gouvernance de l’IA devient opérationnelle lorsque les devoirs juridiques deviennent des artefacts de politique versionnés et testables, capables de circuler dans les runtimes agentiques. La couche d’investissement est la compilation des politiques, la preuve de conformité et l’application tenant compte des juridictions."
+        }
+    },
     'diop-daily-130': {
         title: {
             en: "The Screen Is a Trust Boundary",

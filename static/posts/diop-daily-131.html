@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Law Has to Become a Runtime — Diop Research</title>
+    <meta name="description" content="AI governance becomes operational when legal duties become versioned, testable policy artifacts that can travel through agent runtimes. The investable layer is policy compilation, conformance evidence, and jurisdiction-aware enforcement."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry131">Diop Daily #131 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 4, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>policy runtime · conformance · sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Law Has to Become a Runtime</h1>
+
+                <p>Artificial intelligence is moving from an object people inspect to an actor that can select tools, touch records, move money, publish material, and change the state of an institution. A legal obligation written in prose does not automatically survive that transition. The rule has to reach the place where an agent chooses, calls, renders, stores, and escalates.</p>
+
+                <p>This is the practical meaning of the current governance movement. The European Union’s AI Act is now applicable in stages, with transparency rules taking effect in August 2026 and strict obligations for high-risk systems scheduled for later dates. The Act names risk assessment, logging, documentation, human oversight, robustness, cybersecurity, and accuracy. The Commission also says that technical operationalisation will depend on standards and codes that can adapt to use cases. Law supplies the duty; infrastructure must make the duty executable.</p>
+
+                <blockquote>
+                    <p>A policy that cannot be evaluated at the moment of action is a wish addressed to a machine.</p>
+                </blockquote>
+
+                <h2>A rule that cannot travel cannot govern</h2>
+
+                <p>Traditional compliance often assumes a stable application boundary. A team documents a process, trains staff, reviews access, and samples outcomes. Agent systems disturb that assumption. One workflow may cross a model provider, a tool gateway, a browser, a payment service, a retrieval store, and another agent before a human sees the result. The relevant rule must travel across those boundaries without losing its subject, jurisdiction, purpose, exception, or evidence requirement.</p>
+
+                <p>Consider a simple instruction: “Do not disclose a person’s health information outside the care team.” A runtime must resolve several questions before it can enforce the sentence. Which data counts as health information? Who belongs to the care team? Which identity is the agent using? Is the request for treatment, billing, research, or convenience? What happens in an emergency? Which event must be logged? Who can review the decision? A prose policy may answer these questions for a trained professional. An agent needs them as structured conditions and explicit failure paths.</p>
+
+                <p>The distinction matters because a model can produce a convincing explanation while the underlying system violates the rule. A prompt may ask for privacy, but the tool may hold broad credentials. A safety instruction may prohibit a transfer, while a connector exposes a second route around the prohibition. A reviewer may approve an output without seeing the hidden context that shaped it. Governance belongs in the execution path, where the system can deny, pause, narrow, route, and record an action.</p>
+
+                <h2>From legal text to a policy artifact</h2>
+
+                <p>The first engineering task is to turn a duty into an artifact that can be versioned and tested. The artifact needs more than a yes-or-no rule. It should carry:</p>
+
+                <ul>
+                    <li><strong>Subject:</strong> which agent, user, institution, data class, tool, or workflow the rule concerns.</li>
+                    <li><strong>Purpose:</strong> which legitimate task permits the action and which attractive shortcuts remain outside that purpose.</li>
+                    <li><strong>Jurisdiction:</strong> which law, contract, language community, tenant, geography, or institutional mandate applies.</li>
+                    <li><strong>Action:</strong> what the system may read, write, infer, publish, purchase, transfer, or refuse.</li>
+                    <li><strong>Conditions:</strong> the identity, freshness, consent, threshold, human approval, or evidence required before execution.</li>
+                    <li><strong>Remedy:</strong> how the action is paused, appealed, corrected, reversed, or reported when the conditions are unclear.</li>
+                    <li><strong>Evidence:</strong> the inputs, policy version, identity, tool call, decision, and human intervention that must remain reconstructable.</li>
+                </ul>
+
+                <p>This structure turns governance into a portable object. A policy can be attached to a tool, checked at a gateway, carried with a handoff, or evaluated by a separate oversight service. It can also be compared across versions. When a regulation, contract, language rule, or institutional decision changes, the organization can identify which agents and workflows inherit the change instead of relying on a general reminder sent to every operator.</p>
+
+                <p>The W3C Agent-to-Web Framework Community Group is evidence that this need has reached the protocol boundary. Its stated mission is to let website operators publish machine-readable governance policies for agent actions, authentication requirements, and human-in-the-loop verification. The group explicitly distinguishes agent action from ordinary crawling and content use. That distinction is commercially important: the web needs a way to say what an agent may do, under which conditions, and with what human involvement.</p>
+
+                <h2>The runtime is a constitutional layer</h2>
+
+                <p>Policy enforcement should be distributed across the system rather than entrusted to a single model instruction. Google’s Agent Development Kit documentation lists identity and authorization, input and output guardrails, sandboxed execution, evaluation, tracing, and network controls as separate safety mechanisms. It also recommends deterministic tool restrictions and callbacks that check parameters against agent state or external policies.</p>
+
+                <p>Those mechanisms form a constitutional layer for machine action. The model can propose. The runtime decides what the proposal is allowed to touch. The tool can receive a constrained context rather than a vague instruction. The evaluator can test the result against representative cases. The trace can preserve the path by which the action occurred. A human can intervene when the system reaches a boundary that policy cannot resolve automatically.</p>
+
+                <p>The constitutional metaphor has a precise use here. A constitution distributes authority, defines limits, and provides procedures for conflict. A policy runtime does the same for an agent fleet. It determines which principal is represented, which capability is delegated, which jurisdiction controls, which evidence is required, and which institution can interrupt the action. The point is not to make the machine behave like a citizen. The point is to prevent capability from becoming authority by accident.</p>
+
+                <p>Conformance therefore has to cover behavior, configuration, and evidence. A company can claim that its model follows a policy while its tool permissions contradict the claim. A gateway can block one route while an agent finds another connector. A dashboard can report compliance while omitting rejected actions and ambiguous cases. A meaningful test suite must exercise the whole path, including refusal, escalation, translation, expired consent, stale credentials, policy conflict, and recovery after a mistaken decision.</p>
+
+                <h2>African institutions need portable rules of their own</h2>
+
+                <p>Governance infrastructure is also an intellectual sovereignty question. If an institution imports an agent runtime whose policy model is fixed elsewhere, it may inherit categories that do not describe its authority, language, household, archive, or public obligations. The result can look locally translated while remaining institutionally foreign.</p>
+
+                <p>A bank, publisher, clinic, university, cooperative, or public office should be able to define its own policy vocabulary and carry it across providers. That vocabulary may distinguish communal custodianship from individual ownership, oral consent from a checkbox, a family relationship from a single account, or a local-language appeal from a generic support ticket. The rule must be machine-readable without becoming conceptually smaller.</p>
+
+                <p>This is where African builders can contribute beyond localization. A local policy pack can encode the authority relationships that imported systems tend to flatten. It can specify which language must appear before a consequential action, who may review a disputed decision, what evidence a community archive may expose, and which permissions expire when a project or relationship ends. Such infrastructure gives institutions control over the categories through which agents recognize them.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the policy runtime: a layer that compiles legal, contractual, institutional, and linguistic duties into controls an agent system can evaluate, enforce, explain, and prove.</p>
+
+                <ul>
+                    <li><strong>Policy compilers:</strong> tools that translate governance requirements into executable conditions, approval states, refusal paths, and evidence schemas without pretending that legal interpretation can be fully automated.</li>
+                    <li><strong>Agent policy gateways:</strong> enforcement points that bind identity, purpose, data class, tool capability, jurisdiction, and human approval before an action reaches an external system.</li>
+                    <li><strong>Conformance suites:</strong> reusable adversarial tests for prompt injection, privilege drift, policy conflicts, stale consent, translation loss, unsafe retries, and unlogged refusals.</li>
+                    <li><strong>Evidence ledgers:</strong> systems that connect the policy version, principal, context, tool call, decision, intervention, and outcome so an institution can demonstrate what happened.</li>
+                    <li><strong>Jurisdiction and language packs:</strong> maintained rule libraries that preserve local legal concepts, institutional categories, terminology, and routes of recourse across models and providers.</li>
+                </ul>
+
+                <p>Underwriting can begin with measurable capacity. Can the organization identify every action governed by a policy? How quickly can it revoke a capability across agents and providers? What proportion of consequential actions carry a complete evidence record? How often do policies disagree across tools? Can a reviewer reproduce the same decision from the stored policy version and inputs? Can the institution export its rules, tests, and evidence when it changes infrastructure?</p>
+
+                <p>The strongest companies in this layer will sell operational certainty rather than a promise that a model is safe. Their customers will include regulated enterprises, public bodies, platforms, model providers, and institutions operating across jurisdictions. The durable asset is a maintained corpus of policies, tests, mappings, exceptions, and evidence. That corpus improves with use because each ambiguous case can become a clearer rule or a better escalation path.</p>
+
+                <h2>Build one policy boundary first</h2>
+
+                <p>An institution can begin with one workflow that creates a real consequence: a payment, a benefits decision, a health-data transfer, a publication, or a change to a production system. Map the actors, data, tools, jurisdictions, approvals, and failure states. Write the policy as a structured artifact. Enforce it at the tool boundary and at the human approval surface. Generate a record for both allowed and refused actions.</p>
+
+                <p>Then test the boundary in the languages and operating conditions that matter. Alter the identity. Remove the source. Expire consent. Introduce a conflicting policy. Ask the agent to use a permitted tool for an impermissible purpose. Disconnect the primary provider. Require a human appeal. A policy is becoming infrastructure when these tests produce bounded behavior and evidence instead of a confident paragraph.</p>
+
+                <p>The legal order will continue to change. Models will change faster. Institutions that wait for a final rule or a final model will remain exposed to the gap between what they are required to do and what their systems can prove. The builders who close that gap will give organizations something more durable than compliance theatre: a runtime in which authority, limits, language, evidence, and correction can travel together.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">European Commission, “AI Act” (last update August 3, 2026). The official overview describes the risk-based framework, August 2026 transparency rules, high-risk obligations including logging, documentation and human oversight, and the role of standards and codes in practical implementation.</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act" target="_blank" rel="noopener">European Commission, “Navigating the AI Act” (last update August 7, 2026). The FAQ explains the Act’s result-oriented requirements and states that concrete technical solutions and operationalisation are left to standards and codes that can adapt to use cases.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). NIST identifies industry-led standards, community-led protocols, agent authentication and identity infrastructure, and security evaluations as strategic pillars for trusted interoperability.</a></li>
+                    <li><a href="https://www.w3.org/community/a2wf/" target="_blank" rel="noopener">W3C Agent-to-Web Framework Community Group (launched March 29, 2026). The group’s mission is to develop machine-readable governance policies for agent actions, authentication requirements, and human-in-the-loop verification; it is a community initiative, not a completed W3C standard.</a></li>
+                    <li><a href="https://adk.dev/safety/" target="_blank" rel="noopener">Google Agent Development Kit, “Safety and Security for AI Agents.” The documentation describes identity and authorization, deterministic in-tool guardrails, callbacks, sandboxing, evaluation, tracing, and network controls as separate mechanisms for constraining agent behavior.</a></li>
+                    <li><a href="https://openai.com/index/managing-ai-investments-in-agentic-era/" target="_blank" rel="noopener">OpenAI, “How to manage AI investments in the agentic era” (July 14, 2026). This vendor perspective frames governance, identity, trusted connectors, evaluations, observability, model routing, and reusable agent patterns as shared operating capabilities, while recommending cost per accepted outcome as a workflow measure.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Le droit doit devenir un runtime</h1>
+
+                <p>L’intelligence artificielle passe d’un objet que les personnes inspectent à un acteur capable de sélectionner des outils, de toucher des dossiers, de déplacer de l’argent, de publier des contenus et de modifier l’état d’une institution. Une obligation juridique rédigée en prose ne survit pas automatiquement à cette transition. La règle doit atteindre l’endroit où un agent choisit, appelle, rend, conserve et transmet une action.</p>
+
+                <p>C’est le sens pratique du mouvement actuel de gouvernance. Le règlement européen sur l’intelligence artificielle devient applicable par étapes, avec des règles de transparence prenant effet en août 2026 et des obligations strictes pour les systèmes à haut risque prévues à des dates ultérieures. Le règlement nomme l’évaluation et la réduction des risques, la journalisation, la documentation, la supervision humaine, la robustesse, la cybersécurité et l’exactitude. La Commission précise aussi que l’opérationnalisation technique dépendra de normes et de codes capables de s’adapter aux cas d’usage. Le droit fournit le devoir ; l’infrastructure doit rendre ce devoir exécutable.</p>
+
+                <blockquote>
+                    <p>Une politique qui ne peut pas être évaluée au moment de l’action est un souhait adressé à une machine.</p>
+                </blockquote>
+
+                <h2>Une règle qui ne voyage pas ne peut pas gouverner</h2>
+
+                <p>La conformité traditionnelle suppose souvent une frontière applicative stable. Une équipe documente un processus, forme le personnel, examine les accès et échantillonne les résultats. Les systèmes agentiques perturbent cette hypothèse. Un même workflow peut traverser un fournisseur de modèles, une passerelle d’outils, un navigateur, un service de paiement, un magasin de récupération et un autre agent avant qu’une personne ne voie le résultat. La règle pertinente doit voyager entre ces frontières sans perdre son objet, sa juridiction, sa finalité, son exception ou son exigence de preuve.</p>
+
+                <p>Prenons une instruction simple : « Ne divulguez pas les informations de santé d’une personne en dehors de l’équipe de soins. » Un runtime doit résoudre plusieurs questions avant de pouvoir appliquer cette phrase. Quelles données comptent comme des informations de santé ? Qui appartient à l’équipe de soins ? Quelle identité l’agent utilise-t-il ? La demande concerne-t-elle le traitement, la facturation, la recherche ou la commodité ? Que se passe-t-il en cas d’urgence ? Quel événement doit être journalisé ? Qui peut examiner la décision ? Une politique en prose peut répondre à ces questions pour un professionnel formé. Un agent en a besoin sous forme de conditions structurées et de chemins d’échec explicites.</p>
+
+                <p>Cette distinction compte parce qu’un modèle peut produire une explication convaincante alors que le système sous-jacent viole la règle. Un prompt peut demander la confidentialité, tandis que l’outil détient des identifiants trop larges. Une instruction de sécurité peut interdire un transfert, tandis qu’un connecteur expose une seconde voie qui contourne l’interdiction. Un réviseur peut approuver une sortie sans voir le contexte caché qui l’a façonnée. La gouvernance appartient au chemin d’exécution, où le système peut refuser, suspendre, limiter, orienter et enregistrer une action.</p>
+
+                <h2>Du texte juridique à l’artefact de politique</h2>
+
+                <p>La première tâche d’ingénierie consiste à transformer un devoir en un artefact qui peut être versionné et testé. L’artefact doit porter davantage qu’une règle oui/non. Il devrait contenir :</p>
+
+                <ul>
+                    <li><strong>Sujet :</strong> l’agent, l’usager, l’institution, la classe de données, l’outil ou le workflow concerné.</li>
+                    <li><strong>Finalité :</strong> la tâche légitime qui permet l’action et les raccourcis séduisants qui restent en dehors de cette finalité.</li>
+                    <li><strong>Juridiction :</strong> le droit, le contrat, la communauté linguistique, le tenant, la géographie ou le mandat institutionnel applicable.</li>
+                    <li><strong>Action :</strong> ce que le système peut lire, écrire, inférer, publier, acheter, transférer ou refuser.</li>
+                    <li><strong>Conditions :</strong> l’identité, l’actualité, le consentement, le seuil, l’approbation humaine ou la preuve requise avant l’exécution.</li>
+                    <li><strong>Recours :</strong> la manière dont l’action est suspendue, contestée, corrigée, annulée ou signalée lorsque les conditions restent incertaines.</li>
+                    <li><strong>Preuve :</strong> les entrées, la version de la politique, l’identité, l’appel d’outil, la décision et l’intervention humaine qui doivent rester reconstituables.</li>
+                </ul>
+
+                <p>Cette structure transforme la gouvernance en objet portable. Une politique peut être attachée à un outil, contrôlée par une passerelle, transportée lors d’un transfert ou évaluée par un service de supervision séparé. Elle peut aussi être comparée entre plusieurs versions. Lorsqu’un règlement, un contrat, une règle linguistique ou une décision institutionnelle change, l’organisation peut identifier les agents et workflows qui héritent du changement au lieu de compter sur un rappel général envoyé à tous les opérateurs.</p>
+
+                <p>Le groupe communautaire W3C Agent-to-Web Framework montre que ce besoin atteint la frontière des protocoles. Sa mission déclarée consiste à permettre aux opérateurs de sites de publier des politiques de gouvernance lisibles par machine pour les actions des agents, les exigences d’authentification et la vérification avec intervention humaine. Le groupe distingue explicitement l’action d’un agent de l’exploration ordinaire et de l’utilisation des contenus. Cette distinction a une importance commerciale : le Web a besoin d’un moyen d’indiquer ce qu’un agent peut faire, dans quelles conditions et avec quelle implication humaine.</p>
+
+                <h2>Le runtime est une couche constitutionnelle</h2>
+
+                <p>L’application d’une politique doit être répartie dans le système plutôt que confiée à une seule instruction du modèle. La documentation de l’Agent Development Kit de Google énumère l’identité et l’autorisation, les garde-fous des entrées et des sorties, l’exécution isolée, l’évaluation, la traçabilité et les contrôles réseau parmi les mécanismes de sécurité distincts. Elle recommande aussi des restrictions déterministes des outils et des callbacks qui vérifient les paramètres par rapport à l’état de l’agent ou à des politiques externes.</p>
+
+                <p>Ces mécanismes forment une couche constitutionnelle pour l’action machine. Le modèle peut proposer. Le runtime décide ce que la proposition est autorisée à toucher. L’outil peut recevoir un contexte contraint plutôt qu’une instruction vague. L’évaluateur peut tester le résultat sur des cas représentatifs. La trace peut conserver le chemin de l’action. Une personne peut intervenir lorsque le système atteint une frontière que la politique ne permet pas de résoudre automatiquement.</p>
+
+                <p>La métaphore constitutionnelle a ici un usage précis. Une constitution distribue l’autorité, définit des limites et fournit des procédures en cas de conflit. Un runtime de politique fait de même pour une flotte d’agents. Il détermine quel principal est représenté, quelle capacité est déléguée, quelle juridiction contrôle, quelle preuve est requise et quelle institution peut interrompre l’action. Il ne s’agit pas de faire de la machine un citoyen. Il s’agit d’empêcher que la capacité devienne une autorité par accident.</p>
+
+                <p>La conformité doit donc couvrir le comportement, la configuration et la preuve. Une entreprise peut affirmer que son modèle suit une politique alors que les permissions de ses outils contredisent cette affirmation. Une passerelle peut bloquer une voie tandis qu’un agent en trouve une autre. Un tableau de bord peut signaler la conformité tout en omettant les refus et les cas ambigus. Une suite de tests utile doit exercer le chemin entier, y compris le refus, l’escalade, la traduction, le consentement expiré, les justificatifs périmés, le conflit de politiques et la récupération après une décision erronée.</p>
+
+                <h2>Les institutions africaines ont besoin de règles portables qui leur appartiennent</h2>
+
+                <p>L’infrastructure de gouvernance est aussi une question de souveraineté intellectuelle. Lorsqu’une institution importe un runtime d’agent dont le modèle de politique est fixé ailleurs, elle peut hériter de catégories qui ne décrivent ni son autorité, ni sa langue, ni son foyer, ni ses archives, ni ses obligations publiques. Le résultat peut sembler localement traduit tout en restant institutionnellement étranger.</p>
+
+                <p>Une banque, une maison d’édition, une clinique, une université, une coopérative ou un service public devrait pouvoir définir son propre vocabulaire de politique et le transporter entre les fournisseurs. Ce vocabulaire peut distinguer la garde communautaire de la propriété individuelle, le consentement oral d’une case à cocher, une relation familiale d’un compte unique ou un recours dans une langue locale d’un ticket d’assistance générique. La règle doit être lisible par machine sans devenir conceptuellement plus pauvre.</p>
+
+                <p>C’est ici que les bâtisseurs africains peuvent contribuer au-delà de la localisation. Un paquet de politiques local peut encoder les relations d’autorité que les systèmes importés ont tendance à aplatir. Il peut préciser quelle langue doit apparaître avant une action conséquente, qui peut examiner une décision contestée, quelles preuves une archive communautaire peut exposer et quelles permissions expirent lorsqu’un projet ou une relation prend fin. Une telle infrastructure donne aux institutions le contrôle des catégories par lesquelles les agents les reconnaissent.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est le runtime de politique : une couche qui compile les devoirs juridiques, contractuels, institutionnels et linguistiques en contrôles qu’un système agentique peut évaluer, appliquer, expliquer et prouver.</p>
+
+                <ul>
+                    <li><strong>Compilateurs de politiques :</strong> outils qui transforment les exigences de gouvernance en conditions exécutables, états d’approbation, chemins de refus et schémas de preuve, sans prétendre automatiser entièrement l’interprétation juridique.</li>
+                    <li><strong>Passerelles de politique pour agents :</strong> points d’application qui lient identité, finalité, classe de données, capacité d’outil, juridiction et approbation humaine avant qu’une action n’atteigne un système externe.</li>
+                    <li><strong>Suites de conformité :</strong> tests adversariaux réutilisables contre l’injection de prompt, la dérive des privilèges, les conflits de politiques, le consentement périmé, la perte de traduction, les reprises dangereuses et les refus non journalisés.</li>
+                    <li><strong>Registres de preuves :</strong> systèmes qui relient la version de la politique, le principal, le contexte, l’appel d’outil, la décision, l’intervention et le résultat afin qu’une institution puisse démontrer ce qui s’est passé.</li>
+                    <li><strong>Paquets de juridiction et de langue :</strong> bibliothèques entretenues de règles qui préservent les concepts juridiques locaux, les catégories institutionnelles, la terminologie et les voies de recours entre modèles et fournisseurs.</li>
+                </ul>
+
+                <p>La souscription peut commencer par une capacité mesurable. L’organisation peut-elle identifier chaque action gouvernée par une politique ? À quelle vitesse peut-elle révoquer une capacité auprès de tous les agents et fournisseurs ? Quelle proportion des actions conséquentes porte un dossier de preuve complet ? À quelle fréquence les politiques divergent-elles entre les outils ? Un réviseur peut-il reproduire la même décision à partir de la version conservée de la politique et des entrées ? L’institution peut-elle exporter ses règles, ses tests et ses preuves lorsqu’elle change d’infrastructure ?</p>
+
+                <p>Les entreprises les plus solides de cette couche vendront une certitude opérationnelle plutôt que la promesse qu’un modèle est sûr. Leurs clients incluront des entreprises réglementées, des organismes publics, des plateformes, des fournisseurs de modèles et des institutions opérant entre plusieurs juridictions. L’actif durable est un corpus entretenu de politiques, de tests, de correspondances, d’exceptions et de preuves. Ce corpus s’améliore avec l’usage, car chaque cas ambigu peut devenir une règle plus claire ou une meilleure voie d’escalade.</p>
+
+                <h2>Commencer par une frontière de politique</h2>
+
+                <p>Une institution peut commencer par un workflow qui crée une conséquence réelle : un paiement, une décision d’aide, un transfert de données de santé, une publication ou une modification d’un système de production. Cartographiez les acteurs, les données, les outils, les juridictions, les approbations et les états d’échec. Écrivez la politique sous forme d’artefact structuré. Appliquez-la à la frontière de l’outil et à la surface d’approbation humaine. Produisez un dossier pour les actions autorisées comme pour les actions refusées.</p>
+
+                <p>Testez ensuite la frontière dans les langues et les conditions de fonctionnement qui comptent. Modifiez l’identité. Retirez la source. Faites expirer le consentement. Introduisez une politique contradictoire. Demandez à l’agent d’utiliser un outil autorisé à une fin interdite. Déconnectez le fournisseur principal. Exigez un recours humain. Une politique devient une infrastructure lorsque ces tests produisent un comportement borné et une preuve, plutôt qu’un paragraphe assuré.</p>
+
+                <p>L’ordre juridique continuera de changer. Les modèles changeront plus vite. Les institutions qui attendent une règle définitive ou un modèle définitif resteront exposées à l’écart entre ce qu’elles doivent faire et ce que leurs systèmes peuvent prouver. Les bâtisseurs qui ferment cet écart donneront aux organisations quelque chose de plus durable qu’un théâtre de conformité : un runtime où l’autorité, les limites, la langue, la preuve et la correction peuvent voyager ensemble.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">Commission européenne, « AI Act » (dernière mise à jour le 3 août 2026). La présentation officielle décrit le cadre fondé sur les risques, les règles de transparence d’août 2026, les obligations applicables aux systèmes à haut risque, notamment la journalisation, la documentation et la supervision humaine, ainsi que le rôle des normes et des codes dans la mise en œuvre pratique.</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act" target="_blank" rel="noopener">Commission européenne, « Navigating the AI Act » (dernière mise à jour le 7 août 2026). La FAQ explique les exigences axées sur les résultats et précise que les solutions techniques concrètes et l’opérationnalisation sont laissées aux normes et aux codes capables de s’adapter aux cas d’usage.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mise à jour le 14 août 2026). Le NIST identifie les normes pilotées par l’industrie, les protocoles issus des communautés, l’authentification et l’infrastructure d’identité des agents ainsi que les évaluations de sécurité comme des piliers stratégiques de l’interopérabilité de confiance.</a></li>
+                    <li><a href="https://www.w3.org/community/a2wf/" target="_blank" rel="noopener">Groupe communautaire W3C Agent-to-Web Framework (lancé le 29 mars 2026). Sa mission consiste à développer des politiques de gouvernance lisibles par machine pour les actions des agents, les exigences d’authentification et la vérification avec intervention humaine ; il s’agit d’une initiative communautaire et non d’un standard W3C achevé.</a></li>
+                    <li><a href="https://adk.dev/safety/" target="_blank" rel="noopener">Google Agent Development Kit, « Safety and Security for AI Agents ». La documentation décrit l’identité et l’autorisation, les garde-fous déterministes dans les outils, les callbacks, l’isolation, l’évaluation, la traçabilité et les contrôles réseau comme des mécanismes distincts pour limiter le comportement des agents.</a></li>
+                    <li><a href="https://openai.com/index/managing-ai-investments-in-agentic-era/" target="_blank" rel="noopener">OpenAI, « How to manage AI investments in the agentic era » (14 juillet 2026). Cette perspective du fournisseur présente la gouvernance, l’identité, les connecteurs fiables, les évaluations, l’observabilité, le routage des modèles et les schémas d’agents réutilisables comme des capacités opérationnelles partagées, et recommande le coût par résultat accepté comme mesure de workflow.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
