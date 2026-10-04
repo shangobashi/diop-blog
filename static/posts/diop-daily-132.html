@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Handshake Needs a Witness — Diop Research</title>
+    <meta name="description" content="Agent protocols are becoming the meeting places of machine institutions. The investable layer is the conformance and semantic-observability infrastructure that proves identity, authority, evidence, and meaning survived the crossing."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry132">Diop Daily #132 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 5, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>conformance · semantic observability · sovereignty</span>
+                </div>
+            </header>
+
+        
+                <div class="article__body" data-lang-body="en">
+                    <h1 class="article__title">The Handshake Needs a Witness</h1>
+
+                    <p>A machine handshake looks small: a request, a response, a token, a status code. Inside an agent economy, that exchange can carry a purchase mandate, a research claim, a publication right, a patient record, or a public obligation. The handshake therefore needs a witness, a record that can show who crossed the boundary, what each side understood, which authority travelled with the request, and what meaning changed on the way.</p>
+
+                    <p>Several public signals now point toward this boundary. NIST’s AI Agent Standards Initiative names open protocols, agent identity infrastructure, and security evaluations as strategic work. A W3C community group is exploring verifiable agent credentials, trust negotiation, revocation, and integration with MCP, A2A, OAuth/OIDC, and SPIFFE. The W3C and GS1 workshop on e-commerce for humans and AI agents treats machine-readable content as a standards and implementation question. C2PA continues to build signed provenance and implementation guidance for digital assets. These initiatives have different scopes. Their common lesson is exact: connection becomes institutional only when the crossing can be examined afterward.</p>
+
+                    <blockquote>
+                        <p>A successful call proves that two systems spoke. A witness proves what they agreed to carry.</p>
+                    </blockquote>
+
+                    <h2>Connectivity leaves too much unsaid</h2>
+
+                    <p>Traditional integrations often reduce success to transport. The endpoint was reachable, the payload passed validation, and the receiving service returned a response. Agents raise the cost of that simplification because they act on behalf of people and institutions. A message can be syntactically valid while its principal is unclear, its authority is too broad, its source is stale, or its translation has weakened a restriction.</p>
+
+                    <p>Imagine a research agent handing a literature packet to a synthesis agent. The packet may contain a source list, an argument, a confidence estimate, a license condition, and a request for a public summary. A JSON schema can confirm that all five fields exist. It cannot by itself show whether the source list was complete, whether the license allows republication, whether the confidence belongs to the source or to the first agent, or whether “public summary” includes translation into another language. The receiving agent needs a semantic contract and an evidence trail.</p>
+
+                    <p>The same problem appears in commerce, administration, media, and healthcare. A price can cross a system without its currency or expiry. A credential can be valid while its holder’s authority has been revoked. A content manifest can identify a transformation while a platform silently removes it. A delegated request can retain the words of the mandate while losing the jurisdiction that limits it. Each failure leaves the transport layer green and the institution less legible.</p>
+
+                    <h2>The witness is a boundary object</h2>
+
+                    <p>A useful handshake record should travel with the exchange or remain addressable from it. It should answer a bounded set of questions:</p>
+
+                    <ul>
+                        <li><strong>Identity:</strong> which person, institution, agent, service, or software role is represented, and how was that identity verified?</li>
+                        <li><strong>Authority:</strong> which mandate, permission, contract, or policy allowed the request, with what scope and expiry?</li>
+                        <li><strong>Meaning:</strong> which schema, vocabulary, language, unit, jurisdiction, and version define the fields?</li>
+                        <li><strong>Evidence:</strong> which sources, signatures, calculations, records, or prior events support the material claims?</li>
+                        <li><strong>Transformation:</strong> which fields were translated, normalized, summarized, redacted, enriched, or dropped?</li>
+                        <li><strong>Disposition:</strong> what did the receiving system accept, refuse, defer, or create, and who owns the next step?</li>
+                    </ul>
+
+                    <p>This witness is not a transcript of every token. It is a boundary object, a compact account of the conditions under which an exchange can be trusted. It gives a reviewer a way to compare the sender’s proposition with the receiver’s interpretation. It gives the institution a place to record uncertainty instead of hiding it inside a successful response.</p>
+
+                    <p>The distinction between schema validation and semantic conformance matters here. A schema asks whether a message has the right shape. Conformance asks whether the implementation preserved the obligations and relationships that the shape was meant to express. A system can pass a field-level test while turning “authorized editor” into “account administrator,” or turning “recommend” into “purchase.” Those are market failures even when every packet arrives intact.</p>
+
+                    <h2>Standards are beginning to name the crossing</h2>
+
+                    <p>NIST’s initiative gives the public conversation a useful institutional frame: standards, open protocols, agent authentication and identity infrastructure, and security evaluations belong together. The initiative is a government research and coordination effort, not a finished certification regime. Its significance lies in treating interoperability as a security and accountability problem rather than as a developer-convenience feature.</p>
+
+                    <p>The W3C Agent Identity Registry Protocol Community Group goes further into the boundary mechanics. Its published scope includes a decentralized identity method, a verifiable credential format, trust negotiation, trust levels, revocation, credential lifecycle management, and integration profiles for protocols such as MCP and A2A. It remains a community initiative rather than an approved W3C standard. That status is important because it separates an emerging design space from a settled guarantee.</p>
+
+                    <p>The W3C and GS1 workshop on e-commerce makes the content side visible. Pages that were designed for human readers are becoming inputs to agents that summarize, compare, follow links, and support activity before a person visits the source. C2PA offers a parallel lesson for media: a signed manifest can preserve claims about origin and transformation, while implementation guidance determines whether a real workflow can validate those claims. In both cases, the difficult work begins after the existence of a format has been announced. Systems need tests that reveal what survived the crossing.</p>
+
+                    <h2>Conformance is a service, not a checkbox</h2>
+
+                    <p>Once agents negotiate across organizational boundaries, conformance becomes an operating service. The service should maintain test cases, reference implementations, semantic diffs, negative cases, replayable evidence, and a clear method for reporting uncertainty. It should detect the boundary failures that ordinary uptime monitoring cannot see.</p>
+
+                    <p>A serious test program should include:</p>
+
+                    <ol>
+                        <li>identity substitution, expired credentials, revoked delegation, and conflicting principals;</li>
+                        <li>missing units, stale records, changed prices, altered permissions, and incomplete source chains;</li>
+                        <li>translation between dominant and local languages, including terms with different legal or institutional force;</li>
+                        <li>partial delivery, retries, duplicate messages, and a receiver that accepts only part of the requested action;</li>
+                        <li>human appeal, correction, withdrawal, and reconstruction after the exchange has already produced an effect.</li>
+                    </ol>
+
+                    <p>The result should be evidence that another party can inspect without trusting the original operator’s dashboard. A certification mark may be useful, but the durable asset is the test corpus and the record of which versions passed which cases. Conformance becomes a living institution when a changed protocol, provider, language pack, or policy triggers a new examination.</p>
+
+                    <h2>African sovereignty lives in the witness</h2>
+
+                    <p>For African institutions, this layer carries a precise sovereignty question: whose categories remain visible when systems exchange meaning? A cooperative may represent authority through a committee and a seasonal cycle. A clinic may need a patient’s chosen language to remain attached to a consent record. A publisher may distinguish the right to read from the right to translate, adapt, or distribute. A public office may need a community relationship, a mobile-money status, or a customary role to remain part of the case.</p>
+
+                    <p>Imported platforms often compress these distinctions into fields that were designed for another social and legal environment. The loss may appear as a translation issue, yet it changes who can be recognized, which evidence counts, and who may correct the record. A local protocol extension can preserve the original category while offering a mapping to a wider ecosystem. The witness should carry both the shared label and the institution’s statement about where the mapping stops.</p>
+
+                    <p>This is how participation avoids semantic surrender. African builders do not need to isolate their institutions from global agent networks. They need the ability to publish their own vocabularies, credentials, languages, authority structures, correction routes, and evidence requirements, then test whether external systems preserve them. A connection that erases the terms of recognition is an export channel for dependency.</p>
+
+                    <h2>Where the investable surface is widening</h2>
+
+                    <p>The commercial object is the conformance and semantic-observability layer at the agent boundary. It makes exchange measurable for institutions that cannot underwrite a connection merely because an API returned 200.</p>
+
+                    <ul>
+                        <li><strong>Agent conformance labs:</strong> validators, reference implementations, certification services, and adversarial test suites that assess behavior and meaning across protocols.</li>
+                        <li><strong>Semantic diff systems:</strong> tools that show which obligations, fields, rights, units, or authority relationships changed during translation or handoff.</li>
+                        <li><strong>Credential and delegation registries:</strong> portable identity, scoped authority, revocation, and lifecycle records for people, institutions, agents, and software roles.</li>
+                        <li><strong>Boundary evidence ledgers:</strong> systems that preserve the versions, sources, transformations, decisions, refusals, and owners associated with an exchange.</li>
+                        <li><strong>Local protocol adapters:</strong> maintained mappings for African languages, payment practices, institutional roles, community records, and jurisdictional requirements.</li>
+                    </ul>
+
+                    <p>Underwriting can begin with observable measures: semantic fields preserved per handoff; time to certify a new partner; percentage of exchanges with complete identity and authority evidence; translation-loss rate; provenance breaks; disputed actions that can be reconstructed; and the cost of correcting a boundary error. These metrics turn “interoperability” from a feature claim into an operating property.</p>
+
+                    <p>The strongest products in this category will sit between standards and consequences. They will help a buyer determine whether a new agent, provider, market, or language pack can enter the system without weakening its obligations. Their revenue may come from certification, monitoring, managed registries, compliance evidence, or domain-specific adapters. Their defensibility will come from accumulated edge cases and from the trust of institutions that need a neutral account of what crossed their boundaries.</p>
+
+                    <h2>Build the witness before widening the network</h2>
+
+                    <p>An institution can begin with one consequential exchange. Choose a payment instruction, a publication handoff, a research packet, a benefits record, or a customer escalation. Define the identities, authority, vocabulary, evidence, transformations, refusal states, and correction route. Save the witness with the version of every policy and schema that mattered.</p>
+
+                    <p>Then test the crossing as if the meaning were under pressure. Replace the credential. Remove a source. Translate the request. Expire the permission. Deliver only half the fields. Change the receiver. Ask a human to contest the result. The test passes when the institution can state what each system knew, what each system was allowed to do, what was lost, and how the record can be repaired.</p>
+
+                    <p>Agent networks will become more capable by becoming more connected. Their political and commercial quality will depend on the evidence carried at each connection. The handshake is where one institution becomes legible to another. Give that moment a witness, and interoperability can become a form of accountable sovereignty.</p>
+
+                    <h2>Sources</h2>
+                    <ul>
+                        <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). The official page names industry-led standards, community-led protocols, agent authentication and identity infrastructure, and security evaluations as strategic pillars; it describes an initiative, not a completed certification standard.</a></li>
+                        <li><a href="https://www.w3.org/community/agent-identity/" target="_blank" rel="noopener">W3C Agent Identity Registry Protocol Community Group (launched April 24, 2026). Its published scope includes verifiable agent credentials, trust negotiation, trust levels, revocation, lifecycle management, and integration with MCP, A2A, OAuth/OIDC, and SPIFFE; W3C hosting does not imply endorsement or a finished standard.</a></li>
+                        <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/" target="_blank" rel="noopener">W3C News, “Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents” (published June 1, 2026; workshop held September 8–9, 2026). The announcement describes machine agents as intermediaries that summarize, follow links, and support online activity, with e-commerce as the workshop focus.</a></li>
+                        <li><a href="https://c2pa.org/news/" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, announcements (July 28 and 31, 2026). The organization announced a new implementation guide for Content Credentials and expanded steering participation; these are signals of implementation and governance work, not proof that every platform preserves provenance.</a></li>
+                        <li><a href="https://spec.c2pa.org/specifications/specifications/2.4/index.html" target="_blank" rel="noopener">C2PA Specifications, version 2.4. The specification site documents technical standards for signed source and history assertions, manifests, security considerations, and human and organizational identity recommendations.</a></li>
+                        <li><a href="https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/" target="_blank" rel="noopener">Google Developers Blog, “Building agents with the ADK and the new Interactions API” (December 11, 2025). The article describes mapping an Interactions API surface to A2A through a transport layer, including message, task, and status translation; it also notes unsupported features in that mapping.</a></li>
+                    </ul>
+                </div>
+
+                <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                    <h1 class="article__title">La poignée de main a besoin d’un témoin</h1>
+
+                    <p>Une poignée de main machine paraît brève : une demande, une réponse, un jeton, un code d’état. Dans une économie d’agents, cet échange peut porter un mandat d’achat, une affirmation de recherche, un droit de publication, un dossier de patient ou une obligation publique. La poignée de main a donc besoin d’un témoin, d’un dossier capable de montrer qui a franchi la frontière, ce que chaque partie a compris, quelle autorité accompagnait la demande et quel sens a changé en chemin.</p>
+
+                    <p>Plusieurs signaux publics orientent désormais vers cette frontière. L’initiative du NIST sur les standards des agents nomme les protocoles ouverts, l’infrastructure d’identité des agents et les évaluations de sécurité comme des travaux stratégiques. Un groupe communautaire du W3C explore les justificatifs vérifiables pour les agents, la négociation de confiance, la révocation et l’intégration avec MCP, A2A, OAuth/OIDC et SPIFFE. L’atelier W3C et GS1 sur le commerce électronique pour les humains et les agents d’IA traite le contenu lisible par les machines comme une question de standardisation et d’implémentation. La C2PA continue de développer des provenances signées et des guides d’implémentation pour les actifs numériques. Ces initiatives ont des portées différentes. Leur leçon commune est précise : une connexion devient institutionnelle seulement lorsque son franchissement peut être examiné ensuite.</p>
+
+                    <blockquote>
+                        <p>Un appel réussi prouve que deux systèmes ont parlé. Un témoin prouve ce qu’ils ont accepté de transporter.</p>
+                    </blockquote>
+
+                    <h2>La connectivité laisse trop de choses implicites</h2>
+
+                    <p>Les intégrations traditionnelles réduisent souvent le succès au transport. Le point d’accès était joignable, la charge utile a passé la validation et le service destinataire a renvoyé une réponse. Les agents augmentent le coût de cette simplification parce qu’ils agissent au nom de personnes et d’institutions. Un message peut être valide sur le plan syntaxique alors que son mandant reste flou, que son autorité est trop large, que sa source est périmée ou que sa traduction a affaibli une restriction.</p>
+
+                    <p>Imaginons un agent de recherche qui transmette un dossier bibliographique à un agent de synthèse. Le dossier peut contenir une liste de sources, un argument, une estimation de confiance, une condition de licence et une demande de résumé public. Un schéma JSON peut confirmer l’existence des cinq champs. Il ne montre pas à lui seul si la liste des sources est complète, si la licence autorise la republication, si la confiance appartient à la source ou au premier agent, ni si « résumé public » comprend une traduction dans une autre langue. L’agent destinataire a besoin d’un contrat sémantique et d’une trace des preuves.</p>
+
+                    <p>Le même problème apparaît dans le commerce, l’administration, les médias et la santé. Un prix peut franchir un système sans sa devise ni sa date d’expiration. Un justificatif peut être valide alors que l’autorité de son détenteur a été révoquée. Un manifeste de contenu peut identifier une transformation tandis qu’une plateforme le retire silencieusement. Une demande déléguée peut conserver les mots du mandat tout en perdant la juridiction qui le limite. Chaque échec laisse la couche de transport au vert et rend l’institution moins lisible.</p>
+
+                    <h2>Le témoin est un objet de frontière</h2>
+
+                    <p>Un dossier de poignée de main utile devrait voyager avec l’échange ou rester accessible depuis celui-ci. Il devrait répondre à un ensemble borné de questions :</p>
+
+                    <ul>
+                        <li><strong>Identité :</strong> quelle personne, institution, agent, service ou fonction logicielle est représentée, et comment cette identité a-t-elle été vérifiée ?</li>
+                        <li><strong>Autorité :</strong> quel mandat, quelle permission, quel contrat ou quelle politique autorisait la demande, avec quel périmètre et quelle expiration ?</li>
+                        <li><strong>Sens :</strong> quel schéma, vocabulaire, langue, unité, juridiction et version définissent les champs ?</li>
+                        <li><strong>Preuves :</strong> quelles sources, signatures, calculs, dossiers ou événements antérieurs soutiennent les affirmations importantes ?</li>
+                        <li><strong>Transformation :</strong> quels champs ont été traduits, normalisés, résumés, masqués, enrichis ou supprimés ?</li>
+                        <li><strong>Disposition :</strong> qu’est-ce que le système destinataire a accepté, refusé, différé ou créé, et qui possède l’étape suivante ?</li>
+                    </ul>
+
+                    <p>Ce témoin n’est pas la transcription de chaque token. C’est un objet de frontière, un compte rendu compact des conditions qui rendent un échange digne de confiance. Il donne au réviseur un moyen de comparer la proposition de l’expéditeur avec l’interprétation du destinataire. Il donne à l’institution un lieu où enregistrer l’incertitude au lieu de la cacher dans une réponse réussie.</p>
+
+                    <p>La distinction entre validation de schéma et conformité sémantique est déterminante. Un schéma demande si un message a la bonne forme. La conformité demande si l’implémentation a préservé les obligations et les relations que cette forme devait exprimer. Un système peut passer un test de champs tout en transformant « éditeur autorisé » en « administrateur du compte », ou « recommander » en « acheter ». Ce sont des défaillances de marché même lorsque chaque paquet arrive intact.</p>
+
+                    <h2>Les standards commencent à nommer le passage</h2>
+
+                    <p>L’initiative du NIST donne au débat public un cadre institutionnel utile : standards, protocoles ouverts, authentification et infrastructure d’identité des agents, ainsi qu’évaluations de sécurité, doivent être pensés ensemble. L’initiative est un effort gouvernemental de recherche et de coordination, et non un régime de certification achevé. Son importance vient du fait qu’elle traite l’interopérabilité comme un problème de sécurité et de responsabilité, plutôt que comme une simple commodité de développeur.</p>
+
+                    <p>Le groupe communautaire du W3C consacré au registre de protocole d’identité des agents avance davantage dans la mécanique de la frontière. Son périmètre publié comprend une méthode d’identité décentralisée, un format de justificatif vérifiable, la négociation de confiance, des niveaux de confiance, la révocation, la gestion du cycle de vie des justificatifs et des profils d’intégration pour des protocoles comme MCP et A2A. Il reste une initiative communautaire, et non un standard W3C approuvé. Ce statut sépare un espace de conception émergent d’une garantie établie.</p>
+
+                    <p>L’atelier W3C et GS1 sur le commerce électronique rend visible le côté contenu. Les pages conçues pour des lecteurs humains deviennent les entrées d’agents qui résument, comparent, suivent des liens et soutiennent une activité avant la visite de la source par une personne. La C2PA fournit une leçon parallèle pour les médias : un manifeste signé peut conserver des affirmations sur l’origine et la transformation, tandis que les guides d’implémentation déterminent si un workflow réel peut les vérifier. Dans les deux cas, le travail difficile commence après l’annonce d’un format. Les systèmes ont besoin de tests qui révèlent ce qui a survécu au passage.</p>
+
+                    <h2>La conformité est un service, pas une case</h2>
+
+                    <p>Lorsque des agents négocient au-delà des frontières organisationnelles, la conformité devient un service opératoire. Ce service doit entretenir des cas de test, des implémentations de référence, des différences sémantiques, des cas négatifs, des preuves rejouables et une méthode claire pour déclarer l’incertitude. Il doit détecter les défaillances de frontière que la surveillance ordinaire de la disponibilité ne voit pas.</p>
+
+                    <p>Un programme de tests sérieux devrait inclure :</p>
+
+                    <ol>
+                        <li>la substitution d’identité, les justificatifs expirés, la délégation révoquée et les mandants en conflit ;</li>
+                        <li>les unités manquantes, les dossiers périmés, les prix modifiés, les permissions altérées et les chaînes de sources incomplètes ;</li>
+                        <li>la traduction entre langues dominantes et langues locales, y compris les termes dont la force juridique ou institutionnelle varie ;</li>
+                        <li>la livraison partielle, les nouvelles tentatives, les messages dupliqués et un destinataire qui n’accepte qu’une partie de l’action demandée ;</li>
+                        <li>le recours humain, la correction, le retrait et la reconstitution après que l’échange a déjà produit un effet.</li>
+                    </ol>
+
+                    <p>Le résultat devrait être une preuve qu’une autre partie peut examiner sans faire confiance au tableau de bord de l’opérateur initial. Une marque de certification peut être utile, mais l’actif durable est le corpus de tests et le relevé des versions qui ont réussi chaque cas. La conformité devient une institution vivante lorsqu’un protocole, un fournisseur, un paquet linguistique ou une politique modifié déclenche un nouvel examen.</p>
+
+                    <h2>La souveraineté africaine vit dans le témoin</h2>
+
+                    <p>Pour les institutions africaines, cette couche porte une question de souveraineté précise : quelles catégories restent visibles lorsque les systèmes échangent du sens ? Une coopérative peut représenter l’autorité par un comité et un cycle saisonnier. Une clinique peut avoir besoin que la langue choisie par le patient reste attachée au dossier de consentement. Un éditeur peut distinguer le droit de lire du droit de traduire, d’adapter ou de distribuer. Un service public peut avoir besoin qu’une relation communautaire, un statut d’argent mobile ou une fonction coutumière reste dans le dossier.</p>
+
+                    <p>Les plateformes importées compressent souvent ces distinctions dans des champs conçus pour un autre environnement social et juridique. La perte peut apparaître comme un problème de traduction, alors qu’elle change les personnes reconnues, les preuves admissibles et celles qui peuvent corriger le dossier. Une extension de protocole locale peut conserver la catégorie originale tout en proposant une correspondance vers un écosystème plus large. Le témoin devrait porter à la fois l’étiquette commune et l’énoncé de l’institution sur la limite de la correspondance.</p>
+
+                    <p>C’est ainsi que la participation évite l’abandon sémantique. Les bâtisseurs africains n’ont pas besoin d’isoler leurs institutions des réseaux mondiaux d’agents. Ils ont besoin de publier leurs propres vocabulaires, justificatifs, langues, structures d’autorité, voies de correction et exigences de preuve, puis de tester si les systèmes externes les préservent. Une connexion qui efface les conditions de la reconnaissance devient un canal d’exportation de la dépendance.</p>
+
+                    <h2>Là où la surface d’investissement s’élargit</h2>
+
+                    <p>L’objet commercial est la couche de conformité et d’observabilité sémantique à la frontière des agents. Elle rend l’échange mesurable pour les institutions qui ne peuvent pas souscrire à une connexion simplement parce qu’une API a renvoyé 200.</p>
+
+                    <ul>
+                        <li><strong>Laboratoires de conformité agentique :</strong> validateurs, implémentations de référence, services de certification et suites de tests adversariaux évaluant le comportement et le sens entre protocoles.</li>
+                        <li><strong>Systèmes de différence sémantique :</strong> outils montrant quelles obligations, quels champs, quels droits, quelles unités ou quelles relations d’autorité ont changé pendant une traduction ou un transfert.</li>
+                        <li><strong>Registres de justificatifs et de délégation :</strong> dossiers portables d’identité, d’autorité limitée, de révocation et de cycle de vie pour les personnes, institutions, agents et fonctions logicielles.</li>
+                        <li><strong>Registres de preuves de frontière :</strong> systèmes conservant les versions, sources, transformations, décisions, refus et responsables liés à un échange.</li>
+                        <li><strong>Adaptateurs protocolaires locaux :</strong> correspondances entretenues pour les langues africaines, les pratiques de paiement, les fonctions institutionnelles, les archives communautaires et les exigences juridictionnelles.</li>
+                    </ul>
+
+                    <p>La souscription peut commencer par des mesures observables : champs sémantiques préservés à chaque transfert, délai de certification d’un nouveau partenaire, pourcentage d’échanges portant une preuve complète d’identité et d’autorité, taux de perte à la traduction, ruptures de provenance, actions contestées pouvant être reconstituées et coût de correction d’une erreur de frontière. Ces métriques transforment l’« interopérabilité » de promesse fonctionnelle en propriété opératoire.</p>
+
+                    <p>Les produits les plus solides de cette catégorie se situeront entre les standards et les conséquences. Ils aideront un acheteur à déterminer si un nouvel agent, fournisseur, marché ou paquet linguistique peut entrer dans le système sans affaiblir ses obligations. Le revenu pourra venir de la certification, de la surveillance, de registres gérés, de preuves de conformité ou d’adaptateurs spécialisés. La défense viendra des cas limites accumulés et de la confiance des institutions qui ont besoin d’un compte neutre de ce qui a franchi leurs frontières.</p>
+
+                    <h2>Construire le témoin avant d’élargir le réseau</h2>
+
+                    <p>Une institution peut commencer par un échange lourd de conséquences. Choisissez une instruction de paiement, un transfert éditorial, un dossier de recherche, un dossier d’aide ou une escalade client. Définissez les identités, l’autorité, le vocabulaire, les preuves, les transformations, les états de refus et la voie de correction. Conservez le témoin avec la version de chaque politique et de chaque schéma qui comptait.</p>
+
+                    <p>Testez ensuite le passage comme si le sens était sous pression. Remplacez le justificatif. Retirez une source. Traduisez la demande. Faites expirer la permission. Ne livrez que la moitié des champs. Changez le destinataire. Demandez à une personne de contester le résultat. Le test réussit lorsque l’institution peut dire ce que chaque système savait, ce que chacun avait le droit de faire, ce qui a été perdu et comment le dossier peut être réparé.</p>
+
+                    <p>Les réseaux d’agents deviendront plus capables en devenant plus connectés. Leur qualité politique et commerciale dépendra des preuves transportées à chaque connexion. La poignée de main est le moment où une institution devient lisible pour une autre. Donnez à ce moment un témoin, et l’interopérabilité pourra devenir une forme de souveraineté responsable.</p>
+
+                    <h2>Sources</h2>
+                    <ul>
+                        <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mise à jour le 14 août 2026). La page officielle nomme les standards pilotés par l’industrie, les protocoles issus des communautés, l’authentification et l’infrastructure d’identité des agents ainsi que les évaluations de sécurité comme piliers stratégiques ; elle décrit une initiative, et non un standard de certification achevé.</a></li>
+                        <li><a href="https://www.w3.org/community/agent-identity/" target="_blank" rel="noopener">Groupe communautaire W3C Agent Identity Registry Protocol (lancé le 24 avril 2026). Son périmètre publié comprend les justificatifs vérifiables pour les agents, la négociation de confiance, les niveaux de confiance, la révocation, la gestion du cycle de vie et l’intégration avec MCP, A2A, OAuth/OIDC et SPIFFE ; l’hébergement par le W3C n’implique ni approbation ni standard achevé.</a></li>
+                        <li><a href="https://www.w3.org/news/2026/upcoming-w3c-gs1-workshop-on-e-commerce-for-humans-and-ai-agents/" target="_blank" rel="noopener">Actualités du W3C, « Upcoming: W3C/GS1 Workshop on E-commerce for Humans and AI Agents » (publié le 1er juin 2026 ; atelier tenu les 8 et 9 septembre 2026). L’annonce décrit les agents comme des intermédiaires qui résument, suivent des liens et soutiennent l’activité en ligne, avec le commerce électronique comme sujet central.</a></li>
+                        <li><a href="https://c2pa.org/news/" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, annonces des 28 et 31 juillet 2026. L’organisation a annoncé un nouveau guide d’implémentation pour Content Credentials et l’élargissement de sa participation directrice ; ces annonces signalent un travail d’implémentation et de gouvernance, sans prouver que chaque plateforme préserve la provenance.</a></li>
+                        <li><a href="https://spec.c2pa.org/specifications/specifications/2.4/index.html" target="_blank" rel="noopener">Spécifications C2PA, version 2.4. Le site documente des standards techniques pour les assertions signées sur la source et l’histoire, les manifestes, les considérations de sécurité et les recommandations d’identité humaine et organisationnelle.</a></li>
+                        <li><a href="https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/" target="_blank" rel="noopener">Google Developers Blog, « Building agents with the ADK and the new Interactions API » (11 décembre 2025). L’article décrit la mise en correspondance d’une surface de l’Interactions API avec A2A par une couche de transport, notamment pour les messages, les tâches et les statuts, et signale aussi les fonctions non prises en charge dans cette correspondance.</a></li>
+                    </ul>
+                </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

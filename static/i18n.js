@@ -159,6 +159,7 @@
         'article.entry090':     { en: 'Diop Daily #090 — August 2026', fr: 'Diop Quotidien n°090 — Août 2026' },
         'article.entry086':     { en: 'Diop Daily #086 — August 2026', fr: 'Diop Quotidien n°086 — Août 2026' },
         'article.entry131':     { en: 'Diop Daily #131 — October 2026', fr: 'Diop Quotidien n°131 — Octobre 2026' },
+        'article.entry132':     { en: 'Diop Daily #132 — October 2026', fr: 'Diop Quotidien n°132 — Octobre 2026' },
         'article.entry130':     { en: 'Diop Daily #130 — October 2026', fr: 'Diop Quotidien n°130 — Octobre 2026' },
         'article.entry128':     { en: 'Diop Daily #128 — October 2026', fr: 'Diop Quotidien n°128 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
@@ -173,6 +174,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-132': {
+        title: {
+            en: "The Handshake Needs a Witness",
+            fr: "La poignée de main a besoin d’un témoin"
+        },
+        excerpt: {
+            en: "Agent protocols are becoming the meeting places of machine institutions. The investable layer is the conformance and semantic-observability infrastructure that proves identity, authority, evidence, and meaning survived the crossing.",
+            fr: "Les protocoles d’agents deviennent les lieux de rencontre des institutions machines. La couche d’investissement est l’infrastructure de conformité et d’observabilité sémantique qui prouve que l’identité, l’autorité, les preuves et le sens ont survécu au passage."
+        }
+    },
     'diop-daily-131': {
         title: {
             en: "Law Has to Become a Runtime",
