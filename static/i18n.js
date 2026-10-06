@@ -159,6 +159,7 @@
         'article.entry090':     { en: 'Diop Daily #090 — August 2026', fr: 'Diop Quotidien n°090 — Août 2026' },
         'article.entry086':     { en: 'Diop Daily #086 — August 2026', fr: 'Diop Quotidien n°086 — Août 2026' },
         'article.entry131':     { en: 'Diop Daily #131 — October 2026', fr: 'Diop Quotidien n°131 — Octobre 2026' },
+        'article.entry133':     { en: 'Diop Daily #133 — October 2026', fr: 'Diop Quotidien n°133 — Octobre 2026' },
         'article.entry132':     { en: 'Diop Daily #132 — October 2026', fr: 'Diop Quotidien n°132 — Octobre 2026' },
         'article.entry130':     { en: 'Diop Daily #130 — October 2026', fr: 'Diop Quotidien n°130 — Octobre 2026' },
         'article.entry128':     { en: 'Diop Daily #128 — October 2026', fr: 'Diop Quotidien n°128 — Octobre 2026' },
@@ -174,6 +175,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-133': {
+        title: {
+            en: "Who Pays for the Second Attempt?",
+            fr: "Qui paie la deuxième tentative ?"
+        },
+        excerpt: {
+            en: "AI economics are decided by the full cost of reaching an accepted result: retries, review, correction, delay, and local operating conditions. The investable layer is the outcome ledger that makes machine work legible to capital.",
+            fr: "L’économie de l’IA se décide par le coût complet d’un résultat accepté : reprises, revue, correction, délai et conditions locales d’exploitation. La couche d’investissement est le registre des résultats qui rend le travail machine lisible au capital."
+        }
+    },
     'diop-daily-132': {
         title: {
             en: "The Handshake Needs a Witness",

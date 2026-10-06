@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Who Pays for the Second Attempt? — Diop Research</title>
+    <meta name="description" content="AI economics are decided by the full cost of reaching an accepted result: retries, review, correction, delay, and local operating conditions. The investable layer is the outcome ledger that makes machine work legible to capital."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry133">Diop Daily #133 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 6, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>outcome accounting · agent economics · sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Who Pays for the Second Attempt?</h1>
+
+                <p>The first attempt is the seductive unit of AI economics. A model receives a prompt, calls a tool, returns an answer, and produces a clean line on a usage dashboard. The institution pays for tokens and declares a workflow. The second attempt is where the institution discovers what it actually bought: a retry after a malformed call, a human review after an uncertain answer, a correction after a polished error, a translation check, or a delay that changes the value of the result.</p>
+
+                <p>This is why the price of intelligence cannot be read from the price of a token. OpenAI’s July guidance for AI investment recommends measuring “cost per accepted outcome,” including model and tool use, attempts, completion rate, latency, and human review. Its September usage-analytics guidance connects spend with task categories, model choice, speed, training, and business outcomes. Stanford’s 2026 AI Index reports that productivity gains are largest in structured, measurable work where outputs are easy to monitor, while compute spending and infrastructure costs continue to rise. These sources point toward one accounting problem: an AI system has an economic unit only when an institution can define acceptance and count the work required to reach it.</p>
+
+                <blockquote>
+                    <p>The cheap answer is the answer that reaches an accepted state without hiding the cost of getting there.</p>
+                </blockquote>
+
+                <h2>The token is an input, not a result</h2>
+
+                <p>Token pricing is attractive because it is precise. A provider can state a rate, a dashboard can record consumption, and a buyer can compare models on a familiar axis. That precision becomes misleading when the workflow has consequential failure modes. A low-cost model that requires three retries and twenty minutes of review may be more expensive than a higher-cost model that produces a usable result on the first pass. A fast response that creates a dispute can consume more institutional capacity than a slower response that arrives with the evidence needed for approval.</p>
+
+                <p>The full cost of an agentic task has several components:</p>
+
+                <ul>
+                    <li><strong>Inference:</strong> the model calls, context, reasoning budget, and output tokens used to produce a proposal.</li>
+                    <li><strong>Tool work:</strong> API calls, browser actions, retrieval, storage, payment attempts, and external services touched by the proposal.</li>
+                    <li><strong>Correction:</strong> retries, re-planning, data repair, translation review, human checking, and recovery after a failed action.</li>
+                    <li><strong>Time:</strong> latency, queueing, escalation, and the interval during which a person or process waits for a usable state.</li>
+                    <li><strong>Consequence:</strong> the cost of a wrong publication, a missed deadline, a duplicated payment, an exposed record, or a decision that must be reversed.</li>
+                </ul>
+
+                <p>The last two categories are often invisible in model dashboards. They live in calendars, support queues, finance systems, editorial corrections, and the attention of people who were never counted as part of the AI workflow. An institution that measures only inference is measuring the machine’s appetite while leaving the organization’s metabolism unpriced.</p>
+
+                <h2>Acceptance is a governed state</h2>
+
+                <p>“Accepted outcome” sounds simple until a real institution has to define it. A support answer may be accepted when the customer’s issue is resolved and the record is correctly updated. A code change may be accepted when tests pass, review is complete, security checks are green, and the change can be maintained by the team. A research brief may be accepted when its sources are accessible, its claims are bounded, its rights are clear, and another reader can follow the reasoning.</p>
+
+                <p>Each definition contains a threshold, an authority, and a route for disagreement. Acceptance belongs to the institution that bears the consequence. A provider can report that a model generated an answer; the buyer has to decide whether the answer can enter the work.</p>
+
+                <p>This changes the design of observability. A serious outcome ledger should join the model trace to the institutional state:</p>
+
+                <ol>
+                    <li>the task, owner, principal, and intended outcome;</li>
+                    <li>the model, context, tools, and policy version used in the attempt;</li>
+                    <li>the first result and every retry, escalation, or correction;</li>
+                    <li>the reviewer, test, source, or business rule that established acceptance;</li>
+                    <li>the time, financial cost, human capacity, and residual uncertainty carried forward.</li>
+                </ol>
+
+                <p>This record does more than calculate a margin. It tells the organization which workflows are becoming reliable, which ones are consuming hidden labor, and which forms of intelligence are worth reserving for difficult cases. It also gives the institution a way to compare providers without confusing a cheap proposal with a cheap operation.</p>
+
+                <h2>The second attempt is where local conditions appear</h2>
+
+                <p>Imported benchmarks often describe an idealized workflow: stable connectivity, abundant compute, a dominant language, standardized records, and a reviewer who can intervene quickly. The second attempt exposes the conditions that the benchmark omitted. A request may need to be translated into a local language. A mobile connection may drop during a payment call. A document may be stored in a format that the retrieval system cannot parse. A community institution may require a human authority that the imported workflow has no field to represent.</p>
+
+                <p>For African institutions, these conditions are part of the economic object. The Institute for Security Studies has argued that African AI sovereignty depends on investment in power, connectivity, computing, cooling, and data ecosystems. The consequence for agent systems is practical: an outcome ledger must include the scarce resources that make a workflow possible. Compute imported from elsewhere, bandwidth paid at the edge, language review performed by a local expert, and recovery work carried by a small institution all belong in the cost of the result.</p>
+
+                <p>The ledger should account for these constraints accurately, without romanticizing them. A workflow that appears cheap because it excludes translation, local validation or intermittent connectivity transfers its cost to the institution that has the least margin for absorbing it. Measurement becomes an instrument of sovereignty when it makes these transfers visible.</p>
+
+                <h2>From usage analytics to institutional learning</h2>
+
+                <p>Usage analytics tell a buyer where activity is happening. Outcome accounting asks what the activity changed. The difference is the difference between a meter and a memory.</p>
+
+                <p>Suppose an institution sees that one team consumes far more model credits than another. The first reaction might be to reduce access or route the team to a cheaper model. A better investigation asks what work the credits represent. Are the extra attempts caused by poor source data, an ambiguous policy, an inadequate tool contract, a language gap, or a workflow whose acceptance test is too weak? Each answer requires a different intervention.</p>
+
+                <p>The ledger should therefore preserve cause, not merely volume. A useful classification might record:</p>
+
+                <ul>
+                    <li>productive exploration that has not yet reached a production workflow;</li>
+                    <li>repeatable work whose cost and quality are within an agreed envelope;</li>
+                    <li>avoidable loops caused by weak instructions, tools, context, or routing;</li>
+                    <li>necessary review for high-consequence work;</li>
+                    <li>unresolved failure that requires a change to the institution rather than another prompt.</li>
+                </ul>
+
+                <p>Over time, this classification becomes a map of operating knowledge. It shows where a small model is sufficient, where a frontier model earns its cost, where a human decision is the actual bottleneck, and where the organization should repair its records or policies before buying more intelligence. Capital can then follow proven capacity rather than raw activity.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the outcome ledger: infrastructure that attributes the full cost of accepted machine work across models, tools, people, time, language, and consequence. It sits beside usage analytics but reaches into the state that makes work count.</p>
+
+                <ul>
+                    <li><strong>Outcome accounting systems:</strong> ledgers that join model traces, workflow states, approvals, correction events, and accepted results into a cost-per-outcome view.</li>
+                    <li><strong>Correction-aware routing:</strong> allocators that choose models and tools based on expected total cost, completion probability, review burden, latency, and consequence rather than token price alone.</li>
+                    <li><strong>Acceptance registries:</strong> versioned definitions of what counts as good enough for a domain, with owners, tests, evidence requirements, and appeal paths.</li>
+                    <li><strong>Capacity and review markets:</strong> systems that schedule scarce human expertise, local-language validation, domain review, and recovery work as measurable production resources.</li>
+                    <li><strong>Sovereign cost observability:</strong> infrastructure that exposes the power, connectivity, localization, data-hosting, and provider-dependence costs carried by an institution or region.</li>
+                </ul>
+
+                <p>Underwriting can begin with measures that a buyer can inspect: cost per accepted outcome; acceptance rate on the first attempt; correction minutes per task; retry causes; time from proposal to approval; local-language quality variance; percentage of outcomes with complete evidence; and the share of work whose cost remains portable when a provider changes. These measures do not guarantee a good business. They make the business legible enough to govern.</p>
+
+                <p>The strongest products in this layer will sell disciplined allocation. They will help a finance leader distinguish productive demand from waste, a technical leader decide where to spend evaluation effort, a public institution protect scarce human review, and an investor assess whether machine capacity is becoming reusable operating leverage. Their defensibility will come from domain-specific acceptance data and from the accumulated record of why a workflow succeeds or needs another attempt.</p>
+
+                <h2>Build the ledger before scaling the call volume</h2>
+
+                <p>An institution can begin with one workflow that matters. Define the accepted state in language the owner recognizes. Record the model and tool costs. Add human review, delay, translation, failed calls, and correction. Classify every second attempt. Revisit the ledger after a fixed period and ask which intervention reduced the full cost without lowering the quality bar.</p>
+
+                <p>Then test the ledger itself by changing the model, removing a tool, introducing a slower connection, translating the task, requiring a different reviewer and forcing a refusal. The system should preserve enough evidence to show whether the workflow became cheaper because the machine improved, because a human absorbed more work, or because a consequence disappeared from the measurement.</p>
+
+                <p>The market will continue to advertise intelligence in tokens, parameters, and benchmark scores. Institutions will buy something more concrete: accepted work under a cost and risk envelope. The second attempt is where that envelope becomes visible. Count it honestly, and AI economics can become a discipline of institutional learning rather than a ceremony around usage.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/index/managing-ai-investments-in-agentic-era/" target="_blank" rel="noopener">OpenAI, “How to manage AI investments in the agentic era” (July 14, 2026). The article recommends useful work per dollar, real-task evaluations, full cost including attempts, completion, latency, and human review, and cost per accepted outcome.</a></li>
+                    <li><a href="https://openai.com/index/how-to-connect-ai-usage-to-business-value/" target="_blank" rel="noopener">OpenAI, “How to connect AI usage to business value” (September 16, 2026). The article describes usage, spend, task, model, speed, training, and outcome analytics, and argues that workflow value must be assessed with business owners against a baseline.</a></li>
+                    <li><a href="https://hai.stanford.edu/ai-index/2026-ai-index-report/economy" target="_blank" rel="noopener">Stanford Institute for Human-Centered Artificial Intelligence, 2026 AI Index Report, Economy chapter. The report states that compute costs and infrastructure spending are reaching record levels, that organizational AI adoption is high while agent deployment remains early, and that productivity gains are largest in structured, measurable work.</a></li>
+                    <li><a href="https://issafrica.org/pscreport/psc-insights/infrastructure-a-must-to-boost-africa-s-artificial-intelligence-sovereignty" target="_blank" rel="noopener">Institute for Security Studies, “Infrastructure a must to boost Africa’s artificial intelligence sovereignty” (May 28, 2026). The analysis connects African AI sovereignty to power, computing, cooling, connectivity, data ecosystems, and endogenous investment.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Qui paie la deuxième tentative ?</h1>
+
+                <p>La première tentative est l’unité séduisante de l’économie de l’IA. Un modèle reçoit une consigne, appelle un outil, renvoie une réponse et produit une ligne propre dans un tableau d’usage. L’institution paie les tokens et déclare un workflow. La deuxième tentative révèle ce qu’elle a réellement acheté : une nouvelle tentative après un appel mal formé, une revue humaine après une réponse incertaine, une correction après une erreur bien présentée, une vérification de traduction ou un retard qui modifie la valeur du résultat.</p>
+
+                <p>C’est pourquoi le prix de l’intelligence ne peut pas être lu dans le prix d’un token. Les recommandations publiées par OpenAI en juillet pour l’investissement dans l’IA proposent de mesurer le « coût par résultat accepté », en incluant l’usage du modèle et des outils, les tentatives, le taux d’achèvement, la latence et la revue humaine. Ses recommandations de septembre sur l’analyse des usages relient les dépenses aux catégories de tâches, au choix du modèle, à la vitesse, à la formation et aux résultats d’entreprise. L’AI Index 2026 de Stanford indique que les gains de productivité sont les plus importants dans les travaux structurés et mesurables dont les sorties sont faciles à surveiller, tandis que les dépenses de calcul et d’infrastructure continuent d’augmenter. Ces sources convergent vers un problème comptable : un système d’IA possède une unité économique seulement lorsqu’une institution peut définir l’acceptation et compter le travail nécessaire pour l’atteindre.</p>
+
+                <blockquote>
+                    <p>La réponse bon marché est celle qui atteint un état accepté sans dissimuler le coût du chemin.</p>
+                </blockquote>
+
+                <h2>Le token est une entrée, pas un résultat</h2>
+
+                <p>Le prix des tokens séduit parce qu’il est précis. Un fournisseur peut annoncer un tarif, un tableau peut enregistrer la consommation et un acheteur peut comparer les modèles selon un axe familier. Cette précision devient trompeuse lorsque le workflow comporte des modes d’échec lourds de conséquences. Un modèle peu coûteux qui exige trois nouvelles tentatives et vingt minutes de revue peut coûter plus cher qu’un modèle plus cher par token qui produit un résultat utilisable au premier passage. Une réponse rapide qui déclenche un litige peut consommer davantage de capacité institutionnelle qu’une réponse plus lente accompagnée des preuves nécessaires à l’approbation.</p>
+
+                <p>Le coût complet d’une tâche agentique comporte plusieurs éléments :</p>
+
+                <ul>
+                    <li><strong>Inférence :</strong> appels du modèle, contexte, budget de raisonnement et tokens de sortie utilisés pour produire une proposition.</li>
+                    <li><strong>Travail des outils :</strong> appels d’API, actions dans un navigateur, récupération, stockage, tentatives de paiement et services externes touchés par la proposition.</li>
+                    <li><strong>Correction :</strong> nouvelles tentatives, nouvelle planification, réparation des données, revue de traduction, contrôle humain et reprise après une action échouée.</li>
+                    <li><strong>Temps :</strong> latence, mise en file, escalade et intervalle pendant lequel une personne ou un processus attend un état utilisable.</li>
+                    <li><strong>Conséquence :</strong> coût d’une publication erronée, d’une échéance manquée, d’un paiement dupliqué, d’un dossier exposé ou d’une décision à inverser.</li>
+                </ul>
+
+                <p>Les deux dernières catégories restent souvent invisibles dans les tableaux de modèles. Elles vivent dans les calendriers, les files d’assistance, les systèmes financiers, les corrections éditoriales et l’attention de personnes qui n’ont jamais été comptées comme faisant partie du workflow IA. Une institution qui mesure seulement l’inférence mesure l’appétit de la machine en laissant le métabolisme de l’organisation sans prix.</p>
+
+                <h2>L’acceptation est un état gouverné</h2>
+
+                <p>« Résultat accepté » paraît simple jusqu’au moment où une institution réelle doit le définir. Une réponse d’assistance peut être acceptée lorsque le problème du client est résolu et que le dossier est correctement mis à jour. Une modification de code peut être acceptée lorsque les tests réussissent, que la revue est terminée, que les contrôles de sécurité sont au vert et que l’équipe peut maintenir la modification. Une note de recherche peut être acceptée lorsque ses sources sont accessibles, ses affirmations délimitées, ses droits clairs et son raisonnement suivi par un autre lecteur.</p>
+
+                <p>Chaque définition contient un seuil, une autorité et une voie de désaccord. L’acceptation appartient à l’institution qui porte la conséquence. Un fournisseur peut signaler qu’un modèle a produit une réponse ; l’acheteur doit décider si cette réponse peut entrer dans le travail.</p>
+
+                <p>Cette distinction transforme la conception de l’observabilité. Un registre sérieux des résultats devrait relier la trace du modèle à l’état institutionnel :</p>
+
+                <ol>
+                    <li>la tâche, le responsable, le mandant et le résultat visé ;</li>
+                    <li>le modèle, le contexte, les outils et la version de la politique utilisés lors de la tentative ;</li>
+                    <li>le premier résultat et chaque nouvelle tentative, escalade ou correction ;</li>
+                    <li>le réviseur, le test, la source ou la règle métier qui a établi l’acceptation ;</li>
+                    <li>le temps, le coût financier, la capacité humaine et l’incertitude résiduelle reportés.</li>
+                </ol>
+
+                <p>Ce dossier ne sert pas seulement à calculer une marge. Il indique à l’organisation quels workflows deviennent fiables, lesquels consomment du travail caché et quelles formes d’intelligence méritent d’être réservées aux cas difficiles. Il donne aussi à l’institution un moyen de comparer les fournisseurs sans confondre une proposition bon marché avec une opération bon marché.</p>
+
+                <h2>La deuxième tentative révèle les conditions locales</h2>
+
+                <p>Les benchmarks importés décrivent souvent un workflow idéalisé : connectivité stable, calcul abondant, langue dominante, dossiers standardisés et réviseur capable d’intervenir rapidement. La deuxième tentative expose les conditions que le benchmark a laissées de côté. Une demande doit parfois être traduite dans une langue locale. Une connexion mobile peut tomber pendant un appel de paiement. Un document peut être conservé dans un format que le système de récupération ne sait pas analyser. Une institution communautaire peut exiger une autorité humaine pour laquelle le workflow importé n’a aucun champ.</p>
+
+                <p>Pour les institutions africaines, ces conditions appartiennent à l’objet économique. L’Institute for Security Studies a soutenu que la souveraineté africaine en matière d’IA dépend d’investissements dans l’électricité, la connectivité, le calcul, le refroidissement et les écosystèmes de données. La conséquence pour les systèmes agentiques est concrète : un registre des résultats doit inclure les ressources rares qui rendent un workflow possible. Le calcul importé, la bande passante payée à la périphérie, la revue linguistique réalisée par un expert local et le travail de reprise porté par une petite institution font tous partie du coût du résultat.</p>
+
+                <p>Il ne s’agit pas de créer une comptabilité séparée qui romantise la contrainte. Il s’agit d’en établir une qui soit exacte. Un workflow qui paraît bon marché parce qu’il exclut la traduction, la validation locale ou la connectivité intermittente transfère son coût à l’institution qui a le moins de marge pour l’absorber. La mesure devient un instrument de souveraineté lorsqu’elle rend ces transferts visibles.</p>
+
+                <h2>Des analyses d’usage à l’apprentissage institutionnel</h2>
+
+                <p>Les analyses d’usage indiquent où se trouve l’activité. La comptabilité des résultats demande ce que cette activité a changé. La différence sépare un compteur d’une mémoire.</p>
+
+                <p>Supposons qu’une institution constate qu’une équipe consomme beaucoup plus de crédits de modèle qu’une autre. La première réaction peut être de réduire l’accès ou d’orienter l’équipe vers un modèle moins cher. Une meilleure enquête demande quel travail représentent ces crédits. Les tentatives supplémentaires viennent-elles de mauvaises données sources, d’une politique ambiguë, d’un contrat d’outil insuffisant, d’un manque linguistique ou d’un test d’acceptation trop faible ? Chaque réponse appelle une intervention différente.</p>
+
+                <p>Le registre doit donc conserver la cause, pas seulement le volume. Une classification utile peut distinguer :</p>
+
+                <ul>
+                    <li>l’exploration productive qui n’a pas encore atteint un workflow de production ;</li>
+                    <li>le travail répétable dont le coût et la qualité restent dans une enveloppe convenue ;</li>
+                    <li>les boucles évitables causées par des consignes, outils, contextes ou routages faibles ;</li>
+                    <li>la revue nécessaire pour un travail à fortes conséquences ;</li>
+                    <li>l’échec non résolu qui demande une modification de l’institution plutôt qu’une nouvelle consigne.</li>
+                </ul>
+
+                <p>Avec le temps, cette classification devient une carte du savoir opératoire. Elle montre où un petit modèle suffit, où un modèle de frontière justifie son coût, où une décision humaine est le véritable goulot d’étranglement et où l’organisation doit réparer ses dossiers ou ses politiques avant d’acheter davantage d’intelligence. Le capital peut alors suivre la capacité démontrée plutôt que l’activité brute.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est le registre des résultats : une infrastructure qui attribue le coût complet du travail machine accepté entre modèles, outils, personnes, temps, langues et conséquences. Il se situe à côté des analyses d’usage, mais atteint l’état qui permet au travail de compter.</p>
+
+                <ul>
+                    <li><strong>Systèmes de comptabilité des résultats :</strong> registres reliant les traces des modèles, les états des workflows, les validations, les corrections et les résultats acceptés dans une vue du coût par résultat.</li>
+                    <li><strong>Routage conscient de la correction :</strong> allocateurs choisissant les modèles et les outils selon le coût total attendu, la probabilité d’achèvement, la charge de revue, la latence et la conséquence, plutôt que selon le seul prix du token.</li>
+                    <li><strong>Registres d’acceptation :</strong> définitions versionnées de ce qui est suffisamment bon pour un domaine, avec responsables, tests, exigences de preuve et voies de recours.</li>
+                    <li><strong>Marchés de capacité et de revue :</strong> systèmes qui planifient l’expertise humaine rare, la validation en langue locale, la revue de domaine et le travail de reprise comme des ressources de production mesurables.</li>
+                    <li><strong>Observabilité souveraine des coûts :</strong> infrastructure exposant les coûts d’électricité, de connectivité, de localisation, d’hébergement des données et de dépendance aux fournisseurs supportés par une institution ou une région.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des mesures inspectables : coût par résultat accepté, taux d’acceptation à la première tentative, minutes de correction par tâche, causes des reprises, temps entre proposition et approbation, variation de qualité selon la langue locale, pourcentage de résultats avec preuves complètes et part du travail dont le coût reste portable lors d’un changement de fournisseur. Ces mesures ne garantissent pas une bonne entreprise. Elles rendent l’entreprise assez lisible pour être gouvernée.</p>
+
+                <p>Les produits les plus solides de cette couche vendront une allocation disciplinée. Ils aideront un responsable financier à distinguer la demande productive du gaspillage, un responsable technique à décider où investir dans l’évaluation, une institution publique à protéger sa revue humaine rare et un investisseur à déterminer si la capacité machine devient un levier opérationnel réutilisable. Leur défense viendra des données d’acceptation propres au domaine et du relevé accumulé des raisons pour lesquelles un workflow réussit ou demande une nouvelle tentative.</p>
+
+                <h2>Construire le registre avant d’augmenter les appels</h2>
+
+                <p>Une institution peut commencer par un workflow qui compte. Définissez l’état accepté dans une langue que le responsable reconnaît. Enregistrez les coûts du modèle et des outils. Ajoutez la revue humaine, le retard, la traduction, les appels échoués et la correction. Classez chaque deuxième tentative. Relisez le registre après une période fixe et demandez quelle intervention a réduit le coût complet sans abaisser le seuil de qualité.</p>
+
+                <p>Testez ensuite le registre lui-même en changeant de modèle, en retirant un outil, en introduisant une connexion plus lente, en traduisant la tâche, en exigeant un autre réviseur et en forçant un refus. Le système doit conserver assez de preuves pour montrer si le workflow est devenu moins cher parce que la machine s’est améliorée, parce qu’une personne a absorbé davantage de travail ou parce qu’une conséquence a disparu de la mesure.</p>
+
+                <p>Le marché continuera de faire la publicité de l’intelligence en tokens, en paramètres et en scores de benchmark. Les institutions achèteront quelque chose de plus concret : du travail accepté dans une enveloppe de coût et de risque. La deuxième tentative rend cette enveloppe visible. Comptons-la honnêtement, et l’économie de l’IA pourra devenir une discipline d’apprentissage institutionnel plutôt qu’une cérémonie autour de l’usage.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/index/managing-ai-investments-in-agentic-era/" target="_blank" rel="noopener">OpenAI, « How to manage AI investments in the agentic era » (14 juillet 2026). L’article recommande le travail utile par dollar, des évaluations sur des tâches réelles, le coût complet incluant les tentatives, l’achèvement, la latence et la revue humaine, ainsi que le coût par résultat accepté.</a></li>
+                    <li><a href="https://openai.com/index/how-to-connect-ai-usage-to-business-value/" target="_blank" rel="noopener">OpenAI, « How to connect AI usage to business value » (16 septembre 2026). L’article décrit les analyses d’usage, de dépenses, de tâches, de modèles, de vitesse, de formation et de résultats, et soutient que la valeur d’un workflow doit être évaluée avec ses responsables à partir d’une base de comparaison.</a></li>
+                    <li><a href="https://hai.stanford.edu/ai-index/2026-ai-index-report/economy" target="_blank" rel="noopener">Stanford Institute for Human-Centered Artificial Intelligence, AI Index 2026, chapitre Économie. Le rapport indique que les coûts de calcul et les dépenses d’infrastructure atteignent des niveaux records, que l’adoption organisationnelle est élevée tandis que le déploiement d’agents reste précoce, et que les gains de productivité sont les plus importants dans les travaux structurés et mesurables.</a></li>
+                    <li><a href="https://issafrica.org/pscreport/psc-insights/infrastructure-a-must-to-boost-africa-s-artificial-intelligence-sovereignty" target="_blank" rel="noopener">Institute for Security Studies, « Infrastructure a must to boost Africa’s artificial intelligence sovereignty » (28 mai 2026). L’analyse relie la souveraineté africaine en IA à l’électricité, au calcul, au refroidissement, à la connectivité, aux écosystèmes de données et à l’investissement endogène.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
