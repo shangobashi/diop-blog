@@ -158,6 +158,7 @@
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
         'article.entry090':     { en: 'Diop Daily #090 — August 2026', fr: 'Diop Quotidien n°090 — Août 2026' },
         'article.entry086':     { en: 'Diop Daily #086 — August 2026', fr: 'Diop Quotidien n°086 — Août 2026' },
+        'article.entry135':     { en: 'Diop Daily #135 — October 2026', fr: 'Diop Quotidien n°135 — Octobre 2026' },
         'article.entry134':     { en: 'Diop Daily #134 — October 2026', fr: 'Diop Quotidien n°134 — Octobre 2026' },
         'article.entry131':     { en: 'Diop Daily #131 — October 2026', fr: 'Diop Quotidien n°131 — Octobre 2026' },
         'article.entry133':     { en: 'Diop Daily #133 — October 2026', fr: 'Diop Quotidien n°133 — Octobre 2026' },
@@ -176,6 +177,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-135': {
+        title: {
+            en: "The Front Door Must Be Legible to the Machine",
+            fr: "La porte d’entrée doit être lisible par la machine"
+        },
+        excerpt: {
+            en: "Institutions are becoming machine-readable environments. The investable layer is the authoritative knowledge interface that gives agents fresh documents, provenance, local categories, and a correction path before action begins.",
+            fr: "Les institutions deviennent des environnements lisibles par la machine. La couche d’investissement est l’interface de connaissance faisant autorité, qui donne aux agents des documents frais, une provenance, des catégories locales et une voie de correction avant l’action."
+        }
+    },
     'diop-daily-134': {
         title: {
             en: "The GPU Is Not the Institution",

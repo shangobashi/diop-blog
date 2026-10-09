@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Front Door Must Be Legible to the Machine — Diop Research</title>
+    <meta name="description" content="Institutions are becoming machine-readable environments. The strategic layer is the authoritative knowledge interface that gives agents fresh documents, provenance, local categories, and a correction path before action begins."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="19.78" x2="19.78" y2="18.36"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry135">Diop Daily #135 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 10, 2026</time>
+                    <span>·</span>
+                    <span data-rt="8">8 min read</span>
+                    <span>·</span>
+                    <span>institutional knowledge · machine-readable publishing · sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Front Door Must Be Legible to the Machine</h1>
+
+                <p>An institution used to publish for people first. Its rules lived in documents, its expertise in staff, and its public face in a website, office, catalogue, or archive. Agents change the order. A machine can now search, retrieve, compare, summarize, and act on institutional material before a person opens the page. The front door of an institution is becoming a machine-readable knowledge interface.</p>
+
+                <p>Google’s October 7 release of the Developer Knowledge API makes this movement unusually concrete. The company describes an official, programmatic source for its developer documentation, with semantic and keyword search, document chunking, grounded answers, metadata retrieval, citation tracking, and frequent indexing. The product claim is narrow: better access to Google’s own documentation. The architectural lesson is wider. An institution that wants agents to represent it must publish an authoritative surface designed for retrieval, verification, and correction rather than assuming that a model will infer the right meaning from a web page.</p>
+
+                <blockquote>
+                    <p>When a machine meets an institution through its documents, publication becomes part of the institution’s operating system.</p>
+                </blockquote>
+
+                <h2>A page is a room; an interface is a governed address</h2>
+
+                <p>Human readers can tolerate ambiguity. They can follow a navigation trail, notice a date, ask a colleague, interpret a footnote, and recognize when a page has become stale. An agent needs those signals represented more explicitly. It must know which document is authoritative, what version it is reading, who owns the claim, which jurisdiction applies, what the text permits, and where a correction will appear.</p>
+
+                <p>This is why “make the website searchable” is an incomplete institutional strategy. Search locates words. A knowledge interface states relationships. It can identify a policy, its scope, its effective date, its exceptions, its source authority, its language variants, and the actions that may follow from it. It can distinguish a current price from an archived one, a binding rule from an example, and a public description from an internal procedure.</p>
+
+                <p>A useful machine-readable front door should expose at least:</p>
+
+                <ul>
+                    <li><strong>Identity:</strong> a stable name, identifier, owner, and contact for each document, dataset, policy, product, or service.</li>
+                    <li><strong>Time:</strong> publication, effective, review, expiry, and last-verified dates, with a clear rule for superseded material.</li>
+                    <li><strong>Authority:</strong> the person, institution, mandate, contract, or source that gives the material its standing.</li>
+                    <li><strong>Scope:</strong> the people, places, languages, products, cases, and jurisdictions to which the statement applies.</li>
+                    <li><strong>Evidence:</strong> citations, calculations, attachments, provenance records, and the distinction between observed fact and institutional interpretation.</li>
+                    <li><strong>Correction:</strong> a visible route for amendment, appeal, withdrawal, and reconstruction of what an agent saw at an earlier time.</li>
+                </ul>
+
+                <p>These fields determine whether an automated system can decide that a document belongs in a context window, a recommendation, a procurement packet, or an external action. Without them, the model may retrieve a plausible sentence while losing the institution that made the sentence meaningful.</p>
+
+                <h2>Freshness is a responsibility, not a timestamp</h2>
+
+                <p>Google’s API announcement emphasizes frequent indexing and low lag between upstream documentation changes and agent access. That is an important operational property, but freshness alone does not establish authority. A newly indexed error is still an error. A current document can still be written for the wrong audience, omit a local language, or preserve a policy whose legal status has changed.</p>
+
+                <p>NIST’s AI Agent Standards Initiative places standards, open protocols, agent identity infrastructure, and security evaluations in one public frame. Its work is still an initiative, not a completed certification scheme. The useful implication for institutional publishing is that retrieval must be joined to identity and evaluation. An agent should be able to ask not only “what does this document say?” but also “which institution published it, under what authority, for which use, and how has the system tested my interpretation?”</p>
+
+                <p>The initial public draft of NIST’s TEVV-Athlon Framework gives the evaluation problem a more disciplined shape. It proposes a flexible, organization-specific approach that articulates objectives, constructs assessments, applies measurement, and synthesizes results. A knowledge interface should borrow this logic. Its tests should cover retrieval accuracy, version selection, scope recognition, citation completeness, refusal when evidence is missing, and behavior when a correction arrives after an agent has already used the material.</p>
+
+                <p>The result is a publication system that can explain its own uncertainty. It can say that a document is current but not authoritative for this jurisdiction, authoritative but awaiting review, translated but missing a local legal term, or technically retrievable but unsuitable for an external decision. A machine that can state the limits of its context is easier to govern than one that merely returns fluent text.</p>
+
+                <h2>African sovereignty begins at the publishing boundary</h2>
+
+                <p>The African Development Bank’s 2026 policy brief on data governance frames the central development problem as the conversion of data into institutional value. It points to fragmentation, limited data sharing, capacity constraints, and trust deficits as barriers. The same barriers appear when agents encounter African institutions. A ministry may have a policy in French and a service description in English. A cooperative may hold authority in relationships that do not fit a single account field. A local archive may know which community can authorize reuse even when a global catalogue sees only an unstructured file.</p>
+
+                <p>Machine-readable publication can either preserve these categories or erase them. The choice belongs to the institution that publishes. An African university should be able to expose its research catalogue with local names, multilingual abstracts, rights, custodians, and correction routes. A public office should be able to state which language a resident may use for a consequential service. A publisher should be able to distinguish reading, translation, adaptation, excerpting, and redistribution. These are knowledge interfaces with political content.</p>
+
+                <p>Participation in global agent networks therefore requires more than translating an imported schema. It requires publishing the institution’s own vocabulary and making the mapping to wider standards explicit. A local term can have a global equivalent for interoperability while retaining a note that marks where the equivalence ends. That boundary is evidence of intellectual agency.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the authoritative knowledge interface: a publishing and retrieval layer that makes institutional material fresh, attributable, scoped, multilingual, testable, and correctable for agents.</p>
+
+                <ul>
+                    <li><strong>Institutional knowledge gateways:</strong> APIs and retrieval systems that expose official documents, records, policies, and service descriptions with stable identifiers, metadata, citations, and version control.</li>
+                    <li><strong>Evidence-aware publishing systems:</strong> tools that bind claims to sources, distinguish fact from interpretation, and preserve the material an agent used at the time of a decision.</li>
+                    <li><strong>Knowledge conformance testing:</strong> evaluation services that test retrieval, scope, freshness, language coverage, citation fidelity, refusal, and correction behavior across agents and channels.</li>
+                    <li><strong>Local-language adapters:</strong> maintained vocabularies, terminology packs, translation memories, and domain-specific retrieval for African languages and institutional concepts.</li>
+                    <li><strong>Change and recourse infrastructure:</strong> systems that notify dependent agents when a rule changes and let a person challenge, amend, withdraw, or reconstruct a published claim.</li>
+                </ul>
+
+                <p>Underwriting can begin with measures that a buyer can inspect: time from policy change to agent availability; percentage of retrieved claims carrying authority and effective dates; citation completeness; stale-answer rate; language-specific retrieval quality; successful correction propagation; and the number of external decisions that can be reconstructed from the published record. These metrics describe institutional capacity more honestly than a search-volume chart.</p>
+
+                <h2>Publish the institution’s address</h2>
+
+                <p>A practical programme can start with one consequential domain. Choose a public service, a research archive, a commerce catalogue, or a rights repository. Assign an owner. Define the identifiers, authority fields, effective dates, languages, evidence requirements, and correction routes. Expose a machine-readable endpoint beside the human interface. Then test it with agents that ask for current information, historical information, information outside their jurisdiction, and information whose source has been withdrawn.</p>
+
+                <p>Make the system refuse well. If the record is stale, say so. If the translation changes a legal condition, escalate it. If two authorities disagree, show the disagreement. If a claim cannot be reconstructed, mark the gap before an automated workflow turns it into a decision. The institution earns trust through the quality of its boundaries, including the boundaries around what it cannot yet answer.</p>
+
+                <p>The market will keep improving models that can speak about institutions. The deeper work is helping institutions speak for themselves in a form machines can inspect without flattening their authority, history, language, or right to correct the record. The front door is already an interface. Build it as one deliberately, and the institution can enter the agent economy with its categories intact.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/en/supercharge-your-development-with-the-google-developer-knowledge-api-ecosystem/" target="_blank" rel="noopener">Google for Developers, “Supercharge your development with the Google Developer Knowledge API ecosystem” (October 7, 2026). The announcement describes an official programmatic source for Google documentation with search, chunking, grounded answers, metadata, citations, frequent indexing, and client libraries for agent and developer workflows.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). The initiative names industry-led standards, community protocols, agent authentication and identity infrastructure, and security evaluations as strategic work; it is an initiative rather than a completed certification standard.</a></li>
+                    <li><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.200-2.ipd.pdf" target="_blank" rel="noopener">National Institute of Standards and Technology, “The TEVV-Athlon Framework for Evaluating AI Systems,” NIST AI 200-2 ipd (August 2026). The initial public draft proposes a flexible four-stage approach for organization-specific test, evaluation, verification, and validation objectives.</a></li>
+                    <li><a href="https://vcda.afdb.org/en/report/lei-8-policy-brief-2026-who-benefits-africas-data-turning-data-governance-value-skills-and" target="_blank" rel="noopener">African Development Bank Group, “LEI-8 Policy Brief 2026: Who Benefits from Africa’s Data? Turning Data Governance into Value, Skills, and Growth.” The brief connects African data value to governance, institutional capacity, data sharing, skills, trust, and development outcomes.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La porte d’entrée doit être lisible par la machine</h1>
+
+                <p>Une institution publiait autrefois d’abord pour les personnes. Ses règles vivaient dans des documents, son expertise dans son personnel et son visage public dans un site, un bureau, un catalogue ou une archive. Les agents changent cet ordre. Une machine peut désormais rechercher, récupérer, comparer, résumer et exploiter des documents institutionnels avant qu’une personne n’ouvre la page. La porte d’entrée d’une institution devient une interface de connaissance lisible par la machine.</p>
+
+                <p>La mise à disposition par Google, le 7 octobre, de la Developer Knowledge API rend ce mouvement particulièrement concret. L’entreprise décrit une source officielle et programmatique pour sa documentation destinée aux développeurs, avec recherche sémantique et par mots-clés, découpage des documents, réponses fondées sur les sources, récupération des métadonnées, suivi des citations et indexation fréquente. La promesse produit reste étroite : améliorer l’accès à la documentation de Google. La leçon architecturale est plus large. Une institution qui veut être représentée par des agents doit publier une surface d’autorité conçue pour la récupération, la vérification et la correction, au lieu de supposer qu’un modèle déduira le bon sens à partir d’une page web.</p>
+
+                <blockquote>
+                    <p>Lorsqu’une machine rencontre une institution par ses documents, la publication devient une partie du système d’exploitation de l’institution.</p>
+                </blockquote>
+
+                <h2>Une page est une pièce ; une interface est une adresse gouvernée</h2>
+
+                <p>Les lecteurs humains peuvent tolérer l’ambiguïté. Ils suivent un chemin de navigation, remarquent une date, interrogent un collègue, interprètent une note et reconnaissent qu’une page est devenue périmée. Un agent a besoin que ces signaux soient représentés plus explicitement. Il doit savoir quel document fait autorité, quelle version il lit, qui porte l’affirmation, quelle juridiction s’applique, ce que le texte autorise et où apparaîtra une correction.</p>
+
+                <p>C’est pourquoi « rendre le site consultable » constitue une stratégie institutionnelle incomplète. La recherche localise des mots. Une interface de connaissance énonce des relations. Elle peut identifier une politique, son périmètre, sa date d’entrée en vigueur, ses exceptions, sa source d’autorité, ses variantes linguistiques et les actions qui peuvent en découler. Elle peut distinguer un prix actuel d’un prix archivé, une règle contraignante d’un exemple et une description publique d’une procédure interne.</p>
+
+                <p>Une porte d’entrée lisible par la machine devrait exposer au minimum :</p>
+
+                <ul>
+                    <li><strong>Identité :</strong> un nom stable, un identifiant, un responsable et un contact pour chaque document, jeu de données, politique, produit ou service.</li>
+                    <li><strong>Temps :</strong> les dates de publication, d’entrée en vigueur, de revue, d’expiration et de dernière vérification, avec une règle claire pour les contenus remplacés.</li>
+                    <li><strong>Autorité :</strong> la personne, l’institution, le mandat, le contrat ou la source qui donne au contenu sa portée.</li>
+                    <li><strong>Périmètre :</strong> les personnes, lieux, langues, produits, cas et juridictions auxquels l’énoncé s’applique.</li>
+                    <li><strong>Preuves :</strong> citations, calculs, pièces jointes, dossiers de provenance et distinction entre fait observé et interprétation institutionnelle.</li>
+                    <li><strong>Correction :</strong> une voie visible pour modifier, contester, retirer et reconstituer ce qu’un agent a vu à un moment antérieur.</li>
+                </ul>
+
+                <p>Ces champs déterminent si un système automatisé peut décider qu’un document doit entrer dans une fenêtre de contexte, une recommandation, un dossier d’achat ou une action externe. Sans eux, le modèle peut récupérer une phrase plausible tout en perdant l’institution qui lui donnait son sens.</p>
+
+                <h2>La fraîcheur est une responsabilité, pas un horodatage</h2>
+
+                <p>L’annonce de Google insiste sur l’indexation fréquente et sur le faible délai entre les changements de la documentation source et leur accès par les agents. C’est une propriété opératoire importante, mais la fraîcheur seule n’établit pas l’autorité. Une erreur nouvellement indexée reste une erreur. Un document actuel peut être destiné au mauvais public, omettre une langue locale ou conserver une politique dont le statut juridique a changé.</p>
+
+                <p>L’AI Agent Standards Initiative du NIST place dans un même cadre public les standards, les protocoles ouverts, l’infrastructure d’identité des agents et les évaluations de sécurité. Son travail demeure une initiative, et non un régime de certification achevé. Pour la publication institutionnelle, l’implication utile est que la récupération doit être reliée à l’identité et à l’évaluation. Un agent devrait pouvoir demander non seulement « que dit ce document ? », mais aussi « quelle institution l’a publié, sous quelle autorité, pour quel usage, et comment le système a-t-il testé mon interprétation ? »</p>
+
+                <p>Le projet initial du NIST intitulé TEVV-Athlon Framework donne une forme plus disciplinée au problème de l’évaluation. Il propose une démarche flexible, propre à chaque organisation, qui articule les objectifs, construit les évaluations, applique la mesure et synthétise les résultats. Une interface de connaissance devrait reprendre cette logique. Ses tests devraient couvrir l’exactitude de la récupération, le choix de version, la reconnaissance du périmètre, l’exhaustivité des citations, le refus lorsque les preuves manquent et le comportement lorsqu’une correction arrive après l’utilisation du document par un agent.</p>
+
+                <p>Le résultat est un système de publication capable d’expliquer sa propre incertitude. Il peut indiquer qu’un document est actuel mais non compétent pour cette juridiction, faisant autorité mais en attente de revue, traduit mais privé d’un terme juridique local, ou techniquement récupérable mais impropre à une décision externe. Une machine qui sait déclarer les limites de son contexte est plus facile à gouverner qu’une machine qui renvoie seulement un texte fluide.</p>
+
+                <h2>La souveraineté africaine commence à la frontière de la publication</h2>
+
+                <p>La note de politique 2026 de la Banque africaine de développement sur la gouvernance des données présente le problème central du développement comme la transformation des données en valeur institutionnelle. Elle pointe la fragmentation, le partage limité des données, les contraintes de capacité et les déficits de confiance comme des obstacles. Les mêmes obstacles apparaissent lorsque des agents rencontrent des institutions africaines. Un ministère peut posséder une politique en français et une description de service en anglais. Une coopérative peut exercer son autorité à travers des relations qui ne correspondent pas à un champ de compte unique. Une archive locale peut savoir quelle communauté autorise la réutilisation alors qu’un catalogue mondial ne voit qu’un fichier non structuré.</p>
+
+                <p>La publication lisible par la machine peut préserver ces catégories ou les effacer. Le choix appartient à l’institution qui publie. Une université africaine devrait pouvoir exposer son catalogue de recherche avec des noms locaux, des résumés multilingues, des droits, des responsables et des voies de correction. Un service public devrait pouvoir indiquer la langue qu’un résident peut utiliser pour un service à conséquences. Un éditeur devrait pouvoir distinguer la lecture, la traduction, l’adaptation, l’extrait et la redistribution. Ce sont des interfaces de connaissance qui portent un contenu politique.</p>
+
+                <p>La participation aux réseaux mondiaux d’agents exige donc davantage que la traduction d’un schéma importé. Elle exige de publier le vocabulaire propre de l’institution et de rendre explicite sa correspondance avec les standards plus larges. Un terme local peut avoir un équivalent global pour l’interopérabilité tout en conservant une note qui indique où cette équivalence s’arrête. Cette limite est une preuve d’autonomie intellectuelle.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est l’interface de connaissance faisant autorité : une couche de publication et de récupération qui rend les contenus institutionnels frais, attribuables, délimités, multilingues, testables et corrigibles pour les agents.</p>
+
+                <ul>
+                    <li><strong>Passerelles de connaissance institutionnelle :</strong> API et systèmes de récupération qui exposent les documents officiels, dossiers, politiques et descriptions de services avec des identifiants stables, des métadonnées, des citations et un contrôle des versions.</li>
+                    <li><strong>Systèmes de publication fondés sur les preuves :</strong> outils qui relient les affirmations à leurs sources, distinguent le fait de l’interprétation et conservent le contenu utilisé par un agent au moment d’une décision.</li>
+                    <li><strong>Tests de conformité de la connaissance :</strong> services d’évaluation qui testent la récupération, le périmètre, la fraîcheur, la couverture linguistique, la fidélité des citations, le refus et la propagation des corrections entre agents et canaux.</li>
+                    <li><strong>Adaptateurs en langues locales :</strong> vocabulaires entretenus, terminologies, mémoires de traduction et récupération spécialisée pour les langues africaines et les concepts institutionnels.</li>
+                    <li><strong>Infrastructure du changement et du recours :</strong> systèmes qui avertissent les agents dépendants lorsqu’une règle change et permettent à une personne de contester, modifier, retirer ou reconstituer une affirmation publiée.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des mesures vérifiables : délai entre une modification de politique et sa disponibilité pour les agents, pourcentage d’affirmations récupérées portant une autorité et une date d’effet, exhaustivité des citations, taux de réponses périmées, qualité de récupération par langue, propagation réussie des corrections et nombre de décisions externes pouvant être reconstituées à partir du dossier publié. Ces métriques décrivent la capacité institutionnelle plus honnêtement qu’un graphique de volume de recherche.</p>
+
+                <h2>Publier l’adresse de l’institution</h2>
+
+                <p>Un programme pratique peut commencer par un domaine lourd de conséquences. Choisissez un service public, une archive de recherche, un catalogue commercial ou un répertoire de droits. Désignez un responsable. Définissez les identifiants, les champs d’autorité, les dates d’effet, les langues, les exigences de preuve et les voies de correction. Exposez un point d’accès lisible par la machine à côté de l’interface humaine. Testez-le ensuite avec des agents qui demandent une information actuelle, une information historique, une information hors de leur juridiction et une information dont la source a été retirée.</p>
+
+                <p>Faites bien fonctionner le refus. Si le dossier est périmé, dites-le. Si la traduction modifie une condition juridique, transmettez la demande à une personne. Si deux autorités sont en désaccord, montrez ce désaccord. Si une affirmation ne peut pas être reconstituée, signalez la lacune avant qu’un workflow automatisé n’en fasse une décision. L’institution gagne la confiance par la qualité de ses frontières, y compris les frontières de ce à quoi elle ne peut pas encore répondre.</p>
+
+                <p>Le marché continuera d’améliorer les modèles capables de parler des institutions. Le travail plus profond consiste à aider les institutions à parler pour elles-mêmes dans une forme que les machines peuvent examiner sans aplatir leur autorité, leur histoire, leur langue ou leur droit de corriger le dossier. La porte d’entrée est déjà une interface. Construisez-la délibérément comme telle, et l’institution pourra entrer dans l’économie des agents avec ses catégories intactes.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/en/supercharge-your-development-with-the-google-developer-knowledge-api-ecosystem/" target="_blank" rel="noopener">Google for Developers, « Supercharge your development with the Google Developer Knowledge API ecosystem » (7 octobre 2026). L’annonce décrit une source programmatique officielle pour la documentation de Google, avec recherche, découpage, réponses fondées sur les sources, métadonnées, citations, indexation fréquente et bibliothèques clientes pour les agents et les workflows de développement.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mise à jour le 14 août 2026). L’initiative nomme les standards pilotés par l’industrie, les protocoles communautaires, l’authentification et l’infrastructure d’identité des agents ainsi que les évaluations de sécurité comme travaux stratégiques ; il s’agit d’une initiative et non d’un standard de certification achevé.</a></li>
+                    <li><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.200-2.ipd.pdf" target="_blank" rel="noopener">National Institute of Standards and Technology, « The TEVV-Athlon Framework for Evaluating AI Systems », NIST AI 200-2 ipd (août 2026). Le projet initial propose une démarche flexible en quatre étapes pour des objectifs organisationnels de test, d’évaluation, de vérification et de validation.</a></li>
+                    <li><a href="https://vcda.afdb.org/en/report/lei-8-policy-brief-2026-who-benefits-africas-data-turning-data-governance-value-skills-and" target="_blank" rel="noopener">Groupe de la Banque africaine de développement, « LEI-8 Policy Brief 2026: Who Benefits from Africa’s Data? Turning Data Governance into Value, Skills, and Growth ». La note relie la valeur des données africaines à la gouvernance, à la capacité institutionnelle, au partage des données, aux compétences, à la confiance et aux résultats de développement.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
