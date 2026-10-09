@@ -158,6 +158,7 @@
         'article.entry091':     { en: 'Diop Daily #091 — August 2026', fr: 'Diop Quotidien n°091 — Août 2026' },
         'article.entry090':     { en: 'Diop Daily #090 — August 2026', fr: 'Diop Quotidien n°090 — Août 2026' },
         'article.entry086':     { en: 'Diop Daily #086 — August 2026', fr: 'Diop Quotidien n°086 — Août 2026' },
+        'article.entry134':     { en: 'Diop Daily #134 — October 2026', fr: 'Diop Quotidien n°134 — Octobre 2026' },
         'article.entry131':     { en: 'Diop Daily #131 — October 2026', fr: 'Diop Quotidien n°131 — Octobre 2026' },
         'article.entry133':     { en: 'Diop Daily #133 — October 2026', fr: 'Diop Quotidien n°133 — Octobre 2026' },
         'article.entry132':     { en: 'Diop Daily #132 — October 2026', fr: 'Diop Quotidien n°132 — Octobre 2026' },
@@ -175,6 +176,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-134': {
+        title: {
+            en: "The GPU Is Not the Institution",
+            fr: "Le GPU n’est pas l’institution"
+        },
+        excerpt: {
+            en: "Africa’s AI compute question is moving from hardware access to institutional activation. The investable layer is the operating infrastructure that turns local capacity into governed, financed, and repeatable capability.",
+            fr: "La question africaine du calcul pour l’IA passe de l’accès au matériel à l’activation institutionnelle. La couche d’investissement est l’infrastructure opératoire qui transforme la capacité locale en aptitude gouvernée, financée et répétable."
+        }
+    },
     'diop-daily-133': {
         title: {
             en: "Who Pays for the Second Attempt?",

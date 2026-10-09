@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The GPU Is Not the Institution — Diop Research</title>
+    <meta name="description" content="Africa's AI compute question is moving from hardware access to institutional activation. The investable layer is the operating system that turns local capacity into governed, useful, and durable public capability."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="19.78" x2="19.78" y2="18.36"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry134">Diop Daily #134 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 9, 2026</time>
+                    <span>·</span>
+                    <span data-rt="8">8 min read</span>
+                    <span>·</span>
+                    <span>compute activation · sovereign infrastructure · African AI</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The GPU Is Not the Institution</h1>
+
+                <p>A GPU can be purchased, installed, and counted. An institution has to decide who may use it, for which problem, under whose authority, with what data, and according to which measure of public value. Africa’s AI compute debate is therefore entering a more demanding phase: the scarce asset is becoming the operating capacity that turns hardware into durable capability.</p>
+
+                <p>Two September signals make the shift visible. The United Nations Development Programme published lessons from country-hosted compute deployments in Kenya, Malawi, Rwanda, South Africa, Togo, and Zambia. Its conclusion is direct: infrastructure must be connected to accessible data, skilled operators and users, clear institutional responsibility, governance, cybersecurity, sustainable financing, and concrete pathways from priority applications to services. The African Development Bank and Korea announced a joint AI Hub to connect governments, financiers, research centres, universities, and businesses around African AI and digital projects. The question is moving from who can obtain compute to who can activate it responsibly.</p>
+
+                <blockquote>
+                    <p>Compute becomes sovereignty only when a people can turn capacity into decisions, services, and knowledge under rules they can inspect.</p>
+                </blockquote>
+
+                <h2>Capacity is a physical fact; capability is an institutional achievement</h2>
+
+                <p>Public discussion often treats a data centre or GPU cluster as a finished answer. The hardware is visible, financeable, and easy to photograph. Its social output is harder to see. A cluster can remain underused because no ministry owns the queue, because the data is inaccessible, because operators cannot maintain the stack, because procurement did not fund software and cooling, or because no application has a path from experiment to service.</p>
+
+                <p>UNDP’s six-country publication is useful precisely because it studies the passage from deployment to effective use. It identifies applications, institutional ownership, data access, skills, cybersecurity, governance, financing, and public-interest pathways as connected conditions. That list should change how compute projects are evaluated. A machine-hours figure describes supply. It says little about whether a health service, language tool, research group, or public office can depend on the supply next year.</p>
+
+                <p>The economic object is the activation layer around the machine. It includes the people, software, policies, data pathways, procurement rules, evaluation practice, and financing arrangements that let a scarce accelerator perform repeatable work. This layer is where a regional cluster becomes a research institution, a public utility, or an industrial platform.</p>
+
+                <h2>The activation layer has a shape</h2>
+
+                <p>A serious local compute programme should publish more than a capacity number. It should make the operating contract visible:</p>
+
+                <ul>
+                    <li><strong>Allocation:</strong> which institutions receive access, how priority is established, and how scarce capacity is scheduled across research, public service, education, and enterprise use.</li>
+                    <li><strong>Data:</strong> which datasets can enter the environment, under whose authority, with what language coverage, rights, security controls, and exit path.</li>
+                    <li><strong>Operations:</strong> who maintains the hardware, orchestration, storage, networking, cooling, monitoring, incident response, and model-serving stack.</li>
+                    <li><strong>Evaluation:</strong> how a project shows that its system works in local languages, local conditions, and the domain where people will bear the consequences.</li>
+                    <li><strong>Conversion:</strong> how an experiment becomes a maintained service, a procurement category, a research asset, a business, or an open capability that others can build upon.</li>
+                </ul>
+
+                <p>Without these interfaces, local compute becomes a capital project with an uncertain afterlife. With them, the machine can accumulate institutional knowledge. Every allocation reveals demand. Every failed deployment teaches the operator which data, skills, or policy is missing. Every successful service produces a case for the next unit of capacity. The cluster begins to behave like an institution rather than a room full of equipment.</p>
+
+                <h2>Power determines the boundary of the possible</h2>
+
+                <p>The International Energy Agency estimates that data centres consumed around 415 terawatt-hours of electricity globally in 2024 and projects a rise toward roughly 945 terawatt-hours by 2030 in its base case. Accelerated servers, whose growth is closely tied to AI adoption, are projected to consume electricity at a much faster rate than conventional servers. The IEA also emphasizes that data centres can be built in two or three years while energy systems require longer planning horizons, grid investment, and supply-chain coordination.</p>
+
+                <p>For African planners, this makes power a design variable in the AI institution. The relevant question is whether a country can make power, cooling, connectivity, storage, and maintenance reliable enough for a service with a public deadline. A language model used by a school, a health system, or a research network cannot treat the electrical system as an invisible assumption.</p>
+
+                <p>Energy discipline also creates a different route to sovereignty. A smaller, well-operated regional facility connected to renewable generation, resilient networks, and clear allocation rules can produce more durable agency than a larger installation whose ownership, operating knowledge, and data pathways remain external. Scale matters, but control over the conditions of use matters first.</p>
+
+                <h2>African AI needs institutions that activate, not monuments that impress</h2>
+
+                <p>The African Development Bank’s September agreement with Korea frames the AI Hub as a platform linking public authorities, finance, research, universities, and business. Its September training programme with UNDP, Google, and Apolitical gives public officials access to courses on AI fundamentals, leadership, trust, culture, and procurement. These are complementary signals: infrastructure and institutional literacy must advance together.</p>
+
+                <p>This is also where African intellectual sovereignty becomes concrete. The continent will use external models, chips, cloud services, and technical partnerships for a long time, while sovereignty requires retaining the ability to set priorities, inspect the systems, train the operators, define the evidence, protect local languages, and move knowledge between providers without losing the institution that learned it.</p>
+
+                <p>UNDP’s September public-value analysis gives the governing test: compute, data, connectivity, cloud infrastructure, cybersecurity, digital public infrastructure, and reliable energy should strengthen national agency and produce measurable public value. That test is more serious than a race for the largest cluster. It asks what remains when a grant ends, a vendor changes, a model is withdrawn, or a political priority shifts.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the compute activation layer: the operating infrastructure that converts local hardware into governed, financed, and repeatable capability. It sits between physical compute and the applications that depend on it.</p>
+
+                <ul>
+                    <li><strong>Regional compute operators:</strong> facilities that combine power, cooling, connectivity, scheduling, storage, security, and model-serving into reliable local capacity.</li>
+                    <li><strong>Activation platforms:</strong> software for quota allocation, project intake, dataset access, evaluation, billing, utilization, and transition from pilot to maintained service.</li>
+                    <li><strong>Local AI systems integrators:</strong> teams that connect public problems and enterprise workflows to the hardware, data, languages, and operators available in a region.</li>
+                    <li><strong>Compute-finance instruments:</strong> structures that fund the full lifecycle of capacity, including maintenance, skills, energy resilience, software, and replacement rather than treating the GPU purchase as the project.</li>
+                    <li><strong>Sovereign capability registries:</strong> auditable records of who can use a facility, which applications run, what data and languages they serve, what value they produce, and how the capability can be exported or migrated.</li>
+                </ul>
+
+                <p>Underwriting can begin with inspectable measures: utilization by public-interest category; time from allocation to first working service; percentage of projects with local operators; power and cooling reliability; share of workloads that remain portable; language and domain coverage; maintenance response time; and the number of experiments that become maintained services. These measures reveal whether capital is buying a monument, a rented machine, or a growing institutional capability.</p>
+
+                <h2>Build the institution around the machine</h2>
+
+                <p>A practical programme can begin with one regional cluster and one consequential use case. Choose the owner. Publish the access rules. Name the data steward. Fund the operator. Define the evaluation set in the languages and conditions that matter. Record the energy and maintenance envelope. Decide how a successful pilot becomes a service and how an unsuccessful one returns knowledge to the next project.</p>
+
+                <p>Then test the institution under pressure. Remove a provider. Reduce the network. Change the language. Rotate the operator. Increase demand. Revoke a dataset. Ask a public reviewer to reproduce the result. The test passes when the capability survives the disruption with its authority, evidence, and repair path intact.</p>
+
+                <p>A GPU is an instrument. The institution is the arrangement that makes the instrument answer to a people’s purposes. Africa’s next AI advantage will be measured in the systems that can activate compute repeatedly, locally, and with enough memory to improve. That is the layer where infrastructure becomes sovereignty.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.undp.org/africa/publications/local-ai-compute-infrastructure-africa-lessons-six-country-hosted-deployments-governance-and-effective-use" target="_blank" rel="noopener">United Nations Development Programme, “Local AI compute infrastructure in Africa: Lessons from six country-hosted deployments on governance and effective use” (September 17, 2026). The publication draws on deployments in Kenya, Malawi, Rwanda, South Africa, Togo, and Zambia and identifies data, skills, ownership, governance, cybersecurity, financing, and application pathways as conditions for effective use.</a></li>
+                    <li><a href="https://www.undp.org/africa/blog/africas-ai-crossroads-readiness-public-value" target="_blank" rel="noopener">United Nations Development Programme, “Africa’s AI Crossroads: From Readiness to Public Value” (September 24, 2026). The analysis connects compute, data, connectivity, cloud infrastructure, cybersecurity, digital public infrastructure, and reliable energy to African agency and measurable public value.</a></li>
+                    <li><a href="https://www.afdb.org/en/news-and-events/press-releases/korea-african-development-bank-sign-deal-launch-joint-ai-hub-support-africa-96857" target="_blank" rel="noopener">African Development Bank Group, “Korea, African Development Bank sign deal to launch joint AI Hub to support Africa” (September 17, 2026). The announcement describes a platform connecting governments, financial institutions, research centres, universities, and businesses around African AI and digital projects.</a></li>
+                    <li><a href="https://www.afdb.org/en/news-and-events/press-releases/unga81-african-development-bank-group-and-partners-launch-free-ai-training-african-public-officials-97043" target="_blank" rel="noopener">African Development Bank Group, “UNGA81: African Development Bank Group and partners launch free AI training for African public officials” (September 25, 2026). The programme covers AI fundamentals, leadership, trust, organisational culture, and procurement for public officials, linking institutional capability to the use of AI in public services.</a></li>
+                    <li><a href="https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai" target="_blank" rel="noopener">International Energy Agency, “Energy demand from AI,” in Energy and AI (2025). The report describes data-centre electricity demand, the faster growth of accelerated servers, regional differences including Africa’s low per-capita data-centre consumption, and the longer planning horizon of energy infrastructure.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Le GPU n’est pas l’institution</h1>
+
+                <p>Un GPU peut être acheté, installé et compté. Une institution doit décider qui peut l’utiliser, pour quel problème, sous quelle autorité, avec quelles données et selon quelle mesure de la valeur publique. Le débat africain sur le calcul pour l’IA entre donc dans une phase plus exigeante : l’actif rare devient la capacité opératoire qui transforme le matériel en aptitude durable.</p>
+
+                <p>Deux signaux de septembre rendent ce déplacement visible. Le Programme des Nations unies pour le développement a publié les leçons de déploiements de capacités de calcul hébergées au niveau national au Kenya, au Malawi, au Rwanda, en Afrique du Sud, au Togo et en Zambie. Sa conclusion est directe : l’infrastructure doit être reliée à des données accessibles, à des opérateurs et utilisateurs compétents, à des responsabilités institutionnelles claires, à la gouvernance, à la cybersécurité, à un financement durable et à des chemins concrets reliant les applications prioritaires aux services. La Banque africaine de développement et la Corée ont annoncé un pôle commun pour relier gouvernements, financeurs, centres de recherche, universités et entreprises autour de projets africains d’IA et de numérique. La question devient celle de l’activation responsable du calcul, et plus seulement celle de l’accès au calcul.</p>
+
+                <blockquote>
+                    <p>Le calcul devient souveraineté seulement lorsqu’un peuple peut transformer une capacité en décisions, en services et en savoirs selon des règles qu’il peut examiner.</p>
+                </blockquote>
+
+                <h2>La capacité est un fait physique ; l’aptitude est une réalisation institutionnelle</h2>
+
+                <p>Le débat public traite souvent un centre de données ou un cluster de GPU comme une réponse achevée. Le matériel est visible, finançable et facile à photographier. Sa production sociale est plus difficile à observer. Un cluster peut rester sous-utilisé parce qu’aucun ministère ne possède la file d’attente, parce que les données sont inaccessibles, parce que les opérateurs ne peuvent pas maintenir la pile, parce que les achats n’ont pas financé le logiciel et le refroidissement, ou parce qu’aucune application ne dispose d’un chemin allant de l’expérimentation au service.</p>
+
+                <p>La publication du PNUD sur six pays est utile précisément parce qu’elle étudie le passage du déploiement à l’usage effectif. Elle relie les applications, la responsabilité institutionnelle, l’accès aux données, les compétences, la cybersécurité, la gouvernance, le financement et les parcours d’intérêt public. Cette liste devrait modifier l’évaluation des projets de calcul. Un chiffre d’heures-machine décrit l’offre. Il dit peu sur la possibilité, pour un service de santé, un outil linguistique, un groupe de recherche ou une administration, de compter sur cette offre l’année suivante.</p>
+
+                <p>L’objet économique est la couche d’activation autour de la machine. Elle comprend les personnes, les logiciels, les politiques, les voies d’accès aux données, les règles d’achat, les pratiques d’évaluation et les arrangements financiers qui permettent à un accélérateur rare de produire un travail répétable. C’est cette couche qui transforme un cluster régional en institution de recherche, en service public ou en plateforme industrielle.</p>
+
+                <h2>La couche d’activation a une forme</h2>
+
+                <p>Un programme sérieux de calcul local devrait publier davantage qu’un chiffre de capacité. Il devrait rendre visible le contrat opératoire :</p>
+
+                <ul>
+                    <li><strong>Allocation :</strong> quelles institutions reçoivent l’accès, comment les priorités sont établies et comment la capacité rare est répartie entre recherche, service public, éducation et entreprise.</li>
+                    <li><strong>Données :</strong> quels jeux de données peuvent entrer dans l’environnement, sous quelle autorité, avec quelle couverture linguistique, quels droits, quels contrôles de sécurité et quelle voie de sortie.</li>
+                    <li><strong>Opérations :</strong> qui entretient le matériel, l’orchestration, le stockage, le réseau, le refroidissement, la surveillance, la réponse aux incidents et la pile de service des modèles.</li>
+                    <li><strong>Évaluation :</strong> comment un projet démontre que son système fonctionne dans les langues et les conditions locales, ainsi que dans le domaine où des personnes porteront les conséquences.</li>
+                    <li><strong>Conversion :</strong> comment une expérience devient un service maintenu, une catégorie d’achat, un actif de recherche, une entreprise ou une capacité ouverte sur laquelle d’autres peuvent construire.</li>
+                </ul>
+
+                <p>Sans ces interfaces, le calcul local devient un projet d’investissement à l’après-vie incertaine. Avec elles, la machine peut accumuler un savoir institutionnel. Chaque allocation révèle une demande. Chaque déploiement échoué indique à l’opérateur la donnée, la compétence ou la politique manquante. Chaque service réussi fournit un argument pour l’unité de capacité suivante. Le cluster commence à se comporter comme une institution plutôt que comme une salle remplie d’équipements.</p>
+
+                <h2>L’énergie détermine la frontière du possible</h2>
+
+                <p>L’Agence internationale de l’énergie estime que les centres de données ont consommé environ 415 térawattheures d’électricité dans le monde en 2024 et prévoit, dans son scénario central, une hausse vers environ 945 térawattheures en 2030. Les serveurs accélérés, dont la croissance est étroitement liée à l’adoption de l’IA, devraient consommer de l’électricité beaucoup plus rapidement que les serveurs classiques. L’AIE souligne aussi qu’un centre de données peut être construit en deux ou trois ans, tandis que les systèmes énergétiques exigent des horizons de planification plus longs, des investissements de réseau et une coordination des chaînes d’approvisionnement.</p>
+
+                <p>Pour les planificateurs africains, l’énergie devient ainsi une variable de conception de l’institution IA. La question pertinente est celle de la fiabilité de l’électricité, du refroidissement, de la connectivité, du stockage et de la maintenance pour un service soumis à une échéance publique. Un modèle linguistique utilisé par une école, un système de santé ou un réseau de recherche ne peut pas traiter le système électrique comme une hypothèse invisible.</p>
+
+                <p>La discipline énergétique ouvre aussi une autre voie vers la souveraineté. Une installation régionale plus petite, bien opérée, reliée à une production renouvelable, à des réseaux résilients et à des règles d’allocation claires peut produire une capacité d’action plus durable qu’un équipement plus grand dont la propriété, le savoir opératoire et les chemins de données restent externes. L’échelle compte, mais le contrôle des conditions d’usage compte d’abord.</p>
+
+                <h2>L’IA africaine a besoin d’institutions qui activent, pas de monuments qui impressionnent</h2>
+
+                <p>L’accord conclu en septembre entre la Banque africaine de développement et la Corée présente le pôle IA comme une plateforme reliant autorités publiques, finance, recherche, universités et entreprises. Le programme de formation lancé en septembre par la BAD avec le PNUD, Google et Apolitical donne aux agents publics accès à des cours sur les fondamentaux de l’IA, le leadership, la confiance, la culture organisationnelle et les achats. Ces signaux se complètent : l’infrastructure et la culture institutionnelle doivent progresser ensemble.</p>
+
+                <p>C’est aussi ici que la souveraineté intellectuelle africaine devient concrète. Le continent utilisera longtemps des modèles, des puces, des services cloud et des partenariats techniques extérieurs, tandis que la souveraineté exige de conserver la capacité de fixer les priorités, d’inspecter les systèmes, de former les opérateurs, de définir les preuves, de protéger les langues locales et de déplacer les connaissances entre fournisseurs sans perdre l’institution qui les a apprises.</p>
+
+                <p>L’analyse du PNUD sur la valeur publique fournit un test de gouvernement : le calcul, les données, la connectivité, l’infrastructure cloud, la cybersécurité, l’infrastructure publique numérique et l’énergie fiable doivent renforcer l’agence nationale et produire une valeur publique mesurable. Ce test est plus sérieux qu’une course au plus grand cluster. Il demande ce qui demeure lorsqu’une subvention prend fin, qu’un fournisseur change, qu’un modèle est retiré ou qu’une priorité politique évolue.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est la couche d’activation du calcul : l’infrastructure opératoire qui convertit le matériel local en capacité gouvernée, financée et répétable. Elle se situe entre le calcul physique et les applications qui en dépendent.</p>
+
+                <ul>
+                    <li><strong>Opérateurs régionaux de calcul :</strong> installations combinant énergie, refroidissement, connectivité, planification, stockage, sécurité et service des modèles dans une capacité locale fiable.</li>
+                    <li><strong>Plateformes d’activation :</strong> logiciels de répartition des quotas, d’admission des projets, d’accès aux données, d’évaluation, de facturation, d’utilisation et de passage du pilote au service maintenu.</li>
+                    <li><strong>Intégrateurs locaux de systèmes IA :</strong> équipes reliant les problèmes publics et les workflows d’entreprise au matériel, aux données, aux langues et aux opérateurs disponibles dans une région.</li>
+                    <li><strong>Instruments de financement du calcul :</strong> structures qui financent tout le cycle de vie de la capacité, y compris la maintenance, les compétences, la résilience énergétique, les logiciels et le remplacement, au lieu de traiter l’achat du GPU comme le projet entier.</li>
+                    <li><strong>Registres souverains de capacité :</strong> relevés auditables indiquant qui peut utiliser une installation, quelles applications y fonctionnent, quelles données et langues elles servent, quelle valeur elles produisent et comment la capacité peut être exportée ou migrée.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des mesures inspectables : utilisation par catégorie d’intérêt public, délai entre l’allocation et le premier service fonctionnel, pourcentage de projets dotés d’opérateurs locaux, fiabilité de l’énergie et du refroidissement, part des workloads qui reste portable, couverture des langues et des domaines, délai de maintenance et nombre d’expériences devenues des services maintenus. Ces mesures révèlent si le capital achète un monument, une machine louée ou une capacité institutionnelle en croissance.</p>
+
+                <h2>Construire l’institution autour de la machine</h2>
+
+                <p>Un programme pratique peut commencer par un cluster régional et un cas d’usage conséquent. Choisissez le responsable. Publiez les règles d’accès. Nommez le responsable des données. Financez l’opérateur. Définissez le jeu d’évaluation dans les langues et les conditions qui comptent. Enregistrez l’enveloppe d’énergie et de maintenance. Décidez comment un pilote réussi devient un service et comment un pilote échoué restitue son savoir au projet suivant.</p>
+
+                <p>Testez ensuite l’institution sous pression. Retirez un fournisseur. Réduisez le réseau. Changez de langue. Faites tourner l’opérateur. Augmentez la demande. Révoquez un jeu de données. Demandez à un évaluateur public de reproduire le résultat. Le test réussit lorsque la capacité survit à la perturbation avec son autorité, ses preuves et sa voie de réparation intactes.</p>
+
+                <p>Un GPU est un instrument. L’institution est l’arrangement qui fait répondre cet instrument aux finalités d’un peuple. Le prochain avantage africain dans l’IA se mesurera aux systèmes capables d’activer le calcul de manière répétée, locale, et avec assez de mémoire pour progresser. C’est là que l’infrastructure devient souveraineté.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.undp.org/africa/publications/local-ai-compute-infrastructure-africa-lessons-six-country-hosted-deployments-governance-and-effective-use" target="_blank" rel="noopener">Programme des Nations unies pour le développement, « Local AI compute infrastructure in Africa: Lessons from six country-hosted deployments on governance and effective use » (17 septembre 2026). La publication s’appuie sur des déploiements au Kenya, au Malawi, au Rwanda, en Afrique du Sud, au Togo et en Zambie et identifie les données, les compétences, la responsabilité, la gouvernance, la cybersécurité, le financement et les parcours applicatifs comme conditions d’un usage effectif.</a></li>
+                    <li><a href="https://www.undp.org/africa/blog/africas-ai-crossroads-readiness-public-value" target="_blank" rel="noopener">Programme des Nations unies pour le développement, « Africa’s AI Crossroads: From Readiness to Public Value » (24 septembre 2026). L’analyse relie le calcul, les données, la connectivité, l’infrastructure cloud, la cybersécurité, l’infrastructure publique numérique et l’énergie fiable à l’agence africaine et à une valeur publique mesurable.</a></li>
+                    <li><a href="https://www.afdb.org/en/news-and-events/press-releases/korea-african-development-bank-sign-deal-launch-joint-ai-hub-support-africa-96857" target="_blank" rel="noopener">Groupe de la Banque africaine de développement, « Korea, African Development Bank sign deal to launch joint AI Hub to support Africa » (17 septembre 2026). L’annonce décrit une plateforme reliant gouvernements, institutions financières, centres de recherche, universités et entreprises autour de projets africains d’IA et de numérique.</a></li>
+                    <li><a href="https://www.afdb.org/en/news-and-events/press-releases/unga81-african-development-bank-group-and-partners-launch-free-ai-training-african-public-officials-97043" target="_blank" rel="noopener">Groupe de la Banque africaine de développement, « UNGA81: African Development Bank Group and partners launch free AI training for African public officials » (25 septembre 2026). Le programme couvre les fondamentaux de l’IA, le leadership, la confiance, la culture organisationnelle et les achats pour les agents publics, en reliant la capacité institutionnelle à l’usage de l’IA dans les services publics.</a></li>
+                    <li><a href="https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai" target="_blank" rel="noopener">Agence internationale de l’énergie, « Energy demand from AI », dans Energy and AI (2025). Le rapport décrit la demande électrique des centres de données, la croissance plus rapide des serveurs accélérés, les différences régionales, notamment la faible consommation par habitant des centres de données en Afrique, ainsi que l’horizon de planification plus long des infrastructures énergétiques.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
