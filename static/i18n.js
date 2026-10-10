@@ -165,6 +165,7 @@
         'article.entry132':     { en: 'Diop Daily #132 — October 2026', fr: 'Diop Quotidien n°132 — Octobre 2026' },
         'article.entry130':     { en: 'Diop Daily #130 — October 2026', fr: 'Diop Quotidien n°130 — Octobre 2026' },
         'article.entry128':     { en: 'Diop Daily #128 — October 2026', fr: 'Diop Quotidien n°128 — Octobre 2026' },
+        'article.entry136':     { en: 'Diop Daily #136 — October 2026', fr: 'Diop Quotidien n°136 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -177,6 +178,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-136': {
+        title: {
+            en: "The Score Must Travel with Its Fixture",
+            fr: "Le score doit voyager avec son banc d’essai"
+        },
+        excerpt: {
+            en: "An agent score becomes portable evidence only when it travels with its engine version, corpus, date, observable checks, and adversarial fixtures. The investable layer is reproducible conformance infrastructure that lets institutions rerun and govern the result.",
+            fr: "Un score d’agent devient une preuve portable seulement lorsqu’il voyage avec la version de son moteur, son corpus, sa date, ses contrôles observables et ses bancs d’essai adversariaux. La couche d’investissement est l’infrastructure de conformité reproductible qui permet aux institutions de réexécuter et de gouverner le résultat."
+        }
+    },
     'diop-daily-135': {
         title: {
             en: "The Front Door Must Be Legible to the Machine",
