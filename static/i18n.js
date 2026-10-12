@@ -166,6 +166,7 @@
         'article.entry130':     { en: 'Diop Daily #130 — October 2026', fr: 'Diop Quotidien n°130 — Octobre 2026' },
         'article.entry128':     { en: 'Diop Daily #128 — October 2026', fr: 'Diop Quotidien n°128 — Octobre 2026' },
         'article.entry136':     { en: 'Diop Daily #136 — October 2026', fr: 'Diop Quotidien n°136 — Octobre 2026' },
+        'article.entry137':     { en: 'Diop Daily #137 — October 2026', fr: 'Diop Quotidien n°137 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -178,6 +179,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-137': {
+        title: {
+            en: "A Memory Must Be Able to Leave",
+            fr: "Une mémoire doit pouvoir partir"
+        },
+        excerpt: {
+            en: "Persistent memory creates institutional value only when an agent can carry it across runtimes with provenance, selective disclosure, revocation, and an injection-resistant re-hydration path. The investable surface is the memory-transfer contract that keeps capability owned when models and vendors change.",
+            fr: "La mémoire persistante crée une valeur institutionnelle seulement lorsqu’un agent peut la transporter entre les runtimes avec provenance, divulgation sélective, révocation et une voie de réhydratation résistante à l’injection. La surface d’investissement est le contrat de transfert qui conserve la maîtrise de la capacité lorsque les modèles et les fournisseurs changent."
+        }
+    },
     'diop-daily-136': {
         title: {
             en: "The Score Must Travel with Its Fixture",
