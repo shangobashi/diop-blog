@@ -167,6 +167,7 @@
         'article.entry128':     { en: 'Diop Daily #128 — October 2026', fr: 'Diop Quotidien n°128 — Octobre 2026' },
         'article.entry136':     { en: 'Diop Daily #136 — October 2026', fr: 'Diop Quotidien n°136 — Octobre 2026' },
         'article.entry137':     { en: 'Diop Daily #137 — October 2026', fr: 'Diop Quotidien n°137 — Octobre 2026' },
+        'article.entry138':     { en: 'Diop Daily #138 — October 2026', fr: 'Diop Quotidien n°138 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -179,6 +180,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-138': {
+        title: {
+            en: "An Offer Is a Time-Bound Promise",
+            fr: "Une offre est une promesse à durée définie"
+        },
+        excerpt: {
+            en: "Agentic commerce needs a machine-readable offer that binds product, price, eligibility, authority, terms, settlement, and expiry before a commitment becomes irreversible. The investable layer is the offer-control record that lets buyers and sellers inspect what was promised.",
+            fr: "Le commerce agentique a besoin d’une offre lisible par machine qui relie produit, prix, éligibilité, autorité, conditions, règlement et expiration avant qu’un engagement ne devienne irréversible. La couche d’investissement est le dossier de contrôle de l’offre qui permet aux acheteurs et aux vendeurs d’examiner ce qui a été promis."
+        }
+    },
     'diop-daily-137': {
         title: {
             en: "A Memory Must Be Able to Leave",

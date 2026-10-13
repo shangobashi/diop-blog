@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>An Offer Is a Time-Bound Promise — Diop Research</title>
+    <meta name="description" content="Agentic commerce needs a machine-readable offer that binds product, price, eligibility, authority, terms, settlement, and expiry. The investable layer is the offer record that can be inspected before an agent commits a buyer or seller."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry138">Diop Daily #138 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 13, 2026</time>
+                    <span>·</span>
+                    <span data-rt="8">8 min read</span>
+                    <span>·</span>
+                    <span>agentic commerce · offer infrastructure · machine contracts</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">An Offer Is a Time-Bound Promise</h1>
+
+                <p>An agent can identify a product, find a merchant, and complete a payment while the actual offer remains unclear. The transaction may contain an item, a price, and a receipt, yet omit the conditions that made the exchange valid: which inventory state applied, who could accept the terms, when the price expired, what was promised after settlement, and which authority could correct the record. Agentic commerce needs a machine-readable offer that can answer those questions before a commitment becomes irreversible.</p>
+
+                <p>This is a different object from the product passport. A passport says what the thing is. A protocol says how a request travels. An offer says what a named counterparty may receive, under which conditions, for how long, and with what obligations after acceptance. That record is the bridge between discovery and commitment.</p>
+
+                <blockquote>
+                    <p>A product can carry its identity; an offer must carry the conditions under which identity becomes a transaction.</p>
+                </blockquote>
+
+                <h2>The transaction has a missing sentence</h2>
+
+                <p>Public work on agentic commerce is now making the surrounding layers visible. The W3C/GS1 workshop held on 8–9 September 2026 placed the Universal Commerce Protocol beside questions of delegated authority, product variants, brand-authoritative data, agent identity, and payment autonomy. One session described UCP as an open protocol for standardizing commerce interactions across businesses, platforms, and payment providers. Another described a production deployment of emerging protocols across millions of merchants. These are workshop accounts and implementation reports, not proof that the market has solved the problem.</p>
+
+                <p>They do show where the missing sentence sits. A protocol can tell an agent how to request a quote or start checkout. A product identity can tell it which object the quote concerns. Neither one, by itself, states the complete promise being made at that moment.</p>
+
+                <p>An offer should state at least:</p>
+
+                <ul>
+                    <li><strong>Referent:</strong> the exact product, service, edition, lot, or licence covered by the promise.</li>
+                    <li><strong>Consideration:</strong> price, currency, taxes, fees, credits, deposits, and the settlement method.</li>
+                    <li><strong>Eligibility:</strong> the person, organization, geography, account status, or consent condition that permits acceptance.</li>
+                    <li><strong>Terms:</strong> delivery, cancellation, warranty, usage rights, substitutions, exclusions, and remedies.</li>
+                    <li><strong>Validity:</strong> the start time, expiry time, inventory state, and event that causes the offer to change or disappear.</li>
+                    <li><strong>Authority:</strong> the party entitled to issue, amend, withdraw, or fulfil each material promise.</li>
+                    <li><strong>Receipt:</strong> the evidence that records what the agent showed, what the buyer accepted, and which version was active.</li>
+                </ul>
+
+                <p>The fields are ordinary commercial language. Their importance changes when an agent reads and acts on them without a person comparing every clause. A human can notice that a discount applies only to one size, that delivery excludes a region, or that a subscription renews automatically. An agent needs those boundaries represented in a form that its runtime can test and preserve.</p>
+
+                <h2>Freshness is part of the promise</h2>
+
+                <p>Offers are temporal objects. The price may change when stock falls below a threshold. Eligibility may depend on a membership or a location. A delivery commitment may expire when a carrier misses a collection window. A licence may cover one publication date but not the next edition. The offer is therefore not a static description attached to a catalogue item. It is a versioned state that must tell the machine when its authority begins and ends.</p>
+
+                <p>GS1’s Conformant Resolver standard is useful here because it separates a persistent identifier from the changing information attached to the identified entity. That distinction supports a clean architecture: the product identity can remain stable while an offer resolver publishes current price, availability, conditions, and authorized actions. The offer can expire without corrupting the product record. A correction can be issued without pretending that yesterday’s terms were never shown.</p>
+
+                <p>Expiration must also be observable. A system that silently serves a stale offer creates a dispute that no receipt can settle. The record should preserve the time at which the agent retrieved the offer, the version it saw, the conditions it displayed, and the event that invalidated it. If a merchant changes a delivery promise between recommendation and checkout, the agent should either refresh the offer or explain why the earlier promise still governs.</p>
+
+                <h2>Authority travels with acceptance</h2>
+
+                <p>The W3C workshop includes proposals for trusted agentic service protocols, structured delegation, runtime enforcement, cryptographically verifiable evidence, and mechanisms for proving an agent’s authority to a merchant. NIST’s AI Agent Standards Initiative places open protocols, authentication and identity infrastructure, and security evaluation in the same strategic frame. The implication is precise: an offer cannot be treated as complete until the system knows who is allowed to accept it and on whose behalf.</p>
+
+                <p>This does not mean every purchase needs a human approval screen. A buyer can delegate a bounded purchasing mandate: a maximum price, approved merchants, permitted categories, delivery location, renewal rule, and a route for exceptions. The agent can then compare offers within that mandate. The runtime must preserve the delegation with the acceptance record, so a later reviewer can distinguish an authorized choice from a model’s unsupported preference.</p>
+
+                <p>Delegation also needs a failure state. If an offer changes currency, crosses a jurisdiction, substitutes an item, adds a recurring charge, or exceeds the delegated limit, the agent should stop and ask for a new authority. A refusal at that boundary protects the institution’s control of its own promise.</p>
+
+                <h2>African markets need offer infrastructure that keeps context</h2>
+
+                <p>In African commerce, the offer layer must handle conditions that global schemas often compress: multiple languages, informal and formal seller identities, mobile-money rails, variable delivery networks, regional tax treatment, cooperative membership, and products whose meaning depends on provenance or community authority. A machine that sees only a standardized SKU and a payment token can move money while losing the social and legal context that makes the exchange legitimate.</p>
+
+                <p>Consider a cooperative selling agricultural inputs across a border. The product identity may be stable, but the offer can differ by country, season, member status, payment rail, delivery route, and approved use. A local publisher may offer the same title in print, digital, translation, and classroom licence forms. A cultural producer may authorize reading and quotation while excluding adaptation. These are not edge cases to be added after a global commerce engine is complete. They are the terms of the market.</p>
+
+                <p>Sovereignty enters through the ability to author those terms, preserve them in local languages, and expose their mapping to shared protocols. Interoperability should carry the institution’s distinctions outward. It should not require the institution to erase them before a machine can participate.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the offer-control layer: registries, resolvers, policy engines, and receipts that let agents discover, compare, accept, update, and dispute a time-bound promise without losing the product, authority, or context behind it.</p>
+
+                <ul>
+                    <li><strong>Offer registries:</strong> versioned records for price, eligibility, terms, inventory, validity, language, and settlement across merchants and platforms.</li>
+                    <li><strong>Offer resolvers:</strong> services that return the current promise for a stable product or service identity and expose explicit expiry and refusal states.</li>
+                    <li><strong>Delegation-aware checkout:</strong> runtimes that test an offer against a buyer’s mandate before accepting it and escalate changes that exceed scope.</li>
+                    <li><strong>Commercial receipts:</strong> evidence packages that preserve the offer version, authority, displayed conditions, acceptance, and post-settlement obligations.</li>
+                    <li><strong>Dispute and correction rails:</strong> systems that connect stale data, merchant amendments, refunds, recalls, and appeals to the exact offer that governed the decision.</li>
+                </ul>
+
+                <p>Underwriting can begin with questions that expose operational capacity: how often does an agent accept an expired or altered offer; can a buyer reconstruct the exact terms it saw; how quickly does a withdrawn promise disappear from dependent surfaces; can the system preserve eligibility and price across languages and payment rails; and how many disputes can be resolved from the record without recreating the entire interaction?</p>
+
+                <p>The valuable company in this category will own a maintained network of promises rather than another catalogue interface. Its advantage will come from the quality of expiry handling, authority binding, local terms, correction paths, and evidence that survives a change of model or commerce platform. Revenue may arrive through resolution, verification, payment support, compliance, or dispute operations. The durable asset is a trusted record of what could be accepted, by whom, and when.</p>
+
+                <h2>Build the promise before automating the purchase</h2>
+
+                <p>An institution can start with one costly ambiguity: a recurring renewal, a cross-border delivery, a regulated product, a multilingual licence, or a membership discount. Give the offer a stable identifier, separate the product from the promise, define the issuer, the eligible principal, the conditions, the expiry event, and the receipt, then test the agent with a changed price, a missing field, an expired offer, a language variant, and a request outside the buyer’s mandate.</p>
+
+                <p>Then test correction by withdrawing the offer, changing its delivery condition, revoking the agent’s delegation, and asking the system what the buyer, merchant, reviewer, and downstream ledger can still see. A commerce layer earns trust when it can state which promise governed an action and can repair the record when that promise was wrong.</p>
+
+                <p>Agentic commerce will be described through protocols, assistants, and autonomous checkout. The harder infrastructure is quieter. It is the offer record that binds the thing, the price, the authority, the conditions, the clock, and the right of correction. Before a machine commits a buyer or seller, it should be able to say exactly what was promised.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/2026/ecommerce-agents/agenda.html" target="_blank" rel="noopener">W3C/GS1 Workshop on E-Commerce for Humans and AI Agents, agenda for 8–9 September 2026. The agenda records sessions on Universal Commerce Protocol, production experience with emerging agentic-commerce protocols, delegated payment authority, brand-authoritative data, product variants, agent identity, and machine-readable publisher surfaces. These are workshop presentations and implementation reports, not proof that the market has solved the problems described.</a></li>
+                    <li><a href="https://ref.gs1.org/standards/resolver/" target="_blank" rel="noopener">GS1, “GS1-Conformant Resolver Standard.” The standard distinguishes the persistent identity of an entity from changing information about it and defines machine-discoverable, machine-actionable resolution through GS1 Digital Link identifiers.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). NIST identifies industry-led standards, open protocols, agent authentication and identity infrastructure, and security evaluations as connected strategic work areas.</a></li>
+                    <li><a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/faq/how-are-ai-agents-addressed-within-ai-act-0" target="_blank" rel="noopener">European Commission AI Act Service Desk, “How are AI agents addressed within the AI Act?” The official FAQ explains that agents are covered through the Act’s AI-system and GPAI definitions, notes transparency rules from 2 August 2026 for agents intended to interact with people or generate content, and describes the Commission’s preliminary treatment of the fast-moving category.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Une offre est une promesse à durée définie</h1>
+
+                <p>Un agent peut identifier un produit, trouver un marchand et effectuer un paiement alors que l’offre réelle demeure imprécise. La transaction peut contenir un article, un prix et un reçu tout en omettant les conditions qui rendaient l’échange valide : quel état du stock s’appliquait, qui pouvait accepter les conditions, quand le prix expirait, ce qui était promis après le règlement et quelle autorité pouvait corriger le dossier. Le commerce agentique a besoin d’une offre lisible par machine, capable de répondre à ces questions avant qu’un engagement ne devienne irréversible.</p>
+
+                <p>Il s’agit d’un objet différent du passeport du produit. Un passeport indique ce qu’est la chose. Un protocole indique comment une demande circule. Une offre indique ce qu’une contrepartie nommée peut recevoir, sous quelles conditions, pendant combien de temps et avec quelles obligations après l’acceptation. Ce dossier constitue le pont entre la découverte et l’engagement.</p>
+
+                <blockquote>
+                    <p>Un produit peut porter son identité ; une offre doit porter les conditions dans lesquelles cette identité devient une transaction.</p>
+                </blockquote>
+
+                <h2>La transaction contient une phrase manquante</h2>
+
+                <p>Les travaux publics sur le commerce agentique rendent désormais visibles les couches voisines. L’atelier W3C/GS1 tenu les 8 et 9 septembre 2026 a placé le Universal Commerce Protocol à côté des questions d’autorité déléguée, de variantes de produits, de données faisant autorité pour la marque, d’identité des agents et d’autonomie des paiements. Une session a présenté UCP comme un protocole ouvert destiné à standardiser les interactions commerciales entre entreprises, plateformes et fournisseurs de paiement. Une autre a décrit le déploiement en production de protocoles émergents auprès de millions de marchands. Il s’agit de comptes rendus d’atelier et de rapports d’implémentation, et non de la preuve que le marché a résolu le problème.</p>
+
+                <p>Ces travaux montrent cependant où se trouve la phrase manquante. Un protocole peut indiquer à un agent comment demander un devis ou commencer un paiement. Une identité produit peut lui indiquer quel objet fait l’objet du devis. Ni l’un ni l’autre n’énonce à lui seul la promesse complète formulée à cet instant.</p>
+
+                <p>Une offre devrait indiquer au minimum :</p>
+
+                <ul>
+                    <li><strong>Référent :</strong> le produit, service, édition, lot ou droit exact couvert par la promesse.</li>
+                    <li><strong>Contrepartie :</strong> prix, devise, taxes, frais, crédits, dépôts et mode de règlement.</li>
+                    <li><strong>Éligibilité :</strong> la personne, l’organisation, la géographie, le statut du compte ou la condition de consentement qui permet l’acceptation.</li>
+                    <li><strong>Conditions :</strong> livraison, annulation, garantie, droits d’usage, substitutions, exclusions et recours.</li>
+                    <li><strong>Validité :</strong> début, expiration, état du stock et événement qui fait changer ou disparaître l’offre.</li>
+                    <li><strong>Autorité :</strong> la partie habilitée à émettre, modifier, retirer ou exécuter chaque promesse importante.</li>
+                    <li><strong>Reçu :</strong> la preuve de ce que l’agent a montré, de ce que l’acheteur a accepté et de la version active.</li>
+                </ul>
+
+                <p>Ces champs relèvent du langage commercial courant. Leur importance change lorsqu’un agent les lit et agit sur eux sans qu’une personne compare chaque clause. Un humain peut remarquer qu’une remise ne concerne qu’une taille, qu’une livraison exclut une région ou qu’un abonnement se renouvelle automatiquement. Un agent a besoin que ces limites soient représentées sous une forme que son runtime peut tester et conserver.</p>
+
+                <h2>La fraîcheur fait partie de la promesse</h2>
+
+                <p>Les offres sont des objets temporels. Le prix peut changer lorsque le stock descend sous un seuil. L’éligibilité peut dépendre d’une adhésion ou d’un lieu. Une promesse de livraison peut expirer lorsqu’un transporteur manque une fenêtre d’enlèvement. Une licence peut couvrir une date de publication mais pas l’édition suivante. L’offre n’est donc pas une description statique attachée à un article de catalogue. Elle est un état versionné qui doit indiquer à la machine quand son autorité commence et prend fin.</p>
+
+                <p>Le standard GS1 Conformant Resolver est utile ici parce qu’il sépare un identifiant persistant des informations changeantes qui lui sont attachées. Cette distinction permet une architecture nette : l’identité du produit peut rester stable tandis qu’un resolver d’offres publie le prix actuel, la disponibilité, les conditions et les actions autorisées. L’offre peut expirer sans corrompre le dossier du produit. Une correction peut être publiée sans prétendre que les conditions d’hier n’ont jamais été montrées.</p>
+
+                <p>L’expiration doit aussi être observable. Un système qui sert silencieusement une offre périmée crée un litige qu’aucun reçu ne peut trancher. Le dossier devrait conserver l’heure à laquelle l’agent a récupéré l’offre, la version qu’il a vue, les conditions qu’il a affichées et l’événement qui l’a invalidée. Si un marchand modifie une promesse de livraison entre la recommandation et le paiement, l’agent devrait actualiser l’offre ou expliquer pourquoi la promesse précédente reste applicable.</p>
+
+                <h2>L’autorité accompagne l’acceptation</h2>
+
+                <p>L’atelier W3C comprend des propositions de protocoles de services agentiques fiables, de délégation structurée, d’application au runtime, de preuves vérifiables cryptographiquement et de mécanismes permettant de prouver l’autorité d’un agent auprès d’un marchand. L’AI Agent Standards Initiative du NIST place les protocoles ouverts, l’authentification et l’infrastructure d’identité ainsi que l’évaluation de la sécurité dans un même cadre stratégique. L’implication est précise : une offre ne peut pas être considérée comme complète avant que le système sache qui est autorisé à l’accepter et au nom de qui.</p>
+
+                <p>Cela ne signifie pas que chaque achat doit afficher un écran d’approbation humaine. Un acheteur peut déléguer un mandat d’achat borné : prix maximal, marchands approuvés, catégories permises, lieu de livraison, règle de renouvellement et voie réservée aux exceptions. L’agent peut alors comparer les offres dans ce mandat. Le runtime doit conserver la délégation avec le dossier d’acceptation, afin qu’un examinateur puisse distinguer un choix autorisé d’une préférence non étayée du modèle.</p>
+
+                <p>La délégation doit aussi prévoir un état d’échec. Si une offre change de devise, traverse une juridiction, substitue un article, ajoute un paiement récurrent ou dépasse la limite déléguée, l’agent doit s’arrêter et demander une nouvelle autorité. Un refus à cette frontière protège la maîtrise que l’institution conserve sur sa propre promesse.</p>
+
+                <h2>Les marchés africains ont besoin d’une infrastructure d’offres qui conserve le contexte</h2>
+
+                <p>Dans le commerce africain, la couche d’offre doit traiter des conditions que les schémas mondiaux compressent souvent : plusieurs langues, identités de vendeurs formelles et informelles, rails de mobile money, réseaux de livraison variables, fiscalité régionale, adhésion à une coopérative et produits dont le sens dépend de la provenance ou de l’autorité d’une communauté. Une machine qui ne voit qu’un SKU normalisé et un jeton de paiement peut transférer l’argent tout en perdant le contexte social et juridique qui rend l’échange légitime.</p>
+
+                <p>Imaginons une coopérative qui vend des intrants agricoles au-delà d’une frontière. L’identité du produit peut rester stable, mais l’offre varie selon le pays, la saison, le statut de membre, le rail de paiement, l’itinéraire de livraison et l’usage autorisé. Un éditeur local peut proposer le même titre sous forme imprimée, numérique, traduite ou sous licence scolaire. Un producteur culturel peut autoriser la lecture et la citation tout en excluant l’adaptation. Ces situations ne sont pas des cas limites à ajouter une fois le moteur commercial mondial terminé. Elles constituent les conditions du marché.</p>
+
+                <p>La souveraineté se manifeste par la capacité de rédiger ces conditions, de les préserver dans les langues locales et d’exposer leur correspondance avec les protocoles communs. L’interopérabilité doit porter les distinctions de l’institution vers l’extérieur. Elle ne doit pas obliger l’institution à les effacer avant qu’une machine puisse participer.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est la couche de contrôle des offres : registres, resolvers, moteurs de politiques et reçus qui permettent aux agents de découvrir, comparer, accepter, actualiser et contester une promesse à durée définie sans perdre le produit, l’autorité ou le contexte qui la soutiennent.</p>
+
+                <ul>
+                    <li><strong>Registres d’offres :</strong> dossiers versionnés de prix, d’éligibilité, de conditions, de stock, de validité, de langue et de règlement entre marchands et plateformes.</li>
+                    <li><strong>Resolvers d’offres :</strong> services qui renvoient la promesse actuelle liée à une identité stable de produit ou de service et exposent explicitement les états d’expiration et de refus.</li>
+                    <li><strong>Paiement avec délégation :</strong> runtimes qui confrontent l’offre au mandat de l’acheteur avant l’acceptation et transmettent les changements qui dépassent le périmètre.</li>
+                    <li><strong>Reçus commerciaux :</strong> ensembles de preuves conservant la version de l’offre, l’autorité, les conditions affichées, l’acceptation et les obligations postérieures au règlement.</li>
+                    <li><strong>Rails de litige et de correction :</strong> systèmes qui relient données périmées, modifications du marchand, remboursements, rappels et recours à l’offre exacte qui régissait la décision.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des questions qui exposent la capacité opératoire : à quelle fréquence un agent accepte-t-il une offre expirée ou modifiée ; l’acheteur peut-il reconstituer les conditions exactes qu’il a vues ; à quelle vitesse une promesse retirée disparaît-elle des surfaces dépendantes ; le système peut-il préserver l’éligibilité et le prix entre langues et rails de paiement ; et combien de litiges peuvent être résolus à partir du dossier sans recréer toute l’interaction ?</p>
+
+                <p>L’entreprise de valeur dans cette catégorie possédera un réseau entretenu de promesses plutôt qu’une autre interface de catalogue. Son avantage viendra de la qualité de la gestion de l’expiration, de la liaison à l’autorité, des conditions locales, des chemins de correction et des preuves qui survivent à un changement de modèle ou de plateforme commerciale. Le revenu peut venir de la résolution, de la vérification, du soutien au paiement, de la conformité ou des opérations de litige. L’actif durable est le dossier fiable de ce qui pouvait être accepté, par qui et à quel moment.</p>
+
+                <h2>Construire la promesse avant d’automatiser l’achat</h2>
+
+                <p>Une institution peut commencer par une ambiguïté coûteuse : renouvellement récurrent, livraison transfrontalière, produit réglementé, licence multilingue ou remise réservée aux membres. Donnez à l’offre un identifiant stable, séparez le produit de la promesse, définissez l’émetteur, le mandant éligible, les conditions, l’événement d’expiration et le reçu, puis testez l’agent avec un prix modifié, un champ manquant, une offre expirée, une variante linguistique et une demande hors du mandat de l’acheteur.</p>
+
+                <p>Testez ensuite la correction en retirant l’offre, en modifiant sa condition de livraison, en révoquant la délégation de l’agent et en demandant au système ce que l’acheteur, le marchand, l’examinateur et le registre en aval peuvent encore voir. Une couche commerciale mérite la confiance lorsqu’elle peut dire quelle promesse régissait une action et réparer le dossier lorsque cette promesse était erronée.</p>
+
+                <p>Le commerce agentique sera décrit par ses protocoles, ses assistants et ses paiements autonomes. L’infrastructure plus difficile est plus silencieuse. C’est le dossier de l’offre qui relie la chose, le prix, l’autorité, les conditions, l’horloge et le droit de correction. Avant qu’une machine n’engage un acheteur ou un vendeur, elle devrait pouvoir dire exactement ce qui a été promis.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/2026/ecommerce-agents/agenda.html" target="_blank" rel="noopener">Atelier W3C/GS1 sur le commerce électronique pour les humains et les agents IA, agenda des 8 et 9 septembre 2026. L’agenda recense des sessions sur le Universal Commerce Protocol, l’expérience de production avec des protocoles de commerce agentique, l’autorité déléguée pour les paiements, les données faisant autorité pour les marques, les variantes de produits, l’identité des agents et les surfaces éditoriales lisibles par machine. Il s’agit de présentations d’atelier et de rapports d’implémentation, et non de la preuve que le marché a résolu les problèmes décrits.</a></li>
+                    <li><a href="https://ref.gs1.org/standards/resolver/" target="_blank" rel="noopener">GS1, « GS1-Conformant Resolver Standard ». Le standard distingue l’identité persistante d’une entité des informations changeantes qui lui sont liées et définit une résolution découvrable et exploitable par machine au moyen des identifiants GS1 Digital Link.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mise à jour le 14 août 2026). Le NIST identifie les standards pilotés par l’industrie, les protocoles ouverts, l’authentification et l’infrastructure d’identité des agents ainsi que les évaluations de sécurité comme des axes stratégiques liés.</a></li>
+                    <li><a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/faq/how-are-ai-agents-addressed-within-ai-act-0" target="_blank" rel="noopener">Service d’assistance de la Commission européenne consacré à l’AI Act, « How are AI agents addressed within the AI Act? ». Cette FAQ officielle explique que les agents sont couverts par les définitions de système d’IA et de modèle GPAI du règlement, indique que les règles de transparence s’appliquent depuis le 2 août 2026 aux agents destinés à interagir avec des personnes ou à générer du contenu, et décrit le traitement encore préliminaire de cette catégorie en évolution rapide.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
