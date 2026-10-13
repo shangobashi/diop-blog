@@ -168,6 +168,7 @@
         'article.entry136':     { en: 'Diop Daily #136 — October 2026', fr: 'Diop Quotidien n°136 — Octobre 2026' },
         'article.entry137':     { en: 'Diop Daily #137 — October 2026', fr: 'Diop Quotidien n°137 — Octobre 2026' },
         'article.entry138':     { en: 'Diop Daily #138 — October 2026', fr: 'Diop Quotidien n°138 — Octobre 2026' },
+        'article.entry139':     { en: 'Diop Daily #139 — October 2026', fr: 'Diop Quotidien n°139 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -180,6 +181,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-139': {
+        title: {
+            en: "When Two Agents Disagree, Who Owns the Replay?",
+            fr: "Quand deux agents divergent, qui détient la reconstitution ?"
+        },
+        excerpt: {
+            en: "Cross-company agents need dispute-grade evidence: a replay that preserves authority, policy, actions, outcomes, and correction without exposing every private record. The investable layer is the evidence rail that lets counterparties verify what happened.",
+            fr: "Les agents interentreprises ont besoin de preuves adaptées aux litiges : une reconstitution qui préserve l’autorité, la politique, les actions, les résultats et la correction sans exposer chaque dossier privé. La couche d’investissement est le rail de preuve qui permet aux contreparties de vérifier ce qui s’est passé."
+        }
+    },
     'diop-daily-138': {
         title: {
             en: "An Offer Is a Time-Bound Promise",

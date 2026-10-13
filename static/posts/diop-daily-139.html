@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>When Two Agents Disagree, Who Owns the Replay? — Diop Research</title>
+    <meta name="description" content="Cross-company agents need dispute-grade evidence: a replay that preserves authority, policy, actions, outcomes, and correction without exposing every private record. The investable layer is the evidence rail that lets counterparties verify what happened."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry139">Diop Daily #139 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 14, 2026</time>
+                    <span>·</span>
+                    <span data-rt="8">8 min read</span>
+                    <span>·</span>
+                    <span>agent evidence · dispute replay · institutional trust</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">When Two Agents Disagree, Who Owns the Replay?</h1>
+
+                <p>Two agents can complete a transaction while their operators retain incompatible accounts of what happened. One system records an accepted price, another records a changed condition, and both logs appear internally coherent. The dispute begins at the boundary between institutions, where a private log becomes a public claim about authority, action, delivery, and responsibility.</p>
+
+                <p>Agentic systems therefore need an evidence object designed for disagreement. It must let counterparties reconstruct the relevant sequence, test which permissions were active, identify the policy that governed each decision, and separate an original event from a later alteration. The record should preserve enough detail for a fair replay while allowing sensitive telemetry to remain under the control of the institution that produced it.</p>
+
+                <blockquote>
+                    <p>A log tells its owner what happened. A replay gives a counterparty grounds to agree.</p>
+                </blockquote>
+
+                <h2>The transaction has two memories</h2>
+
+                <p>A local operator needs rich telemetry: prompts, model outputs, tool calls, retries, policy evaluations, human interventions, and the state of external systems. A counterparty needs a smaller but independently testable account: which principal delegated authority, which action was proposed, what was accepted, what result was delivered, and which evidence supports each step.</p>
+
+                <p>These memories serve different purposes. The first supports debugging and security investigation. The second supports settlement, audit, procurement, insurance, and dispute resolution. Collapsing them into one universal log creates a privacy problem. Treating the second as a summary written by the first operator creates a trust problem.</p>
+
+                <p>A dispute-grade record should carry at least:</p>
+
+                <ul>
+                    <li><strong>Principal and mandate:</strong> the person, organization, or service that authorized the agent, including scope, limits, expiry, and exceptions.</li>
+                    <li><strong>Configuration:</strong> the agent identity, model or policy version, tool definitions, and relevant runtime state.</li>
+                    <li><strong>Commitments:</strong> the offer, request, approval, or service level that each party accepted before execution.</li>
+                    <li><strong>Actions and results:</strong> the material calls, outputs, external effects, delivery state, and refusal or escalation decisions.</li>
+                    <li><strong>Integrity evidence:</strong> timestamps, signatures, hashes, version links, and proofs that reveal alteration or omission.</li>
+                    <li><strong>Correction path:</strong> the authority that can amend, revoke, or annotate the record and the reason for doing so.</li>
+                </ul>
+
+                <p>The purpose is to preserve the facts on which a counterparty’s rights and obligations depend without exposing every internal thought of a model. A replay should answer the commercial question without pretending that private reasoning is the same thing as accountable evidence.</p>
+
+                <h2>Replay is a boundary protocol</h2>
+
+                <p>Mysten Labs’ October 6 announcement of a Verifiable Agent Arbiter gives this problem a concrete market form. The company describes an evidence layer being co-developed with Google Cloud to help enterprises prove that agents acted within granted authority. Its proposed architecture keeps detailed telemetry in customer-controlled cloud storage while anchoring cryptographic proofs of the record to external infrastructure. The announcement describes dispute replay across companies, incident reconstruction, durable retention, and agentic-commerce evidence as intended capabilities. It is a company announcement about a system in development, not proof that these functions already operate at market scale.</p>
+
+                <p>The architectural separation is the important signal. Privacy and independent verification do not require the same storage location. A company can retain confidential prompts and customer data while giving a counterparty a proof that a defined record existed, was not silently changed, and corresponds to the authority and result claimed. The proof does not make the underlying account true by magic. It makes the account inspectable, challengeable, and connected to a method of correction.</p>
+
+                <p>NIST’s work on software and AI-agent identity and authorization places the missing prerequisites in view. Its September 29 update reports more than 600 public comments on a concept paper and selects software development as the first implementation use case for demonstrating how agents can be identified, authenticated, and authorized. A replay without identity only shows that an event was recorded. A replay bound to a principal and policy can show whether the event was authorized.</p>
+
+                <h2>Agreement requires a common fixture</h2>
+
+                <p>Independent replay does not mean that every party runs the same model again and hopes for the same output. Agent behavior is affected by changing models, tools, external data, permissions, and time. The replay must therefore carry a fixture: the versioned inputs, policy state, authority, relevant external responses, and decision rules that define what another party is being asked to verify.</p>
+
+                <p>The W3C Agent Conformance and Benchmarking Community Group describes a related discipline for published agent results. Its proposed work names observable evidence, adversarial fixtures, versioned corpora, engine and corpus identity, dates, and independent reproduction as parts of a conformance record. A transaction replay applies the same logic to a live relationship: the evidence must state the instrument, the conditions, and the boundary of the claim.</p>
+
+                <p>The replay may reach several legitimate conclusions:</p>
+
+                <ul>
+                    <li>the agent acted within its mandate and the counterparty’s record is incomplete;</li>
+                    <li>the parties accepted different versions of a material condition;</li>
+                    <li>the action exceeded authority even though the technical call succeeded;</li>
+                    <li>the evidence is insufficient, so settlement must pause or move to human review;</li>
+                    <li>the record was altered after the event and can no longer support the original claim.</li>
+                </ul>
+
+                <p>That last category matters. A trustworthy system must be able to preserve uncertainty instead of forcing a binary verdict from incomplete evidence. Institutions can then decide whether to correct a policy, compensate a counterparty, repeat an action, or refuse future delegation.</p>
+
+                <h2>African institutions need evidence they can carry</h2>
+
+                <p>Cross-border African commerce and public administration already operate across different legal systems, languages, payment rails, connectivity conditions, and levels of formal documentation. Agents will multiply those boundaries. A dispute mechanism owned entirely by an external platform could make local institutions dependent on a foreign operator’s interpretation of the record.</p>
+
+                <p>Institutional sovereignty requires a portable evidence vocabulary. A cooperative, publisher, university, ministry, or payment service should be able to state who authorized an action, preserve the relevant local-language terms, identify the jurisdiction, and present the evidence to a regional partner without surrendering the entire underlying archive. The record should travel with its authority and correction path.</p>
+
+                <p>This is also a question of historical method. A source becomes stronger when its provenance, context, and limits remain visible. An agent transaction needs the same discipline. The institution should own the categories by which it describes consent, delivery, refusal, harm, and repair, while exposing enough mapping for a counterpart to verify the claim across a shared protocol.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the dispute-grade evidence rail: infrastructure that binds agent identity, authority, action, result, and correction into a record that independent counterparties can test without receiving every private datum.</p>
+
+                <ul>
+                    <li><strong>Evidence envelopes:</strong> portable records that package mandate, policy, commitments, material actions, outcomes, and proofs with explicit disclosure boundaries.</li>
+                    <li><strong>Replay services:</strong> controlled environments that reconstruct a disputed workflow from named fixtures and report where the parties agree, diverge, or lack evidence.</li>
+                    <li><strong>Authority registries:</strong> systems that bind agents to principals, scopes, expiry rules, and revocation events across organizational boundaries.</li>
+                    <li><strong>Neutral evidence anchors:</strong> services that preserve integrity proofs outside the operator’s private telemetry store without turning sensitive business data into public data.</li>
+                    <li><strong>Correction and settlement rails:</strong> workflows that connect a replay finding to a refund, amendment, compensation, policy change, or renewed authorization.</li>
+                </ul>
+
+                <p>Underwriting can begin with operational measures: the percentage of material actions with a named principal and policy; the time required to reproduce a dispute; the rate at which counterparties agree on the reconstructed sequence; the proportion of records that can be disclosed selectively; the number of corrections that preserve the original evidence; and the share of provider or model changes that leave replay semantics intact.</p>
+
+                <p>The strongest operator in this market will not merely sell a tamper-evident log. It will maintain the fixtures, identity bindings, disclosure rules, and correction procedures that make the record useful when money, rights, or institutional reputation are at stake. The revenue surface may sit in payments, procurement, insurance, compliance, security, or cross-company workflow infrastructure. The durable asset is the shared capacity to establish what happened.</p>
+
+                <h2>Run the disagreement before the market does</h2>
+
+                <p>An institution can test this layer with one workflow that already produces expensive ambiguity: a supplier transaction, a delegated approval, a cross-border delivery, a service-level commitment, or a regulated decision. Name the principal. Freeze the mandate and policy version. Capture the commitment before execution. Record the material actions and external results. Store sensitive telemetry separately from the evidence envelope.</p>
+
+                <p>Then create disagreement deliberately. Change the price after approval, revoke the agent midway, return an incomplete delivery, alter a tool response, introduce a language variant, or let one party retain only a partial record. Ask both sides to replay the event. Measure whether they can locate the divergence, identify the authority that governed it, preserve uncertainty, and execute a correction without erasing the original account.</p>
+
+                <p>Agents will increasingly act between institutions that do not share a database, model, policy engine, or jurisdiction. Their trust will depend on a record neither party can quietly redefine. The replay is where autonomous action becomes answerable to another institution, and that answerability is the infrastructure on which machine-mediated markets can stand.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.prnewswire.com/news-releases/mysten-labs-announces-verifiable-agent-arbiter-in-collaboration-with-google-cloud-302899202.html" target="_blank" rel="noopener">Mysten Labs, “Mysten Labs Announces Verifiable Agent Arbiter in Collaboration with Google Cloud” (October 6, 2026). The announcement describes a proposed evidence layer, customer-controlled telemetry, cryptographic integrity proofs, dispute replay, incident reconstruction, durable retention, and agentic-commerce evidence. It reports a system in development and planned initial deployments, not proven market-scale operation.</a></li>
+                    <li><a href="https://www.nist.gov/news-events/news/2026/09/comments-software-and-agentic-ai-identity-concept-paper" target="_blank" rel="noopener">National Institute of Standards and Technology, “Comments on Software and Agentic AI Identity Concept Paper” (September 29, 2026). NIST reports more than 600 public commenters and selects software development as the first implementation use case for identifying, authenticating, and authorizing AI agents.</a></li>
+                    <li><a href="https://www.w3.org/groups/cg/agent-conformance/" target="_blank" rel="noopener">W3C, “Agent Conformance and Benchmarking Community Group.” The group proposes observable-evidence rubrics, adversarial fixtures, versioned corpora, engine/corpus/date reproducibility, and independent reproduction for agent conformance results. It is a Community Group incubator rather than a W3C Recommendation.</a></li>
+                    <li><a href="https://cloud.google.com/blog/topics/developers-practitioners/one-agent-development-kit-five-languages" target="_blank" rel="noopener">Google Cloud, “One Agent Development Kit, five languages” (October 13, 2026). The post describes shared MCP and A2A support across five native runtimes and shows why evidence and replay must remain meaningful across language and deployment boundaries.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Quand deux agents divergent, qui détient la reconstitution ?</h1>
+
+                <p>Deux agents peuvent mener une transaction à son terme tandis que leurs opérateurs conservent des récits incompatibles de ce qui s’est passé. Un système enregistre un prix accepté, l’autre une condition modifiée, et les deux journaux paraissent cohérents dans leur propre environnement. Le litige commence à la frontière entre les institutions, là où un journal privé devient une affirmation publique sur l’autorité, l’action, la livraison et la responsabilité.</p>
+
+                <p>Les systèmes agentiques ont donc besoin d’un objet de preuve conçu pour le désaccord. Il doit permettre aux contreparties de reconstituer la séquence pertinente, de vérifier quelles permissions étaient actives, d’identifier la politique qui gouvernait chaque décision et de distinguer un événement initial d’une modification ultérieure. Le dossier doit conserver assez de détails pour une reconstitution équitable tout en laissant les données télémétriques sensibles sous le contrôle de l’institution qui les a produites.</p>
+
+                <blockquote>
+                    <p>Un journal indique à son propriétaire ce qui s’est passé. Une reconstitution donne à la contrepartie des raisons d’être d’accord.</p>
+                </blockquote>
+
+                <h2>La transaction possède deux mémoires</h2>
+
+                <p>Un opérateur local a besoin d’une télémétrie riche : prompts, sorties du modèle, appels d’outils, reprises, évaluations de politiques, interventions humaines et état des systèmes externes. Une contrepartie a besoin d’un récit plus réduit mais testable de façon indépendante : quel mandant a délégué l’autorité, quelle action a été proposée, ce qui a été accepté, quel résultat a été livré et quelles preuves soutiennent chaque étape.</p>
+
+                <p>Ces mémoires servent des objectifs différents. La première soutient le débogage et l’enquête de sécurité. La seconde soutient le règlement, l’audit, les achats, l’assurance et le traitement des litiges. Les confondre dans un journal universel crée un problème de confidentialité. Traiter la seconde comme un résumé rédigé par le premier opérateur crée un problème de confiance.</p>
+
+                <p>Un dossier probatoire adapté au litige devrait au moins porter :</p>
+
+                <ul>
+                    <li><strong>Mandant et mandat :</strong> la personne, l’organisation ou le service qui a autorisé l’agent, avec le périmètre, les limites, l’expiration et les exceptions.</li>
+                    <li><strong>Configuration :</strong> l’identité de l’agent, la version du modèle ou de la politique, les définitions d’outils et l’état pertinent du runtime.</li>
+                    <li><strong>Engagements :</strong> l’offre, la demande, l’approbation ou le niveau de service que chaque partie a accepté avant l’exécution.</li>
+                    <li><strong>Actions et résultats :</strong> les appels importants, les sorties, les effets externes, l’état de la livraison et les décisions de refus ou d’escalade.</li>
+                    <li><strong>Preuves d’intégrité :</strong> horodatages, signatures, empreintes, liens de version et preuves révélant une modification ou une omission.</li>
+                    <li><strong>Voie de correction :</strong> l’autorité qui peut modifier, révoquer ou annoter le dossier, ainsi que le motif de cette intervention.</li>
+                </ul>
+
+                <p>La protection des faits dont dépendent les droits et obligations d’une contrepartie doit guider le dossier, sans exposer chaque pensée interne d’un modèle. Une reconstitution doit répondre à la question commerciale sans prétendre que le raisonnement privé équivaut à une preuve responsable.</p>
+
+                <h2>La reconstitution est un protocole frontière</h2>
+
+                <p>L’annonce publiée le 6 octobre par Mysten Labs au sujet d’un Verifiable Agent Arbiter donne une forme de marché concrète à ce problème. L’entreprise décrit une couche de preuve développée avec Google Cloud pour aider les entreprises à démontrer que leurs agents ont agi dans l’autorité accordée. L’architecture proposée conserve la télémétrie détaillée dans un stockage cloud contrôlé par le client tout en ancrant les preuves cryptographiques du dossier dans une infrastructure externe. L’annonce présente la reconstitution de litiges entre entreprises, la reconstruction d’incidents, la conservation durable et la preuve du commerce agentique comme des capacités visées. Il s’agit d’une annonce concernant un système en développement, et non de la preuve que ces fonctions opèrent déjà à l’échelle du marché.</p>
+
+                <p>La séparation architecturale constitue le signal important. Confidentialité et vérification indépendante ne nécessitent pas le même lieu de stockage. Une entreprise peut conserver des prompts confidentiels et des données clients tout en donnant à une contrepartie une preuve qu’un dossier défini existait, qu’il n’a pas été modifié en silence et qu’il correspond à l’autorité et au résultat déclarés. La preuve ne rend pas le récit vrai par magie. Elle le rend inspectable, contestable et relié à une méthode de correction.</p>
+
+                <p>Les travaux du NIST sur l’identité et l’autorisation des logiciels et des agents IA rendent visibles les préalables manquants. Sa mise à jour du 29 septembre signale plus de 600 commentaires publics sur un document de conception et choisit le développement logiciel comme premier cas de mise en œuvre pour démontrer comment identifier, authentifier et autoriser les agents. Une reconstitution sans identité montre seulement qu’un événement a été enregistré. Une reconstitution liée à un mandant et à une politique peut montrer que l’événement était autorisé.</p>
+
+                <h2>L’accord exige un banc d’essai commun</h2>
+
+                <p>Une reconstitution indépendante ne signifie pas que chaque partie relance le même modèle en espérant obtenir la même sortie. Le comportement d’un agent dépend de modèles, d’outils, de données externes, de permissions et du temps qui passe. La reconstitution doit donc transporter un banc d’essai : les entrées versionnées, l’état de la politique, l’autorité, les réponses externes pertinentes et les règles de décision qui définissent ce qu’une autre partie est invitée à vérifier.</p>
+
+                <p>Le groupe communautaire W3C sur la conformité et l’évaluation comparative des agents décrit une discipline proche pour les résultats publiés. Son travail proposé nomme les preuves observables, les bancs d’essai adversariaux, les corpus versionnés, l’identité du moteur et du corpus, les dates et la reproduction indépendante comme parties d’un dossier de conformité. Une reconstitution de transaction applique la même logique à une relation vivante : la preuve doit indiquer l’instrument, les conditions et la frontière de l’affirmation.</p>
+
+                <p>La reconstitution peut conduire à plusieurs conclusions légitimes :</p>
+
+                <ul>
+                    <li>l’agent a agi dans son mandat et le dossier de la contrepartie est incomplet ;</li>
+                    <li>les parties ont accepté des versions différentes d’une condition importante ;</li>
+                    <li>l’action a dépassé l’autorité, même si l’appel technique a réussi ;</li>
+                    <li>les preuves sont insuffisantes, et le règlement doit être suspendu ou soumis à un examen humain ;</li>
+                    <li>le dossier a été modifié après l’événement et ne peut plus soutenir l’affirmation initiale.</li>
+                </ul>
+
+                <p>La dernière catégorie est essentielle. Un système digne de confiance doit pouvoir conserver l’incertitude au lieu d’imposer un verdict binaire à partir de preuves incomplètes. Les institutions peuvent alors décider de corriger une politique, d’indemniser une contrepartie, de répéter une action ou de refuser une délégation future.</p>
+
+                <h2>Les institutions africaines ont besoin de preuves qu’elles peuvent emporter</h2>
+
+                <p>Le commerce transfrontalier et l’administration publique en Afrique fonctionnent déjà entre plusieurs systèmes juridiques, langues, rails de paiement, conditions de connectivité et niveaux de documentation formelle. Les agents multiplieront ces frontières. Un mécanisme de litige entièrement détenu par une plateforme externe pourrait rendre les institutions locales dépendantes de l’interprétation d’un opérateur étranger.</p>
+
+                <p>La souveraineté institutionnelle exige un vocabulaire de preuve portable. Une coopérative, un éditeur, une université, un ministère ou un service de paiement doit pouvoir indiquer qui a autorisé une action, conserver les conditions pertinentes dans la langue locale, identifier la juridiction et présenter la preuve à un partenaire régional sans céder l’intégralité de ses archives. Le dossier doit voyager avec son autorité et sa voie de correction.</p>
+
+                <p>Il s’agit aussi d’une question de méthode historique. Une source gagne en force lorsque sa provenance, son contexte et ses limites restent visibles. Une transaction agentique exige la même discipline. L’institution doit posséder les catégories qui décrivent le consentement, la livraison, le refus, le préjudice et la réparation, tout en exposant une correspondance suffisante pour qu’une contrepartie vérifie l’affirmation à travers un protocole commun.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est le rail de preuve adapté aux litiges : une infrastructure qui lie identité de l’agent, autorité, action, résultat et correction dans un dossier que des contreparties indépendantes peuvent tester sans recevoir chaque donnée privée.</p>
+
+                <ul>
+                    <li><strong>Enveloppes de preuve :</strong> dossiers portables regroupant mandat, politique, engagements, actions importantes, résultats et preuves avec des limites explicites de divulgation.</li>
+                    <li><strong>Services de reconstitution :</strong> environnements contrôlés qui reconstruisent un workflow contesté à partir de bancs d’essai nommés et indiquent les points d’accord, de divergence ou d’absence de preuve.</li>
+                    <li><strong>Registres d’autorité :</strong> systèmes qui lient les agents à des mandants, des périmètres, des règles d’expiration et des événements de révocation entre organisations.</li>
+                    <li><strong>Ancres neutres de preuve :</strong> services qui préservent les preuves d’intégrité hors du stockage télémétrique privé de l’opérateur sans transformer les données commerciales sensibles en données publiques.</li>
+                    <li><strong>Rails de correction et de règlement :</strong> workflows qui relient une conclusion de reconstitution à un remboursement, un amendement, une indemnisation, une modification de politique ou une nouvelle autorisation.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des mesures opératoires : pourcentage d’actions importantes avec mandant et politique nommés, délai nécessaire pour reproduire un litige, taux d’accord des contreparties sur la séquence reconstruite, proportion des dossiers pouvant être divulgués de manière sélective, nombre de corrections qui préservent la preuve originelle et part des changements de fournisseur ou de modèle qui laissent intacte la sémantique de la reconstitution.</p>
+
+                <p>L’opérateur le plus solide de ce marché ne vendra pas seulement un journal inviolable. Il entretiendra les bancs d’essai, les liens d’identité, les règles de divulgation et les procédures de correction qui rendent le dossier utile lorsque l’argent, les droits ou la réputation institutionnelle sont en jeu. La surface de revenu peut se trouver dans les paiements, les achats, l’assurance, la conformité, la sécurité ou l’infrastructure de workflows interentreprises. L’actif durable est la capacité partagée d’établir ce qui s’est passé.</p>
+
+                <h2>Organiser le désaccord avant que le marché ne le fasse</h2>
+
+                <p>Une institution peut tester cette couche avec un workflow qui produit déjà une ambiguïté coûteuse : transaction fournisseur, approbation déléguée, livraison transfrontalière, engagement de niveau de service ou décision réglementée. Nommez le mandant. Figez le mandat et la version de la politique. Capturez l’engagement avant l’exécution. Enregistrez les actions importantes et les résultats externes. Stockez la télémétrie sensible séparément de l’enveloppe de preuve.</p>
+
+                <p>Créez ensuite le désaccord volontairement. Modifiez le prix après l’approbation, révoquez l’agent en cours d’exécution, renvoyez une livraison incomplète, changez la réponse d’un outil, introduisez une variante linguistique ou laissez une partie ne conserver qu’un dossier partiel. Demandez aux deux parties de reconstituer l’événement. Mesurez si elles peuvent localiser la divergence, identifier l’autorité applicable, préserver l’incertitude et effectuer une correction sans effacer le récit originel.</p>
+
+                <p>Les agents agiront de plus en plus entre des institutions qui ne partagent ni base de données, ni modèle, ni moteur de politiques, ni juridiction. Leur confiance dépendra d’un dossier qu’aucune partie ne peut redéfinir silencieusement. La reconstitution est le lieu où l’action autonome devient responsable devant une autre institution, et cette responsabilité est l’infrastructure sur laquelle peuvent reposer les marchés médiatisés par machine.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.prnewswire.com/news-releases/mysten-labs-announces-verifiable-agent-arbiter-in-collaboration-with-google-cloud-302899202.html" target="_blank" rel="noopener">Mysten Labs, « Mysten Labs Announces Verifiable Agent Arbiter in Collaboration with Google Cloud » (6 octobre 2026). L’annonce décrit une couche de preuve proposée, une télémétrie contrôlée par le client, des preuves cryptographiques d’intégrité, la reconstitution de litiges, la reconstruction d’incidents, la conservation durable et la preuve du commerce agentique. Elle présente un système en développement et des déploiements initiaux planifiés, et non une opération à l’échelle du marché démontrée.</a></li>
+                    <li><a href="https://www.nist.gov/news-events/news/2026/09/comments-software-and-agentic-ai-identity-concept-paper" target="_blank" rel="noopener">National Institute of Standards and Technology, « Comments on Software and Agentic AI Identity Concept Paper » (29 septembre 2026). Le NIST signale plus de 600 commentateurs publics et choisit le développement logiciel comme premier cas de mise en œuvre pour identifier, authentifier et autoriser les agents IA.</a></li>
+                    <li><a href="https://www.w3.org/groups/cg/agent-conformance/" target="_blank" rel="noopener">W3C, « Agent Conformance and Benchmarking Community Group ». Le groupe propose des grilles fondées sur des preuves observables, des bancs d’essai adversariaux, des corpus versionnés, la reproductibilité du moteur, du corpus et de la date, ainsi que la reproduction indépendante des résultats de conformité. Il s’agit d’un incubateur de Community Group et non d’une recommandation W3C.</a></li>
+                    <li><a href="https://cloud.google.com/blog/topics/developers-practitioners/one-agent-development-kit-five-languages" target="_blank" rel="noopener">Google Cloud, « One Agent Development Kit, five languages » (13 octobre 2026). L’article décrit une prise en charge commune de MCP et A2A dans cinq runtimes natifs et montre pourquoi la preuve et la reconstitution doivent rester intelligibles entre langages et environnements de déploiement.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
