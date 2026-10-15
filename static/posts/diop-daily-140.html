@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Work Must Outlive the Prompt — Diop Research</title>
+    <meta name="description" content="AI-assisted production creates value only when the finished artifact carries its identity, inputs, transformations, rights, review state, correction path, and exportability. The investable layer is the lineage system that lets work survive a model, platform, or creator change."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="18.36" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry140">Diop Daily #140 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 15, 2026</time>
+                    <span>·</span>
+                    <span data-rt="8">8 min read</span>
+                    <span>·</span>
+                    <span>creative infrastructure · artifact lineage · institutional memory</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Work Must Outlive the Prompt</h1>
+
+                <p>AI-assisted production is becoming fast enough to expose a quieter problem: the prompt is often the best-documented part of the process, while the finished work is the least governable. A campaign image, research brief, software patch, translation, book chapter, or training video may pass through several models and hands before it reaches a reader or customer. If the final artifact cannot state what it is, where its ingredients came from, who may use it, what changed, and how to correct it, the production system has created a file rather than an institutional asset.</p>
+
+                <p>The commercial unit is therefore the inheritable artifact. Its value depends on a lineage that survives review, reuse, handoff, localization, licensing, and migration between tools. This lineage is larger than a prompt history. It contains the object, the inputs, the transformations, the people and systems that acted on it, the rights attached to each ingredient, the decisions that approved it, and the route by which a later custodian can revise or withdraw it.</p>
+
+                <blockquote>
+                    <p>A prompt explains an intention. Lineage explains what an institution can responsibly inherit.</p>
+                </blockquote>
+
+                <h2>Generation is only the first custody event</h2>
+
+                <p>Work continues after that moment. An editor cuts a paragraph, a researcher removes an unsupported claim, a publisher translates the text, and a future team reuses it elsewhere.</p>
+
+                <p>Each step changes the artifact's meaning and obligations. A useful lineage record should preserve at least:</p>
+
+                <ul>
+                    <li><strong>Identity:</strong> a stable identifier for the artifact, its versions, renditions, and derivatives.</li>
+                    <li><strong>Ingredients:</strong> the source documents, images, recordings, datasets, code, references, and human contributions that entered the work.</li>
+                    <li><strong>Transformations:</strong> model calls, edits, translations, compositing, compression, formatting, and other material changes.</li>
+                    <li><strong>Authority:</strong> the owner, commissioning institution, signer, license, territory, permitted use, and expiry attached to each relevant component.</li>
+                    <li><strong>Review state:</strong> who checked the work, what was checked, which claims remain uncertain, and which release decision governs the current version.</li>
+                    <li><strong>Correction path:</strong> how an error, rights dispute, safety concern, or withdrawn ingredient propagates through published copies and derivatives.</li>
+                </ul>
+
+                <p>This record does not need to expose private prompts or every intermediate thought. It needs to preserve the facts that determine whether the work may be trusted, reused, sold, taught, translated, or challenged. A provenance signal can show that an asset passed through a tool. Lineage must show what the institution is prepared to stand behind.</p>
+
+                <h2>Provenance is a floor, not a title deed</h2>
+
+                <p>The public standards movement is giving this problem a technical vocabulary. C2PA's Content Credentials specification describes signed manifests, ingredients, actions, assertions, timestamps, and validation of an asset's content. Its July 2026 implementation guide and announcement of TikTok joining its Steering Committee show an ecosystem working to make provenance usable across creation and distribution tools. C2PA is careful about the boundary: a validator can test whether claims are associated with an asset and whether the bindings remain intact. That test does not by itself decide whether an assertion is true, whether the work is lawful, or who owns the result.</p>
+
+                <p>OpenAI's October 5 explanation of its approach to EU text provenance makes the same distinction from another direction. The company describes text watermarking and detection as limited signals. It explicitly states that a watermark does not measure human contribution, establish ownership or responsibility, identify a user, or verify accuracy. This is a valuable admission because it separates origin detection from institutional accountability.</p>
+
+                <p>The difference matters for investors and builders. A credential that says “this file contains a signed history” is an integrity primitive. A lineage system that says “this version may be published in these territories, these claims were reviewed against these sources, this contributor retains this right, and this correction must reach these derivatives” is an operating product. The second layer is where creative work becomes governable.</p>
+
+                <h2>The artifact must travel through institutions</h2>
+
+                <p>W3C and GS1's September workshop on e-commerce for humans and AI agents is revealing because its agenda treats machine-readable data as a boundary problem. Sessions address brand-authoritative data, product variants, publisher-side agent surfaces, verifiable product knowledge, identity, and the question of who is authorized to speak for a product. Those questions extend beyond commerce. They describe what happens whenever a machine must carry an institutional object from one context into another without flattening its meaning.</p>
+
+                <p>A publisher's research note may become a classroom edition, an audio adaptation, a translated chapter, a citation in another report, and a training example. A software component may become a dependency in a public service. A documentary frame may become a campaign asset. The institution needs to know which transformations preserve the original permission and which create a new approval event.</p>
+
+                <p>For African and diasporic institutions, this portability has a direct sovereignty dimension. Archives, oral histories, language resources, books, images, and public research are frequently moved between platforms whose categories were designed elsewhere. If the artifact's lineage is reduced to a vendor-specific project file, the institution may retain the output while losing the account of its authorship, language, restrictions, and context. A work that cannot carry its own history is easily detached from the people and communities that made it meaningful.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the artifact-lineage layer: infrastructure that lets a piece of work retain identity, ingredients, transformations, permissions, review decisions, and correction paths as it moves through production and distribution.</p>
+
+                <ul>
+                    <li><strong>Lineage registries:</strong> systems that connect versions, ingredients, derivatives, localizations, and responsible parties across tools and repositories.</li>
+                    <li><strong>Rights-aware production:</strong> policy engines that test territory, licence, attribution, model-use, and expiry conditions before an artifact is published or reused.</li>
+                    <li><strong>Review and release records:</strong> workflows that bind human approval, source checks, uncertainty, and release scope to the exact version that leaves the institution.</li>
+                    <li><strong>Correction propagation:</strong> services that locate dependent copies and derivatives when a claim, ingredient, permission, or safety decision changes.</li>
+                    <li><strong>Portable delivery formats:</strong> exports that preserve lineage across vendors, languages, media types, and downstream systems instead of locking the history inside a project database.</li>
+                </ul>
+
+                <p>Underwriting can begin with measurable questions: how long does it take to reconstruct the origin of a published asset; what proportion of ingredients have explicit rights and sources; can a reviewer distinguish human contribution from model assistance without pretending the distinction is binary; how quickly does a correction reach derivative versions; how many localizations retain the same permissions and source context; and can a new operator inherit the work without asking the original creator to narrate the entire process again?</p>
+
+                <p>These metrics describe retained institutional value. A system that produces more files while losing their provenance increases future cost. A system that produces fewer but reusable, reviewable, and portable artifacts compounds the work of every editor, researcher, engineer, and creator who follows.</p>
+
+                <h2>Build the inheritance test</h2>
+
+                <p>An institution can begin with one artifact that already crosses boundaries: a book chapter, a public dataset, a software release, a campaign asset, or a multilingual research brief. Assign a stable identifier; register every material ingredient and transformation; attach the owner and permitted uses; mark the review state and unresolved questions. Produce a derivative in another language or medium, then inspect whether the lineage still describes what changed.</p>
+
+                <p>Next, simulate a correction. Withdraw one source, revise one claim, change one licence, or discover that a generated component cannot be used in a target territory. Ask the system to find every affected derivative, pause the right releases, preserve the prior version, and record the new decision. Then hand the artifact to a second team using a different toolchain. Measure what they can understand without hidden access to the original project.</p>
+
+                <p>This is the practical distinction between automation and institution-building. Automation shortens the path from intention to output. Institution-building ensures that the output can be examined, inherited, corrected, and put to work again. The future of African creative and scientific capacity will depend on both: faster production and stronger custody over what production leaves behind.</p>
+
+                <p>The prompt belongs to the moment of generation. The artifact belongs to time. Its lineage is the structure that allows a community, a laboratory, a publisher, or a company to carry work forward without surrendering authorship, context, or the right to repair it.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, “Content Credentials: C2PA Technical Specification,” version 2.4. The specification defines manifests, assertions, ingredients, actions, signatures, timestamps, content bindings, and validation signals for provenance.</a></li>
+                    <li><a href="https://c2pa.org/news/" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, “Announcements.” The page records the July 31, 2026 implementation guide for Content Credentials and the July 28, 2026 announcement that TikTok joined the Steering Committee. These announcements indicate standards and implementation activity; they do not prove that every platform preserves provenance correctly.</a></li>
+                    <li><a href="https://openai.com/index/eu-text-provenance" target="_blank" rel="noopener">OpenAI, “Our approach to EU text provenance rules” (October 5, 2026). The company describes text watermarking, detection limits, and the distinction between provenance signals and ownership, responsibility, identity, or accuracy.</a></li>
+                    <li><a href="https://www.w3.org/2026/ecommerce-agents/agenda.html" target="_blank" rel="noopener">W3C/GS1 Workshop on E-Commerce for Humans and AI Agents, agenda for September 8–9, 2026. The agenda records sessions on brand-authoritative data, product variants, publisher-side agent surfaces, verifiable product knowledge, identity, and authorization. These are workshop presentations and implementation reports, not a completed market standard.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L’œuvre doit survivre au prompt</h1>
+
+                <p>La production assistée par l’IA devient assez rapide pour révéler un problème plus discret : le prompt est souvent la partie la mieux documentée du processus, tandis que l’œuvre achevée est la moins gouvernable. Une image de campagne, une note de recherche, une correction logicielle, une traduction, un chapitre de livre ou une vidéo de formation peut passer par plusieurs modèles et plusieurs mains avant d’atteindre un lecteur ou un client. Si l’artefact final ne peut pas dire ce qu’il est, d’où viennent ses ingrédients, qui peut l’utiliser, ce qui a changé et comment le corriger, le système de production a créé un fichier plutôt qu’un actif institutionnel.</p>
+
+                <p>L’unité commerciale est donc l’artefact transmissible. Sa valeur dépend d’une filiation qui résiste à la revue, à la réutilisation, au transfert, à la localisation, à la licence et à la migration entre outils. Cette filiation dépasse l’historique des prompts. Elle contient l’objet, les ingrédients, les transformations, les personnes et les systèmes qui ont agi sur lui, les droits attachés à chaque composant, les décisions qui l’ont approuvé et la voie par laquelle un gardien ultérieur peut le réviser ou le retirer.</p>
+
+                <blockquote>
+                    <p>Un prompt explique une intention. La filiation explique ce qu’une institution peut légitimement transmettre.</p>
+                </blockquote>
+
+                <h2>La génération n’est que le premier acte de garde</h2>
+
+                <p>Le travail continue après ce moment. Un éditeur coupe un paragraphe, un chercheur retire une affirmation insuffisamment étayée, un éditeur traduit le texte et une équipe future le réutilise ailleurs.</p>
+
+                <p>Chaque étape modifie le sens et les obligations de l’artefact. Un dossier de filiation utile devrait au moins conserver :</p>
+
+                <ul>
+                    <li><strong>Identité :</strong> un identifiant stable pour l’artefact, ses versions, ses rendus et ses dérivés.</li>
+                    <li><strong>Ingrédients :</strong> les documents sources, images, enregistrements, jeux de données, codes, références et contributions humaines entrés dans l’œuvre.</li>
+                    <li><strong>Transformations :</strong> appels de modèles, retouches, traductions, compositions, compressions, mises en forme et autres changements matériels.</li>
+                    <li><strong>Autorité :</strong> propriétaire, commanditaire, signataire, licence, territoire, usage permis et expiration associés à chaque composant important.</li>
+                    <li><strong>État de revue :</strong> personnes ayant contrôlé l’œuvre, éléments vérifiés, affirmations encore incertaines et décision de publication qui régit la version actuelle.</li>
+                    <li><strong>Voie de correction :</strong> manière dont une erreur, un litige de droits, un risque de sécurité ou un ingrédient retiré se propage dans les copies et les dérivés publiés.</li>
+                </ul>
+
+                <p>Ce dossier n’a pas besoin d’exposer les prompts privés ni chaque pensée intermédiaire. Il doit conserver les faits qui déterminent si l’œuvre peut être considérée comme fiable, réutilisée, vendue, enseignée, traduite ou contestée. Un signal de provenance peut montrer qu’un artefact est passé par un outil. La filiation doit montrer ce que l’institution accepte de défendre.</p>
+
+                <h2>La provenance est un socle, pas un titre de propriété</h2>
+
+                <p>Le mouvement actuel des standards publics donne à ce problème un vocabulaire technique. La spécification Content Credentials de la C2PA décrit des manifestes signés, des ingrédients, des actions, des assertions, des horodatages et la validation du contenu d’un artefact. Son guide d’implémentation de juillet 2026 et l’annonce de l’arrivée de TikTok au comité directeur montrent un écosystème qui cherche à rendre la provenance utilisable entre outils de création et de distribution. La C2PA précise toutefois la frontière : un validateur peut tester si des affirmations sont associées à un artefact et si les liens restent intacts. Ce test ne décide pas à lui seul si une assertion est vraie, si l’œuvre est licite ou qui en est propriétaire.</p>
+
+                <p>L’explication publiée par OpenAI le 5 octobre sur son approche de la provenance des textes dans l’Union européenne établit la même distinction depuis un autre point de vue. L’entreprise présente le tatouage numérique et la détection des textes comme des signaux limités. Elle indique explicitement qu’un tatouage ne mesure pas la contribution humaine, n’établit ni la propriété ni la responsabilité, n’identifie pas l’utilisateur et ne vérifie pas l’exactitude. Cette précision est utile parce qu’elle sépare la détection de l’origine de la responsabilité institutionnelle.</p>
+
+                <p>La différence compte pour les investisseurs et les constructeurs. Un justificatif qui dit « ce fichier contient un historique signé » est une primitive d’intégrité. Un système de filiation qui dit « cette version peut être publiée sur ces territoires, ces affirmations ont été vérifiées contre ces sources, ce contributeur conserve ce droit et cette correction doit atteindre ces dérivés » est un produit opératoire. C’est dans cette seconde couche que l’œuvre devient gouvernable.</p>
+
+                <h2>L’artefact doit circuler entre les institutions</h2>
+
+                <p>L’atelier W3C et GS1 de septembre sur le commerce électronique pour les humains et les agents IA est révélateur parce que son programme traite les données lisibles par machine comme un problème de frontière. Les sessions abordent les données faisant autorité pour les marques, les variantes de produits, les surfaces d’agents du côté des éditeurs, le savoir produit vérifiable, l’identité et la question de savoir qui est autorisé à parler au nom d’un produit. Ces questions dépassent le commerce. Elles décrivent ce qui se produit chaque fois qu’une machine doit transporter un objet institutionnel d’un contexte à un autre sans en aplatir le sens.</p>
+
+                <p>Une note de recherche d’un éditeur peut devenir une édition scolaire, une adaptation audio, un chapitre traduit, une citation dans un autre rapport et un exemple d’entraînement. Un composant logiciel peut devenir une dépendance d’un service public. Une image documentaire peut devenir un élément de campagne. L’institution doit savoir quelles transformations préservent l’autorisation initiale et lesquelles créent un nouvel événement d’approbation.</p>
+
+                <p>Pour les institutions africaines et diasporiques, cette portabilité a une dimension directe de souveraineté. Les archives, les histoires orales, les ressources linguistiques, les livres, les images et les recherches publiques passent souvent entre des plateformes dont les catégories ont été conçues ailleurs. Si la filiation de l’artefact est réduite à un fichier de projet propre à un fournisseur, l’institution peut conserver le résultat tout en perdant le récit de son auteur, de sa langue, de ses restrictions et de son contexte. Une œuvre incapable de porter sa propre histoire peut facilement être séparée des personnes et des communautés qui lui donnaient son sens.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est la couche de filiation des artefacts : une infrastructure qui permet à une œuvre de conserver son identité, ses ingrédients, ses transformations, ses permissions, ses décisions de revue et ses voies de correction pendant la production et la distribution.</p>
+
+                <ul>
+                    <li><strong>Registres de filiation :</strong> systèmes reliant versions, ingrédients, dérivés, localisations et responsables entre outils et dépôts.</li>
+                    <li><strong>Production consciente des droits :</strong> moteurs de politiques qui vérifient territoire, licence, attribution, usage par modèle et expiration avant publication ou réutilisation.</li>
+                    <li><strong>Dossiers de revue et de sortie :</strong> workflows liant approbation humaine, contrôle des sources, incertitude et périmètre de publication à la version exacte qui quitte l’institution.</li>
+                    <li><strong>Propagation des corrections :</strong> services qui localisent les copies dépendantes et les dérivés lorsqu’une affirmation, un ingrédient, une permission ou une décision de sécurité change.</li>
+                    <li><strong>Formats de livraison portables :</strong> exports conservant la filiation entre fournisseurs, langues, types de médias et systèmes en aval au lieu d’enfermer l’historique dans une base de projet.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des questions mesurables : combien de temps faut-il pour reconstituer l’origine d’un artefact publié ; quelle part des ingrédients possède des droits et des sources explicites ; un examinateur peut-il distinguer contribution humaine et assistance du modèle sans prétendre que la distinction est binaire ; à quelle vitesse une correction atteint-elle les versions dérivées ; combien de localisations conservent les mêmes permissions et le même contexte documentaire ; et une nouvelle équipe peut-elle reprendre l’œuvre sans demander au créateur initial de raconter tout le processus ?</p>
+
+                <p>Ces mesures décrivent la valeur institutionnelle conservée. Un système qui produit davantage de fichiers tout en perdant leur provenance augmente le coût futur. Un système qui produit des artefacts réutilisables, vérifiables et portables fait fructifier le travail de chaque éditeur, chercheur, ingénieur et créateur qui vient ensuite.</p>
+
+                <h2>Construire le test de transmission</h2>
+
+                <p>Une institution peut commencer avec un artefact qui franchit déjà plusieurs frontières : chapitre de livre, jeu de données public, version logicielle, élément de campagne ou note de recherche multilingue. Attribuez-lui un identifiant stable ; enregistrez chaque ingrédient et chaque transformation importante ; attachez le propriétaire et les usages permis ; indiquez l’état de revue et les questions non résolues. Produisez un dérivé dans une autre langue ou un autre média, puis vérifiez si la filiation décrit encore ce qui a changé.</p>
+
+                <p>Simulez ensuite une correction. Retirez une source, révisez une affirmation, modifiez une licence ou découvrez qu’un composant généré ne peut pas être utilisé sur un territoire donné. Demandez au système de trouver tous les dérivés touchés, de suspendre les sorties concernées, de conserver la version antérieure et d’enregistrer la nouvelle décision. Confiez ensuite l’artefact à une seconde équipe utilisant une autre chaîne d’outils. Mesurez ce qu’elle peut comprendre sans accès caché au projet initial.</p>
+
+                <p>Voilà la différence pratique entre automatisation et construction institutionnelle. L’automatisation raccourcit le chemin entre l’intention et le résultat. La construction institutionnelle garantit que le résultat peut être examiné, transmis, corrigé et remis au travail. L’avenir de la capacité créative et scientifique africaine dépendra des deux : une production plus rapide et une garde plus solide de ce que la production laisse derrière elle.</p>
+
+                <p>Le prompt appartient au moment de la génération. L’artefact appartient au temps. Sa filiation est la structure qui permet à une communauté, un laboratoire, un éditeur ou une entreprise de porter l’œuvre en avant sans abandonner son auteur, son contexte ni le droit de la réparer.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, « Content Credentials: C2PA Technical Specification », version 2.4. La spécification définit les manifestes, assertions, ingrédients, actions, signatures, horodatages, liens au contenu et signaux de validation pour la provenance.</a></li>
+                    <li><a href="https://c2pa.org/news/" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, « Announcements ». La page recense le guide d’implémentation de Content Credentials du 31 juillet 2026 et l’annonce du 28 juillet 2026 selon laquelle TikTok a rejoint le comité directeur. Ces annonces indiquent une activité de standardisation et d’implémentation ; elles ne prouvent pas que chaque plateforme préserve correctement la provenance.</a></li>
+                    <li><a href="https://openai.com/index/eu-text-provenance" target="_blank" rel="noopener">OpenAI, « Our approach to EU text provenance rules » (5 octobre 2026). L’entreprise décrit le tatouage numérique des textes, les limites de la détection et la distinction entre les signaux de provenance et la propriété, la responsabilité, l’identité ou l’exactitude.</a></li>
+                    <li><a href="https://www.w3.org/2026/ecommerce-agents/agenda.html" target="_blank" rel="noopener">Atelier W3C/GS1 sur le commerce électronique pour les humains et les agents IA, programme des 8 et 9 septembre 2026. Le programme recense des sessions sur les données faisant autorité pour les marques, les variantes de produits, les surfaces d’agents des éditeurs, le savoir produit vérifiable, l’identité et l’autorisation. Il s’agit de présentations d’atelier et de rapports d’implémentation, et non d’un standard de marché achevé.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

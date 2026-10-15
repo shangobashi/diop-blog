@@ -169,6 +169,7 @@
         'article.entry137':     { en: 'Diop Daily #137 — October 2026', fr: 'Diop Quotidien n°137 — Octobre 2026' },
         'article.entry138':     { en: 'Diop Daily #138 — October 2026', fr: 'Diop Quotidien n°138 — Octobre 2026' },
         'article.entry139':     { en: 'Diop Daily #139 — October 2026', fr: 'Diop Quotidien n°139 — Octobre 2026' },
+        'article.entry140':     { en: 'Diop Daily #140 — October 2026', fr: 'Diop Quotidien n°140 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -181,6 +182,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-140': {
+        title: {
+            en: "The Work Must Outlive the Prompt",
+            fr: "L’œuvre doit survivre au prompt"
+        },
+        excerpt: {
+            en: "AI-assisted production becomes institutional value only when the finished artifact carries its identity, inputs, transformations, rights, review state, correction path, and exportability. The investable layer is the lineage system that lets work survive a model, platform, or creator change.",
+            fr: "La production assistée par l’IA devient une valeur institutionnelle lorsque l’artefact achevé conserve son identité, ses ingrédients, ses transformations, ses droits, son état de revue, sa voie de correction et sa portabilité. La couche d’investissement est le système de filiation qui permet à l’œuvre de survivre à un changement de modèle, de plateforme ou de créateur."
+        }
+    },
     'diop-daily-139': {
         title: {
             en: "When Two Agents Disagree, Who Owns the Replay?",
