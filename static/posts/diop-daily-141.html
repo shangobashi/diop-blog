@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Package Must Explain Itself — Diop Research</title>
+    <meta name="description" content="As agents discover and install capabilities, a package needs more than code: it needs a machine-readable manifest for ownership, permissions, dependencies, evaluation, and safe execution. The investable layer is the capability distribution system that lets institutions adopt software without losing control."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry141">Diop Daily #141 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 16, 2026</time>
+                    <span>·</span>
+                    <span data-rt="8">8 min read</span>
+                    <span>·</span>
+                    <span>capability distribution · machine-readable software · institutional control</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Package Must Explain Itself</h1>
+
+                <p>An agent that can install a capability has crossed a threshold that a conventional software installer never had to face. The machine is not merely fetching code. It is deciding whether a bundle is relevant, what authority it requires, which dependencies it can touch, how it should be evaluated, and whether its owner has made a claim that the institution can accept. A package that cannot answer those questions remains opaque at the moment it becomes operational.</p>
+
+                <p>This changes the unit of distribution. The useful object is not a repository with a README added for humans after implementation. It is a capability package whose identity, purpose, inputs, permissions, dependencies, tests, ownership, and removal path are legible before installation. The package must explain itself because the next operator may be an agent acting on behalf of a person who will never inspect the source tree.</p>
+
+                <blockquote>
+                    <p>When software can recruit its own operator, metadata becomes part of the control plane.</p>
+                </blockquote>
+
+                <h2>The manifest arrives before trust</h2>
+
+                <p>Google’s October 15 description of <code>google/adk-recipes</code> makes this shift unusually concrete. The repository is organized into reference patterns, installable vertical plugins, and deployable services. Each recipe carries a validated manifest, an <code>AGENTS.md</code> file that instructs a coding assistant how to use it, and, for the deployable layers, a container definition and runnability test. The repository is designed to be discovered and consumed by agents as well as developers.</p>
+
+                <p>That structure is a product decision. A manifest is not decorative documentation; it is an admission surface. It tells a machine what a capability claims to do, what it owns, how it is licensed, which environment it expects, and which checks stand behind the claim. The assistant can then compare a candidate package with a task, a policy, a budget, and a security boundary before it writes files or invokes a tool.</p>
+
+                <p>A capability package should expose at least:</p>
+
+                <ul>
+                    <li><strong>Identity:</strong> a stable name, version, publisher, ownership record, and relationship to earlier releases.</li>
+                    <li><strong>Function:</strong> the task it performs, the inputs it accepts, the outputs it produces, and the cases it refuses.</li>
+                    <li><strong>Authority:</strong> the files, networks, secrets, accounts, data classes, and external services it may reach.</li>
+                    <li><strong>Dependencies:</strong> models, runtimes, libraries, tools, registries, and human approvals required for a valid execution.</li>
+                    <li><strong>Evidence:</strong> tests, evaluation fixtures, supported environments, known limitations, and the date on which the claims were checked.</li>
+                    <li><strong>Correction:</strong> update, revocation, rollback, deletion, and notification procedures when the package or one of its dependencies changes.</li>
+                </ul>
+
+                <p>These fields turn discovery into a reasoned decision. They also give the institution a way to refuse a package without pretending that refusal is a failure of intelligence. An agent may reject a useful capability because its license is unclear, its requested permission is too broad, its evaluation is stale, or its correction path is missing. A bounded refusal is an operating feature.</p>
+
+                <h2>Distribution is a governance event</h2>
+
+                <p>Software distribution has always carried authority, but the authority was often mediated by a person. A developer read the documentation, inspected the dependency tree, ran a test, and decided whether to merge. Agentic distribution compresses those steps into a runtime that must act quickly while preserving the institution’s right to understand and reverse the decision.</p>
+
+                <p>NIST’s AI Agent Standards Initiative places open protocols, authentication and identity infrastructure, and security evaluations in the same strategic frame. The initiative describes work on agents that operate securely on behalf of users and interoperate across systems. Its importance for capability packages is direct: identity tells the institution who is making the claim, evaluation tells it what has been checked, and open protocols determine whether the package can be moved or examined outside one vendor’s environment.</p>
+
+                <p>Google’s same-day guidance on evaluating AI agents supplies the operational discipline. It recommends beginning with critical user journeys, keeping a frozen golden dataset while changing one variable, combining human review with automated checks, and measuring latency, token consumption, cost, and tool-call counts alongside answer quality. It also argues for trace conventions that keep evaluation independent of a particular orchestration framework.</p>
+
+                <p>The package therefore needs a release record, not only a version number. That record should say which journeys it passed, which environment produced the result, which checks were boolean and repeatable, which limits remain open, and what changes require a new evaluation. A package that silently changes its tools or permissions while preserving its version has not maintained compatibility; it has changed the institution’s risk.</p>
+
+                <h2>The African question is who owns the catalogue</h2>
+
+                <p>Agent-ready distribution will produce new catalogues of skills, plugins, recipes, datasets, connectors, and deployable services. The catalogue will influence which capabilities are visible, trusted, affordable, and easy to install. That makes the registry a political and economic institution, not a neutral shelf.</p>
+
+                <p>African laboratories, publishers, universities, cooperatives, and public agencies should be able to publish capabilities in their own languages, describe local data categories, set jurisdictional limits, and retain the authority to withdraw or revise a package. A registry that only accepts the categories of an external platform can make local knowledge available while making local institutions invisible. Interoperability should expand the vocabulary of participation, not narrow it to whatever a foreign marketplace can index.</p>
+
+                <p>This is where historical method becomes an engineering discipline. A source is not strong because it is present in an archive; it is strong when its origin, context, limits, and chain of transmission can be examined. A capability package deserves the same treatment. Its manifest should let another institution ask where it came from, what it assumes, what it can affect, and how to challenge its claims.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the capability distribution layer: registries, manifests, evaluation records, permission boundaries, and lifecycle services that let agents find and install software without turning adoption into an unreviewable act.</p>
+
+                <ul>
+                    <li><strong>Capability registries:</strong> searchable stores that index function, ownership, permissions, dependencies, language, jurisdiction, and evidence rather than keywords alone.</li>
+                    <li><strong>Manifest and signing services:</strong> tools that bind package metadata to a publisher, version, release, and integrity proof while preserving portable export.</li>
+                    <li><strong>Evaluation admission:</strong> systems that run critical user journeys, frozen fixtures, security checks, and cost budgets before a package enters a trusted catalogue.</li>
+                    <li><strong>Permission-aware installers:</strong> runtimes that compare requested access with institutional policy, isolate execution, and require a new decision when a release changes its boundary.</li>
+                    <li><strong>Revocation and migration rails:</strong> services that notify dependants, stop unsafe versions, preserve the decision record, and move an institution to an alternative package without losing operating knowledge.</li>
+                </ul>
+
+                <p>Underwriting can begin with measurable questions: how quickly can a reviewer understand a package before installation; what proportion of capabilities have named owners and explicit permissions; how often do package updates invalidate prior evaluation; can an institution export its catalogue and decision history; how many failed installations are contained before they reach sensitive systems; and can a local publisher make its capability discoverable without surrendering its language or licensing terms?</p>
+
+                <p>The strongest companies in this category will not simply host more code. They will reduce the uncertainty between discovery and governed use. Their assets will be trusted metadata, reproducible evaluation, policy integrations, installation telemetry, and a registry that remains useful when a model, framework, or cloud provider changes. The rail earns revenue because it lowers the cost of adoption without hiding the cost of responsibility.</p>
+
+                <h2>Build one package that can survive handoff</h2>
+
+                <p>An institution can test the principle with one capability that already crosses teams: a research importer, a translation skill, a data connector, a release assistant, or a publishing workflow. Give it a stable identity. Write the manifest before the installer. State the permitted inputs and outputs, the secrets it may request, the environments it supports, the tests that define success, and the conditions that require refusal.</p>
+
+                <p>Then hand the package to a second team using a different runtime. Ask them to discover it, evaluate it, install it in a sandbox, inspect its permissions, run the critical journey, and remove it. Change one dependency and see whether the registry marks the evaluation as stale. Revoke one permission and verify that the package stops at the boundary rather than finding an undocumented route around it.</p>
+
+                <p>This is the discipline required for an agentic software economy. Distribution will become faster, but speed without legibility creates dependency on whoever owns the catalogue. A package that explains itself gives an institution a chance to accept, reject, adapt, and carry capability on its own terms. The machine may perform the installation. The institution must still own the decision.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/en/three-layers-one-repo-a-tour-of-googleadk-recipes/" target="_blank" rel="noopener">Google Developers Blog, “Three layers, one repo: a tour of google/adk-recipes” (October 15, 2026). The article describes machine-readable recipes, validated manifests, <code>AGENTS.md</code> instructions, plugin packaging, runnability tests, and a repository designed for both developers and coding assistants.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/evaluating-ai-agents-moving-past-the-vibe-check/" target="_blank" rel="noopener">Google Developers Blog, “Evaluating AI agents: moving past the vibe check” (October 15, 2026). The article recommends critical user journeys, frozen evaluation datasets, layered checks, trace portability, and measurement of latency, tokens, cost, and tool calls alongside answer quality.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). NIST identifies industry-led standards, open protocols, agent authentication and identity infrastructure, and security evaluations as connected work areas for trusted interoperability.</a></li>
+                    <li><a href="https://www.w3.org/2026/ecommerce-agents/agenda.html" target="_blank" rel="noopener">W3C/GS1 Workshop on E-Commerce for Humans and AI Agents, agenda for September 8–9, 2026. The agenda records proposals for machine-navigable publisher surfaces, vocabulary-neutral interoperability, agent identity, verifiable product data, and authority at the boundary. These are workshop contributions, not a completed universal standard.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Le paquet doit s’expliquer lui-même</h1>
+
+                <p>Un agent capable d’installer une capacité a franchi un seuil qu’un installateur logiciel classique n’avait jamais eu à affronter. La machine ne télécharge pas seulement du code. Elle décide si un ensemble est pertinent, de quelle autorité il a besoin, quelles dépendances il peut toucher, comment il doit être évalué et si son propriétaire formule une affirmation que l’institution peut accepter. Un paquet incapable de répondre à ces questions reste opaque au moment même où il devient opérationnel.</p>
+
+                <p>Cela transforme l’unité de distribution. L’objet utile n’est pas un dépôt auquel on ajoute un README pour les humains après l’implémentation. C’est un paquet de capacité dont l’identité, la fonction, les entrées, les permissions, les dépendances, les tests, la propriété et la voie de retrait sont lisibles avant l’installation. Le paquet doit s’expliquer lui-même parce que le prochain opérateur peut être un agent agissant au nom d’une personne qui ne consultera jamais l’arborescence du code source.</p>
+
+                <blockquote>
+                    <p>Quand un logiciel peut recruter lui-même son opérateur, les métadonnées deviennent une partie du plan de contrôle.</p>
+                </blockquote>
+
+                <h2>Le manifeste précède la confiance</h2>
+
+                <p>La description publiée le 15 octobre par Google au sujet de <code>google/adk-recipes</code> rend ce déplacement particulièrement concret. Le dépôt est organisé en modèles de référence, plugins verticaux installables et services déployables. Chaque recette contient un manifeste validé, un fichier <code>AGENTS.md</code> qui indique à un assistant de programmation comment l’utiliser et, pour les couches déployables, une définition de conteneur ainsi qu’un test d’exécution. Le dépôt est conçu pour être découvert et consommé par des agents aussi bien que par des développeurs.</p>
+
+                <p>Cette structure constitue une décision de produit. Un manifeste n’est pas une documentation décorative ; c’est une surface d’admission. Il indique à une machine ce qu’une capacité prétend faire, ce qu’elle possède, sous quelle licence elle est distribuée, quel environnement elle attend et quels contrôles soutiennent cette affirmation. L’assistant peut alors comparer un paquet candidat avec une tâche, une politique, un budget et une frontière de sécurité avant d’écrire des fichiers ou d’appeler un outil.</p>
+
+                <p>Un paquet de capacité devrait exposer au minimum :</p>
+
+                <ul>
+                    <li><strong>Identité :</strong> nom stable, version, éditeur, registre de propriété et relation avec les versions antérieures.</li>
+                    <li><strong>Fonction :</strong> tâche accomplie, entrées acceptées, sorties produites et cas de refus.</li>
+                    <li><strong>Autorité :</strong> fichiers, réseaux, secrets, comptes, catégories de données et services externes auxquels il peut accéder.</li>
+                    <li><strong>Dépendances :</strong> modèles, runtimes, bibliothèques, outils, registres et validations humaines nécessaires à une exécution valide.</li>
+                    <li><strong>Preuves :</strong> tests, bancs d’évaluation, environnements pris en charge, limites connues et date de vérification des affirmations.</li>
+                    <li><strong>Correction :</strong> procédures de mise à jour, révocation, restauration, suppression et notification lorsqu’une modification touche le paquet ou une dépendance.</li>
+                </ul>
+
+                <p>Ces champs transforment la découverte en décision raisonnée. Ils donnent aussi à l’institution le moyen de refuser un paquet sans faire de ce refus un échec d’intelligence. Un agent peut écarter une capacité utile parce que sa licence est incertaine, que la permission demandée est trop large, que son évaluation est périmée ou que sa voie de correction n’existe pas. Un refus borné est une fonction opératoire.</p>
+
+                <h2>La distribution est un événement de gouvernance</h2>
+
+                <p>La distribution logicielle a toujours transporté de l’autorité, mais cette autorité était souvent médiatisée par une personne. Un développeur lisait la documentation, inspectait l’arbre des dépendances, lançait un test et décidait d’intégrer le composant. La distribution agentique comprime ces étapes dans un runtime qui doit agir rapidement tout en préservant le droit de l’institution à comprendre et à inverser la décision.</p>
+
+                <p>L’AI Agent Standards Initiative du NIST place les protocoles ouverts, l’authentification et l’infrastructure d’identité ainsi que les évaluations de sécurité dans un même cadre stratégique. L’initiative décrit un travail sur des agents qui opèrent de manière sûre pour le compte des utilisateurs et interopèrent entre systèmes. Son importance pour les paquets de capacités est directe : l’identité indique à l’institution qui formule l’affirmation, l’évaluation indique ce qui a été vérifié et les protocoles ouverts déterminent si le paquet peut être déplacé ou examiné hors de l’environnement d’un seul fournisseur.</p>
+
+                <p>Le guide publié le même jour par Google sur l’évaluation des agents fournit la discipline opératoire. Il recommande de commencer par des parcours utilisateurs critiques, de conserver un jeu de données de référence figé pendant la modification d’une seule variable, de combiner revue humaine et contrôles automatisés, et de mesurer latence, consommation de tokens, coût et nombre d’appels d’outils à côté de la qualité de la réponse. Il défend aussi des conventions de traces qui rendent l’évaluation indépendante d’un framework d’orchestration particulier.</p>
+
+                <p>Le paquet a donc besoin d’un dossier de sortie, pas seulement d’un numéro de version. Ce dossier devrait indiquer les parcours réussis, l’environnement qui a produit le résultat, les contrôles booléens et reproductibles, les limites encore ouvertes et les changements qui exigent une nouvelle évaluation. Un paquet qui modifie silencieusement ses outils ou ses permissions tout en conservant sa version n’a pas maintenu la compatibilité ; il a modifié le risque de l’institution.</p>
+
+                <h2>La question africaine est celle du propriétaire du catalogue</h2>
+
+                <p>La distribution prête pour les agents produira de nouveaux catalogues de compétences, plugins, recettes, jeux de données, connecteurs et services déployables. Le catalogue influencera les capacités visibles, fiables, abordables et faciles à installer. Il devient donc une institution politique et économique, et non une simple étagère neutre.</p>
+
+                <p>Les laboratoires, éditeurs, universités, coopératives et administrations africains doivent pouvoir publier des capacités dans leurs propres langues, décrire des catégories de données locales, fixer des limites juridictionnelles et conserver l’autorité de retirer ou de réviser un paquet. Un registre qui n’accepte que les catégories d’une plateforme extérieure peut rendre un savoir local disponible tout en rendant les institutions locales invisibles. L’interopérabilité doit élargir le vocabulaire de la participation, et non le réduire à ce qu’un marché étranger peut indexer.</p>
+
+                <p>C’est ici que la méthode historique devient une discipline d’ingénierie. Une source n’est pas solide parce qu’elle est présente dans une archive ; elle l’est lorsque son origine, son contexte, ses limites et sa chaîne de transmission peuvent être examinés. Un paquet de capacités mérite le même traitement. Son manifeste doit permettre à une autre institution de demander d’où il vient, ce qu’il suppose, ce qu’il peut affecter et comment contester ses affirmations.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est la couche de distribution des capacités : registres, manifestes, dossiers d’évaluation, frontières de permission et services de cycle de vie qui permettent aux agents de trouver et d’installer des logiciels sans transformer l’adoption en acte impossible à examiner.</p>
+
+                <ul>
+                    <li><strong>Registres de capacités :</strong> magasins consultables qui indexent fonction, propriété, permissions, dépendances, langue, juridiction et preuves, plutôt que de simples mots-clés.</li>
+                    <li><strong>Services de manifeste et de signature :</strong> outils qui lient les métadonnées du paquet à un éditeur, une version, une publication et une preuve d’intégrité tout en conservant un export portable.</li>
+                    <li><strong>Admission par évaluation :</strong> systèmes qui exécutent parcours utilisateurs critiques, fixtures figées, contrôles de sécurité et budgets de coût avant l’entrée d’un paquet dans un catalogue de confiance.</li>
+                    <li><strong>Installateurs sensibles aux permissions :</strong> runtimes qui confrontent l’accès demandé à la politique institutionnelle, isolent l’exécution et exigent une nouvelle décision lorsqu’une version modifie sa frontière.</li>
+                    <li><strong>Rails de révocation et de migration :</strong> services qui préviennent les dépendants, arrêtent les versions dangereuses, conservent le dossier de décision et déplacent une institution vers un paquet de remplacement sans perdre le savoir opératoire.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des questions mesurables : combien de temps faut-il à un examinateur pour comprendre un paquet avant l’installation ; quelle proportion des capacités possède un responsable nommé et des permissions explicites ; à quelle fréquence les mises à jour invalident-elles l’évaluation antérieure ; une institution peut-elle exporter son catalogue et son historique de décisions ; combien d’installations échouées sont contenues avant d’atteindre des systèmes sensibles ; et un éditeur local peut-il rendre sa capacité découvrable sans abandonner sa langue ou ses conditions de licence ?</p>
+
+                <p>Les entreprises les plus solides de cette catégorie n’hébergeront pas simplement davantage de code. Elles réduiront l’incertitude entre la découverte et l’usage gouverné. Leurs actifs seront des métadonnées fiables, une évaluation reproductible, des intégrations de politiques, une télémétrie d’installation et un registre qui reste utile lorsqu’un modèle, un framework ou un fournisseur cloud change. Le rail mérite un revenu parce qu’il réduit le coût de l’adoption sans dissimuler le coût de la responsabilité.</p>
+
+                <h2>Construire un paquet qui survive au transfert</h2>
+
+                <p>Une institution peut tester ce principe avec une capacité qui traverse déjà plusieurs équipes : importateur de recherche, compétence de traduction, connecteur de données, assistant de publication ou workflow de sortie. Donnez-lui une identité stable. Écrivez le manifeste avant l’installateur. Énoncez les entrées et sorties autorisées, les secrets qu’il peut demander, les environnements pris en charge, les tests qui définissent le succès et les conditions qui imposent un refus.</p>
+
+                <p>Confiez ensuite le paquet à une seconde équipe utilisant un autre runtime. Demandez-lui de le découvrir, de l’évaluer, de l’installer dans un bac à sable, d’inspecter ses permissions, d’exécuter le parcours critique et de le retirer. Modifiez une dépendance et vérifiez que le registre marque l’évaluation comme périmée. Révoquez une permission et confirmez que le paquet s’arrête à la frontière au lieu de chercher une voie non documentée pour la contourner.</p>
+
+                <p>Cette discipline est nécessaire à une économie logicielle agentique. La distribution deviendra plus rapide, mais la vitesse sans lisibilité crée une dépendance envers le propriétaire du catalogue. Un paquet qui s’explique lui-même donne à l’institution une chance d’accepter, de refuser, d’adapter et de porter une capacité selon ses propres conditions. La machine peut effectuer l’installation. L’institution doit encore posséder la décision.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/en/three-layers-one-repo-a-tour-of-googleadk-recipes/" target="_blank" rel="noopener">Google Developers Blog, « Three layers, one repo: a tour of google/adk-recipes » (15 octobre 2026). L’article décrit des recettes lisibles par machine, des manifestes validés, des instructions <code>AGENTS.md</code>, le conditionnement de plugins, des tests d’exécution et un dépôt conçu pour les développeurs comme pour les assistants de programmation.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/evaluating-ai-agents-moving-past-the-vibe-check/" target="_blank" rel="noopener">Google Developers Blog, « Evaluating AI agents: moving past the vibe check » (15 octobre 2026). L’article recommande des parcours utilisateurs critiques, des jeux d’évaluation figés, des contrôles en couches, la portabilité des traces et la mesure de la latence, des tokens, du coût et des appels d’outils à côté de la qualité des réponses.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mise à jour le 14 août 2026). Le NIST identifie les standards pilotés par l’industrie, les protocoles ouverts, l’authentification et l’infrastructure d’identité des agents ainsi que les évaluations de sécurité comme des axes liés pour une interopérabilité digne de confiance.</a></li>
+                    <li><a href="https://www.w3.org/2026/ecommerce-agents/agenda.html" target="_blank" rel="noopener">Atelier W3C/GS1 sur le commerce électronique pour les humains et les agents IA, programme des 8 et 9 septembre 2026. Le programme recense des propositions de surfaces éditoriales navigables par machine, d’interopérabilité indépendante des vocabulaires, d’identité des agents, de données produit vérifiables et d’autorité à la frontière. Il s’agit de contributions d’atelier, et non d’un standard universel achevé.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

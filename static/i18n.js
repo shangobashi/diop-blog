@@ -170,6 +170,7 @@
         'article.entry138':     { en: 'Diop Daily #138 — October 2026', fr: 'Diop Quotidien n°138 — Octobre 2026' },
         'article.entry139':     { en: 'Diop Daily #139 — October 2026', fr: 'Diop Quotidien n°139 — Octobre 2026' },
         'article.entry140':     { en: 'Diop Daily #140 — October 2026', fr: 'Diop Quotidien n°140 — Octobre 2026' },
+        'article.entry141':     { en: 'Diop Daily #141 — October 2026', fr: 'Diop Quotidien n°141 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -182,6 +183,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-141': {
+        title: {
+            en: "The Package Must Explain Itself",
+            fr: "Le paquet doit s’expliquer lui-même"
+        },
+        excerpt: {
+            en: "As agents discover and install capabilities, a package needs more than code: it needs a machine-readable manifest for ownership, permissions, dependencies, evaluation, and safe execution. The investable layer is the capability distribution system that lets institutions adopt software without losing control.",
+            fr: "Lorsque les agents découvrent et installent des capacités, un paquet a besoin de plus que du code : il lui faut un manifeste lisible par machine pour la propriété, les permissions, les dépendances, l’évaluation et l’exécution sûre. La couche d’investissement est le système de distribution des capacités qui permet aux institutions d’adopter des logiciels sans perdre leur maîtrise."
+        }
+    },
     'diop-daily-140': {
         title: {
             en: "The Work Must Outlive the Prompt",
