@@ -171,6 +171,7 @@
         'article.entry139':     { en: 'Diop Daily #139 — October 2026', fr: 'Diop Quotidien n°139 — Octobre 2026' },
         'article.entry140':     { en: 'Diop Daily #140 — October 2026', fr: 'Diop Quotidien n°140 — Octobre 2026' },
         'article.entry141':     { en: 'Diop Daily #141 — October 2026', fr: 'Diop Quotidien n°141 — Octobre 2026' },
+        'article.entry142':     { en: 'Diop Daily #142 — October 2026', fr: 'Diop Quotidien n°142 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -183,6 +184,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-142': {
+        title: {
+            en: "The Agent Needs a Life Between Turns",
+            fr: "L’agent a besoin d’une vie entre deux tours"
+        },
+        excerpt: {
+            en: "Long-horizon agents need durable execution: checkpointed intent, effect-aware recovery, human interruption, portable project state, and a handoff record that survives a dead worker or changing provider. The investable layer is the runtime that lets institutional work continue without silently repeating its consequences.",
+            fr: "Les agents à long horizon ont besoin d’une exécution durable : intention enregistrée, reprise consciente des effets, interruption humaine, état de projet portable et dossier de transfert capable de survivre à un worker arrêté ou à un changement de fournisseur. La couche d’investissement est le runtime qui permet au travail institutionnel de continuer sans répéter silencieusement ses conséquences."
+        }
+    },
     'diop-daily-141': {
         title: {
             en: "The Package Must Explain Itself",

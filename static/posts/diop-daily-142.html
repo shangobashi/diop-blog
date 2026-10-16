@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Agent Needs a Life Between Turns — Diop Research</title>
+    <meta name="description" content="Long-horizon agents need durable execution: checkpointed intent, effect-aware recovery, human interruption, portable project state, and a handoff record that survives a dead worker or changing provider. The investable layer is the runtime that lets institutional work continue without silently repeating its consequences."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry142">Diop Daily #142 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 17, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>durable execution · agent runtime · institutional continuity</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Agent Needs a Life Between Turns</h1>
+
+                <p>A short conversation can make an agent look complete. A long task reveals whether it has a life. Research, software maintenance, procurement, publishing, and administrative work all contain pauses that exceed a context window: a person must approve a step, a tool returns an uncertain result, a worker disappears, a provider changes, or the institution has to wait for an external event. The system must preserve the work through that interval and resume with the right state.</p>
+
+                <p>This is the distinction between a session and an institution. A session remembers what was said. An institutional runtime must know what was intended, what was committed, what effect may have happened, what remains uncertain, who may authorize the next step, and which project state a new worker should inherit. Long-horizon agency therefore depends on durable execution: a runtime that makes continuation a designed property rather than a lucky recovery from a transcript.</p>
+
+                <blockquote>
+                    <p>An agent becomes dependable when its work can outlive the process that happened to carry it.</p>
+                </blockquote>
+
+                <h2>The turn is a unit of risk</h2>
+
+                <p>Temporal’s October 8 account of running the Pi coding agent on its workflow engine gives the problem a useful shape. The experiment places agent turns across a fleet of workers and kills workers while they are operating. A later worker can continue from the shared session and project state without automatically repeating an interrupted tool call. The report describes request identifiers, checkpoints, recorded outcomes, and project snapshots as parts of the recovery design. These are implementation claims from one system, not proof that all agent runtimes now recover safely.</p>
+
+                <p>The architectural lesson is broader than the product. A model call is a computation. A tool call can be a consequence. Sending a payment, editing a repository, issuing a notice, changing a record, or publishing a page may alter the world before the agent receives a result. If the worker dies after the external system accepts the request but before the local runtime records the response, a blind retry can duplicate the consequence.</p>
+
+                <p>A durable turn should therefore carry a continuity record with at least:</p>
+
+                <ul>
+                    <li><strong>Intent:</strong> the requested outcome, the principal who asked for it, and the constraints that bound the work.</li>
+                    <li><strong>Checkpoint:</strong> the exact state from which the next worker may continue, including model, tools, policy, and project versions.</li>
+                    <li><strong>Effect status:</strong> whether an external action has not started, is known to have completed, failed, or has an unknown outcome.</li>
+                    <li><strong>Authority:</strong> the approval, delegation, budget, and expiry conditions that remain valid for the next step.</li>
+                    <li><strong>Recovery rule:</strong> the read-before-retry, compensation, escalation, or human decision required when the outcome cannot be known automatically.</li>
+                </ul>
+
+                <p>This record turns a crash from an improvisation into a bounded decision. It also preserves a distinction that many demos erase: the agent may understand the task while the runtime remains unable to prove what happened.</p>
+
+                <h2>Unknown outcomes need their own state</h2>
+
+                <p>Traditional retry logic often assumes that a failed request did not take effect. External systems make that assumption unsafe. A network timeout can occur after a bank accepted a transfer. A deployment command can lose its connection after the platform created the release. A message service can acknowledge delivery while the local process is still waiting. The correct next action may be a lookup, a reconciliation, a compensation, or a pause. It may not be another invocation.</p>
+
+                <p>The runtime needs a vocabulary for this ambiguity. “Unknown” is a useful state because it stops the system from converting missing evidence into permission. It tells the next worker to inspect the external effect, consult a request identifier, compare the ledger, or ask an authorized person. An institution that cannot represent uncertainty will eventually pay for it through duplicate actions, contradictory records, and difficult disputes.</p>
+
+                <p>This is where durable execution separates itself from simple task queues. A queue can make work available again. A continuity runtime must know which step was safe to repeat, which side effect requires an idempotency key, which result can be reused, and which decision needs a human. The commercial value sits in the semantics of continuation, not in the number of jobs a dashboard displays.</p>
+
+                <h2>Handoff is a capability, not a failure mode</h2>
+
+                <p>Google’s October description of <code>google/adk-recipes</code> includes Horizon, a reference harness for long-horizon agents. The account names cross-session memory, per-user sandboxes, secrets management, guardrails, resumable multi-step tasks, and evaluation rubrics for memory recall, injection resistance, tool selection, and halting. The same repository is organized for developers and coding assistants, with machine-readable manifests and runnable tests. The point is not that a curated recipe becomes production infrastructure by appearing in a repository. The point is that long-lived work requires a bundle of state, boundaries, and tests that a single prompt cannot carry.</p>
+
+                <p>Google’s October 13 report on an eleven-hour performance run across a roughly 205,000-line codebase makes the economic pressure visible. The team gave an agent a long-running objective, repository-specific skills, maintainer conventions, benchmarks, and a full test suite. The report says the run produced measurable optimizations, while earlier work that lacked the repository’s conventions introduced changes that reviewers rejected. Long runs create value when the runtime carries the institution’s method into the work and leaves evidence that another operator can review.</p>
+
+                <p>Handoff should preserve more than a chat transcript. A new worker needs the project tree, the last accepted checkpoint, pending approvals, evaluation results, unresolved questions, cost budget, and the rules that define an acceptable change. A provider change should preserve the task’s meaning even if the model’s style changes. A human interruption should leave a clean place to return, rather than forcing a second person to reconstruct the entire history from logs.</p>
+
+                <h2>African institutions need continuation under their own conditions</h2>
+
+                <p>Durable execution has a direct sovereignty dimension. Institutions across Africa often operate across intermittent connectivity, distributed teams, shared devices, mobile payment rails, changing languages, and uneven access to compute. A workflow that assumes one continuously connected process and one foreign service can make local capacity fragile even when the model itself is capable.</p>
+
+                <p>A publisher may need an agent to prepare a multilingual edition across several review sessions. A cooperative may collect field records offline and reconcile them when a connection returns. A public office may pause a case until a human authority is reachable. A laboratory may move a job from an expensive cloud worker to a local machine without losing its evidence. In each case, the institution needs to own the continuation record: the authority, state, language, correction path, and conditions that define legitimate resumption.</p>
+
+                <p>NIST’s AI Agent Standards Initiative places authentication, identity infrastructure, open protocols, and security evaluations in one strategic frame. Durable execution adds the time dimension to that frame. The question is not only which agent is acting and what it is allowed to do. It is also which agent is resuming, from which checkpoint, with which evidence, after which interruption. Portability means carrying that answer across workers and providers.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the durable execution layer: infrastructure that preserves intent, state, effects, authority, and recovery semantics so long-running agent work can continue without silently repeating its consequences.</p>
+
+                <ul>
+                    <li><strong>Durable workflow engines:</strong> runtimes that checkpoint agent steps, pause for signals, resume across workers, and keep execution history independent from one process.</li>
+                    <li><strong>Effect ledgers:</strong> systems that bind external actions to request identifiers, idempotency keys, observed outcomes, and compensation procedures.</li>
+                    <li><strong>Handoff fabrics:</strong> portable state packages carrying project files, policy versions, approvals, evaluation fixtures, budgets, and unresolved decisions across runtimes.</li>
+                    <li><strong>Interruption and approval controls:</strong> mechanisms that stop a workflow at a consequential boundary and return it to an authorized human without losing its place.</li>
+                    <li><strong>Recovery testing:</strong> chaos and replay services that kill workers, delay tools, change providers, corrupt connections, and measure whether the institution can resume safely.</li>
+                </ul>
+
+                <p>Underwriting can begin with operational measurements: the percentage of steps with explicit checkpoints; the share of external effects carrying idempotency and reconciliation evidence; the time required to resume after worker loss; the rate of duplicate side effects in fault injection; the proportion of workflows that can move between providers; and the number of human approvals that return to the exact decision boundary rather than restarting the entire task.</p>
+
+                <p>A durable runtime earns its position by lowering the cost of interruption without hiding the risk of continuation. Its moat is the accumulated knowledge of how institutions pause, reconcile, approve, compensate, and resume. That knowledge is closer to operating infrastructure than to a model feature, and it remains useful when models, clouds, and interface styles change.</p>
+
+                <h2>Build the life between turns</h2>
+
+                <p>An institution can test this layer with one workflow that already suffers from expensive interruption: a software release, a research import, a procurement approval, a multilingual publication, or a service case. Define the principal, the desired outcome, the irreversible effects, the approval points, and the external records that can confirm each effect.</p>
+
+                <ol>
+                    <li>Checkpoint before every consequential tool call, including the request identifier and the authority that permits it.</li>
+                    <li>Record the effect as unknown when the runtime loses contact before it can confirm the outcome.</li>
+                    <li>Require the next worker to reconcile the external state before it retries or compensates.</li>
+                    <li>Move the work across a second worker or provider while preserving the project state, policies, fixtures, and pending decisions.</li>
+                    <li>Kill the worker at different points and measure whether the resumed task reaches the same controlled decision without duplicating side effects.</li>
+                </ol>
+
+                <p>The test should include human interruption, delayed messages, revoked authority, changed dependencies, partial connectivity, and a language variant that changes the interpretation of a request. A workflow that survives only the clean path has demonstrated automation. A workflow that can explain its pause, preserve its uncertainty, and continue under a new operator has demonstrated institutional capacity.</p>
+
+                <p>The agentic economy will be described through faster models and broader tool access. Its serious infrastructure will be judged in the quiet interval after a process dies and before the work resumes. The institution that owns that interval owns the difference between an agent that can act and an agent whose work can be carried forward.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://temporal.io/blog/the-immortal-life-of-pi-running-the-pi-coding-agent-on-temporal" target="_blank" rel="noopener">Temporal, “The immortal life of Pi (Running the Pi coding agent on Temporal)” (October 8, 2026). The post describes worker failover, checkpointing, request identifiers, unknown tool outcomes, shared session state, project snapshots, and a chaos demo for a coding agent. It is an implementation report from Temporal, not proof that every durable runtime provides equivalent guarantees.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/three-layers-one-repo-a-tour-of-googleadk-recipes/" target="_blank" rel="noopener">Google Developers Blog, “Three layers, one repo: a tour of google/adk-recipes” (October 15, 2026). The post describes Horizon as a long-horizon harness with cross-session memory, sandboxing, secrets management, guardrails, resumable tasks, and evaluation rubrics, alongside machine-readable recipes and runnable tests.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/optimizing-a-200000-line-python-codebase-overnight-with-gemini-4-argon/" target="_blank" rel="noopener">Google Developers Blog, “Optimizing a 200,000-line Python codebase overnight with Gemini 4 Argon” (October 13, 2026). The report describes an eleven-hour agent run, repository-specific skills, maintainer conventions, benchmarks, full test execution, accepted optimizations, and rejected changes requiring review.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). NIST identifies industry-led standards, open protocols, agent authentication and identity infrastructure, and security evaluations as connected work areas for trusted agent interoperability.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L’agent a besoin d’une vie entre deux tours</h1>
+
+                <p>Une conversation courte peut donner l’impression qu’un agent est complet. Une tâche longue révèle s’il a une vie. La recherche, la maintenance logicielle, les achats, l’édition et le travail administratif comportent tous des pauses qui dépassent une fenêtre de contexte : une personne doit approuver une étape, un outil renvoie un résultat incertain, un worker disparaît, un fournisseur change ou l’institution doit attendre un événement extérieur. Le système doit préserver le travail pendant cet intervalle et reprendre avec le bon état.</p>
+
+                <p>C’est la différence entre une session et une institution. Une session se souvient de ce qui a été dit. Un runtime institutionnel doit savoir ce qui était prévu, ce qui a été engagé, quel effet a pu se produire, ce qui reste incertain, qui peut autoriser l’étape suivante et quel état du projet un nouveau worker doit recevoir. L’action à long horizon dépend donc de l’exécution durable : un runtime qui fait de la continuité une propriété conçue, au lieu de la laisser à une récupération chanceuse depuis une transcription.</p>
+
+                <blockquote>
+                    <p>Un agent devient fiable lorsque son travail peut survivre au processus qui le portait à cet instant.</p>
+                </blockquote>
+
+                <h2>Le tour est une unité de risque</h2>
+
+                <p>Le récit publié par Temporal le 8 octobre sur l’exécution de l’agent de programmation Pi sur son moteur de workflows donne une forme utile au problème. L’expérience répartit les tours de l’agent sur une flotte de workers et interrompt ces workers pendant leur travail. Un worker ultérieur peut continuer à partir de l’état partagé de la session et du projet sans répéter automatiquement un appel d’outil interrompu. Le texte décrit les identifiants de requête, les points de contrôle, les résultats enregistrés et les instantanés du projet comme des éléments du dispositif de reprise. Ce sont des affirmations d’implémentation propres à un système, et non la preuve que tous les runtimes agentiques récupèrent désormais sans risque.</p>
+
+                <p>La leçon architecturale dépasse le produit. Un appel de modèle est un calcul. Un appel d’outil peut produire une conséquence. Envoyer un paiement, modifier un dépôt, émettre un avis, changer un dossier ou publier une page peut transformer le monde avant que l’agent ne reçoive un résultat. Si le worker meurt après l’acceptation de la demande par le système externe mais avant l’enregistrement local de la réponse, une nouvelle tentative aveugle peut dupliquer la conséquence.</p>
+
+                <p>Un tour durable devrait donc porter au minimum un dossier de continuité :</p>
+
+                <ul>
+                    <li><strong>Intention :</strong> résultat demandé, mandant qui l’a demandé et contraintes qui bornent le travail.</li>
+                    <li><strong>Point de contrôle :</strong> état exact depuis lequel le prochain worker peut continuer, avec les versions du modèle, des outils, de la politique et du projet.</li>
+                    <li><strong>État de l’effet :</strong> action externe non commencée, connue comme achevée, échouée ou de résultat inconnu.</li>
+                    <li><strong>Autorité :</strong> approbation, délégation, budget et conditions d’expiration encore valides pour l’étape suivante.</li>
+                    <li><strong>Règle de reprise :</strong> lecture avant nouvelle tentative, compensation, escalade ou décision humaine nécessaire lorsque le résultat ne peut pas être établi automatiquement.</li>
+                </ul>
+
+                <p>Ce dossier transforme une panne en décision bornée. Il préserve aussi une distinction effacée par de nombreuses démonstrations : l’agent peut comprendre la tâche alors que le runtime est incapable de prouver ce qui s’est passé.</p>
+
+                <h2>Les résultats inconnus ont besoin de leur propre état</h2>
+
+                <p>La logique classique des nouvelles tentatives suppose souvent qu’une demande défaillante n’a pas produit d’effet. Les systèmes externes rendent cette hypothèse dangereuse. Un délai réseau peut survenir après l’acceptation d’un virement par une banque. Une commande de déploiement peut perdre sa connexion après la création de la release par la plateforme. Un service de messages peut confirmer la livraison tandis que le processus local attend encore. L’action correcte peut être une consultation, un rapprochement, une compensation ou une pause. Ce ne sera pas forcément une nouvelle invocation.</p>
+
+                <p>Le runtime a besoin d’un vocabulaire pour cette ambiguïté. « Inconnu » est un état utile, car il empêche le système de transformer l’absence de preuve en permission. Il indique au worker suivant qu’il doit examiner l’effet externe, consulter un identifiant de requête, comparer le registre ou interroger une personne autorisée. Une institution incapable de représenter l’incertitude finira par la payer au moyen d’actions dupliquées, de dossiers contradictoires et de litiges difficiles.</p>
+
+                <p>C’est ici que l’exécution durable se distingue d’une simple file de tâches. Une file peut rendre le travail disponible à nouveau. Un runtime de continuité doit savoir quelle étape peut être répétée sans danger, quel effet secondaire exige une clé d’idempotence, quel résultat peut être réutilisé et quelle décision demande un humain. La valeur commerciale réside dans la sémantique de la reprise, non dans le nombre de tâches affichées par un tableau de bord.</p>
+
+                <h2>Le transfert est une capacité, pas un échec</h2>
+
+                <p>La description publiée par Google en octobre au sujet de <code>google/adk-recipes</code> inclut Horizon, un harnais de référence pour les agents à long horizon. Le texte cite la mémoire intersessions, les environnements isolés par utilisateur, la gestion des secrets, les garde-fous, les tâches séquentielles reprenables et les grilles d’évaluation portant sur le rappel, la résistance à l’exfiltration par injection, la sélection d’outils et l’arrêt. Le même dépôt est organisé pour les développeurs et les assistants de programmation, avec des manifestes lisibles par machine et des tests exécutables. Le point n’est pas qu’une recette publiée devient une infrastructure de production par sa seule présence dans un dépôt. Le point est que le travail durable exige un ensemble d’état, de frontières et de tests qu’un prompt unique ne peut pas porter.</p>
+
+                <p>Le rapport publié par Google le 13 octobre sur une exécution de onze heures dans une base de code d’environ 205 000 lignes rend la pression économique visible. L’équipe a donné à un agent un objectif de longue durée, des compétences propres au dépôt, les conventions des mainteneurs, des benchmarks et une suite complète de tests. Le rapport indique que l’exécution a produit des optimisations mesurables, tandis qu’un travail antérieur dépourvu des conventions du dépôt avait introduit des changements rejetés par les reviewers. Les longues exécutions créent de la valeur lorsque le runtime porte la méthode de l’institution dans le travail et laisse des preuves qu’un autre opérateur peut examiner.</p>
+
+                <p>Le transfert doit préserver davantage qu’une transcription. Un nouveau worker a besoin de l’arbre du projet, du dernier point de contrôle accepté, des approbations en attente, des résultats d’évaluation, des questions non résolues, du budget de coût et des règles qui définissent un changement acceptable. Un changement de fournisseur doit préserver le sens de la tâche même si le style du modèle change. Une interruption humaine doit laisser un lieu propre où revenir, sans contraindre une seconde personne à reconstruire toute l’histoire à partir des journaux.</p>
+
+                <h2>Les institutions africaines ont besoin d’une continuité selon leurs propres conditions</h2>
+
+                <p>L’exécution durable possède une dimension directe de souveraineté. Les institutions africaines travaillent souvent avec une connectivité intermittente, des équipes distribuées, des appareils partagés, des rails de paiement mobile, des langues changeantes et un accès inégal au calcul. Un workflow qui suppose un processus connecté en permanence et un service étranger unique peut fragiliser la capacité locale, même lorsque le modèle est compétent.</p>
+
+                <p>Un éditeur peut avoir besoin d’un agent pour préparer une édition multilingue au fil de plusieurs sessions de revue. Une coopérative peut recueillir des dossiers de terrain hors ligne et les rapprocher au retour de la connexion. Un service public peut suspendre un dossier jusqu’à ce qu’une autorité humaine soit joignable. Un laboratoire peut déplacer une tâche d’un worker cloud coûteux vers une machine locale sans perdre ses preuves. Dans chaque cas, l’institution doit posséder le dossier de continuité : l’autorité, l’état, la langue, la voie de correction et les conditions qui définissent une reprise légitime.</p>
+
+                <p>L’AI Agent Standards Initiative du NIST place l’authentification, l’infrastructure d’identité, les protocoles ouverts et les évaluations de sécurité dans un même cadre stratégique. L’exécution durable ajoute la dimension temporelle à ce cadre. La question ne porte pas seulement sur l’agent qui agit et sur ce qu’il est autorisé à faire. Elle porte aussi sur l’agent qui reprend, le point de contrôle depuis lequel il reprend, les preuves dont il dispose et l’interruption qui a précédé. La portabilité consiste à transporter cette réponse entre workers et fournisseurs.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est la couche d’exécution durable : une infrastructure qui préserve l’intention, l’état, les effets, l’autorité et les règles de reprise afin que le travail agentique à long horizon puisse continuer sans répéter silencieusement ses conséquences.</p>
+
+                <ul>
+                    <li><strong>Moteurs de workflows durables :</strong> runtimes qui enregistrent les étapes, se mettent en pause sur signal, reprennent entre workers et conservent l’historique hors d’un seul processus.</li>
+                    <li><strong>Registres d’effets :</strong> systèmes qui relient les actions externes aux identifiants de requête, aux clés d’idempotence, aux résultats observés et aux procédures de compensation.</li>
+                    <li><strong>Fabrics de transfert :</strong> paquets d’état portables transportant fichiers de projet, versions de politiques, approbations, fixtures d’évaluation, budgets et décisions en attente entre runtimes.</li>
+                    <li><strong>Contrôles d’interruption et d’approbation :</strong> mécanismes qui arrêtent un workflow à une frontière importante et le rendent à une personne autorisée sans perdre sa position.</li>
+                    <li><strong>Tests de reprise :</strong> services de chaos et de reconstitution qui arrêtent des workers, retardent des outils, changent de fournisseur, perturbent les connexions et mesurent la reprise sûre de l’institution.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des mesures opératoires : pourcentage d’étapes disposant d’un point de contrôle explicite ; part des effets externes munis d’une preuve d’idempotence et de rapprochement ; temps nécessaire à la reprise après la perte d’un worker ; taux d’effets secondaires dupliqués lors d’une injection de panne ; proportion de workflows capables de changer de fournisseur ; et nombre d’approbations humaines qui reviennent à la frontière de décision exacte au lieu de redémarrer toute la tâche.</p>
+
+                <p>Un runtime durable gagne sa place en réduisant le coût de l’interruption sans masquer le risque de la reprise. Son avantage vient du savoir accumulé sur la manière dont les institutions suspendent, rapprochent, approuvent, compensent et reprennent. Ce savoir relève davantage de l’infrastructure opératoire que d’une fonction de modèle, et il reste utile lorsque les modèles, les clouds et les styles d’interface changent.</p>
+
+                <h2>Construire la vie entre deux tours</h2>
+
+                <p>Une institution peut tester cette couche avec un workflow qui souffre déjà d’interruptions coûteuses : release logicielle, import de recherche, approbation d’achat, publication multilingue ou dossier de service. Définissez le mandant, le résultat recherché, les effets irréversibles, les points d’approbation et les registres externes capables de confirmer chaque effet.</p>
+
+                <ol>
+                    <li>Créez un point de contrôle avant chaque appel d’outil important, avec l’identifiant de requête et l’autorité qui le permet.</li>
+                    <li>Enregistrez l’effet comme inconnu lorsque le runtime perd le contact avant de pouvoir confirmer le résultat.</li>
+                    <li>Obligez le worker suivant à rapprocher l’état externe avant toute nouvelle tentative ou compensation.</li>
+                    <li>Déplacez le travail vers un second worker ou fournisseur en conservant l’état du projet, les politiques, les fixtures et les décisions en attente.</li>
+                    <li>Arrêtez le worker à différents moments et mesurez si la tâche reprise atteint la même décision contrôlée sans dupliquer les effets.</li>
+                </ol>
+
+                <p>Le test doit inclure une interruption humaine, des messages retardés, une autorité révoquée, des dépendances modifiées, une connectivité partielle et une variante linguistique qui change l’interprétation d’une demande. Un workflow qui ne survit qu’au chemin propre a démontré une automatisation. Un workflow qui peut expliquer sa pause, préserver son incertitude et continuer sous la responsabilité d’un nouvel opérateur a démontré une capacité institutionnelle.</p>
+
+                <p>L’économie agentique sera décrite à travers des modèles plus rapides et un accès élargi aux outils. Son infrastructure sérieuse sera jugée dans l’intervalle silencieux qui suit la mort d’un processus et précède la reprise du travail. L’institution qui possède cet intervalle possède la différence entre un agent capable d’agir et un agent dont le travail peut être porté plus loin.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://temporal.io/blog/the-immortal-life-of-pi-running-the-pi-coding-agent-on-temporal" target="_blank" rel="noopener">Temporal, « The immortal life of Pi (Running the Pi coding agent on Temporal) » (8 octobre 2026). L’article décrit la reprise entre workers, les points de contrôle, les identifiants de requête, les résultats d’outils inconnus, l’état partagé de session, les instantanés du projet et une démonstration de chaos pour un agent de programmation. Il s’agit d’un rapport d’implémentation de Temporal, et non de la preuve que chaque runtime durable offre des garanties équivalentes.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/three-layers-one-repo-a-tour-of-googleadk-recipes/" target="_blank" rel="noopener">Google Developers Blog, « Three layers, one repo: a tour of google/adk-recipes » (15 octobre 2026). L’article décrit Horizon comme un harnais à long horizon avec mémoire intersessions, isolation, gestion des secrets, garde-fous, tâches reprenables et grilles d’évaluation, ainsi que des recettes lisibles par machine et des tests exécutables.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/optimizing-a-200000-line-python-codebase-overnight-with-gemini-4-argon/" target="_blank" rel="noopener">Google Developers Blog, « Optimizing a 200,000-line Python codebase overnight with Gemini 4 Argon » (13 octobre 2026). Le rapport décrit une exécution agentique de onze heures, des compétences propres au dépôt, des conventions de maintenance, des benchmarks, l’exécution complète des tests, des optimisations acceptées et des changements rejetés qui exigeaient une revue.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mise à jour le 14 août 2026). Le NIST identifie les standards pilotés par l’industrie, les protocoles ouverts, l’authentification et l’infrastructure d’identité des agents ainsi que les évaluations de sécurité comme des axes liés pour une interopérabilité agentique digne de confiance.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
