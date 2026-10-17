@@ -172,6 +172,7 @@
         'article.entry140':     { en: 'Diop Daily #140 — October 2026', fr: 'Diop Quotidien n°140 — Octobre 2026' },
         'article.entry141':     { en: 'Diop Daily #141 — October 2026', fr: 'Diop Quotidien n°141 — Octobre 2026' },
         'article.entry142':     { en: 'Diop Daily #142 — October 2026', fr: 'Diop Quotidien n°142 — Octobre 2026' },
+        'article.entry143':     { en: 'Diop Daily #143 — October 2026', fr: 'Diop Quotidien n°143 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -184,6 +185,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-143': {
+        title: {
+            en: "A Memory Must Know When to Die",
+            fr: "Une mémoire doit savoir mourir"
+        },
+        excerpt: {
+            en: "Portable agent memory needs a governed death: revocation, cryptographic erasure, tombstones, dependency notification, and a record of what must remain for law or history. The investable layer is the memory-revocation system that lets institutions withdraw knowledge without losing accountability.",
+            fr: "La mémoire agentique portable a besoin d’une mort gouvernée : révocation, effacement cryptographique, tombstones, notification des dépendances et dossier de ce qui doit rester pour le droit ou l’histoire. La couche d’investissement est le système de révocation mémoire qui permet aux institutions de retirer des connaissances sans perdre la responsabilité."
+        }
+    },
     'diop-daily-142': {
         title: {
             en: "The Agent Needs a Life Between Turns",
