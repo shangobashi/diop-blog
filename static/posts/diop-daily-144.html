@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Tool Call Has Geography — Diop Research</title>
+    <meta name="description" content="Agentic systems need a geographic contract for every tool call: where data is read, where intent is evaluated, where effects are committed, which authority governs the action, and how the institution proves the boundary was respected. The investable layer is jurisdiction-aware execution infrastructure for sovereign, multi-cloud, and local-language operations."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry144">Diop Daily #144 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 19, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>execution locality · jurisdiction · sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Tool Call Has Geography</h1>
+
+                <p>An agent’s tool call is often represented as a name, a schema, and a set of arguments. That description is useful for discovery, but it leaves out the fact that every call occurs somewhere. A request reads data from a jurisdiction, crosses a network boundary, is interpreted by a runtime, touches a system of record, and produces an effect under a particular authority. Geography is already inside the action, even when the API hides it.</p>
+
+                <p>This matters because institutions do not govern abstractions. They govern records, facilities, people, contracts, languages, and public obligations located in the world. A support agent that reads a customer file, a research agent that retrieves a restricted corpus, or a procurement agent that submits an order is making a geographic choice as well as a computational one. The institution needs to know where the call was resolved, where its evidence was evaluated, and where its consequence became real.</p>
+
+                <blockquote>
+                    <p>A machine becomes answerable when it can say where it acted, under whose authority, and which boundary made the action permissible.</p>
+                </blockquote>
+
+                <h2>Where the request lives</h2>
+
+                <p>Google’s October 14 announcement of MCP support in Apigee hybrid makes the placement question concrete. In that architecture, the MCP data plane runs inside the customer’s Kubernetes cluster. Tool discovery is generated from an OpenAPI specification, while agent requests are authorized and proxied to the backend inside the customer’s infrastructure. Google states that MCP request and response traffic stays inside the cluster at request time and that configuration is pulled from the control plane rather than pushed into the network.</p>
+
+                <p>The significance is architectural rather than promotional. The same tool semantics can be exposed through a managed control plane while the request path remains close to the systems of record. The placement supports data-residency constraints, multi-cloud estates, on-premises systems, and facilities where inbound connections are prohibited. A tool call therefore has at least two locations: the place where its policy and configuration are authored, and the place where its data and effect are handled.</p>
+
+                <p>An agent platform that records only the endpoint has recorded too little. A useful execution record should include:</p>
+
+                <ul>
+                    <li><strong>Data locality:</strong> the jurisdiction, facility, network zone, and storage class from which the input was read.</li>
+                    <li><strong>Decision locality:</strong> the runtime and policy version that evaluated the request, including the language and identity context used in that decision.</li>
+                    <li><strong>Effect locality:</strong> the system of record, physical site, account, or public service where the action became consequential.</li>
+                    <li><strong>Authority:</strong> the principal, delegation, legal basis, policy owner, and expiry that permitted the call.</li>
+                    <li><strong>Boundary evidence:</strong> traces, attestations, receipts, and failure states showing whether the request stayed inside its declared perimeter.</li>
+                </ul>
+
+                <p>These fields turn “the agent called a tool” into a statement an institution can examine. They also make the call portable. A second provider can receive the same task while respecting a different approved location, language, or legal basis. Portability becomes the ability to carry the obligation with the work, not merely the ability to point a model at another endpoint.</p>
+
+                <h2>Jurisdiction is a runtime fact</h2>
+
+                <p>Data residency is often treated as a storage setting. Agentic systems expose its wider meaning. A record may remain in one country while a prompt, retrieved passage, policy decision, embedding, trace, or generated response crosses into another. The location of the database does not describe the full geography of the action. A proper boundary must cover the path of interpretation and effect, not only the resting place of the source file.</p>
+
+                <p>This is especially important for African institutions. A university may hold language data under community conditions that differ from the terms of an external model provider. A public agency may need a case record to remain within a national administrative system. A publisher may have the right to translate a work into Wolof, French, or English while retaining separate obligations for the source corpus and the translated edition. A cooperative may operate across borders while keeping member records under a local custodian. These are governance facts that a generic cloud region label cannot settle.</p>
+
+                <p>Sovereignty here is practical. It means that an institution can state which records may leave, which computations must occur locally, which languages are authoritative, which officials may authorize an action, and which evidence must remain available for recourse. A foreign platform may supply a model or a control plane, yet the institution should still own the geographic contract that determines what the machine may touch.</p>
+
+                <p>NIST’s AI Agent Standards Initiative places open protocols, agent authentication and identity infrastructure, and security evaluations in one connected programme. That frame is useful because geography cannot be enforced by location alone. The runtime must bind an identity to an authorized perimeter, evaluate the proposed action against policy, and generate evidence that another party can inspect. A request coming from the correct network can still be made by the wrong principal or violate the wrong purpose.</p>
+
+                <h2>The boundary must understand intent</h2>
+
+                <p>Google’s September account of zero-trust agents describes a runtime governance layer that screens inputs, evaluates proposed tool calls against user intent and business rules, and watches for anomalous behaviour across a session. The design separates platform governance from the agent’s own code. That separation is important for geography as well. A model should not be the sole interpreter of the boundary it is attempting to cross.</p>
+
+                <p>A location-aware gateway can ask questions that an endpoint schema cannot answer: Is this request permitted for this person in this jurisdiction? Is the retrieved record allowed to be summarized by this provider? Does the requested operation change a local system of record or merely prepare a draft? Has the authority expired since the task began? Does the language of the instruction alter the meaning of the policy? Which human or institution receives the case when the location and the purpose disagree?</p>
+
+                <p>Intent evaluation also protects local language. A policy written in English may be technically present while its operational meaning is absent for a Wolof, Amharic, Arabic, or French-speaking operator. The control plane should preserve the authoritative policy, its translations, the version used at decision time, and the reviewer who approved the interpretation. Language is part of the geographic boundary because it determines who can inspect, contest, and correct the action.</p>
+
+                <p>A serious system should preserve a distinction between three outcomes: the call was allowed in the declared place; the call was redirected to an approved place; or the call was refused because the boundary could not be proved. Silent fallback is a governance failure. If a local runtime is unavailable and the system sends the same record to a distant provider, the institution has experienced a jurisdiction change even if the interface still says “retry.”</p>
+
+                <h2>Location changes the economics</h2>
+
+                <p>Execution locality has a cost ledger. Keeping a call near its data can reduce egress, latency, and exposure, but it may require local capacity, specialized operations, and language-specific evaluation. Centralizing a task can simplify maintenance while increasing dependency on an external route, a foreign service window, or a provider’s policy. Local execution can be cheaper or more expensive depending on the boundary; the institution should measure each cost and choose deliberately.</p>
+
+                <p>Apigee’s announcement points toward this measurement by describing tool-level quotas, filtered discovery, API performance views, error analysis, latency, target performance, and the ratio of discovery to execution. Those signals can be extended into a geography ledger: time spent at each boundary, data classes crossing each route, egress cost, failed authorization, redirected calls, local cache use, and the evidence retained for each decision. Capital can then examine locality as operating capacity rather than as a compliance slogan.</p>
+
+                <p>The same logic applies to infrastructure built for African markets. Intermittent connectivity, mobile-first interfaces, uneven power, multilingual service, and cross-border payment create a different execution map from the one assumed by a continuously connected enterprise. A local control plane may need to queue an action, preserve a signed request, defer a high-consequence effect, and reconcile when the connection returns. The institution’s geography includes the periods when a system is temporarily unreachable.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the jurisdiction-aware execution gateway: infrastructure that binds a tool call to its location, data path, language, authority, policy, effect, and evidence before the action becomes consequential.</p>
+
+                <ul>
+                    <li><strong>Local execution gateways:</strong> MCP, API, and agent runtimes that keep request traffic beside the systems of record while retaining centrally governed configuration.</li>
+                    <li><strong>Geographic policy engines:</strong> controls that evaluate jurisdiction, residency, purpose, authority, language, and expiry before discovery or execution.</li>
+                    <li><strong>Boundary observability:</strong> traces and attestations that show where a call was interpreted, which data crossed a perimeter, and where the effect was committed.</li>
+                    <li><strong>Portable sovereignty contracts:</strong> machine-readable declarations that let an institution move a task between providers without losing locality, delegation, retention, or recourse conditions.</li>
+                    <li><strong>Local-language conformance labs:</strong> test environments that evaluate whether policies, tool descriptions, and refusal paths preserve meaning across the languages used by the institution.</li>
+                </ul>
+
+                <p>Underwriting can begin with measurable questions: what percentage of calls carry a verified execution location; how often does a task cross a boundary without an explicit decision; can the institution prove that sensitive records remained in the approved zone; how quickly can it redirect work when a provider or network becomes unavailable; which local-language cases produce different authorization outcomes; and what does a failed locality check cost in delay, egress, human review, or lost service?</p>
+
+                <p>The durable asset is the institution’s map of boundaries and exceptions. A gateway becomes more useful as it accumulates tested policies, locality evidence, language cases, provider routes, and recovery procedures. That knowledge can support multiple models and clouds because it describes the institution’s obligations instead of one vendor’s interface. The rail is valuable precisely because it remains when the model changes.</p>
+
+                <h2>Draw the map before giving the agent a road</h2>
+
+                <p>An institution can begin with one consequential tool call: reading a protected record, issuing a payment, publishing a translation, or changing a public registry. Draw its full path before automating it.</p>
+
+                <ol>
+                    <li>Name the data, principal, language, jurisdiction, system of record, and intended effect.</li>
+                    <li>Declare the permitted execution zones and the conditions for an approved redirect.</li>
+                    <li>Evaluate the action at the boundary with a policy version that a reviewer can inspect.</li>
+                    <li>Record the trace, authorization, locality, result, and uncertainty without retaining more sensitive content than the purpose permits.</li>
+                    <li>Test the refusal path by removing connectivity, changing the provider, using a language variant, and revoking the authority mid-task.</li>
+                </ol>
+
+                <p>Repeat the exercise with a local custodian and with an external provider. Compare the evidence, the cost, the delay, and the correction path. The goal is not to make every operation local. The goal is to make every transfer visible, authorized, and reversible where the institution’s obligations require it.</p>
+
+                <p>The agentic future will be described through endpoints, models, and tools. Institutions will experience it through boundaries. A tool call that knows where it is, whose authority it carries, and what proof it must leave behind can cross those boundaries without dissolving the institution that owns the action.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/announcing-mcp-support-in-apigee-hybrid-agentic-tools-that-run-in-your-own-cluster/" target="_blank" rel="noopener">Google Developers Blog, “Announcing MCP support in Apigee hybrid: agentic tools that run in your own cluster” (October 14, 2026). The article describes an MCP data plane inside the customer’s Kubernetes cluster, request traffic staying inside that cluster, pulled configuration, data-residency support, tool-level authorization, and MCP traffic observability.</a></li>
+                    <li><a href="https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/" target="_blank" rel="noopener">Google Developers Blog, “Build zero-trust AI agents that judge intent, not just syntax” (September 15, 2026). The article describes Model Armor, semantic governance policies that evaluate proposed tool calls against intent and business rules, and anomaly detection across sessions. These are vendor implementation claims; the geographic contract is this journal’s architectural inference.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). NIST connects open protocols, agent authentication and identity infrastructure, and security evaluations as foundations for trusted and interoperable agent systems.</a></li>
+                    <li><a href="https://www.w3.org/2026/ecommerce-agents/agenda.html" target="_blank" rel="noopener">W3C/GS1 Workshop on E-Commerce for Humans and AI Agents, agenda for September 8–9, 2026. The agenda records work on agent identity, authorization, observability, trusted product data, physical-world context, and machine-readable publisher surfaces. These are workshop contributions, not a completed universal standard.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Un appel d’outil a une géographie</h1>
+
+                <p>On représente souvent l’appel d’outil d’un agent par un nom, un schéma et un ensemble d’arguments. Cette description est utile pour la découverte, mais elle laisse de côté le fait que chaque appel a lieu quelque part. Une requête lit des données dans une juridiction, franchit une limite réseau, est interprétée par un runtime, touche un système de référence et produit un effet sous une autorité déterminée. La géographie est déjà dans l’action, même lorsque l’API la dissimule.</p>
+
+                <p>Cela compte parce que les institutions ne gouvernent pas des abstractions. Elles gouvernent des dossiers, des sites, des personnes, des contrats, des langues et des obligations publiques situés dans le monde. Un agent d’assistance qui lit un dossier client, un agent de recherche qui récupère un corpus restreint ou un agent d’achat qui soumet une commande fait aussi un choix géographique. L’institution doit savoir où l’appel a été résolu, où ses preuves ont été évaluées et où sa conséquence est devenue réelle.</p>
+
+                <blockquote>
+                    <p>Une machine devient responsable lorsqu’elle peut dire où elle a agi, sous quelle autorité et quelle frontière rendait l’action permise.</p>
+                </blockquote>
+
+                <h2>Où vit la requête</h2>
+
+                <p>L’annonce publiée par Google le 14 octobre au sujet du support de MCP dans Apigee hybrid rend la question du placement concrète. Dans cette architecture, le plan de données MCP fonctionne à l’intérieur du cluster Kubernetes du client. La découverte des outils est produite à partir d’une spécification OpenAPI, tandis que les requêtes de l’agent sont autorisées et relayées vers le backend à l’intérieur de l’infrastructure du client. Google indique que le trafic des requêtes et des réponses MCP reste dans le cluster au moment de la requête et que la configuration est récupérée depuis le plan de contrôle plutôt qu’injectée dans le réseau.</p>
+
+                <p>La portée est architecturale plutôt que promotionnelle. Les mêmes sémantiques d’outils peuvent être exposées par un plan de contrôle géré tandis que le chemin de requête reste proche des systèmes de référence. Ce placement prend en charge les contraintes de résidence des données, les environnements multicloud, les systèmes sur site et les installations où les connexions entrantes sont interdites. Un appel d’outil a donc au moins deux lieux : celui où sa politique et sa configuration sont élaborées, et celui où ses données et son effet sont traités.</p>
+
+                <p>Une plateforme agentique qui n’enregistre que le endpoint a enregistré trop peu. Un dossier d’exécution utile devrait comprendre :</p>
+
+                <ul>
+                    <li><strong>Localité des données :</strong> juridiction, installation, zone réseau et classe de stockage depuis lesquelles l’entrée a été lue.</li>
+                    <li><strong>Localité de la décision :</strong> runtime et version de politique qui ont évalué la requête, avec le contexte linguistique et identitaire utilisé.</li>
+                    <li><strong>Localité de l’effet :</strong> système de référence, site physique, compte ou service public où l’action est devenue conséquente.</li>
+                    <li><strong>Autorité :</strong> mandant, délégation, base juridique, responsable de la politique et expiration qui ont permis l’appel.</li>
+                    <li><strong>Preuve de frontière :</strong> traces, attestations, reçus et états d’échec montrant si la requête est restée dans son périmètre déclaré.</li>
+                </ul>
+
+                <p>Ces champs transforment « l’agent a appelé un outil » en une affirmation qu’une institution peut examiner. Ils rendent aussi l’appel portable. Un second fournisseur peut recevoir la même tâche en respectant un lieu, une langue ou une base juridique approuvés. La portabilité devient la capacité à transporter l’obligation avec le travail, et non simplement la capacité à orienter un modèle vers un autre endpoint.</p>
+
+                <h2>La juridiction est un fait du runtime</h2>
+
+                <p>La résidence des données est souvent traitée comme un réglage de stockage. Les systèmes agentiques révèlent son sens plus large. Un dossier peut rester dans un pays tandis qu’un prompt, un passage récupéré, une décision de politique, un embedding, une trace ou une réponse générée passe dans un autre. L’emplacement de la base ne décrit pas la géographie complète de l’action. Une frontière correcte doit couvrir le parcours de l’interprétation et de l’effet, pas seulement le lieu où repose le fichier source.</p>
+
+                <p>Cela importe particulièrement aux institutions africaines. Une université peut conserver des données linguistiques sous des conditions communautaires différentes de celles d’un fournisseur de modèles extérieur. Une administration peut devoir maintenir un dossier dans un système administratif national. Un éditeur peut avoir le droit de traduire une œuvre en wolof, en français ou en anglais tout en conservant des obligations distinctes pour le corpus source et l’édition traduite. Une coopérative peut travailler au-delà des frontières tout en gardant les dossiers de ses membres sous la garde d’une institution locale. Ce sont des faits de gouvernance qu’une simple étiquette de région cloud ne peut pas régler.</p>
+
+                <p>La souveraineté est ici pratique. Elle signifie qu’une institution peut préciser quels dossiers peuvent sortir, quels calculs doivent se produire localement, quelles langues font autorité, quels responsables peuvent autoriser une action et quelles preuves doivent rester disponibles pour le recours. Une plateforme étrangère peut fournir un modèle ou un plan de contrôle, mais l’institution doit encore posséder le contrat géographique qui détermine ce que la machine peut toucher.</p>
+
+                <p>L’AI Agent Standards Initiative du NIST place protocoles ouverts, authentification des agents, infrastructure d’identité et évaluations de sécurité dans un même programme. Ce cadre est utile parce que la géographie ne peut pas être imposée par le seul emplacement. Le runtime doit lier une identité à un périmètre autorisé, évaluer l’action proposée selon la politique et produire des preuves qu’une autre partie peut examiner. Une requête provenant du bon réseau peut néanmoins être faite par le mauvais mandant ou violer la mauvaise finalité.</p>
+
+                <h2>La frontière doit comprendre l’intention</h2>
+
+                <p>Le compte rendu publié par Google en septembre sur les agents zero trust décrit une couche de gouvernance runtime qui filtre les entrées, évalue les appels d’outils proposés au regard de l’intention de l’utilisateur et des règles métier, puis surveille les comportements anormaux au fil d’une session. La conception sépare la gouvernance de la plateforme du code de l’agent. Cette séparation compte aussi pour la géographie. Un modèle ne devrait pas être l’unique interprète de la frontière qu’il tente de franchir.</p>
+
+                <p>Une passerelle sensible à la localisation peut poser des questions auxquelles un schéma d’endpoint ne répond pas : cette requête est-elle permise pour cette personne dans cette juridiction ? Le dossier récupéré peut-il être résumé par ce fournisseur ? L’opération demandée modifie-t-elle un système local de référence ou prépare-t-elle seulement un brouillon ? L’autorité a-t-elle expiré depuis le début de la tâche ? La langue de l’instruction modifie-t-elle le sens de la politique ? Quelle personne ou institution reçoit le dossier lorsque le lieu et la finalité divergent ?</p>
+
+                <p>L’évaluation de l’intention protège aussi les langues locales. Une politique rédigée en anglais peut être techniquement présente alors que son sens opératoire reste absent pour un opérateur wolof, amharique, arabe ou francophone. Le plan de contrôle doit conserver la politique qui fait autorité, ses traductions, la version utilisée au moment de la décision et le réviseur qui a approuvé l’interprétation. La langue appartient à la frontière géographique, car elle détermine qui peut examiner, contester et corriger l’action.</p>
+
+                <p>Un système sérieux devrait distinguer trois résultats : l’appel a été autorisé dans le lieu déclaré ; l’appel a été redirigé vers un lieu approuvé ; ou l’appel a été refusé parce que la frontière ne pouvait pas être prouvée. Un repli silencieux est un échec de gouvernance. Si un runtime local devient indisponible et que le système envoie le même dossier à un fournisseur éloigné, l’institution a subi un changement de juridiction même si l’interface affiche toujours « réessayer ».</p>
+
+                <h2>La localisation modifie l’économie</h2>
+
+                <p>La localité d’exécution possède un registre de coûts. Garder un appel près de ses données peut réduire l’egress, la latence et l’exposition, mais cela peut exiger une capacité locale, une exploitation spécialisée et une évaluation propre aux langues. Centraliser une tâche peut simplifier la maintenance tout en augmentant la dépendance à une route externe, à une fenêtre de service étrangère ou à la politique d’un fournisseur. Le coût de l’exécution locale dépend de la frontière concernée ; l’institution devrait mesurer chaque coût et choisir délibérément.</p>
+
+                <p>L’annonce d’Apigee montre la voie de cette mesure en décrivant les quotas par outil, la découverte filtrée, les vues de performance des API, l’analyse des erreurs, la latence, la performance des cibles et le ratio entre découverte et exécution. Ces signaux peuvent être étendus dans un registre géographique : temps passé à chaque frontière, catégories de données traversant chaque route, coût d’egress, autorisations échouées, appels redirigés, usage du cache local et preuves conservées pour chaque décision. Le capital peut alors examiner la localité comme une capacité opératoire plutôt que comme un slogan de conformité.</p>
+
+                <p>La même logique s’applique aux infrastructures construites pour les marchés africains. Connectivité intermittente, interfaces d’abord mobiles, alimentation inégale, services multilingues et paiements transfrontaliers produisent une carte d’exécution différente de celle d’une entreprise connectée en permanence. Un plan de contrôle local peut devoir mettre une action en file, conserver une requête signée, différer un effet à fortes conséquences et rapprocher les états au retour de la connexion. La géographie de l’institution comprend aussi les périodes pendant lesquelles un système est temporairement inaccessible.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est la passerelle d’exécution tenant compte de la juridiction : une infrastructure qui lie un appel d’outil à son lieu, son parcours de données, sa langue, son autorité, sa politique, son effet et ses preuves avant que l’action ne devienne conséquente.</p>
+
+                <ul>
+                    <li><strong>Passerelles d’exécution locales :</strong> runtimes MCP, API et agents qui maintiennent le trafic des requêtes près des systèmes de référence tout en conservant une configuration gouvernée centralement.</li>
+                    <li><strong>Moteurs de politiques géographiques :</strong> contrôles qui évaluent juridiction, résidence, finalité, autorité, langue et expiration avant la découverte ou l’exécution.</li>
+                    <li><strong>Observabilité des frontières :</strong> traces et attestations montrant où un appel a été interprété, quelles données ont franchi un périmètre et où l’effet a été inscrit.</li>
+                    <li><strong>Contrats de souveraineté portables :</strong> déclarations lisibles par machine qui permettent de déplacer une tâche entre fournisseurs sans perdre localité, délégation, conservation ou recours.</li>
+                    <li><strong>Laboratoires de conformité en langues locales :</strong> environnements qui évaluent si politiques, descriptions d’outils et voies de refus conservent leur sens dans les langues de l’institution.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des questions mesurables : quel pourcentage d’appels porte un lieu d’exécution vérifié ; à quelle fréquence une tâche franchit-elle une frontière sans décision explicite ; l’institution peut-elle prouver que les dossiers sensibles sont restés dans la zone approuvée ; à quelle vitesse peut-elle rediriger le travail lorsqu’un fournisseur ou un réseau devient indisponible ; quels cas en langue locale produisent des résultats d’autorisation différents ; et que coûte un échec de localité en délai, egress, revue humaine ou perte de service ?</p>
+
+                <p>L’actif durable est la carte institutionnelle des frontières et des exceptions. Une passerelle devient plus utile lorsqu’elle accumule des politiques testées, des preuves de localité, des cas linguistiques, des routes fournisseurs et des procédures de reprise. Ce savoir peut servir plusieurs modèles et plusieurs clouds parce qu’il décrit les obligations de l’institution plutôt que l’interface d’un fournisseur. Le rail est précieux précisément parce qu’il reste lorsque le modèle change.</p>
+
+                <h2>Dessiner la carte avant de donner une route à l’agent</h2>
+
+                <p>Une institution peut commencer avec un appel d’outil conséquent : lire un dossier protégé, effectuer un paiement, publier une traduction ou modifier un registre public. Il faut en dessiner le parcours complet avant de l’automatiser.</p>
+
+                <ol>
+                    <li>Nommer les données, le mandant, la langue, la juridiction, le système de référence et l’effet recherché.</li>
+                    <li>Déclarer les zones d’exécution permises et les conditions d’une redirection approuvée.</li>
+                    <li>Évaluer l’action à la frontière avec une version de politique qu’un réviseur peut examiner.</li>
+                    <li>Enregistrer trace, autorisation, localité, résultat et incertitude sans conserver plus de contenu sensible que la finalité ne le permet.</li>
+                    <li>Tester le refus en supprimant la connectivité, en changeant de fournisseur, en utilisant une variante linguistique et en révoquant l’autorité pendant la tâche.</li>
+                </ol>
+
+                <p>Répétez l’exercice avec un gardien local puis avec un fournisseur extérieur. Comparez les preuves, le coût, le délai et le chemin de correction. Le but n’est pas de rendre chaque opération locale. Il est de rendre chaque transfert visible, autorisé et réversible lorsque les obligations de l’institution l’exigent.</p>
+
+                <p>L’avenir agentique sera décrit par des endpoints, des modèles et des outils. Les institutions le vivront à travers des frontières. Un appel d’outil qui sait où il se trouve, quelle autorité il porte et quelles preuves il doit laisser derrière lui peut franchir ces frontières sans dissoudre l’institution propriétaire de l’action.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/announcing-mcp-support-in-apigee-hybrid-agentic-tools-that-run-in-your-own-cluster/" target="_blank" rel="noopener">Google Developers Blog, « Announcing MCP support in Apigee hybrid: agentic tools that run in your own cluster » (14 octobre 2026). L’article décrit un plan de données MCP dans le cluster Kubernetes du client, le maintien du trafic dans ce cluster, la configuration récupérée, la prise en charge de la résidence des données, l’autorisation par outil et l’observabilité du trafic MCP.</a></li>
+                    <li><a href="https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/" target="_blank" rel="noopener">Google Developers Blog, « Build zero-trust AI agents that judge intent, not just syntax » (15 septembre 2026). L’article décrit Model Armor, des politiques de gouvernance sémantique qui évaluent les appels d’outils proposés selon l’intention et les règles métier, ainsi que la détection d’anomalies entre les tours. Ce sont des affirmations d’implémentation du fournisseur ; le contrat géographique relève de l’inférence architecturale de ce journal.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mise à jour le 14 août 2026). Le NIST relie protocoles ouverts, authentification et infrastructure d’identité des agents ainsi que les évaluations de sécurité comme fondations de systèmes agentiques interopérables et dignes de confiance.</a></li>
+                    <li><a href="https://www.w3.org/2026/ecommerce-agents/agenda.html" target="_blank" rel="noopener">Atelier W3C/GS1 sur le commerce électronique pour les humains et les agents IA, programme des 8 et 9 septembre 2026. Le programme recense des travaux sur l’identité des agents, l’autorisation, l’observabilité, les données produit fiables, le contexte du monde physique et les surfaces éditoriales lisibles par machine. Il s’agit de contributions d’atelier, et non d’un standard universel achevé.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
