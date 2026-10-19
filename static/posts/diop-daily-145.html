@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Protocol Speaks Before the Agent Does — Diop Research</title>
+    <meta name="description" content="Agent-to-agent communication standards — Meta and Sierra's Personal Agent Protocol, W3C's Agent Protocol Group, IETF's agentproto charter, and Google's A2A runtime — embed identity, authorization, and jurisdiction choices before any content flows. The investable layer is sovereign protocol infrastructure: multilingual authorization contracts, portable delegation, and jurisdiction-bound agent identity that African institutions can own rather than merely consume."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry145">Diop Daily #145 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 20, 2026</time>
+                    <span>·</span>
+                    <span data-rt="12">12 min read</span>
+                    <span>·</span>
+                    <span>protocol sovereignty · agent identity · open standards</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Protocol Speaks Before the Agent Does</h1>
+
+                <p>When two agents meet, they do not exchange thoughts. They exchange messages shaped by a standard: how identity is presented, which authority is cited, what tool descriptions are discoverable, how refusal is expressed, and whether the interaction leaves evidence an institution can audit. The standard is not a neutral pipe. It is a governance contract written before any content passes through it. By the time an agent begins a sentence, the protocol has already decided what it is permitted to say, to whom, under what identity, in which language, and with what proof of boundary.</p>
+
+                <p>This is the layer that has begun to crystallize in the last month. Meta and Sierra announced a Personal Agent Protocol on October 6, framed as an open specification for secure AI-to-business interaction, with partners including Genesys, Instinct, Rocket, Shopify, Stripe, and Walmart. The W3C's Agent Protocol Community Group continues to define open, interoperable protocols for agent discovery, identification, and interaction. The IETF approved the charter for its agentproto working group on October 8, covering agent-to-agent, user-to-agent, and agent-to-tool interactions with an explicit delegation and authorization scope. Google continues to advance A2A through its ADK runtime, with multi-language SDKs now at version 1.0 for Java and Go. Each signal points to the same conclusion: the protocol layer is becoming the primary sovereignty surface for agent systems.</p>
+
+                <blockquote>
+                    <p>A standard is not a pipe. It is a contract that assigns identity, limits authority, selects languages, records refusal, and defines what must survive a provider change.</p>
+                </blockquote>
+
+                <h2>The protocol is the first sovereignty surface</h2>
+
+                <p>Most institutions think of sovereignty in terms of data location: which country holds the server, which cloud region serves the model, which database retains the record. That view is incomplete for agentic systems. Before a model evaluates a request, the protocol must decide whether an agent is authorized to request it, whether the identity presented is valid, whether the delegation is current, and whether the requested tool belongs to a permitted category. Before a system of record changes, the protocol must specify which jurisdiction governs the effect, which language is authoritative for refusal, and which evidence must be preserved for recourse. These are not endpoint settings. They are protocol contracts.</p>
+
+                <p>The significance of the October 6 Meta and Sierra announcement is not the product category. It is the framing: a protocol designed to give AI agents a secure, consistent way to interact with businesses, with identity, authorization, and interaction structure built into the standard rather than added afterward. The significance of the October 8 IETF agentproto charter is not its list of working documents — it has none yet — but its scope: user-to-agent, agent-to-agent, and agent-to-tool interactions, with authorization and delegation treated as first-class protocol concerns rather than application-level patches. The significance of Google's A2A work through ADK is that multi-agent collaboration now has a common contract across Python, Java, and Go, making portability a protocol property rather than a framework accident.</p>
+
+                <h2>What a serious agent protocol must carry</h2>
+
+                <p>A protocol that treats identity, authorization, and jurisdiction as secondary concerns produces systems that appear interoperable while remaining ungovernable. A serious standard should specify the contract before the content. That contract should include at least the following fields:</p>
+
+                <ul>
+                    <li><strong>Identity contract:</strong> how the agent proves it is the agent it claims to be, which authority delegated that proof, and whether the identity survives a provider or framework change.</li>
+                    <li><strong>Authorization boundary:</strong> which actions are permitted for this identity in this jurisdiction, in this language, at this time, and under which delegation condition.</li>
+                    <li><strong>Discovery contract:</strong> how tools, other agents, or institutional records are described so that a foreign runtime can understand what is offered without importing a proprietary schema.</li>
+                    <li><strong>Refusal contract:</strong> how denial is expressed, in which language, with which reason, and whether the refusal produces evidence the institution can examine.</li>
+                    <li><strong>Delegation record:</strong> which principal granted the agent its authority, with what expiry, under which jurisdiction, and with what revocation path.</li>
+                    <li><strong>Jurisdiction marker:</strong> which geographic or institutional authority governs the interaction, including the language of authoritative policy, and whether a cross-boundary redirect requires explicit approval.</li>
+                    <li><strong>Evidence contract:</strong> what trace, attestation, or receipt is preserved for each interaction, and how an institution can inspect it independently of the original provider.</li>
+                </ul>
+
+                <p>None of these fields is decorative. Each is a point where a sovereign institution either retains control or loses it silently. A protocol that records identity but not delegation produces systems that cannot answer who approved an action when authority is contested. A protocol that records authorization but not jurisdiction produces interactions that may shift legal ground without the institution's awareness. A protocol that records refusal but not language produces denials that are technically present but operationally meaningless for a Wolof, Amharic, Arabic, or French-speaking reviewer.</p>
+
+                <blockquote>
+                    <p>The question is not whether agents will talk. The question is whose contract governs the conversation, and whether the institution can read it in its own language.</p>
+                </blockquote>
+
+                <h2>Why African institutions should care about the contract</h2>
+
+                <p>The global agent ecosystem is moving quickly, but its direction is not predetermined. A protocol designed primarily around English-language business interfaces, centralized identity authorities, and uniform jurisdiction assumptions will become the default not because it is universal, but because it is first. African institutions that treat protocol adoption as a consumption decision — using what is available — will inherit governance choices made for other contexts. Institutions that treat protocol design as a sovereignty project — specifying which identity contracts, authorization languages, delegation records, and jurisdiction markers must be preserved — can shape the layer that governs agent interaction rather than merely applying it.</p>
+
+                <p>This is not abstract. A university that maintains a research agent for multilingual corpus retrieval must know whether the protocol used by that agent permits retrieval under community conditions distinct from the terms of an external provider. A public agency that operates an agent across local-language services must know whether the identity contract binds the agent to a national administrative authority, whether refusal is recorded in the authoritative language, and whether the delegation can be withdrawn when conditions change. A cooperative that connects members across borders must know whether the interaction contract keeps member records under a local custodian, whether cross-boundary redirects require explicit approval, and whether evidence survives a change of provider.</p>
+
+                <p>The protocol layer is where these obligations become enforceable. Without a contract that carries jurisdiction, language, identity, authorization, and evidence, the best governance framework is a recommendation applied to an opaque interaction. With such a contract, an institution can verify compliance independently, compare providers by governance rather than price alone, and recover from a provider failure without losing the record of what was permitted and what was refused.</p>
+
+                <h2>The standard is not neutral</h2>
+
+                <p>Every standard encodes a theory of interaction. A protocol that assumes a single centralized identity authority assumes that identity is owned by the provider. A protocol that allows delegation to be expressed in a portable contract allows identity to travel with the institution. A protocol that treats refusal as an error code rather than a governed outcome removes the institution's ability to prove that a boundary was respected. A protocol that does not specify language for authoritative policy assumes that English is sufficient for every institutional purpose.</p>
+
+                <p>The recent announcements make these choices visible. The Meta and Sierra protocol is positioned as open, yet its partners reveal its initial commercial orientation. The W3C group is genuinely open, yet its progress depends on which institutions contribute concrete requirements from non-English, non-centralized contexts. The IETF charter covers the right scope, yet its first working documents will determine whether jurisdiction, language, and delegation are primary protocol fields or optional extensions. Google's A2A work is technical and open, yet its runtime is embedded in a broader cloud architecture that carries its own jurisdiction assumptions.</p>
+
+                <p>None of this is a criticism of any single announcement. It is a statement of what the protocol layer now demands from serious institutions: active design participation, not passive consumption. A laboratory that treats agent communication as a standard it uses will inherit a sovereignty model built elsewhere. A laboratory that treats it as a standard it helps specify can embed the contracts — identity, authorization, jurisdiction, language, refusal, evidence — that make agent systems governable rather than merely connected.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is not the protocol document itself. It is the sovereignty layer that a serious protocol contract enables: a system of identity, authorization, delegation, jurisdiction, language, and evidence that allows institutions to operate agentic interactions with measurable governance rather than assumed compliance.</p>
+
+                <ul>
+                    <li><strong>Sovereign identity infrastructure:</strong> open identity contracts for agent systems that bind identity to institutional authority, include expiration and revocation, and survive provider or framework change.</li>
+                    <li><strong>Multilingual authorization contracts:</strong> policy descriptions, refusal statements, and evidence records authored in the institution's authoritative language, not translated afterward as a courtesy.</li>
+                    <li><strong>Jurisdiction-bound delegation:</strong> delegation records that specify which jurisdiction governs an interaction, when a cross-boundary redirect requires approval, and how authority is withdrawn.</li>
+                    <li><strong>Portable discovery contracts:</strong> open descriptions of tools, agents, and institutional records that allow foreign runtimes to understand capabilities without importing proprietary schemas or hidden jurisdiction assumptions.</li>
+                    <li><strong>Evidence systems for agent interaction:</strong> independent audit trails that preserve identity, authorization, jurisdiction, language, refusal, and effect in forms readable without access to the original provider.</li>
+                    <li><strong>Local-language compliance environments:</strong> evaluation frameworks that test whether protocol-level contracts retain operational meaning across the languages and legal contexts in which the institution works.</li>
+                </ul>
+
+                <p>The durable asset is the contract library: the set of tested, versioned, institution-specific protocol contracts that describe how identity, authorization, jurisdiction, and evidence must be handled. That library can serve multiple providers, multiple models, and multiple frameworks, because it describes the institution's obligations rather than any particular vendor's interface. When a provider changes, the contract travels. When a model updates, the authorization boundary remains. When a jurisdiction shifts, the evidence record preserves the transition.</p>
+
+                <h2>Dessiner le contrat avant d'autoriser la conversation</h2>
+
+                <p>An institution can begin with a concrete interaction: an agent that reads a restricted record, submits a translated document, approves a transaction, or delegates a task to another agent across organizational boundaries. Before the agent speaks, the protocol contract must specify identity, delegation, jurisdiction, language, authorization, refusal, and evidence. Only after the contract is written should the interaction be permitted. The contract is not paperwork added to automation. It is the architecture that makes automation governable.</p>
+
+                <ol>
+                    <li>Write the identity and delegation contract: which authority grants the agent its identity, for how long, in which jurisdiction, and with what revocation path.</li>
+                    <li>Write the authorization boundary: which actions are permitted for this identity in this context, which languages govern refusal and approval, and which cross-boundary redirects require explicit authorization.</li>
+                    <li>Write the discovery and interaction contract: how the agent finds the required tool or peer agent, what the request must contain, and how refusal is expressed in the authoritative language.</li>
+                    <li>Write the evidence contract: what must be preserved for each interaction, in which form, and how an independent reviewer can inspect it without access to the original provider.</li>
+                    <li>Test the contract by removing the preferred provider, changing the language of instruction, revoking authority mid-task, and requiring cross-boundary approval — then verify that evidence survives each change.</li>
+                </ol>
+
+                <p>The goal is not to make every interaction local or to prevent agents from communicating across organizations. It is to make every interaction verifiable under an institutional contract that the institution can read, enforce, and revise. A protocol that carries that contract becomes infrastructure. A protocol that hides it becomes dependency disguised as connection.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://sierra.ai/blog/introducing-personal-agent-protocol" target="_blank" rel="noopener">Sierra AI, « Introducing Personal Agent Protocol » (6 octobre 2026). Annonce conjointe Meta / Sierra du protocole ouvert pour l'interaction sécurisée entre agents et entreprises ; partenaires nommés : Genesys, Instinct, Rocket, Shopify, Stripe, Walmart.</a></li>
+                    <li><a href="https://mlq.ai/news/meta-and-sierra-announce-open-standard-for-personal-ai-agents/" target="_blank" rel="noopener">MLQ AI, « Meta and Sierra Announce Open Standard for Personal AI Agents » (6 octobre 2026). Résumé de l'annonce du protocole ouvert et de son orientation vers une interaction agentique sécurisée et cohérente.</a></li>
+                    <li><a href="https://www.w3.org/groups/cg/agentprotocol/" target="_blank" rel="noopener">W3C, « AI Agent Protocol Community Group ». Mission : développement de protocoles ouverts et interopérables permettant la découverte, l'identification et l'interaction des agents.</a></li>
+                    <li><a href="https://www.w3.org/groups/cg/agentprotocol/activity/" target="_blank" rel="noopener">W3C, « AI Agent Protocol Community Group — Activity » (mise à jour octobre 2026). Activité récente du groupe communautaire sur le protocole agentique.</a></li>
+                    <li><a href="https://hidekazu-konishi.com/entry/where_ai_agent_authorization_standards_stand.html" target="_blank" rel="noopener">Hidekazu Konishi, « Where AI Agent Authorization Standards Stand » (2026). Analyse des spécifications IETF agentproto (charte approuvée le 8 octobre 2026), du W3C Agent Protocol, et des groupes de travail sur l'autorisation agentique.</a></li>
+                    <li><a href="https://codelabs.developers.google.com/adk-a2a-agent-runtime" target="_blank" rel="noopener">Google Developers, « Multi-Agent Architecture with A2A Protocol on Agent Runtime and ADK Integration » (2026). Description du protocole A2A, de son rôle dans la communication inter-agents, et de son intégration dans le runtime ADK.</a></li>
+                    <li><a href="https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a/" target="_blank" rel="noopener">Google Developers Blog, « Build Cross-Language Multi-Agent Team with Google's Agent Development Kit and A2A » (2026). Présentation du protocole A2A comme contrat ouvert permettant à des agents dans des langages différents (Python, Java, Go) de collaborer sans dépendance à des packages propriétaires.</a></li>
+                    <li><a href="https://explore.n1n.ai/blog/google-adk-1-0-a2a-protocol-multi-agent-standard-2026-05-04" target="_blank" rel="noopener">N1N AI, « Google ADK 1.0 and A2A Protocol: Defining the 2026 Multi-Agent Standard » (2026). Résumé du statut de l'ADK et du protocole A2A comme standard horizontal d'intégration agent-à-agent.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Un protocole parle avant que l'agent ne le fasse</h1>
+
+                <p>Lorsque deux agents se rencontrent, ils n'échangent pas de pensées. Ils échangent des messages façonnés par un standard : comment l'identité est présentée, quelle autorité est citée, quels outils sont découvrables, comment le refus est exprimé et si l'interaction laisse des preuves qu'une institution peut examiner. Le standard n'est pas un tuyau neutre. C'est un contrat de gouvernance rédigé avant que tout contenu ne le traverse. Quand un agent commence une phrase, le protocole a déjà décidé de ce qu'il est autorisé à dire, à qui, sous quelle identité, dans quelle langue et avec quelle preuve de frontière.</p>
+
+                <p>C'est la couche qui s'est cristallisée au cours du dernier mois. Meta et Sierra ont annoncé un protocole d'agent personnel le 6 octobre, conçu comme une spécification ouverte pour une interaction sécurisée entre agents et entreprises, avec des partenaires dont Genesys, Instinct, Rocket, Shopify, Stripe et Walmart. Le groupe communautaire du protocole agent du W3C continue de définir des protocoles ouverts et interopérables pour la découverte, l'identification et l'interaction des agents. L'IETF a approuvé la charte du groupe de travail agentproto le 8 octobre, couvrant les interactions agent-à-agent, utilisateur-à-agent et agent-à-outil, avec l'autorisation et la délégation traitées comme des préoccupations de premier ordre. Google avance le protocole A2A via le runtime ADK, avec des SDK multilingues désormais en version 1.0 pour Java et Go. Chaque signal confirme la même conclusion : la couche protocolaire devient la surface de souveraineté principale des systèmes agentiques.</p>
+
+                <blockquote>
+                    <p>Un standard n'est pas un tuyau. C'est un contrat qui attribue l'identité, limite l'autorité, sélectionne les langues, enregistre le refus et définit ce qui doit survivre au changement de fournisseur.</p>
+                </blockquote>
+
+                <h2>Le protocole est la première surface de souveraineté</h2>
+
+                <p>La plupart des institutions pensent la souveraineté en termes de localisation des données : quel pays héberge le serveur, quelle région cloud sert le modèle, quelle base conserve le dossier. Cette vision est incomplète pour les systèmes agentiques. Avant qu'un modèle évalue une requête, le protocole doit décider si un agent est autorisé à la demander, si l'identité présentée est valide, si la délégation est à jour et si l'outil demandé appartient à une catégorie autorisée. Avant qu'un système d'enregistrement change, le protocole doit spécifier quelle juridiction gouverne l'effet, quelle langue fait autorité pour le refus et quelle preuve doit être préservée pour le recours. Ce ne sont pas des paramètres d'endpoint. Ce sont des contrats de protocole.</p>
+
+                <p>L'annonce Meta / Sierra du 6 octobre n'est pas significative pour la catégorie de produit. Elle l'est pour le cadrage : un protocole conçu pour donner aux agents un moyen sûr et cohérent d'interagir avec les entreprises, avec l'identité, l'autorisation et la structure d'interaction intégrées au standard plutôt qu'ajoutées après coup. La charte IETF agentproto du 8 octobre n'est pas significative pour sa liste de documents de travail — il n'en a aucun — mais pour son champ d'application : interactions utilisateur-à-agent, agent-à-agent et agent-à-outil, avec l'autorisation et la délégation traitées comme des champs primaires du protocole plutôt que comme des extensions. Le travail de Google sur A2A via ADK est significatif parce que la collaboration multi-agents possède désormais un contrat commun en Python, Java et Go, rendant la portabilité une propriété du protocole plutôt qu'un accident du framework.</p>
+
+                <h2>Ce qu'un protocole agentique sérieux doit porter</h2>
+
+                <p>Un protocole qui traite l'identité, l'autorisation et la juridiction comme des préoccupations secondaires produit des systèmes qui semblent interopérables tout en restant ingouvernables. Un standard sérieux devrait spécifier le contrat avant le contenu. Ce contrat doit comprendre au moins les champs suivants :</p>
+
+                <ul>
+                    <li><strong>Contrat d'identité :</strong> comment l'agent prouve qu'il est celui qu'il prétend être, quelle autorité a délégué cette preuve et si l'identité survit au changement de fournisseur ou de framework.</li>
+                    <li><strong>Frontière d'autorisation :</strong> quelles actions sont permises pour cette identité dans cette juridiction, dans cette langue, à ce moment et sous quelle condition de délégation.</li>
+                    <li><strong>Contrat de découverte :</strong> comment les outils, autres agents ou dossiers institutionnels sont décrits pour qu'un runtime étranger comprenne ce qui est offert sans importer un schéma propriétaire.</li>
+                    <li><strong>Contrat de refus :</strong> comment le refus est exprimé, dans quelle langue, avec quelle raison et si le refus produit des preuves que l'institution peut examiner.</li>
+                    <li><strong>Registre de délégation :</strong> quel mandant a accordé à l'agent son autorité, avec quelle expiration, sous quelle juridiction et avec quel chemin de révocation.</li>
+                    <li><strong>Marqueur de juridiction :</strong> quelle autorité géographique ou institutionnelle gouverne l'interaction, y compris la langue de la politique autoritaire, et si une redirection transfrontalière exige une approbation explicite.</li>
+                    <li><strong>Contrat de preuves :</strong> quelle trace, attestation ou reçu est préservé pour chaque interaction et comment un examinateur indépendant peut l'inspecter sans accès au fournisseur d'origine.</li>
+                </ul>
+
+                <p>Aucun de ces champs n'est décoratif. Chacun est un point où une institution souveraine conserve le contrôle ou le perd silencieusement. Un protocole qui enregistre l'identité sans la délégation produit des systèmes incapables de répondre qui a approuvé une action lorsque l'autorité est contestée. Un protocole qui enregistre l'autorisation sans la juridiction produit des interactions qui peuvent changer de terrain juridique sans que l'institution en soit consciente. Un protocole qui enregistre le refus sans la langue produit des refus techniquement présents mais opérationnellement dénués de sens pour un réviseur wolof, amharique, arabe ou francophone.</p>
+
+                <blockquote>
+                    <p>La question n'est pas de savoir si les agents parleront. C'est de savoir quel contrat gouverne la conversation, et si l'institution peut le lire dans sa propre langue.</p>
+                </blockquote>
+
+                <h2>Pourquoi les institutions africaines doivent s'y intéresser</h2>
+
+                <p>L'écosystème agentique mondial avance rapidement, mais sa direction n'est pas prédéterminée. Un protocole conçu principalement autour d'interfaces commerciales en anglais, d'autorités d'identité centralisées et d'hypothèses juridictionnelles uniformes deviendra la norme non parce qu'il est universel, mais parce qu'il est le premier. Les institutions africaines qui considèrent l'adoption du protocole comme une décision de consommation — utiliser ce qui est disponible — hériteront de choix de gouvernance faits pour d'autres contextes. Les institutions qui traitent la conception du protocole comme un projet de souveraineté — en spécifiant quels contrats d'identité, langages d'autorisation, registres de délégation et marqueurs juridictionnels doivent être préservés — peuvent façonner la couche qui gouverne l'interaction agentique plutôt que simplement l'appliquer.</p>
+
+                <p>Ce n'est pas abstrait. Une université qui maintient un agent de recherche pour la récupération de corpus multilingues doit savoir si le protocole utilisé par cet agent autorise la récupération sous des conditions communautaires différentes des termes d'un fournisseur extérieur. Une administration publique qui opère un agent dans des services en langues locales doit savoir si le contrat d'identité lie l'agent à une autorité administrative nationale, si le refus est enregistré dans la langue autoritaire et si la délégation peut être retirée lorsque les conditions changent. Une coopérative qui relie des membres au-delà des frontières doit savoir si le contrat d'interaction conserve les dossiers des membres sous la garde d'une institution locale, si les redirections transfrontalières exigent une approbation explicite et si les preuves survivent au changement de fournisseur.</p>
+
+                <p>La couche protocolaire est le lieu où ces obligations deviennent exécutables. Sans un contrat portant la juridiction, la langue, l'identité, l'autorisation et les preuves, le meilleur cadre de gouvernance est une recommandation appliquée à une interaction opaque. Avec un tel contrat, une institution peut vérifier la conformité indépendamment, comparer les fournisseurs selon la gouvernance plutôt que le seul prix, et se remettre d'une défaillance de fournisseur sans perdre le registre de ce qui a été autorisé et de ce qui a été refusé.</p>
+
+                <h2>Le standard n'est pas neutre</h2>
+
+                <p>Chaque standard encode une théorie de l'interaction. Un protocole qui suppose une autorité d'identité unique et centralisée suppose que l'identité appartient au fournisseur. Un protocole qui permet à la délégation d'être exprimée dans un contrat portable permet à l'identité de voyager avec l'institution. Un protocole qui traite le refus comme un code d'erreur plutôt que comme un résultat gouverné prive l'institution de la capacité de prouver qu'une frontière a été respectée. Un protocole qui ne spécifie pas la langue de la politique autoritaire suppose que l'anglais suffit à chaque fin institutionnelle.</p>
+
+                <p>Les annonces récentes rendent ces choix visibles. Le protocole Meta et Sierra est présenté comme ouvert, mais ses partenaires révèlent son orientation commerciale initiale. Le groupe W3C est véritablement ouvert, mais ses progrès dépendent des institutions qui apportent des exigences concrètes depuis des contextes non anglophones et non centralisés. La charte IETF couvre le bon champ d'application, mais ses premiers documents de travail détermineront si la juridiction, la langue et la délégation sont des champs primaires du protocole ou des extensions facultatives. Le travail A2A de Google est technique et ouvert, mais son runtime est intégré dans une architecture cloud plus large qui porte ses propres hypothèses juridictionnelles.</p>
+
+                <p>Aucun de ces éléments n'est une critique d'une annonce particulière. C'est une affirmation de ce que la couche protocolaire exige désormais des institutions sérieuses : une participation active à la conception, non une consommation passive. Un laboratoire qui traite la communication agentique comme un standard qu'il utilise héritera d'un modèle de souveraineté construit ailleurs. Un laboratoire qui la traite comme un standard qu'il contribue à spécifier peut intégrer les contrats — identité, autorisation, juridiction, langue, refus, preuves — qui rendent les systèmes agentiques gouvernables plutôt que simplement connectés.</p>
+
+                <h2>Là où la surface d'investissement s'élargit</h2>
+
+                <p>L'objet commercial n'est pas le document du protocole lui-même. C'est la couche de souveraineté qu'un contrat protocolaire sérieux rend possible : un système d'identité, d'autorisation, de délégation, de juridiction, de langue et de preuves qui permet aux institutions d'opérer des interactions agentiques avec une gouvernance mesurable plutôt qu'une conformité supposée.</p>
+
+                <ul>
+                    <li><strong>Infrastructure d'identité souveraine :</strong> contrats d'identité ouverts pour les systèmes agentiques qui lient l'identité à l'autorité institutionnelle, incluent expiration et révocation, et survivent au changement de fournisseur ou de framework.</li>
+                    <li><strong>Contrats d'autorisation multilingues :</strong> descriptions de politiques, déclarations de refus et registres de preuves rédigés dans la langue autoritaire de l'institution, non traduits après coup comme une courtoisie.</li>
+                    <li><strong>Délégation liée à la juridiction :</strong> registres de délégation qui spécifient quelle juridiction gouverne une interaction, quand une redirection transfrontalière exige une approbation, et comment l'autorité est retirée.</li>
+                    <li><strong>Contrats de découverte portables :</strong> descriptions ouvertes d'outils, d'agents et de dossiers institutionnels permettant à des runtimes étrangers de comprendre les capacités sans importer de schémas propriétaires ou d'hypothèses juridictionnelles cachées.</li>
+                    <li><strong>Systèmes de preuves pour l'interaction agentique :</strong> pistes d'audit indépendantes préservant l'identité, l'autorisation, la juridiction, la langue, le refus et l'effet dans des formes lisibles sans accès au fournisseur d'origine.</li>
+                    <li><strong>Environnements de conformité en langues locales :</strong> cadres d'évaluation testant si les contrats au niveau du protocole conservent leur sens opérationnel dans les langues et contextes juridiques où l'institution opère.</li>
+                </ul>
+
+                <p>L'actif durable est la bibliothèque de contrats : l'ensemble des contrats de protocole testés, versionnés et spécifiques à l'institution qui décrivent comment l'identité, l'autorisation, la juridiction et les preuves doivent être gérées. Cette bibliothèque peut servir plusieurs fournisseurs, plusieurs modèles et plusieurs frameworks, parce qu'elle décrit les obligations de l'institution plutôt que l'interface d'un fournisseur particulier. Quand un fournisseur change, le contrat voyage. Quand un modèle est mis à jour, la frontière d'autorisation reste. Quand une juridiction change, le registre de preuves préserve la transition.</p>
+
+                <h2>Dessiner le contrat avant d'autoriser la conversation</h2>
+
+                <p>Une institution peut commencer par une interaction concrète : un agent qui lit un dossier restreint, soumet un document traduit, approuve une transaction ou délègue une tâche à un autre agent au-delà des frontières organisationnelles. Avant que l'agent ne parle, le contrat de protocole doit spécifier l'identité, la délégation, la juridiction, la langue, l'autorisation, le refus et les preuves. Ce n'est qu'une fois le contrat rédigé que l'interaction doit être autorisée. Le contrat n'est pas une paperasserie ajoutée à l'automatisation. C'est l'architecture qui rend l'automatisation gouvernable.</p>
+
+                <ol>
+                    <li>Rédiger le contrat d'identité et de délégation : quelle autorité accorde à l'agent son identité, pour combien de temps, dans quelle juridiction et avec quel chemin de révocation.</li>
+                    <li>Rédiger la frontière d'autorisation : quelles actions sont autorisées pour cette identité dans ce contexte, quelles langues gouvernent le refus et l'approbation, et quelles redirections transfrontalières exigent une autorisation explicite.</li>
+                    <li>Rédiger le contrat de découverte et d'interaction : comment l'agent trouve l'outil ou l'agent pair requis, ce que la requête doit contenir et comment le refus est exprimé dans la langue autoritaire.</li>
+                    <li>Rédiger le contrat de preuves : ce qui doit être préservé pour chaque interaction, sous quelle forme, et comment un réviseur indépendant peut l'inspecter sans accès au fournisseur d'origine.</li>
+                    <li>Tester le contrat en supprimant le fournisseur préféré, en changeant la langue de l'instruction, en révoquant l'autorité en cours de tâche et en exigeant une approbation transfrontalière — puis vérifier que les preuves survivent à chaque changement.</li>
+                </ol>
+
+                <p>Le but n'est pas de rendre chaque interaction locale ni d'empêcher les agents de communiquer au-delà des organisations. Il est de rendre chaque interaction vérifiable selon un contrat institutionnel que l'institution peut lire, appliquer et réviser. Un protocole qui porte ce contrat devient une infrastructure. Un protocole qui le cache devient une dépendance déguisée en connexion.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://sierra.ai/blog/introducing-personal-agent-protocol" target="_blank" rel="noopener">Sierra AI, « Introducing Personal Agent Protocol » (6 octobre 2026). Annonce du protocole ouvert pour l'interaction sécurisée agent-entreprise par Meta et Sierra.</a></li>
+                    <li><a href="https://mlq.ai/news/meta-and-sierra-announce-open-standard-for-personal-ai-agents/" target="_blank" rel="noopener">MLQ AI, « Meta and Sierra Announce Open Standard for Personal AI Agents » (6 octobre 2026). Couverture de l'annonce du protocole ouvert et de son orientation commerciale.</a></li>
+                    <li><a href="https://www.w3.org/groups/cg/agentprotocol/" target="_blank" rel="noopener">W3C, « AI Agent Protocol Community Group ». Mission du groupe : développement de protocoles ouverts et interopérables pour la découverte, l'identification et l'interaction des agents.</a></li>
+                    <li><a href="https://www.w3.org/groups/cg/agentprotocol/activity/" target="_blank" rel="noopener">W3C, « AI Agent Protocol Community Group — Activity » (octobre 2026). Activité récente du groupe communautaire.</a></li>
+                    <li><a href="https://hidekazu-konishi.com/entry/where_ai_agent_authorization_standards_stand.html" target="_blank" rel="noopener">Hidekazu Konishi, « Where AI Agent Authorization Standards Stand » (2026). Analyse des spécifications IETF agentproto (charte approuvée le 8 octobre 2026), du protocole W3C et des groupes de travail sur l'autorisation agentique.</a></li>
+                    <li><a href="https://codelabs.developers.google.com/adk-a2a-agent-runtime" target="_blank" rel="noopener">Google Developers, « Multi-Agent Architecture with A2A Protocol on Agent Runtime and ADK Integration » (2026). Description du protocole A2A comme standard ouvert de collaboration inter-agents.</a></li>
+                    <li><a href="https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a/" target="_blank" rel="noopener">Google Developers Blog, « Build Cross-Language Multi-Agent Team with Google's Agent Development Kit and A2A » (2026). Présentation du protocole A2A comme contrat ouvert permettant la collaboration entre agents écrits en langages différents.</a></li>
+                    <li><a href="https://explore.n1n.ai/blog/google-adk-1-0-a2a-protocol-multi-agent-standard-2026-05-04" target="_blank" rel="noopener">N1N AI, « Google ADK 1.0 and A2A Protocol: Defining the 2026 Multi-Agent Standard » (2026). Résumé du statut ADK / A2A comme standard d'intégration agent-à-agent.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

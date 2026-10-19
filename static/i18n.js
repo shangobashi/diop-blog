@@ -174,6 +174,7 @@
         'article.entry142':     { en: 'Diop Daily #142 — October 2026', fr: 'Diop Quotidien n°142 — Octobre 2026' },
         'article.entry143':     { en: 'Diop Daily #143 — October 2026', fr: 'Diop Quotidien n°143 — Octobre 2026' },
         'article.entry144':     { en: 'Diop Daily #144 — October 2026', fr: 'Diop Quotidien n°144 — Octobre 2026' },
+        'article.entry145':     { en: 'Diop Daily #145 — October 2026', fr: 'Diop Quotidien n°145 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -194,6 +195,16 @@
         excerpt: {
             en: "Every agent tool call has a location: where data is read, intent is evaluated, effects are committed, and authority is exercised. The investable layer is jurisdiction-aware execution infrastructure that keeps sovereign, multi-cloud, and local-language operations measurable and governed.",
             fr: "Chaque appel d’outil agentique possède un lieu : celui où les données sont lues, l’intention évaluée, les effets inscrits et l’autorité exercée. La couche d’investissement est l’infrastructure d’exécution tenant compte de la juridiction qui rend mesurables et gouvernables les opérations souveraines, multicloud et en langues locales."
+        }
+    },
+    'diop-daily-145': {
+        title: {
+            en: "A Protocol Speaks Before the Agent Does",
+            fr: "Un protocole parle avant que l'agent ne le fasse"
+        },
+        excerpt: {
+            en: "Agent-to-agent communication standards — Meta and Sierra's Personal Agent Protocol, W3C's Agent Protocol Group, IETF's agentproto charter, and Google's A2A runtime — embed identity, authorization, and jurisdiction choices before any content flows. The investable layer is sovereign protocol infrastructure that African institutions can own rather than merely consume.",
+            fr: "Les standards de communication agent-à-agent — le protocole agentique personnel de Meta et Sierra, le groupe protocole agent du W3C, la charte IETF agentproto et le runtime A2A de Google — intègrent l'identité, l'autorisation et la juridiction avant tout flux de contenu. La couche d'investissement est l'infrastructure de protocole souveraine que les institutions africaines peuvent posséder plutôt que simplement consommer."
         }
     },
     'diop-daily-143': {
