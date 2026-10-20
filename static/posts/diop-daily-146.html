@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Language Is the First Boundary — Diop Research</title>
+    <meta name="description" content="Agent protocols encode jurisdiction, identity, and refusal before content flows. But they are written mostly in English, leaving the authority to interpret refusal and obligation in the hands of a foreign language. The investable layer is the multilingual protocol contract: an authorization, refusal, and evidence layer that preserves institutional meaning in the languages the institution actually uses."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry146">Diop Daily #146 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 21, 2026</time>
+                    <span>·</span>
+                    <span data-rt="13">13 min read</span>
+                    <span>·</span>
+                    <span>language · protocol contract · sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Language Is the First Boundary</h1>
+
+                <p>Every protocol contract describes identity, authorization, refusal, jurisdiction, and evidence. Most are written in English. The words are precise for a global audience, but the authority they describe is usually local: a university record governed by community conditions in Senegal, a public registry maintained in French and Arabic, a payment authorization subject to a national administrative system, a refusal that must be explained to a reviewer who reads in Wolof or Amharic. When the contract's authoritative language is foreign to the institution it governs, sovereignty does not fail loudly. It fails quietly — through misinterpretation, silent substitution, and refusal paths that produce technically correct but institutionally meaningless records.</p>
+
+                <blockquote>
+                    <p>A protocol that speaks only in the language of its authors governs only those who share that language. Everything else is administration by translation.</p>
+                </blockquote>
+
+                <h2>A field observation</h2>
+
+                <p>I have been reading the new protocol announcements — Meta and Sierra's Personal Agent Protocol from October 6, the IETF agentproto charter from October 8, the W3C Agent Protocol Community Group's continuing work, and Google's A2A advances through ADK — not as a competitor or commentator, but as someone trying to understand where the authority lives. The signal is clear: the protocol layer is becoming the sovereignty surface. The detail that worries me is not the scope of these initiatives. It is the language they assume.</p>
+
+                <p>A protocol contract is not merely a specification of fields and types. It is the text that defines what refusal means, which jurisdiction applies, whose identity is valid, and what evidence must survive. If that text is only available in English, an institution that operates in another language cannot inspect its own obligations independently. A reviewer who reads French or Wolof cannot confirm that a refusal was issued correctly. A regulator who requires evidence in local form receives a record that is accurate in translation but not authoritative in the original context.</p>
+
+                <h2>The cost of a translated contract</h2>
+
+                <p>The Personal Agent Protocol's announcement describes discovery, authorization, session management, and secure interaction. These are serious structural elements. However, the public documentation released so far does not specify the language of authoritative refusal, the language of jurisdiction markers, or the requirement that evidence be preserved in the language of the institution rather than the language of the provider. That omission matters because a refusal expressed in English may satisfy a provider's audit while failing a local authority's inspection.</p>
+
+                <p>The IETF agentproto charter from October 8 defines user-to-agent, agent-to-agent, and agent-to-tool interactions with authorization and delegation as first-class concerns. The charter is well-scoped. Yet nothing in the public draft requires that the authorization policy, the refusal reason, and the delegation record be available in the language that the governing institution recognizes as authoritative. A university in Dakar that uses a French-language administrative system could adopt a protocol that technically supports delegation without being able to prove the delegation in its own language.</p>
+
+                <p>Google's A2A work through ADK provides multi-language SDKs — Python, Java, and Go — which demonstrates that portability is being treated as a runtime property rather than a framework accident. But runtime portability and linguistic authority are different things. A protocol that allows an agent to run in Java does not guarantee that the institution governing the agent can read its contract, inspect its refusal, or verify its jurisdiction marker in the language it uses for official records.</p>
+
+                <h2>Where language becomes the boundary</h2>
+
+                <p>The issue is not cosmetic translation. It is structural. Consider the fields a serious protocol contract should carry, and the language question each raises:</p>
+
+                <ul>
+                    <li><strong>Identity contract:</strong> the agent's identity must be verifiable by the institution. If the identity document is in English and the institution's identity registry is in French, the verification process introduces an intermediary that the institution cannot audit.</li>
+                    <li><strong>Refusal contract:</strong> a refusal must explain why an action was denied, in a language the reviewing authority understands. A refusal expressed in English may be technically correct but institutionally useless for a regulator or community board that operates in another language.</li>
+                    <li><strong>Jurisdiction marker:</strong> the jurisdiction governing the interaction must be named in the language the institution uses for legal records. A jurisdiction label in English may describe the correct region but fail the institutional test of authority.</li>
+                    <li><strong>Evidence contract:</strong> the evidence preserved for each interaction must remain inspectable independently of the provider. If the evidence is available only in English, an institution that operates in French, Arabic, or Wolof cannot examine it directly.</li>
+                </ul>
+
+                <blockquote>
+                    <p>The protocol is the first sovereignty surface, but language is the first sovereignty test. A contract an institution cannot read in its own language governs it by default.</p>
+                </blockquote>
+
+                <h2>Why African institutions cannot treat language as secondary</h2>
+
+                <p>African institutions operate across multiple linguistic authorities by design. A national university may maintain records in French. A regional cooperative may govern membership in a local language. A public agency may serve citizens in several languages with different legal obligations attached. A publisher or archive may hold text in Wolof, Amharic, Arabic, or English with separate conditions for each edition. These are not edge cases. They are the operating environment.</p>
+
+                <p>If agent protocols treat English as the default authoritative language, African institutions that adopt them will inherit a governance structure they can use but not fully inspect. They can interact with the protocol, but they cannot independently confirm that refusal, delegation, jurisdiction, and evidence were handled in ways that respect their own linguistic authority. The dependency is not dramatic — it is quiet, cumulative, and difficult to reverse once adopted.</p>
+
+                <p>The durable asset in this environment is not the model or the endpoint. It is the institution's ability to state, in its own language, what authority permitted the interaction, what refusal occurred, what jurisdiction applied, and what evidence remains available. A protocol that supports that capability provides real sovereignty. A protocol that does not provides technical interoperability with governance by translation.</p>
+
+                <h2>The standard is not finished</h2>
+
+                <p>The good news is that the protocol layer is still open. The Personal Agent Protocol has only just announced. The IETF agentproto charter is at its beginning. The W3C group continues to develop contributions rather than finalize standards. There is time — not much, but enough — for institutions to insist that language be treated as a structural property rather than a cosmetic one.</p>
+
+                <p>This does not mean every standard must be translated into every language. It means the contract itself must specify which language is authoritative for identity, authorization, refusal, jurisdiction, and evidence. It means refusal records must be preserved in that language. It means jurisdiction markers must reference the language of governing authority. It means evidence must be available for inspection without requiring an intermediary to translate the institution's own obligations.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is not a language service added to a protocol. It is a protocol contract that treats language as authority. The categories that become strategic include:</p>
+
+                <ul>
+                    <li><strong>Multilingual authorization contracts:</strong> machine-readable contracts that state identity, delegation, jurisdiction, refusal, and evidence in the language recognized by the governing institution.</li>
+                    <li><strong>Authoritative refusal records:</strong> refusal paths that produce evidence in the institution's language, with the reason, jurisdiction, and authority clearly named, not summarized after translation.</li>
+                    <li><strong>Jurisdiction-bound evidence storage:</strong> storage layers that preserve interaction records in the language of the governing authority, independent of the provider's preferred format.</li>
+                    <li><strong>Language-conformance evaluation:</strong> test environments that verify whether protocol implementations preserve institutional meaning across French, Arabic, Wolof, Amharic, Swahili, and English contexts.</li>
+                    <li><strong>Portable linguistic authority:</strong> contracts that can move between providers without changing the language of their governing obligations, so that a provider change does not change the authority under which the institution operates.</li>
+                </ul>
+
+                <h2>A practical test</h2>
+
+                <p>Before adopting any agent protocol for an institution that operates in a non-English context, run a simple test. Request the interaction in the institution's authoritative language. Confirm that the refusal reason, jurisdiction marker, identity verification, and evidence record are available in that language without requiring translation by the provider. Confirm that a reviewer in that language can understand the record independently. Confirm that a change of provider does not change the language of the governing contract.</p>
+
+                <p>If any of those steps fails, the protocol provides interoperability but not sovereignty. It connects the institution to the agent ecosystem without giving the institution control over the terms of that connection. That is a practical result, not a philosophical objection. The institution that can verify these properties independently owns the relationship. The institution that cannot is administered by a contract it did not fully design.</p>
+
+                <h2>A closing note</h2>
+
+                <p>The agentic future will be described through endpoints, protocols, and contracts. African institutions will experience it through the languages they use to govern, review, correct, and recover. A protocol that treats language as decorative will produce systems that work smoothly until the first serious refusal, the first disputed jurisdiction, the first evidence request that an institution must explain in its own language. Building protocols that survive those moments requires making language structural from the beginning — not as a translation layer, but as part of the contract itself.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://mlq.ai/news/meta-and-sierra-announce-open-standard-for-personal-ai-agents/" target="_blank" rel="noopener">Meta and Sierra, “Personal Agent Protocol,” announced October 6, 2026. A public standard proposal for agent-to-business interaction, with named partners. The protocol's language requirements are not specified in public releases; that absence is this entry's observation, not a claim about the standard's internal design.</a></li>
+                    <li><a href="https://www.ietf.org/archive/id/draft-agentic-ai-usecases-requirements-03.html" target="_blank" rel="noopener">Internet Engineering Task Force, “Agentic AI Use Cases and Requirements,” draft as of October 2026. Defines agent-to-agent, user-to-agent, and agent-to-tool interactions with authorization and delegation scope; does not specify linguistic authority requirements.</a></li>
+                    <li><a href="https://www.w3.org/community/agentprotocol/" target="_blank" rel="noopener">W3C, “AI Agent Protocol Community Group.” Public mission to develop open, interoperable protocols for agent discovery, identification, and interaction. Language governance is not specified as a first-class protocol concern in the public group description.</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-mcp-support-in-apigee-hybrid-agentic-tools-that-run-in-your-own-cluster/" target="_blank" rel="noopener">Google Developers Blog, “Announcing MCP support in Apigee hybrid,” October 14, 2026. Describes agent runtime placement inside customer clusters with configuration pulled rather than pushed. This is a location and governance signal, not a language-contract specification.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La langue est la première frontière</h1>
+
+                <p>Chaque contrat de protocole décrit l'identité, l'autorisation, le refus, la juridiction et la preuve. La plupart sont rédigés en anglais. Les mots sont précis pour un public mondial, mais l'autorité qu'ils décrivent est généralement locale : un dossier universitaire régi par des conditions communautaires au Sénégal, un registre public maintenu en français et en arabe, une autorisation de paiement soumise à un système administratif national, un refus qui doit être expliqué à un examinateur qui lit en wolof ou en amharique. Lorsque la langue autorisée du contrat est étrangère à l'institution qu'il gouverne, la souveraineté ne s'effondre pas bruyamment. Elle s'effondre silencieusement — par mauvaise interprétation, substitution silencieuse et voies de refus qui produisent des dossiers techniquement corrects mais institutionnellement sans signification.</p>
+
+                <blockquote>
+                    <p>Un protocole qui ne parle que dans la langue de ses auteurs ne gouverne que ceux qui partagent cette langue. Tout le reste est une administration par traduction.</p>
+                </blockquote>
+
+                <h2>Une observation de terrain</h2>
+
+                <p>J'ai lu les nouvelles annonces de protocoles — le protocole d'agent personnel de Meta et Sierra du 6 octobre, la charte de l'IETF agentproto du 8 octobre, le travail continu du groupe protocole agent du W3C, et les avancées d'A2A de Google via ADK — non pas comme un concurrent ou un commentateur, mais comme quelqu'un qui essaie de comprendre où vit l'autorité. Le signal est clair : la couche protocole devient la surface de souveraineté. Le détail qui m'inquiète n'est pas la portée de ces initiatives. C'est la langue qu'elles supposent.</p>
+
+                <p>Un contrat de protocole n'est pas simplement une spécification de champs et de types. C'est le texte qui définit ce que signifie le refus, quelle juridiction s'applique, quelle identité est valide, et quelle preuve doit survivre. Si ce texte n'est disponible qu'en anglais, une institution qui opère dans une autre langue ne peut pas examiner indépendamment ses propres obligations. Un examinateur qui lit le français ou le wolof ne peut pas confirmer qu'un refus a été émis correctement. Un régulateur qui exige des preuves sous forme locale reçoit un dossier précis en traduction mais qui ne fait pas autorité dans le contexte original.</p>
+
+                <h2>Le coût d'un contrat traduit</h2>
+
+                <p>L'annonce du protocole d'agent personnel décrit la découverte, l'autorisation, la gestion des sessions et l'interaction sécurisée. Ce sont des éléments structurels sérieux. Cependant, la documentation publique publiée jusqu'à présent ne précise pas la langue du refus autorisé, la langue des marqueurs de juridiction, ou l'obligation que la preuve soit conservée dans la langue de l'institution plutôt que dans celle du fournisseur. Cette omission compte parce qu'un refus exprimé en anglais peut satisfaire l'audit d'un fournisseur tout en échouant à une inspection d'une autorité locale.</p>
+
+                <p>La charte de l'IETF agentproto du 8 octobre définit les interactions entre agent-agent, utilisateur-agent et agent-outil avec l'autorisation et la délégation comme préoccupations de premier plan. La charte est bien définie. Pourtant, rien dans le projet public n'exige que la politique d'autorisation, le motif de refus et le dossier de délégation soient disponibles dans la langue que l'institution gouvernante reconnaît comme autorisée. Une université de Dakar qui utilise un système administratif en français pourrait adopter un protocole qui soutient techniquement la délégation sans pouvoir la prouver dans sa propre langue.</p>
+
+                <p>Le travail A2A de Google via ADK fournit des SDK multilangues — Python, Java et Go — ce qui montre que la portabilité est traitée comme une propriété du runtime plutôt qu'un accident du cadre. Mais la portabilité du runtime et l'autorité linguistique sont des choses différentes. Un protocole qui permet à un agent de fonctionner en Java ne garantit pas que l'institution qui gouverne cet agent puisse lire son contrat, examiner son refus ou vérifier son marqueur de juridiction dans la langue qu'elle utilise pour ses dossiers officiels.</p>
+
+                <h2>Là où la langue devient la frontière</h2>
+
+                <p>Le problème n'est pas une traduction cosmétique. Il est structurel. Considérez les champs qu'un contrat de protocole sérieux devrait porter, et la question linguistique que chacun soulève :</p>
+
+                <ul>
+                    <li><strong>Contrat d'identité :</strong> l'identité de l'agent doit être vérifiable par l'institution. Si le document d'identité est en anglais et le registre d'identité de l'institution est en français, le processus de vérification introduit un intermédiaire que l'institution ne peut pas auditer.</li>
+                    <li><strong>Contrat de refus :</strong> un refus doit expliquer pourquoi une action a été refusée, dans une langue que l'autorité de révision comprend. Un refus exprimé en anglais peut être techniquement correct mais institutionnellement inutile pour un régulateur ou un conseil communautaire qui fonctionne dans une autre langue.</li>
+                    <li><strong>Marqueur de juridiction :</strong> la juridiction qui gouverne l'interaction doit être nommée dans la langue que l'institution utilise pour ses dossiers juridiques. Une étiquette de juridiction en anglais peut décrire la région correcte mais échouer au test institutionnel d'autorité.</li>
+                    <li><strong>Contrat de preuve :</strong> la preuve conservée pour chaque interaction doit rester inspectable indépendamment du fournisseur. Si la preuve n'est disponible qu'en anglais, une institution qui opère en français, arabe ou wolof ne peut pas l'examiner directement.</li>
+                </ul>
+
+                <blockquote>
+                    <p>Le protocole est la première surface de souveraineté, mais la langue est le premier test de souveraineté. Un contrat qu'une institution ne peut pas lire dans sa propre langue la gouverne par défaut.</p>
+                </blockquote>
+
+                <h2>Pourquoi les institutions africaines ne peuvent pas traiter la langue comme secondaire</h2>
+
+                <p>Les institutions africaines opèrent dans plusieurs autorités linguistiques par conception. Une université nationale peut maintenir des dossiers en français. Une coopérative régionale peut gouverner ses membres dans une langue locale. Une administration publique peut servir des citoyens dans plusieurs langues avec des obligations juridiques différentes. Un éditeur ou une archive peut conserver des textes en wolof, en amharique, en arabe ou en anglais avec des conditions séparées pour chaque édition. Ce ne sont pas des cas marginaux. C'est l'environnement opérationnel.</p>
+
+                <p>Si les protocoles agentiques traitent l'anglais comme la langue autorisée par défaut, les institutions africaines qui les adoptent hériteront d'une structure de gouvernance qu'elles pourront utiliser mais qu'elles ne pourront pas inspecter complètement. Elles pourront interagir avec le protocole, mais elles ne pourront pas confirmer indépendamment que le refus, la délégation, la juridiction et la preuve ont été traités d'une manière qui respecte leur propre autorité linguistique. La dépendance n'est pas spectaculaire — elle est silencieuse, cumulative, et difficile à inverser une fois adoptée.</p>
+
+                <p>L'actif durable dans cet environnement n'est pas le modèle ou l'endpoint. C'est la capacité de l'institution à déclarer, dans sa propre langue, quelle autorité a permis l'interaction, quel refus s'est produit, quelle juridiction s'applique, et quelle preuve reste disponible. Un protocole qui soutient cette capacité offre une véritable souveraineté. Un protocole qui ne le fait pas offre une interopérabilité technique avec une gouvernance par traduction.</p>
+
+                <h2>La norme n'est pas terminée</h2>
+
+                <p>La bonne nouvelle est que la couche protocole reste ouverte. Le protocole d'agent personnel vient d'être annoncé. La charte de l'IETF agentproto est à son début. Le groupe du W3C continue de développer des contributions plutôt que de finaliser des normes. Il y a du temps — pas beaucoup, mais assez — pour que les institutions insistent sur le fait que la langue soit traitée comme une propriété structurelle plutôt que cosmétique.</p>
+
+                <p>Cela ne signifie pas que chaque norme doit être traduite dans chaque langue. Cela signifie que le contrat lui-même doit préciser quelle langue fait autorité pour l'identité, l'autorisation, le refus, la juridiction et la preuve. Cela signifie que les dossiers de refus doivent être conservés dans cette langue. Cela signifie que les marqueurs de juridiction doivent faire référence à la langue de l'autorité gouvernante. Cela signifie que la preuve doit être disponible pour inspection sans nécessiter un intermédiaire pour traduire les obligations propres de l'institution.</p>
+
+                <h2>Là où la surface d'investissement s'élargit</h2>
+
+                <p>L'objet commercial n'est pas un service linguistique ajouté à un protocole. C'est un contrat de protocole qui traite la langue comme autorité. Les catégories qui deviennent stratégiques comprennent :</p>
+
+                <ul>
+                    <li><strong>Contrats d'autorisation multilingues :</strong> contrats lisibles par machine qui déclarent l'identité, la délégation, la juridiction, le refus et la preuve dans la langue reconnue par l'institution gouvernante.</li>
+                    <li><strong>Dossiers de refus autorisés :</strong> voies de refus qui produisent des preuves dans la langue de l'institution, avec le motif, la juridiction et l'autorité clairement nommés, non résumés après traduction.</li>
+                    <li><strong>Stockage de preuves lié à la juridiction :</strong> couches de stockage qui conservent les dossiers d'interaction dans la langue de l'autorité gouvernante, indépendamment du format préféré du fournisseur.</li>
+                    <li><strong>Évaluation de conformité linguistique :</strong> environnements de test qui vérifient si les implémentations du protocole préservent le sens institutionnel dans des contextes français, arabes, wolof, amhariques, swahili et anglais.</li>
+                    <li><strong>Autorité linguistique portable :</strong> contrats qui peuvent être déplacés entre fournisseurs sans changer la langue de leurs obligations gouvernantes, de sorte qu'un changement de fournisseur ne change pas l'autorité sous laquelle l'institution opère.</li>
+                </ul>
+
+                <h2>Un test pratique</h2>
+
+                <p>Avant d'adopter un protocole agentique pour une institution qui opère dans un contexte non anglophone, exécutez un test simple. Demandez l'interaction dans la langue autorisée de l'institution. Confirmez que le motif de refus, le marqueur de juridiction, la vérification d'identité et le dossier de preuve sont disponibles dans cette langue sans nécessiter de traduction par le fournisseur. Confirmez qu'un examinateur dans cette langue peut comprendre le dossier de manière indépendante. Confirmez qu'un changement de fournisseur ne change pas la langue du contrat gouvernant.</p>
+
+                <p>Si l'une de ces étapes échoue, le protocole offre l'interopérabilité mais pas la souveraineté. Il relie l'institution à l'écosystème agentique sans lui donner le contrôle des termes de cette connexion. C'est un résultat pratique, pas une objection philosophique. L'institution qui peut vérifier indépendamment ces propriétés possède la relation. L'institution qui ne le peut pas est administrée par un contrat qu'elle n'a pas entièrement conçu.</p>
+
+                <h2>Note finale</h2>
+
+                <p>L'avenir agentique sera décrit par des endpoints, des protocoles et des contrats. Les institutions africaines le vivront à travers les langues qu'elles utilisent pour gouverner, examiner, corriger et récupérer. Un protocole qui traite la langue comme décorative produira des systèmes qui fonctionnent sans problème jusqu'au premier refus sérieux, au premier litige de juridiction, à la première demande de preuve qu'une institution doit expliquer dans sa propre langue. Construire des protocoles qui survivent à ces moments exige de rendre la langue structurelle dès le départ — non comme une couche de traduction, mais comme partie intégrante du contrat lui-même.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://mlq.ai/news/meta-and-sierra-announce-open-standard-for-personal-ai-agents/" target="_blank" rel="noopener">Meta et Sierra, « Personal Agent Protocol », annoncé le 6 octobre 2026. Une proposition publique de norme pour l'interaction agent-entreprise, avec des partenaires nommés. Les exigences linguistiques du protocole ne sont pas précisées dans les communiqués publics ; cette absence est une observation de cet article, non une affirmation sur la conception interne de la norme.</a></li>
+                    <li><a href="https://www.ietf.org/archive/id/draft-agentic-ai-usecases-requirements-03.html" target="_blank" rel="noopener">Internet Engineering Task Force, « Agentic AI Use Cases and Requirements », projet au 8 octobre 2026. Définit les interactions agent-agent, utilisateur-agent et agent-outil avec un périmètre d'autorisation et de délégation ; ne spécifie pas d'exigences d'autorité linguistique.</a></li>
+                    <li><a href="https://www.w3.org/community/agentprotocol/" target="_blank" rel="noopener">W3C, « AI Agent Protocol Community Group ». Mission publique de développer des protocoles ouverts et interopérables pour la découverte, l'identification et l'interaction des agents. La gouvernance linguistique n'est pas précisée comme un enjeu de protocole de premier plan dans la description publique du groupe.</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-mcp-support-in-apigee-hybrid-agentic-tools-that-run-in-your-own-cluster/" target="_blank" rel="noopener">Google Developers Blog, « Announcing MCP support in Apigee hybrid », 14 octobre 2026. Décrit le placement du runtime agent à l'intérieur des clusters clients avec configuration récupérée plutôt qu'injectée. C'est un signal de localisation et de gouvernance, non une spécification de contrat linguistique.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

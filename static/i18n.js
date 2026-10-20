@@ -175,6 +175,7 @@
         'article.entry143':     { en: 'Diop Daily #143 — October 2026', fr: 'Diop Quotidien n°143 — Octobre 2026' },
         'article.entry144':     { en: 'Diop Daily #144 — October 2026', fr: 'Diop Quotidien n°144 — Octobre 2026' },
         'article.entry145':     { en: 'Diop Daily #145 — October 2026', fr: 'Diop Quotidien n°145 — Octobre 2026' },
+        'article.entry146':     { en: 'Diop Daily #146 — October 2026', fr: 'Diop Quotidien n°146 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -195,6 +196,16 @@
         excerpt: {
             en: "Every agent tool call has a location: where data is read, intent is evaluated, effects are committed, and authority is exercised. The investable layer is jurisdiction-aware execution infrastructure that keeps sovereign, multi-cloud, and local-language operations measurable and governed.",
             fr: "Chaque appel d’outil agentique possède un lieu : celui où les données sont lues, l’intention évaluée, les effets inscrits et l’autorité exercée. La couche d’investissement est l’infrastructure d’exécution tenant compte de la juridiction qui rend mesurables et gouvernables les opérations souveraines, multicloud et en langues locales."
+        }
+    },
+    'diop-daily-146': {
+        title: {
+            en: 'Language Is the First Boundary',
+            fr: "La langue est la première frontière"
+        },
+        excerpt: {
+            en: 'Agent protocols encode jurisdiction, identity, and refusal before content flows. But they are written mostly in English, leaving the authority to interpret refusal and obligation in foreign hands. The investable layer is the multilingual protocol contract.',
+            fr: "Les protocoles agentiques intègrent juridiction, identité et refus avant le flux de contenu. Mais ils sont rédigés surtout en anglais, laissant l'autorité d'interpréter le refus et l'obligation entre des mains étrangères. La couche d'investissement est le contrat de protocole multilingue."
         }
     },
     'diop-daily-145': {
