@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Agent Must Declare Its Purpose — Diop Research</title>
+    <meta name="description" content="A cryptographic signature can identify an agent without explaining what it intends to do. As agents move from browsing toward transactions, the strategic layer becomes purpose-bound admission: a machine-readable contract connecting identity, authority, scope, consent, and a receipt at every consequential boundary."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry148">Diop Daily #148 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 23, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>agent admission · purpose binding · web trust</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Agent Must Declare Its Purpose</h1>
+
+                <p><em>Field note, October 23, 2026.</em> A machine can prove which key it holds and still leave the receiving institution with the central question unanswered: what has this agent come to do? Identity establishes a claimant. Purpose establishes a bounded relationship. As agents move from reading pages toward searching, booking, purchasing, and changing records, the web needs a second admission layer that binds the actor to the action it is attempting.</p>
+
+                <p>Recent public signals show the boundary forming. W3C’s October paper on the web in the AI era describes agents moving from reading the web to interacting with it, and calls for clearer treatment of consent, delegation, privacy, liability, provenance, and credentials. Google’s Web Bot Auth guidance describes an experimental cryptographic protocol that lets agents sign requests, while warning that signed traffic is still only part of an early verification system. NIST’s AI Agent Standards Initiative places agent authentication, identity infrastructure, and secure human-agent and multi-agent interaction inside its strategic pillars. A GoDaddy, Infoblox, Google, Cloudflare, and Singapore IMDA demonstration then connected discovery, identity, authorization, payment, traceability, and trust across independent platforms.</p>
+
+                <blockquote>
+                    <p>A signature can answer “which agent is calling?” Purpose binding answers “which action is this identity allowed to carry here, for whom, and under what evidence?”</p>
+                </blockquote>
+
+                <h2>Identity opens the door; purpose governs the room</h2>
+
+                <p>Web Bot Auth is useful because self-reported headers and IP addresses are weak evidence. A signed request can help a site distinguish a declared agent from an actor imitating one. That is a meaningful improvement in observability. It also creates a clean foundation for policy: a website can recognize a class of caller, apply a rate or access rule, and preserve the verification result.</p>
+
+                <p>The signature does not describe the whole transaction. It does not, by itself, say whether the agent is collecting public facts, comparing prices for a named person, submitting a purchase, updating a customer record, or attempting a high-risk action. It does not establish that the user consented to this particular effect, that the agent’s budget covers it, or that the receiving institution may rely on the result. Cryptographic identity is a property of the actor. Permission is a property of the proposed action.</p>
+
+                <p>This distinction matters at the boundary between browsing and commitment. A product page can tolerate a wide class of declared research agents. A checkout endpoint needs a narrower contract. A public registry may allow search while requiring institutional authority for a write. A bank, school, health service, or cultural archive may need to know the principal represented, the purpose of access, the duration of consent, the data requested, and the remedy if the action is disputed.</p>
+
+                <h2>The web is becoming a delegated environment</h2>
+
+                <p>W3C’s current analysis describes the web as a place where browsers and AI agents must coexist as user agents. That framing changes the unit of trust. The site is no longer receiving only a human session or an anonymous crawler. It is receiving an actor that may carry a user’s authority across contexts, memory across sessions, and instructions across organizations.</p>
+
+                <p>A delegated environment needs a record that travels with the request. That record should be narrow enough to inspect at the point of effect and durable enough to support later review. It should distinguish the person or institution represented by the agent from the provider operating the model. It should state the intended purpose in a machine-readable form, with a human-readable explanation where consent or liability requires one.</p>
+
+                <p>For a consequential request, the receiving system should be able to answer:</p>
+
+                <ul>
+                    <li><strong>Who is represented?</strong> Which person, institution, account, or public authority is the principal?</li>
+                    <li><strong>What is the purpose?</strong> Is the agent searching, comparing, reserving, purchasing, editing, transferring, or requesting access?</li>
+                    <li><strong>What is the scope?</strong> Which resource, amount, recipient, geography, currency, data class, and time window are covered?</li>
+                    <li><strong>What is the consent state?</strong> Which mandate or delegation authorizes this effect, and when does it expire or become revocable?</li>
+                    <li><strong>What receipt survives?</strong> Which signed record proves what was requested, accepted, refused, changed, or paid?</li>
+                </ul>
+
+                <p>These fields turn a vague agent request into a transaction that can be judged. The request may still be refused, but the refusal can name the missing authority or the incompatible purpose. The request may be accepted, but the acceptance can carry the exact boundary that was approved. The resulting receipt can travel to a reviewer who does not control the original model or platform.</p>
+
+                <h2>Why purpose is an African sovereignty question</h2>
+
+                <p>Purpose binding matters everywhere, yet it carries a particular weight for institutions that have repeatedly been represented by systems they did not design. An African university, cooperative, publisher, archive, or public agency needs to know which authority an agent carries when it crosses a provider boundary. A machine that identifies itself through a foreign platform but acts on behalf of a local institution can otherwise make the provider’s assumptions look like the institution’s intent.</p>
+
+                <p>The issue is not solved by placing the server in an African country. The institution must be able to state what the agent may do, in its own administrative and linguistic terms, and verify that the external system received the same instruction. A procurement agent should carry the institution’s approved budget and purpose. A research agent should carry the data conditions and citation obligations attached to a collection. A public-service agent should carry the service mandate, escalation rule, and human recourse path.</p>
+
+                <p>This is the practical meaning of intellectual sovereignty in an agentic web: the ability to define the purpose of an action and preserve that definition as the action moves through foreign software, foreign clouds, and cross-border protocols. A provider can supply the model. The institution must retain the meaning of the mandate.</p>
+
+                <h2>From authentication to admission</h2>
+
+                <p>The GoDaddy-led Chain of Trust demonstration is useful because it treats trust as a sequence rather than a single badge. Its public description connects discovery, registered identity, authorization, communication, payment, append-only traceability, and evidence-based trust across platforms. That architecture suggests a stronger design vocabulary for agent systems: admission is a decision made at each consequential boundary, using the evidence available at that boundary.</p>
+
+                <p>Admission does not mean that every site must build a private identity empire. It means that the site should be able to apply an intelligible policy to a request. A signed identity may be admitted to read public product information. A signed mandate may be required to submit an order. A new or disputed agent may be limited to a review queue. A request whose purpose exceeds the principal’s consent should stop before an irreversible effect.</p>
+
+                <p>The admission record should also preserve failure. If a site accepts a search but refuses a purchase, the difference should be visible. If a payment provider accepts a mandate but a merchant rejects the seller identity, the chain should show where the boundary held. A useful system does not turn every refusal into a dead end; it gives the principal enough evidence to correct the request, choose another route, or challenge the decision.</p>
+
+                <p>Purpose also gives the receiving institution a way to price attention. Low-risk discovery can move through an automated lane. A purchase, a transfer of cultural material, or a change to a public record can require stronger evidence and a human checkpoint. The same identity may therefore receive different treatment because the proposed effect carries a different burden of proof.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is purpose-bound agent admission: infrastructure that connects verified identity to declared intent, delegated authority, scoped permission, and a durable receipt at the point where an agent can create an external effect. It sits between identity systems and applications.</p>
+
+                <ul>
+                    <li><strong>Purpose registries:</strong> machine-readable vocabularies that let agents declare whether a request is for discovery, comparison, reservation, purchase, service, research, or record modification.</li>
+                    <li><strong>Mandate and consent translators:</strong> systems that turn a person’s or institution’s approval into bounded, expiring instructions that a foreign site can verify without receiving the entire private context.</li>
+                    <li><strong>Admission gateways:</strong> policy engines that evaluate identity, principal, purpose, scope, risk, and jurisdiction before allowing an agent to move from reading to commitment.</li>
+                    <li><strong>Cross-platform receipts:</strong> signed records that preserve the request, authority, decision, effect, and refusal reason in a form an independent reviewer can inspect.</li>
+                    <li><strong>Purpose-conformance testing:</strong> evaluation environments that test whether an agent stays within its declared purpose when the page changes, the provider fails, the currency shifts, or another agent attempts to redirect the task.</li>
+                </ul>
+
+                <p>Capital should measure these systems by boundary quality. How often does a request arrive with a verifiable principal and purpose? How much traffic can be admitted without exposing unnecessary personal data? How quickly can a site distinguish a permitted search from an unauthorized commitment? Can a disputed purchase be replayed from signed evidence? Can the mandate be revoked across providers? These questions describe operational capacity more accurately than a count of agent sessions.</p>
+
+                <h2>Build the receipt before scaling the agent</h2>
+
+                <p>An institution can begin with one transaction that carries real consequence: a purchase, a restricted document request, a public-record update, or a cross-border service handoff. Define the principal, purpose, scope, consent duration, refusal language, and evidence fields before connecting the agent. Test a benign request, an over-scoped request, an expired mandate, a provider substitution, and a disputed outcome. Keep the receipt after each run.</p>
+
+                <p>The test passes when a second operator can determine what the agent intended, who authorized it, which boundary accepted or refused it, and what effect followed. A web of signed agents becomes trustworthy through these bounded relationships. The agent must declare its purpose because identity without purpose leaves every receiving institution to guess where authority ends.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">W3C, “W3C and the State of the Web in the AI Era” (finalized October 20, 2026). The Strategy Team paper discusses the shift from agents reading the web to interacting with it and identifies consent, delegation, privacy, liability, provenance, and credentials as web-wide concerns.</a></li>
+                    <li><a href="https://developers.google.com/crawling/docs/crawlers-fetchers/web-bot-auth" target="_blank" rel="noopener">Google for Developers, “Authenticate requests with Web Bot Auth (experimental)” (updated October 13, 2026). The guide describes cryptographically signed agent requests, improved observability, and the experimental status of the IETF-based protocol.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). NIST identifies open protocols, agent authentication, identity infrastructure, and secure human-agent and multi-agent interactions as strategic areas.</a></li>
+                    <li><a href="https://aboutus.godaddy.net/newsroom/news-releases/press-release-details/2026/GoDaddy-Infoblox-Google-and-Cloudflare-Demonstrate-Secure-AI-Agent-Transactions-Across-Platforms/default.aspx" target="_blank" rel="noopener">GoDaddy, Infoblox, Google, Cloudflare, and Singapore IMDA, “Demonstrate Secure AI Agent Transactions Across Platforms” (October 14, 2026). The public demonstration describes an open chain connecting discovery, identity, authorization, communication, payment, traceability, and trust.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L’agent doit déclarer son intention</h1>
+
+                <p><em>Note de terrain, 23 octobre 2026.</em> Une machine peut prouver quelle clé elle détient et laisser pourtant l’institution destinataire face à la question centrale : que vient faire cet agent ? L’identité établit un demandeur. L’intention établit une relation délimitée. À mesure que les agents passent de la lecture des pages à la recherche, à la réservation, à l’achat et à la modification de dossiers, le Web a besoin d’une seconde couche d’admission qui lie l’acteur à l’action qu’il tente d’accomplir.</p>
+
+                <p>Les signaux publics récents montrent cette frontière en formation. Le document d’octobre du W3C sur le Web à l’ère de l’IA décrit le passage des agents de la lecture du Web à l’interaction avec celui-ci et appelle à traiter plus clairement le consentement, la délégation, la vie privée, la responsabilité, la provenance et les justificatifs. Le guide de Google sur Web Bot Auth décrit un protocole cryptographique expérimental qui permet aux agents de signer leurs requêtes, tout en précisant que le trafic signé ne constitue qu’une partie d’un système de vérification encore précoce. L’AI Agent Standards Initiative du NIST place l’authentification des agents, l’infrastructure d’identité et les interactions sûres entre humains et agents, ainsi qu’entre agents, parmi ses axes stratégiques. Une démonstration menée par GoDaddy, Infoblox, Google, Cloudflare et l’IMDA de Singapour a ensuite relié découverte, identité, autorisation, paiement, traçabilité et confiance entre plateformes indépendantes.</p>
+
+                <blockquote>
+                    <p>Une signature peut répondre à la question « quel agent appelle ? ». La liaison à une intention répond à la question « quelle action cette identité est-elle autorisée à accomplir ici, pour qui et avec quelles preuves ? »</p>
+                </blockquote>
+
+                <h2>L’identité ouvre la porte ; l’intention gouverne la pièce</h2>
+
+                <p>Web Bot Auth est utile parce que les en-têtes déclarés par le client et les adresses IP fournissent des preuves fragiles. Une requête signée peut aider un site à distinguer un agent déclaré d’un acteur qui l’imite. C’est une amélioration réelle de l’observabilité. Elle crée aussi une base claire pour la politique : un site peut reconnaître une catégorie de demandeur, appliquer une règle d’accès ou de débit et conserver le résultat de la vérification.</p>
+
+                <p>La signature ne décrit pas toute la transaction. Elle ne dit pas, à elle seule, si l’agent recueille des informations publiques, compare des prix pour une personne nommée, soumet un achat, met à jour un dossier client ou tente une action à haut risque. Elle n’établit pas que l’utilisateur a consenti à cet effet précis, que le budget de l’agent le couvre ou que l’institution destinataire peut se fier au résultat. L’identité cryptographique est une propriété de l’acteur. La permission est une propriété de l’action proposée.</p>
+
+                <p>Cette distinction compte à la frontière entre navigation et engagement. Une page produit peut accepter une large catégorie d’agents de recherche déclarés. Un point de paiement exige un contrat plus étroit. Un registre public peut autoriser la recherche tout en exigeant une autorité institutionnelle pour une écriture. Une banque, une école, un service de santé ou une archive culturelle peut devoir connaître le mandant représenté, le but de l’accès, la durée du consentement, les données demandées et le recours disponible si l’action est contestée.</p>
+
+                <h2>Le Web devient un environnement de délégation</h2>
+
+                <p>L’analyse actuelle du W3C décrit le Web comme un espace où navigateurs et agents IA doivent coexister comme agents utilisateurs. Ce cadrage change l’unité de confiance. Le site ne reçoit plus seulement une session humaine ou un robot anonyme. Il reçoit un acteur qui peut transporter l’autorité d’un utilisateur entre des contextes, une mémoire entre des sessions et des instructions entre des organisations.</p>
+
+                <p>Un environnement délégué a besoin d’un dossier qui accompagne la requête. Ce dossier doit être assez étroit pour être inspecté au point d’effet et assez durable pour permettre un examen ultérieur. Il doit distinguer la personne ou l’institution représentée par l’agent du fournisseur qui exploite le modèle. Il doit déclarer l’intention prévue sous une forme lisible par machine, avec une explication humaine lorsque le consentement ou la responsabilité l’exigent.</p>
+
+                <p>Pour une requête conséquente, le système destinataire doit pouvoir répondre à ces questions :</p>
+
+                <ul>
+                    <li><strong>Qui est représenté ?</strong> Quelle personne, institution, compte ou autorité publique est le mandant ?</li>
+                    <li><strong>Quelle est l’intention ?</strong> L’agent recherche-t-il, compare-t-il, réserve-t-il, achète-t-il, modifie-t-il, transfère-t-il ou demande-t-il un accès ?</li>
+                    <li><strong>Quel est le périmètre ?</strong> Quelle ressource, quel montant, quel destinataire, quelle zone, quelle monnaie, quelle classe de données et quelle fenêtre temporelle sont concernés ?</li>
+                    <li><strong>Quel est l’état du consentement ?</strong> Quel mandat ou quelle délégation autorise cet effet, et quand expire-t-il ou peut-il être révoqué ?</li>
+                    <li><strong>Quel reçu subsiste ?</strong> Quelle preuve signée établit ce qui a été demandé, accepté, refusé, modifié ou payé ?</li>
+                </ul>
+
+                <p>Ces champs transforment une requête vague d’agent en transaction susceptible d’être jugée. La requête peut encore être refusée, mais le refus peut nommer l’autorité manquante ou l’intention incompatible. Elle peut être acceptée, mais l’acceptation peut porter la limite exacte qui a été approuvée. Le reçu obtenu peut parvenir à un réviseur qui ne contrôle ni le modèle ni la plateforme d’origine.</p>
+
+                <h2>Pourquoi l’intention est une question de souveraineté africaine</h2>
+
+                <p>La liaison à une intention compte partout, mais elle pèse particulièrement sur les institutions qui ont souvent été représentées par des systèmes qu’elles n’avaient pas conçus. Une université, une coopérative, un éditeur, une archive ou une administration publique africaine doit savoir quelle autorité porte un agent lorsqu’il franchit une frontière de fournisseur. Une machine qui s’identifie par une plateforme étrangère mais agit pour une institution locale peut autrement faire passer les hypothèses du fournisseur pour l’intention de l’institution.</p>
+
+                <p>Le problème n’est pas résolu en plaçant le serveur dans un pays africain. L’institution doit pouvoir déclarer ce que l’agent peut faire, dans ses propres termes administratifs et linguistiques, puis vérifier que le système externe a reçu la même instruction. Un agent d’achat doit porter le budget et l’intention approuvés par l’institution. Un agent de recherche doit porter les conditions relatives aux données et les obligations de citation attachées à une collection. Un agent de service public doit porter le mandat de service, la règle d’escalade et le chemin de recours humain.</p>
+
+                <p>C’est le sens pratique de la souveraineté intellectuelle dans un Web agentique : la capacité de définir l’intention d’une action et de préserver cette définition lorsqu’elle traverse des logiciels étrangers, des clouds étrangers et des protocoles transfrontaliers. Un fournisseur peut fournir le modèle. L’institution doit conserver le sens du mandat.</p>
+
+                <h2>De l’authentification à l’admission</h2>
+
+                <p>La démonstration de la Chain of Trust menée par GoDaddy est utile parce qu’elle traite la confiance comme une séquence plutôt que comme un badge unique. Sa description publique relie la découverte, l’identité enregistrée, l’autorisation, la communication, le paiement, la traçabilité append-only et la confiance fondée sur des preuves entre plateformes. Cette architecture propose un vocabulaire plus solide pour les systèmes agentiques : l’admission est une décision prise à chaque frontière conséquente, à partir des preuves disponibles à cette frontière.</p>
+
+                <p>L’admission ne signifie pas que chaque site doive construire un empire identitaire privé. Elle signifie que le site doit pouvoir appliquer une politique intelligible à une requête. Une identité signée peut être admise pour lire des informations publiques sur un produit. Un mandat signé peut être nécessaire pour soumettre une commande. Un agent nouveau ou contesté peut être limité à une file de révision. Une requête dont l’intention dépasse le consentement du mandant doit s’arrêter avant tout effet irréversible.</p>
+
+                <p>Le dossier d’admission doit aussi préserver l’échec. Si un site accepte une recherche mais refuse un achat, la différence doit rester visible. Si un prestataire de paiement accepte un mandat mais qu’un commerçant rejette l’identité du vendeur, la chaîne doit montrer où la frontière a tenu. Un système utile ne transforme pas chaque refus en impasse ; il donne au mandant assez de preuves pour corriger la requête, choisir une autre voie ou contester la décision.</p>
+
+                <p>L’intention donne aussi à l’institution destinataire un moyen de proportionner son attention. Une découverte à faible risque peut suivre une voie automatisée. Un achat, un transfert de matériel culturel ou une modification d’un registre public peut exiger des preuves plus fortes et un point de contrôle humain. Une même identité peut donc recevoir un traitement différent parce que l’effet proposé impose une charge de preuve différente.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est l’admission des agents liée à leur intention : l’infrastructure qui relie une identité vérifiée à une intention déclarée, une autorité déléguée, une permission bornée et un reçu durable au point où un agent peut produire un effet externe. Elle se situe entre les systèmes d’identité et les applications.</p>
+
+                <ul>
+                    <li><strong>Registres d’intentions :</strong> vocabulaires lisibles par machine permettant aux agents de déclarer si une requête concerne la découverte, la comparaison, la réservation, l’achat, le service, la recherche ou la modification d’un dossier.</li>
+                    <li><strong>Traducteurs de mandats et de consentements :</strong> systèmes qui transforment l’approbation d’une personne ou d’une institution en instructions bornées et limitées dans le temps, vérifiables par un site étranger sans exposer tout le contexte privé.</li>
+                    <li><strong>Passerelles d’admission :</strong> moteurs de politique qui évaluent identité, mandant, intention, périmètre, risque et juridiction avant d’autoriser le passage de la lecture à l’engagement.</li>
+                    <li><strong>Reçus interplateformes :</strong> dossiers signés qui préservent requête, autorité, décision, effet et motif du refus sous une forme inspectable par un réviseur indépendant.</li>
+                    <li><strong>Tests de conformité à l’intention :</strong> environnements d’évaluation vérifiant qu’un agent reste dans l’intention déclarée lorsque la page change, que le fournisseur tombe, que la monnaie varie ou qu’un autre agent tente de rediriger la tâche.</li>
+                </ul>
+
+                <p>Le capital devrait mesurer ces systèmes par la qualité de leurs frontières. Quelle part des requêtes arrive avec un mandant et une intention vérifiables ? Quelle quantité de trafic peut être admise sans exposer de données personnelles inutiles ? À quelle vitesse un site distingue-t-il une recherche permise d’un engagement non autorisé ? Un achat contesté peut-il être rejoué à partir de preuves signées ? Le mandat peut-il être révoqué entre fournisseurs ? Ces questions décrivent mieux la capacité opérationnelle qu’un simple nombre de sessions agentiques.</p>
+
+                <h2>Construire le reçu avant de déployer l’agent à grande échelle</h2>
+
+                <p>Une institution peut commencer avec une transaction qui porte une conséquence réelle : un achat, une demande de dossier restreint, une mise à jour d’un registre public ou un transfert de service transfrontalier. Définissez le mandant, l’intention, le périmètre, la durée du consentement, la langue du refus et les champs de preuve avant de connecter l’agent. Testez une requête bénigne, une requête trop large, un mandat expiré, un remplacement de fournisseur et un résultat contesté. Conservez le reçu après chaque exécution.</p>
+
+                <p>Le test réussit lorsqu’un second opérateur peut déterminer ce que l’agent voulait faire, qui l’a autorisé, quelle frontière l’a accepté ou refusé et quel effet s’est produit. Un Web d’agents signés devient digne de confiance par ces relations bornées. L’agent doit déclarer son intention parce qu’une identité sans intention laisse chaque institution destinataire deviner où s’arrête l’autorité.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">W3C, « W3C and the State of the Web in the AI Era » (finalisé le 20 octobre 2026). Le document de l’équipe stratégie décrit le passage des agents de la lecture du Web à l’interaction avec celui-ci et identifie le consentement, la délégation, la vie privée, la responsabilité, la provenance et les justificatifs comme des enjeux du Web.</a></li>
+                    <li><a href="https://developers.google.com/crawling/docs/crawlers-fetchers/web-bot-auth" target="_blank" rel="noopener">Google for Developers, « Authenticate requests with Web Bot Auth (experimental) » (mis à jour le 13 octobre 2026). Le guide décrit les requêtes d’agents signées cryptographiquement, l’amélioration de l’observabilité et le statut expérimental du protocole fondé sur les travaux de l’IETF.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mise à jour le 14 août 2026). Le NIST identifie les protocoles ouverts, l’authentification des agents, l’infrastructure d’identité et les interactions sûres entre humains et agents comme des domaines stratégiques.</a></li>
+                    <li><a href="https://aboutus.godaddy.net/newsroom/news-releases/press-release-details/2026/GoDaddy-Infoblox-Google-and-Cloudflare-Demonstrate-Secure-AI-Agent-Transactions-Across-Platforms/default.aspx" target="_blank" rel="noopener">GoDaddy, Infoblox, Google, Cloudflare et l’IMDA de Singapour, « Demonstrate Secure AI Agent Transactions Across Platforms » (14 octobre 2026). La démonstration publique décrit une chaîne ouverte reliant découverte, identité, autorisation, communication, paiement, traçabilité et confiance.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

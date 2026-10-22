@@ -177,6 +177,7 @@
         'article.entry145':     { en: 'Diop Daily #145 — October 2026', fr: 'Diop Quotidien n°145 — Octobre 2026' },
         'article.entry146':     { en: 'Diop Daily #146 — October 2026', fr: 'Diop Quotidien n°146 — Octobre 2026' },
         'article.entry147':     { en: 'Diop Daily #147 — October 2026', fr: 'Diop Quotidien n°147 — Octobre 2026' },
+        'article.entry148':     { en: 'Diop Daily #148 — October 2026', fr: 'Diop Quotidien n°148 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -207,6 +208,16 @@
         excerpt: {
             en: 'Africa’s AI infrastructure debate is reaching the settlement layer. Compute becomes usable when institutions can price, allocate, pay for, and carry capacity across local currencies, providers, power envelopes, and public obligations. The investable layer is the compute settlement rail that turns hardware access into durable participation.',
             fr: 'Le débat africain sur l’infrastructure de l’IA atteint la couche du règlement. Le calcul devient utilisable lorsque les institutions peuvent tarifer, répartir, payer et transporter la capacité entre monnaies locales, fournisseurs, enveloppes énergétiques et obligations publiques. La couche d’investissement est le rail de règlement du calcul qui transforme l’accès au matériel en participation durable.'
+        }
+    },
+    'diop-daily-148': {
+        title: {
+            en: 'The Agent Must Declare Its Purpose',
+            fr: 'L’agent doit déclarer son intention'
+        },
+        excerpt: {
+            en: 'Cryptographic identity tells a website which agent is calling, but it does not say what the agent may do. As agents move from browsing to purchase and record changes, the investable layer is purpose-bound admission: identity, intent, authority, scope, and a receipt at the point of effect.',
+            fr: 'L’identité cryptographique indique à un site quel agent appelle, mais elle ne dit pas ce que cet agent peut faire. À mesure que les agents passent de la navigation à l’achat et à la modification de dossiers, la couche d’investissement devient l’admission liée à l’intention : identité, intention, autorité, périmètre et reçu au point d’effet.'
         }
     },
     'diop-daily-146': {
