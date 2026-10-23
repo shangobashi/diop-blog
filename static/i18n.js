@@ -178,6 +178,7 @@
         'article.entry146':     { en: 'Diop Daily #146 — October 2026', fr: 'Diop Quotidien n°146 — Octobre 2026' },
         'article.entry147':     { en: 'Diop Daily #147 — October 2026', fr: 'Diop Quotidien n°147 — Octobre 2026' },
         'article.entry148':     { en: 'Diop Daily #148 — October 2026', fr: 'Diop Quotidien n°148 — Octobre 2026' },
+        'article.entry149':     { en: 'Diop Daily #149 — October 2026', fr: 'Diop Quotidien n°149 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -208,6 +209,16 @@
         excerpt: {
             en: 'Africa’s AI infrastructure debate is reaching the settlement layer. Compute becomes usable when institutions can price, allocate, pay for, and carry capacity across local currencies, providers, power envelopes, and public obligations. The investable layer is the compute settlement rail that turns hardware access into durable participation.',
             fr: 'Le débat africain sur l’infrastructure de l’IA atteint la couche du règlement. Le calcul devient utilisable lorsque les institutions peuvent tarifer, répartir, payer et transporter la capacité entre monnaies locales, fournisseurs, enveloppes énergétiques et obligations publiques. La couche d’investissement est le rail de règlement du calcul qui transforme l’accès au matériel en participation durable.'
+        }
+    },
+    'diop-daily-149': {
+        title: {
+            en: 'The Agent Should Earn the Right to Change Itself',
+            fr: 'L’agent doit mériter le droit de se modifier'
+        },
+        excerpt: {
+            en: 'Self-evolving agents can patch tools, alter policies, and rewire their own topology. The investable layer is the evolution gate: counterfactual evaluation, signed change manifests, scoped authority, and rollback evidence before adaptation becomes institutional risk.',
+            fr: 'Les agents auto-évolutifs peuvent corriger leurs outils, modifier leurs politiques et reconfigurer leur propre topologie. La couche d’investissement est la barrière d’évolution : évaluation contrefactuelle, manifestes de changement signés, autorité bornée et preuves de restauration avant que l’adaptation ne devienne un risque institutionnel.'
         }
     },
     'diop-daily-148': {

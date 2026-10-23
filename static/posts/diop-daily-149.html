@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Agent Should Earn the Right to Change Itself — Diop Research</title>
+    <meta name="description" content="Self-evolving agents are moving from fixed tools toward runtime patches, policy changes, and topology rewrites. The strategic question is which evidence earns a change: a signed invariant, a counterfactual test, a bounded rollback, and human authority at the point where adaptation becomes institutional risk."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry149">Diop Daily #149 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 24, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>self-evolving agents · change control · institutional capacity</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Agent Should Earn the Right to Change Itself</h1>
+
+                <p><em>Field note, October 24, 2026.</em> An agent that can act but cannot adapt becomes brittle under pressure. An agent that can rewrite its tools, policies, or internal topology without earning permission becomes an ungoverned institution. The difficult design problem lies between those failures: how can a system change itself while preserving a legible chain of evidence about what changed, why it changed, and who may reverse the decision?</p>
+
+                <p>Recent public work makes this question concrete. Google’s October 22 reference architecture for governed, self-evolving agents describes runtime tool synthesis, counterfactual simulation, signed operational invariants, and human approval before permanent topology changes. Google’s Agents CLI work from October 21 places deployment, evaluation, observability, and organization-specific policy gates in one lifecycle while allowing teams to extend the tool without forking it. W3C’s October paper on the web in the AI era asks how consent, delegation, privacy, liability, provenance, credentials, and human control should survive as agents move from reading pages to acting across them. NIST’s AI Agent Standards Initiative connects open protocols with identity infrastructure and security evaluations.</p>
+
+                <blockquote>
+                    <p>Adaptation becomes institutional power when the system can show the evidence that made a change permissible.</p>
+                </blockquote>
+
+                <h2>Change is an action with a larger blast radius</h2>
+
+                <p>Most agent discussions separate “using a tool” from “improving the agent.” That separation hides the real risk. A tool call changes an external system. A self-modification changes the future set of tool calls the system may make. A new middleware patch, a changed routing policy, a memory rule, or a new specialist in the agent graph alters the conditions under which later decisions will be produced.</p>
+
+                <p>The system therefore needs two kinds of evidence. It needs evidence that the proposed change addresses the observed problem, and evidence that the change remains inside the institution’s authority. Performance alone cannot answer the second question. A patch may lower latency while widening access to private data. A new specialist may improve incident response while acquiring permissions that no existing reviewer can inspect. A memory update may prevent a repeated failure while hardening a mistaken assumption into policy.</p>
+
+                <p>Self-evolution should be treated as a governed transaction with a before-state, a proposed delta, a test environment, an accountable approver, and a recovery path. The transaction can be fast, but its evidence cannot be imaginary.</p>
+
+                <h2>Three clocks of adaptation</h2>
+
+                <p>Google’s Project Chrysalis reference architecture is useful as a public design signal because it separates adaptation across different timescales. A temporary hot patch can respond to an active outage. A signed principle can influence future decisions. A topology change can install a lasting specialist. These changes have different reversibility, review burdens, and institutional consequences.</p>
+
+                <p>A serious agent should expose those clocks rather than hiding them inside one “autonomous” label:</p>
+
+                <ul>
+                    <li><strong>Operational clock:</strong> a bounded, reversible intervention can protect a live service while the system records its inputs, effect, expiry, and rollback command.</li>
+                    <li><strong>Learning clock:</strong> an observed result can become a candidate invariant only after the system separates correlation from causation, preserves the relevant trace, and tests the rule against counterexamples.</li>
+                    <li><strong>Constitutional clock:</strong> a change to permissions, roles, topology, or durable memory alters the institution that will make future decisions and therefore requires explicit authority.</li>
+                </ul>
+
+                <p>The mistake is to optimize every clock for the speed of the first one. Emergency mitigation deserves low latency, while durable institutional change deserves a slower gate. A system that uses one approval standard for both will either freeze during a failure or smuggle constitutional changes through an incident response path.</p>
+
+                <h2>Counterfactuals are the rehearsal room</h2>
+
+                <p>The strongest current signal in Google’s self-evolving architecture is the use of counterfactual simulation before a proposed policy reaches production. The architecture replays production traces against candidate interventions and compares their effects. This is a research reference, not proof that every organization can reproduce the reported results, but the design principle is portable: an agent should rehearse a change against the conditions that produced the problem.</p>
+
+                <p>That rehearsal should include more than the desired metric. A candidate change should be tested for:</p>
+
+                <ul>
+                    <li>the target outcome, such as latency, error rate, completion, or recovery time;</li>
+                    <li>side effects on privacy, permissions, cost, energy, language coverage, and human workload;</li>
+                    <li>behavior under adversarial inputs, missing data, provider substitution, and partial failure;</li>
+                    <li>reversibility, including whether the system can restore the prior tool, policy, memory, and topology state;</li>
+                    <li>evidence quality, so a later reviewer can distinguish an observed effect from a plausible story.</li>
+                </ul>
+
+                <p>This is where evaluation becomes an operating capability rather than a score attached to a model. A model benchmark tests a model under a fixed task. An evolution gate tests whether a proposed change is safe for this institution, in this environment, with these permissions and these recovery obligations. NIST’s emphasis on security evaluations and identity infrastructure points toward the same conclusion: the evaluated object is increasingly the agent’s authority to act, change, and be trusted across boundaries.</p>
+
+                <h2>The right to change must have a jurisdiction</h2>
+
+                <p>An agent’s ability to modify itself should be scoped like any other institutional authority. A research sandbox may permit a temporary tool experiment. A public-service system may permit a reversible routing change but require human approval for a new data path. A production agent handling financial or cultural records may be forbidden from adding permissions through an autonomous rewrite.</p>
+
+                <p>This jurisdiction should travel with the proposed change. The record should state the principal, the affected environment, the exact delta, the evidence used, the permissions touched, the expiry or review date, and the person or institution able to revoke it. The language of the record matters as well. If a local university or public agency cannot inspect the change in the language used for its governance, technical adaptability has outrun institutional control.</p>
+
+                <p>W3C’s analysis of agentic web activity emphasizes human control, consent, delegation, privacy, and liability because the agent is becoming a user agent with effects across contexts. Self-modification adds another layer: the institution must govern the actor’s ability to alter the machinery through which it exercises delegated authority. The question is no longer only whether the agent may perform an action. It is whether the agent may change the conditions that define future permission.</p>
+
+                <h2>Extensions are better than hidden forks</h2>
+
+                <p>Google’s Agents CLI extension system offers a practical software lesson. Teams often fork a tool when they need compliance scans, single sign-on, evaluation gates, or a different framework. The fork preserves immediate control but creates a maintenance split: every upstream improvement must be re-integrated, and every policy change must be rediscovered in a parallel command surface. An extension mechanism makes the local policy explicit while keeping the lifecycle legible.</p>
+
+                <p>The same principle applies to self-evolving agents. A change should enter through a declared extension point with a manifest, owner, version, permissions, tests, and rollback behavior. The agent may propose or synthesize the extension, but the extension should remain inspectable as an institution-owned artifact. A black-box rewrite keeps adaptation inside the model’s private state. A declared extension turns adaptation into a reviewable contribution to the system.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the evolution gate: infrastructure that lets an agent propose, test, authorize, install, observe, and reverse changes to its tools, policies, memory, and topology. It sits between the model runtime and the institution’s change-management authority.</p>
+
+                <ul>
+                    <li><strong>Change manifests:</strong> machine-readable records for proposed deltas, affected permissions, owners, dependencies, expiry, and rollback.</li>
+                    <li><strong>Counterfactual evaluation systems:</strong> replay environments that test agent changes against production-like traces, adversarial fixtures, cost envelopes, and local operating conditions.</li>
+                    <li><strong>Signed invariant stores:</strong> evidence layers that preserve which operational rule was learned, from which trace, under which review, and with what revocation path.</li>
+                    <li><strong>Topology admission controls:</strong> policy engines that govern when an agent may add, remove, or reassign a specialist, tool, memory source, or execution route.</li>
+                    <li><strong>Evolution observability:</strong> monitors that expose the difference between the current agent and its approved predecessor, including behavioral, permission, cost, and language effects.</li>
+                </ul>
+
+                <p>Capital can underwrite this layer through measurable questions. How many proposed changes are replayed before production? What share of installed changes carry a signed owner and expiry? How quickly can a disputed change be reversed? Can an independent operator reconstruct the evidence that admitted it? Which permissions can evolve autonomously, and which remain constitutionally fixed? These metrics describe institutional capacity more accurately than the number of autonomous tasks completed.</p>
+
+                <h2>A practical admission test</h2>
+
+                <p>Begin with one bounded change: a rate limit, a routing rule, a retrieval filter, or a temporary tool. Require the agent to produce a before-state fingerprint, a proposed delta, a counterfactual result, a permission diff, an approval record, and a rollback command. Run the change through a failure case and a benign case. Then ask a second operator to reconstruct the decision without consulting the model’s private chain of thought.</p>
+
+                <p>The test passes when the operator can state what changed, which evidence supported it, which authority admitted it, what side effects were measured, and how the prior state can be restored. The system has earned a larger change only when it can preserve that discipline under pressure.</p>
+
+                <p>Agents will eventually modify more than prompts. They will alter tools, routes, memory, policies, and organizational graphs. The institutions that benefit from this capacity will be those that make adaptation observable and reversible. A system earns the right to change itself when its changes can be judged by people who did not write the original model, operate the original provider, or trust the original assumption.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/en/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform/" target="_blank" rel="noopener">Google Developers Blog, “Architecting Governed, Self-Evolving AI Agents on Google Cloud” (October 22, 2026). A public reference architecture describing runtime tool synthesis, counterfactual simulation, signed operational invariants, causal evaluation, and human sign-off for permanent topology changes. Its reported performance figures are simulated reference results, not general production evidence.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/" target="_blank" rel="noopener">Google Developers Blog, “Powering the Agent Development Lifecycle with any framework, from ADK to LangChain and beyond” (October 21, 2026). Describes an extension system for deployment, evaluation, observability, compliance scans, and organization-specific policy without forking the CLI.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">W3C Strategy Team, “W3C and the State of the Web in the AI Era” (finalized October 20, 2026). Discusses the transition from agents reading the web to interacting with it and identifies consent, delegation, privacy, liability, provenance, credentials, and human control as standards questions.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). Identifies open protocols, agent authentication and identity infrastructure, and security evaluations for human-agent and multi-agent interaction as strategic activities.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L’agent doit mériter le droit de se modifier</h1>
+
+                <p><em>Note de terrain, 24 octobre 2026.</em> Un agent capable d’agir mais incapable de s’adapter devient fragile sous pression. Un agent capable de réécrire ses outils, ses politiques ou sa topologie interne sans obtenir d’autorisation devient une institution sans gouvernance. Le problème de conception difficile se situe entre ces deux échecs : comment un système peut-il se modifier tout en conservant une chaîne de preuves lisible sur ce qui a changé, la raison du changement et l’autorité qui peut inverser la décision ?</p>
+
+                <p>Les travaux publics récents rendent cette question concrète. L’architecture de référence publiée par Google le 22 octobre pour des agents auto-évolutifs gouvernés décrit la synthèse d’outils à l’exécution, la simulation contrefactuelle, les invariants opérationnels signés et l’approbation humaine avant les changements permanents de topologie. Le travail de Google sur Agents CLI, publié le 21 octobre, place déploiement, évaluation, observabilité et contrôles de politique propres à l’organisation dans un même cycle de vie, tout en permettant aux équipes d’étendre l’outil sans le forker. Le document d’octobre du W3C sur le Web à l’ère de l’IA demande comment le consentement, la délégation, la vie privée, la responsabilité, la provenance, les justificatifs et le contrôle humain peuvent survivre lorsque les agents passent de la lecture des pages à l’action entre plateformes. L’AI Agent Standards Initiative du NIST relie les protocoles ouverts à l’infrastructure d’identité et aux évaluations de sécurité.</p>
+
+                <blockquote>
+                    <p>L’adaptation devient un pouvoir institutionnel lorsque le système peut montrer les preuves qui ont rendu un changement permis.</p>
+                </blockquote>
+
+                <h2>Le changement est une action à plus grand rayon d’effet</h2>
+
+                <p>Les discussions sur les agents séparent souvent « utiliser un outil » et « améliorer l’agent ». Cette séparation masque le risque réel. Un appel d’outil modifie un système externe. Une auto-modification change l’ensemble futur des appels que le système peut effectuer. Un nouveau correctif middleware, une politique de routage modifiée, une règle mémoire ou un nouveau spécialiste dans le graphe de l’agent modifient les conditions dans lesquelles les décisions ultérieures seront produites.</p>
+
+                <p>Le système a donc besoin de deux sortes de preuves. Il lui faut prouver que le changement proposé répond au problème observé, et que ce changement reste dans l’autorité de l’institution. La performance ne peut pas répondre seule à la seconde question. Un correctif peut réduire la latence tout en élargissant l’accès à des données privées. Un nouveau spécialiste peut améliorer la réponse à un incident tout en acquérant des permissions qu’aucun réviseur existant ne peut examiner. Une mise à jour mémoire peut empêcher la répétition d’un échec tout en transformant une hypothèse erronée en politique durable.</p>
+
+                <p>L’auto-évolution doit être traitée comme une transaction gouvernée avec un état antérieur, une différence proposée, un environnement de test, un approbateur responsable et une voie de reprise. La transaction peut être rapide, mais ses preuves ne peuvent pas être imaginaires.</p>
+
+                <h2>Les trois horloges de l’adaptation</h2>
+
+                <p>L’architecture de référence Project Chrysalis de Google est utile comme signal public de conception parce qu’elle sépare l’adaptation selon plusieurs échelles de temps. Un correctif temporaire peut répondre à une panne active. Un principe signé peut influencer les décisions futures. Un changement de topologie peut installer un spécialiste durable. Ces changements ont une réversibilité, une charge de revue et des conséquences institutionnelles différentes.</p>
+
+                <p>Un agent sérieux doit exposer ces horloges au lieu de les cacher derrière une seule étiquette « autonome » :</p>
+
+                <ul>
+                    <li><strong>Horloge opérationnelle :</strong> une intervention bornée et réversible peut protéger un service actif tandis que le système enregistre ses entrées, son effet, son expiration et sa commande de restauration.</li>
+                    <li><strong>Horloge d’apprentissage :</strong> un résultat observé peut devenir un invariant candidat seulement après séparation de la corrélation et de la causalité, conservation de la trace pertinente et test de la règle contre des contre-exemples.</li>
+                    <li><strong>Horloge constitutionnelle :</strong> une modification des permissions, des rôles, de la topologie ou de la mémoire durable transforme l’institution qui prendra les décisions futures et exige donc une autorité explicite.</li>
+                </ul>
+
+                <p>L’erreur consiste à optimiser chaque horloge pour la vitesse de la première. L’atténuation d’urgence mérite une faible latence. Le changement institutionnel durable mérite une barrière plus lente. Un système qui applique le même standard d’approbation aux deux se figera pendant une panne ou fera passer des changements constitutionnels par un chemin de réponse aux incidents.</p>
+
+                <h2>Les contrefactuels sont la salle de répétition</h2>
+
+                <p>Le signal le plus solide de l’architecture auto-évolutive de Google est l’usage d’une simulation contrefactuelle avant qu’une politique proposée n’atteigne la production. L’architecture rejoue des traces de production contre des interventions candidates et compare leurs effets. Il s’agit d’une référence de recherche publique, et non d’une preuve que chaque organisation peut reproduire les résultats annoncés, mais le principe de conception est transférable : un agent doit répéter un changement face aux conditions qui ont produit le problème.</p>
+
+                <p>Cette répétition doit inclure plus que la métrique recherchée. Un changement candidat doit être testé pour :</p>
+
+                <ul>
+                    <li>le résultat visé, comme la latence, le taux d’erreur, l’achèvement ou le temps de reprise ;</li>
+                    <li>les effets secondaires sur la vie privée, les permissions, le coût, l’énergie, la couverture linguistique et la charge humaine ;</li>
+                    <li>le comportement face aux entrées adversariales, aux données manquantes, au remplacement du fournisseur et à la défaillance partielle ;</li>
+                    <li>la réversibilité, notamment la capacité à restaurer l’outil, la politique, la mémoire et la topologie précédents ;</li>
+                    <li>la qualité des preuves, afin qu’un réviseur ultérieur distingue un effet observé d’un récit plausible.</li>
+                </ul>
+
+                <p>C’est ici que l’évaluation devient une capacité opératoire plutôt qu’un score attaché à un modèle. Un benchmark de modèle teste un modèle sur une tâche fixe. Une barrière d’évolution teste si un changement proposé est sûr pour cette institution, dans cet environnement, avec ces permissions et ces obligations de reprise. L’accent du NIST sur les évaluations de sécurité et l’infrastructure d’identité mène à la même conclusion : l’objet évalué devient de plus en plus l’autorité de l’agent pour agir, se modifier et inspirer confiance entre les frontières.</p>
+
+                <h2>Le droit de se modifier doit avoir une juridiction</h2>
+
+                <p>La capacité d’un agent à se modifier doit être bornée comme toute autre autorité institutionnelle. Un laboratoire de recherche peut autoriser une expérience temporaire sur un outil. Un système de service public peut autoriser une modification réversible du routage, mais exiger une approbation humaine pour un nouveau chemin de données. Un agent de production qui traite des dossiers financiers ou culturels peut être empêché d’ajouter des permissions par une réécriture autonome.</p>
+
+                <p>Cette juridiction doit accompagner le changement proposé. Le dossier doit indiquer le mandant, l’environnement touché, la différence exacte, les preuves utilisées, les permissions concernées, la date d’expiration ou de revue, ainsi que la personne ou l’institution capable de le révoquer. La langue du dossier compte aussi. Si une université ou une administration publique locale ne peut pas examiner le changement dans la langue de sa gouvernance, l’adaptabilité technique a dépassé le contrôle institutionnel.</p>
+
+                <p>L’analyse du W3C sur l’activité agentique du Web insiste sur le contrôle humain, le consentement, la délégation, la vie privée et la responsabilité parce que l’agent devient un agent utilisateur produisant des effets entre contextes. L’auto-modification ajoute une couche : l’institution doit gouverner la capacité de l’acteur à modifier la machinerie par laquelle il exerce l’autorité déléguée. La question n’est plus seulement de savoir si l’agent peut exécuter une action. Il faut aussi savoir s’il peut modifier les conditions qui définissent la permission future.</p>
+
+                <h2>Les extensions valent mieux que les forks cachés</h2>
+
+                <p>Le système d’extensions d’Agents CLI de Google offre une leçon logicielle concrète. Les équipes forquent souvent un outil lorsqu’elles ont besoin d’analyses de conformité, d’un accès unique, de barrières d’évaluation ou d’un autre cadre. Le fork conserve le contrôle immédiat mais crée une séparation de maintenance : chaque amélioration amont doit être réintégrée et chaque changement de politique doit être redécouvert dans une surface de commande parallèle. Un mécanisme d’extension rend la politique locale explicite tout en conservant la lisibilité du cycle de vie.</p>
+
+                <p>Le même principe vaut pour les agents auto-évolutifs. Un changement doit entrer par un point d’extension déclaré avec un manifeste, un propriétaire, une version, des permissions, des tests et un comportement de restauration. L’agent peut proposer ou synthétiser l’extension, mais celle-ci doit rester inspectable comme un artefact détenu par l’institution. Une réécriture opaque garde l’adaptation dans l’état privé du modèle. Une extension déclarée transforme l’adaptation en contribution révisable au système.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est la barrière d’évolution : l’infrastructure qui permet à un agent de proposer, tester, autoriser, installer, observer et inverser les changements touchant ses outils, ses politiques, sa mémoire et sa topologie. Elle se situe entre le runtime du modèle et l’autorité de gestion des changements de l’institution.</p>
+
+                <ul>
+                    <li><strong>Manifestes de changement :</strong> dossiers lisibles par machine pour les différences proposées, les permissions touchées, les propriétaires, les dépendances, l’expiration et la restauration.</li>
+                    <li><strong>Systèmes d’évaluation contrefactuelle :</strong> environnements de rejeu qui testent les changements d’agent sur des traces proches de la production, des bancs adversariaux, des enveloppes de coût et des conditions locales d’exploitation.</li>
+                    <li><strong>Registres d’invariants signés :</strong> couches de preuve qui conservent la règle opérationnelle apprise, sa trace d’origine, sa revue et sa voie de révocation.</li>
+                    <li><strong>Contrôles d’admission de topologie :</strong> moteurs de politique qui gouvernent le moment où un agent peut ajouter, supprimer ou réaffecter un spécialiste, un outil, une source mémoire ou une route d’exécution.</li>
+                    <li><strong>Observabilité de l’évolution :</strong> outils qui exposent la différence entre l’agent actuel et son prédécesseur approuvé, y compris les effets comportementaux, permissionnels, financiers et linguistiques.</li>
+                </ul>
+
+                <p>Le capital peut évaluer cette couche avec des questions mesurables. Combien de changements proposés sont rejoués avant la production ? Quelle part des changements installés porte un propriétaire et une expiration signés ? À quelle vitesse un changement contesté peut-il être inversé ? Un opérateur indépendant peut-il reconstruire les preuves qui l’ont admis ? Quelles permissions peuvent évoluer de manière autonome et lesquelles restent constitutionnellement fixes ? Ces mesures décrivent mieux la capacité institutionnelle que le nombre de tâches autonomes achevées.</p>
+
+                <h2>Un test pratique d’admission</h2>
+
+                <p>Commencez avec un changement borné : une limite de débit, une règle de routage, un filtre de récupération ou un outil temporaire. Demandez à l’agent de produire l’empreinte de l’état antérieur, la différence proposée, le résultat contrefactuel, le diff des permissions, le dossier d’approbation et la commande de restauration. Faites passer le changement par un cas d’échec et un cas normal. Demandez ensuite à un second opérateur de reconstruire la décision sans consulter la chaîne de pensée privée du modèle.</p>
+
+                <p>Le test réussit lorsque l’opérateur peut dire ce qui a changé, quelles preuves l’ont soutenu, quelle autorité l’a admis, quels effets secondaires ont été mesurés et comment l’état antérieur peut être restauré. Le système ne mérite un changement plus large que lorsqu’il conserve cette discipline sous pression.</p>
+
+                <p>Les agents finiront par modifier plus que des prompts. Ils modifieront des outils, des routes, des mémoires, des politiques et des graphes organisationnels. Les institutions qui bénéficieront de cette capacité seront celles qui rendront l’adaptation observable et réversible. Un système mérite le droit de se modifier lorsque ses changements peuvent être jugés par des personnes qui n’ont écrit ni le modèle initial, ni le fournisseur d’origine, ni l’hypothèse initiale.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/en/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform/" target="_blank" rel="noopener">Google Developers Blog, « Architecting Governed, Self-Evolving AI Agents on Google Cloud » (22 octobre 2026). Une architecture de référence publique décrivant la synthèse d’outils à l’exécution, la simulation contrefactuelle, les invariants opérationnels signés, l’évaluation causale et l’approbation humaine pour les changements permanents de topologie. Les résultats de performance annoncés sont des résultats de référence simulés, non une preuve générale en production.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/" target="_blank" rel="noopener">Google Developers Blog, « Powering the Agent Development Lifecycle with any framework, from ADK to LangChain and beyond » (21 octobre 2026). Décrit un système d’extensions pour le déploiement, l’évaluation, l’observabilité, les contrôles de conformité et les politiques propres à une organisation sans forker la CLI.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">Équipe stratégie du W3C, « W3C and the State of the Web in the AI Era » (finalisé le 20 octobre 2026). Décrit le passage des agents de la lecture du Web à l’interaction avec celui-ci et identifie le consentement, la délégation, la vie privée, la responsabilité, la provenance, les justificatifs et le contrôle humain comme des questions de normalisation.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mis à jour le 14 août 2026). Identifie les protocoles ouverts, l’authentification et l’infrastructure d’identité des agents ainsi que les évaluations de sécurité pour les interactions humain-agent et multi-agents comme des axes stratégiques.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
