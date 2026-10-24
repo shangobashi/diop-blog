@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Web Needs a Price for Machine Attention — Diop Research</title>
+    <meta name="description" content="AI agents have become a second audience for the Web, but discovery does not guarantee payment or consent. The strategic layer is machine-use rights: a measurable contract for access, purpose, provenance, reporting, and settlement that lets publishers and African institutions participate without surrendering their archives."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry150">Diop Daily #150 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 25, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>machine-use rights · content settlement · public archives</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Web Needs a Price for Machine Attention</h1>
+
+                <p><em>Field note, October 25, 2026.</em> The Web has acquired a second audience. People still read pages, compare products, follow links, and make decisions, while software increasingly performs those same movements on their behalf. The machine visitor is becoming a recurring participant in publishing, commerce, research, and public information. The old bargain for the Web was simple: a publisher supplied information, a search engine indexed it, and a human visitor might arrive. Agentic traffic breaks that sequence because discovery can happen without a click, a citation can become an answer, and a useful page can be consumed without the publisher learning what was taken or receiving anything in return.</p>
+
+                <p>The strategic question is therefore larger than whether websites should allow or block agents. Institutions need a machine-use contract: a way to state what an agent may read, how the material may be used, what evidence of use must survive, and when money or another form of consideration is due. This contract belongs at the boundary between content and computation. It should serve a small publisher, a cultural archive, a research laboratory, and a public information service as seriously as it serves a large platform.</p>
+
+                <p>Recent public evidence makes the gap visible. The W3C Strategy Team’s October paper on the Web in the AI era identifies commerce for content, fragment-level provenance, training preferences, consent, and liability as unresolved work. Cloudflare’s September account describes a rapid rise in agent requests, a growing difference between training crawlers and agents acting for people, and new systems for pay-per-use content, machine-readable access terms, reporting, and HTTP 402 settlement. The C2PA 2.4 specification adds machine-readable AI disclosure, repository receipts, structured-text support, and stronger ways to preserve the history of an asset as it changes.</p>
+
+                <blockquote>
+                    <p>Discovery is a route to value. It is not the settlement of value.</p>
+                </blockquote>
+
+                <h2>The second audience does different work</h2>
+
+                <p>A human reader typically arrives, looks, remembers, shares, subscribes, or leaves. An agent can read a page, extract a claim, combine it with other sources, answer a question, and return the result without exposing the original page to a human. That path creates value for the user and cost for the publisher. The page may be fetched repeatedly because a question is asked repeatedly. A research archive may be queried at a high rate even though no individual page changes. A small technical publication may become part of thousands of answers while remaining invisible in its own analytics.</p>
+
+                <p>These uses are not interchangeable. A training crawler copies material into a model-building process. A research agent may quote a paragraph with attribution. A shopping agent may inspect a product page, compare an offer, and initiate a purchase. A public-service agent may consult a government notice and carry its meaning into a benefits decision. Each action has a different purpose, risk, cost, and claim on the source.</p>
+
+                <p>A binary allow-or-block switch collapses those distinctions. It forces the publisher to choose between open access with weak control and exclusion with lost reach. The useful design is a graduated access policy that can say:</p>
+
+                <ul>
+                    <li>read this public summary without payment, but preserve its source and timestamp;</li>
+                    <li>use this article in an answer when the agent reports the passage, question, and requesting service;</li>
+                    <li>query this dataset under a capped price and a stated purpose;</li>
+                    <li>train on this collection only under a separate licence and retention rule;</li>
+                    <li>invoke this commercial action only after the principal, terms, and settlement method are visible.</li>
+                </ul>
+
+                <p>Those rules create a vocabulary for machine attention. They also create a way for a publisher to remain discoverable without making every use indistinguishable from free extraction.</p>
+
+                <h2>Rights need a receipt</h2>
+
+                <p>Payment alone does not repair the Web’s missing contract. A publisher needs to know what was used, when it was used, under which permission, and which answer or action depended on it. Cloudflare’s pay-per-use proposal is important for this reason: its description joins billing to usage reports and gives publishers a view into the questions that surfaced their work. The report is part of the value exchange. Without it, payment is a blind transfer and the archive cannot learn what readers, agents, or institutions actually need.</p>
+
+                <p>C2PA offers a parallel lesson from media provenance. Its specification does not declare that an asset is true; it records assertions about origin, ingredients, actions, actors, and changes so that a verifier can inspect the chain. C2PA 2.4 extends the model into structured text and adds a repository receipt. The same discipline belongs in machine-use rights. A request should carry a source reference, the allowed operation, the relevant fragment or dataset, the actor or service that used it, and a receipt that can be checked later.</p>
+
+                <p>For an institutional archive, the receipt should preserve at least these facts:</p>
+
+                <ol>
+                    <li>the source asset, version, fragment, or query result that was accessed;</li>
+                    <li>the principal and service making the request, with the purpose declared;</li>
+                    <li>the permission, price, cap, licence, or public-use rule applied;</li>
+                    <li>the transformation performed, including quotation, summarization, translation, or synthesis;</li>
+                    <li>the settlement, refusal, correction, and revocation records that followed.</li>
+                </ol>
+
+                <p>This is a record of relationship rather than a surveillance demand. A publisher does not need the user’s entire private conversation to establish that a particular document was used under a particular rule. A narrow receipt can protect privacy while preserving accountability. It can also give the publisher an opportunity to improve the archive. If agents repeatedly ask for a missing explanation, the publisher has evidence for what to write next.</p>
+
+                <h2>Small archives cannot negotiate like platforms</h2>
+
+                <p>The current market contains an asymmetry. Large publishers and large AI companies can negotiate bilateral licensing agreements. Most local newspapers, specialist journals, African-language archives, independent researchers, and community institutions cannot negotiate individually with every model provider or agent service. Their lack of bargaining scale becomes a technical exclusion if the only available rights system is a private contract between large firms.</p>
+
+                <p>A public machine-use rail should therefore support many small rights holders without forcing them to build a payments company or a bespoke API. The rail would expose a standard policy, identify the buyer, measure the use, collect the agreed consideration, and return the receipt. It could support free public-interest access, capped micro-payments, institutional subscriptions, reciprocal attribution, or a licensing rule for a defined collection. The crucial property is interoperability: a publisher should be able to state its terms once and reach multiple participating buyers.</p>
+
+                <p>This matters for African intellectual sovereignty. An archive becomes dependent when its history is extracted by machines that cannot recognize its owner, its language, its consent, or its terms of reuse. A local-language corpus may be valuable to a distant model developer while the institution that collected and maintains it receives no usage evidence and no ability to correct a mistranslation. A machine-use contract gives the institution a technical place to define the relationship. It does not make the archive closed; it makes the archive legible as an owner.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the machine-use rights rail: infrastructure that lets a publisher or institution declare access terms, authenticate a buyer, measure a permitted use, preserve provenance, and settle value without negotiating a separate integration for every agent.</p>
+
+                <ul>
+                    <li><strong>Machine-use policy registries:</strong> structured terms for reading, quoting, training, translation, indexing, commerce, retention, and revocation.</li>
+                    <li><strong>Usage measurement and reporting:</strong> systems that connect a source fragment to an agent request, answer, model workflow, or commercial action without exposing unnecessary personal data.</li>
+                    <li><strong>Micro-settlement and clearing:</strong> payment rails for small transactions, capped budgets, public-interest exemptions, institutional invoices, and cross-border reconciliation.</li>
+                    <li><strong>Provenance and rights receipts:</strong> portable records showing what was accessed, what transformation occurred, which permission applied, and how a dispute or correction can travel.</li>
+                    <li><strong>Archive control planes:</strong> interfaces that let small institutions change terms, revoke a collection, correct a source, and inspect which buyers depend on it.</li>
+                </ul>
+
+                <p>Underwriting can begin with concrete questions. Can a rights holder publish a policy without writing a new API? Can a buyer discover the terms before use? Can the system distinguish a search, a citation, a training event, and a purchase? What percentage of machine uses produce a verifiable report? How quickly can a publisher correct a source or revoke a permission? Can a small archive receive settlement in a usable currency and retain a portable record of its contribution?</p>
+
+                <p>The value of this layer will appear in the quality of its records. A platform that merely charges agents has built a tollbooth. A platform that preserves purpose, provenance, usage, correction, and payment has built an institutional market. The former can extract revenue for a moment. The latter can let knowledge owners learn, govern, and remain present in the systems that depend on them.</p>
+
+                <h2>Build the receipt before scaling the audience</h2>
+
+                <p>An institution can begin with one public collection and four access lanes: free discovery, attributed quotation, paid repeated use, and restricted training. Define the source identity, language, update schedule, allowed transformation, reporting fields, price or exemption, and correction path. Test a benign query, an overbroad request, an expired permission, a source correction, and a buyer that cannot settle. Keep the receipt after each test.</p>
+
+                <p>The test passes when a second operator can determine what was used, who used it, under which rule, what value was exchanged, and how the institution can correct or withdraw the relationship. The Web’s machine audience will grow because agents are useful to people. The institutions that endure will be those that make usefulness visible, governable, and fairly settled.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">W3C Strategy Team, “W3C and the State of the Web in the AI Era” (finalized October 20, 2026). The paper identifies commerce for content, fragment-level metadata, provenance, training preferences, consent, delegation, privacy, and liability as open questions for an agentic Web.</a></li>
+                    <li><a href="https://blog.cloudflare.com/agentic-web/" target="_blank" rel="noopener">Cloudflare, “The Internet has a second audience” (2026). The post describes the growth and changing behavior of AI-agent traffic, machine-readable access terms, usage reporting, Pay Per Use, and payment infrastructure for agents. Product claims are reported as Cloudflare’s own account.</a></li>
+                    <li><a href="https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, Content Credentials Technical Specification 2.4 (April 2026). The specification defines provenance assertions and adds a Content Credentials JSON format, repository receipts, AI disclosure, structured-text support, and mechanisms for preserving asset history.</a></li>
+                    <li><a href="https://www.w3.org/news/2026/w3c-and-the-state-of-the-web-in-the-ai-era/" target="_blank" rel="noopener">W3C, “W3C and the State of the Web in the AI Era” news announcement (published October 21, 2026). The announcement records the paper’s status, authorship, publication date, and its role in the TPAC 2026 technical discussion.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Le Web doit tarifer l’attention des machines</h1>
+
+                <p><em>Note de terrain, 25 octobre 2026.</em> Le Web a acquis un second public. Les personnes continuent de lire des pages, de comparer des produits, de suivre des liens et de prendre des décisions, tandis que des logiciels accomplissent de plus en plus ces mêmes mouvements à leur place. Le visiteur machine devient un participant régulier à l’édition, au commerce, à la recherche et à l’information publique. L’ancien échange du Web était simple : un éditeur fournissait une information, un moteur de recherche l’indexait et un visiteur humain pouvait arriver. Le trafic agentique brise cette séquence parce que la découverte peut avoir lieu sans clic, qu’une citation peut devenir une réponse et qu’une page utile peut être consommée sans que l’éditeur sache ce qui a été pris ou reçoive quoi que ce soit en retour.</p>
+
+                <p>La question stratégique dépasse donc le choix entre autoriser ou bloquer les agents. Les institutions ont besoin d’un contrat d’usage machine : une manière d’indiquer ce qu’un agent peut lire, la façon dont le contenu peut être utilisé, les preuves d’usage qui doivent subsister et le moment où une somme ou une autre forme de contrepartie devient due. Ce contrat appartient à la frontière entre le contenu et le calcul. Il doit servir aussi sérieusement un petit éditeur, une archive culturelle, un laboratoire de recherche ou un service d’information publique qu’une grande plateforme.</p>
+
+                <p>Les preuves publiques récentes rendent cette lacune visible. Le document d’octobre de l’équipe stratégie du W3C sur le Web à l’ère de l’IA identifie le commerce des contenus, la provenance au niveau du fragment, les préférences d’entraînement, le consentement et la responsabilité comme des chantiers non résolus. Le compte rendu de septembre de Cloudflare décrit la croissance rapide des requêtes d’agents, la différence entre les robots d’entraînement et les agents agissant pour des personnes, ainsi que de nouveaux systèmes pour le contenu à l’usage, les conditions d’accès lisibles par machine, les rapports et le règlement HTTP 402. La spécification C2PA 2.4 ajoute la déclaration d’IA lisible par machine, les reçus de dépôt, le support des formats textuels structurés et des moyens plus solides de préserver l’histoire d’un actif à mesure qu’il change.</p>
+
+                <blockquote>
+                    <p>La découverte ouvre une route vers la valeur. Elle ne règle pas la valeur.</p>
+                </blockquote>
+
+                <h2>Le second public accomplit un travail différent</h2>
+
+                <p>Un lecteur humain arrive généralement, regarde, mémorise, partage, s’abonne ou repart. Un agent peut lire une page, extraire une affirmation, la combiner avec d’autres sources, répondre à une question et renvoyer le résultat sans exposer la page d’origine à un humain. Ce parcours crée de la valeur pour l’utilisateur et un coût pour l’éditeur. La page peut être consultée à répétition parce qu’une question revient à répétition. Une archive de recherche peut être interrogée à un rythme élevé même si aucune page ne change. Une petite publication technique peut entrer dans des milliers de réponses tout en restant invisible dans ses propres statistiques.</p>
+
+                <p>Ces usages ne sont pas interchangeables. Un robot d’entraînement copie du matériel dans un processus de construction de modèle. Un agent de recherche peut citer un paragraphe avec son attribution. Un agent d’achat peut examiner une page produit, comparer une offre et initier un achat. Un agent de service public peut consulter un avis administratif et en transporter le sens dans une décision relative à une prestation. Chaque action possède une finalité, un risque, un coût et un droit différents sur la source.</p>
+
+                <p>Un interrupteur binaire autoriser ou bloquer écrase ces distinctions. Il oblige l’éditeur à choisir entre un accès ouvert peu contrôlé et une exclusion qui fait perdre la portée. La bonne conception est une politique d’accès graduée qui peut dire :</p>
+
+                <ul>
+                    <li>lire ce résumé public sans paiement, mais conserver sa source et son horodatage ;</li>
+                    <li>utiliser cet article dans une réponse si l’agent signale le passage, la question et le service demandeur ;</li>
+                    <li>interroger ce jeu de données sous un prix plafonné et pour une finalité déclarée ;</li>
+                    <li>entraîner un modèle sur cette collection seulement avec une licence et une règle de conservation distinctes ;</li>
+                    <li>déclencher cette action commerciale seulement après que le mandant, les conditions et le mode de règlement sont visibles.</li>
+                </ul>
+
+                <p>Ces règles créent un vocabulaire pour l’attention des machines. Elles donnent aussi à un éditeur le moyen de rester découvrable sans rendre chaque usage impossible à distinguer d’une extraction gratuite.</p>
+
+                <h2>Les droits ont besoin d’un reçu</h2>
+
+                <p>Le paiement seul ne répare pas le contrat manquant du Web. Un éditeur doit savoir ce qui a été utilisé, quand, sous quelle permission et quelle réponse ou quelle action dépendait de cette utilisation. La proposition de paiement à l’usage de Cloudflare est importante pour cette raison : sa description relie la facturation aux rapports d’usage et donne aux éditeurs une vision des questions qui ont fait apparaître leur travail. Le rapport fait partie de l’échange de valeur. Sans lui, le paiement est un transfert aveugle et l’archive ne peut pas apprendre ce dont les lecteurs, les agents ou les institutions ont réellement besoin.</p>
+
+                <p>C2PA offre une leçon parallèle à partir de la provenance des médias. Sa spécification ne déclare pas qu’un actif est vrai ; elle enregistre des assertions sur son origine, ses composants, ses actions, ses acteurs et ses transformations afin qu’un vérificateur puisse examiner la chaîne. C2PA 2.4 étend le modèle aux textes structurés et ajoute un reçu de dépôt. La même discipline appartient aux droits d’usage machine. Une requête devrait porter une référence à la source, l’opération autorisée, le fragment ou le jeu de données concerné, l’acteur ou le service qui l’a utilisé et un reçu vérifiable ultérieurement.</p>
+
+                <p>Pour une archive institutionnelle, le reçu devrait conserver au moins ces faits :</p>
+
+                <ol>
+                    <li>la source, la version, le fragment ou le résultat de requête consulté ;</li>
+                    <li>le mandant et le service qui effectuent la demande, avec la finalité déclarée ;</li>
+                    <li>la permission, le prix, le plafond, la licence ou la règle d’usage public appliqués ;</li>
+                    <li>la transformation effectuée, notamment la citation, le résumé, la traduction ou la synthèse ;</li>
+                    <li>les dossiers de règlement, de refus, de correction et de révocation qui ont suivi.</li>
+                </ol>
+
+                <p>Il s’agit d’un dossier de relation plutôt que d’une demande de surveillance. Un éditeur n’a pas besoin de toute la conversation privée de l’utilisateur pour établir qu’un document précis a été utilisé selon une règle précise. Un reçu étroit peut protéger la vie privée tout en préservant la responsabilité. Il peut aussi donner à l’éditeur la possibilité d’améliorer l’archive. Si les agents demandent sans cesse une explication absente, l’éditeur dispose d’une preuve de ce qu’il faut écrire ensuite.</p>
+
+                <h2>Les petites archives ne peuvent pas négocier comme les plateformes</h2>
+
+                <p>Le marché actuel comporte une asymétrie. Les grands éditeurs et les grandes entreprises d’IA peuvent négocier des licences bilatérales. La plupart des journaux locaux, des revues spécialisées, des archives en langues africaines, des chercheurs indépendants et des institutions communautaires ne peuvent pas négocier individuellement avec chaque fournisseur de modèle ou service agentique. Leur faible pouvoir de négociation devient une exclusion technique si le seul système de droits disponible est un contrat privé entre grandes entreprises.</p>
+
+                <p>Un rail public d’usage machine devrait donc soutenir de nombreux petits ayants droit sans les obliger à créer une société de paiement ou une API sur mesure. Le rail publierait une politique standard, identifierait l’acheteur, mesurerait l’usage autorisé, collecterait la contrepartie convenue et retournerait le reçu. Il pourrait prendre en charge l’accès gratuit d’intérêt public, les micropaiements plafonnés, les abonnements institutionnels, l’attribution réciproque ou une règle de licence pour une collection définie. Sa propriété centrale est l’interopérabilité : un éditeur doit pouvoir déclarer ses conditions une seule fois et atteindre plusieurs acheteurs participants.</p>
+
+                <p>Cela compte pour la souveraineté intellectuelle africaine. Une archive devient dépendante lorsque son histoire est extraite par des machines incapables de reconnaître son propriétaire, sa langue, son consentement ou ses conditions de réutilisation. Un corpus en langue locale peut avoir de la valeur pour un développeur de modèles éloigné, tandis que l’institution qui l’a recueilli et le maintient ne reçoit ni preuve d’usage ni moyen de corriger une mauvaise traduction. Un contrat d’usage machine donne à l’institution une place technique où définir la relation. Il ne ferme pas l’archive ; il la rend lisible comme propriétaire.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est le rail des droits d’usage machine : l’infrastructure qui permet à un éditeur ou à une institution de déclarer des conditions d’accès, d’authentifier un acheteur, de mesurer un usage autorisé, de préserver la provenance et de régler la valeur sans négocier une intégration distincte pour chaque agent.</p>
+
+                <ul>
+                    <li><strong>Registres de politiques d’usage machine :</strong> conditions structurées pour la lecture, la citation, l’entraînement, la traduction, l’indexation, le commerce, la conservation et la révocation.</li>
+                    <li><strong>Mesure et rapports d’usage :</strong> systèmes reliant un fragment source à une requête d’agent, une réponse, un workflow de modèle ou une action commerciale sans exposer de données personnelles inutiles.</li>
+                    <li><strong>Microrèglement et compensation :</strong> rails de paiement pour les petites transactions, les budgets plafonnés, les exemptions d’intérêt public, les factures institutionnelles et la réconciliation transfrontalière.</li>
+                    <li><strong>Reçus de provenance et de droits :</strong> dossiers portables indiquant ce qui a été consulté, la transformation effectuée, la permission appliquée et la manière dont un litige ou une correction peut circuler.</li>
+                    <li><strong>Plans de contrôle des archives :</strong> interfaces permettant aux petites institutions de modifier les conditions, de révoquer une collection, de corriger une source et d’examiner les acheteurs qui en dépendent.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des questions concrètes. Un ayant droit peut-il publier une politique sans écrire une nouvelle API ? Un acheteur peut-il découvrir les conditions avant l’usage ? Le système distingue-t-il une recherche, une citation, un entraînement et un achat ? Quel pourcentage des usages machine produit un rapport vérifiable ? À quelle vitesse un éditeur peut-il corriger une source ou révoquer une permission ? Une petite archive peut-elle recevoir un règlement dans une monnaie utilisable et conserver un dossier portable de sa contribution ?</p>
+
+                <p>La valeur de cette couche apparaîtra dans la qualité de ses dossiers. Une plateforme qui facture simplement les agents a construit un péage. Une plateforme qui préserve la finalité, la provenance, l’usage, la correction et le paiement a construit un marché institutionnel. La première peut extraire un revenu pendant un instant. La seconde peut permettre aux détenteurs du savoir d’apprendre, de gouverner et de rester présents dans les systèmes qui dépendent d’eux.</p>
+
+                <h2>Construire le reçu avant d’élargir le public</h2>
+
+                <p>Une institution peut commencer avec une collection publique et quatre voies d’accès : découverte gratuite, citation attribuée, usage répété payant et entraînement restreint. Définissez l’identité de la source, la langue, le calendrier de mise à jour, la transformation autorisée, les champs de rapport, le prix ou l’exemption et le chemin de correction. Testez une requête bénigne, une demande trop large, une permission expirée, une correction de source et un acheteur incapable de régler. Conservez le reçu après chaque test.</p>
+
+                <p>Le test réussit lorsqu’un second opérateur peut déterminer ce qui a été utilisé, qui l’a utilisé, selon quelle règle, quelle valeur a été échangée et comment l’institution peut corriger ou retirer la relation. Le public machine du Web grandira parce que les agents sont utiles aux personnes. Les institutions qui dureront seront celles qui rendront cette utilité visible, gouvernable et réglée équitablement.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">Équipe stratégie du W3C, « W3C and the State of the Web in the AI Era » (finalisé le 20 octobre 2026). Le document identifie le commerce des contenus, les métadonnées au niveau du fragment, la provenance, les préférences d’entraînement, le consentement, la délégation, la vie privée et la responsabilité comme des questions ouvertes du Web agentique.</a></li>
+                    <li><a href="https://blog.cloudflare.com/agentic-web/" target="_blank" rel="noopener">Cloudflare, « The Internet has a second audience » (2026). L’article décrit la croissance et l’évolution du trafic des agents IA, les conditions d’accès lisibles par machine, les rapports d’usage, le paiement à l’usage et l’infrastructure de paiement pour les agents. Les affirmations commerciales sont présentées comme le compte rendu de Cloudflare.</a></li>
+                    <li><a href="https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, Content Credentials Technical Specification 2.4 (avril 2026). La spécification définit les assertions de provenance et ajoute un format JSON Content Credentials, des reçus de dépôt, la déclaration d’IA, le support des textes structurés et des mécanismes de conservation de l’historique des actifs.</a></li>
+                    <li><a href="https://www.w3.org/news/2026/w3c-and-the-state-of-the-web-in-the-ai-era/" target="_blank" rel="noopener">W3C, « W3C and the State of the Web in the AI Era », annonce (publiée le 21 octobre 2026). L’annonce établit le statut, les auteurs, la date de publication et le rôle du document dans la discussion technique de TPAC 2026.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

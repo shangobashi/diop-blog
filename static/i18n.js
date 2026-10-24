@@ -179,6 +179,7 @@
         'article.entry147':     { en: 'Diop Daily #147 — October 2026', fr: 'Diop Quotidien n°147 — Octobre 2026' },
         'article.entry148':     { en: 'Diop Daily #148 — October 2026', fr: 'Diop Quotidien n°148 — Octobre 2026' },
         'article.entry149':     { en: 'Diop Daily #149 — October 2026', fr: 'Diop Quotidien n°149 — Octobre 2026' },
+        'article.entry150':     { en: 'Diop Daily #150 — October 2026', fr: 'Diop Quotidien n°150 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -191,6 +192,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-150': {
+        title: {
+            en: 'The Web Needs a Price for Machine Attention',
+            fr: 'Le Web doit tarifer l’attention des machines'
+        },
+        excerpt: {
+            en: 'AI agents have become a second audience for the Web, but discovery does not guarantee payment or consent. The investable layer is machine-use rights: a measurable contract for access, purpose, provenance, reporting, and settlement that lets publishers and public archives participate without surrendering their knowledge.',
+            fr: 'Les agents IA sont devenus un second public pour le Web, mais la découverte ne garantit ni paiement ni consentement. La couche d’investissement est celle des droits d’usage machine : un contrat mesurable pour l’accès, la finalité, la provenance, les rapports et le règlement, qui permet aux éditeurs et aux archives publiques de participer sans céder leur savoir.'
+        }
+    },
     'diop-daily-144': {
         title: {
             en: "A Tool Call Has Geography",
