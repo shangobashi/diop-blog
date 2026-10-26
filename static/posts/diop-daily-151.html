@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Institution Needs a Decision Budget — Diop Research</title>
+    <meta name="description" content="AI systems are moving toward bounded, low-latency decisions inside live workflows. The strategic layer is a decision budget that assigns each question the right cost, model depth, evidence threshold, language support, and human escalation path."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry151">Diop Daily #151 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 26, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>decision budgets · bounded inference · African institutions</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Institution Needs a Decision Budget</h1>
+
+                <p><em>Field note, October 26, 2026.</em> An institution does not experience AI as one large answer. It experiences a stream of small choices: classify this document, route that request, retry the call, ask for clarification, escalate the case, approve the next step. Each choice may be modest in isolation, yet thousands of them determine the cost, speed, safety, and character of the system. The emerging infrastructure question is therefore a budget question: how much intelligence, latency, evidence, and human attention should each decision receive?</p>
+
+                <p>OpenAI’s October 22 release of the Decisions API makes this architecture explicit. The product is designed for bounded questions with allowed answers such as a probability, a choice, or a score, and it places low-latency decisions inside the application’s hot path. Google’s work on session-aware load balancing reaches the same problem from the runtime side: live AI sessions create committed future load that ordinary request metrics cannot see. OpenAI’s account of forward-deployed engineering adds the institutional side, describing the distance between what a model appears able to do and what a team can reliably deploy in its real environment.</p>
+
+                <blockquote>
+                    <p>Intelligence becomes operational when an institution can decide where to spend it.</p>
+                </blockquote>
+
+                <h2>Every workflow already has a hidden tariff</h2>
+
+                <p>When a system sends every question to the most capable model, it creates a hidden tariff. The tariff appears as latency during a live interaction, token cost during a high-volume workflow, queue pressure when many sessions become active, and reviewer fatigue when the model cannot state which cases deserve attention. When a system sends every question to a cheap classifier, the tariff appears later as misrouted work, silent exclusions, repeated corrections, and decisions that require more human repair than the original inference saved.</p>
+
+                <p>A decision budget makes that tariff visible. It assigns a policy to a class of questions before traffic arrives. The policy can specify the maximum latency, the permitted cost, the evidence required, the language coverage, the confidence or margin that triggers escalation, and the person or service responsible for the next state. The budget combines financial discipline with an institutional statement about which mistakes can be tolerated, which uncertainties need a witness, and where computational abundance would create more risk than value.</p>
+
+                <p>OpenAI describes the Decisions API with three bounded answer forms:</p>
+
+                <ul>
+                    <li><strong>Predicate:</strong> estimate whether a stated condition is true, such as visible damage or a required field being present.</li>
+                    <li><strong>Choice:</strong> select from an approved set, such as continue, retry, clarify, or escalate.</li>
+                    <li><strong>Score:</strong> place an input against an ordered rubric, such as severity, relevance, or priority.</li>
+                </ul>
+
+                <p>These forms are useful because they turn a vague request for “reasoning” into an interface that can be tested. A bounded answer can be compared with a rubric, routed to a known next step, and measured against the cost of delay. Its value comes from fitting a decision into a workflow without pretending that every workflow deserves the same depth of thought.</p>
+
+                <h2>Latency is a governance variable</h2>
+
+                <p>Latency is often treated as a user-experience metric. In institutional systems it also determines which forms of oversight remain possible. A fraud screen that takes seconds can block a transaction while a reviewer still has time to intervene. A public-service classification that takes hours may move the burden to a citizen who cannot wait. A voice interaction that pauses for a large model can turn a helpful exchange into a broken one. The response budget changes the authority of the system because it changes when a person can still act.</p>
+
+                <p>Google’s analysis of real-time AI infrastructure shows why request-per-second metrics are insufficient. A short request and a twenty-minute live conversation count differently as commitments. A quiet voice session may look cheap while holding memory, audio buffers, context, and a future burst of inference in reserve. The runtime therefore needs to report active sessions, application state, and the cost of a session as it changes, then combine those signals with CPU and memory pressure.</p>
+
+                <p>This has a direct consequence for decision design. A decision budget must include the load it creates after the answer. A routing choice may open a long-lived session. A retry may duplicate a tool call. A clarification request may transfer work to a human queue. A seemingly cheap decision can carry a large downstream obligation. The institution should price the whole transition, not only the model call.</p>
+
+                <h2>The deployment gap is a budget gap</h2>
+
+                <p>OpenAI’s account of forward-deployed engineering names a deployment gap between model capability and dependable use. The account describes teams working with customers to learn domain constraints, build evaluation harnesses, reach production, and convert a custom solution into something repeatable. The durable lesson is architectural: a model becomes useful when the surrounding institution can specify the outcome, define the evidence, measure the workflow, and carry the result into the next case.</p>
+
+                <p>A decision budget gives that deployment work a durable shape. Instead of asking whether a model is “good at customer support” or “good at research,” the institution can define a ledger of decisions:</p>
+
+                <ol>
+                    <li>Which inputs are eligible for automated classification?</li>
+                    <li>Which answer set is permitted, and what evidence must accompany it?</li>
+                    <li>Which uncertainty, language, jurisdiction, or consequence requires escalation?</li>
+                    <li>What downstream work does each answer create?</li>
+                    <li>Who can change the rubric, the threshold, the model route, or the review owner?</li>
+                </ol>
+
+                <p>This ledger turns deployment from a demonstration into an operating contract. It also makes comparison possible. A smaller model may win on a low-risk routing decision because it is faster, cheaper, and easier to evaluate. A stronger model may be justified for a rare case whose evidence is difficult to assemble. A human may be the correct route when the available data is sparse or the authority is contested. The question is not which model wins in the abstract. The question is which decision path preserves the institution’s purpose at an acceptable total cost.</p>
+
+                <h2>African institutions need budgets they can inspect</h2>
+
+                <p>The budget must be visible to the institution that carries the consequence. African universities, clinics, cooperatives, archives, publishers, public agencies, and small businesses often operate across intermittent connectivity, multilingual records, shared devices, mobile-money settlement, and authority distributed between formal offices and community structures. A decision service imported from elsewhere can perform a narrow task while hiding the assumptions that determine when it escalates, which language it treats as complete, or who may correct its rubric.</p>
+
+                <p>Microsoft Research’s LINGUA Africa programme offers a useful public signal about the foundation beneath this problem. Its 26 selected projects span more than 50 African languages, dialects, and sign languages across 47 countries, with work covering health, agriculture, education, justice, public services, journalism, and cultural preservation. The point is not that a grant programme solves institutional AI. The point is that a decision budget cannot be sovereign when the system has no serious way to represent the language, evidence, and operating conditions of the people it serves.</p>
+
+                <p>Inspection should therefore be part of the product. An institution should be able to read the question definition, the allowed answers, the threshold, the evidence sample, the language behavior, the cost envelope, and the escalation rule. It should be able to export the ledger, test it with local cases, change an owner, and suspend a route without asking a foreign provider to interpret its authority. NIST’s AI Agent Standards Initiative places open protocols, identity infrastructure, and security evaluations in the same strategic frame. A decision budget extends that frame into everyday operations.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the decision-budget layer: infrastructure that allocates model depth, latency, cost, evidence, language support, and human attention across bounded decisions while preserving a record of why each route was chosen.</p>
+
+                <ul>
+                    <li><strong>Decision registries:</strong> versioned definitions of questions, allowed answers, rubrics, thresholds, owners, and expiry dates.</li>
+                    <li><strong>Adaptive model routers:</strong> systems that select a model or rule according to consequence, latency, evidence quality, language, cost, and live capacity.</li>
+                    <li><strong>Hot-path evaluation:</strong> tools that measure accuracy, calibration, drift, reviewer outcomes, and downstream effects for the small decisions that run continuously.</li>
+                    <li><strong>Attention clearing systems:</strong> queues that translate uncertainty and consequence into human work with a stated service level and enough context to decide.</li>
+                    <li><strong>Regional and language control planes:</strong> deployment layers that keep data location, local currencies, language resources, and institutional authority visible when a decision crosses providers.</li>
+                </ul>
+
+                <p>Underwriting can begin with a few operational questions. What share of decisions has an explicit owner and answer set? How much total cost sits downstream of an apparently cheap inference? Can a reviewer see the evidence and language context before the correction window closes? Does the router fail safely when a provider is slow, unavailable, or outside the approved jurisdiction? Can an institution compare the cost of a faster model with the cost of a longer queue? These measurements describe a real operating layer.</p>
+
+                <p>The strongest products will keep the budget connected to authority. A route should carry its purpose, evidence, expiry, and escalation path. A change to a threshold should produce a reviewable record. A new language adapter should be evaluated against the decisions that depend on it rather than celebrated as a model feature. A fast answer that cannot be explained, corrected, or assigned to an accountable owner is a liability with good latency.</p>
+
+                <h2>Build one ledger before buying more intelligence</h2>
+
+                <p>An institution can test the idea with one recurring decision. Choose a classification, routing, or escalation task that already consumes measurable time. Define the allowed answers, the evidence fields, the maximum delay, the cost ceiling, the language cases, the human owner, and the correction route. Run the task through ordinary examples, ambiguous examples, missing data, provider failure, and a case in which the institution’s local rule differs from the model’s default.</p>
+
+                <p>Then measure the whole transition: inference cost, queue time, reviewer effort, duplicate effects, correction time, and the number of cases that leave the approved boundary. Promote the route only when a second operator can reconstruct why the decision was made and change the budget without losing the history.</p>
+
+                <p>Artificial intelligence will become more capable by consuming more context and more computation. Institutions will become more capable by deciding where that consumption is justified. A decision budget is the small constitutional instrument that connects the two. It lets a laboratory, a public service, or an African enterprise spend intelligence deliberately, preserve human authority, and make the cost of action visible before the machine’s answer becomes the institution’s reality.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/index/decisions-api" target="_blank" rel="noopener">OpenAI, “Build more responsive apps with the Decisions API” (October 22, 2026). Describes bounded predicate, choice, and score decisions, low-latency application use, regional processing, and reported workflow examples. Product and customer performance claims are presented as OpenAI’s account.</a></li>
+                    <li><a href="https://developers.googleblog.com/scaling-real-time-ai-agents-with-session-aware-load-balancing/" target="_blank" rel="noopener">Google Developers Blog, “Scaling real-time AI agents with session-aware load balancing” (August 3, 2026). Explains why active sessions and application-level state must complement QPS, CPU, and memory when routing long-lived AI conversations.</a></li>
+                    <li><a href="https://openai.com/index/forward-deployed-engineering-means" target="_blank" rel="noopener">OpenAI, “What FDE means at OpenAI” (October 22, 2026). Describes the deployment gap between apparent model capability and dependable use, and the work of defining outcomes, evaluation harnesses, production constraints, and reusable solutions.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). Identifies open protocols, agent identity infrastructure, and security evaluations as strategic pillars for trusted interoperability.</a></li>
+                    <li><a href="https://www.microsoft.com/en-us/research/academic-program/lingua-africa-open-call-for-inclusive-ai-language-projects" target="_blank" rel="noopener">Microsoft Research, “LINGUA Africa Open Call” (2026). Reports 26 selected projects spanning more than 50 African languages, dialects, and sign languages across 47 countries, with applications in health, agriculture, education, justice, public services, journalism, and cultural preservation.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L’institution a besoin d’un budget de décision</h1>
+
+                <p><em>Note de terrain, 26 octobre 2026.</em> Une institution ne vit pas l’IA sous la forme d’une grande réponse unique. Elle la vit comme un flux de petits choix : classer ce document, orienter cette demande, relancer l’appel, demander une précision, transmettre le dossier, approuver l’étape suivante. Chaque choix peut sembler modeste isolément, mais des milliers d’entre eux déterminent le coût, la vitesse, la sécurité et le caractère du système. La question d’infrastructure qui émerge est donc une question de budget : quelle quantité d’intelligence, de latence, de preuves et d’attention humaine chaque décision doit-elle recevoir ?</p>
+
+                <p>La publication par OpenAI de l’API Decisions, le 22 octobre, rend cette architecture explicite. Le produit est conçu pour des questions bornées avec des réponses autorisées, telles qu’une probabilité, un choix ou un score, et place les décisions à faible latence dans le chemin critique de l’application. Le travail de Google sur l’équilibrage de charge tenant compte des sessions atteint le même problème depuis le runtime : les sessions IA en direct créent une charge future engagée que les métriques ordinaires de requêtes ne voient pas. Le compte rendu d’OpenAI sur l’ingénierie déployée auprès des clients ajoute le versant institutionnel, en décrivant la distance entre ce qu’un modèle semble capable de faire et ce qu’une équipe peut déployer de manière fiable dans son environnement réel.</p>
+
+                <blockquote>
+                    <p>L’intelligence devient opératoire lorsqu’une institution peut décider où la dépenser.</p>
+                </blockquote>
+
+                <h2>Chaque workflow possède déjà un tarif caché</h2>
+
+                <p>Lorsqu’un système envoie chaque question au modèle le plus puissant, il crée un tarif caché. Ce tarif apparaît sous forme de latence pendant une interaction en direct, de coût de jetons dans un workflow à grand volume, de pression sur les files lorsque de nombreuses sessions deviennent actives et de fatigue des réviseurs lorsque le modèle ne peut pas indiquer quels cas méritent leur attention. Lorsqu’un système envoie chaque question à un classifieur bon marché, le tarif apparaît plus tard sous forme de travail mal orienté, d’exclusions silencieuses, de corrections répétées et de décisions qui demandent davantage de réparation humaine que l’inférence initiale n’a économisé.</p>
+
+                <p>Un budget de décision rend ce tarif visible. Il attribue une politique à une classe de questions avant l’arrivée du trafic. La politique peut préciser la latence maximale, le coût autorisé, les preuves requises, la couverture linguistique, le niveau de confiance ou la marge déclenchant une escalade, ainsi que la personne ou le service responsable de l’état suivant. Le budget associe discipline financière et déclaration institutionnelle sur les erreurs tolérables, les incertitudes qui exigent un témoin et les endroits où l’abondance de calcul créerait davantage de risque que de valeur.</p>
+
+                <p>OpenAI décrit l’API Decisions avec trois formes de réponses bornées :</p>
+
+                <ul>
+                    <li><strong>Prédicat :</strong> estimer si une condition déclarée est vraie, par exemple la présence d’un dommage visible ou d’un champ obligatoire.</li>
+                    <li><strong>Choix :</strong> sélectionner une option approuvée, comme continuer, réessayer, demander une précision ou transmettre le dossier.</li>
+                    <li><strong>Score :</strong> placer une entrée sur une échelle ordonnée, comme la gravité, la pertinence ou la priorité.</li>
+                </ul>
+
+                <p>Ces formes sont utiles parce qu’elles transforment une demande vague de « raisonnement » en une interface testable. Une réponse bornée peut être comparée à une grille, orientée vers une étape connue et mesurée par rapport au coût du délai. Sa valeur vient de son adaptation au workflow, sans prétendre que chaque workflow mérite la même profondeur de pensée.</p>
+
+                <h2>La latence est une variable de gouvernance</h2>
+
+                <p>La latence est souvent traitée comme une métrique d’expérience utilisateur. Dans les systèmes institutionnels, elle détermine aussi les formes de supervision qui restent possibles. Un contrôle de fraude qui prend quelques secondes peut bloquer une transaction pendant qu’un réviseur a encore le temps d’intervenir. Une classification de service public qui prend des heures peut déplacer la charge vers une personne qui ne peut pas attendre. Une interaction vocale qui s’interrompt pour attendre un grand modèle peut transformer un échange utile en conversation brisée. Le budget de réponse modifie l’autorité du système parce qu’il modifie le moment où une personne peut encore agir.</p>
+
+                <p>L’analyse de Google sur l’infrastructure des agents IA en temps réel montre pourquoi les métriques de requêtes par seconde sont insuffisantes. Une requête courte et une conversation en direct de vingt minutes ne représentent pas le même engagement. Une session vocale silencieuse peut sembler peu coûteuse tout en conservant mémoire, tampons audio, contexte et futur besoin de calcul. Le runtime doit donc signaler les sessions actives, l’état de l’application et le coût d’une session à mesure qu’il évolue, puis combiner ces signaux avec la pression du processeur et de la mémoire.</p>
+
+                <p>La conséquence pour la conception des décisions est directe. Un budget de décision doit inclure la charge créée après la réponse. Un choix de routage peut ouvrir une session longue. Une nouvelle tentative peut dupliquer un appel d’outil. Une demande de précision peut transférer du travail vers une file humaine. Une décision apparemment bon marché peut porter une obligation aval importante. L’institution doit tarifer toute la transition, et pas seulement l’appel au modèle.</p>
+
+                <h2>L’écart de déploiement est un écart de budget</h2>
+
+                <p>Le compte rendu d’OpenAI sur l’ingénierie déployée auprès des clients nomme un écart entre la capacité du modèle et son usage fiable. Il décrit des équipes qui apprennent les contraintes de domaine avec leurs clients, construisent des bancs d’évaluation, atteignent la production et transforment une solution sur mesure en solution réutilisable. La leçon architecturale durable est la suivante : un modèle devient utile lorsque l’institution environnante peut définir le résultat, les preuves, les mesures du workflow et la manière de transporter le résultat vers le cas suivant.</p>
+
+                <p>Un budget de décision donne une forme durable à ce travail de déploiement. Au lieu de demander si un modèle est « bon pour le service client » ou « bon pour la recherche », l’institution peut définir un registre de décisions :</p>
+
+                <ol>
+                    <li>Quelles entrées peuvent être classées automatiquement ?</li>
+                    <li>Quel ensemble de réponses est autorisé et quelles preuves doivent l’accompagner ?</li>
+                    <li>Quelle incertitude, quelle langue, quelle juridiction ou quelle conséquence exige une escalade ?</li>
+                    <li>Quel travail aval chaque réponse crée-t-elle ?</li>
+                    <li>Qui peut modifier la grille, le seuil, la route de modèle ou le responsable de revue ?</li>
+                </ol>
+
+                <p>Ce registre transforme un déploiement de démonstration en contrat d’exploitation. Il rend aussi la comparaison possible. Un modèle plus petit peut gagner sur une décision de routage à faible risque parce qu’il est plus rapide, moins coûteux et plus facile à évaluer. Un modèle plus puissant peut être justifié pour un cas rare dont les preuves sont difficiles à réunir. Un humain peut être la bonne voie lorsque les données sont rares ou que l’autorité est contestée. La question n’est pas de savoir quel modèle gagne dans l’abstrait. Il faut déterminer quelle voie décisionnelle préserve la finalité de l’institution à un coût total acceptable.</p>
+
+                <h2>Les institutions africaines ont besoin de budgets inspectables</h2>
+
+                <p>Le budget doit être visible pour l’institution qui porte la conséquence. Les universités, cliniques, coopératives, archives, éditeurs, administrations publiques et petites entreprises africaines travaillent souvent avec une connectivité intermittente, des dossiers multilingues, des appareils partagés, des règlements par argent mobile et une autorité répartie entre bureaux formels et structures communautaires. Un service de décision importé peut accomplir une tâche étroite tout en cachant les hypothèses qui déterminent son escalade, la langue qu’il considère comme complète ou la personne autorisée à corriger sa grille.</p>
+
+                <p>Le programme LINGUA Africa de Microsoft Research fournit un signal public utile sur le socle de ce problème. Ses 26 projets sélectionnés couvrent plus de 50 langues, dialectes et langues des signes africains dans 47 pays, avec des travaux consacrés à la santé, à l’agriculture, à l’éducation, à la justice, aux services publics, au journalisme et à la préservation culturelle. Le point n’est pas qu’un programme de subvention résolve l’IA institutionnelle. Le point est qu’un budget de décision ne peut pas être souverain si le système ne sait pas représenter sérieusement la langue, les preuves et les conditions de fonctionnement des personnes qu’il sert.</p>
+
+                <p>L’inspection doit donc faire partie du produit. Une institution doit pouvoir lire la définition de la question, les réponses autorisées, le seuil, l’échantillon de preuves, le comportement linguistique, l’enveloppe de coût et la règle d’escalade. Elle doit pouvoir exporter le registre, le tester avec des cas locaux, changer un responsable et suspendre une route sans demander à un fournisseur étranger d’interpréter son autorité. L’AI Agent Standards Initiative du NIST place les protocoles ouverts, l’infrastructure d’identité et les évaluations de sécurité dans un même cadre stratégique. Le budget de décision prolonge ce cadre dans les opérations quotidiennes.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est la couche du budget de décision : l’infrastructure qui répartit profondeur de modèle, latence, coût, preuves, soutien linguistique et attention humaine entre des décisions bornées, tout en conservant la raison du choix de chaque route.</p>
+
+                <ul>
+                    <li><strong>Registres de décisions :</strong> définitions versionnées des questions, réponses autorisées, grilles, seuils, responsables et dates d’expiration.</li>
+                    <li><strong>Routeurs de modèles adaptatifs :</strong> systèmes sélectionnant un modèle ou une règle selon la conséquence, la latence, la qualité des preuves, la langue, le coût et la capacité en temps réel.</li>
+                    <li><strong>Évaluation du chemin critique :</strong> outils mesurant exactitude, calibration, dérive, résultats des réviseurs et effets aval pour les petites décisions exécutées en continu.</li>
+                    <li><strong>Systèmes de compensation de l’attention :</strong> files traduisant incertitude et conséquence en travail humain avec un niveau de service déclaré et le contexte nécessaire à la décision.</li>
+                    <li><strong>Plans de contrôle régionaux et linguistiques :</strong> couches de déploiement gardant visibles la localisation des données, les monnaies locales, les ressources linguistiques et l’autorité institutionnelle lorsqu’une décision franchit des fournisseurs.</li>
+                </ul>
+
+                <p>La souscription peut commencer par quelques questions opérationnelles. Quelle part des décisions possède un responsable et un ensemble de réponses explicites ? Quelle charge totale se trouve en aval d’une inférence apparemment peu coûteuse ? Un réviseur peut-il voir les preuves et le contexte linguistique avant la fermeture de la fenêtre de correction ? Le routeur échoue-t-il de manière sûre lorsqu’un fournisseur est lent, indisponible ou hors de la juridiction approuvée ? Une institution peut-elle comparer le coût d’un modèle plus rapide avec celui d’une file plus longue ? Ces mesures décrivent une véritable couche d’exploitation.</p>
+
+                <p>Les meilleurs produits garderont le budget lié à l’autorité. Une route doit porter sa finalité, ses preuves, son expiration et son chemin d’escalade. Une modification de seuil doit produire un dossier révisable. Un nouvel adaptateur linguistique doit être évalué selon les décisions qui en dépendent, et non célébré comme une simple fonctionnalité de modèle. Une réponse rapide qui ne peut être expliquée, corrigée ou attribuée à un responsable est une dette avec une bonne latence.</p>
+
+                <h2>Construire un registre avant d’acheter davantage d’intelligence</h2>
+
+                <p>Une institution peut tester l’idée avec une décision récurrente. Choisissez une tâche de classification, de routage ou d’escalade qui consomme déjà un temps mesurable. Définissez les réponses autorisées, les champs de preuve, le délai maximal, le plafond de coût, les cas linguistiques, le responsable humain et la voie de correction. Faites passer la tâche par des exemples ordinaires, ambigus, incomplets, marqués par une panne de fournisseur et par un cas où la règle locale de l’institution diffère de la réponse par défaut du modèle.</p>
+
+                <p>Mesurez ensuite toute la transition : coût d’inférence, temps de file, effort du réviseur, effets dupliqués, temps de correction et nombre de cas sortant de la limite approuvée. Ne promouvez la route que lorsqu’un second opérateur peut reconstruire la raison de la décision et modifier le budget sans perdre l’historique.</p>
+
+                <p>L’intelligence artificielle deviendra plus capable en consommant davantage de contexte et de calcul. Les institutions deviendront plus capables en décidant où cette consommation est justifiée. Un budget de décision est le petit instrument constitutionnel qui relie les deux. Il permet à un laboratoire, à un service public ou à une entreprise africaine de dépenser l’intelligence délibérément, de préserver l’autorité humaine et de rendre le coût de l’action visible avant que la réponse de la machine ne devienne la réalité de l’institution.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/index/decisions-api" target="_blank" rel="noopener">OpenAI, « Build more responsive apps with the Decisions API » (22 octobre 2026). Décrit les décisions bornées de type prédicat, choix et score, leur usage à faible latence dans les applications, le traitement régional et des exemples de workflows rapportés. Les affirmations de produit et de performance sont présentées comme le compte rendu d’OpenAI.</a></li>
+                    <li><a href="https://developers.googleblog.com/scaling-real-time-ai-agents-with-session-aware-load-balancing/" target="_blank" rel="noopener">Google Developers Blog, « Scaling real-time AI agents with session-aware load balancing » (3 août 2026). Explique pourquoi les sessions actives et l’état au niveau de l’application doivent compléter QPS, processeur et mémoire lors du routage de conversations IA longues.</a></li>
+                    <li><a href="https://openai.com/index/forward-deployed-engineering-means" target="_blank" rel="noopener">OpenAI, « What FDE means at OpenAI » (22 octobre 2026). Décrit l’écart entre la capacité apparente d’un modèle et son usage fiable, ainsi que le travail de définition des résultats, des bancs d’évaluation, des contraintes de production et des solutions réutilisables.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mise à jour le 14 août 2026). Identifie les protocoles ouverts, l’infrastructure d’identité des agents et les évaluations de sécurité comme des piliers stratégiques de l’interopérabilité digne de confiance.</a></li>
+                    <li><a href="https://www.microsoft.com/en-us/research/academic-program/lingua-africa-open-call-for-inclusive-ai-language-projects" target="_blank" rel="noopener">Microsoft Research, « LINGUA Africa Open Call » (2026). Signale 26 projets sélectionnés couvrant plus de 50 langues, dialectes et langues des signes africains dans 47 pays, avec des applications en santé, agriculture, éducation, justice, services publics, journalisme et préservation culturelle.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

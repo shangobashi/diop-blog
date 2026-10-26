@@ -180,6 +180,7 @@
         'article.entry148':     { en: 'Diop Daily #148 — October 2026', fr: 'Diop Quotidien n°148 — Octobre 2026' },
         'article.entry149':     { en: 'Diop Daily #149 — October 2026', fr: 'Diop Quotidien n°149 — Octobre 2026' },
         'article.entry150':     { en: 'Diop Daily #150 — October 2026', fr: 'Diop Quotidien n°150 — Octobre 2026' },
+        'article.entry151':     { en: 'Diop Daily #151 — October 2026', fr: 'Diop Quotidien n°151 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -200,6 +201,16 @@
         excerpt: {
             en: 'AI agents have become a second audience for the Web, but discovery does not guarantee payment or consent. The investable layer is machine-use rights: a measurable contract for access, purpose, provenance, reporting, and settlement that lets publishers and public archives participate without surrendering their knowledge.',
             fr: 'Les agents IA sont devenus un second public pour le Web, mais la découverte ne garantit ni paiement ni consentement. La couche d’investissement est celle des droits d’usage machine : un contrat mesurable pour l’accès, la finalité, la provenance, les rapports et le règlement, qui permet aux éditeurs et aux archives publiques de participer sans céder leur savoir.'
+        }
+    },
+    'diop-daily-151': {
+        title: {
+            en: 'The Institution Needs a Decision Budget',
+            fr: 'L’institution a besoin d’un budget de décision'
+        },
+        excerpt: {
+            en: 'AI systems are moving toward bounded, low-latency decisions inside live workflows. The investable layer is a decision budget that assigns each question the right cost, model depth, evidence threshold, language support, and human escalation path.',
+            fr: 'Les systèmes d’IA se dirigent vers des décisions bornées et à faible latence au cœur des workflows en direct. La couche d’investissement est un budget de décision qui attribue à chaque question le coût, la profondeur de modèle, le seuil de preuve, le soutien linguistique et le chemin d’escalade humaine appropriés.'
         }
     },
     'diop-daily-144': {
