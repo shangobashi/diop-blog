@@ -181,6 +181,7 @@
         'article.entry149':     { en: 'Diop Daily #149 — October 2026', fr: 'Diop Quotidien n°149 — Octobre 2026' },
         'article.entry150':     { en: 'Diop Daily #150 — October 2026', fr: 'Diop Quotidien n°150 — Octobre 2026' },
         'article.entry151':     { en: 'Diop Daily #151 — October 2026', fr: 'Diop Quotidien n°151 — Octobre 2026' },
+        'article.entry152':     { en: 'Diop Daily #152 — October 2026', fr: 'Diop Quotidien n°152 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -193,6 +194,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-152': {
+        title: {
+            en: 'Who Pays When the Agent Acts?',
+            fr: 'Qui paie quand l’agent agit ?'
+        },
+        excerpt: {
+            en: 'Machine payments solve the moment of exchange, while institutions still need a ledger for authority, commitments, cost attribution, disputes, and recovery. The investable layer is an agentic accounting control plane that lets autonomous systems spend without turning action into an unowned liability.',
+            fr: 'Les paiements machine règlent le moment de l’échange, tandis que les institutions ont encore besoin d’un registre de l’autorité, des engagements, de l’attribution des coûts, des litiges et de la reprise. La couche d’investissement est un plan de contrôle comptable agentique qui permet aux systèmes autonomes de dépenser sans transformer l’action en passif sans propriétaire.'
+        }
+    },
     'diop-daily-150': {
         title: {
             en: 'The Web Needs a Price for Machine Attention',

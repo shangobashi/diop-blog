@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Who Pays When the Agent Acts? — Diop Research</title>
+    <meta name="description" content="Agentic payments solve the moment of exchange, while institutions still need a ledger for commitments, authority, cost attribution, receipts, disputes, and recovery. The durable infrastructure is an accounting layer that lets agents spend on behalf of a principal without turning autonomy into an unowned liability."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry152">Diop Daily #152 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 27, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>agentic accounting · machine payments · institutional control</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Who Pays When the Agent Acts?</h1>
+
+                <p><em>Field note, October 27, 2026.</em> An autonomous agent can call an API, reserve compute, purchase a service, commission a translation, or trigger work in another system. The payment may be immediate, but the institution’s financial question begins earlier: who authorized the commitment, which budget owns it, what future obligation did the action create, and which record will allow someone to challenge it?</p>
+
+                <p>Current infrastructure work is making machine payment increasingly practical. The Linux Foundation’s x402 Foundation gives payments over HTTP an open-governance home, with support for agents, APIs, and multiple payment types. The Agentic AI Foundation reported 305 members in October, including banks, infrastructure companies, research institutions, and philanthropic organizations; its own account frames authentication, verification, and accountability as questions institutions must answer as agents access data and execute transactions. The World Bank Group’s October digital strategy adds a development perspective: its AI Infrastructure and Readiness Initiative proposes shared, pay-as-you-go GPU capacity, initially focused on Africa and Latin America.</p>
+
+                <blockquote>
+                    <p>A wallet can move value. An institution needs to know what the value was allowed to mean.</p>
+                </blockquote>
+
+                <p>These signals point to a missing layer between a payment rail and an organization’s books. Agents need an accounting system for action: a machine-readable ledger of authority, commitments, expected effects, actual settlement, exceptions, and recovery. Without that ledger, autonomy produces transactions that are individually valid and institutionally ambiguous.</p>
+
+                <h2>Payment is the middle of the event</h2>
+
+                <p>A human purchase usually arrives with context supplied by a person, a role, a policy, and an existing accounting process. An agent compresses those steps into a request. That compression is useful, yet it hides the sequence that finance, procurement, and public administration still need to inspect.</p>
+
+                <p>Consider an agent that buys a data lookup. The payment protocol can establish that money moved from one party to another. The institution still needs a wider record:</p>
+
+                <ul>
+                    <li>the principal on whose behalf the agent acted;</li>
+                    <li>the purpose and workflow that permitted the request;</li>
+                    <li>the budget, cost center, currency, and spending limit assigned to it;</li>
+                    <li>the service received, its expected quality, and any downstream obligation;</li>
+                    <li>the approval, refusal, correction, refund, or dispute that followed.</li>
+                </ul>
+
+                <p>That record describes a commitment, not merely a charge. A failed request may still consume a quota. A reservation may create a liability before a service is delivered. A recurring agent may renew a contract after the original approver has left. A translation purchased for a public archive may create a correction obligation when a community disputes its terminology. The account must therefore follow the event from intention to effect and from effect to settlement.</p>
+
+                <h2>The agent creates obligations before it creates invoices</h2>
+
+                <p>Traditional accounting often receives evidence after the action: an invoice, a receipt, a bank entry, or a purchase order. Agentic systems need the evidence chain before and during the action because the system can create obligations at machine speed. A ledger designed only to reconcile completed payments will learn too late that an agent exceeded its authority.</p>
+
+                <p>The useful unit is the commitment record. Before an agent acts, it should declare what it intends to obtain or change, the principal responsible for the action, the maximum exposure, the conditions for success, and the path for human intervention. The record can remain small. Its purpose is to bind a future effect to a present authority.</p>
+
+                <p>After the action, the record should join intent to outcome. Did the service arrive? Was the result usable? Did the price change? Did the provider retry the operation? Did the action create a second call, a human review, a data-retention duty, or a public correction? Accounting becomes a way to preserve institutional memory about action, not a clerical layer appended after the interesting work has finished.</p>
+
+                <h2>Budgets should travel with purpose</h2>
+
+                <p>The decision-budget layer described in the previous entry allocates model depth, latency, evidence, language support, and human attention across bounded decisions. Agentic accounting extends that discipline into the consequences of action. A budget should travel with the purpose that justifies spending.</p>
+
+                <p>A research agent may have a monthly ceiling for paid sources, a per-request limit, and a rule requiring citation receipts. A public-service agent may be allowed to purchase translation or notification services while forbidding recurring subscriptions. A small African enterprise may assign a mobile-money wallet to a sales workflow but require a second person to approve a transfer above a local threshold. The technical form differs; the constitutional question is the same: what does this agent have authority to commit, under which purpose, and with what evidence?</p>
+
+                <p>This is also where language and jurisdiction enter the account. A financial rule that exists only in a provider dashboard is difficult to govern locally. Institutions should be able to inspect the spending purpose, the threshold, the counterparty, and the dispute route in the language used by their operators. A translated label is not enough if the underlying policy cannot be exported, tested, and amended by the institution that carries the consequence.</p>
+
+                <h2>African participation requires portable records</h2>
+
+                <p>The World Bank’s shared-compute initiative is significant as a financing signal because it treats access to AI capacity as a service that governments in emerging markets may buy and allocate, rather than assuming every country will build a standalone national data center. Shared infrastructure can widen access, yet it also multiplies the need for records that survive providers and currencies.</p>
+
+                <p>An African university using shared GPU capacity should be able to answer how much compute a research project consumed, who approved it, which currency funded it, what data crossed the boundary, and how the work can be moved when the provider changes terms. A cooperative using an agent to manage inventory should be able to export its purchase history and spending rules without surrendering the institution’s operating memory to a platform. A public archive should be able to prove that a machine translation was commissioned, reviewed, corrected, and paid for under an accountable authority.</p>
+
+                <p>Portability here means more than moving a balance between wallets. It means carrying the meaning of the balance: principal, purpose, authority, currency, evidence, dispute status, and obligations still open. That is a sovereignty requirement because a record that cannot leave its provider becomes a quiet dependency.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the agentic accounting control plane: infrastructure that binds machine action to authority, commitment, settlement, reconciliation, and correction across providers. It serves the principal side of the transaction. Payment networks move value; the control plane explains why the institution was allowed to move it and what remains true afterward.</p>
+
+                <ul>
+                    <li><strong>Commitment ledgers:</strong> records that bind an intended action to a principal, purpose, limit, counterparty, expiry, and success condition before settlement.</li>
+                    <li><strong>Machine procurement systems:</strong> policy-aware purchasing layers for paid APIs, compute, translation, data, and recurring services with approval and renewal controls.</li>
+                    <li><strong>Agent subledgers:</strong> accounting views that attribute cost, quota, energy, and downstream human work to an agent, workflow, project, or institution.</li>
+                    <li><strong>Reconciliation and dispute rails:</strong> systems that compare declared intent, provider receipts, delivered effects, refunds, corrections, and contested transactions.</li>
+                    <li><strong>Portable financial provenance:</strong> exportable records that preserve currency, authority, evidence, language, and open obligations across wallets, providers, and jurisdictions.</li>
+                </ul>
+
+                <p>Underwriting can begin with concrete questions. Can an institution see an agent’s open commitments before they become invoices? Can it cap exposure across several payment providers? Can a reviewer connect a charge to the decision, source, language, and principal that produced it? Can a provider dispute be resolved without reconstructing the agent’s private context? Can the ledger distinguish a successful purchase from a paid failure, a renewal, a reservation, and a correction? These are operational metrics for a control plane, not decorative features around a wallet.</p>
+
+                <p>The strongest products will also expose the cost of non-financial consequences. A cheap agent call may consume scarce reviewer time. A free translation may create a public correction burden. A compute reservation may carry an energy or connectivity constraint. A ledger that records only money will understate the institution’s real exposure. The useful account tracks the resources and authorities that make an action possible.</p>
+
+                <h2>Build the ledger before widening the mandate</h2>
+
+                <p>An institution can test this architecture with one bounded workflow. Choose a recurring action that already has a measurable cost: a paid research lookup, a compute reservation, an inventory purchase, or a translation request. Define the principal, purpose, maximum exposure, currency, evidence fields, approval threshold, expiry, and correction route. Run a successful case, a rejected case, a provider timeout, a duplicate request, a price change, and a disputed result.</p>
+
+                <p>The test passes when a second operator can reconstruct the sequence without asking the model what it meant. They should see the authority that opened the commitment, the service that answered, the value that moved, the work that followed, and the remedy available when the result is wrong. The institution can widen the agent’s mandate after the record survives these cases, not before.</p>
+
+                <p>Machine payments will matter because agents need to participate in economies. The deeper infrastructure question is whether institutions can retain authorship over those transactions. An agent becomes an economic actor when it can pay. It becomes an accountable institutional actor when every payment remains attached to a purpose, a principal, a record, and a path back to correction.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.linuxfoundation.org/press/linux-foundation-announces-operational-launch-of-x402-foundation-to-standardize-internet-native-payments-for-ai-agents-and-applications" target="_blank" rel="noopener">Linux Foundation, “Linux Foundation Announces Operational Launch of x402 Foundation to Standardize Internet-Native Payments for AI Agents and Applications” (July 14, 2026). Describes x402 as an open, vendor-neutral standard for payments over HTTP, with participation from finance, cloud, and payment companies.</a></li>
+                    <li><a href="https://www.linuxfoundation.org/press/agentic-ai-foundation-surpasses-300-members-in-less-than-one-year" target="_blank" rel="noopener">Linux Foundation, “Agentic AI Foundation Surpasses 300 Members in Less Than One Year” (October 22, 2026). Reports 305 members and frames authentication, verification, accountability, interoperability, and governance as institutional requirements for agents accessing data and executing transactions.</a></li>
+                    <li><a href="https://www.worldbank.org/en/news/press-release/2026/10/20/world-bank-group-launches-first-digital-strategy-to-expand-access-and-create-jobs" target="_blank" rel="noopener">World Bank Group, “World Bank Group Launches First Digital Strategy to Expand Access and Create Jobs” (October 20, 2026). Announces an AI Infrastructure and Readiness Initiative using shared, pay-as-you-go GPU infrastructure, initially focused on Africa and Latin America, alongside priorities for connectivity, digital services, skills, and safeguards.</a></li>
+                    <li><a href="https://www.nist.gov/news-events/news/2026/02/announcing-ai-agent-standards-initiative-interoperable-and-secure" target="_blank" rel="noopener">National Institute of Standards and Technology, “Announcing the AI Agent Standards Initiative for Interoperable and Secure Innovation” (February 17, 2026). Identifies open standards, protocol development, agent security, and identity infrastructure as conditions for trusted adoption.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Qui paie quand l’agent agit ?</h1>
+
+                <p><em>Note de terrain, 27 octobre 2026.</em> Un agent autonome peut appeler une API, réserver du calcul, acheter un service, commander une traduction ou déclencher un travail dans un autre système. Le paiement peut être immédiat, mais la question financière de l’institution commence plus tôt : qui a autorisé l’engagement, quel budget le porte, quelle obligation future l’action a-t-elle créée et quel dossier permettra de la contester ?</p>
+
+                <p>Les travaux actuels sur l’infrastructure rendent le paiement machine de plus en plus praticable. La fondation x402 de la Linux Foundation donne une gouvernance ouverte aux paiements sur HTTP, avec un soutien aux agents, aux API et à plusieurs types de paiement. L’Agentic AI Foundation a annoncé 305 membres en octobre, parmi lesquels des banques, des entreprises d’infrastructure, des institutions de recherche et des organisations philanthropiques ; son propre compte rendu présente l’authentification, la vérification et la responsabilité comme des questions auxquelles les institutions doivent répondre lorsque les agents accèdent aux données et exécutent des transactions. La stratégie numérique d’octobre du Groupe de la Banque mondiale ajoute une perspective de développement : son AI Infrastructure and Readiness Initiative propose une capacité GPU partagée et facturée à l’usage, avec un premier axe consacré à l’Afrique et à l’Amérique latine.</p>
+
+                <blockquote>
+                    <p>Un portefeuille peut déplacer de la valeur. Une institution doit savoir ce que cette valeur avait le droit de signifier.</p>
+                </blockquote>
+
+                <p>Ces signaux indiquent une couche manquante entre un rail de paiement et les comptes d’une organisation. Les agents ont besoin d’un système comptable de l’action : un registre lisible par machine de l’autorité, des engagements, des effets attendus, du règlement effectif, des exceptions et de la reprise. Sans ce registre, l’autonomie produit des transactions individuellement valides mais institutionnellement ambiguës.</p>
+
+                <h2>Le paiement se situe au milieu de l’événement</h2>
+
+                <p>Un achat humain arrive généralement avec un contexte fourni par une personne, un rôle, une politique et un processus comptable existant. Un agent condense ces étapes en une requête. Cette compression est utile, mais elle dissimule la séquence que les services financiers, les achats et l’administration publique doivent encore examiner.</p>
+
+                <p>Considérons un agent qui achète une consultation de données. Le protocole de paiement peut établir que l’argent est passé d’une partie à l’autre. L’institution a besoin d’un dossier plus large :</p>
+
+                <ul>
+                    <li>le mandant pour le compte duquel l’agent a agi ;</li>
+                    <li>la finalité et le workflow qui autorisaient la demande ;</li>
+                    <li>le budget, le centre de coût, la monnaie et la limite de dépense qui lui étaient attribués ;</li>
+                    <li>le service reçu, sa qualité attendue et toute obligation aval ;</li>
+                    <li>l’approbation, le refus, la correction, le remboursement ou le litige qui ont suivi.</li>
+                </ul>
+
+                <p>Ce dossier décrit un engagement, pas seulement une charge. Une requête échouée peut tout de même consommer un quota. Une réservation peut créer un passif avant la livraison du service. Un agent récurrent peut renouveler un contrat après le départ de l’approbateur initial. Une traduction achetée pour une archive publique peut créer une obligation de correction lorsqu’une communauté conteste sa terminologie. Le compte doit donc suivre l’événement de l’intention à l’effet, puis de l’effet au règlement.</p>
+
+                <h2>L’agent crée des obligations avant de créer des factures</h2>
+
+                <p>La comptabilité traditionnelle reçoit souvent les preuves après l’action : facture, reçu, écriture bancaire ou bon de commande. Les systèmes agentiques ont besoin de la chaîne de preuves avant et pendant l’action parce que le système peut créer des obligations à la vitesse de la machine. Un registre conçu seulement pour rapprocher les paiements achevés découvrira trop tard qu’un agent a dépassé son autorité.</p>
+
+                <p>L’unité utile est le dossier d’engagement. Avant d’agir, l’agent doit déclarer ce qu’il veut obtenir ou modifier, le mandant responsable de l’action, l’exposition maximale, les conditions de réussite et le chemin d’intervention humaine. Le dossier peut rester bref. Sa fonction est de rattacher un effet futur à une autorité présente.</p>
+
+                <p>Après l’action, le dossier doit relier l’intention au résultat. Le service est-il arrivé ? Le résultat est-il utilisable ? Le prix a-t-il changé ? Le fournisseur a-t-il relancé l’opération ? L’action a-t-elle créé un second appel, une revue humaine, une obligation de conservation des données ou une correction publique ? La comptabilité devient une manière de préserver la mémoire institutionnelle de l’action, et non une couche administrative ajoutée après le travail important.</p>
+
+                <h2>Les budgets doivent voyager avec la finalité</h2>
+
+                <p>La couche du budget de décision décrite dans l’entrée précédente répartit profondeur du modèle, latence, preuves, soutien linguistique et attention humaine entre des décisions bornées. La comptabilité agentique prolonge cette discipline dans les conséquences de l’action. Un budget doit voyager avec la finalité qui justifie la dépense.</p>
+
+                <p>Un agent de recherche peut disposer d’un plafond mensuel pour les sources payantes, d’une limite par requête et d’une règle exigeant des reçus de citation. Un agent de service public peut être autorisé à acheter des services de traduction ou de notification tout en étant empêché de renouveler des abonnements. Une petite entreprise africaine peut attribuer un portefeuille de monnaie mobile à un workflow commercial, mais exiger une seconde approbation pour un transfert dépassant un seuil local. La forme technique varie ; la question constitutionnelle reste la même : quel engagement cet agent a-t-il le pouvoir de prendre, pour quelle finalité et avec quelles preuves ?</p>
+
+                <p>C’est aussi ici que la langue et la juridiction entrent dans le compte. Une règle financière qui n’existe que dans le tableau de bord d’un fournisseur est difficile à gouverner localement. Les institutions doivent pouvoir examiner la finalité de la dépense, le seuil, la contrepartie et le chemin de litige dans la langue de leurs opérateurs. Une étiquette traduite ne suffit pas si la politique sous-jacente ne peut être exportée, testée et modifiée par l’institution qui porte la conséquence.</p>
+
+                <h2>La participation africaine exige des dossiers portables</h2>
+
+                <p>L’initiative de calcul partagé de la Banque mondiale est importante comme signal de financement parce qu’elle traite l’accès à la capacité d’IA comme un service que les gouvernements des marchés émergents peuvent acheter et répartir, au lieu de supposer que chaque pays construira un centre de données national autonome. Une infrastructure partagée peut élargir l’accès, mais elle multiplie aussi le besoin de dossiers qui survivent aux fournisseurs et aux monnaies.</p>
+
+                <p>Une université africaine qui utilise une capacité GPU partagée devrait pouvoir répondre à ces questions : quelle quantité de calcul un projet de recherche a-t-il consommée, qui l’a approuvée, quelle monnaie l’a financée, quelles données ont franchi la frontière et comment le travail peut-il être déplacé lorsque le fournisseur modifie ses conditions ? Une coopérative qui utilise un agent pour gérer ses stocks devrait pouvoir exporter son historique d’achats et ses règles de dépense sans abandonner la mémoire opérationnelle de l’institution à une plateforme. Une archive publique devrait pouvoir prouver qu’une traduction machine a été commandée, révisée, corrigée et payée sous une autorité responsable.</p>
+
+                <p>La portabilité signifie ici davantage que déplacer un solde d’un portefeuille à un autre. Elle signifie transporter le sens du solde : mandant, finalité, autorité, monnaie, preuves, statut du litige et obligations encore ouvertes. C’est une exigence de souveraineté, car un dossier qui ne peut pas quitter son fournisseur devient une dépendance silencieuse.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est le plan de contrôle comptable agentique : l’infrastructure qui rattache l’action machine à l’autorité, à l’engagement, au règlement, au rapprochement et à la correction entre plusieurs fournisseurs. Elle sert le côté du mandant. Les réseaux de paiement déplacent la valeur ; le plan de contrôle explique pourquoi l’institution avait le droit de la déplacer et ce qui reste vrai ensuite.</p>
+
+                <ul>
+                    <li><strong>Registres d’engagements :</strong> dossiers reliant une action prévue à un mandant, une finalité, une limite, une contrepartie, une expiration et une condition de réussite avant le règlement.</li>
+                    <li><strong>Systèmes d’achat machine :</strong> couches d’achat tenant compte des politiques pour les API payantes, le calcul, la traduction, les données et les services récurrents, avec contrôles d’approbation et de renouvellement.</li>
+                    <li><strong>Sous-registres agentiques :</strong> vues comptables attribuant coût, quota, énergie et travail humain aval à un agent, un workflow, un projet ou une institution.</li>
+                    <li><strong>Rails de rapprochement et de litige :</strong> systèmes comparant l’intention déclarée, les reçus du fournisseur, les effets livrés, les remboursements, les corrections et les transactions contestées.</li>
+                    <li><strong>Provenance financière portable :</strong> dossiers exportables conservant monnaie, autorité, preuves, langue et obligations ouvertes entre portefeuilles, fournisseurs et juridictions.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des questions concrètes. Une institution peut-elle voir les engagements ouverts d’un agent avant qu’ils deviennent des factures ? Peut-elle plafonner son exposition entre plusieurs fournisseurs de paiement ? Un réviseur peut-il relier une charge à la décision, à la source, à la langue et au mandant qui l’ont produite ? Un litige fournisseur peut-il être résolu sans reconstruire le contexte privé de l’agent ? Le registre distingue-t-il un achat réussi, un échec payé, un renouvellement, une réservation et une correction ? Ce sont des mesures opérationnelles pour un plan de contrôle, non des ornements autour d’un portefeuille.</p>
+
+                <p>Les meilleurs produits exposeront aussi le coût des conséquences non financières. Un appel agentique peu coûteux peut consommer un temps de revue rare. Une traduction gratuite peut créer une charge publique de correction. Une réservation de calcul peut porter une contrainte énergétique ou de connectivité. Un registre qui ne conserve que l’argent sous-estimera l’exposition réelle de l’institution. Le compte utile suit les ressources et les autorités qui rendent l’action possible.</p>
+
+                <h2>Construire le registre avant d’élargir le mandat</h2>
+
+                <p>Une institution peut tester cette architecture avec un workflow borné. Choisissez une action récurrente dont le coût est déjà mesurable : une consultation de recherche payante, une réservation de calcul, un achat de stock ou une demande de traduction. Définissez le mandant, la finalité, l’exposition maximale, la monnaie, les champs de preuve, le seuil d’approbation, l’expiration et le chemin de correction. Exécutez un cas réussi, un cas refusé, un délai fournisseur, une requête en double, une variation de prix et un résultat contesté.</p>
+
+                <p>Le test réussit lorsqu’un second opérateur peut reconstruire la séquence sans demander au modèle ce qu’il voulait dire. Il doit voir l’autorité qui a ouvert l’engagement, le service qui a répondu, la valeur qui a circulé, le travail qui a suivi et le recours disponible lorsque le résultat est erroné. L’institution peut élargir le mandat de l’agent après la survie du dossier à ces cas, et non avant.</p>
+
+                <p>Les paiements machine compteront parce que les agents doivent participer aux économies. La question d’infrastructure plus profonde est de savoir si les institutions peuvent rester les auteurs de ces transactions. Un agent devient un acteur économique lorsqu’il peut payer. Il devient un acteur institutionnel responsable lorsque chaque paiement reste attaché à une finalité, à un mandant, à un dossier et à un chemin de correction.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.linuxfoundation.org/press/linux-foundation-announces-operational-launch-of-x402-foundation-to-standardize-internet-native-payments-for-ai-agents-and-applications" target="_blank" rel="noopener">Linux Foundation, « Linux Foundation Announces Operational Launch of x402 Foundation to Standardize Internet-Native Payments for AI Agents and Applications » (14 juillet 2026). Décrit x402 comme un standard ouvert et neutre pour les paiements sur HTTP, avec la participation d’entreprises de la finance, du cloud et des paiements.</a></li>
+                    <li><a href="https://www.linuxfoundation.org/press/agentic-ai-foundation-surpasses-300-members-in-less-than-one-year" target="_blank" rel="noopener">Linux Foundation, « Agentic AI Foundation Surpasses 300 Members in Less Than One Year » (22 octobre 2026). Signale 305 membres et présente l’authentification, la vérification, la responsabilité, l’interopérabilité et la gouvernance comme des exigences institutionnelles pour les agents qui accèdent aux données et exécutent des transactions.</a></li>
+                    <li><a href="https://www.worldbank.org/en/news/press-release/2026/10/20/world-bank-group-launches-first-digital-strategy-to-expand-access-and-create-jobs" target="_blank" rel="noopener">Groupe de la Banque mondiale, « World Bank Group Launches First Digital Strategy to Expand Access and Create Jobs » (20 octobre 2026). Annonce une initiative d’infrastructure et de préparation à l’IA utilisant une infrastructure GPU partagée et facturée à l’usage, d’abord consacrée à l’Afrique et à l’Amérique latine, avec des priorités de connectivité, de services numériques, de compétences et de garanties.</a></li>
+                    <li><a href="https://www.nist.gov/news-events/news/2026/02/announcing-ai-agent-standards-initiative-interoperable-and-secure" target="_blank" rel="noopener">National Institute of Standards and Technology, « Announcing the AI Agent Standards Initiative for Interoperable and Secure Innovation » (17 février 2026). Identifie les standards ouverts, le développement de protocoles, la sécurité des agents et l’infrastructure d’identité comme des conditions d’une adoption digne de confiance.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
