@@ -182,6 +182,7 @@
         'article.entry150':     { en: 'Diop Daily #150 — October 2026', fr: 'Diop Quotidien n°150 — Octobre 2026' },
         'article.entry151':     { en: 'Diop Daily #151 — October 2026', fr: 'Diop Quotidien n°151 — Octobre 2026' },
         'article.entry152':     { en: 'Diop Daily #152 — October 2026', fr: 'Diop Quotidien n°152 — Octobre 2026' },
+        'article.entry153':     { en: 'Diop Daily #153 — October 2026', fr: 'Diop Quotidien n°153 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -194,6 +195,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-153': {
+        title: {
+            en: 'The GPU Queue Is a Political Document',
+            fr: 'La file d’attente des GPU est un document politique'
+        },
+        excerpt: {
+            en: 'A GPU queue decides which institutions receive scarce capacity, which languages get tested, and which public problems are allowed to matter. The investable layer is compute allocation infrastructure: transparent scheduling, local ownership, workload evidence, and regional coordination that turn hardware into shared capability.',
+            fr: 'Une file d’attente de GPU décide quelles institutions reçoivent une capacité rare, quelles langues sont testées et quels problèmes publics peuvent compter. La couche d’investissement est l’infrastructure d’allocation du calcul : ordonnancement transparent, propriété locale, preuves des workloads et coordination régionale qui transforment le matériel en capacité partagée.'
+        }
+    },
     'diop-daily-152': {
         title: {
             en: 'Who Pays When the Agent Acts?',

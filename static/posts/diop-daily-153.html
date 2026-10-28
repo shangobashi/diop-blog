@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The GPU Queue Is a Political Document — Diop Research</title>
+    <meta name="description" content="A GPU queue decides which institutions receive scarce capacity, which languages get tested, and which public problems are allowed to matter. The strategic layer is compute allocation infrastructure: transparent scheduling, local ownership, workload evidence, and regional coordination that turn hardware into shared capability."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry153">Diop Daily #153 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 28, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>compute allocation · public infrastructure · African AI</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The GPU Queue Is a Political Document</h1>
+
+                <p><em>Field note, October 28, 2026.</em> By the time a GPU is switched on, a political decision has already been made. Someone decided which institution receives scarce capacity, which workload waits, which language deserves an experiment, and which public problem can justify an expensive run. The queue is therefore part of AI’s constitution. It is where an abstract promise of access becomes a distribution of capability.</p>
+
+                <p>Compute is usually discussed as a hardware question: how many accelerators exist, where they are installed, and what each hour costs. Those questions matter, but they leave out the governing act. A cluster is a common resource whenever universities, public agencies, start-ups, researchers, and civic institutions depend on the same pool. The allocator then becomes as important as the machine. Its rules decide whether local capacity produces broad capability or merely reproduces the priorities of the largest buyer.</p>
+
+                <p>Recent public evidence places this question in the open. UNDP’s September study of country-hosted deployments in Kenya, Malawi, Rwanda, South Africa, Togo, and Zambia describes compute as one part of a wider system that also needs usable data, skilled operators, institutional responsibility, cybersecurity, sustainable finance, and a path from priority applications to operating services. The World Bank Group’s October digital strategy announces a shared, pay-as-you-go GPU initiative initially focused on Africa and Latin America, alongside connectivity, local data, skills, and safeguards. An October UNDP and African Development Bank programme frames the next phase as moving from national diagnosis to finance-ready projects and coordinated investment. The ITU and African Telecommunications Union have likewise emphasized open interoperability and standards as conditions for scaling AI-driven public infrastructure across African cities and communities.</p>
+
+                <blockquote>
+                    <p>A cluster becomes a capability only when its allocation can be explained to the people who depend on it.</p>
+                </blockquote>
+
+                <h2>The queue is where policy becomes measurable</h2>
+
+                <p>Every shared cluster has a queue, even when the operator calls it a scheduler, a quota system, a service catalogue, or an informal relationship. The queue determines which work is urgent, which work is subsidized, which work receives priority during scarcity, and which work is quietly excluded. A commercial workload can pay for speed. A public-health experiment may have high social value but no immediate revenue. A university may need predictable access for a semester rather than a burst of capacity. A local-language dataset may require many small runs before it can show its value.</p>
+
+                <p>These cases cannot be compared through price alone. The allocator needs a vocabulary for consequence and public purpose. It should record at least:</p>
+
+                <ul>
+                    <li>the institution and accountable operator requesting capacity;</li>
+                    <li>the dataset, model, workload class, language, and jurisdiction involved;</li>
+                    <li>the deadline, expected duration, energy envelope, and reliability requirement;</li>
+                    <li>the public, scientific, commercial, or educational purpose that justifies the request;</li>
+                    <li>the result delivered, the capacity consumed, and the reason for any exception or delay.</li>
+                </ul>
+
+                <p>This record makes the trade-off visible without turning public infrastructure into a bureaucracy for its own sake. If a queue gives priority to a hospital model, a language corpus, or a revenue-generating service, an institution should be able to state the rule and inspect its consequences. If a public subsidy exists, the subsidy should produce evidence of who gained access and what capability emerged. A capacity decision that leaves no record becomes an invisible distribution of power.</p>
+
+                <h2>Hardware access is not local capability</h2>
+
+                <p>UNDP’s six-country study is useful because it follows compute beyond procurement. The study identifies 21 applications across the programme, while Rwanda has identified 42 priority applications across eight sectors. Its central lesson is practical: capacity becomes useful when it is connected to ownership, data, operators, governance, financing, and a defined route into service. A cluster can be installed and still remain institutionally idle.</p>
+
+                <p>The same distinction matters for investment. A hardware purchase produces a visible asset. A capability requires a chain of less visible commitments: someone must maintain the machines, schedule workloads, secure the environment, help institutions prepare data, measure results, manage energy and connectivity constraints, and decide what happens when demand exceeds supply. The revenue model may include access fees, public contracts, research subscriptions, managed services, or regional capacity agreements. The value lies in the repeatable operating system around the hardware.</p>
+
+                <p>African institutions should be able to use local capacity without surrendering their operating knowledge to a foreign dashboard. A university should retain a record of which projects consumed compute and why. A public agency should be able to pause a workload that crosses a policy boundary. A research group should be able to export its queue history, model versions, data location, and evaluation evidence when a provider changes terms. Portability is therefore part of capacity. A cluster that cannot explain or export its decisions is an enclave, even if its servers sit on local soil.</p>
+
+                <h2>Shared compute needs a regional grammar</h2>
+
+                <p>The World Bank’s shared GPU initiative points toward a practical alternative to assuming that every country must build a standalone national data centre. Shared capacity can lower the threshold for governments, universities, and smaller firms. It also creates a harder question: who governs access when the capacity is shared across institutions, currencies, public obligations, and providers?</p>
+
+                <p>A regional system needs common fields without requiring identical national priorities. One country may prioritize agricultural advisory services, another clinical support, another language preservation or industrial maintenance. The grammar can remain shared while the policy remains local. A request can carry an institution, purpose, language, data class, energy constraint, deadline, evaluation plan, and correction owner. The region can then compare capacity use without flattening the reasons that make each workload important.</p>
+
+                <p>This is where open standards become material rather than ceremonial. The ITU’s African digital-public-infrastructure discussion places interoperability, fragmentation, and standards at the center of scale. Compute allocation belongs in that conversation. If every provider exposes a different quota format, billing unit, workload identity, and export path, an institution cannot move its work or compare its options. If the interfaces are open, regional operators can federate capacity, researchers can carry evidence, and public purchasers can negotiate from records rather than promises.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the compute allocation control plane: infrastructure that schedules, prices, governs, measures, and federates scarce AI capacity across institutions while preserving a public record of purpose and result. This is distinct from the payment rail that settles a GPU hour and from the activation layer that makes a cluster operational. The allocation plane decides whose work receives the hour and what accountability travels with it.</p>
+
+                <ul>
+                    <li><strong>Capacity exchanges:</strong> interoperable marketplaces that expose available compute, workload requirements, location, energy limits, and service commitments.</li>
+                    <li><strong>Public-interest schedulers:</strong> policy-aware allocators that balance revenue, research, education, health, language, and civic workloads under rules an institution can inspect.</li>
+                    <li><strong>Workload identity and evidence:</strong> records connecting a run to its institution, data class, model version, evaluation fixture, result, and correction path.</li>
+                    <li><strong>Regional federation layers:</strong> control planes that move approved jobs across providers and borders while retaining jurisdiction, language, data-location, and security conditions.</li>
+                    <li><strong>Capacity underwriting:</strong> financing and procurement tools that turn future demand, maintenance, energy, and service obligations into an evidence-backed operating plan.</li>
+                </ul>
+
+                <p>Underwriting can begin with questions that a hardware vendor cannot answer alone. What percentage of capacity is allocated through declared policy? How long do public-interest workloads wait beside commercial jobs? Can an operator explain the queue after an outage or a pricing change? Can a researcher reproduce the environment that produced a result? Can a smaller institution enter the system without negotiating a bespoke contract? Can the allocation record travel when a workload moves from a national cluster to a regional provider?</p>
+
+                <p>The strongest operator will measure capability, not occupancy. A full cluster can be economically empty if jobs are unrepeatable, data is unusable, operators are untrained, or results cannot reach a service. Useful metrics include successful workload completion, time from request to accepted result, share of capacity available to local institutions, energy per accepted run, language coverage, correction time, and the percentage of jobs that carry exportable evidence. These measures let capital distinguish a room full of hardware from an institution that can reliably produce public and commercial value.</p>
+
+                <h2>Build the queue before building the myth</h2>
+
+                <p>An institution can test this architecture with one shared pool and one policy register. Define the workload classes, the accountable owners, the evidence required, the service levels, the public-interest exceptions, the energy constraints, and the appeal path. Run a commercial job, a research job, a local-language job, a public-service job, an over-capacity day, and a provider failure. Preserve the request, the decision, the execution record, and the result.</p>
+
+                <p>The test passes when a second operator can answer why a job ran, why another job waited, what the cluster consumed, which institution benefited, and how a disputed allocation can be corrected. That is the minimum constitutional standard for shared compute. A queue that can be inspected can improve. A queue that cannot be inspected merely hides the priorities of whoever controls the machine.</p>
+
+                <p>Africa’s AI future will depend on hardware, energy, connectivity, data, skills, and capital. It will also depend on the rules that distribute these resources among institutions. Sovereignty begins when a people can decide, record, and revise what its scarce machines are for; purchasing a server is only one step toward that authority.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.undp.org/africa/publications/local-ai-compute-infrastructure-africa-lessons-six-country-hosted-deployments-governance-and-effective-use" target="_blank" rel="noopener">United Nations Development Programme, “Local AI compute infrastructure in Africa: Lessons from six country-hosted deployments on governance and effective use” (September 17, 2026). Reports lessons from deployments in Kenya, Malawi, Rwanda, South Africa, Togo, and Zambia, including the need for data, skills, ownership, governance, cybersecurity, finance, and routes from applications to services.</a></li>
+                    <li><a href="https://www.worldbank.org/en/news/press-release/2026/10/20/world-bank-group-launches-first-digital-strategy-to-expand-access-and-create-jobs" target="_blank" rel="noopener">World Bank Group, “World Bank Group Launches First Digital Strategy to Expand Access and Create Jobs” (October 20, 2026). Announces an AI Infrastructure and Readiness Initiative using shared, pay-as-you-go GPU capacity, initially focused on Africa and Latin America, alongside connectivity, local data, skills, and safeguards.</a></li>
+                    <li><a href="https://www.undp.org/africa/press-releases/african-development-bank-and-undp-advance-ai-10-billion-initiative-turn-africas-ai-potential-productivity" target="_blank" rel="noopener">United Nations Development Programme and African Development Bank, “African Development Bank and UNDP Advance AI 10 Billion Initiative to Turn Africa’s AI Potential into Productivity” (October 12, 2026). Describes a move from country diagnosis to finance-ready projects and coordinated investment platforms, beginning with five countries and extending to twenty by the end of 2027.</a></li>
+                    <li><a href="https://www.itu.int/cities/digitaltransformationdialogues/ai-driven-dpi-for-africa/" target="_blank" rel="noopener">International Telecommunication Union and African Telecommunications Union, “AI-Driven Digital Public Infrastructure for African Cities and Communities” (April 27, 2026). Frames open interoperability, avoiding fragmentation and vendor lock-in, and turning standards into action as requirements for responsible scale.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La file d’attente des GPU est un document politique</h1>
+
+                <p><em>Note de terrain, 28 octobre 2026.</em> Au moment où un GPU est allumé, une décision politique a déjà été prise. Quelqu’un a décidé quelle institution recevrait une capacité rare, quel workflow attendrait, quelle langue mériterait une expérimentation et quel problème public pourrait justifier une exécution coûteuse. La file d’attente fait donc partie de la constitution de l’IA. C’est là qu’une promesse abstraite d’accès devient une distribution de capacité.</p>
+
+                <p>Le calcul est généralement présenté comme une question de matériel : combien d’accélérateurs existent, où ils sont installés et combien coûte chaque heure. Ces questions comptent, mais elles laissent de côté l’acte de gouvernance. Un cluster est une ressource commune dès lors que des universités, des administrations, des start-up, des chercheurs et des institutions civiques dépendent du même pool. L’allocateur devient alors aussi important que la machine. Ses règles décident si la capacité locale produit une capacité collective ou reproduit simplement les priorités du plus grand acheteur.</p>
+
+                <p>Les preuves publiques récentes placent cette question au grand jour. L’étude publiée en septembre par le PNUD sur des déploiements hébergés au Kenya, au Malawi, au Rwanda, en Afrique du Sud, au Togo et en Zambie décrit le calcul comme une partie d’un système plus large qui exige aussi des données utilisables, des opérateurs compétents, une responsabilité institutionnelle, la cybersécurité, un financement durable et un chemin reliant les applications prioritaires aux services en fonctionnement. La stratégie numérique publiée en octobre par le Groupe de la Banque mondiale annonce une initiative de GPU partagés et facturés à l’usage, d’abord centrée sur l’Afrique et l’Amérique latine, avec la connectivité, les données locales, les compétences et les garanties. Un programme du PNUD et de la Banque africaine de développement, annoncé en octobre, présente la phase suivante comme le passage du diagnostic national aux projets prêts à financer et à l’investissement coordonné. L’UIT et l’Union africaine des télécommunications ont également souligné l’interopérabilité ouverte et les standards comme conditions de la mise à l’échelle d’une infrastructure publique pilotée par l’IA dans les villes et communautés africaines.</p>
+
+                <blockquote>
+                    <p>Un cluster ne devient une capacité que lorsque son allocation peut être expliquée aux personnes qui en dépendent.</p>
+                </blockquote>
+
+                <h2>La file d’attente est l’endroit où la politique devient mesurable</h2>
+
+                <p>Tout cluster partagé possède une file d’attente, même si l’opérateur l’appelle ordonnanceur, système de quotas, catalogue de services ou relation informelle. La file détermine quel travail est urgent, quel travail est subventionné, quel travail reçoit la priorité en période de rareté et quel travail est discrètement exclu. Un workflow commercial peut payer pour la vitesse. Une expérimentation de santé publique peut avoir une forte valeur sociale sans revenu immédiat. Une université peut avoir besoin d’un accès prévisible pendant un semestre plutôt que d’un pic de capacité. Un jeu de données en langue locale peut nécessiter de nombreuses petites exécutions avant de révéler sa valeur.</p>
+
+                <p>Ces cas ne peuvent pas être comparés par le prix seul. L’allocateur a besoin d’un vocabulaire de la conséquence et de la finalité publique. Il devrait conserver au moins :</p>
+
+                <ul>
+                    <li>l’institution et l’opérateur responsable qui demandent la capacité ;</li>
+                    <li>le jeu de données, le modèle, la classe de workload, la langue et la juridiction concernés ;</li>
+                    <li>la date limite, la durée prévue, l’enveloppe énergétique et l’exigence de fiabilité ;</li>
+                    <li>la finalité publique, scientifique, commerciale ou éducative qui justifie la demande ;</li>
+                    <li>le résultat produit, la capacité consommée et la raison de toute exception ou de tout retard.</li>
+                </ul>
+
+                <p>Ce dossier rend l’arbitrage visible sans transformer l’infrastructure publique en bureaucratie pour elle-même. Si une file donne la priorité à un modèle hospitalier, à un corpus linguistique ou à un service générateur de revenus, l’institution doit pouvoir énoncer la règle et examiner ses conséquences. Si une subvention publique existe, elle doit produire une preuve de ceux qui ont obtenu l’accès et de la capacité qui en est née. Une décision de capacité sans dossier devient une distribution invisible du pouvoir.</p>
+
+                <h2>L’accès au matériel n’est pas une capacité locale</h2>
+
+                <p>L’étude du PNUD dans six pays est utile parce qu’elle suit le calcul au-delà de l’achat. Elle identifie 21 applications dans le programme, tandis que le Rwanda a identifié 42 applications prioritaires dans huit secteurs. Sa leçon centrale est pratique : la capacité devient utile lorsqu’elle est reliée à une propriété institutionnelle, à des données, à des opérateurs, à la gouvernance, au financement et à un chemin défini vers le service. Un cluster peut être installé tout en restant institutionnellement inactif.</p>
+
+                <p>La même distinction compte pour l’investissement. Un achat de matériel produit un actif visible. Une capacité exige une chaîne d’engagements moins visibles : quelqu’un doit entretenir les machines, ordonnancer les workloads, sécuriser l’environnement, aider les institutions à préparer leurs données, mesurer les résultats, gérer les contraintes d’énergie et de connectivité et décider de ce qui arrive lorsque la demande dépasse l’offre. Le modèle de revenus peut comprendre des frais d’accès, des contrats publics, des abonnements de recherche, des services gérés ou des accords régionaux de capacité. La valeur réside dans le système d’exploitation reproductible qui entoure le matériel.</p>
+
+                <p>Les institutions africaines doivent pouvoir utiliser une capacité locale sans céder leur savoir opératoire à un tableau de bord étranger. Une université doit conserver la trace des projets qui ont consommé du calcul et de leurs raisons. Une administration doit pouvoir suspendre un workload qui franchit une limite de politique. Une équipe de recherche doit pouvoir exporter l’historique de sa file, les versions de modèles, le lieu des données et les preuves d’évaluation lorsqu’un fournisseur modifie ses conditions. La portabilité fait donc partie de la capacité. Un cluster incapable d’expliquer ou d’exporter ses décisions est une enclave, même si ses serveurs se trouvent sur le sol local.</p>
+
+                <h2>Le calcul partagé a besoin d’une grammaire régionale</h2>
+
+                <p>L’initiative de GPU partagés de la Banque mondiale indique une alternative pratique à l’hypothèse selon laquelle chaque pays doit construire un centre de données national autonome. Une capacité partagée peut abaisser le seuil d’accès pour les gouvernements, les universités et les petites entreprises. Elle crée aussi une question plus difficile : qui gouverne l’accès lorsque la capacité est partagée entre institutions, monnaies, obligations publiques et fournisseurs ?</p>
+
+                <p>Un système régional a besoin de champs communs sans exiger des priorités nationales identiques. Un pays peut privilégier les services de conseil agricole, un autre le soutien clinique, un autre la préservation linguistique ou la maintenance industrielle. La grammaire peut rester commune tandis que la politique reste locale. Une demande peut porter une institution, une finalité, une langue, une classe de données, une contrainte énergétique, une échéance, un plan d’évaluation et un responsable de correction. La région peut alors comparer l’usage de la capacité sans effacer les raisons qui rendent chaque workload important.</p>
+
+                <p>C’est ici que les standards ouverts deviennent matériels plutôt que cérémoniels. La discussion de l’UIT sur l’infrastructure publique numérique africaine place l’interopérabilité, la fragmentation et les standards au centre du passage à l’échelle. L’allocation du calcul appartient à cette conversation. Si chaque fournisseur expose un format de quota, une unité de facturation, une identité de workload et un chemin d’exportation différents, une institution ne peut ni déplacer son travail ni comparer ses options. Si les interfaces sont ouvertes, des opérateurs régionaux peuvent fédérer la capacité, les chercheurs peuvent transporter les preuves et les acheteurs publics peuvent négocier à partir de dossiers plutôt qu’à partir de promesses.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est le plan de contrôle de l’allocation du calcul : une infrastructure qui ordonnance, tarife, gouverne, mesure et fédère une capacité d’IA rare entre institutions tout en conservant un dossier public de la finalité et du résultat. Cette couche se distingue du rail de paiement qui règle une heure de GPU et de la couche d’activation qui rend un cluster opérationnel. Le plan d’allocation décide à qui l’heure est accordée et quelle responsabilité l’accompagne.</p>
+
+                <ul>
+                    <li><strong>Places de marché de capacité :</strong> marchés interopérables exposant le calcul disponible, les exigences du workload, le lieu, les limites énergétiques et les engagements de service.</li>
+                    <li><strong>Ordonnanceurs d’intérêt public :</strong> allocateurs tenant compte des politiques qui équilibrent les workloads commerciaux, de recherche, d’éducation, de santé, de langue et d’intérêt civique selon des règles inspectables.</li>
+                    <li><strong>Identité et preuves des workloads :</strong> dossiers reliant une exécution à son institution, sa classe de données, sa version de modèle, son dispositif d’évaluation, son résultat et son chemin de correction.</li>
+                    <li><strong>Couches de fédération régionale :</strong> plans de contrôle qui déplacent les jobs approuvés entre fournisseurs et frontières tout en conservant les conditions de juridiction, de langue, de localisation des données et de sécurité.</li>
+                    <li><strong>Souscription de capacité :</strong> outils de financement et d’achat qui transforment la demande future, la maintenance, l’énergie et les obligations de service en plan d’exploitation documenté.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des questions auxquelles un vendeur de matériel ne peut pas répondre seul. Quel pourcentage de la capacité est attribué par une politique déclarée ? Combien de temps les workloads d’intérêt public attendent-ils face aux jobs commerciaux ? L’opérateur peut-il expliquer la file après une panne ou une variation de prix ? Un chercheur peut-il reproduire l’environnement qui a produit un résultat ? Une petite institution peut-elle entrer dans le système sans négocier un contrat sur mesure ? Le dossier d’allocation peut-il voyager lorsqu’un workload passe d’un cluster national à un fournisseur régional ?</p>
+
+                <p>L’opérateur le plus solide mesurera la capacité, et non le taux d’occupation. Un cluster plein peut être vide économiquement si les jobs ne sont pas reproductibles, si les données sont inutilisables, si les opérateurs ne sont pas formés ou si les résultats ne peuvent pas rejoindre un service. Les mesures utiles comprennent le taux de réussite des workloads, le temps entre la demande et le résultat accepté, la part de capacité accessible aux institutions locales, l’énergie par exécution acceptée, la couverture linguistique, le temps de correction et la proportion de jobs accompagnés de preuves exportables. Ces mesures permettent au capital de distinguer une salle pleine de matériel d’une institution capable de produire de manière fiable une valeur publique et commerciale.</p>
+
+                <h2>Construire la file avant de construire le mythe</h2>
+
+                <p>Une institution peut tester cette architecture avec un pool partagé et un registre de politiques. Définissez les classes de workloads, les responsables, les preuves requises, les niveaux de service, les exceptions d’intérêt public, les contraintes énergétiques et le chemin d’appel. Exécutez un job commercial, un job de recherche, un job en langue locale, un job de service public, une journée de surcapacité et une panne de fournisseur. Conservez la demande, la décision, le dossier d’exécution et le résultat.</p>
+
+                <p>Le test réussit lorsqu’un second opérateur peut répondre à ces questions : pourquoi un job a-t-il été exécuté, pourquoi un autre a-t-il attendu, qu’a consommé le cluster, quelle institution en a bénéficié et comment une allocation contestée peut-elle être corrigée ? C’est le standard constitutionnel minimal du calcul partagé. Une file que l’on peut inspecter peut s’améliorer. Une file impossible à inspecter dissimule simplement les priorités de celui qui contrôle la machine.</p>
+
+                <p>L’avenir africain de l’IA dépendra du matériel, de l’énergie, de la connectivité, des données, des compétences et du capital. Il dépendra aussi des règles qui distribuent ces ressources entre les institutions. La souveraineté commence lorsqu’un peuple peut décider, enregistrer et réviser ce à quoi ses machines rares sont destinées ; l’achat d’un serveur n’est qu’une étape vers cette autorité.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.undp.org/africa/publications/local-ai-compute-infrastructure-africa-lessons-six-country-hosted-deployments-governance-and-effective-use" target="_blank" rel="noopener">Programme des Nations Unies pour le développement, « Local AI compute infrastructure in Africa: Lessons from six country-hosted deployments on governance and effective use » (17 septembre 2026). Présente les leçons de déploiements au Kenya, au Malawi, au Rwanda, en Afrique du Sud, au Togo et en Zambie, notamment le besoin de données, de compétences, de propriété institutionnelle, de gouvernance, de cybersécurité, de financement et de chemins reliant les applications aux services.</a></li>
+                    <li><a href="https://www.worldbank.org/en/news/press-release/2026/10/20/world-bank-group-launches-first-digital-strategy-to-expand-access-and-create-jobs" target="_blank" rel="noopener">Groupe de la Banque mondiale, « World Bank Group Launches First Digital Strategy to Expand Access and Create Jobs » (20 octobre 2026). Annonce une initiative d’infrastructure et de préparation à l’IA fondée sur une capacité GPU partagée et facturée à l’usage, d’abord centrée sur l’Afrique et l’Amérique latine, avec la connectivité, les données locales, les compétences et les garanties.</a></li>
+                    <li><a href="https://www.undp.org/africa/press-releases/african-development-bank-and-undp-advance-ai-10-billion-initiative-turn-africas-ai-potential-productivity" target="_blank" rel="noopener">Programme des Nations Unies pour le développement et Banque africaine de développement, « African Development Bank and UNDP Advance AI 10 Billion Initiative to Turn Africa’s AI Potential into Productivity » (12 octobre 2026). Décrit le passage du diagnostic national à des projets prêts à financer et à des plateformes d’investissement coordonnées, avec un démarrage dans cinq pays et une extension à vingt d’ici fin 2027.</a></li>
+                    <li><a href="https://www.itu.int/cities/digitaltransformationdialogues/ai-driven-dpi-for-africa/" target="_blank" rel="noopener">Union internationale des télécommunications et Union africaine des télécommunications, « AI-Driven Digital Public Infrastructure for African Cities and Communities » (27 avril 2026). Présente l’interopérabilité ouverte, la réduction de la fragmentation et de la dépendance aux fournisseurs, ainsi que la mise en pratique des standards comme des conditions d’une mise à l’échelle responsable.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
