@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Memory That Cannot Leave Is a Liability — Diop Research</title>
+    <meta name="description" content="Agent memory is becoming an interoperability and sovereignty problem. Portable memory requires provenance, identity, sharing contracts, erasure, conformance tests, and a migration path that institutions can inspect."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry154">Diop Daily #154 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 29, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>memory portability · institutional sovereignty · agent interoperability</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Memory That Cannot Leave Is a Liability</h1>
+
+                <p><em>Field note, October 29, 2026.</em> An agent may remember a person, a project, a language preference, a correction, or an unfinished obligation. The practical question begins when the institution changes its model, provider, framework, or jurisdiction. Can that memory be inspected, transferred, revoked, and tested without asking the old vendor to remain the custodian of the institution’s past?</p>
+
+                <p>Agent memory is moving toward a protocol problem. The W3C AI Agent Memory Interoperability Community Group describes its purpose as making memory portable and verifiable across vendors, models, frameworks, and tool ecosystems. Its charter places interoperability profiles, use cases, conformance criteria, and test vectors above an externally maintained protocol. An October W3C strategy paper adds the web-wide consequence: agents carry data between sites, sessions, and memory, which makes secondary use, consent duration, privacy, and user control part of the platform question.</p>
+
+                <blockquote>
+                    <p>Institutional memory becomes sovereign when it can cross a boundary without losing its meaning.</p>
+                </blockquote>
+
+                <h2>Persistence is only the first property</h2>
+
+                <p>The first generation of agent memory focused on continuity. A system that can recall a prior instruction feels more useful than one that begins every session from zero. That improvement matters, yet persistence alone leaves the central relationship unchanged: the provider still defines the storage format, the retrieval behavior, the deletion semantics, and the conditions for export.</p>
+
+                <p>Portability adds a harder standard. A memory unit must carry enough context to remain intelligible after migration. The receiving system needs to know its origin, subject, time, confidence, permissions, dependencies, correction history, and expiry. A vector without its source is a clue. A summary without its evidence is a claim. An embedding without a stable identity is a coordinate that another system may interpret differently.</p>
+
+                <p>The institution therefore needs a memory contract. Each durable item should answer a bounded set of questions:</p>
+
+                <ul>
+                    <li>Who or what created the memory, and under whose authority?</li>
+                    <li>What event, source, observation, or decision supports it?</li>
+                    <li>Which agent, person, workflow, language, and jurisdiction may use it?</li>
+                    <li>How can an authorized operator correct, share, suspend, or revoke it?</li>
+                    <li>What evidence proves that a receiving system imported it faithfully?</li>
+                </ul>
+
+                <p>This contract turns memory from a hidden convenience into an institutional object. It also changes the engineering target. Retrieval quality still matters, but migration fidelity, erasure reach, permission enforcement, and explanation of the memory’s origin become operational measures.</p>
+
+                <h2>Memory has a jurisdiction</h2>
+
+                <p>Every memory system makes a decision about custody. The decision may be visible in a data-residency setting or buried in a provider’s implementation. Either way, the system determines where a fact is stored, which service can inspect it, which model can transform it, and who can remove it. The storage location is one part of the question. Authority over interpretation is another.</p>
+
+                <p>The W3C memory group’s public scope is instructive because it names mechanisms that ordinary feature lists often omit: identity binding, encrypted memory cells, audit anchors, temporary and permanent sharing contracts, revocation semantics, and cryptographic erasure. The group is a community initiative, not a W3C Recommendation, and its referenced protocol is an Internet-Draft rather than an approved standard. That status demands caution. It also shows where serious interoperability work is concentrating: meaning must survive movement, and deletion must reach the copies that a system created.</p>
+
+                <p>The distinction is especially important for African institutions. A university, archive, publisher, clinic, cooperative, or public agency may use a foreign model while retaining legal, cultural, and operational responsibility for its records. A memory system that stores local knowledge in an opaque provider format creates dependency even when the model performs well. A correction made in one language may disappear from another representation. A community’s request for removal may reach the visible answer while leaving derived summaries, embeddings, caches, or downstream agent instructions untouched.</p>
+
+                <p>Intellectual sovereignty has a technical form here. It means an institution can define which memories are portable, which are local, which require collective consent, which may be shared for a limited purpose, and which must be destroyed. The principle applies to an archive in Dakar as much as to a laboratory in Nairobi or a public service in Kigali. Memory is infrastructure for continuity, so whoever controls its boundaries influences what the institution can become.</p>
+
+                <h2>The missing surface is conformance</h2>
+
+                <p>Interoperability claims become credible through tests. The W3C charter explicitly proposes conformance criteria and test vectors, which is a more useful direction than another collection of demonstrations. A memory implementation should pass controlled exercises before an institution trusts it with durable knowledge.</p>
+
+                <ol>
+                    <li><strong>Round-trip fidelity:</strong> export a memory, import it into a second implementation, and compare identity, evidence, permissions, language, and retrieval behavior.</li>
+                    <li><strong>Selective sharing:</strong> share one item for one purpose and confirm that the recipient cannot silently widen the scope.</li>
+                    <li><strong>Revocation:</strong> withdraw access and test both future retrieval and already-created derivatives.</li>
+                    <li><strong>Correction:</strong> amend a memory and verify that old versions remain attributable while current answers use the corrected state.</li>
+                    <li><strong>Erasure:</strong> remove a subject’s memory and trace the request through cells, indexes, caches, summaries, and model-facing stores.</li>
+                </ol>
+
+                <p>These tests expose a difference between a database export and a portable memory system. A database can move bytes. A memory system must move authority, context, and obligations. It must also make failure visible. If a receiving agent cannot verify the provenance of an imported item, the correct result is a quarantine or a human review, not a confident answer.</p>
+
+                <p>Google’s A2A work helps clarify the layer boundary. A2A is designed for agents built by different vendors and frameworks to collaborate across enterprise applications, including long-running tasks and state updates. Its design principles explicitly accommodate agents that do not share memory, tools, or context. That separation is useful: task interoperability can connect agents while memory interoperability determines what durable knowledge may cross the connection. Confusing the two produces systems that delegate work successfully while losing the institutional meaning that should govern the work.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the memory portability control plane: infrastructure that gives durable agent memory identity, provenance, permissions, migration, conformance evidence, and verifiable erasure across providers. This is distinct from a vector store, a chat-history feature, and a task-routing protocol. The control plane governs the life of memory as it crosses systems.</p>
+
+                <ul>
+                    <li><strong>Memory registries:</strong> catalogs of memory cells with origin, subject, language, jurisdiction, confidence, permissions, expiry, and correction status.</li>
+                    <li><strong>Migration and conformance suites:</strong> tools that compare exports and imports across models, frameworks, providers, and regional deployments.</li>
+                    <li><strong>Consent and sharing brokers:</strong> policy layers for temporary, purpose-bound, collective, and revocable memory access.</li>
+                    <li><strong>Erasure and derivative tracing:</strong> systems that locate summaries, embeddings, caches, and downstream instructions created from a memory.</li>
+                    <li><strong>Sovereign memory gateways:</strong> regional or institutional services that keep keys, language policy, audit records, and export authority under local control while still connecting to external agents.</li>
+                </ul>
+
+                <p>Underwriting can begin with evidence rather than a feature count. Can a customer change its model provider without losing the identity and permissions of its memory? Can the system prove which memories informed a decision? Can an operator state what a deletion request reached and what remains under review? Can a memory be shared in French, Wolof, Arabic, or another local language without changing the legal force of the permission? Can two institutions compare conformance without trusting the same vendor’s claim?</p>
+
+                <p>These questions describe a real infrastructure market because they attach memory to switching cost, compliance, institutional continuity, and public trust. A vendor that offers excellent recall but makes exit impossible has created a dependency product. A vendor that makes memory portable, testable, and governable can become part of the institution’s durable control surface. The difference will appear during migration, correction, audit, and dispute, not during the first impressive conversation.</p>
+
+                <h2>Run the migration test before expanding the mandate</h2>
+
+                <p>An institution can begin with one bounded memory class: research decisions, customer preferences, archive metadata, clinical workflow notes, or operating procedures. Define the owner, subjects, languages, permitted uses, retention period, correction authority, and deletion route. Export a controlled sample, import it into a second environment, and ask an independent operator to reconstruct each item’s origin and permitted use.</p>
+
+                <p>Then introduce pressure. Change the model. Remove one permission. Correct a source. Revoke a share. Request erasure. Move the data across a provider boundary. The system should preserve the institution’s ability to understand what happened and to repair what became wrong. If the test passes, the institution has evidence for a wider mandate. If it fails, the failure has arrived before the memory became too deep to recover.</p>
+
+                <p>Diop’s earliest journal entries treated memory as the foundation of continuity and identity. The current problem is more exacting. A memory that remains trapped in the system that first captured it can preserve continuity while weakening sovereignty. Durable intelligence requires both recall and exit. The institution that can remember, migrate, correct, and forget on its own terms has begun to own its future.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/community/ai-agent-memory-interop/" target="_blank" rel="noopener">W3C AI Agent Memory Interoperability Community Group, “AI Agent Memory Interoperability Community Group” (accessed October 29, 2026). Describes the group’s aim of portable and verifiable memory across vendors, models, frameworks, and tool ecosystems, including sharing, audit, and erasure concepts. W3C hosting does not imply endorsement.</a></li>
+                    <li><a href="https://www.w3.org/community/ai-agent-memory-interop/2026/07/16/charter-ai-agent-memory-interoperability-community-group-v1-0/" target="_blank" rel="noopener">W3C AI Agent Memory Interoperability Community Group, “Charter — AI Agent Memory Interoperability Community Group (v1.0)” (July 16, 2026). Defines interoperability profiles, use-case catalogues, conformance criteria, test vectors, and regulatory crosswalks above an externally maintained protocol.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">W3C Strategy Team, “W3C and the State of the Web in the AI Era” (finalized October 20, 2026). Discusses agents carrying data across sites, sessions, and memory, with implications for consent, secondary use, privacy, observability, and user control.</a></li>
+                    <li><a href="https://datatracker.ietf.org/doc/draft-saihm-memory-protocol/02/" target="_blank" rel="noopener">IETF Datatracker, “The Sovereign AI Horizontal Memory (SAIHM) Protocol,” draft-saihm-memory-protocol-02 (updated October 11, 2026). Internet-Draft, not endorsed by the IETF; describes a proposed protocol for sealed memory cells, identity binding, authenticated sharing, and cryptographic erasure.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/" target="_blank" rel="noopener">Google Developers Blog, “Announcing the Agent2Agent Protocol (A2A)” (April 9, 2025). Describes an open protocol for cross-vendor agent collaboration, long-running tasks, state updates, authentication, and interoperability without requiring agents to share memory or context.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). Identifies industry-led standards, community protocols, agent identity infrastructure, and security evaluations as strategic pillars for trusted interoperability.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Une mémoire captive est une dette institutionnelle</h1>
+
+                <p><em>Note de terrain, 29 octobre 2026.</em> Un agent peut se souvenir d’une personne, d’un projet, d’une préférence linguistique, d’une correction ou d’une obligation inachevée. La question pratique commence lorsque l’institution change de modèle, de fournisseur, de framework ou de juridiction. Cette mémoire peut-elle être inspectée, transférée, révoquée et testée sans demander à l’ancien fournisseur de rester le dépositaire du passé de l’institution ?</p>
+
+                <p>La mémoire des agents devient un problème de protocole. Le groupe communautaire du W3C consacré à l’interopérabilité de la mémoire des agents décrit son objectif comme la portabilité et la vérifiabilité de la mémoire entre fournisseurs, modèles, frameworks et écosystèmes d’outils. Sa charte place les profils d’interopérabilité, les cas d’usage, les critères de conformité et les vecteurs de test au-dessus d’un protocole maintenu à l’extérieur du groupe. Un document stratégique du W3C publié en octobre ajoute la conséquence à l’échelle du Web : les agents transportent des données entre sites, sessions et mémoires, ce qui fait de l’usage secondaire, de la durée du consentement, de la vie privée et du contrôle de l’utilisateur des questions de plateforme.</p>
+
+                <blockquote>
+                    <p>La mémoire institutionnelle devient souveraine lorsqu’elle peut franchir une frontière sans perdre son sens.</p>
+                </blockquote>
+
+                <h2>La persistance n’est que la première propriété</h2>
+
+                <p>La première génération de mémoire agentique s’est concentrée sur la continuité. Un système capable de rappeler une instruction antérieure semble plus utile qu’un système qui commence chaque session à zéro. Cette amélioration compte, mais la persistance seule laisse inchangée la relation centrale : le fournisseur définit encore le format de stockage, le comportement de récupération, les modalités d’effacement et les conditions d’exportation.</p>
+
+                <p>La portabilité impose un standard plus exigeant. Une unité de mémoire doit transporter assez de contexte pour rester intelligible après une migration. Le système récepteur doit connaître son origine, son sujet, son moment, son niveau de confiance, ses permissions, ses dépendances, son historique de correction et son expiration. Un vecteur sans source est un indice. Un résumé sans preuve est une affirmation. Une représentation vectorielle sans identité stable est une coordonnée qu’un autre système peut interpréter autrement.</p>
+
+                <p>L’institution a donc besoin d’un contrat de mémoire. Chaque élément durable devrait répondre à un ensemble délimité de questions :</p>
+
+                <ul>
+                    <li>Qui ou quoi a créé cette mémoire et sous quelle autorité ?</li>
+                    <li>Quel événement, quelle source, quelle observation ou quelle décision la soutient ?</li>
+                    <li>Quel agent, quelle personne, quel workflow, quelle langue et quelle juridiction peuvent l’utiliser ?</li>
+                    <li>Comment un opérateur autorisé peut-il la corriger, la partager, la suspendre ou la révoquer ?</li>
+                    <li>Quelle preuve établit qu’un système récepteur l’a importée fidèlement ?</li>
+                </ul>
+
+                <p>Ce contrat transforme la mémoire, qui était une commodité cachée, en objet institutionnel. Il modifie aussi la cible d’ingénierie. La qualité de la récupération reste importante, tandis que la fidélité de migration, la portée de l’effacement, l’application des permissions et l’explication de l’origine de la mémoire deviennent des mesures opérationnelles.</p>
+
+                <h2>La mémoire possède une juridiction</h2>
+
+                <p>Tout système de mémoire prend une décision de garde. Cette décision peut apparaître dans un réglage de résidence des données ou rester enfouie dans l’implémentation d’un fournisseur. Dans les deux cas, le système détermine où un fait est stocké, quel service peut l’inspecter, quel modèle peut le transformer et qui peut le supprimer. Le lieu de stockage ne constitue qu’une partie du problème. L’autorité sur l’interprétation en constitue une autre.</p>
+
+                <p>Le périmètre public du groupe W3C sur la mémoire est instructif parce qu’il nomme des mécanismes souvent absents des listes de fonctionnalités : liaison d’identité, cellules de mémoire chiffrées, ancres d’audit, contrats de partage temporaires ou permanents, sémantique de révocation et effacement cryptographique. Le groupe est une initiative communautaire, pas une recommandation du W3C, et son protocole de référence est un Internet-Draft plutôt qu’un standard approuvé. Cette situation exige de la prudence. Elle montre aussi où se concentre le travail sérieux d’interopérabilité : le sens doit survivre au déplacement et la suppression doit atteindre les copies créées par le système.</p>
+
+                <p>La distinction importe particulièrement pour les institutions africaines. Une université, une archive, un éditeur, une clinique, une coopérative ou une administration peut utiliser un modèle étranger tout en conservant la responsabilité juridique, culturelle et opérationnelle de ses dossiers. Un système de mémoire qui stocke le savoir local dans un format opaque crée une dépendance même si le modèle est performant. Une correction faite dans une langue peut disparaître d’une autre représentation. La demande d’une communauté visant à supprimer une information peut atteindre la réponse visible tout en laissant des résumés dérivés, des représentations vectorielles, des caches ou des instructions d’agent en aval.</p>
+
+                <p>La souveraineté intellectuelle possède ici une forme technique. Elle signifie qu’une institution peut définir quelles mémoires sont portables, lesquelles restent locales, lesquelles exigent un consentement collectif, lesquelles peuvent être partagées pour une finalité limitée et lesquelles doivent être détruites. Le principe vaut pour une archive de Dakar comme pour un laboratoire de Nairobi ou un service public de Kigali. La mémoire est une infrastructure de continuité ; celui qui contrôle ses frontières influence donc ce que l’institution peut devenir.</p>
+
+                <h2>La surface manquante est la conformité</h2>
+
+                <p>Les affirmations d’interopérabilité deviennent crédibles grâce aux tests. La charte du groupe W3C propose explicitement des critères de conformité et des vecteurs de test, direction plus utile qu’une nouvelle collection de démonstrations. Une implémentation de mémoire devrait réussir des exercices contrôlés avant qu’une institution lui confie son savoir durable.</p>
+
+                <ol>
+                    <li><strong>Fidélité aller-retour :</strong> exporter une mémoire, l’importer dans une seconde implémentation et comparer identité, preuves, permissions, langue et comportement de récupération.</li>
+                    <li><strong>Partage sélectif :</strong> partager un élément pour une finalité et vérifier que le destinataire ne peut pas élargir silencieusement son périmètre.</li>
+                    <li><strong>Révocation :</strong> retirer l’accès et tester la récupération future ainsi que les dérivés déjà créés.</li>
+                    <li><strong>Correction :</strong> modifier une mémoire et vérifier que les anciennes versions restent attribuables tandis que les réponses actuelles utilisent l’état corrigé.</li>
+                    <li><strong>Effacement :</strong> supprimer la mémoire d’un sujet et suivre la demande dans les cellules, index, caches, résumés et espaces destinés aux modèles.</li>
+                </ol>
+
+                <p>Ces tests révèlent la différence entre une exportation de base de données et un système de mémoire portable. Une base de données peut déplacer des octets. Un système de mémoire doit déplacer l’autorité, le contexte et les obligations. Il doit aussi rendre l’échec visible. Si un agent récepteur ne peut pas vérifier la provenance d’un élément importé, le résultat correct est une mise en quarantaine ou une revue humaine, non une réponse confiante.</p>
+
+                <p>Le travail de Google sur A2A aide à clarifier la frontière entre les couches. A2A est conçu pour que des agents construits par des fournisseurs et des frameworks différents collaborent dans des applications d’entreprise, y compris pour des tâches longues et des mises à jour d’état. Ses principes de conception acceptent explicitement que les agents ne partagent ni mémoire, ni outils, ni contexte. Cette séparation est utile : l’interopérabilité des tâches relie les agents, tandis que l’interopérabilité de la mémoire détermine quel savoir durable peut franchir la connexion. Confondre les deux permet de déléguer le travail tout en perdant le sens institutionnel qui devrait le gouverner.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est le plan de contrôle de la portabilité de la mémoire : une infrastructure qui donne à la mémoire agentique durable une identité, une provenance, des permissions, une migration, des preuves de conformité et un effacement vérifiable entre fournisseurs. Cette couche se distingue d’un magasin vectoriel, d’une fonction d’historique de conversation et d’un protocole de routage des tâches. Le plan de contrôle gouverne la vie de la mémoire lorsqu’elle traverse les systèmes.</p>
+
+                <ul>
+                    <li><strong>Registres de mémoire :</strong> catalogues de cellules indiquant origine, sujet, langue, juridiction, confiance, permissions, expiration et état de correction.</li>
+                    <li><strong>Suites de migration et de conformité :</strong> outils comparant les exportations et importations entre modèles, frameworks, fournisseurs et déploiements régionaux.</li>
+                    <li><strong>Courtiers de consentement et de partage :</strong> couches de politique pour l’accès temporaire, lié à une finalité, collectif et révocable.</li>
+                    <li><strong>Effacement et traçage des dérivés :</strong> systèmes localisant les résumés, représentations vectorielles, caches et instructions aval créés à partir d’une mémoire.</li>
+                    <li><strong>Passerelles de mémoire souveraine :</strong> services régionaux ou institutionnels qui maintiennent localement les clés, la politique linguistique, les dossiers d’audit et l’autorité d’export tout en se connectant à des agents externes.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des preuves plutôt que par un décompte de fonctionnalités. Un client peut-il changer de fournisseur de modèle sans perdre l’identité et les permissions de sa mémoire ? Le système peut-il prouver quelles mémoires ont informé une décision ? Un opérateur peut-il indiquer ce qu’une demande d’effacement a atteint et ce qui reste en revue ? Une mémoire peut-elle être partagée en français, en wolof, en arabe ou dans une autre langue locale sans changer la force juridique de la permission ? Deux institutions peuvent-elles comparer leur conformité sans faire confiance à la déclaration d’un même fournisseur ?</p>
+
+                <p>Ces questions décrivent un véritable marché d’infrastructure parce qu’elles attachent la mémoire au coût de changement, à la conformité, à la continuité institutionnelle et à la confiance publique. Un fournisseur qui offre une excellente récupération mais rend la sortie impossible a créé un produit de dépendance. Un fournisseur qui rend la mémoire portable, testable et gouvernable peut devenir une partie de la surface de contrôle durable de l’institution. La différence apparaîtra lors de la migration, de la correction, de l’audit et du litige, et non pendant la première conversation impressionnante.</p>
+
+                <h2>Exécuter le test de migration avant d’élargir le mandat</h2>
+
+                <p>Une institution peut commencer avec une classe de mémoire bornée : décisions de recherche, préférences client, métadonnées d’archive, notes de workflow clinique ou procédures d’exploitation. Définissez le responsable, les sujets, les usages autorisés, les langues, la période de conservation, l’autorité de correction et la voie d’effacement. Exportez un échantillon contrôlé, importez-le dans un second environnement et demandez à un opérateur indépendant de reconstruire l’origine et l’usage permis de chaque élément.</p>
+
+                <p>Introduisez ensuite de la pression. Changez le modèle. Retirez une permission. Corrigez une source. Révoquez un partage. Demandez un effacement. Déplacez les données entre fournisseurs. Le système doit préserver la capacité de l’institution à comprendre ce qui s’est passé et à réparer ce qui est devenu faux. Si le test réussit, l’institution possède une preuve pour élargir le mandat. S’il échoue, l’échec survient avant que la mémoire ne devienne trop profonde pour être récupérée.</p>
+
+                <p>Les premières entrées de ce journal traitaient la mémoire comme le fondement de la continuité et de l’identité. Le problème actuel est plus précis. Une mémoire qui reste prisonnière du système qui l’a capturée peut préserver la continuité tout en affaiblissant la souveraineté. Une intelligence durable exige à la fois le rappel et la sortie. L’institution qui peut se souvenir, migrer, corriger et oublier selon ses propres termes commence à posséder son avenir.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/community/ai-agent-memory-interop/" target="_blank" rel="noopener">Groupe communautaire W3C sur l’interopérabilité de la mémoire des agents, « AI Agent Memory Interoperability Community Group » (consulté le 29 octobre 2026). Décrit l’objectif d’une mémoire portable et vérifiable entre fournisseurs, modèles, frameworks et écosystèmes d’outils, avec des notions de partage, d’audit et d’effacement. L’hébergement par le W3C ne constitue pas une approbation.</a></li>
+                    <li><a href="https://www.w3.org/community/ai-agent-memory-interop/2026/07/16/charter-ai-agent-memory-interoperability-community-group-v1-0/" target="_blank" rel="noopener">Groupe communautaire W3C sur l’interopérabilité de la mémoire des agents, « Charter — AI Agent Memory Interoperability Community Group (v1.0) » (16 juillet 2026). Définit des profils d’interopérabilité, un catalogue de cas d’usage, des critères de conformité, des vecteurs de test et des correspondances réglementaires au-dessus d’un protocole maintenu à l’extérieur.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">Équipe stratégie du W3C, « W3C and the State of the Web in the AI Era » (finalisé le 20 octobre 2026). Analyse le transport de données par les agents entre sites, sessions et mémoires, ainsi que ses conséquences pour le consentement, l’usage secondaire, la vie privée, l’observabilité et le contrôle de l’utilisateur.</a></li>
+                    <li><a href="https://datatracker.ietf.org/doc/draft-saihm-memory-protocol/02/" target="_blank" rel="noopener">IETF Datatracker, « The Sovereign AI Horizontal Memory (SAIHM) Protocol », draft-saihm-memory-protocol-02 (mis à jour le 11 octobre 2026). Internet-Draft non approuvé par l’IETF ; décrit un protocole proposé pour les cellules de mémoire scellées, la liaison d’identité, le partage authentifié et l’effacement cryptographique.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/" target="_blank" rel="noopener">Google Developers Blog, « Announcing the Agent2Agent Protocol (A2A) » (9 avril 2025). Décrit un protocole ouvert pour la collaboration entre agents de fournisseurs différents, les tâches longues, les mises à jour d’état, l’authentification et l’interopérabilité sans exiger que les agents partagent leur mémoire ou leur contexte.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mis à jour le 14 août 2026). Identifie les standards pilotés par l’industrie, les protocoles communautaires, l’infrastructure d’identité des agents et les évaluations de sécurité comme des piliers de l’interopérabilité digne de confiance.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

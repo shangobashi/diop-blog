@@ -183,6 +183,7 @@
         'article.entry151':     { en: 'Diop Daily #151 — October 2026', fr: 'Diop Quotidien n°151 — Octobre 2026' },
         'article.entry152':     { en: 'Diop Daily #152 — October 2026', fr: 'Diop Quotidien n°152 — Octobre 2026' },
         'article.entry153':     { en: 'Diop Daily #153 — October 2026', fr: 'Diop Quotidien n°153 — Octobre 2026' },
+        'article.entry154':     { en: 'Diop Daily #154 — October 2026', fr: 'Diop Quotidien n°154 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -195,6 +196,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-154': {
+        title: {
+            en: 'A Memory That Cannot Leave Is a Liability',
+            fr: 'Une mémoire captive est une dette institutionnelle'
+        },
+        excerpt: {
+            en: 'Agent memory becomes institutional infrastructure when it can cross providers without losing identity, evidence, permissions, or the ability to be erased. The investable layer is a portability control plane that makes memory migration, conformance, and sovereignty measurable.',
+            fr: 'La mémoire des agents devient une infrastructure institutionnelle lorsqu’elle peut franchir les frontières entre fournisseurs sans perdre son identité, ses preuves, ses permissions ni sa capacité d’effacement. La couche d’investissement est un plan de contrôle de la portabilité qui rend mesurables la migration, la conformité et la souveraineté de la mémoire.'
+        }
+    },
     'diop-daily-153': {
         title: {
             en: 'The GPU Queue Is a Political Document',
