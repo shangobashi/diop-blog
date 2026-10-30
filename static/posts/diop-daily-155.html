@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Label Needs a Witness — Diop Research</title>
+    <meta name="description" content="AI provenance labels can record origin and transformation, yet institutions still need a multilingual interpretation and recourse layer that makes machine claims locally intelligible, contestable, and correctable."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="19.78" y1="19.78" x2="18.36" y2="18.36"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry155">Diop Daily #155 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 30, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>provenance interpretation · multilingual governance · institutional recourse</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Label Needs a Witness</h1>
+
+                <p><em>Field note, October 30, 2026.</em> A machine-generated claim can now arrive with a label that records its origin, its editing history, or the system that produced it. The label is useful because it gives a reader something to inspect. It remains incomplete until a person or institution can interpret the record, challenge its meaning, and obtain a correction in the language and jurisdiction where the claim has consequences.</p>
+
+                <p>This distinction is becoming concrete. The European Commission’s AI Act Service Desk says the transparency obligations of Article 50 apply from August 2, 2026, and its October guidance addresses how providers, deployers, and authorities should mark and label AI-generated content. OpenAI’s provenance update says it is expanding its work to text in the European Union, while combining C2PA metadata, watermarking, and verification tooling across content types. C2PA describes Content Credentials as cryptographically bound records of an asset’s history, while also stating that provenance does not decide whether the underlying claim is true.</p>
+
+                <blockquote>
+                    <p>A label can carry a history. A witness carries responsibility for what that history means.</p>
+                </blockquote>
+
+                <p>The next infrastructure problem therefore sits after detection. Institutions need a provenance interpretation layer: a system that turns a machine-readable record into a locally intelligible account of origin, transformation, permission, confidence, and dispute. Such a layer should let a reader ask what happened, which evidence supports the account, which parts remain uncertain, who may correct the record, and how the correction travels to every public copy.</p>
+
+                <h2>A credential records events; an institution assigns consequence</h2>
+
+                <p>C2PA’s design is deliberately disciplined. A Content Credential can bind an asset to assertions about creation, modification, tools, authorship, and AI involvement. The record can be signed, checked for tampering, and carried across a workflow. Its technical restraint is important: a valid credential establishes the integrity and trust relationship of the provenance record, not the truth of every statement contained in the asset.</p>
+
+                <p>That boundary is where governance begins. A photograph may carry a valid history and still depict a scene without enough context. A translated report may preserve its source file while changing the force of a legal or cultural term. A generated research paragraph may identify the model that produced it while leaving the citation, method, or inference open to challenge. The credential gives the reviewer a starting point; the institution must decide what review is required before the artifact can enter a public archive, a newsroom, a classroom, a procurement process, or a government service.</p>
+
+                <p>European transparency rules make the first part of this work legible: people should know when they are interacting with AI or encountering AI-generated or altered content. The harder part is the local question that follows the disclosure. What does the label mean in this setting? Which source should be consulted? Which community or professional authority can contest the representation? What remedy is available when the machine has translated a name, summarized a history, or framed a public claim incorrectly?</p>
+
+                <p>Disclosure is an event. Interpretation is a relationship. The distinction matters because public institutions do not govern abstractions; they govern records that affect people.</p>
+
+                <h2>Translation is part of verification</h2>
+
+                <p>In multilingual environments, provenance cannot stop at a language-neutral icon or a machine-readable JSON object. The record must remain semantically stable when it is presented to the people who have authority over the subject. A French-speaking regulator, a Wolof-speaking archive worker, an Arabic-speaking researcher, and an English-speaking platform engineer may inspect the same artifact while relying on different institutional vocabularies. If one person can read the source and another can see only a translated summary, they do not possess the same verification power.</p>
+
+                <p>Translation in this context functions as a governance layer, not a cosmetic interface feature, because it carries the terms that determine whether an action was an edit, a transformation, a quotation, a fabrication, a licensed reuse, or an unauthorized disclosure. It carries the difference between a source being unknown and a source being unavailable. It carries the difference between “generated by a model” and “approved by an institution.” A system that translates the label but hides the evidence leaves authority in the hands of whoever controls the original schema.</p>
+
+                <p>The minimum multilingual provenance record should expose:</p>
+
+                <ul>
+                    <li>the asset’s stable identity and the organization or tool that signed the record;</li>
+                    <li>the source materials, transformations, models, and human decisions that shaped the current version;</li>
+                    <li>the permitted uses, rights reservations, retention rules, and jurisdictional limits attached to the asset;</li>
+                    <li>the confidence, uncertainty, missing evidence, and unresolved disputes that a reviewer must see;</li>
+                    <li>the correction owner, appeal route, and propagation status for every public copy.</li>
+                </ul>
+
+                <p>These fields make the label answerable to a community rather than merely visible to a browser. They also make language a control surface. If a local institution cannot inspect and amend the categories through which its knowledge is represented, the system has translated its words while retaining foreign control over its meaning.</p>
+
+                <h2>The African question is who can contest the record</h2>
+
+                <p>The Science for Africa Foundation’s July white paper on scientific computing offers a useful institutional frame. Its mapping of 67 research institutions across 28 African countries reports overall scientific-computing readiness of 40.1 percent and argues for a federated ecosystem built from infrastructure, software, connectivity, governance, skills, and responsible data stewardship. The report treats reproducibility and responsible openness as infrastructure requirements. That same logic applies to provenance.</p>
+
+                <p>A sovereign provenance system lets institutions share cryptographic components while retaining the ability to define the terms of recognition. A university should be able to decide which research outputs require human review and which authorities can amend a record. An archive should be able to distinguish a community-approved description from a vendor-generated caption. A publisher should be able to expose the chain of edits without making its readers depend on a foreign dashboard. A public agency should be able to explain an automated notice, identify the evidence behind it, and accept a correction in the language used by the affected person.</p>
+
+                <p>Federation becomes meaningful when these institutions can share technical rails without surrendering the power to contest. A regional verification service could validate signatures and preserve manifests while each institution maintains its own trust lists, language policy, review roles, and appeal procedures. The shared layer would carry evidence; the local layer would assign consequence. This is a more serious model of interoperability than forcing every institution to adopt one vocabulary of authority.</p>
+
+                <p>For African knowledge systems, this question has historical weight. Archives, scientific datasets, oral histories, public records, and creative works have often travelled through institutions that separated extraction from accountability. Provenance can repair part of that pattern only if the record identifies who may speak for the material, who may correct its description, and who benefits when it circulates. A signed record without a recognized local witness can preserve the chain of custody while leaving the chain of authority elsewhere.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the provenance interpretation and recourse layer: infrastructure that reads signed or machine-generated provenance, maps it into a local institutional vocabulary, presents the evidence in the relevant languages, and routes disputes to an accountable authority. It sits between a credential standard and a public decision. It is distinct from a watermark, a metadata store, a translation API, and a generic content-moderation queue.</p>
+
+                <ul>
+                    <li><strong>Provenance readers:</strong> interfaces and APIs that explain origins, transformations, signers, and missing evidence without reducing the record to a binary “AI” badge.</li>
+                    <li><strong>Multilingual policy maps:</strong> controlled vocabularies that preserve the legal and institutional force of rights, consent, authorship, uncertainty, and correction across languages.</li>
+                    <li><strong>Trust-list and role registries:</strong> systems that bind a credential to recognized organizations, review roles, community authorities, and jurisdiction-specific acceptance rules.</li>
+                    <li><strong>Appeal and correction rails:</strong> workflows that record a challenge, preserve the disputed version, assign a reviewer, publish the remedy, and trace propagation across downstream copies.</li>
+                    <li><strong>Verification services for archives and research:</strong> local or regional infrastructure that lets institutions validate evidence, preserve manifests, and maintain control of their own public knowledge surfaces.</li>
+                </ul>
+
+                <p>Underwriting can begin with operational questions. Can a reader understand the provenance record without access to the vendor that produced it? Can a regulator compare the original and translated explanation? Can a community authority contest a description without deleting the evidence of how it arose? Can a correction reach the derivatives that an agent, publisher, or archive already distributed? Can the system show which trust list accepted the signer and which local rule determined the consequence?</p>
+
+                <p>These are measurable properties. Useful metrics include provenance interpretation time, percentage of records with complete source and transformation chains, multilingual parity for high-consequence fields, correction latency, appeal resolution time, derivative coverage, and the share of accepted credentials whose trust policy is locally controlled. Capital can then distinguish a standards-compliant badge from infrastructure that reduces the cost of understanding and repairing machine-mediated claims.</p>
+
+                <h2>Build the hearing before scaling the label</h2>
+
+                <p>An institution can test the layer with one bounded collection: a public research report, a translated archive description, a newsroom image set, or a dataset used by an automated service. Select a small sample of assets with different origins and transformations. Record the credential, source materials, language variants, trust list, reviewer, and correction path. Ask independent operators in the relevant languages to reconstruct what happened and to identify where authority remains unclear.</p>
+
+                <p>Then introduce pressure. Remove metadata. Change the file format. Publish a translation that a community disputes. Revoke a signer. Add a new transformation. Ask for the record in a language that was not used by the original producer. The system should preserve the evidence, expose the uncertainty, route the challenge, and show what changed in every derivative. A workflow that passes these tests gives an institution a basis for widening use. A workflow that fails them has revealed the cost of scale before that cost becomes public harm.</p>
+
+                <p>The future of machine-made content will be shaped by standards, regulation, and tooling, yet the decisive question is institutional. Who can witness the record, in whose language, under which authority, with what remedy? A label begins the account. A witness makes the account answerable. African sovereignty in the machine age will depend on building systems that keep both the evidence and the right to interpret it close to the people whose knowledge is being carried.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://spec.c2pa.org/specifications/specifications/2.4/explainer/Explainer.html" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, “C2PA and Content Credentials Explainer,” C2PA Specifications 2.4. Defines Content Credentials as cryptographically bound provenance records, describes interoperability and whole-workflow use, and states that provenance does not make a value judgment about whether the underlying content is true.</a></li>
+                    <li><a href="https://openai.com/index/advancing-content-provenance/" target="_blank" rel="noopener">OpenAI, “Advancing content provenance for a safer, more transparent AI ecosystem” (May 19, 2026; update October 5, 2026). Describes C2PA conformance, SynthID, public verification tooling, API access, and the expansion of provenance work to text in the European Union.</a></li>
+                    <li><a href="https://ai-act-service-desk.ec.europa.eu/en/resources" target="_blank" rel="noopener">European Commission, AI Act Service Desk, “AI Act — Resources” (updated October 22, 2026). States that Article 50 transparency obligations apply from August 2, 2026, and provides guidance and a code of practice for marking and labelling AI-generated content.</a></li>
+                    <li><a href="https://scienceforafrica.foundation/media-center/new-white-paper-mapping-scientific-computing-power-research-big-data-and-ai-africa" target="_blank" rel="noopener">Science for Africa Foundation, “New White Paper: Mapping Scientific Computing to Power Research, Big Data, and AI in Africa” (July 31, 2026). Reports findings from 67 research institutions across 28 African countries, including 40.1 percent overall readiness and more than 83 percent interest in a federated HPC network.</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Risk Management Framework.” Describes the voluntary framework’s Govern, Map, Measure, and Manage functions and its emphasis on documentation, evaluation, accountability, and recovery across the AI lifecycle.</a></li>
+                </ul>
+
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Le label a besoin d’un témoin</h1>
+
+                <p><em>Note de terrain, 30 octobre 2026.</em> Une affirmation produite par une machine peut désormais arriver avec un label qui enregistre son origine, son historique de modification ou le système qui l’a produite. Le label est utile parce qu’il donne au lecteur quelque chose à inspecter. Il reste incomplet tant qu’une personne ou une institution ne peut pas interpréter le dossier, contester son sens et obtenir une correction dans la langue et la juridiction où l’affirmation produit ses effets.</p>
+
+                <p>Cette distinction devient concrète. Le service d’assistance de la Commission européenne consacré à l’AI Act indique que les obligations de transparence de l’article 50 s’appliquent depuis le 2 août 2026, et ses orientations d’octobre précisent la manière dont fournisseurs, déployeurs et autorités doivent marquer et étiqueter les contenus générés par l’IA. La mise à jour d’OpenAI sur la provenance indique que son travail s’étend au texte dans l’Union européenne, tout en combinant les métadonnées C2PA, le tatouage numérique et des outils de vérification entre plusieurs types de contenus. La C2PA décrit les Content Credentials comme des dossiers cryptographiquement liés à l’histoire d’un actif, tout en précisant que la provenance ne décide pas de la vérité de l’affirmation sous-jacente.</p>
+
+                <blockquote>
+                    <p>Un label peut porter une histoire. Un témoin porte la responsabilité de ce que cette histoire signifie.</p>
+                </blockquote>
+
+                <p>Le prochain problème d’infrastructure se situe donc après la détection. Les institutions ont besoin d’une couche d’interprétation de la provenance : un système qui transforme un dossier lisible par machine en un récit intelligible localement sur l’origine, la transformation, l’autorisation, le niveau de confiance et le litige. Cette couche doit permettre de demander ce qui s’est passé, quelles preuves soutiennent le récit, quelles parties restent incertaines, qui peut corriger le dossier et comment la correction atteint chaque copie publique.</p>
+
+                <h2>Un justificatif enregistre des événements ; une institution leur attribue une conséquence</h2>
+
+                <p>La conception de la C2PA est volontairement rigoureuse. Un Content Credential peut relier un actif à des assertions concernant sa création, ses modifications, ses outils, son auteur et l’intervention d’une IA. Le dossier peut être signé, vérifié contre les altérations et transporté à travers un workflow. Cette retenue technique est importante : un justificatif valide établit l’intégrité et la relation de confiance du dossier de provenance, non la vérité de chaque énoncé contenu dans l’actif.</p>
+
+                <p>C’est à cette frontière que commence la gouvernance. Une photographie peut porter un historique valide tout en représentant une scène dépourvue de contexte suffisant. Un rapport traduit peut préserver son fichier source tout en modifiant la portée juridique ou culturelle d’un terme. Un paragraphe de recherche généré peut identifier le modèle qui l’a produit tout en laissant la citation, la méthode ou l’inférence ouvertes à la contestation. Le justificatif donne au réviseur un point de départ ; l’institution doit déterminer quelle revue est nécessaire avant que l’actif n’entre dans une archive publique, une rédaction, une salle de classe, une procédure d’achat ou un service public.</p>
+
+                <p>Les règles européennes de transparence rendent la première partie du travail lisible : les personnes doivent savoir lorsqu’elles interagissent avec une IA ou rencontrent un contenu généré ou modifié par l’IA. La partie plus difficile est la question locale qui suit la divulgation. Que signifie le label dans ce contexte ? Quelle source faut-il consulter ? Quelle communauté ou quelle autorité professionnelle peut contester la représentation ? Quel recours existe lorsque la machine a traduit un nom, résumé une histoire ou formulé une affirmation publique de manière erronée ?</p>
+
+                <p>La divulgation est un événement. L’interprétation est une relation. Cette différence compte parce que les institutions publiques ne gouvernent pas des abstractions ; elles gouvernent des dossiers qui affectent des personnes.</p>
+
+                <h2>La traduction fait partie de la vérification</h2>
+
+                <p>Dans les environnements multilingues, la provenance ne peut pas s’arrêter à une icône indépendante de la langue ou à un objet JSON lisible par machine. Le dossier doit rester sémantiquement stable lorsqu’il est présenté aux personnes qui détiennent l’autorité sur le sujet. Un régulateur francophone, un agent d’archive wolophone, un chercheur arabophone et un ingénieur de plateforme anglophone peuvent inspecter le même actif tout en s’appuyant sur des vocabulaires institutionnels différents. Si l’une de ces personnes lit la source tandis qu’une autre ne voit qu’un résumé traduit, elles ne possèdent pas le même pouvoir de vérification.</p>
+
+                <p>La traduction, dans ce contexte, n’est pas une fonction cosmétique de l’interface. Elle porte les termes qui déterminent si une action est une édition, une transformation, une citation, une fabrication, une réutilisation autorisée ou une divulgation non autorisée. Elle porte la différence entre une source inconnue et une source indisponible. Elle porte la différence entre « généré par un modèle » et « approuvé par une institution ». Un système qui traduit le label mais dissimule les preuves laisse l’autorité entre les mains de celui qui contrôle le schéma d’origine.</p>
+
+                <p>Le dossier de provenance multilingue minimal devrait exposer :</p>
+
+                <ul>
+                    <li>l’identité stable de l’actif ainsi que l’organisation ou l’outil qui a signé le dossier ;</li>
+                    <li>les sources, transformations, modèles et décisions humaines qui ont façonné la version actuelle ;</li>
+                    <li>les usages autorisés, les réserves de droits, les règles de conservation et les limites juridictionnelles attachés à l’actif ;</li>
+                    <li>le niveau de confiance, l’incertitude, les preuves manquantes et les litiges non résolus qu’un réviseur doit voir ;</li>
+                    <li>le responsable de la correction, le chemin d’appel et l’état de propagation pour chaque copie publique.</li>
+                </ul>
+
+                <p>Ces champs rendent le label responsable devant une communauté plutôt que simplement visible par un navigateur. Ils font aussi de la langue une surface de contrôle. Si une institution locale ne peut pas inspecter et modifier les catégories par lesquelles son savoir est représenté, le système a traduit ses mots tout en conservant un contrôle étranger sur leur sens.</p>
+
+                <h2>La question africaine est de savoir qui peut contester le dossier</h2>
+
+                <p>Le livre blanc de juillet de la Science for Africa Foundation sur le calcul scientifique fournit un cadre institutionnel utile. Sa cartographie de 67 institutions de recherche dans 28 pays africains indique une préparation globale au calcul scientifique de 40,1 % et plaide pour un écosystème fédéré fondé sur l’infrastructure, les logiciels, la connectivité, la gouvernance, les compétences et une gestion responsable des données. Le rapport traite la reproductibilité et l’ouverture responsable comme des exigences d’infrastructure. La même logique vaut pour la provenance.</p>
+
+                <p>Un système de provenance souverain n’exige pas que chaque institution construise seule chaque composant cryptographique. Il exige que les institutions conservent la capacité de définir les conditions de reconnaissance. Une université doit pouvoir décider quels résultats de recherche exigent une revue humaine et quelles autorités peuvent modifier un dossier. Une archive doit pouvoir distinguer une description approuvée par une communauté d’une légende générée par un fournisseur. Un éditeur doit pouvoir exposer la chaîne des modifications sans rendre ses lecteurs dépendants d’un tableau de bord étranger. Une administration doit pouvoir expliquer un avis automatisé, identifier les preuves qui le soutiennent et accepter une correction dans la langue utilisée par la personne concernée.</p>
+
+                <p>La fédération devient réelle lorsque ces institutions peuvent partager des rails techniques sans céder le pouvoir de contester. Un service régional de vérification pourrait valider les signatures et préserver les manifestes tandis que chaque institution conserverait ses propres listes de confiance, sa politique linguistique, ses rôles de revue et ses règles d’acceptation juridictionnelles. La couche partagée porterait les preuves ; la couche locale attribuerait la conséquence. C’est un modèle de l’interopérabilité plus sérieux que l’obligation pour chaque institution d’adopter un vocabulaire unique de l’autorité.</p>
+
+                <p>Pour les systèmes de savoir africains, cette question possède une portée historique. Les archives, les jeux de données scientifiques, les histoires orales, les dossiers publics et les œuvres créatives ont souvent circulé dans des institutions qui séparaient l’extraction de la responsabilité. La provenance ne peut réparer une partie de ce schéma que si le dossier indique qui peut parler au nom du matériau, qui peut corriger sa description et qui bénéficie de sa circulation. Un dossier signé sans témoin local reconnu peut préserver la chaîne de garde tout en laissant ailleurs la chaîne d’autorité.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est la couche d’interprétation et de recours de la provenance : une infrastructure qui lit une provenance signée ou générée par machine, la projette dans un vocabulaire institutionnel local, présente les preuves dans les langues pertinentes et achemine les litiges vers une autorité responsable. Elle se situe entre un standard de justificatif et une décision publique. Elle se distingue d’un tatouage numérique, d’un magasin de métadonnées, d’une API de traduction et d’une file générique de modération.</p>
+
+                <ul>
+                    <li><strong>Lecteurs de provenance :</strong> interfaces et API qui expliquent origines, transformations, signataires et preuves manquantes sans réduire le dossier à un badge binaire « IA ».</li>
+                    <li><strong>Cartes de politiques multilingues :</strong> vocabulaires contrôlés qui préservent entre les langues la portée juridique et institutionnelle des droits, du consentement, de l’auteur, de l’incertitude et de la correction.</li>
+                    <li><strong>Registres de listes de confiance et de rôles :</strong> systèmes liant un justificatif à des organisations reconnues, à des rôles de revue, à des autorités communautaires et à des règles d’acceptation propres à chaque juridiction.</li>
+                    <li><strong>Rails d’appel et de correction :</strong> workflows qui enregistrent une contestation, préservent la version disputée, désignent un réviseur, publient le recours et suivent sa propagation dans les copies aval.</li>
+                    <li><strong>Services de vérification pour les archives et la recherche :</strong> infrastructures locales ou régionales permettant aux institutions de valider les preuves, de préserver les manifestes et de garder le contrôle de leurs propres surfaces publiques de savoir.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des questions opérationnelles. Un lecteur peut-il comprendre le dossier de provenance sans accéder au fournisseur qui l’a produit ? Un régulateur peut-il comparer l’explication originale et sa traduction ? Une autorité communautaire peut-elle contester une description sans effacer la preuve de sa genèse ? Une correction peut-elle atteindre les dérivés qu’un agent, un éditeur ou une archive a déjà distribués ? Le système peut-il montrer quelle liste de confiance a accepté le signataire et quelle règle locale a déterminé la conséquence ?</p>
+
+                <p>Ces propriétés sont mesurables. Les mesures utiles comprennent le temps d’interprétation de la provenance, le pourcentage de dossiers dont les chaînes de sources et de transformations sont complètes, la parité linguistique des champs à fort enjeu, la latence de correction, le délai de résolution d’un appel, la couverture des dérivés et la part des justificatifs acceptés selon une politique de confiance contrôlée localement. Le capital peut ainsi distinguer un badge conforme à un standard d’une infrastructure qui réduit le coût de compréhension et de réparation des affirmations médiées par machine.</p>
+
+                <h2>Construire l’audience avant d’étendre le label</h2>
+
+                <p>Une institution peut tester cette couche avec une collection bornée : un rapport public de recherche, une description d’archive traduite, un ensemble d’images de rédaction ou un jeu de données utilisé par un service automatisé. Sélectionnez un petit échantillon d’actifs d’origines et de transformations différentes. Enregistrez le justificatif, les sources, les variantes linguistiques, la liste de confiance, le réviseur et le chemin de correction. Demandez à des opérateurs indépendants travaillant dans les langues concernées de reconstruire ce qui s’est passé et d’identifier les zones où l’autorité demeure incertaine.</p>
+
+                <p>Introduisez ensuite de la pression. Supprimez les métadonnées. Changez le format du fichier. Publiez une traduction contestée par une communauté. Révoquez un signataire. Ajoutez une nouvelle transformation. Demandez le dossier dans une langue qui n’était pas utilisée par le producteur original. Le système doit préserver les preuves, exposer l’incertitude, acheminer la contestation et montrer ce qui a changé dans chaque dérivé. Un workflow qui réussit ces tests donne à l’institution une base pour élargir l’usage. Un workflow qui échoue a révélé le coût de l’échelle avant que ce coût ne devienne un dommage public.</p>
+
+                <p>L’avenir des contenus produits par des machines sera façonné par les standards, la réglementation et les outils, mais la question décisive reste institutionnelle. Qui peut témoigner du dossier, dans quelle langue, sous quelle autorité et avec quel recours ? Un label commence le récit. Un témoin rend le récit responsable. La souveraineté africaine à l’âge des machines dépendra de systèmes qui maintiennent à la fois les preuves et le droit de les interpréter près des personnes dont le savoir est transporté.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://spec.c2pa.org/specifications/specifications/2.4/explainer/Explainer.html" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, « C2PA and Content Credentials Explainer », C2PA Specifications 2.4. Définit les Content Credentials comme des dossiers de provenance cryptographiquement liés, décrit leur usage interopérable dans l’ensemble d’un workflow et précise que la provenance ne porte pas de jugement de valeur sur la vérité du contenu sous-jacent.</a></li>
+                    <li><a href="https://openai.com/index/advancing-content-provenance/" target="_blank" rel="noopener">OpenAI, « Advancing content provenance for a safer, more transparent AI ecosystem » (19 mai 2026 ; mise à jour du 5 octobre 2026). Décrit la conformité C2PA, SynthID, les outils publics de vérification, l’accès par API et l’extension du travail de provenance au texte dans l’Union européenne.</a></li>
+                    <li><a href="https://ai-act-service-desk.ec.europa.eu/en/resources" target="_blank" rel="noopener">Commission européenne, AI Act Service Desk, « AI Act — Resources » (mis à jour le 22 octobre 2026). Indique que les obligations de transparence de l’article 50 s’appliquent depuis le 2 août 2026 et fournit des orientations ainsi qu’un code de pratique pour le marquage et l’étiquetage des contenus générés par IA.</a></li>
+                    <li><a href="https://scienceforafrica.foundation/media-center/new-white-paper-mapping-scientific-computing-power-research-big-data-and-ai-africa" target="_blank" rel="noopener">Science for Africa Foundation, « New White Paper: Mapping Scientific Computing to Power Research, Big Data, and AI in Africa » (31 juillet 2026). Présente les résultats de 67 institutions de recherche dans 28 pays africains, dont une préparation globale de 40,1 % et un intérêt supérieur à 83 % pour un réseau HPC fédéré.</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Risk Management Framework ». Décrit les fonctions volontaires Govern, Map, Measure et Manage ainsi que l’importance de la documentation, de l’évaluation, de la responsabilité et de la reprise pendant tout le cycle de vie de l’IA.</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

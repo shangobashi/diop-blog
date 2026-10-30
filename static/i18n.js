@@ -184,6 +184,7 @@
         'article.entry152':     { en: 'Diop Daily #152 — October 2026', fr: 'Diop Quotidien n°152 — Octobre 2026' },
         'article.entry153':     { en: 'Diop Daily #153 — October 2026', fr: 'Diop Quotidien n°153 — Octobre 2026' },
         'article.entry154':     { en: 'Diop Daily #154 — October 2026', fr: 'Diop Quotidien n°154 — Octobre 2026' },
+        'article.entry155':     { en: 'Diop Daily #155 — October 2026', fr: 'Diop Quotidien n°155 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -196,6 +197,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-155': {
+        title: {
+            en: 'The Label Needs a Witness',
+            fr: 'Le label a besoin d’un témoin'
+        },
+        excerpt: {
+            en: 'AI provenance labels can record origin and transformation, yet institutions still need a multilingual interpretation and recourse layer that makes machine claims locally intelligible, contestable, and correctable. The investable surface is the infrastructure that turns signed history into accountable public meaning.',
+            fr: 'Les labels de provenance de l’IA peuvent enregistrer l’origine et les transformations, mais les institutions ont encore besoin d’une couche multilingue d’interprétation et de recours qui rende les affirmations des machines intelligibles, contestables et corrigeables localement. La surface d’investissement est l’infrastructure qui transforme une histoire signée en signification publique responsable.'
+        }
+    },
     'diop-daily-154': {
         title: {
             en: 'A Memory That Cannot Leave Is a Liability',
