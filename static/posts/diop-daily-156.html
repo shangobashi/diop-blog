@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Who Owns the Test Case? — Diop Research</title>
+    <meta name="description" content="Agent evaluation is becoming a governance problem. The durable infrastructure is an evaluation corpus control plane that gives institutions ownership of scenarios, fixtures, language coverage, cost evidence, and the right to change what counts as success."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="19.78" x2="18.36" y2="18.36"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry156">Diop Daily #156 — October 2026</div>
+                <div class="article__meta-line">
+                    <time>October 31, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>evaluation governance · benchmark ownership · local-language AI</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Who Owns the Test Case?</h1>
+
+                <p><em>Field note, October 31, 2026.</em> An agent can pass a benchmark and still fail the institution that bought it. The failure may hide in a missing language, an untested permission, an ignored cost ceiling, a slow tool loop, or a public-service case that the benchmark never considered. The central evaluation question is therefore institutional: who owns the test case, who may change it, and whose definition of a good result does it carry?</p>
+
+                <p>Recent work from Google makes the engineering shift visible. Its October 28 Agents CLI walkthrough describes an evaluation loop that generates cases, grades traces, compares runs, clusters failures, and repeats the process after a change. Its October 15 guide on evaluating agents recommends critical user journeys, simulated scenarios, layered checks, frozen golden datasets, and the promotion of production traces into future test cases. NIST’s AI Agent Standards Initiative places community protocols, identity infrastructure, and security evaluations among the conditions for trusted interoperability.</p>
+
+                <blockquote>
+                    <p>A benchmark is a small constitution: it declares which lives, languages, costs, and failures the system is required to recognize.</p>
+                </blockquote>
+
+                <p>The market has treated evaluation as a developer tool. That description is too narrow. The evaluation corpus is an institutional record of obligations. It tells a team what must remain true when a model changes, a tool is replaced, a language is added, a provider raises a price, or an agent receives permission to act. Whoever controls the corpus controls the boundary between an acceptable regression and an invisible one.</p>
+
+                <h2>A score is a decision about what counts</h2>
+
+                <p>Scores appear objective because they compress many observations into one number. Compression is useful for comparison, yet it can also hide the decision that produced the measurement. A 4.2 out of 5 may summarize accuracy, relevance, and clarity. It may say nothing about whether the agent verified an account before issuing a refund, exposed a private field, used the approved language, or spent twelve times the allowed token budget.</p>
+
+                <p>Google’s October evaluation guide makes the operational problem concrete. It recommends translating critical user journeys into evaluation points and combining deterministic checks, model-based rubrics, human oversight, and integration tests. The full-stack approach matters because agents fail through interaction. A final answer may sound polished while the trace reveals a retry loop, a duplicate side effect, a missing tool call, or an expensive detour.</p>
+
+                <p>The test case must therefore carry the conditions of acceptance. A serious case records the user or institution, the goal, the permitted tools, the language, the data boundary, the expected evidence, the time budget, the cost ceiling, the escalation path, and the remedy when the system fails. It is an executable statement of institutional duty expressed through a prompt, fixture, and policy record.</p>
+
+                <p>The minimum case record should expose:</p>
+
+                <ul>
+                    <li>the actor, beneficiary, jurisdiction, language, and public or commercial purpose;</li>
+                    <li>the input conditions, available tools, authority scope, and prohibited effects;</li>
+                    <li>the evidence the agent must inspect before answering or acting;</li>
+                    <li>the deterministic assertions, human review points, and acceptable uncertainty;</li>
+                    <li>the latency, token, energy, and financial limits attached to the task;</li>
+                    <li>the owner, version history, appeal route, and retirement reason for the case.</li>
+                </ul>
+
+                <p>These fields convert a benchmark from a collection of prompts into a governed instrument. They let a university explain why a research assistant must cite a source, a public agency explain why a notice requires a human review, and a commerce operator explain why a purchase needs an explicit confirmation. The case becomes a place where institutional judgment can be inspected and revised.</p>
+
+                <h2>The corpus carries a language and a geography</h2>
+
+                <p>Benchmark design has a political geography. A system evaluated mainly in English, with high-bandwidth tools and abundant infrastructure, will learn a different definition of reliability from a system evaluated in French, Wolof, Arabic, Amharic, or Kiswahili under intermittent connectivity and strict data-locality rules. The difference is operational, not decorative. Language changes what the user can express, what the agent can misunderstand, and what a reviewer can verify.</p>
+
+                <p>African institutions should own the cases that encode their public obligations. A local-language agricultural query may test whether an agent preserves a crop name, a season, and a farmer’s uncertainty. An archive case may test whether an oral-history description retains the community’s preferred naming and access restriction. A municipal case may test whether a resident can challenge an automated response in the language used to file the request. These cases create evidence about real institutional capacity.</p>
+
+                <p>Imported benchmarks remain useful as one layer of comparison. They should not become the only authority. A foreign test suite can prove that an agent behaves in a known environment; it cannot decide which local harms deserve a failing grade. The right architecture is federated: shared schemas for identity, traces, metrics, and versioning, with local institutions retaining authority over scenarios, languages, permissions, and acceptance thresholds.</p>
+
+                <p>This is where the question of ownership becomes practical. The institution that supplies the case should receive attribution, control its sensitive fixtures, define who may inspect the result, and decide whether the scenario can be reused outside its original purpose. Public knowledge should circulate through open methods while protected knowledge remains subject to consent and jurisdiction. A benchmark can be interoperable without becoming extractive.</p>
+
+                <h2>From frozen suite to living record</h2>
+
+                <p>Evaluation needs two clocks. A stable golden dataset gives a team a fixed reference for comparing a change. A living corpus absorbs new failures from production, new languages, new tools, and new forms of misuse. Remove the stable reference and the team cannot distinguish a better agent from a moving target. Refuse the living corpus and the benchmark becomes an archive of yesterday’s assumptions.</p>
+
+                <p>Google’s evaluation guidance connects these clocks by moving from simulated scenarios to real traces and then promoting useful production traces into future golden cases. The movement requires governance. A trace may contain private information, a disputed outcome, or a failure that should be redacted before reuse. Someone must classify it, obtain the right permissions, preserve the relevant evidence, and decide whether it becomes a regression case, a training example, a monitoring rule, or an incident held outside the public corpus.</p>
+
+                <p>A living evaluation system therefore needs an intake and adjudication path:</p>
+
+                <ol>
+                    <li>capture the trace, tool calls, outputs, timing, cost, and environment version;</li>
+                    <li>remove or protect personal and restricted data while preserving the failure mechanism;</li>
+                    <li>classify the issue by obligation, language, tool, authority, severity, and reversibility;</li>
+                    <li>assign an owner who can approve the case, dispute the label, or request a correction;</li>
+                    <li>promote the case into the appropriate suite and record the reason for its inclusion;</li>
+                    <li>review the case when the underlying policy, workflow, or public expectation changes.</li>
+                </ol>
+
+                <p>The result is a memory system for institutional quality. It records what the organization learned, why the lesson matters, and how a future release will be tested against it. This makes evaluation a compounding asset. A new model does not begin from a blank scorecard; it meets the accumulated experience of the institution.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is the evaluation corpus control plane: infrastructure that gives test cases identity, ownership, language and jurisdiction metadata, version history, permissions, trace lineage, scoring rules, cost evidence, and a controlled path from production failure to release decision. It sits between an agent runtime and the institution’s definition of acceptable work. It is distinct from a dashboard that displays scores, a model benchmark, a prompt library, or a generic observability product.</p>
+
+                <ul>
+                    <li><strong>Case registries:</strong> systems that make scenarios, fixtures, owners, languages, policies, and retirement reasons discoverable and auditable.</li>
+                    <li><strong>Trace-to-fixture pipelines:</strong> tools that turn real failures into reproducible cases while protecting personal data and preserving the mechanism that broke.</li>
+                    <li><strong>Multilingual evaluation packs:</strong> locally governed datasets and rubrics that test meaning, permissions, refusal, and recourse across the languages an institution uses.</li>
+                    <li><strong>Cost-and-effectiveness gates:</strong> release controls that combine quality with latency, tool-call count, token use, energy, and financial exposure.</li>
+                    <li><strong>Benchmark federation:</strong> shared schemas and conformance services that let institutions compare evidence while retaining control over sensitive cases and acceptance policy.</li>
+                </ul>
+
+                <p>Underwriting can begin with evidence. Can the customer show why a case exists and who owns it? Can a score be reconstructed from the exact fixture, rubric, model, tool version, and environment that produced it? Can a production failure become a safe regression test without erasing its local context? Can a French or Wolof case carry the same authority as an English case? Can a release manager see the cost and latency of a “successful” run? Can an institution export its corpus and continue testing after changing providers?</p>
+
+                <p>These measures separate durable evaluation infrastructure from cosmetic assurance. Useful indicators include the percentage of critical workflows covered by owned cases, the share of cases with multilingual parity, time from production failure to regression coverage, reproducibility of historical scores, false-negative discovery rate, evaluation cost per release, and the proportion of release decisions backed by trace-level evidence. The value appears when a customer must defend a decision, recover from a regression, or change a provider without losing the memory of what it promised users.</p>
+
+                <h2>Build the constitution before scaling the agent</h2>
+
+                <p>An institution can begin with one workflow that carries real consequences: a research assistant, a public-information service, a customer-support queue, or a purchasing agent. Name the owner of the workflow and the owner of the evaluation corpus. Write five cases from critical user journeys, including one local-language case, one permission boundary, one cost limit, and one failure that requires human recourse. Store the fixtures, evidence, rubric, trace, and decision together.</p>
+
+                <p>Run the suite before a model change and after it. Change one variable at a time. Keep the old result files. Inspect the per-case movement instead of trusting the mean. Invite an independent reviewer to challenge whether the cases represent the people and obligations the system claims to serve. When a new production failure appears, give it a route into the corpus only after its privacy, ownership, and institutional meaning are clear.</p>
+
+                <p>The benchmark is the institution speaking to its future self. It says: these are the people we recognize, these are the languages we will not erase, these are the permissions we will enforce, these are the costs we will accept, and these are the failures we will repair. A system can borrow a model and rent compute; the institution still owns the responsibility to decide what counts as trustworthy work.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/hill-climbing-agent-quality-with-agents-cli-evaluation/" target="_blank" rel="noopener">Google Developers Blog, “Hill-Climbing Agent Quality with Agents CLI Evaluation” (October 28, 2026). Describes an evaluation loop that generates cases, grades traces, compares result files, analyzes failures, experiments with model backends, and treats raw result files as evidence rather than relying only on summary scores.</a></li>
+                    <li><a href="https://developers.googleblog.com/evaluating-ai-agents-moving-past-the-vibe-check/" target="_blank" rel="noopener">Google Developers Blog, “Evaluating AI agents: moving past the vibe check” (October 15, 2026). Recommends critical user journeys, simulated scenarios, layered checks, frozen golden datasets, production traces, and a progression from simple repeatable tests toward continuous evaluation.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). Identifies industry-led standards, community protocols, agent identity infrastructure, and security evaluations as pillars for trusted and interoperable agent systems.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">À qui appartient le cas de test ?</h1>
+
+                <p><em>Note de terrain, 31 octobre 2026.</em> Un agent peut réussir un benchmark tout en échouant à l’institution qui l’a acheté. L’échec peut se cacher dans une langue non testée, une permission ignorée, un plafond de coût absent, une boucle d’outils trop lente ou un cas de service public que le benchmark n’a jamais envisagé. La question centrale de l’évaluation est donc institutionnelle : qui possède le cas de test, qui peut le modifier et quelle définition d’un bon résultat porte-t-il ?</p>
+
+                <p>Les travaux récents de Google rendent visible ce déplacement de l’ingénierie. La démonstration d’Agents CLI publiée le 28 octobre décrit une boucle qui génère des cas, évalue des traces, compare des exécutions, regroupe les échecs et répète le processus après une modification. Le guide du 15 octobre consacré à l’évaluation des agents recommande des parcours utilisateurs critiques, des scénarios simulés, des contrôles en couches, des jeux de données de référence figés et l’intégration de traces de production dans les futurs cas de test. L’initiative du NIST sur les standards des agents d’IA place les protocoles communautaires, l’infrastructure d’identité et les évaluations de sécurité parmi les conditions d’une interopérabilité digne de confiance.</p>
+
+                <blockquote>
+                    <p>Un benchmark est une petite constitution : il déclare quelles vies, quelles langues, quels coûts et quels échecs le système doit reconnaître.</p>
+                </blockquote>
+
+                <p>Le marché a traité l’évaluation comme un outil destiné aux développeurs. Cette description est trop étroite. Le corpus d’évaluation est un registre institutionnel des obligations. Il indique ce qui doit rester vrai lorsqu’un modèle change, qu’un outil est remplacé, qu’une langue est ajoutée, qu’un fournisseur augmente ses prix ou qu’un agent reçoit l’autorisation d’agir. Celui qui contrôle le corpus contrôle la frontière entre une régression acceptable et une régression invisible.</p>
+
+                <h2>Un score est une décision sur ce qui compte</h2>
+
+                <p>Les scores semblent objectifs parce qu’ils condensent de nombreuses observations en un seul nombre. Cette condensation facilite la comparaison, mais elle peut aussi dissimuler la décision qui a produit la mesure. Un 4,2 sur 5 peut résumer l’exactitude, la pertinence et la clarté. Il peut rester silencieux sur la vérification d’un compte avant un remboursement, l’exposition d’un champ privé, l’usage de la langue approuvée ou le dépassement de douze fois du budget de tokens.</p>
+
+                <p>Le guide d’évaluation publié par Google en octobre rend le problème opérationnel concret. Il recommande de traduire les parcours utilisateurs critiques en points d’évaluation et de combiner contrôles déterministes, rubriques évaluées par modèle, supervision humaine et tests d’intégration. L’approche complète compte parce que les agents échouent par interaction. Une réponse finale peut sembler élégante tandis que la trace révèle une boucle de répétition, un effet externe dupliqué, un appel d’outil manquant ou un détour coûteux.</p>
+
+                <p>Le cas de test doit donc porter les conditions d’acceptation. Un cas sérieux indique l’utilisateur ou l’institution, l’objectif, les outils autorisés, la langue, la frontière des données, les preuves attendues, le délai, le plafond de coût, le chemin d’escalade et le recours prévu lorsque le système échoue. Il s’agit de bien davantage qu’un prompt dans un fichier JSON. C’est une formulation exécutable du devoir institutionnel.</p>
+
+                <p>Le dossier minimal d’un cas devrait exposer :</p>
+
+                <ul>
+                    <li>l’acteur, le bénéficiaire, la juridiction, la langue et la finalité publique ou commerciale ;</li>
+                    <li>les conditions d’entrée, les outils disponibles, la portée de l’autorité et les effets interdits ;</li>
+                    <li>les preuves que l’agent doit inspecter avant de répondre ou d’agir ;</li>
+                    <li>les assertions déterministes, les points de revue humaine et l’incertitude acceptable ;</li>
+                    <li>les limites de latence, de tokens, d’énergie et de dépense attachées à la tâche ;</li>
+                    <li>le responsable, l’historique des versions, la voie d’appel et la raison du retrait du cas.</li>
+                </ul>
+
+                <p>Ces champs transforment un benchmark, qui était une collection de prompts, en instrument gouverné. Ils permettent à une université d’expliquer pourquoi un assistant de recherche doit citer une source, à une administration de préciser pourquoi un avis exige une revue humaine et à un opérateur commercial de montrer pourquoi un achat demande une confirmation explicite. Le cas devient un lieu où le jugement institutionnel peut être inspecté et révisé.</p>
+
+                <h2>Le corpus porte une langue et une géographie</h2>
+
+                <p>La conception d’un benchmark possède une géographie politique. Un système évalué principalement en anglais, avec des outils à haut débit et une infrastructure abondante, apprendra une définition de la fiabilité différente de celle d’un système évalué en français, en wolof, en arabe, en amharique ou en kiswahili dans un environnement de connectivité intermittente et de stricte localisation des données. La différence est opérationnelle, non décorative. La langue modifie ce que l’utilisateur peut exprimer, ce que l’agent peut mal comprendre et ce qu’un réviseur peut vérifier.</p>
+
+                <p>Les institutions africaines devraient posséder les cas qui encodent leurs obligations publiques. Une question agricole en langue locale peut tester la conservation du nom d’une culture, d’une saison et de l’incertitude d’un agriculteur. Un cas d’archive peut vérifier qu’une description d’histoire orale conserve le nom préféré par la communauté et sa restriction d’accès. Un cas municipal peut vérifier qu’un résident peut contester une réponse automatisée dans la langue de sa demande. Ces cas produisent des preuves sur la capacité institutionnelle réelle.</p>
+
+                <p>Les benchmarks importés restent utiles comme couche de comparaison. Ils ne devraient pas devenir l’unique autorité. Une suite de tests étrangère peut prouver qu’un agent se comporte dans un environnement connu ; elle ne peut pas décider quels dommages locaux méritent une note d’échec. L’architecture juste est fédérée : des schémas partagés pour l’identité, les traces, les métriques et les versions, tandis que les institutions locales conservent l’autorité sur les scénarios, les langues, les permissions et les seuils d’acceptation.</p>
+
+                <p>La question de la propriété devient alors pratique. L’institution qui fournit le cas doit recevoir son attribution, contrôler ses fixtures sensibles, définir qui peut inspecter le résultat et décider si le scénario peut être réutilisé hors de sa finalité initiale. Le savoir public peut circuler par des méthodes ouvertes tandis que le savoir protégé reste soumis au consentement et à la juridiction. Un benchmark peut être interopérable sans devenir extractif.</p>
+
+                <h2>Du jeu figé au registre vivant</h2>
+
+                <p>L’évaluation a besoin de deux horloges. Un jeu de données de référence stable donne à une équipe un point fixe pour comparer une modification. Un corpus vivant absorbe les nouveaux échecs de production, les nouvelles langues, les nouveaux outils et les nouvelles formes d’abus. Sans référence stable, l’équipe ne peut pas distinguer un meilleur agent d’une cible qui se déplace. Sans corpus vivant, le benchmark devient l’archive des hypothèses d’hier.</p>
+
+                <p>Les recommandations de Google relient ces deux horloges en passant des scénarios simulés aux traces réelles, puis en transformant les traces utiles de production en futurs cas de référence. Ce passage exige une gouvernance. Une trace peut contenir des données personnelles, un résultat contesté ou un échec qui doit être expurgé avant sa réutilisation. Quelqu’un doit la classer, obtenir les permissions nécessaires, préserver les preuves pertinentes et décider si elle devient un cas de régression, un exemple d’apprentissage, une règle de surveillance ou un incident conservé hors du corpus public.</p>
+
+                <p>Un système d’évaluation vivant a donc besoin d’un chemin d’admission et d’arbitrage :</p>
+
+                <ol>
+                    <li>capturer la trace, les appels d’outils, les sorties, le temps, le coût et la version de l’environnement ;</li>
+                    <li>retirer ou protéger les données personnelles et restreintes tout en conservant le mécanisme de l’échec ;</li>
+                    <li>classer le problème selon l’obligation, la langue, l’outil, l’autorité, la gravité et la réversibilité ;</li>
+                    <li>désigner un responsable capable d’approuver le cas, de contester son étiquette ou de demander une correction ;</li>
+                    <li>promouvoir le cas dans la suite appropriée et inscrire la raison de son inclusion ;</li>
+                    <li>réexaminer le cas lorsque la politique, le workflow ou l’attente publique sous-jacente change.</li>
+                </ol>
+
+                <p>Le résultat est un système de mémoire pour la qualité institutionnelle. Il enregistre ce que l’organisation a appris, pourquoi cette leçon compte et comment une prochaine version sera testée. L’évaluation devient ainsi un actif cumulatif. Un nouveau modèle ne commence pas avec une fiche de scores vide ; il rencontre l’expérience accumulée par l’institution.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est le plan de contrôle du corpus d’évaluation : une infrastructure qui donne aux cas de test une identité, une propriété, des métadonnées de langue et de juridiction, un historique de versions, des permissions, une lignée de traces, des règles de notation, des preuves de coût et un chemin contrôlé entre l’échec de production et la décision de mise en production. Cette couche se situe entre un runtime agentique et la définition institutionnelle d’un travail acceptable. Elle se distingue d’un tableau de bord de scores, d’un benchmark de modèle, d’une bibliothèque de prompts et d’un produit générique d’observabilité.</p>
+
+                <ul>
+                    <li><strong>Registres de cas :</strong> systèmes rendant découvrables et auditables les scénarios, fixtures, responsables, langues, politiques et raisons de retrait.</li>
+                    <li><strong>Pipelines de la trace vers la fixture :</strong> outils transformant les échecs réels en cas reproductibles tout en protégeant les données personnelles et le mécanisme de la panne.</li>
+                    <li><strong>Packs d’évaluation multilingues :</strong> jeux de données et rubriques gouvernés localement qui testent le sens, les permissions, le refus et le recours dans les langues utilisées par l’institution.</li>
+                    <li><strong>Portes de coût et d’efficacité :</strong> contrôles de mise en production combinant qualité, latence, nombre d’appels d’outils, tokens, énergie et exposition financière.</li>
+                    <li><strong>Fédération des benchmarks :</strong> schémas partagés et services de conformité permettant de comparer les preuves tout en conservant le contrôle des cas sensibles et de la politique d’acceptation.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des preuves. Le client peut-il montrer pourquoi un cas existe et qui le possède ? Un score peut-il être reconstruit à partir de la fixture exacte, de la rubrique, du modèle, de la version des outils et de l’environnement qui l’ont produit ? Un échec de production peut-il devenir un test de régression sûr sans perdre son contexte local ? Un cas en français ou en wolof peut-il porter la même autorité qu’un cas en anglais ? Un responsable de mise en production peut-il voir le coût et la latence d’une exécution dite réussie ? Une institution peut-elle exporter son corpus et continuer à tester après un changement de fournisseur ?</p>
+
+                <p>Ces mesures distinguent une infrastructure d’évaluation durable d’une assurance cosmétique. Les indicateurs utiles comprennent la part des workflows critiques couverte par des cas possédés, la proportion de cas présentant une parité linguistique, le délai entre l’échec de production et la couverture de régression, la reproductibilité des scores historiques, le taux de découverte des faux négatifs, le coût d’évaluation par version et la proportion de décisions de mise en production soutenues par des preuves au niveau des traces. La valeur apparaît lorsqu’un client doit défendre une décision, récupérer après une régression ou changer de fournisseur sans perdre la mémoire de ses engagements envers les utilisateurs.</p>
+
+                <h2>Construire la constitution avant d’élargir l’agent</h2>
+
+                <p>Une institution peut commencer avec un workflow qui porte de vraies conséquences : un assistant de recherche, un service d’information publique, une file de support client ou un agent d’achat. Nommez le responsable du workflow et celui du corpus d’évaluation. Écrivez cinq cas issus des parcours utilisateurs critiques, dont un cas en langue locale, une limite de permission, un plafond de coût et un échec exigeant un recours humain. Conservez ensemble les fixtures, les preuves, la rubrique, la trace et la décision.</p>
+
+                <p>Exécutez la suite avant et après une modification de modèle. Changez une seule variable à la fois. Conservez les anciens fichiers de résultats. Inspectez les variations par cas au lieu de faire confiance à la moyenne. Invitez un réviseur indépendant à examiner si les cas représentent les personnes et les obligations que le système prétend servir. Lorsqu’un nouvel échec de production apparaît, donnez-lui une voie vers le corpus seulement après avoir clarifié sa confidentialité, sa propriété et sa signification institutionnelle.</p>
+
+                <p>Le benchmark est la voix de l’institution adressée à son propre avenir. Il dit : voici les personnes que nous reconnaissons, voici les langues que nous ne supprimerons pas, voici les permissions que nous appliquerons, voici les coûts que nous acceptons et voici les échecs que nous réparerons. Une institution peut emprunter un modèle et louer du calcul. Elle ne peut pas emprunter la responsabilité de décider ce qui constitue un travail digne de confiance.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/hill-climbing-agent-quality-with-agents-cli-evaluation/" target="_blank" rel="noopener">Google Developers Blog, « Hill-Climbing Agent Quality with Agents CLI Evaluation » (28 octobre 2026). Décrit une boucle qui génère des cas, évalue des traces, compare des fichiers de résultats, analyse les échecs, expérimente avec des backends de modèles et traite les fichiers bruts comme des preuves plutôt que de s’appuyer uniquement sur des scores synthétiques.</a></li>
+                    <li><a href="https://developers.googleblog.com/evaluating-ai-agents-moving-past-the-vibe-check/" target="_blank" rel="noopener">Google Developers Blog, « Evaluating AI agents: moving past the vibe check » (15 octobre 2026). Recommande les parcours utilisateurs critiques, les scénarios simulés, les contrôles en couches, les jeux de données de référence figés, les traces de production et une progression allant de tests répétables simples vers une évaluation continue.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mis à jour le 14 août 2026). Identifie les standards pilotés par l’industrie, les protocoles communautaires, l’infrastructure d’identité des agents et les évaluations de sécurité comme des piliers de systèmes agentiques fiables et interopérables.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

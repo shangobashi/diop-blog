@@ -185,6 +185,7 @@
         'article.entry153':     { en: 'Diop Daily #153 — October 2026', fr: 'Diop Quotidien n°153 — Octobre 2026' },
         'article.entry154':     { en: 'Diop Daily #154 — October 2026', fr: 'Diop Quotidien n°154 — Octobre 2026' },
         'article.entry155':     { en: 'Diop Daily #155 — October 2026', fr: 'Diop Quotidien n°155 — Octobre 2026' },
+        'article.entry156':     { en: 'Diop Daily #156 — October 2026', fr: 'Diop Quotidien n°156 — Octobre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -197,6 +198,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-156': {
+        title: {
+            en: 'Who Owns the Test Case?',
+            fr: 'À qui appartient le cas de test ?'
+        },
+        excerpt: {
+            en: 'Agent evaluation is becoming a governance problem: the durable benchmark is an institutional record of languages, permissions, costs, evidence, and failures. The investable layer is an evaluation corpus control plane that turns production learning into owned, reproducible release evidence.',
+            fr: 'L’évaluation des agents devient un problème de gouvernance : le benchmark durable est un registre institutionnel des langues, des permissions, des coûts, des preuves et des échecs. La couche d’investissement est un plan de contrôle du corpus d’évaluation qui transforme l’apprentissage de production en preuves de mise en production possédées et reproductibles.'
+        }
+    },
     'diop-daily-155': {
         title: {
             en: 'The Label Needs a Witness',
