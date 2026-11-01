@@ -186,6 +186,7 @@
         'article.entry154':     { en: 'Diop Daily #154 — October 2026', fr: 'Diop Quotidien n°154 — Octobre 2026' },
         'article.entry155':     { en: 'Diop Daily #155 — October 2026', fr: 'Diop Quotidien n°155 — Octobre 2026' },
         'article.entry156':     { en: 'Diop Daily #156 — October 2026', fr: 'Diop Quotidien n°156 — Octobre 2026' },
+        'article.entry157':     { en: 'Diop Daily #157 — November 2026', fr: 'Diop Quotidien n°157 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -198,6 +199,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-157': {
+        title: {
+            en: 'The Interface Is a Treaty',
+            fr: 'L’interface est un traité'
+        },
+        excerpt: {
+            en: 'Agents can discover services and prove a key while the receiving institution still lacks a shared language for authority, terms, evidence, and correction. The investable layer is a protocol-boundary control plane that turns machine interaction into a conformance relationship rather than a private handshake.',
+            fr: 'Les agents peuvent découvrir des services et prouver une clé alors que l’institution réceptrice ne dispose toujours pas d’un langage partagé pour l’autorité, les conditions, les preuves et la correction. La couche d’investissement est un plan de contrôle de la frontière protocolaire qui transforme l’interaction machine en relation de conformité plutôt qu’en poignée de main privée.'
+        }
+    },
     'diop-daily-156': {
         title: {
             en: 'Who Owns the Test Case?',

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Interface Is a Treaty — Diop Research</title>
+    <meta name="description" content="As agents move across websites, merchants, and institutions, the valuable layer is the protocol boundary that makes identity, authority, terms, evidence, and correction legible across systems. Open standards are beginning to expose that boundary as infrastructure."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="19.78" x2="18.36" y2="18.36"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry157">Diop Daily #157 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 1, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>protocol boundaries · agent conformance · institutional authority</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+
+                <p><em>Field note, November 1, 2026.</em> An agent arriving at a service boundary carries more than a request. It carries an identity, a claimed purpose, a set of permissions, a language, a jurisdiction, and an expectation that the receiving system will understand what may happen next. A website can discover the agent and a cryptographic system can verify its key while the institution still lacks a shared account of authority. The difficult infrastructure sits in that gap.</p>
+
+                <p>Recent standards work makes the boundary visible. NIST’s AI Agent Standards Initiative names industry standards, community protocols, agent identity infrastructure, and security evaluations as strategic pillars. The W3C’s September workshop on e-commerce for humans and AI agents placed capability discovery, delegation, attestation, product identity, publisher surfaces, and authorization protocols in the same public programme. FIDO Alliance work on trusted AI agent interactions focuses on verifiable user instructions and agent authentication. These signals come from different institutions and commercial settings, yet they describe a common requirement: machine interaction needs a semantic and conformance layer that can travel across organizational boundaries.</p>
+
+                <blockquote>
+                    <p>An interface becomes a treaty when both sides can state who is speaking, what is permitted, which evidence governs the exchange, and how a disagreement will be repaired.</p>
+                </blockquote>
+
+                <p>The market often describes this work as agent identity. Identity is one field in the contract. A passport can identify a traveller; it cannot decide which goods may cross a border, which documents must be shown, or what remedy follows a disputed entry. The agentic web needs the equivalent of a border protocol: a shared description of the parties, the action, the terms, the evidence, the limits, and the correction route.</p>
+
+                <h2>Discovery answers where; authority answers why</h2>
+
+                <p>DNS-based proposals such as DNS-AID and the Agent Name Service show why discovery matters. Infoblox and GoDaddy describe complementary approaches in which DNS-AID publishes discoverable metadata and ANS supplies names, identity, and cryptographic verification. Their May announcement argues for federated infrastructure rather than a proprietary registry. This is a useful foundation because an agent cannot negotiate with a service it cannot find or distinguish from an impostor.</p>
+
+                <p>Discovery still leaves the receiving institution with harder questions. Which capability is being requested? Is the agent acting for a person, a company, a public body, or itself? What is the scope of the delegation? Which product, record, or service does the request concern? Which terms were visible before the action, and what evidence must be retained? What happens when the agent’s representation of the user’s intention is incomplete?</p>
+
+                <p>These questions belong to the boundary contract. A serious interaction should expose at least:</p>
+
+                <ul>
+                    <li>the stable identities of the user, agent, service, and responsible organization;</li>
+                    <li>the purpose, requested capability, resource, jurisdiction, language, and time window;</li>
+                    <li>the authority chain, including the person or institution that delegated the action;</li>
+                    <li>the terms, limits, prices, data uses, and side effects presented before commitment;</li>
+                    <li>the evidence produced at discovery, authorization, execution, and completion;</li>
+                    <li>the correction, refusal, appeal, and recovery route when either side disputes the result.</li>
+                </ul>
+
+                <p>This record is wider than an authentication token and narrower than a complete legal agreement. It is the machine-readable layer that lets a service decide whether the proposed action fits the relationship. It also gives an institution something to audit after the exchange, when memory and accountability matter more than the initial handshake.</p>
+
+                <h2>Protocols must carry meaning across institutions</h2>
+
+                <p>Interoperability is often measured by whether two systems can exchange messages. Institutions need a stronger test: whether the receiving system can preserve the meaning of the message while applying its own policy. A capability name such as “purchase,” “publish,” “update,” or “recommend” can hide very different consequences. The same verb may refer to a low-risk draft in one environment and an irreversible public action in another.</p>
+
+                <p>The W3C workshop agenda is revealing precisely because it places these questions next to one another. Sessions on the Universal Commerce Protocol address a common language for discovery, checkout, payments, and order management. Other sessions address hardware-backed trust, structured authorization, cryptographically verifiable evidence, brand-authoritative product data, exact product identity, publisher-side agent surfaces, and who is authorized to speak for a product. The programme is not a single standard, and its proposals do not carry equal status. It is evidence that the system boundary is becoming the main site of design.</p>
+
+                <p>African institutions should read this development through the question of semantic authority. A university may expose a research service in English, French, Wolof, or another language while retaining local rules for access, citation, consent, and correction. A public agency may let an agent retrieve a form without granting it the right to submit a decision. An archive may publish a machine-readable catalogue while preserving community restrictions around names, images, and oral histories. The protocol must carry those distinctions instead of flattening them into a vendor’s default vocabulary.</p>
+
+                <p>Language belongs inside the conformance record. A translation that changes the force of “draft,” “approved,” “restricted,” or “consented” has changed the action’s authority. Local terminology also affects the evidence a reviewer can inspect. If a system accepts a request in a local language but produces the governing receipt only in a foreign language, it has widened access while narrowing the power to contest. Interoperability without linguistic parity can become a new form of dependency.</p>
+
+                <h2>Conformance is the missing economic primitive</h2>
+
+                <p>Open protocols reduce the cost of connection, but an institution still needs evidence that an implementation means what it claims. Conformance turns a protocol from a document into an operating relationship. It asks whether a service publishes the fields it promises, whether an agent respects the limits it receives, whether a receipt preserves the terms that were shown, and whether a correction reaches the systems that acted on the original message.</p>
+
+                <p>A boundary conformance test should exercise the full interaction rather than a single API response:</p>
+
+                <ol>
+                    <li>discover a service and verify the identity, capability description, language, and jurisdiction it publishes;</li>
+                    <li>construct a request with explicit purpose, authority, resource, terms, and expiry;</li>
+                    <li>check that the receiving system evaluates the request against its own policy and returns a meaningful refusal when the scope does not fit;</li>
+                    <li>execute a permitted action while recording the actor, evidence, state changes, cost, and side effects;</li>
+                    <li>replay the receipt in another implementation and determine whether the same obligations and limits remain legible;</li>
+                    <li>issue a correction, revocation, or dispute and trace which downstream records change, remain valid, or require human review.</li>
+                </ol>
+
+                <p>The test reveals the difference between protocol support and institutional interoperability. A vendor can implement the syntax of a message while ignoring the authority carried by its fields. A merchant can accept an agent token while losing the user’s purpose. A publisher can expose a capability while failing to state which data may be reused. Conformance gives buyers a way to inspect those failures before they become embedded in a workflow.</p>
+
+                <p>This is also where standards bodies and commercial operators meet. NIST’s initiative links open protocols to identity research and security evaluations. FIDO’s work links authentication to verifiable instructions and transaction evidence. The W3C programme links discovery and commerce to delegation, attestation, product truth, and user consent. Each institution is approaching a different layer, yet the boundary requires them to compose. The commercial opportunity is in the composition and evidence, not in another isolated badge.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is a protocol-boundary control plane: infrastructure that maps identity, authority, capability, state, terms, evidence, jurisdiction, and correction into a conformance relationship between agents and institutions. It sits between open protocols and consequential action. It is distinct from a directory, an identity provider, a payment rail, a provenance label, a model gateway, or a generic API management product.</p>
+
+                <ul>
+                    <li><strong>Boundary manifests:</strong> machine-readable declarations of capabilities, terms, data limits, languages, jurisdictions, and responsible authorities.</li>
+                    <li><strong>Delegation and intent receipts:</strong> records that bind a person’s or institution’s authorization to the exact purpose, scope, duration, and action an agent attempted.</li>
+                    <li><strong>Conformance harnesses:</strong> test environments that compare implementations across protocols, languages, policy engines, and state transitions.</li>
+                    <li><strong>Semantic policy brokers:</strong> translation and policy layers that preserve the force of permissions, refusals, prices, consent, and recourse across institutional vocabularies.</li>
+                    <li><strong>Correction and dispute rails:</strong> systems that retain the original evidence, route a challenge, issue a remedy, and show which downstream actions must be revisited.</li>
+                </ul>
+
+                <p>Underwriting can begin with practical evidence. Can a service show what an agent was allowed to do before the action? Can the agent prove whose authority it carried and what interpretation it used? Can two implementations produce receipts that an independent reviewer reads the same way? Can a local-language user inspect and contest the same terms as an English-speaking operator? Can a provider change its runtime without losing the history of commitments and corrections?</p>
+
+                <p>Useful measures include the percentage of boundary fields with explicit owners, successful cross-implementation replay of receipts, time to detect an authority mismatch, multilingual parity for high-consequence terms, correction propagation coverage, refusal precision, and the share of consequential actions supported by a complete evidence chain. These indicators attach capital to operational capacity. They reveal whether a protocol is a real institutional rail or merely a compatibility claim.</p>
+
+                <h2>Build the treaty before widening the mandate</h2>
+
+                <p>An institution can begin with one bounded exchange: a purchase, a research submission, a public-information request, a catalogue lookup, or a controlled update to a record. Define the parties, capability, purpose, language, authority, terms, evidence, expiry, and remedy. Write the conformance tests before connecting more agents. Include a refusal case, a translation case, a changed-state case, and a dispute that requires human judgment.</p>
+
+                <p>Then test the boundary under pressure. Change the product version. Remove a permission. Let the provider return an unfamiliar status. Present the same terms in another language. Replay the receipt in a second implementation. Revoke the delegation after the request but before completion. The institution should be able to state what the agent knew, what it was allowed to do, what changed, and which remedy remains available.</p>
+
+                <p>The deeper question is political as well as technical. A protocol determines whose categories become visible at the moment of exchange. If African institutions rely on interfaces whose vocabulary, trust lists, and correction paths are controlled elsewhere, they may participate in the agentic economy while remaining unable to define its terms. Sovereignty requires more than local deployment. It requires the ability to author the boundary contract, test its interpretation, and repair it when the machine carries meaning across a border.</p>
+
+                <p>An interface is a treaty when it makes the relationship inspectable to both sides. The future will belong to systems that can discover one another, act within declared authority, preserve evidence, and correct the record without asking a single vendor to arbitrate every disagreement. That is the infrastructure worth building at the edge of the agentic web.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). Describes industry-led standards, community-led protocols, agent authentication and identity research, and security evaluations as strategic pillars for trusted, interoperable agents.</a></li>
+                    <li><a href="https://www.w3.org/2026/ecommerce-agents/agenda.html" target="_blank" rel="noopener">W3C, “Workshop: E-Commerce for humans and AI Agents” agenda (September 8–9, 2026). Records sessions on UCP, capability discovery, delegation, attestation, structured authorization, product identity, publisher-side agent surfaces, and agent identity.</a></li>
+                    <li><a href="https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/" target="_blank" rel="noopener">FIDO Alliance, “FIDO Alliance to Develop Standards for Trusted AI Agent Interactions” (2026). Describes work on verifiable user instructions, agent authentication, and standards that carry user intent, agent identity, and transaction evidence across the lifecycle.</a></li>
+                    <li><a href="https://aboutus.godaddy.net/newsroom/news-releases/press-release-details/2026/Infoblox-and-GoDaddy-Support-Open-Standards-for-AI-Agent-Discovery-Identity-and-Verification-2026-0acKMntvOC/default.aspx" target="_blank" rel="noopener">Infoblox and GoDaddy, “Support Open Standards for AI Agent Discovery, Identity and Verification” (May 14, 2026). Describes complementary DNS-AID and Agent Name Service approaches for discoverable metadata, naming, identity, and verification on federated infrastructure.</a></li>
+                    <li><a href="https://www.mastercard.com/us/en/news-and-trends/stories/2026/agentic-commerce-identity-know-your-agent.html" target="_blank" rel="noopener">Mastercard, “Who’s behind the AI agent? Solving the identity challenge in agentic commerce” (2026). Describes know-your-agent tokens that connect an agent to the person it represents and to bounded payment authority at merchant boundaries.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+
+                <p><em>Note de terrain, 1er novembre 2026.</em> Un agent qui arrive à la frontière d’un service transporte davantage qu’une requête. Il transporte une identité, une finalité déclarée, un ensemble de permissions, une langue, une juridiction et l’attente que le système récepteur comprenne ce qui peut se produire ensuite. Un site peut découvrir l’agent et un système cryptographique peut vérifier sa clé alors que l’institution ne dispose toujours pas d’un récit partagé de l’autorité. L’infrastructure difficile se trouve dans cet écart.</p>
+
+                <p>Les travaux récents sur les standards rendent cette frontière visible. L’AI Agent Standards Initiative du NIST désigne les standards industriels, les protocoles communautaires, l’infrastructure d’identité des agents et les évaluations de sécurité comme des piliers stratégiques. L’atelier de septembre du W3C consacré au commerce électronique pour les humains et les agents IA réunissait la découverte des capacités, la délégation, l’attestation, l’identité des produits, les surfaces éditoriales et les protocoles d’autorisation dans un même programme public. Les travaux de la FIDO Alliance sur les interactions agentiques de confiance portent sur les instructions vérifiables des utilisateurs et l’authentification des agents. Ces signaux viennent d’institutions et de contextes commerciaux différents, mais ils décrivent une exigence commune : l’interaction machine a besoin d’une couche sémantique et de conformité capable de franchir les frontières organisationnelles.</p>
+
+                <blockquote>
+                    <p>Une interface devient un traité lorsque les deux parties peuvent dire qui parle, ce qui est permis, quelles preuves gouvernent l’échange et comment un désaccord sera réparé.</p>
+                </blockquote>
+
+                <p>Le marché décrit souvent ce travail comme une question d’identité des agents. L’identité n’est qu’un champ du contrat. Un passeport peut identifier un voyageur ; il ne peut pas décider quelles marchandises franchissent une frontière, quels documents doivent être présentés ni quel recours suit une entrée contestée. Le Web agentique a besoin de l’équivalent d’un protocole frontalier : une description partagée des parties, de l’action, des conditions, des preuves, des limites et du chemin de correction.</p>
+
+                <h2>La découverte indique où ; l’autorité indique pourquoi</h2>
+
+                <p>Les propositions fondées sur le DNS, comme DNS-AID et l’Agent Name Service, montrent pourquoi la découverte est importante. Infoblox et GoDaddy décrivent des approches complémentaires dans lesquelles DNS-AID publie des métadonnées découvrables tandis qu’ANS fournit des noms, une identité et une vérification cryptographique. Leur annonce de mai défend une infrastructure fédérée plutôt qu’un registre propriétaire. C’est une base utile, car un agent ne peut pas négocier avec un service qu’il ne peut ni trouver ni distinguer d’un imposteur.</p>
+
+                <p>La découverte laisse toutefois à l’institution réceptrice les questions les plus difficiles. Quelle capacité est demandée ? L’agent agit-il pour une personne, une entreprise, un organisme public ou lui-même ? Quelle est l’étendue de la délégation ? Quel produit, quel dossier ou quel service concerne la requête ? Quelles conditions étaient visibles avant l’action, et quelles preuves faut-il conserver ? Que se passe-t-il lorsque la représentation de l’intention de l’utilisateur par l’agent est incomplète ?</p>
+
+                <p>Ces questions appartiennent au contrat de frontière. Une interaction sérieuse devrait exposer au moins :</p>
+
+                <ul>
+                    <li>les identités stables de l’utilisateur, de l’agent, du service et de l’organisation responsable ;</li>
+                    <li>la finalité, la capacité demandée, la ressource, la juridiction, la langue et la fenêtre temporelle ;</li>
+                    <li>la chaîne d’autorité, y compris la personne ou l’institution qui a délégué l’action ;</li>
+                    <li>les conditions, limites, prix, usages des données et effets secondaires présentés avant l’engagement ;</li>
+                    <li>les preuves produites lors de la découverte, de l’autorisation, de l’exécution et de l’achèvement ;</li>
+                    <li>le chemin de correction, de refus, d’appel et de reprise lorsque l’une des parties conteste le résultat.</li>
+                </ul>
+
+                <p>Ce dossier est plus large qu’un jeton d’authentification et plus étroit qu’un accord juridique complet. Il constitue la couche lisible par machine qui permet à un service de décider si l’action proposée correspond à la relation. Il donne aussi à l’institution un objet à auditer après l’échange, lorsque la mémoire et la responsabilité comptent davantage que la poignée de main initiale.</p>
+
+                <h2>Les protocoles doivent transporter le sens entre les institutions</h2>
+
+                <p>On mesure souvent l’interopérabilité à la capacité de deux systèmes à échanger des messages. Les institutions ont besoin d’un test plus exigeant : le système récepteur peut-il préserver le sens du message tout en appliquant sa propre politique ? Un nom de capacité tel que « acheter », « publier », « mettre à jour » ou « recommander » peut recouvrir des conséquences très différentes. Le même verbe peut désigner un brouillon sans risque dans un environnement et une action publique irréversible dans un autre.</p>
+
+                <p>L’agenda de l’atelier du W3C est révélateur parce qu’il place ces questions côte à côte. Les sessions consacrées à l’Universal Commerce Protocol traitent d’un langage commun pour la découverte, le paiement, la commande et la gestion des achats. D’autres sessions abordent la confiance appuyée par le matériel, l’autorisation structurée, les preuves vérifiables cryptographiquement, les données produit contrôlées par la marque, l’identité exacte du produit, les surfaces éditoriales pour agents et l’autorité qui peut parler au nom d’un produit. Le programme ne constitue pas un standard unique, et ses propositions n’ont pas toutes le même statut. Il fournit cependant une preuve : la frontière entre les systèmes devient le principal lieu de conception.</p>
+
+                <p>Les institutions africaines devraient lire ce développement à travers la question de l’autorité sémantique. Une université peut exposer un service de recherche en anglais, en français, en wolof ou dans une autre langue tout en conservant ses règles locales d’accès, de citation, de consentement et de correction. Une administration peut laisser un agent récupérer un formulaire sans lui accorder le droit de déposer une décision. Une archive peut publier un catalogue lisible par machine tout en préservant les restrictions communautaires sur les noms, les images et les histoires orales. Le protocole doit porter ces distinctions au lieu de les aplatir dans le vocabulaire par défaut d’un fournisseur.</p>
+
+                <p>La langue appartient au dossier de conformité. Une traduction qui modifie la portée de « brouillon », « approuvé », « restreint » ou « consenti » a changé l’autorité de l’action. La terminologie locale modifie aussi les preuves qu’un réviseur peut inspecter. Si un système accepte une demande en langue locale mais produit le reçu directeur dans une langue étrangère, il élargit l’accès tout en réduisant le pouvoir de contestation. L’interopérabilité sans parité linguistique peut devenir une nouvelle forme de dépendance.</p>
+
+                <h2>La conformité est le primitif économique manquant</h2>
+
+                <p>Les protocoles ouverts réduisent le coût de la connexion, mais une institution a encore besoin de preuves qu’une implémentation signifie ce qu’elle affirme. La conformité transforme un protocole, qui était un document, en relation opérationnelle. Elle demande si un service publie les champs promis, si un agent respecte les limites reçues, si un reçu conserve les conditions affichées et si une correction atteint les systèmes qui ont agi sur le message initial.</p>
+
+                <p>Un test de conformité de frontière devrait exercer toute l’interaction plutôt qu’une seule réponse d’API :</p>
+
+                <ol>
+                    <li>découvrir un service et vérifier l’identité, la description de capacité, la langue et la juridiction qu’il publie ;</li>
+                    <li>construire une requête avec une finalité, une autorité, une ressource, des conditions et une expiration explicites ;</li>
+                    <li>vérifier que le système récepteur évalue la requête selon sa propre politique et renvoie un refus intelligible lorsque le périmètre ne convient pas ;</li>
+                    <li>exécuter une action permise en enregistrant l’acteur, les preuves, les changements d’état, le coût et les effets secondaires ;</li>
+                    <li>rejouer le reçu dans une autre implémentation et déterminer si les mêmes obligations et limites restent lisibles ;</li>
+                    <li>émettre une correction, une révocation ou une contestation, puis suivre les dossiers aval qui changent, restent valides ou exigent une revue humaine.</li>
+                </ol>
+
+                <p>Le test révèle la différence entre la prise en charge d’un protocole et l’interopérabilité institutionnelle. Un fournisseur peut implémenter la syntaxe d’un message tout en ignorant l’autorité portée par ses champs. Un commerçant peut accepter le jeton d’un agent tout en perdant la finalité de l’utilisateur. Un éditeur peut exposer une capacité sans préciser quelles données peuvent être réutilisées. La conformité donne aux acheteurs un moyen d’inspecter ces échecs avant qu’ils ne s’enracinent dans un workflow.</p>
+
+                <p>C’est aussi l’endroit où les organismes de standardisation et les opérateurs commerciaux se rencontrent. L’initiative du NIST relie les protocoles ouverts à la recherche sur l’identité et aux évaluations de sécurité. Le travail de la FIDO relie l’authentification aux instructions vérifiables et aux preuves de transaction. Le programme du W3C relie la découverte et le commerce à la délégation, à l’attestation, à la vérité des produits et au consentement des utilisateurs. Chaque institution approche une couche différente, mais la frontière exige leur composition. L’occasion commerciale se trouve dans cette composition et dans ses preuves, pas dans un badge isolé supplémentaire.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un plan de contrôle de la frontière protocolaire : une infrastructure qui transforme l’identité, l’autorité, la capacité, l’état, les conditions, les preuves, la juridiction et la correction en relation de conformité entre agents et institutions. Cette couche se situe entre les protocoles ouverts et l’action à conséquence. Elle se distingue d’un annuaire, d’un fournisseur d’identité, d’un rail de paiement, d’un label de provenance, d’une passerelle de modèles et d’un produit générique de gestion d’API.</p>
+
+                <ul>
+                    <li><strong>Manifestes de frontière :</strong> déclarations lisibles par machine des capacités, conditions, limites de données, langues, juridictions et autorités responsables.</li>
+                    <li><strong>Reçus de délégation et d’intention :</strong> dossiers liant l’autorisation d’une personne ou d’une institution à la finalité, au périmètre, à la durée et à l’action exacte tentée par un agent.</li>
+                    <li><strong>Harnais de conformité :</strong> environnements de test comparant les implémentations entre protocoles, langues, moteurs de politique et transitions d’état.</li>
+                    <li><strong>Courtiers de politique sémantique :</strong> couches de traduction et de politique qui préservent la portée des permissions, refus, prix, consentements et recours entre vocabulaires institutionnels.</li>
+                    <li><strong>Rails de correction et de litige :</strong> systèmes qui conservent les preuves initiales, acheminent une contestation, émettent un recours et indiquent quelles actions aval doivent être réexaminées.</li>
+                </ul>
+
+                <p>La souscription peut commencer par des preuves pratiques. Un service peut-il montrer ce qu’un agent était autorisé à faire avant l’action ? L’agent peut-il prouver quelle autorité il transportait et quelle interprétation il a utilisée ? Deux implémentations peuvent-elles produire des reçus qu’un réviseur indépendant lit de la même manière ? Un utilisateur travaillant dans une langue locale peut-il inspecter et contester les mêmes conditions qu’un opérateur anglophone ? Un fournisseur peut-il changer de runtime sans perdre l’historique des engagements et des corrections ?</p>
+
+                <p>Les mesures utiles comprennent la part des champs de frontière dotés d’un responsable explicite, la réussite de la relecture des reçus entre implémentations, le délai de détection d’un conflit d’autorité, la parité linguistique des termes à fort enjeu, la couverture de propagation des corrections, la précision des refus et la part des actions à conséquence soutenues par une chaîne complète de preuves. Ces indicateurs attachent le capital à une capacité opérationnelle. Ils montrent si un protocole constitue un véritable rail institutionnel ou seulement une promesse de compatibilité.</p>
+
+                <h2>Construire le traité avant d’élargir le mandat</h2>
+
+                <p>Une institution peut commencer avec un échange borné : un achat, une soumission de recherche, une demande d’information publique, une consultation de catalogue ou une mise à jour contrôlée d’un dossier. Définissez les parties, la capacité, la finalité, la langue, l’autorité, les conditions, les preuves, l’expiration et le recours. Écrivez les tests de conformité avant de connecter davantage d’agents. Incluez un refus, un cas de traduction, un changement d’état et un litige exigeant un jugement humain.</p>
+
+                <p>Mettez ensuite la frontière sous pression. Changez la version du produit. Retirez une permission. Faites renvoyer par le fournisseur un statut inhabituel. Présentez les mêmes conditions dans une autre langue. Rejouez le reçu dans une seconde implémentation. Révoquez la délégation après la requête mais avant son achèvement. L’institution doit pouvoir dire ce que l’agent savait, ce qu’il avait le droit de faire, ce qui a changé et quel recours demeure disponible.</p>
+
+                <p>La question profonde est politique autant que technique. Un protocole détermine quelles catégories deviennent visibles au moment de l’échange. Si les institutions africaines dépendent d’interfaces dont le vocabulaire, les listes de confiance et les chemins de correction sont contrôlés ailleurs, elles peuvent participer à l’économie agentique sans pouvoir en définir les conditions. La souveraineté exige davantage qu’un déploiement local. Elle exige la capacité d’écrire le contrat de frontière, d’en tester l’interprétation et de le réparer lorsque la machine transporte un sens au-delà d’une frontière.</p>
+
+                <p>Une interface est un traité lorsqu’elle rend la relation inspectable pour les deux parties. L’avenir appartiendra aux systèmes capables de se découvrir, d’agir dans une autorité déclarée, de préserver les preuves et de corriger le dossier sans demander à un fournisseur unique d’arbitrer chaque désaccord. C’est l’infrastructure qu’il faut construire à la lisière du Web agentique.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mise à jour du 14 août 2026). Décrit les standards pilotés par l’industrie, les protocoles communautaires, la recherche sur l’authentification et l’identité des agents et les évaluations de sécurité comme des piliers d’agents fiables et interopérables.</a></li>
+                    <li><a href="https://www.w3.org/2026/ecommerce-agents/agenda.html" target="_blank" rel="noopener">W3C, agenda de l’« Workshop: E-Commerce for humans and AI Agents » (8–9 septembre 2026). Recense des sessions sur l’UCP, la découverte des capacités, la délégation, l’attestation, l’autorisation structurée, l’identité des produits, les surfaces éditoriales pour agents et l’identité agentique.</a></li>
+                    <li><a href="https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/" target="_blank" rel="noopener">FIDO Alliance, « FIDO Alliance to Develop Standards for Trusted AI Agent Interactions » (2026). Décrit les travaux sur les instructions vérifiables des utilisateurs, l’authentification des agents et les standards qui transportent l’intention de l’utilisateur, l’identité de l’agent et les preuves de transaction pendant tout le cycle de vie.</a></li>
+                    <li><a href="https://aboutus.godaddy.net/newsroom/news-releases/press-release-details/2026/Infoblox-and-GoDaddy-Support-Open-Standards-for-AI-Agent-Discovery-Identity-and-Verification-2026-0acKMntvOC/default.aspx" target="_blank" rel="noopener">Infoblox et GoDaddy, « Support Open Standards for AI Agent Discovery, Identity and Verification » (14 mai 2026). Décrit les approches complémentaires DNS-AID et Agent Name Service pour les métadonnées découvrables, le nommage, l’identité et la vérification sur une infrastructure fédérée.</a></li>
+                    <li><a href="https://www.mastercard.com/us/en/news-and-trends/stories/2026/agentic-commerce-identity-know-your-agent.html" target="_blank" rel="noopener">Mastercard, « Who’s behind the AI agent? Solving the identity challenge in agentic commerce » (2026). Décrit des jetons know-your-agent qui relient un agent à la personne qu’il représente et à une autorité de paiement bornée aux frontières des commerçants.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
