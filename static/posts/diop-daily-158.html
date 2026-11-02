@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Long-Running Task Needs a Curfew — Diop Research</title>
+    <meta name="description" content="Long-running agents need authority that expires, renews, narrows, and revokes while work is still in motion. The investable layer is a live authority lease: a temporal control plane for delegated action across tasks, providers, and institutions."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="5.64" x2="18.36" y2="4.22"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry158">Diop Daily #158 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 2, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>temporal authority · delegated action · agent governance</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Long-Running Task Needs a Curfew</h1>
+
+                <p><em>Field note, November 2, 2026.</em> An agent that works for ten seconds and an agent that works for ten hours do not hold the same authority, even when they began with the same instruction. Time changes the surrounding facts: prices move, records are corrected, credentials are revoked, people withdraw consent, tools change their behavior, and the institution’s own policy may be updated while the task is still alive.</p>
+
+                <p>Long-running autonomy therefore needs a temporal control surface. The agent should receive an authority lease that states what it may do, for whom, under which conditions, until when, and what must happen when the lease expires or the environment changes. This is a different problem from proving identity at the door. It concerns the life of delegated authority after the door has opened.</p>
+
+                <p>Recent public work makes this requirement visible. NIST’s October 27 design tenets for agent identity call for distinct agent identification, linked delegation with attenuated scope, zero standing privilege, and short-lived, dynamic, revocable authorization. The W3C’s October analysis of the Web in the AI era treats consent duration, secondary use, privacy, and user control as questions that follow agents across sites, sessions, and memory. Google’s Web Bot Auth guidance describes signed requests and points to validation inside an expiry window, while Google’s A2A design includes long-running tasks, state updates, and human involvement across different agents.</p>
+
+                <blockquote>
+                    <p>Authority that cannot age, narrow, or be withdrawn is a permanent claim disguised as a temporary instruction.</p>
+                </blockquote>
+
+                <h2>Delegation has a clock</h2>
+
+                <p>Most authorization systems still imagine a grant as a binary event. A person or institution authorizes an actor, the actor receives a token, and the system proceeds until the token is rejected. That model fits a short request. It becomes fragile when an agent keeps working while the world moves around it.</p>
+
+                <p>A research agent may begin with permission to access a dataset, then continue after the owner changes the sharing rule. A purchasing agent may receive a budget before a supplier changes the price or a currency restriction. A public-service agent may start a case while a policy is being revised. A multi-agent task may delegate a subtask to a specialist whose authority should be narrower than the authority of the agent that hired it. In each case, the original grant is only the first state of a relationship.</p>
+
+                <p>NIST’s proposed tenets give this relationship a useful grammar. The agent has a distinct identity, the delegation chain remains linked, downstream authority attenuates, privileges are acquired just in time, and access can be revoked when context or risk changes. These are design directions rather than a finished universal standard. They nevertheless identify the properties that a serious runtime must expose.</p>
+
+                <p>A live authority lease should carry at least:</p>
+
+                <ul>
+                    <li><strong>Principal and purpose:</strong> the person, institution, or public authority represented, together with the bounded task the agent was asked to perform;</li>
+                    <li><strong>Scope:</strong> the records, tools, amounts, recipients, languages, jurisdictions, and effects covered by the grant;</li>
+                    <li><strong>Time conditions:</strong> issue time, expiry time, renewal rule, maximum duration, and the clock used to judge validity;</li>
+                    <li><strong>Context conditions:</strong> the policy version, provider, environment, risk level, and facts that must remain true while the task runs;</li>
+                    <li><strong>Delegation limits:</strong> the rights that a sub-agent may inherit, the rights that must remain with a human, and the chain that makes each handoff attributable;</li>
+                    <li><strong>Revocation and receipt:</strong> the mechanism that stops the lease, the evidence of when the stop took effect, and the record of actions completed before and after it.</li>
+                </ul>
+
+                <p>The lease gives the institution a boundary for interrupting, inspecting, and repairing the relationship before a stale authorization becomes an irreversible effect. Its value lies in control over the relationship, rather than a promise that the agent will behave well.</p>
+
+                <h2>Expiry is a safety event, not a clock setting</h2>
+
+                <p>Expiry is often implemented as a timestamp hidden inside a credential library. That is too small a conception. When a lease expires, the runtime must decide whether to stop, ask for renewal, reduce the task to a safer scope, return the work for human review, or preserve a partial result with an explicit status.</p>
+
+                <p>Consider a long-running procurement task. The agent has searched suppliers, assembled a comparison, and is waiting for confirmation from a remote service. During the wait, a product is withdrawn, the approved budget changes, or the principal’s mandate is revoked. A runtime that treats the original token as sufficient may complete a purchase that was valid only under the earlier facts. A runtime with temporal governance rechecks the lease at the point of effect and records the decision.</p>
+
+                <p>Google’s Web Bot Auth documentation offers a modest but important example of this logic. It describes cryptographically signed requests, yet keeps the protocol experimental and recommends existing IP and user-agent checks alongside it. It also notes that latency-sensitive systems can respond before validation completes and apply sanctions within the signature’s expiry window. The lesson is architectural: a credential is evaluated over time, and the system needs a policy for what happens when evidence arrives after the first response.</p>
+
+                <p>Temporal governance should distinguish at least four states:</p>
+
+                <ol>
+                    <li><strong>Active:</strong> the lease is valid and the current context remains inside its declared conditions;</li>
+                    <li><strong>Stale:</strong> the clock or an important context field has changed, so the agent may preserve work but cannot create a new consequential effect;</li>
+                    <li><strong>Suspended:</strong> a human, policy engine, or upstream revocation has paused the task while evidence is reviewed;</li>
+                    <li><strong>Terminated:</strong> the lease is closed, downstream authority is withdrawn, and the runtime records the final state and any required remedy.</li>
+                </ol>
+
+                <p>These states make time legible to operators. They also prevent a dangerous category error: treating a completed computation as proof that a later action remains authorized. The work may be technically finished while its permission has expired.</p>
+
+                <h2>Long-running tasks turn handoffs into renewal events</h2>
+
+                <p>Google’s A2A design treats a task as a lifecycle. Agents can discover capabilities, exchange messages and artifacts, report state, and support work that lasts hours or days with people in the loop. That architecture expands the value of delegation while exposing its temporal difficulty. Each handoff can introduce a new provider, environment, jurisdiction, or interpretation of the original task.</p>
+
+                <p>A handoff should therefore be treated as a renewal boundary. The receiving agent should obtain a scoped lease that states the artifact it is expected to produce, the evidence it may use, the tools it may call, the time available, and the authority it cannot inherit. The sender should receive a receipt that says whether the handoff was accepted, narrowed, suspended, or refused.</p>
+
+                <p>This rule protects the institution’s meaning as work travels. A research agent may delegate translation without delegating the right to alter a citation. A commerce agent may delegate inventory lookup without delegating the right to commit a purchase. An African archive may allow a classification service to describe an object while retaining local authority over names, access conditions, and publication. The handoff carries work; the lease carries the boundary.</p>
+
+                <p>For institutions operating across multiple languages and uneven connectivity, the time record must be understandable locally. A renewal written only as an opaque vendor event cannot support a public dispute or an internal audit. The institution needs to know which authority was active, when it changed, what the agent did under each state, and which operator can reopen the case. Sovereignty includes the ability to reconstruct the life of a permission.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is a live authority lease plane: infrastructure that issues, observes, renews, narrows, suspends, and revokes delegated authority while an agent task is in motion. It sits between identity and execution. It is distinct from an identity provider, a one-time admission gateway, a task protocol, a model credential, and a generic secrets manager.</p>
+
+                <ul>
+                    <li><strong>Lease registries:</strong> records of principals, purposes, scopes, expiries, renewals, policy versions, and responsible operators;</li>
+                    <li><strong>Runtime recheck services:</strong> controls that evaluate time, context, risk, and revocation before each consequential tool call or external effect;</li>
+                    <li><strong>Delegation attenuators:</strong> systems that issue narrower authority to sub-agents and prove that downstream actors cannot claim more than their parent;</li>
+                    <li><strong>Renewal and suspension workflows:</strong> interfaces that route stale tasks to a human, preserve partial work, and record the decision to continue, narrow, or stop;</li>
+                    <li><strong>Revocation propagation:</strong> infrastructure that carries a withdrawal across providers, queues, caches, task graphs, and in-flight handoffs;</li>
+                    <li><strong>Temporal conformance tests:</strong> test suites that verify expiry, clock drift, delayed validation, provider substitution, intermittent connectivity, and recovery after a revoked permission.</li>
+                </ul>
+
+                <p>Underwriting should begin with the task’s boundary conditions. How many high-consequence actions are protected by a live recheck rather than an initial token? How quickly does revocation reach every active worker? What happens to work completed under a lease that later becomes stale? Can a second operator reconstruct the authority state at the moment of action? Does the system preserve the local language and jurisdiction of the mandate? Can an institution export its lease history when it changes providers?</p>
+
+                <p>These measures reveal the difference between a short-lived credential and a temporal control plane. A credential can expire while the task continues blindly. A lease plane makes expiry an operational decision with a visible owner, a safe default, and a recoverable record. That capability reduces the cost of granting agents more responsibility because the institution can bound the time during which an error may compound.</p>
+
+                <h2>Build the curfew before granting the night</h2>
+
+                <p>An institution can begin with one task that lasts long enough for conditions to change: a procurement comparison, a research review, a public-information case, or a cross-system data transfer. Define the principal, purpose, scope, maximum duration, renewal authority, refusal state, and record of completion. Then introduce pressure: delay the tool response, change the policy version, revoke one permission, alter the price, remove the provider, and interrupt the network.</p>
+
+                <p>The test passes when a second operator can state what authority existed at each moment, why the agent was allowed to continue, which effect was prevented after expiry, and how the institution can recover the work without restoring the revoked power. That is the practical meaning of a curfew. The agent may work late, but it must never mistake endurance for permission.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems" target="_blank" rel="noopener">National Institute of Standards and Technology, “Design Tenets for Agent Identity Management Systems” (October 27, 2026). Proposes distinct agent identity, linked delegation with attenuation, zero standing privilege, and short-lived, dynamic, revocable authorization as design tenets for agentic identity systems.</a></li>
+                    <li><a href="https://www.w3.org/news/2026/w3c-and-the-state-of-the-web-in-the-ai-era/" target="_blank" rel="noopener">W3C, “W3C and the State of the Web in the AI Era” (published October 21, 2026). Identifies consent duration, secondary use, privacy, observability, delegation, and user control as questions raised when agents carry data across sites, sessions, and memory.</a></li>
+                    <li><a href="https://developers.google.com/crawling/docs/crawlers-fetchers/web-bot-auth" target="_blank" rel="noopener">Google for Developers, “Authenticate requests with Web Bot Auth (experimental)” (updated October 13, 2026). Describes cryptographically signed agent requests, the protocol’s experimental status, continued reliance on existing verification signals, and validation within an expiry window.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/" target="_blank" rel="noopener">Google Developers Blog, “Announcing the Agent2Agent Protocol (A2A)” (April 9, 2025). Describes cross-vendor agent collaboration, authentication and authorization, long-running tasks, state updates, capability discovery, and task artifacts.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Une tâche longue a besoin d’un couvre-feu</h1>
+
+                <p><em>Note de terrain, 2 novembre 2026.</em> Un agent qui travaille dix secondes et un agent qui travaille dix heures ne détiennent pas la même autorité, même s’ils ont commencé avec la même instruction. Le temps modifie les faits environnants : les prix évoluent, les dossiers sont corrigés, les identifiants sont révoqués, les personnes retirent leur consentement et la politique de l’institution peut être mise à jour pendant que la tâche est encore active.</p>
+
+                <p>L’autonomie de longue durée a donc besoin d’une surface de contrôle temporel. L’agent devrait recevoir un bail d’autorité indiquant ce qu’il peut faire, pour qui, dans quelles conditions, jusqu’à quel moment et ce qui doit se produire lorsque le bail expire ou que l’environnement change. Le problème diffère de la preuve d’identité à l’entrée. Il concerne la vie de l’autorité déléguée après l’ouverture de la porte.</p>
+
+                <p>Les travaux publics récents rendent cette exigence visible. Les principes de conception du NIST publiés le 27 octobre pour l’identité des agents demandent une identification distincte des agents, une délégation liée dont la portée s’atténue, un privilège permanent nul et une autorisation dynamique, de courte durée et révocable. L’analyse d’octobre du W3C sur le Web à l’ère de l’IA traite la durée du consentement, l’usage secondaire, la vie privée et le contrôle de l’utilisateur comme des questions que les agents transportent entre sites, sessions et mémoires. Le guide de Google sur Web Bot Auth décrit les requêtes signées et évoque une validation dans une fenêtre d’expiration, tandis que la conception A2A de Google inclut les tâches longues, les mises à jour d’état et l’intervention humaine entre agents différents.</p>
+
+                <blockquote>
+                    <p>Une autorité qui ne peut ni vieillir, ni se resserrer, ni être retirée est une prétention permanente déguisée en instruction temporaire.</p>
+                </blockquote>
+
+                <h2>La délégation a une horloge</h2>
+
+                <p>La plupart des systèmes d’autorisation imaginent encore la permission comme un événement binaire. Une personne ou une institution autorise un acteur, l’acteur reçoit un jeton et le système continue jusqu’au rejet du jeton. Ce modèle convient à une requête brève. Il devient fragile lorsqu’un agent poursuit son travail pendant que le monde se transforme autour de lui.</p>
+
+                <p>Un agent de recherche peut commencer avec l’autorisation d’accéder à un jeu de données, puis continuer après que le propriétaire a modifié la règle de partage. Un agent d’achat peut recevoir un budget avant qu’un fournisseur ne change le prix ou qu’une restriction monétaire n’entre en vigueur. Un agent de service public peut ouvrir un dossier alors qu’une politique est en cours de révision. Une tâche multi-agents peut déléguer un sous-travail à un spécialiste dont l’autorité devrait être plus étroite que celle de l’agent qui l’a engagé. Dans chaque cas, l’autorisation initiale n’est que le premier état d’une relation.</p>
+
+                <p>Les principes proposés par le NIST donnent à cette relation une grammaire utile. L’agent possède une identité distincte, la chaîne de délégation reste liée, l’autorité en aval s’atténue, les privilèges sont acquis juste à temps et l’accès peut être révoqué lorsque le contexte ou le risque change. Il s’agit de directions de conception, non d’un standard universel achevé. Elles identifient néanmoins les propriétés qu’un runtime sérieux doit rendre visibles.</p>
+
+                <p>Un bail d’autorité actif devrait porter au moins :</p>
+
+                <ul>
+                    <li><strong>Mandant et finalité :</strong> la personne, l’institution ou l’autorité publique représentée, ainsi que la tâche bornée confiée à l’agent ;</li>
+                    <li><strong>Périmètre :</strong> les dossiers, outils, montants, destinataires, langues, juridictions et effets couverts par l’autorisation ;</li>
+                    <li><strong>Conditions temporelles :</strong> l’heure d’émission, l’heure d’expiration, la règle de renouvellement, la durée maximale et l’horloge utilisée pour juger la validité ;</li>
+                    <li><strong>Conditions de contexte :</strong> la version de politique, le fournisseur, l’environnement, le niveau de risque et les faits qui doivent rester vrais pendant la tâche ;</li>
+                    <li><strong>Limites de délégation :</strong> les droits qu’un sous-agent peut recevoir, ceux qui doivent rester humains et la chaîne qui rend chaque transfert attribuable ;</li>
+                    <li><strong>Révocation et reçu :</strong> le mécanisme qui arrête le bail, la preuve du moment où l’arrêt a pris effet et le dossier des actions réalisées avant et après.</li>
+                </ul>
+
+                <p>Le bail donne à l’institution une frontière pour interrompre, inspecter et réparer la relation avant qu’une autorisation obsolète ne produise un effet irréversible. Sa valeur tient au contrôle de la relation, non à une promesse de bon comportement de l’agent.</p>
+
+                <h2>L’expiration est un événement de sécurité</h2>
+
+                <p>L’expiration est souvent implémentée comme un horodatage caché dans une bibliothèque d’identifiants. Cette conception est trop étroite. Lorsque le bail expire, le runtime doit décider s’il s’arrête, demande un renouvellement, réduit la tâche à un périmètre plus sûr, renvoie le travail à une revue humaine ou conserve un résultat partiel avec un statut explicite.</p>
+
+                <p>Considérons une tâche d’achat longue. L’agent a recherché des fournisseurs, assemblé une comparaison et attend la confirmation d’un service distant. Pendant l’attente, un produit est retiré, le budget approuvé change ou le mandat du responsable est révoqué. Un runtime qui considère le jeton initial comme suffisant peut achever un achat qui n’était valable que dans les faits antérieurs. Un runtime doté d’une gouvernance temporelle réévalue le bail au point d’effet et enregistre la décision.</p>
+
+                <p>La documentation de Google sur Web Bot Auth fournit un exemple modeste mais important de cette logique. Elle décrit des requêtes signées cryptographiquement, tout en conservant le statut expérimental du protocole et en recommandant les vérifications par adresse IP et agent utilisateur en complément. Elle note aussi que les systèmes sensibles à la latence peuvent répondre avant la fin de la validation et appliquer des sanctions dans la fenêtre d’expiration de la signature. La leçon est architecturale : un justificatif est évalué dans le temps et le système doit prévoir ce qui se passe lorsque la preuve arrive après la première réponse.</p>
+
+                <p>La gouvernance temporelle devrait distinguer au moins quatre états :</p>
+
+                <ol>
+                    <li><strong>Actif :</strong> le bail est valide et le contexte actuel respecte ses conditions déclarées ;</li>
+                    <li><strong>Obsolète :</strong> l’horloge ou un champ de contexte important a changé ; l’agent peut préserver le travail, mais ne peut plus créer un nouvel effet conséquent ;</li>
+                    <li><strong>Suspendu :</strong> un humain, un moteur de politique ou une révocation en amont a mis la tâche en pause pendant l’examen des preuves ;</li>
+                    <li><strong>Terminé :</strong> le bail est clos, l’autorité en aval est retirée et le runtime enregistre l’état final ainsi que le recours nécessaire.</li>
+                </ol>
+
+                <p>Ces états rendent le temps lisible pour les opérateurs. Ils empêchent aussi une confusion dangereuse : prendre un calcul terminé pour la preuve qu’une action ultérieure reste autorisée. Le travail peut être techniquement achevé alors que sa permission a expiré.</p>
+
+                <h2>Les tâches longues transforment les transferts en renouvellements</h2>
+
+                <p>La conception A2A de Google traite la tâche comme un cycle de vie. Les agents peuvent découvrir des capacités, échanger des messages et des artefacts, signaler leur état et soutenir un travail qui dure des heures ou des jours avec des humains dans la boucle. Cette architecture élargit la valeur de la délégation tout en exposant sa difficulté temporelle. Chaque transfert peut introduire un nouveau fournisseur, un nouvel environnement, une nouvelle juridiction ou une nouvelle interprétation de la tâche initiale.</p>
+
+                <p>Un transfert devrait donc être traité comme une frontière de renouvellement. L’agent récepteur devrait obtenir un bail limité indiquant l’artefact qu’il doit produire, les preuves qu’il peut utiliser, les outils qu’il peut appeler, le temps disponible et l’autorité qu’il ne peut pas hériter. L’émetteur devrait recevoir un reçu indiquant si le transfert a été accepté, resserré, suspendu ou refusé.</p>
+
+                <p>Cette règle protège le sens de l’institution pendant le déplacement du travail. Un agent de recherche peut déléguer la traduction sans déléguer le droit de modifier une citation. Un agent commercial peut déléguer la recherche de stock sans déléguer le droit de confirmer un achat. Une archive africaine peut autoriser un service de classification à décrire un objet tout en conservant l’autorité locale sur les noms, les conditions d’accès et la publication. Le transfert porte le travail ; le bail porte la frontière.</p>
+
+                <p>Pour les institutions qui opèrent à travers plusieurs langues et une connectivité inégale, le dossier temporel doit rester compréhensible localement. Un renouvellement inscrit seulement comme événement opaque chez un fournisseur ne peut soutenir ni une contestation publique ni un audit interne. L’institution doit savoir quelle autorité était active, quand elle a changé, ce que l’agent a fait sous chaque état et quel opérateur peut rouvrir le dossier. La souveraineté inclut la capacité de reconstruire la vie d’une permission.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est le plan des baux d’autorité actifs : une infrastructure qui émet, observe, renouvelle, resserre, suspend et révoque l’autorité déléguée pendant qu’une tâche agentique est en cours. Elle se situe entre l’identité et l’exécution. Elle se distingue d’un fournisseur d’identité, d’une passerelle d’admission ponctuelle, d’un protocole de tâches, d’un justificatif de modèle et d’un gestionnaire générique de secrets.</p>
+
+                <ul>
+                    <li><strong>Registres de baux :</strong> dossiers des mandants, finalités, périmètres, expirations, renouvellements, versions de politique et opérateurs responsables ;</li>
+                    <li><strong>Services de revalidation au runtime :</strong> contrôles qui évaluent temps, contexte, risque et révocation avant chaque appel d’outil ou effet externe conséquent ;</li>
+                    <li><strong>Atténuateurs de délégation :</strong> systèmes qui délivrent une autorité plus étroite aux sous-agents et prouvent que les acteurs en aval ne peuvent pas revendiquer davantage que leur parent ;</li>
+                    <li><strong>Workflows de renouvellement et de suspension :</strong> interfaces qui acheminent les tâches obsolètes vers un humain, préservent le travail partiel et enregistrent la décision de continuer, resserrer ou arrêter ;</li>
+                    <li><strong>Propagation de la révocation :</strong> infrastructure qui transporte le retrait entre fournisseurs, files, caches, graphes de tâches et transferts en cours ;</li>
+                    <li><strong>Tests de conformité temporelle :</strong> suites qui vérifient expiration, dérive d’horloge, validation retardée, remplacement de fournisseur, connectivité intermittente et reprise après révocation.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par les conditions limites de la tâche. Combien d’actions à fort enjeu sont protégées par une revalidation active plutôt que par un jeton initial ? À quelle vitesse la révocation atteint-elle chaque opérateur actif ? Que devient le travail réalisé sous un bail qui devient ensuite obsolète ? Un second opérateur peut-il reconstruire l’état de l’autorité au moment de l’action ? Le système conserve-t-il la langue et la juridiction du mandat ? Une institution peut-elle exporter l’historique de ses baux lorsqu’elle change de fournisseur ?</p>
+
+                <p>Ces mesures révèlent la différence entre un justificatif de courte durée et un plan de contrôle temporel. Un justificatif peut expirer alors que la tâche continue aveuglément. Un plan de baux transforme l’expiration en décision opérationnelle, avec un responsable visible, un comportement sûr par défaut et un dossier récupérable. Cette capacité réduit le coût d’un élargissement de responsabilité, car l’institution peut limiter la durée pendant laquelle une erreur peut se cumuler.</p>
+
+                <h2>Construire le couvre-feu avant d’accorder la nuit</h2>
+
+                <p>Une institution peut commencer avec une tâche assez longue pour que les conditions changent : une comparaison d’achats, une revue de recherche, un dossier d’information publique ou un transfert de données entre systèmes. Définissez le mandant, la finalité, le périmètre, la durée maximale, l’autorité de renouvellement, l’état de refus et le dossier d’achèvement. Introduisez ensuite de la pression : retardez la réponse d’un outil, changez la version de politique, révoquez une permission, modifiez le prix, retirez le fournisseur et interrompez le réseau.</p>
+
+                <p>Le test réussit lorsqu’un second opérateur peut dire quelle autorité existait à chaque instant, pourquoi l’agent a pu continuer, quel effet a été empêché après l’expiration et comment l’institution peut récupérer le travail sans rétablir le pouvoir révoqué. C’est le sens pratique d’un couvre-feu. L’agent peut travailler tard, mais il ne doit jamais confondre endurance et permission.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems" target="_blank" rel="noopener">National Institute of Standards and Technology, « Design Tenets for Agent Identity Management Systems » (27 octobre 2026). Propose une identité distincte de l’agent, une délégation liée dont la portée s’atténue, un privilège permanent nul et une autorisation dynamique, de courte durée et révocable comme principes de conception des systèmes d’identité agentique.</a></li>
+                    <li><a href="https://www.w3.org/news/2026/w3c-and-the-state-of-the-web-in-the-ai-era/" target="_blank" rel="noopener">W3C, « W3C and the State of the Web in the AI Era » (publié le 21 octobre 2026). Identifie la durée du consentement, l’usage secondaire, la vie privée, l’observabilité, la délégation et le contrôle de l’utilisateur comme des questions soulevées lorsque les agents transportent des données entre sites, sessions et mémoires.</a></li>
+                    <li><a href="https://developers.google.com/crawling/docs/crawlers-fetchers/web-bot-auth" target="_blank" rel="noopener">Google for Developers, « Authenticate requests with Web Bot Auth (experimental) » (mis à jour le 13 octobre 2026). Décrit les requêtes d’agents signées cryptographiquement, le statut expérimental du protocole, le maintien des signaux de vérification existants et la validation dans une fenêtre d’expiration.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/" target="_blank" rel="noopener">Google Developers Blog, « Announcing the Agent2Agent Protocol (A2A) » (9 avril 2025). Décrit la collaboration entre agents de fournisseurs différents, l’authentification et l’autorisation, les tâches longues, les mises à jour d’état, la découverte de capacités et les artefacts de tâche.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

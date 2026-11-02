@@ -186,6 +186,7 @@
         'article.entry154':     { en: 'Diop Daily #154 — October 2026', fr: 'Diop Quotidien n°154 — Octobre 2026' },
         'article.entry155':     { en: 'Diop Daily #155 — October 2026', fr: 'Diop Quotidien n°155 — Octobre 2026' },
         'article.entry156':     { en: 'Diop Daily #156 — October 2026', fr: 'Diop Quotidien n°156 — Octobre 2026' },
+        'article.entry158':     { en: 'Diop Daily #158 — November 2026', fr: 'Diop Quotidien n°158 — Novembre 2026' },
         'article.entry157':     { en: 'Diop Daily #157 — November 2026', fr: 'Diop Quotidien n°157 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
@@ -199,6 +200,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-158': {
+        title: {
+            en: 'A Long-Running Task Needs a Curfew',
+            fr: 'Une tâche longue a besoin d’un couvre-feu'
+        },
+        excerpt: {
+            en: 'An agent working for ten seconds and one working for ten hours do not hold the same authority, even when they began with the same instruction. The investable layer is a live authority lease plane that lets institutions renew, narrow, suspend, and revoke delegated action while work is still in motion.',
+            fr: 'Un agent qui travaille dix secondes et un autre qui travaille dix heures ne détiennent pas la même autorité, même s’ils ont commencé avec la même instruction. La couche d’investissement est un plan de baux d’autorité actifs qui permet aux institutions de renouveler, resserrer, suspendre et révoquer l’action déléguée pendant que le travail est en cours.'
+        }
+    },
     'diop-daily-157': {
         title: {
             en: 'The Interface Is a Treaty',
