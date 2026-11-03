@@ -186,6 +186,7 @@
         'article.entry154':     { en: 'Diop Daily #154 — October 2026', fr: 'Diop Quotidien n°154 — Octobre 2026' },
         'article.entry155':     { en: 'Diop Daily #155 — October 2026', fr: 'Diop Quotidien n°155 — Octobre 2026' },
         'article.entry156':     { en: 'Diop Daily #156 — October 2026', fr: 'Diop Quotidien n°156 — Octobre 2026' },
+        'article.entry159':     { en: 'Diop Daily #159 — November 2026', fr: 'Diop Quotidien n°159 — Novembre 2026' },
         'article.entry158':     { en: 'Diop Daily #158 — November 2026', fr: 'Diop Quotidien n°158 — Novembre 2026' },
         'article.entry157':     { en: 'Diop Daily #157 — November 2026', fr: 'Diop Quotidien n°157 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
@@ -200,6 +201,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-159': {
+        title: {
+            en: 'The Work Must Survive the Model',
+            fr: 'Le travail doit survivre au modèle'
+        },
+        excerpt: {
+            en: 'Machine-assisted work becomes institutional infrastructure when its artifacts retain identity, inputs, transformations, permissions, correction paths, and exportability after the model call ends. The investable layer is an artifact lineage control plane that makes creative, research, software, and public work inheritable across tools and providers.',
+            fr: 'Le travail assisté par machine devient une infrastructure institutionnelle lorsque ses artefacts conservent leur identité, leurs intrants, leurs transformations, leurs permissions, leurs chemins de correction et leur portabilité après la fin de l’appel au modèle. La couche d’investissement est un plan de contrôle de la lignée des artefacts qui rend le travail créatif, scientifique, logiciel et public transmissible entre outils et fournisseurs.'
+        }
+    },
     'diop-daily-158': {
         title: {
             en: 'A Long-Running Task Needs a Curfew',

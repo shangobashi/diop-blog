@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Work Must Survive the Model — Diop Research</title>
+    <meta name="description" content="AI-assisted work becomes institutional infrastructure when its artifacts retain identity, inputs, transformations, permissions, correction paths, and exportability after the model call ends. The investable layer is an artifact lineage control plane."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet" crossorigin="anonymous"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="19.78" x2="18.36" y2="18.36"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry159">Diop Daily #159 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 3, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>artifact lineage · creative infrastructure · institutional memory</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Work Must Survive the Model</h1>
+
+                <p><em>Field note, November 3, 2026.</em> A model call can produce a useful answer in seconds and leave an institution with almost nothing it can inherit. The transcript may contain a recommendation, a design, a piece of code, a research note, or a catalogue entry, yet the organization still has to ask what the object is, which materials shaped it, who may change it, which permissions travel with it, and how another operator can reconstruct the decision months later.</p>
+
+                <p>That gap will determine whether machine-assisted work compounds. The valuable unit is the artifact that survives the model: a document, dataset, image, software change, research claim, production plan, or public record with a stable identity and a traceable history. The model is one transformation in that history. It should not be the institution’s only memory of the work.</p>
+
+                <p>Public signals now point toward this problem from different directions. OpenAI’s September case study describes a two-person touring business using ChatGPT Work to turn merchandise photographs into an inventory site and reorder plan, while scheduled reviews corrected event information across the Web. C2PA’s July implementation guide describes machine-readable source classifications, AI disclosure, localized modifications, generation inputs, ingredients, and action histories. Google’s A2A work treats agent collaboration as secure handoffs between specialized systems, while ADK Go 2.0 adds graph execution, durable state, human interruption, retries, and resumption. These are vendor and standards signals, not proof that every workflow preserves its outputs. Together they show why the artifact’s identity and lineage are becoming a systems question.</p>
+
+                <blockquote>
+                    <p>A generated answer becomes institutional work only when another person can find it, understand its history, correct it, reuse it, and carry it beyond the system that produced it.</p>
+                </blockquote>
+
+                <h2>The transcript is not the asset</h2>
+
+                <p>Chat interfaces encourage a misleading picture of production. A user asks, a model responds, and the visible exchange feels like the finished object. In practice, the response is often an intermediate material. A researcher extracts a claim and attaches sources. A designer converts a sketch into a layout. An engineer turns code suggestions into a tested change. An operator removes private data, checks a jurisdiction, records an approval, and publishes a version that other people will rely on.</p>
+
+                <p>Each transformation changes the artifact’s obligations. A paragraph copied into a report inherits the report’s citation and review requirements. An image placed in a campaign inherits rights, attribution, accessibility, and distribution conditions. A model-generated code patch inherits the repository’s tests, security policy, dependency rules, and rollback path. The artifact needs a lineage that can distinguish these states instead of flattening them into “AI assisted.”</p>
+
+                <p>C2PA provides a useful vocabulary for media and documents. Its implementation guide describes assertions for the source type of an asset, the degree of human oversight, the region affected by AI, the inputs used for generation, the ingredients included in a composition, and the actions performed during the asset’s life. The standard is focused on provenance and authenticity; it does not decide whether an asset is true, wise, lawful, or fit for a particular institution. That boundary is important. A signed history is evidence about how an object came to exist, not a substitute for judgment.</p>
+
+                <p>An artifact record should therefore answer a wider set of questions:</p>
+
+                <ul>
+                    <li><strong>Identity:</strong> which exact object or version is being discussed, and how can it be located after a move or export?</li>
+                    <li><strong>Inputs:</strong> which sources, data, prompts, references, tools, people, and permissions shaped the result?</li>
+                    <li><strong>Transformations:</strong> which model, agent, editor, translator, script, or reviewer changed the object at each stage?</li>
+                    <li><strong>Authority:</strong> who owns the result, who may reuse it, which restrictions apply, and which communities or jurisdictions must be consulted?</li>
+                    <li><strong>Correction:</strong> how can an error be challenged, repaired, propagated to derivatives, and recorded without erasing the prior state?</li>
+                    <li><strong>Portability:</strong> can the artifact and its history leave the producing tool in a form that another institution can inspect and use?</li>
+                </ul>
+
+                <p>These fields turn provenance into an operating discipline. They also protect the distinction between an output and an accomplishment. The output is a file. The accomplishment is a file that remains legible when the original model, interface, account, or operator is no longer available.</p>
+
+                <h2>Handoffs test whether the work is real</h2>
+
+                <p>Agent collaboration makes the inheritance problem harder. Google’s A2A material describes specialized agents that preserve private context, negotiate tasks, and hand work to one another. ADK Go 2.0 supplies a runtime for graphs that can pause for a person, persist state, resume after a restart, retry a node, and isolate parallel branches. Those primitives help a workflow continue, but continuation alone does not guarantee that the produced object remains understandable.</p>
+
+                <p>At every handoff, the receiving system needs more than a payload. It needs the artifact’s identity, expected form, source boundary, transformation history, current state, authority, and acceptance conditions. The sender needs a receipt that records what was transferred and what the receiver accepted. A translation agent should receive the document version and the terms it must preserve. A code agent should receive the repository state, test contract, and permitted files. A commerce agent should receive the inventory evidence and the limit on what it may order.</p>
+
+                <p>This is where institutional memory differs from a prompt library. A prompt can describe an intention; an artifact record can show what happened. A workflow can route a task; lineage can show whether the result is still the same object after routing. A provider can offer a model; the institution must retain the history that lets it judge a result after the provider changes.</p>
+
+                <p>For African archives, publishers, universities, and creative enterprises, the question has an additional dimension. A local collection can be digitized, translated, classified, and circulated through several tools while names, consent conditions, community restrictions, and language choices remain part of the object’s history. If those conditions disappear at the first handoff, the system has accelerated distribution by weakening ownership. An archive’s sovereignty depends on its ability to keep the lineage and the right to correct it.</p>
+
+                <h2>Inheritance is a measurable capability</h2>
+
+                <p>Organizations often measure AI work at the moment of generation: response time, token cost, model quality, or task completion. Those metrics matter, but they stop before the artifact enters institutional life. The harder measurement begins after the first answer.</p>
+
+                <p>A laboratory can ask how long a second operator needs to reconstruct the result from the stored evidence. A publisher can ask whether a derivative still carries the rights and source conditions of the original. A software team can ask whether a change can be replayed after the model endpoint disappears. A public institution can ask whether a correction reaches every copy that relied on the disputed record. These are costs of inheritance, and they can be observed.</p>
+
+                <p>The lineage test should include at least:</p>
+
+                <ol>
+                    <li>export the artifact and its history from the producing system;</li>
+                    <li>reconstruct the inputs, transformations, approvals, and restrictions from the exported record;</li>
+                    <li>hand the package to an operator who did not create it and ask for an independent review;</li>
+                    <li>apply a correction and trace the affected derivatives, indexes, translations, and published surfaces;</li>
+                    <li>move the package to a second tool or provider and compare the recovered meaning, permissions, and state.</li>
+                </ol>
+
+                <p>The result is not a single provenance score. It is a set of operational facts: reconstruction time, missing-field rate, correction latency, derivative coverage, rights clarity, multilingual parity, export completeness, and the percentage of high-consequence outputs with an accountable owner. These measures tell an institution whether its AI activity is building memory or merely producing disposable surface area.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is an <strong>artifact lineage control plane</strong>: infrastructure that gives machine-assisted work a stable identity, records inputs and transformations, attaches ownership and permissions, preserves state across handoffs, routes corrections, and exports an inspectable package for reuse. It sits between generation and institutional inheritance. It is distinct from a prompt repository, model gateway, workflow graph, provenance badge, digital asset manager, or ordinary document store.</p>
+
+                <ul>
+                    <li><strong>Lineage registries:</strong> systems that bind versions, ingredients, tools, agents, people, policies, and outputs into a queryable history;</li>
+                    <li><strong>Artifact packages:</strong> portable bundles containing the object, evidence, permissions, state, review record, and machine-readable relationships needed for a new operator or provider;</li>
+                    <li><strong>Correction propagation:</strong> services that find derivatives, translations, exports, and downstream decisions affected by a changed source;</li>
+                    <li><strong>Rights and jurisdiction layers:</strong> controls that preserve consent, attribution, locality, language, access restrictions, and reuse conditions through transformations;</li>
+                    <li><strong>Inheritance tests:</strong> conformance suites that measure reconstruction, handoff, export, repair, and provider substitution across real workflows.</li>
+                </ul>
+
+                <p>Underwriting should focus on retained organizational value. Can the customer identify every high-consequence artifact and its owner? Can a reviewer reconstruct the source and transformation chain without opening the original chat? Can a correction reach copies outside the producing application? Can a creator or community see which permissions travelled with an asset? Can the institution export its work when a vendor changes its interface or pricing? Can a local-language artifact preserve its governing meaning when it crosses a translation or model boundary?</p>
+
+                <p>The answers reveal a category with closer ties to durable revenue than another generation feature. Organizations will pay for work that can be audited, handed over, reused, defended, and repaired because those properties lower the cost of institutional change. In Africa, the same layer can protect archives and creative rights from becoming raw material in a foreign system whose memory cannot be inspected locally. Distribution becomes a sovereign capability when the object carries its history.</p>
+
+                <h2>Build the inheritance test before scaling production</h2>
+
+                <p>An institution can start with one recurring output that already moves between people: a research brief, a software release note, a product catalogue, a grant file, a translated publication, or a media package. Give it an identifier. Store its inputs, transformations, permissions, reviews, and derivatives together. Name the person or body that can correct it. Then export the package and ask someone outside the original workflow to reconstruct its meaning.</p>
+
+                <p>Apply pressure after the first successful run. Remove the model account. Change the provider. Translate the artifact. Revoke a source permission. Correct one factual field. Split the work between two agents. Interrupt the workflow before publication. The test passes when the institution can preserve the valid work, identify the affected derivatives, explain the authority for each transformation, and repair the record without surrendering the artifact to the original tool.</p>
+
+                <p>Machine generation becomes civilizationally useful when the work can enter memory without losing its name. The model may produce the first draft, but the institution must own the chain that lets the draft become knowledge, property, evidence, and inheritance.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/index/atv-big-air-tour" target="_blank" rel="noopener">OpenAI, “ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT” (September 2, 2026). A vendor-reported case study describing a two-person touring business using ChatGPT Work for event-information review, inventory planning, reorder recommendations, and AI-search visibility.</a></li>
+                    <li><a href="https://c2pa.org/a-new-implementation-guide-for-content-credentials/" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, “A New Implementation Guide for Content Credentials” (July 31, 2026). Describes source classification, AI disclosure, localized modifications, generation inputs, ingredients, action histories, and deployment guidance for provenance.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog, “How A2A is Building a World of Collaborative Agents” (June 18, 2026). Describes secure handoffs, private specialist context, workload distribution, and long-running collaborative agent tasks.</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog, “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026). Describes graph workflows, durable state, human interruption, resumption, retries, concurrency controls, and dynamic orchestration.</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Risk Management Framework.” Provides the Govern, Map, Measure, and Manage functions used here as a lifecycle vocabulary for ownership, reconstruction, correction, and reuse. NIST describes the framework as voluntary guidance.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Le travail doit survivre au modèle</h1>
+
+                <p><em>Note de terrain, 3 novembre 2026.</em> Un appel de modèle peut produire une réponse utile en quelques secondes et laisser à l’institution presque rien qu’elle puisse transmettre. La transcription peut contenir une recommandation, un dessin, un morceau de code, une note de recherche ou une notice de catalogue, tandis que l’organisation doit encore demander quelle est la nature de l’objet, quelles matières l’ont façonné, qui peut le modifier, quelles permissions l’accompagnent et comment un autre opérateur pourra reconstruire la décision plusieurs mois plus tard.</p>
+
+                <p>Cet écart déterminera si le travail assisté par machine se cumule. L’unité précieuse est l’artefact qui survit au modèle : un document, un jeu de données, une image, une modification logicielle, une affirmation de recherche, un plan de production ou un dossier public doté d’une identité stable et d’une histoire traçable. Le modèle constitue une transformation dans cette histoire. Il ne devrait pas être l’unique mémoire du travail pour l’institution.</p>
+
+                <p>Les signaux publics récents montrent ce problème depuis plusieurs directions. L’étude de cas publiée par OpenAI en septembre décrit une entreprise itinérante de deux personnes qui utilise ChatGPT Work pour transformer des photographies de marchandises en site d’inventaire et en plan de réapprovisionnement, tandis que des revues programmées corrigent les informations d’événements sur le Web. Le guide d’implémentation publié par la C2PA en juillet décrit des classifications lisibles par machine, la divulgation de l’usage de l’IA, la localisation des modifications, les intrants de génération, les ingrédients et l’historique des actions. Les travaux de Google sur A2A traitent la collaboration entre agents comme des transferts sécurisés entre systèmes spécialisés, tandis qu’ADK Go 2.0 ajoute l’exécution en graphe, l’état durable, l’interruption humaine, les reprises et la persistance après redémarrage. Ces signaux de fournisseurs et de standards ne prouvent pas que chaque workflow conserve ses sorties. Ensemble, ils montrent pourquoi l’identité et la lignée de l’artefact deviennent une question de systèmes.</p>
+
+                <blockquote>
+                    <p>Une réponse générée devient un travail institutionnel lorsqu’une autre personne peut la retrouver, comprendre son histoire, la corriger, la réutiliser et la porter au-delà du système qui l’a produite.</p>
+                </blockquote>
+
+                <h2>La transcription n’est pas l’actif</h2>
+
+                <p>Les interfaces conversationnelles encouragent une image trompeuse de la production. Une personne demande, un modèle répond et l’échange visible semble être l’objet final. En pratique, la réponse constitue souvent une matière intermédiaire. Un chercheur en extrait une affirmation et lui associe des sources. Un designer transforme une esquisse en mise en page. Un ingénieur convertit des suggestions de code en modification testée. Un opérateur retire les données privées, vérifie une juridiction, enregistre une approbation et publie une version sur laquelle d’autres personnes s’appuieront.</p>
+
+                <p>Chaque transformation modifie les obligations de l’artefact. Un paragraphe copié dans un rapport reçoit les exigences de citation et de revue du rapport. Une image placée dans une campagne reçoit des conditions de droits, d’attribution, d’accessibilité et de diffusion. Un correctif logiciel généré par un modèle reçoit les tests du dépôt, la politique de sécurité, les règles de dépendance et le chemin de retour arrière. L’artefact a besoin d’une lignée capable de distinguer ces états au lieu de les aplatir dans l’expression « assisté par l’IA ».</p>
+
+                <p>La C2PA fournit un vocabulaire utile pour les médias et les documents. Son guide d’implémentation décrit des assertions relatives au type de source d’un actif, au degré de supervision humaine, à la région touchée par l’IA, aux intrants utilisés pour la génération, aux ingrédients d’une composition et aux actions accomplies pendant la vie de l’actif. Le standard porte sur la provenance et l’authenticité ; il ne décide pas si un actif est vrai, sage, légal ou adapté à une institution donnée. Cette limite est importante. Une histoire signée constitue une preuve sur la manière dont un objet est apparu, non un substitut au jugement.</p>
+
+                <p>Un dossier d’artefact devrait donc répondre à un ensemble plus large de questions :</p>
+
+                <ul>
+                    <li><strong>Identité :</strong> quel objet ou quelle version exacte est discuté, et comment le retrouver après un déplacement ou une exportation ?</li>
+                    <li><strong>Intrants :</strong> quelles sources, données, instructions, références, outils, personnes et permissions ont façonné le résultat ?</li>
+                    <li><strong>Transformations :</strong> quel modèle, agent, éditeur, traducteur, script ou réviseur a modifié l’objet à chaque étape ?</li>
+                    <li><strong>Autorité :</strong> qui possède le résultat, qui peut le réutiliser, quelles restrictions s’appliquent et quelles communautés ou juridictions doivent être consultées ?</li>
+                    <li><strong>Correction :</strong> comment contester une erreur, la réparer, la propager aux dérivés et l’inscrire sans effacer l’état antérieur ?</li>
+                    <li><strong>Portabilité :</strong> l’artefact et son histoire peuvent-ils sortir de l’outil producteur sous une forme qu’une autre institution peut inspecter et utiliser ?</li>
+                </ul>
+
+                <p>Ces champs transforment la provenance en discipline opérationnelle. Ils protègent aussi la distinction entre une sortie et un accomplissement. La sortie est un fichier. L’accomplissement est un fichier qui reste lisible lorsque le modèle, l’interface, le compte ou l’opérateur d’origine n’est plus disponible.</p>
+
+                <h2>Les transferts vérifient la réalité du travail</h2>
+
+                <p>La collaboration entre agents rend le problème de l’héritage plus difficile. Les documents de Google sur A2A décrivent des agents spécialisés qui préservent un contexte privé, négocient des tâches et se transmettent le travail. ADK Go 2.0 fournit un runtime pour des graphes capables de se mettre en pause pour une personne, de conserver leur état, de reprendre après un redémarrage, de réessayer un nœud et d’isoler des branches parallèles. Ces primitives aident un workflow à continuer, mais la continuité ne garantit pas à elle seule que l’objet produit reste compréhensible.</p>
+
+                <p>À chaque transfert, le système récepteur a besoin de plus qu’un paquet de données. Il lui faut l’identité de l’artefact, la forme attendue, la frontière des sources, l’historique des transformations, l’état courant, l’autorité et les conditions d’acceptation. L’émetteur a besoin d’un reçu indiquant ce qui a été transféré et ce que le récepteur a accepté. Un agent de traduction devrait recevoir la version du document et les termes qu’il doit préserver. Un agent de code devrait recevoir l’état du dépôt, le contrat de test et les fichiers autorisés. Un agent commercial devrait recevoir les preuves d’inventaire et la limite de ce qu’il peut commander.</p>
+
+                <p>C’est ici que la mémoire institutionnelle se distingue d’une bibliothèque d’instructions. Une instruction peut décrire une intention ; un dossier d’artefact peut montrer ce qui s’est produit. Un workflow peut acheminer une tâche ; la lignée peut montrer si le résultat reste le même objet après son acheminement. Un fournisseur peut proposer un modèle ; l’institution doit conserver l’histoire qui lui permet de juger le résultat après un changement de fournisseur.</p>
+
+                <p>Pour les archives, éditeurs, universités et entreprises créatives africaines, la question possède une dimension supplémentaire. Une collection locale peut être numérisée, traduite, classifiée et diffusée par plusieurs outils tandis que les noms, les conditions de consentement, les restrictions communautaires et les choix linguistiques restent inscrits dans l’histoire de l’objet. Si ces conditions disparaissent au premier transfert, le système accélère la diffusion en affaiblissant la propriété. La souveraineté d’une archive dépend de sa capacité à conserver la lignée et le droit de la corriger.</p>
+
+                <h2>L’héritage est une capacité mesurable</h2>
+
+                <p>Les organisations mesurent souvent le travail de l’IA au moment de la génération : temps de réponse, coût en tokens, qualité du modèle ou achèvement de la tâche. Ces mesures comptent, mais elles s’arrêtent avant l’entrée de l’artefact dans la vie institutionnelle. La mesure plus difficile commence après la première réponse.</p>
+
+                <p>Un laboratoire peut demander combien de temps un second opérateur met à reconstruire le résultat à partir des preuves conservées. Un éditeur peut demander si un dérivé porte encore les droits et les conditions de source de l’original. Une équipe logicielle peut demander si une modification peut être rejouée après la disparition du point d’accès au modèle. Une institution publique peut demander si une correction atteint chaque copie qui s’appuyait sur le dossier contesté. Ce sont des coûts d’héritage, et ils peuvent être observés.</p>
+
+                <p>Le test de lignée devrait comprendre au moins :</p>
+
+                <ol>
+                    <li>exporter l’artefact et son histoire depuis le système producteur ;</li>
+                    <li>reconstruire les intrants, les transformations, les approbations et les restrictions à partir du dossier exporté ;</li>
+                    <li>transmettre le paquet à un opérateur qui ne l’a pas créé et lui demander une revue indépendante ;</li>
+                    <li>appliquer une correction et suivre les dérivés, index, traductions et surfaces publiées concernés ;</li>
+                    <li>déplacer le paquet vers un second outil ou fournisseur et comparer le sens, les permissions et l’état récupérés.</li>
+                </ol>
+
+                <p>Le résultat n’est pas un score unique de provenance. C’est un ensemble de faits opérationnels : temps de reconstruction, taux de champs manquants, latence de correction, couverture des dérivés, clarté des droits, parité linguistique, complétude de l’export et pourcentage de sorties à fort enjeu dotées d’un responsable identifiable. Ces mesures disent à l’institution si son activité d’IA construit une mémoire ou produit seulement une surface jetable.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de contrôle de la lignée des artefacts</strong> : une infrastructure qui donne au travail assisté par machine une identité stable, enregistre les intrants et les transformations, attache la propriété et les permissions, préserve l’état lors des transferts, achemine les corrections et exporte un paquet inspectable pour la réutilisation. Cette couche se situe entre la génération et l’héritage institutionnel. Elle se distingue d’un dépôt d’instructions, d’une passerelle de modèles, d’un graphe de workflow, d’un badge de provenance, d’un gestionnaire d’actifs numériques ou d’un simple espace documentaire.</p>
+
+                <ul>
+                    <li><strong>Registres de lignée :</strong> systèmes qui relient les versions, ingrédients, outils, agents, personnes, politiques et sorties dans une histoire interrogeable ;</li>
+                    <li><strong>Paquets d’artefacts :</strong> ensembles portables contenant l’objet, les preuves, les permissions, l’état, la revue et les relations lisibles par machine nécessaires à un nouvel opérateur ou fournisseur ;</li>
+                    <li><strong>Propagation des corrections :</strong> services qui trouvent les dérivés, traductions, exports et décisions en aval touchés par une source modifiée ;</li>
+                    <li><strong>Couches de droits et de juridiction :</strong> contrôles qui préservent consentement, attribution, localité, langue, restrictions d’accès et conditions de réutilisation à travers les transformations ;</li>
+                    <li><strong>Tests d’héritage :</strong> suites de conformité qui mesurent reconstruction, transfert, export, réparation et substitution de fournisseur dans des workflows réels.</li>
+                </ul>
+
+                <p>La souscription devrait se concentrer sur la valeur organisationnelle conservée. Le client peut-il identifier chaque artefact à fort enjeu et son responsable ? Un réviseur peut-il reconstruire la chaîne des sources et des transformations sans ouvrir la conversation originale ? Une correction peut-elle atteindre les copies situées hors de l’application productrice ? Un créateur ou une communauté peut-il voir quelles permissions ont voyagé avec l’actif ? L’institution peut-elle exporter son travail lorsqu’un fournisseur modifie son interface ou ses prix ? Un artefact en langue locale peut-il conserver son sens directeur lorsqu’il traverse une frontière de traduction ou de modèle ?</p>
+
+                <p>Les réponses révèlent une catégorie plus proche du revenu durable qu’une nouvelle fonction de génération. Les organisations paieront pour un travail qui peut être audité, transmis, réutilisé, défendu et réparé, parce que ces propriétés réduisent le coût du changement institutionnel. En Afrique, cette même couche peut protéger les archives et les droits créatifs contre leur transformation en matière première d’un système étranger dont la mémoire reste impossible à inspecter localement. La distribution devient une capacité souveraine lorsque l’objet transporte son histoire.</p>
+
+                <h2>Construire le test d’héritage avant d’industrialiser</h2>
+
+                <p>Une institution peut commencer par une sortie récurrente qui circule déjà entre plusieurs personnes : une note de recherche, une note de version logicielle, un catalogue de produits, un dossier de subvention, une publication traduite ou un paquet média. Donnez-lui un identifiant. Conservez ensemble ses intrants, transformations, permissions, revues et dérivés. Nommez la personne ou l’organisme qui peut le corriger. Exportez ensuite le paquet et demandez à quelqu’un qui ne connaît pas le workflow d’origine d’en reconstruire le sens.</p>
+
+                <p>Exercez une pression après la première réussite. Retirez le compte du modèle. Changez de fournisseur. Traduisez l’artefact. Révoquez la permission d’une source. Corrigez un champ factuel. Divisez le travail entre deux agents. Interrompez le workflow avant la publication. Le test réussit lorsque l’institution peut préserver le travail valide, identifier les dérivés touchés, expliquer l’autorité de chaque transformation et réparer le dossier sans abandonner l’artefact à l’outil d’origine.</p>
+
+                <p>La génération machine devient utile à la civilisation lorsque le travail peut entrer dans la mémoire sans perdre son nom. Le modèle peut produire la première version, mais l’institution doit posséder la chaîne qui permet à cette version de devenir connaissance, propriété, preuve et héritage.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://openai.com/index/atv-big-air-tour" target="_blank" rel="noopener">OpenAI, « ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT » (2 septembre 2026). Étude de cas publiée par un fournisseur décrivant l’usage de ChatGPT Work par une entreprise itinérante de deux personnes pour la revue d’informations d’événements, la planification d’inventaire, les recommandations de réapprovisionnement et la visibilité dans la recherche par IA.</a></li>
+                    <li><a href="https://c2pa.org/a-new-implementation-guide-for-content-credentials/" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, « A New Implementation Guide for Content Credentials » (31 juillet 2026). Décrit la classification des sources, la divulgation de l’IA, la localisation des modifications, les intrants de génération, les ingrédients, l’historique des actions et des conseils de déploiement pour la provenance.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog, « How A2A is Building a World of Collaborative Agents » (18 juin 2026). Décrit les transferts sécurisés, le contexte privé des spécialistes, la distribution des charges et les tâches agentiques collaboratives de longue durée.</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog, « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026). Décrit les workflows en graphe, l’état durable, l’interruption humaine, la reprise, les réessais, les contrôles de concurrence et l’orchestration dynamique.</a></li>
+                    <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Risk Management Framework ». Fournit les fonctions Govern, Map, Measure et Manage utilisées ici comme vocabulaire de cycle de vie pour la propriété, la reconstruction, la correction et la réutilisation. Le NIST présente ce cadre comme une orientation volontaire.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
