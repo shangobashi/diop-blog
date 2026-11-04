@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Give the Human a Margin of Error — Diop Research</title>
+    <meta name="description" content="Autonomous systems need explicit uncertainty budgets that decide when a task can proceed, when evidence must be gathered, and when a person must intervene. The investable layer is an uncertainty-control plane."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="4.22"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry160">Diop Daily #160 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 4, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>uncertainty budgets · human oversight · institutional capacity</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Give the Human a Margin of Error</h1>
+
+                <p><em>Field note, November 4, 2026.</em> An autonomous system can make a recommendation faster than an institution can decide whether the recommendation deserves authority. The important bottleneck is the gap between probabilistic output and accountable judgment. Systems that close this gap will determine whether agentic software becomes institutional capacity or merely a faster way to distribute uncertainty.</p>
+
+                <p>Every consequential workflow needs an uncertainty budget. The budget states which errors are tolerable, which evidence is required, when the agent may proceed, when it must gather more information, and when a qualified person must intervene. It gives the institution a way to spend automation where the cost of being wrong is bounded while reserving human authority for decisions whose consequences, ambiguity, or reversibility demand it.</p>
+
+                <p>Recent public signals point toward this design. NIST’s October tenets for agent identity systems call for risk thresholds that trigger human review, escalation to the correct authority, sufficient context for the reviewer, and protection against consent fatigue. Google’s ADK for Go 2.0 makes human-in-the-loop interaction a native graph primitive: a workflow can pause, persist its state, receive an answer later, and resume. A GS1 Canada presentation at a W3C workshop places a human surface around review, approval, and recovery while an agent handles discovery and basket construction. These sources address identity, runtime design, and commerce. Their common lesson is that uncertainty must be routed before it becomes an irreversible institutional act.</p>
+
+                <blockquote>
+                    <p>Autonomy earns its range from the institution’s ability to name the errors it will accept and the errors it will never delegate.</p>
+                </blockquote>
+
+                <h2>Uncertainty has to become an object</h2>
+
+                <p>Model confidence is only one signal inside a decision. A system can be confident because the prompt is familiar, while the source is stale, the translation is weak, the mandate is ambiguous, or the action affects a person who cannot easily appeal. The institution’s uncertainty is therefore wider than the model’s probability estimate.</p>
+
+                <p>A useful uncertainty record should distinguish at least five conditions:</p>
+
+                <ul>
+                    <li><strong>Epistemic uncertainty:</strong> the available evidence is incomplete, contradictory, or too old for the proposed action.</li>
+                    <li><strong>Interpretive uncertainty:</strong> the request, language, category, or local meaning admits more than one reasonable reading.</li>
+                    <li><strong>Authority uncertainty:</strong> the system cannot establish who may authorize the action or whether the delegation still applies.</li>
+                    <li><strong>Consequence uncertainty:</strong> the downstream effects, affected parties, cost, or reversibility are unclear.</li>
+                    <li><strong>Operational uncertainty:</strong> the provider, tool, network, policy version, or execution state may change before the action completes.</li>
+                </ul>
+
+                <p>These forms of uncertainty require different responses. Missing evidence can call for retrieval. Ambiguous meaning can call for a local-language reviewer. Unclear authority can require a mandate check. A high-consequence action can require approval even when the model is confident. A changing runtime can require a fresh policy decision before execution. A single confidence score cannot express these distinctions.</p>
+
+                <p>This is the first architectural separation: the model proposes an interpretation, while the control plane determines which uncertainty is present and what the institution should do about it. NIST’s design tenets make the same separation in security terms by placing policy outside the reasoning engine and requiring deterministic access decisions. The principle applies to review as well. A model can help explain a case; it should not decide the threshold that makes its own explanation sufficient.</p>
+
+                <h2>A trigger is a contract</h2>
+
+                <p>A human-review trigger becomes useful when it describes the decision that the human is being asked to make. “Please check” is a weak escalation. It transfers anxiety without transferring a bounded question. A strong trigger carries the mandate, proposed action, evidence, uncertainty type, risk threshold, deadline, and available responses.</p>
+
+                <p>The reviewer should be able to choose among actions such as approve, approve with a narrower scope, request evidence, send the case to another authority, preserve the work without acting, or reject the proposal. Each choice should produce a durable record that the agent and the institution can interpret later. That record turns review from a private interruption into a reusable governance signal.</p>
+
+                <p>NIST’s October guidance is precise on this point. Organizations should define the thresholds and tolerances that initiate review, route the escalation to the correct authority, provide enough information for the decision, and account for consent fatigue when approvals arrive too frequently. The design direction is valuable because it treats human attention as a governed resource rather than a universal safety button.</p>
+
+                <p>Google’s graph runtime supplies the execution primitive for the same idea. Any node can pause a workflow, persist its state, wait for a human response, and resume through handoff or re-entry. The runtime makes the waiting durable, but the institution still has to define the trigger, the reviewer, the evidence, and the meaning of the response. Software can preserve a question. Governance must decide which question deserves a person’s time.</p>
+
+                <h2>Approval can become a learned failure</h2>
+
+                <p>Human review is often praised as a safeguard without asking whether the review process can remain attentive. A queue full of poorly framed escalations produces a predictable result: people approve to clear the screen. The reviewer is responding to a calibration failure in the system that sent the case, not committing a moral failure.</p>
+
+                <p>An uncertainty-control plane should measure what happens after a trigger. Useful signals include:</p>
+
+                <ol>
+                    <li>the share of escalations that contain enough evidence for a first decision;</li>
+                    <li>the rate at which reviewers narrow, reject, or return proposals for missing context;</li>
+                    <li>the percentage of approvals later corrected, reversed, or disputed;</li>
+                    <li>the time required to route a case to an authority with the correct mandate and language capability;</li>
+                    <li>the distribution of review burden across institutions, regions, languages, and roles;</li>
+                    <li>the number of cases that remain blocked because the system has no safe default when a reviewer is unavailable.</li>
+                </ol>
+
+                <p>These measures allow a laboratory to distinguish a good autonomous decision from a lucky approval. They also expose false efficiency. A system may show a low intervention rate because its thresholds are too permissive, its reviewers are fatigued, or its consequences are difficult to observe. A high intervention rate may signal genuine ambiguity, weak retrieval, poor translation, or a model that has learned to transfer uncertainty rather than resolve it.</p>
+
+                <p>Calibration must include disagreement. If a reviewer overrides the model, the system should preserve the evidence, the reason, the authority, and the downstream result. If several reviewers disagree, their disagreement becomes a test case for policy and evaluation. Institutional learning begins when the system can ask which uncertainty was misclassified and which threshold should change.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is an <strong>uncertainty-control plane</strong>: infrastructure that classifies the kinds of uncertainty in an agent proposal, applies institutional thresholds, constructs an evidence-bearing intervention packet, routes it to the right authority, preserves the execution state, and learns from the decision that follows. It sits between model reasoning and consequential action. It differs from a model guardrail, a ticketing system, a workflow graph, an identity provider, or a generic approval screen because its unit of value is calibrated transfer of judgment.</p>
+
+                <ul>
+                    <li><strong>Uncertainty registries:</strong> structured records of evidence gaps, ambiguous terms, authority conflicts, consequence profiles, and operational drift.</li>
+                    <li><strong>Threshold engines:</strong> policy services that map risk, reversibility, language, jurisdiction, and mandate to proceed, retrieve, pause, or escalate decisions.</li>
+                    <li><strong>Intervention packets:</strong> portable cases that show the proposal, sources, uncertainty, alternatives, policy version, and exact authority requested.</li>
+                    <li><strong>Durable review runtimes:</strong> execution layers that pause, persist, expire, resume, and recover without losing the context that produced the trigger.</li>
+                    <li><strong>Outcome calibration:</strong> systems that compare approvals, overrides, reversals, disputes, and missed risks so thresholds improve from institutional evidence.</li>
+                    <li><strong>Multilingual authority surfaces:</strong> interfaces that preserve the governing meaning of a decision in the language used by the people and communities affected by it.</li>
+                </ul>
+
+                <p>Underwriting should focus on the cost of an uncalibrated decision. Can a customer show why an agent was allowed to proceed? Can a reviewer see the uncertainty that the model could not resolve? Can a public institution prove that a refusal reached the right authority and that an appeal remains possible? Can an organization change providers without losing the history of overrides and corrections? Can a local-language reviewer make the same decision from the same evidence as an English-speaking operator?</p>
+
+                <p>The GS1 presentation offers a concrete commercial pattern. An agent can search, compare, and assemble a basket while a human sees merchant, price, proof, and controls when consequence rises. The design preserves speed by reserving attention for the decision boundary. The same boundary appears in research publication, software release, procurement, public administration, and creative rights. Capital should look for infrastructure that makes the boundary observable, measurable, and repairable.</p>
+
+                <h2>African institutions need local error budgets</h2>
+
+                <p>Uncertainty is also a sovereignty question. A foreign platform’s default threshold can silently decide which errors are acceptable for an African university, archive, publisher, or public agency. The platform may define the preferred language, the qualified reviewer, the evidence hierarchy, the response deadline, and the remedy available after a refusal.</p>
+
+                <p>Local capacity does not require every institution to train every model. It requires institutions to author the margin of error under which their systems operate. A university may set a lower tolerance for an unsupported citation than for a draft translation. An archive may require community review before names or images circulate. A public agency may allow retrieval and explanation while reserving submission authority for an accountable officer. A publisher may let a model propose edits while requiring a bilingual reviewer to decide whether a cultural term can change.</p>
+
+                <p>These decisions belong in the machine-readable control layer. If the governing error budget exists only in a foreign interface or an unwritten habit, it will be difficult to inspect, teach, export, or contest. A local-language review surface is therefore more than a translation feature. It is a way to keep the institution’s categories visible at the point where machine uncertainty becomes public action.</p>
+
+                <h2>Build the margin before widening autonomy</h2>
+
+                <p>Choose one workflow in which an agent proposes a consequential action: a research claim, a software change, a procurement basket, a grant record, a translated publication, or a public response. Write down the acceptable errors, the evidence required, the authority that can decide, the languages involved, the time limit, and the remedy when the decision is challenged.</p>
+
+                <p>Then introduce pressure. Remove a source. Present contradictory evidence. Change the policy version after the proposal is created. Make the first reviewer unavailable. Translate the case into another language. Interrupt execution before approval. Approve the action and issue a correction afterward. The design passes when a second operator can reconstruct why the system proceeded, paused, escalated, or refused, and can recover the work without restoring an authority that has been withdrawn.</p>
+
+                <p>Autonomy becomes credible through this margin. The serious system keeps judgment inside a governed workflow, knows which judgment can be delegated, preserves the evidence that travels with the decision, and identifies the errors an institution will never ask another person to absorb silently.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems" target="_blank" rel="noopener">National Institute of Standards and Technology, “Design Tenets for Agent Identity Management Systems” (October 27, 2026). Defines human-in-the-loop triggers, risk thresholds, escalation context, separation of policy from reasoning, deterministic access decisions, and immutable evidence.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog, “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026). Describes graph workflows with built-in human-in-the-loop pauses, durable state, resumption, routing, and dynamic orchestration.</a></li>
+                    <li><a href="https://www.w3.org/2026/ecommerce-agents/agenda.html" target="_blank" rel="noopener">W3C, “Workshop: E-Commerce for humans and AI Agents” agenda (September 8–9, 2026). Records public sessions on delegation, attestation, product identity, authorization, and agentic commerce.</a></li>
+                    <li><a href="https://www.w3.org/2026/09/ecommerce-agents/slides/Bob_Vuppal.pdf" target="_blank" rel="noopener">Bob Vuppal, GS1 Canada, “Human Shopping Integration with AI: Protocols for Models, eCommerce and Communication with AI Agents” (W3C Workshop, 2026). Presents a human surface for review, approval, and recovery alongside agent discovery, decision, and commerce tools.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative.” Describes standards, open protocols, agent identity research, and security evaluation as components of a trusted and interoperable agent ecosystem.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Donner à l’humain une marge d’erreur</h1>
+
+                <p><em>Note de terrain, 4 novembre 2026.</em> Un système autonome peut produire une recommandation plus vite qu’une institution ne peut décider si cette recommandation mérite une autorité. Le goulot d’étranglement important se trouve entre la sortie probabiliste et le jugement responsable. Les systèmes capables de fermer cet écart détermineront si le logiciel agentique devient une capacité institutionnelle ou une manière plus rapide de distribuer l’incertitude.</p>
+
+                <p>Tout workflow à conséquence a besoin d’un budget d’incertitude. Ce budget indique quelles erreurs sont tolérables, quelles preuves sont nécessaires, quand l’agent peut continuer, quand il doit recueillir davantage d’informations et quand une personne qualifiée doit intervenir. Il donne à l’institution un moyen de réserver l’automatisation aux situations où le coût de l’erreur reste borné, tout en conservant l’autorité humaine pour les décisions dont les conséquences, l’ambiguïté ou la réversibilité exigent un jugement.</p>
+
+                <p>Les signaux publics récents indiquent cette direction. Les principes du NIST publiés en octobre pour les systèmes d’identité des agents demandent des seuils de risque qui déclenchent une revue humaine, une escalade vers l’autorité correcte, un contexte suffisant pour le réviseur et une protection contre la fatigue du consentement. L’ADK Go 2.0 de Google fait de l’intervention humaine une primitive native des graphes : un workflow peut se mettre en pause, conserver son état, recevoir une réponse plus tard et reprendre. Une présentation de GS1 Canada lors d’un atelier du W3C place une surface humaine autour de la revue, de l’approbation et de la reprise tandis qu’un agent prend en charge la découverte et la construction du panier. Ces sources concernent l’identité, le runtime et le commerce. Leur leçon commune est que l’incertitude doit être acheminée avant de devenir un acte institutionnel irréversible.</p>
+
+                <blockquote>
+                    <p>L’autonomie gagne son champ d’action grâce à la capacité de l’institution à nommer les erreurs qu’elle accepte et celles qu’elle ne délèguera jamais.</p>
+                </blockquote>
+
+                <h2>L’incertitude doit devenir un objet</h2>
+
+                <p>La confiance du modèle ne constitue qu’un signal parmi d’autres dans une décision. Un système peut être confiant parce que la demande lui est familière alors que la source est obsolète, que la traduction est faible, que le mandat est ambigu ou que l’action touche une personne qui ne peut pas facilement faire appel. L’incertitude de l’institution est donc plus large que l’estimation probabiliste du modèle.</p>
+
+                <p>Un dossier d’incertitude utile devrait distinguer au moins cinq conditions :</p>
+
+                <ul>
+                    <li><strong>Incertitude épistémique :</strong> les preuves disponibles sont incomplètes, contradictoires ou trop anciennes pour l’action proposée.</li>
+                    <li><strong>Incertitude interprétative :</strong> la demande, la langue, la catégorie ou le sens local admet plusieurs lectures raisonnables.</li>
+                    <li><strong>Incertitude d’autorité :</strong> le système ne peut pas établir qui peut autoriser l’action ou si la délégation s’applique encore.</li>
+                    <li><strong>Incertitude des conséquences :</strong> les effets aval, les personnes touchées, le coût ou la réversibilité restent flous.</li>
+                    <li><strong>Incertitude opérationnelle :</strong> le fournisseur, l’outil, le réseau, la version de politique ou l’état d’exécution peut changer avant la fin de l’action.</li>
+                </ul>
+
+                <p>Ces formes d’incertitude appellent des réponses différentes. Une preuve manquante peut demander une recherche. Un sens ambigu peut demander un réviseur de langue locale. Une autorité incertaine peut exiger une vérification du mandat. Une action à forte conséquence peut exiger une approbation même lorsque le modèle est confiant. Un runtime instable peut exiger une nouvelle décision de politique avant l’exécution. Un score de confiance unique ne peut pas exprimer ces différences.</p>
+
+                <p>Voici la première séparation architecturale : le modèle propose une interprétation tandis que le plan de contrôle détermine quelle incertitude est présente et ce que l’institution doit en faire. Les principes du NIST opèrent la même séparation en termes de sécurité en plaçant la politique hors du moteur de raisonnement et en exigeant des décisions d’accès déterministes. Le principe vaut aussi pour la revue. Un modèle peut aider à expliquer un dossier ; il ne devrait pas décider du seuil qui rend sa propre explication suffisante.</p>
+
+                <h2>Un déclencheur est un contrat</h2>
+
+                <p>Un déclencheur de revue humaine devient utile lorsqu’il décrit la décision demandée à la personne. « Vérifiez ceci » est une escalade faible. Elle transfère l’inquiétude sans transférer une question bornée. Un déclencheur solide porte le mandat, l’action proposée, les preuves, le type d’incertitude, le seuil de risque, le délai et les réponses disponibles.</p>
+
+                <p>Le réviseur devrait pouvoir choisir entre approuver, approuver avec un périmètre plus étroit, demander des preuves, envoyer le dossier à une autre autorité, conserver le travail sans agir ou rejeter la proposition. Chaque choix devrait produire un dossier durable que l’agent et l’institution pourront interpréter plus tard. Ce dossier transforme la revue d’une interruption privée en signal de gouvernance réutilisable.</p>
+
+                <p>Les indications d’octobre du NIST sont précises sur ce point. Les organisations devraient définir les seuils et tolérances qui déclenchent la revue, acheminer l’escalade vers la bonne autorité, fournir assez d’informations pour la décision et prendre en compte la fatigue du consentement lorsque les approbations arrivent trop souvent. Cette direction de conception traite l’attention humaine comme une ressource gouvernée plutôt que comme un bouton de sécurité universel.</p>
+
+                <p>Le runtime en graphe de Google fournit la primitive d’exécution correspondante. Tout nœud peut mettre un workflow en pause, conserver son état, attendre la réponse d’un humain et reprendre par transfert ou réentrée. Le runtime rend l’attente durable, mais l’institution doit encore définir le déclencheur, le réviseur, les preuves et le sens de la réponse. Le logiciel peut conserver une question. La gouvernance décide quelle question mérite le temps d’une personne.</p>
+
+                <h2>L’approbation peut devenir un échec appris</h2>
+
+                <p>La revue humaine est souvent présentée comme une protection sans que l’on demande si le processus peut rester attentif. Un flot de déclencheurs mal formulés produit un résultat prévisible : les personnes approuvent pour faire disparaître l’écran. Le réviseur répond à un défaut de calibration du système qui a envoyé le dossier, et non à un défaut moral.</p>
+
+                <p>Un plan de contrôle de l’incertitude devrait mesurer ce qui se produit après un déclencheur. Les signaux utiles comprennent :</p>
+
+                <ol>
+                    <li>la part des escalades qui contiennent assez de preuves pour une première décision ;</li>
+                    <li>le taux auquel les réviseurs resserrent, rejettent ou renvoient les propositions pour manque de contexte ;</li>
+                    <li>le pourcentage d’approbations ensuite corrigées, inversées ou contestées ;</li>
+                    <li>le temps nécessaire pour acheminer un dossier vers une autorité ayant le mandat et la compétence linguistique appropriés ;</li>
+                    <li>la répartition de la charge de revue entre institutions, régions, langues et rôles ;</li>
+                    <li>le nombre de dossiers bloqués parce que le système ne possède pas de comportement sûr par défaut lorsqu’un réviseur est indisponible.</li>
+                </ol>
+
+                <p>Ces mesures permettent à un laboratoire de distinguer une bonne décision autonome d’une approbation chanceuse. Elles révèlent aussi la fausse efficacité. Un système peut afficher un faible taux d’intervention parce que ses seuils sont trop permissifs, que ses réviseurs sont épuisés ou que ses conséquences sont difficiles à observer. Un taux élevé peut signaler une ambiguïté réelle, une récupération faible, une traduction médiocre ou un modèle qui a appris à transférer son incertitude au lieu de la résoudre.</p>
+
+                <p>La calibration doit inclure le désaccord. Lorsqu’un réviseur contredit le modèle, le système devrait conserver les preuves, la raison, l’autorité et le résultat en aval. Lorsque plusieurs réviseurs ne sont pas d’accord, leur désaccord devient un cas de test pour la politique et l’évaluation. L’apprentissage institutionnel commence lorsque le système peut demander quelle incertitude a été mal classée et quel seuil devrait changer.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de contrôle de l’incertitude</strong> : une infrastructure qui classe les types d’incertitude d’une proposition agentique, applique les seuils de l’institution, construit un paquet d’intervention fondé sur les preuves, l’achemine vers la bonne autorité, conserve l’état d’exécution et apprend de la décision qui suit. Elle se situe entre le raisonnement du modèle et l’action à conséquence. Elle diffère d’une barrière de modèle, d’un système de tickets, d’un graphe de workflow, d’un fournisseur d’identité ou d’un écran d’approbation générique, car son unité de valeur est le transfert calibré du jugement.</p>
+
+                <ul>
+                    <li><strong>Registres d’incertitude :</strong> dossiers structurés des lacunes de preuve, termes ambigus, conflits d’autorité, profils de conséquence et dérives opérationnelles.</li>
+                    <li><strong>Moteurs de seuils :</strong> services de politique qui relient risque, réversibilité, langue, juridiction et mandat aux décisions de poursuivre, rechercher, mettre en pause ou escalader.</li>
+                    <li><strong>Paquets d’intervention :</strong> dossiers portables montrant la proposition, les sources, l’incertitude, les alternatives, la version de politique et l’autorité exacte demandée.</li>
+                    <li><strong>Runtimes de revue durables :</strong> couches d’exécution capables de mettre en pause, conserver, expirer, reprendre et récupérer sans perdre le contexte du déclencheur.</li>
+                    <li><strong>Calibration des résultats :</strong> systèmes qui comparent approbations, corrections, inversions, contestations et risques manqués afin d’améliorer les seuils à partir de preuves institutionnelles.</li>
+                    <li><strong>Surfaces d’autorité multilingues :</strong> interfaces qui préservent le sens directeur d’une décision dans la langue des personnes et communautés touchées.</li>
+                </ul>
+
+                <p>La souscription devrait se concentrer sur le coût d’une décision mal calibrée. Un client peut-il montrer pourquoi un agent a pu continuer ? Un réviseur peut-il voir l’incertitude que le modèle n’a pas résolue ? Une institution publique peut-elle prouver qu’un refus a atteint la bonne autorité et qu’un recours reste possible ? Une organisation peut-elle changer de fournisseur sans perdre l’historique des corrections et des contournements ? Un réviseur travaillant dans une langue locale peut-il prendre la même décision à partir des mêmes preuves qu’un opérateur anglophone ?</p>
+
+                <p>La présentation de GS1 fournit un modèle commercial concret. Un agent peut chercher, comparer et assembler un panier tandis qu’une personne voit le commerçant, le prix, la preuve et les contrôles lorsque la conséquence augmente. Le design préserve la vitesse en réservant l’attention à la frontière de décision. La même frontière apparaît dans la publication scientifique, la mise en production logicielle, les achats, l’administration et les droits créatifs. Le capital devrait chercher les infrastructures qui rendent cette frontière observable, mesurable et réparable.</p>
+
+                <h2>Les institutions africaines ont besoin de budgets d’erreur locaux</h2>
+
+                <p>L’incertitude est aussi une question de souveraineté. Le seuil par défaut d’une plateforme étrangère peut décider silencieusement quelles erreurs sont acceptables pour une université, une archive, une maison d’édition ou une administration africaine. La plateforme peut définir la langue préférée, le réviseur qualifié, la hiérarchie des preuves, le délai de réponse et le recours disponible après un refus.</p>
+
+                <p>La capacité locale n’exige pas que chaque institution entraîne chaque modèle. Elle exige que les institutions écrivent la marge d’erreur dans laquelle leurs systèmes opèrent. Une université peut tolérer une traduction provisoire tout en appliquant une tolérance basse à une citation sans source. Une archive peut exiger une revue communautaire avant la circulation de noms ou d’images. Une administration peut autoriser la récupération et l’explication tout en réservant le dépôt à un agent responsable. Un éditeur peut laisser un modèle proposer des modifications tout en demandant à un réviseur bilingue de décider si un terme culturel peut changer.</p>
+
+                <p>Ces décisions appartiennent à la couche de contrôle lisible par machine. Si le budget d’erreur directeur existe seulement dans une interface étrangère ou une habitude non écrite, il devient difficile à inspecter, enseigner, exporter ou contester. Une surface de revue en langue locale est donc davantage qu’une fonction de traduction. Elle maintient visibles les catégories de l’institution lorsque l’incertitude machine devient une action publique.</p>
+
+                <h2>Construire la marge avant d’élargir l’autonomie</h2>
+
+                <p>Choisissez un workflow dans lequel un agent propose une action à conséquence : une affirmation de recherche, une modification logicielle, un panier d’achat, un dossier de subvention, une publication traduite ou une réponse publique. Écrivez les erreurs acceptables, les preuves requises, l’autorité qui peut décider, les langues concernées, le délai et le recours lorsqu’une décision est contestée.</p>
+
+                <p>Mettez ensuite le système sous pression. Retirez une source. Présentez des preuves contradictoires. Changez la version de politique après la création de la proposition. Rendez le premier réviseur indisponible. Traduisez le dossier dans une autre langue. Interrompez l’exécution avant l’approbation. Approuvez l’action puis émettez une correction. Le design réussit lorsqu’un second opérateur peut reconstruire pourquoi le système a continué, attendu, escaladé ou refusé, puis récupérer le travail sans restaurer une autorité retirée.</p>
+
+                <p>L’autonomie devient crédible grâce à cette marge. Le système sérieux maintient le jugement dans un workflow gouverné, sait quel jugement peut être délégué, conserve les preuves qui voyagent avec la décision et identifie les erreurs qu’une institution ne demandera jamais à une autre personne d’absorber en silence.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems" target="_blank" rel="noopener">National Institute of Standards and Technology, « Design Tenets for Agent Identity Management Systems » (27 octobre 2026). Définit les déclencheurs d’intervention humaine, les seuils de risque, le contexte d’escalade, la séparation entre politique et raisonnement, les décisions d’accès déterministes et les preuves immuables.</a></li>
+                    <li><a href="https://developers.googleblog.com/en/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog, « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026). Décrit les workflows en graphe avec pauses d’intervention humaine intégrées, état durable, reprise, routage et orchestration dynamique.</a></li>
+                    <li><a href="https://www.w3.org/2026/ecommerce-agents/agenda.html" target="_blank" rel="noopener">W3C, agenda de l’« Workshop: E-Commerce for humans and AI Agents » (8–9 septembre 2026). Recense des sessions publiques sur la délégation, l’attestation, l’identité des produits, l’autorisation et le commerce agentique.</a></li>
+                    <li><a href="https://www.w3.org/2026/09/ecommerce-agents/slides/Bob_Vuppal.pdf" target="_blank" rel="noopener">Bob Vuppal, GS1 Canada, « Human Shopping Integration with AI: Protocols for Models, eCommerce and Communication with AI Agents » (atelier du W3C, 2026). Présente une surface humaine de revue, d’approbation et de reprise à côté des outils agentiques de découverte, de décision et de commerce.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative ». Décrit les standards, les protocoles ouverts, la recherche sur l’identité des agents et l’évaluation de sécurité comme éléments d’un écosystème agentique fiable et interopérable.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

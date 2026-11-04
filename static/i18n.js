@@ -187,6 +187,7 @@
         'article.entry155':     { en: 'Diop Daily #155 — October 2026', fr: 'Diop Quotidien n°155 — Octobre 2026' },
         'article.entry156':     { en: 'Diop Daily #156 — October 2026', fr: 'Diop Quotidien n°156 — Octobre 2026' },
         'article.entry159':     { en: 'Diop Daily #159 — November 2026', fr: 'Diop Quotidien n°159 — Novembre 2026' },
+        'article.entry160':     { en: 'Diop Daily #160 — November 2026', fr: 'Diop Quotidien n°160 — Novembre 2026' },
         'article.entry158':     { en: 'Diop Daily #158 — November 2026', fr: 'Diop Quotidien n°158 — Novembre 2026' },
         'article.entry157':     { en: 'Diop Daily #157 — November 2026', fr: 'Diop Quotidien n°157 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
@@ -201,6 +202,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-160': {
+        title: {
+            en: 'Give the Human a Margin of Error',
+            fr: 'Donner à l’humain une marge d’erreur'
+        },
+        excerpt: {
+            en: 'Autonomous systems need explicit uncertainty budgets that decide when a task can proceed, when evidence must be gathered, and when a person must intervene. The investable layer is an uncertainty-control plane that routes judgment without turning human approval into a rubber stamp.',
+            fr: 'Les systèmes autonomes ont besoin de budgets d’incertitude explicites qui déterminent quand une tâche peut continuer, quand il faut recueillir des preuves et quand une personne doit intervenir. La couche d’investissement est un plan de contrôle de l’incertitude qui achemine le jugement sans transformer l’approbation humaine en simple tampon.'
+        }
+    },
     'diop-daily-159': {
         title: {
             en: 'The Work Must Survive the Model',
