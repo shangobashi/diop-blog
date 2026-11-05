@@ -188,6 +188,7 @@
         'article.entry156':     { en: 'Diop Daily #156 — October 2026', fr: 'Diop Quotidien n°156 — Octobre 2026' },
         'article.entry159':     { en: 'Diop Daily #159 — November 2026', fr: 'Diop Quotidien n°159 — Novembre 2026' },
         'article.entry160':     { en: 'Diop Daily #160 — November 2026', fr: 'Diop Quotidien n°160 — Novembre 2026' },
+        'article.entry161':     { en: 'Diop Daily #161 — November 2026', fr: 'Diop Quotidien n°161 — Novembre 2026' },
         'article.entry158':     { en: 'Diop Daily #158 — November 2026', fr: 'Diop Quotidien n°158 — Novembre 2026' },
         'article.entry157':     { en: 'Diop Daily #157 — November 2026', fr: 'Diop Quotidien n°157 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
@@ -202,6 +203,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-161': {
+        title: {
+            en: 'The Local Copy of the Fix',
+            fr: 'La copie locale du correctif'
+        },
+        excerpt: {
+            en: 'Autonomous vulnerability discovery can remain inside a vendor lab. The investable layer is a portable repair packet that an operator can reproduce, apply, verify, and roll back on machines they control.',
+            fr: 'La découverte autonome de vulnérabilités peut rester dans un laboratoire fournisseur. La couche d’investissement est un paquet de réparation portable qu’un opérateur peut reproduire, appliquer, vérifier et annuler sur des machines qu’il contrôle.'
+        }
+    },
     'diop-daily-160': {
         title: {
             en: 'Give the Human a Margin of Error',
