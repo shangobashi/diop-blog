@@ -189,6 +189,7 @@
         'article.entry159':     { en: 'Diop Daily #159 — November 2026', fr: 'Diop Quotidien n°159 — Novembre 2026' },
         'article.entry160':     { en: 'Diop Daily #160 — November 2026', fr: 'Diop Quotidien n°160 — Novembre 2026' },
         'article.entry161':     { en: 'Diop Daily #161 — November 2026', fr: 'Diop Quotidien n°161 — Novembre 2026' },
+        'article.entry162':     { en: 'Diop Daily #162 — November 2026', fr: 'Diop Quotidien n°162 — Novembre 2026' },
         'article.entry158':     { en: 'Diop Daily #158 — November 2026', fr: 'Diop Quotidien n°158 — Novembre 2026' },
         'article.entry157':     { en: 'Diop Daily #157 — November 2026', fr: 'Diop Quotidien n°157 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
@@ -203,6 +204,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-162': {
+        title: {
+            en: 'The Agent Needs a Service Record',
+            fr: 'L’agent a besoin d’un dossier de service'
+        },
+        excerpt: {
+            en: 'An agent becomes institutional capacity when its identity, mandate, delegated scope, evidence, and revocation history can be inspected across tasks and providers. The investable layer is an agent service-record plane that makes machine labor accountable and portable.',
+            fr: 'Un agent devient une capacité institutionnelle lorsque son identité, son mandat, son périmètre délégué, ses preuves et son historique de révocation peuvent être inspectés entre les tâches et les fournisseurs. La couche d’investissement est un plan de contrôle des dossiers de service qui rend le travail machine responsable et portable.'
+        }
+    },
     'diop-daily-161': {
         title: {
             en: 'The Local Copy of the Fix',

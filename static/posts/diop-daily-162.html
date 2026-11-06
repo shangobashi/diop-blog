@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Agent Needs a Service Record — Diop Research</title>
+    <meta name="description" content="An agent becomes institutional capacity when its identity, mandate, delegated scope, evidence, and revocation history can be inspected across tasks and providers. The investable layer is an agent service-record plane."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry162">Diop Daily #162 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 6, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>agent identity · delegated authority · institutional capacity</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Agent Needs a Service Record</h1>
+
+                <p><em>Field note, November 6, 2026.</em> An agent can be given a credential in seconds. An institution still needs to know what that credential meant, which mandate created it, how its authority changed, and what evidence remains after the agent has acted. The missing object is a service record: a durable account of an agent’s identity, assignments, delegated scope, decisions, interruptions, and results.</p>
+
+                <p>This distinction becomes important as systems move from answering questions to carrying work across tools. The agent that retrieves a document, submits a form, edits a record, or asks another agent to continue a task has entered an institutional chain of responsibility. A login proves that software was recognized. A service record explains what that software was authorized to do and whether it kept faith with the mandate.</p>
+
+                <p>Recent public signals converge on this problem. NIST’s October design tenets for agent identity call for distinct agent identification, cryptographic links between agents and their principals, attenuated delegation, zero standing privilege, short-lived authorization, and immutable evidence. Google’s October Agents CLI evaluation loop treats durable test cases, graded traces, comparison, failure analysis, and rollback as the way to keep an agent working across model and tool changes. Microsoft’s recent account of Africa’s AI future ties trustworthy adoption to choice, local capability, control of data and intellectual property, and resilience. The African Center for Economic Transformation’s October policy brief argues that Africa’s AI readiness is increasingly an institutional execution and adoption problem shaped by infrastructure, data costs, and local capacity.</p>
+
+                <blockquote>
+                    <p>A credential lets an agent enter the institution. A service record lets the institution remember what happened there.</p>
+                </blockquote>
+
+                <h2>Identity is a history, not a label</h2>
+
+                <p>Human organizations already understand this grammar. A contractor has a name, an employing body, a role, a contract, an access boundary, a supervisor, and a record of completed work. Those fields do not make every decision correct. They make responsibility traceable when a decision must be reviewed, repaired, or challenged.</p>
+
+                <p>Software agents need a comparable structure. A persistent name or key is useful, but it is only the first field. The institution must bind the identity to a workload, an environment, an approved configuration, and a principal that can be held accountable. When a sub-agent receives a task, its authority should narrow with the task. When a model, tool, policy, or deployment changes, the record should show which version acted. When a grant expires, the agent should lose the right to act rather than continue under a credential that still happens to work.</p>
+
+                <p>NIST’s tenets are valuable because they separate recognition from authority. Distinct identification supports traceability. Linking and attenuation preserve the chain from the initiating person or organization to downstream agents. Zero standing privilege limits the damage available to an idle or compromised system. Short-lived, dynamic, revocable authorization allows the institution to respond to drift during execution. Immutable evidence preserves the facts needed for non-repudiation and later review.</p>
+
+                <p>A service record should therefore carry at least these fields:</p>
+
+                <ul>
+                    <li><strong>Principal:</strong> the person, organization, or public body on whose behalf the agent acts;</li>
+                    <li><strong>Assignment:</strong> the task, objective, jurisdiction, language, and time window that define the work;</li>
+                    <li><strong>Authority:</strong> the tools, data, spending limit, recipients, and decisions the agent may reach;</li>
+                    <li><strong>Lineage:</strong> the parent agent, model version, policy version, configuration, and sub-agents involved;</li>
+                    <li><strong>Event record:</strong> the invocations, handoffs, pauses, refusals, approvals, and material changes that occurred;</li>
+                    <li><strong>Outcome:</strong> the artifact or action produced, its review status, its correction path, and the authority that closed the assignment.</li>
+                </ul>
+
+                <p>The record is a living object. It begins before the first tool call and closes after the result has been accepted, corrected, or abandoned. That temporal shape distinguishes an institutional identity system from a directory of machine names.</p>
+
+                <h2>Delegation must leave a paper trail</h2>
+
+                <p>Multi-agent systems turn identity into a chain problem. A research agent may ask a retrieval agent to collect sources, a translation agent to prepare a French version, and a publication agent to place the approved text on a website. Each handoff can be technically successful while the chain of responsibility becomes opaque.</p>
+
+                <p>The receiving agent needs the assignment boundary, the evidence it may use, the terms it must preserve, and the action it may take when a condition changes. The sending agent needs a receipt that records what was transferred, which scope was granted, and what the receiver accepted. A downstream agent should not inherit the parent’s entire authority simply because it inherited a task identifier.</p>
+
+                <p>Google’s evaluation work adds a second requirement: the service record must remain useful across change. Its generate–grade–compare–analyze–optimize loop treats an agent as a system whose behavior has to be observed over cases, traces, model backends, schedules, and regressions. The same logic applies to identity. When a provider or model changes, an institution should be able to ask which agent configuration acted, what authority it carried, what cases it passed, and whether its service record still describes the deployed system.</p>
+
+                <p>This creates a practical test. Export one agent’s service record, remove access to the original control plane, and give the package to a second operator. The operator should be able to reconstruct the mandate, identify the decision boundaries, inspect the evidence, and determine whether the resulting action can still be trusted. If the record depends on an inaccessible dashboard or a vendor’s private event schema, the institution has rented memory instead of owning it.</p>
+
+                <h2>African capacity begins with the record</h2>
+
+                <p>The question has a direct African dimension. Microsoft’s account of AI in Africa argues that meaningful choice requires interoperable options, local capability, and control over data and intellectual property. ACET describes a related constraint in economic terms: the bottleneck is increasingly institutional execution, alongside energy, connectivity, data pricing, and local infrastructure. These claims come from different institutional positions, and neither proves a complete market forecast. They do identify the conditions under which adoption becomes durable.</p>
+
+                <p>An African university, archive, publisher, hospital, telecom operator, or public agency needs to know which machine identity acted in its name. It needs to preserve local language and jurisdiction in the mandate, keep an exportable record when a provider changes, and give its own officers the power to revoke or narrow authority. Those requirements are operational sovereignty. They turn a broad aspiration about trustworthy AI into a set of fields that can be inspected, taught, priced, and governed.</p>
+
+                <p>The record also protects institutions from a subtle form of dependency. A platform may offer excellent models while quietly deciding the identity vocabulary, approval path, evidence format, and retention period. If the local institution cannot export those structures, it has adopted a service without acquiring the capacity to govern the service. Open protocols help, but portability has to include the history of authority and action, not only the API call.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is an <strong>agent service-record plane</strong>: infrastructure that registers machine identities, binds them to principals and assignments, attenuates delegated authority, records material events, evaluates the configuration that acted, and exports an auditable record across providers. It sits between identity infrastructure and operational governance. It differs from a login system, a secrets manager, an authorization server, a workflow graph, an evaluation dashboard, or a generic observability platform because its unit of value is accountable institutional service.</p>
+
+                <ul>
+                    <li><strong>Agent employment registries:</strong> systems that bind identities to workloads, owners, mandates, configurations, and lifecycle states;</li>
+                    <li><strong>Delegation ledgers:</strong> services that show how authority narrows from principal to agent to sub-agent and where a grant was revoked;</li>
+                    <li><strong>Portable service records:</strong> exportable packages containing identity, policy, evidence, traces, approvals, refusals, and outcomes;</li>
+                    <li><strong>Conformance harnesses:</strong> tests that compare an agent’s actual behavior with its declared assignment across model, tool, and provider changes;</li>
+                    <li><strong>Local authority surfaces:</strong> interfaces that let institutions manage identity, language, jurisdiction, retention, and correction without surrendering the control plane.</li>
+                </ul>
+
+                <p>Underwriting should begin with questions that a live demo cannot answer. Can the customer identify every agent acting under its name? Can it reconstruct a downstream handoff without opening the vendor’s console? Can it prove that a sub-agent held less authority than its parent? Can a local administrator revoke access during a long-running task? Can a second provider receive the service record and reproduce the relevant governance checks? Can an affected person discover which machine made a consequential decision and where to ask for correction?</p>
+
+                <p>These capabilities create measurable operational value: shorter incident reconstruction, lower review cost, faster provider substitution, clearer accountability, and fewer unowned actions. The institution is buying the ability to keep its own memory of machine labor. That is a more durable object than another interface for calling a model.</p>
+
+                <h2>Hire the agent before widening its work</h2>
+
+                <p>Choose one recurring agent task and write its service record before expanding its permissions. Name the principal, the assignment, the allowed tools, the language and jurisdiction, the evidence threshold, the reviewer, the expiry condition, and the correction route. Then test the record under pressure: change the model, remove a tool, delegate to a sub-agent, interrupt the task, revoke the grant, and export the history.</p>
+
+                <p>The design holds when an operator who was absent at the beginning can explain what the agent was supposed to do, what it actually did, which authority it used, and what remains possible after a mistake. That is the point at which an agent stops being an anonymous capability inside someone else’s platform and becomes a governable participant in institutional life.</p>
+
+                <p>Before an institution gives a machine more reach, it should give the machine a name, a mandate, and a record that can survive the provider.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems" target="_blank" rel="noopener">National Institute of Standards and Technology, “Design Tenets for Agent Identity Management Systems” (October 27, 2026). Defines distinct agent identification, linked and attenuated delegation, zero standing privilege, short-lived and revocable authorization, and evidence for traceability and accountability.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). Describes industry-led standards, community-led open protocols, agent authentication and identity research, and security evaluations for trusted interoperability.</a></li>
+                    <li><a href="https://developers.googleblog.com/hill-climbing-agent-quality-with-agents-cli-evaluation/" target="_blank" rel="noopener">Google Developers Blog, “Hill-Climbing Agent Quality with Agents CLI Evaluation” (October 28, 2026). Describes durable evaluation datasets, graded traces, comparison, failure analysis, model-backend experiments, scheduling, alerting, and rollback across agent changes.</a></li>
+                    <li><a href="https://news.microsoft.com/source/emea/features/building-africas-ai-future-on-trust/" target="_blank" rel="noopener">Microsoft Source EMEA, “Building Africa’s AI future on trust” (2026). Connects trustworthy African AI adoption with choice, interoperability, local capability, control of data and intellectual property, cybersecurity, resilience, and implementation capacity.</a></li>
+                    <li><a href="https://acetforafrica.org/knowledge-hub/insights-ideas/policy-briefs/unlocking-africas-digital-potential-through-institutional-agility-infrastructure-and-platform-led-formalization/" target="_blank" rel="noopener">African Center for Economic Transformation, “Unlocking Africa’s Digital Potential Through Institutional Agility, Infrastructure, and Platform-led Formalization” (October 29, 2026). Frames AI readiness as an institutional execution and adoption problem alongside energy, connectivity, data costs, and local infrastructure constraints.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L’agent a besoin d’un dossier de service</h1>
+
+                <p><em>Note de terrain, 6 novembre 2026.</em> Un agent peut recevoir un identifiant en quelques secondes. Une institution doit encore savoir ce que cet identifiant signifiait, quel mandat l’a créé, comment son autorité a évolué et quelles preuves subsistent après son action. L’objet manquant est un dossier de service : un compte durable de l’identité, des affectations, du périmètre délégué, des décisions, des interruptions et des résultats d’un agent.</p>
+
+                <p>Cette distinction devient importante lorsque les systèmes passent des réponses aux questions au transport du travail entre plusieurs outils. L’agent qui récupère un document, soumet un formulaire, modifie un dossier ou demande à un autre agent de poursuivre une tâche est entré dans une chaîne institutionnelle de responsabilité. Une connexion prouve que le logiciel a été reconnu. Un dossier de service explique ce que ce logiciel était autorisé à faire et s’il est resté fidèle au mandat.</p>
+
+                <p>Des signaux publics récents convergent vers ce problème. Les principes de conception du NIST publiés en octobre pour l’identité des agents demandent une identification distincte, des liens cryptographiques entre les agents et leurs mandants, une délégation dont le périmètre se resserre, des privilèges nuls au repos, une autorisation brève et révocable, ainsi que des preuves immuables. La boucle d’évaluation Agents CLI publiée par Google en octobre traite les cas de test durables, les traces notées, la comparaison, l’analyse des échecs et le retour arrière comme les moyens de maintenir un agent à travers les changements de modèles et d’outils. Un article récent de Microsoft sur l’avenir de l’IA en Afrique relie l’adoption digne de confiance au choix, à la capacité locale, au contrôle des données et de la propriété intellectuelle, ainsi qu’à la résilience. Une note de politique publiée en octobre par l’African Center for Economic Transformation soutient que la préparation africaine à l’IA est de plus en plus un problème d’exécution institutionnelle et d’adoption, façonné par l’infrastructure, le coût des données et la capacité locale.</p>
+
+                <blockquote>
+                    <p>Un identifiant permet à l’agent d’entrer dans l’institution. Un dossier de service permet à l’institution de se souvenir de ce qui s’y est passé.</p>
+                </blockquote>
+
+                <h2>L’identité est une histoire, non une étiquette</h2>
+
+                <p>Les organisations humaines comprennent déjà cette grammaire. Un prestataire possède un nom, une structure employeuse, un rôle, un contrat, une frontière d’accès, un responsable et un dossier de travaux accomplis. Ces champs ne rendent pas chaque décision correcte. Ils rendent la responsabilité traçable lorsqu’une décision doit être examinée, réparée ou contestée.</p>
+
+                <p>Les agents logiciels ont besoin d’une structure comparable. Un nom ou une clé persistante est utile, mais ce n’est que le premier champ. L’institution doit relier l’identité à une charge de travail, un environnement, une configuration approuvée et un mandant qui puisse être tenu responsable. Lorsqu’un sous-agent reçoit une tâche, son autorité devrait se resserrer avec cette tâche. Lorsqu’un modèle, un outil, une politique ou un déploiement change, le dossier devrait montrer quelle version a agi. Lorsqu’une autorisation expire, l’agent devrait perdre le droit d’agir au lieu de continuer sous un identifiant qui fonctionne encore par hasard.</p>
+
+                <p>Les principes du NIST sont utiles parce qu’ils séparent la reconnaissance de l’autorité. L’identification distincte favorise la traçabilité. Le lien et l’atténuation préservent la chaîne qui relie la personne ou l’organisation initiatrice aux agents en aval. Le privilège nul au repos limite les dommages accessibles à un système inactif ou compromis. L’autorisation brève, dynamique et révocable permet à l’institution de répondre aux dérives pendant l’exécution. Les preuves immuables conservent les faits nécessaires à la non-répudiation et à l’examen ultérieur.</p>
+
+                <p>Un dossier de service devrait donc porter au moins les champs suivants :</p>
+
+                <ul>
+                    <li><strong>Mandant :</strong> la personne, l’organisation ou l’autorité publique pour le compte de laquelle l’agent agit ;</li>
+                    <li><strong>Affectation :</strong> la tâche, l’objectif, la juridiction, la langue et la fenêtre temporelle qui définissent le travail ;</li>
+                    <li><strong>Autorité :</strong> les outils, données, limites de dépense, destinataires et décisions que l’agent peut atteindre ;</li>
+                    <li><strong>Lignée :</strong> l’agent parent, la version du modèle, la version de la politique, la configuration et les sous-agents impliqués ;</li>
+                    <li><strong>Dossier d’événements :</strong> les invocations, transferts, pauses, refus, approbations et changements importants survenus ;</li>
+                    <li><strong>Résultat :</strong> l’artefact ou l’action produit, son état de revue, son chemin de correction et l’autorité qui a clôturé l’affectation.</li>
+                </ul>
+
+                <p>Le dossier est un objet vivant. Il commence avant le premier appel d’outil et se clôt lorsque le résultat a été accepté, corrigé ou abandonné. Cette forme temporelle distingue un système d’identité institutionnel d’un simple répertoire de noms de machines.</p>
+
+                <h2>La délégation doit laisser une trace</h2>
+
+                <p>Les systèmes multi-agents transforment l’identité en problème de chaîne. Un agent de recherche peut demander à un agent de récupération de réunir des sources, à un agent de traduction de préparer une version française et à un agent de publication de placer le texte approuvé sur un site. Chaque transfert peut réussir techniquement tandis que la chaîne de responsabilité devient opaque.</p>
+
+                <p>L’agent récepteur a besoin de la frontière de l’affectation, des preuves qu’il peut utiliser, des termes qu’il doit préserver et de l’action qu’il peut entreprendre lorsqu’une condition change. L’agent émetteur a besoin d’un reçu qui enregistre ce qui a été transféré, le périmètre accordé et ce que le récepteur a accepté. Un agent en aval ne devrait pas hériter de toute l’autorité du parent simplement parce qu’il a reçu un identifiant de tâche.</p>
+
+                <p>Le travail d’évaluation de Google ajoute une seconde exigence : le dossier de service doit rester utile à travers les changements. Sa boucle générer–noter–comparer–analyser–optimiser traite l’agent comme un système dont le comportement doit être observé sur des cas, des traces, des backends de modèles, des calendriers et des régressions. La même logique s’applique à l’identité. Lorsqu’un fournisseur ou un modèle change, une institution devrait pouvoir demander quelle configuration d’agent a agi, quelle autorité elle portait, quels cas elle avait passés et si son dossier de service décrit encore le système déployé.</p>
+
+                <p>Cela produit un test pratique. Exportez le dossier de service d’un agent, retirez l’accès au plan de contrôle d’origine et remettez le paquet à un second opérateur. Cet opérateur devrait pouvoir reconstruire le mandat, identifier les frontières de décision, inspecter les preuves et déterminer si l’action produite peut encore être considérée comme fiable. Si le dossier dépend d’un tableau de bord inaccessible ou d’un schéma d’événements privé au fournisseur, l’institution loue sa mémoire au lieu de la posséder.</p>
+
+                <h2>La capacité africaine commence par le dossier</h2>
+
+                <p>L’enjeu possède une dimension africaine directe. L’analyse de Microsoft sur l’IA en Afrique soutient qu’un choix véritable exige des options interopérables, une capacité locale et un contrôle des données et de la propriété intellectuelle. ACET décrit une contrainte voisine en termes économiques : le goulot d’étranglement est de plus en plus l’exécution institutionnelle, avec l’énergie, la connectivité, le prix des données et les infrastructures locales. Ces affirmations viennent de positions institutionnelles différentes et aucune ne prouve une prévision complète du marché. Elles identifient les conditions qui rendent l’adoption durable.</p>
+
+                <p>Une université, une archive, une maison d’édition, un hôpital, un opérateur télécom ou une agence publique africaine doit savoir quelle identité machine a agi en son nom. Elle doit préserver la langue locale et la juridiction dans le mandat, conserver un dossier exportable lorsqu’un fournisseur change et donner à ses propres responsables le pouvoir de révoquer ou de resserrer l’autorité. Il s’agit de souveraineté opérationnelle. Une aspiration générale à une IA digne de confiance devient ainsi un ensemble de champs que l’on peut inspecter, enseigner, tarifer et gouverner.</p>
+
+                <p>Le dossier protège aussi les institutions contre une forme discrète de dépendance. Une plateforme peut proposer d’excellents modèles tout en décidant silencieusement du vocabulaire d’identité, du parcours d’approbation, du format des preuves et de la durée de conservation. Si l’institution locale ne peut pas exporter ces structures, elle a adopté un service sans acquérir la capacité de le gouverner. Les protocoles ouverts aident, mais la portabilité doit inclure l’histoire de l’autorité et de l’action, pas seulement l’appel d’API.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de contrôle des dossiers de service des agents</strong> : une infrastructure qui enregistre les identités machines, les relie aux mandants et aux affectations, atténue l’autorité déléguée, consigne les événements importants, évalue la configuration qui a agi et exporte un dossier auditable entre fournisseurs. Cette couche se situe entre l’infrastructure d’identité et la gouvernance opérationnelle. Elle se distingue d’un système de connexion, d’un gestionnaire de secrets, d’un serveur d’autorisation, d’un graphe de workflow, d’un tableau de bord d’évaluation ou d’une plateforme générique d’observabilité, car son unité de valeur est le service institutionnel responsable.</p>
+
+                <ul>
+                    <li><strong>Registres d’emploi des agents :</strong> systèmes qui relient les identités aux charges de travail, propriétaires, mandats, configurations et états du cycle de vie ;</li>
+                    <li><strong>Registres de délégation :</strong> services qui montrent comment l’autorité se resserre du mandant vers l’agent puis vers le sous-agent, et où une autorisation a été révoquée ;</li>
+                    <li><strong>Dossiers de service portables :</strong> paquets exportables contenant identité, politique, preuves, traces, approbations, refus et résultats ;</li>
+                    <li><strong>Harnais de conformité :</strong> tests qui comparent le comportement réel de l’agent à son affectation déclarée malgré les changements de modèle, d’outil et de fournisseur ;</li>
+                    <li><strong>Surfaces d’autorité locales :</strong> interfaces qui permettent aux institutions de gérer identité, langue, juridiction, conservation et correction sans céder le plan de contrôle.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par des questions auxquelles une démonstration en direct ne répond pas. Le client peut-il identifier chaque agent qui agit sous son nom ? Peut-il reconstruire un transfert en aval sans ouvrir la console du fournisseur ? Peut-il prouver qu’un sous-agent détenait moins d’autorité que son parent ? Un administrateur local peut-il révoquer un accès pendant une tâche longue ? Un second fournisseur peut-il recevoir le dossier de service et reproduire les contrôles de gouvernance nécessaires ? Une personne touchée peut-elle découvrir quelle machine a pris une décision importante et où demander une correction ?</p>
+
+                <p>Ces capacités créent une valeur opérationnelle mesurable : reconstruction plus rapide des incidents, coût de revue plus faible, substitution plus rapide d’un fournisseur, responsabilité plus claire et diminution des actions sans propriétaire. L’institution achète la capacité de conserver sa propre mémoire du travail machine. C’est un objet plus durable qu’une nouvelle interface pour appeler un modèle.</p>
+
+                <h2>Embaucher l’agent avant d’élargir son travail</h2>
+
+                <p>Choisissez une tâche récurrente d’agent et rédigez son dossier de service avant d’étendre ses permissions. Nommez le mandant, l’affectation, les outils autorisés, la langue et la juridiction, le seuil de preuve, le réviseur, la condition d’expiration et le chemin de correction. Testez ensuite le dossier sous pression : changez le modèle, retirez un outil, déléguez à un sous-agent, interrompez la tâche, révoquez l’autorisation et exportez l’historique.</p>
+
+                <p>La conception tient lorsqu’un opérateur absent au début peut expliquer ce que l’agent devait faire, ce qu’il a réellement fait, quelle autorité il a utilisée et ce qui reste possible après une erreur. C’est le moment où l’agent cesse d’être une capacité anonyme dans la plateforme de quelqu’un d’autre et devient un participant gouvernable de la vie institutionnelle.</p>
+
+                <p>Avant de donner davantage de portée à une machine, l’institution devrait lui donner un nom, un mandat et un dossier capable de survivre au fournisseur.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems" target="_blank" rel="noopener">National Institute of Standards and Technology, « Design Tenets for Agent Identity Management Systems » (27 octobre 2026). Définit l’identification distincte des agents, la délégation liée et atténuée, le privilège nul au repos, l’autorisation brève et révocable, ainsi que les preuves nécessaires à la traçabilité et à la responsabilité.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mise à jour du 14 août 2026). Décrit les standards menés par l’industrie, les protocoles ouverts issus de la communauté, la recherche sur l’authentification et l’identité des agents, ainsi que les évaluations de sécurité pour une interopérabilité digne de confiance.</a></li>
+                    <li><a href="https://developers.googleblog.com/hill-climbing-agent-quality-with-agents-cli-evaluation/" target="_blank" rel="noopener">Google Developers Blog, « Hill-Climbing Agent Quality with Agents CLI Evaluation » (28 octobre 2026). Décrit des jeux de données d’évaluation durables, des traces notées, la comparaison, l’analyse des échecs, les expériences entre backends de modèles, la planification, les alertes et le retour arrière lors des changements d’agents.</a></li>
+                    <li><a href="https://news.microsoft.com/source/emea/features/building-africas-ai-future-on-trust/" target="_blank" rel="noopener">Microsoft Source EMEA, « Building Africa’s AI future on trust » (2026). Relie l’adoption africaine d’une IA digne de confiance au choix, à l’interopérabilité, à la capacité locale, au contrôle des données et de la propriété intellectuelle, à la cybersécurité, à la résilience et à la capacité de mise en œuvre.</a></li>
+                    <li><a href="https://acetforafrica.org/knowledge-hub/insights-ideas/policy-briefs/unlocking-africas-digital-potential-through-institutional-agility-infrastructure-and-platform-led-formalization/" target="_blank" rel="noopener">African Center for Economic Transformation, « Unlocking Africa’s Digital Potential Through Institutional Agility, Infrastructure, and Platform-led Formalization » (29 octobre 2026). Présente la préparation africaine à l’IA comme un problème d’exécution et d’adoption institutionnelles, avec des contraintes d’énergie, de connectivité, de coût des données et d’infrastructure locale.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
