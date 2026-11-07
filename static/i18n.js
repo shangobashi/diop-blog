@@ -189,6 +189,7 @@
         'article.entry159':     { en: 'Diop Daily #159 — November 2026', fr: 'Diop Quotidien n°159 — Novembre 2026' },
         'article.entry160':     { en: 'Diop Daily #160 — November 2026', fr: 'Diop Quotidien n°160 — Novembre 2026' },
         'article.entry161':     { en: 'Diop Daily #161 — November 2026', fr: 'Diop Quotidien n°161 — Novembre 2026' },
+        'article.entry163':     { en: 'Diop Daily #163 — November 2026', fr: 'Diop Quotidien n°163 — Novembre 2026' },
         'article.entry162':     { en: 'Diop Daily #162 — November 2026', fr: 'Diop Quotidien n°162 — Novembre 2026' },
         'article.entry158':     { en: 'Diop Daily #158 — November 2026', fr: 'Diop Quotidien n°158 — Novembre 2026' },
         'article.entry157':     { en: 'Diop Daily #157 — November 2026', fr: 'Diop Quotidien n°157 — Novembre 2026' },
@@ -204,6 +205,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-163': {
+        title: {
+            en: 'A Handshake Needs a Receipt',
+            fr: 'Une poignée de main a besoin d’un reçu'
+        },
+        excerpt: {
+            en: 'Agent protocols can establish contact while leaving institutions unable to prove what was requested, accepted, delivered, or corrected. The investable layer is an interoperability receipt plane that makes machine handoffs inspectable after the connection ends.',
+            fr: 'Les protocoles agentiques peuvent établir un contact tout en laissant les institutions incapables de prouver ce qui a été demandé, accepté, livré ou corrigé. La couche d’investissement est un plan de contrôle des reçus d’interopérabilité qui rend les transferts entre machines inspectables après la fin de la connexion.'
+        }
+    },
     'diop-daily-162': {
         title: {
             en: 'The Agent Needs a Service Record',

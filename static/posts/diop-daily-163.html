@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Handshake Needs a Receipt — Diop Research</title>
+    <meta name="description" content="Agent protocols can establish contact while leaving institutions unable to prove what was requested, accepted, delivered, or corrected. The investable layer is an interoperability receipt plane for accountable machine handoffs."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry163">Diop Daily #163 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 7, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>agent interoperability · machine receipts · institutional trust</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Handshake Needs a Receipt</h1>
+
+                <p><em>Field note, November 7, 2026.</em> An agent can discover another agent, authenticate a request, and hand over a task while the receiving institution remains unable to answer the question that arrives later: what exactly happened at the boundary? The protocol may show that two machines exchanged messages. The institution needs a receipt that records what was requested, what was accepted, which authority applied, what was delivered, and where correction remains possible.</p>
+
+                <p>This is a small distinction with large consequences. A service record follows an agent through its institutional life. A protocol boundary defines the shared language through which systems meet. A receipt belongs to one handoff. It is the durable proof that a particular exchange created, changed, refused, or completed an obligation. The commercial object is therefore an interoperability receipt plane: infrastructure for making machine-to-machine work inspectable after the connection has ended.</p>
+
+                <blockquote>
+                    <p>A handshake proves that contact occurred. A receipt lets an institution decide what that contact means.</p>
+                </blockquote>
+
+                <h2>Protocols create motion; receipts create memory</h2>
+
+                <p>Google’s A2A work describes agents as collaborators rather than static tools. A receiving agent can protect its internal data, maintain its own state, push back on an incomplete request, ask a clarifying question, and return a result through a common interaction pattern. That architecture matters because it distributes specialized work across teams, vendors, and private runtimes.</p>
+
+                <p>Distribution also creates an accounting problem that API logs rarely solve. The requesting agent may record that it sent a task. The receiving agent may record that it completed a task. Those two logs can disagree about the task’s identity, the accepted scope, the evidence used, the version that acted, the meaning of completion, or the authority that can reopen the case. A network trace can show packets. It cannot by itself establish that the obligation represented by those packets was fulfilled.</p>
+
+                <p>The receipt is the boundary object that joins the two perspectives. It should be created at acceptance, updated through material state changes, and closed only when the result has been accepted, rejected, superseded, or placed into a defined recovery path. The receipt can point to large evidence without copying every private input into a shared system. Its job is to preserve the claim and the proof needed to inspect that claim.</p>
+
+                <p>For a research handoff, the receipt might state that an evidence agent accepted a request for sources in French, under a date limit, with a requirement to expose inaccessible pages rather than cite them. For a procurement handoff, it might state that a catalog agent returned three eligible offers, applied a spending ceiling, and stopped before purchase because merchant identity required review. For a public service, it might record that a case was classified, which rule was used, which language surface was presented, and which officer retains authority to decide.</p>
+
+                <h2>The receipt is a compact institutional witness</h2>
+
+                <p>W3C’s October 2026 work on the Web in the AI era describes a web in which agents act on content, move data across contexts, and interact with people and services. The paper places consent, delegation, privacy, liability, provenance, and human handoff inside the standards problem. W3C’s TPAC minutes make another separation explicit: identity identifies an actor, authentication proves who is acting, and authorization determines what that actor may do. Those distinctions are necessary, yet they still leave the result of the interaction to be represented.</p>
+
+                <p>A useful receipt should carry a bounded vocabulary:</p>
+
+                <ul>
+                    <li><strong>Principal and parties:</strong> the person, organization, public body, or agent on whose authority the exchange occurred, plus the receiving party;</li>
+                    <li><strong>Intent and scope:</strong> the task, terms, language, jurisdiction, time window, budget, and permitted actions that framed the handoff;</li>
+                    <li><strong>Acceptance:</strong> what the receiver agreed to do, what it refused, what clarification it requested, and which policy version governed the decision;</li>
+                    <li><strong>Evidence pointers:</strong> the sources, credentials, tool results, content fingerprints, or attestations that support the material claims;</li>
+                    <li><strong>Outcome state:</strong> delivered, partial, refused, expired, disputed, corrected, or awaiting an external event, with a stable reason code;</li>
+                    <li><strong>Remedy:</strong> who may reopen the exchange, how a correction is submitted, which authority receives an appeal, and what remains reversible.</li>
+                </ul>
+
+                <p>The list is intentionally practical. It gives an operator enough structure to distinguish a successful message exchange from a completed institutional act. It also makes the system honest about unfinished work. “Delivered” should mean that the receiver’s stated completion condition was met. “Partial” should identify the missing portion. “Refused” should preserve the reason. “Disputed” should keep the original receipt while linking the challenge. Memory becomes useful when it can hold an unresolved state without rewriting history to make the dashboard look clean.</p>
+
+                <h2>Pre-execution evidence changes the meaning of success</h2>
+
+                <p>An individual IETF Internet-Draft updated on October 26, 2026 proposes a JSON-based audit record with fields for agent identity, principal, action classification, outcome tracking, trust level, pre-execution recording, tamper-evident chaining, and export to JSONL, Syslog, or CSV. The draft is work in progress and carries no formal IETF endorsement. Its design direction is still instructive: an accountable record begins before the action, records the authority and intended operation, and remains verifiable after the system has moved on.</p>
+
+                <p>That timing matters. If a receipt is written only after an agent says “done,” it may become a polished narrative of success. A pre-execution receipt can preserve the proposed scope, the policy decision, the required evidence, and the condition that would count as completion. The system can then compare the promise with the event. The gap between them is where an institution learns whether a provider, agent, or local policy behaved as expected.</p>
+
+                <p>Pre-execution recording also supports safe refusal. A receiver can issue a receipt that says the request was understood, the proposed action was outside its authority, and the case was returned to a named principal. That refusal is useful institutional output. It prevents a lost handoff from looking like a network failure and gives the next operator a clear recovery point.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is an <strong>interoperability receipt plane</strong>: infrastructure that creates, signs, validates, stores, queries, exports, and corrects the receipts attached to agent handoffs. It sits between protocol runtimes and institutional records. It differs from a service registry, an identity provider, an observability dashboard, a workflow engine, a provenance label, or an accounting ledger because its unit of value is the bounded exchange and its changing obligation.</p>
+
+                <ul>
+                    <li><strong>Receipt contracts:</strong> schemas that define what must be recorded before acceptance, during execution, and at closure for a class of agent handoff;</li>
+                    <li><strong>Independent receipt services:</strong> recorders that remain outside the acting agent so a system cannot quietly rewrite its own evidence;</li>
+                    <li><strong>Conformance verifiers:</strong> tools that test whether a provider’s message, authority, evidence, and outcome fields satisfy the receiving institution’s contract;</li>
+                    <li><strong>Dispute and correction rails:</strong> systems that preserve the original exchange while attaching a challenge, correction, expiry, reversal, or human decision;</li>
+                    <li><strong>Portable receipt stores:</strong> exportable records that can move across providers, languages, jurisdictions, and local control planes without losing their semantic links.</li>
+                </ul>
+
+                <p>Underwriting should begin with the receipt, not the demo. Can the customer show the exact scope accepted at the boundary? Can a second operator determine what evidence supported the result without opening the vendor’s private console? Can the receiver prove which policy and authority it used? Can the parties disagree without destroying the original record? Can an affected person or institution locate the correction route? Can the receipt be exported into a local archive and verified without a live connection to the supplier?</p>
+
+                <p>These capabilities turn interoperability into an operational metric. A buyer can measure the percentage of handoffs with complete pre-execution scope, the time required to reconstruct a disputed result, the rate of receipts that close with unresolved fields, the share of corrections that preserve original evidence, and the cost of migrating the record to another provider. Those measures are closer to durable infrastructure value than a raw count of agent calls.</p>
+
+                <h2>Africa needs receipts that remain under African custody</h2>
+
+                <p>The African dimension is concrete. A November 3 report in <em>Biometric Update</em> described digital public infrastructure as a foundation for AI adoption and identified digital identity, payments, and secure data exchange as common pillars. The article also reported that 22 African countries had published national AI strategies while 21 more were drafting them, citing the African AI Governance Index tracker. Those figures describe policy activity. The harder question is whether institutions can preserve the records that make machine-mediated services accountable.</p>
+
+                <p>A university, hospital, publisher, telecom operator, archive, or public agency may use an external agent to cross a boundary while retaining responsibility for the result. If the receipt lives only in a supplier’s dashboard, the local institution cannot fully teach the transaction, audit the decision, prove a correction, or carry the history into a different provider. The result is a familiar dependency pattern: local institutions receive capability while the external platform retains the memory of authority.</p>
+
+                <p>Operational sovereignty begins when the institution can keep the receipt in its own archive, define the fields in languages its officers understand, set retention and redress rules, and verify a handoff without asking the supplier for permission. This does not require isolation from global protocols. It requires local custody of the evidence that turns a protocol exchange into a governable act.</p>
+
+                <h2>Issue the receipt before widening the boundary</h2>
+
+                <p>Choose one recurring handoff between two agents or between an agent and a human institution. Write the acceptance condition before writing the automation. Name the principal, scope, authority, evidence, language, jurisdiction, expiry, completion state, and correction route. Record the proposal before execution. Then test the boundary with an incomplete request, a revoked authority, a provider change, a disagreement about completion, and a correction after closure.</p>
+
+                <p>The design holds when an operator who was absent from the exchange can reconstruct what each party believed it was doing, what the institution accepted, what evidence supports the result, and who can still change the state. A protocol can carry the work across distance. The receipt carries responsibility across time.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog, “How A2A is Building a World of Collaborative Agents” (June 18, 2026). Describes dynamic agent collaboration, secure black-box handoffs, delegated workloads, clarifying questions, and the need for a common language between agents.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">W3C Strategy Team, “W3C and the State of the Web in the AI Era” (finalized October 20, 2026). Examines agents acting on the Web, consent, delegation, privacy, liability, provenance, human handoff, and the coexistence of browsers and agents.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/29-webai-minutes.html" target="_blank" rel="noopener">W3C Web &amp; AI Interest Group, TPAC 2026 meeting minutes (October 29, 2026). Distinguishes identity, authentication, and authorization, and records discussion of trust anchors, delegation, human control, and agent interaction on the Web.</a></li>
+                    <li><a href="https://datatracker.ietf.org/doc/draft-sharif-agent-audit-trail/" target="_blank" rel="noopener">Raza Sharif, “Agent Audit Trail: A Standard Logging Format for Autonomous AI Systems,” Internet-Draft draft-sharif-agent-audit-trail-09 (updated October 26, 2026). Work in progress, not an IETF-endorsed standard; proposes principal-bound records, pre-execution recording, outcomes, tamper-evident chaining, and portable export formats.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Agent Standards Initiative” (updated August 14, 2026). Describes standards, open protocols, agent authentication and identity research, and security evaluations for trusted interoperability.</a></li>
+                    <li><a href="https://www.biometricupdate.com/202611/africas-ai-ambitions-depend-on-stronger-digital-public-infrastructure-expert-says" target="_blank" rel="noopener">Biometric Update, “Africa’s AI ambitions depend on stronger digital public infrastructure, expert says” (November 3, 2026). Reports an African AI governance discussion linking AI adoption to digital identity, payments, secure data exchange, connectivity, electricity, computing, and institutional capacity.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Une poignée de main a besoin d’un reçu</h1>
+
+                <p><em>Note de terrain, 7 novembre 2026.</em> Un agent peut découvrir un autre agent, authentifier une demande et transférer une tâche tandis que l’institution réceptrice reste incapable de répondre à la question qui arrive plus tard : que s’est-il exactement passé à la frontière ? Le protocole peut montrer que deux machines ont échangé des messages. L’institution a besoin d’un reçu qui enregistre ce qui a été demandé, ce qui a été accepté, l’autorité appliquée, ce qui a été livré et le lieu où une correction reste possible.</p>
+
+                <p>Cette petite distinction entraîne de grandes conséquences. Un dossier de service suit un agent pendant sa vie institutionnelle. Une frontière protocolaire définit le langage partagé grâce auquel les systèmes se rencontrent. Un reçu appartient à un transfert précis. Il constitue la preuve durable qu’un échange particulier a créé, modifié, refusé ou achevé une obligation. L’objet commercial est donc un plan de contrôle des reçus d’interopérabilité : une infrastructure qui rend le travail entre machines inspectable après la fin de la connexion.</p>
+
+                <blockquote>
+                    <p>Une poignée de main prouve qu’un contact a eu lieu. Un reçu permet à une institution de décider ce que ce contact signifie.</p>
+                </blockquote>
+
+                <h2>Les protocoles créent le mouvement ; les reçus créent la mémoire</h2>
+
+                <p>Le travail de Google sur A2A décrit les agents comme des collaborateurs plutôt que comme des outils statiques. Un agent récepteur peut protéger ses données internes, conserver son propre état, résister à une demande incomplète, poser une question de clarification et retourner un résultat selon un modèle d’interaction commun. Cette architecture compte parce qu’elle distribue le travail spécialisé entre équipes, fournisseurs et runtimes privés.</p>
+
+                <p>La distribution crée aussi un problème de comptabilité que les journaux d’API ne résolvent pas toujours. L’agent demandeur peut enregistrer l’envoi d’une tâche. L’agent récepteur peut enregistrer l’achèvement d’une tâche. Ces deux journaux peuvent diverger sur l’identité de la tâche, le périmètre accepté, les preuves utilisées, la version qui a agi, le sens de l’achèvement ou l’autorité capable de rouvrir le dossier. Une trace réseau montre des paquets. Elle ne suffit pas à établir que l’obligation représentée par ces paquets a été remplie.</p>
+
+                <p>Le reçu est l’objet frontière qui relie les deux perspectives. Il devrait être créé lors de l’acceptation, mis à jour lors des changements importants d’état et clôturé seulement lorsque le résultat a été accepté, rejeté, remplacé ou placé dans un chemin de récupération défini. Le reçu peut pointer vers des preuves volumineuses sans copier chaque donnée privée dans un système partagé. Sa fonction est de conserver l’affirmation et les preuves nécessaires à son examen.</p>
+
+                <p>Pour un transfert de recherche, le reçu pourrait indiquer qu’un agent chargé des preuves a accepté une demande de sources en français, avec une limite de date et l’obligation de signaler les pages inaccessibles au lieu de les citer. Pour un transfert d’achat, il pourrait indiquer qu’un agent de catalogue a retourné trois offres éligibles, appliqué un plafond de dépense et interrompu l’achat parce que l’identité du commerçant devait être examinée. Pour un service public, il pourrait enregistrer la classification d’un dossier, la règle utilisée, la surface linguistique présentée et l’agent qui conserve l’autorité de décision.</p>
+
+                <h2>Le reçu est un témoin institutionnel compact</h2>
+
+                <p>Le travail du W3C en octobre 2026 sur le Web à l’ère de l’IA décrit un Web où les agents agissent sur les contenus, déplacent des données entre contextes et interagissent avec des personnes et des services. Le document place le consentement, la délégation, la vie privée, la responsabilité, la provenance et le passage à un humain dans le problème des standards. Les procès-verbaux du TPAC du W3C explicitent une autre séparation : l’identité identifie un acteur, l’authentification prouve qui agit et l’autorisation détermine ce que cet acteur peut faire. Ces distinctions sont nécessaires, mais elles laissent encore à représenter le résultat de l’interaction.</p>
+
+                <p>Un reçu utile devrait porter un vocabulaire borné :</p>
+
+                <ul>
+                    <li><strong>Mandant et parties :</strong> la personne, l’organisation, l’autorité publique ou l’agent au nom duquel l’échange a eu lieu, ainsi que la partie réceptrice ;</li>
+                    <li><strong>Intention et périmètre :</strong> la tâche, les conditions, la langue, la juridiction, la fenêtre temporelle, le budget et les actions permises qui encadraient le transfert ;</li>
+                    <li><strong>Acceptation :</strong> ce que le récepteur a accepté de faire, ce qu’il a refusé, la clarification demandée et la version de politique qui gouvernait la décision ;</li>
+                    <li><strong>Références de preuve :</strong> les sources, justificatifs, résultats d’outils, empreintes de contenu ou attestations qui soutiennent les affirmations importantes ;</li>
+                    <li><strong>État du résultat :</strong> livré, partiel, refusé, expiré, contesté, corrigé ou en attente d’un événement externe, avec un code de motif stable ;</li>
+                    <li><strong>Recours :</strong> qui peut rouvrir l’échange, comment une correction est déposée, quelle autorité reçoit un appel et ce qui reste réversible.</li>
+                </ul>
+
+                <p>La liste est volontairement pratique. Elle donne à l’opérateur assez de structure pour distinguer un échange de messages réussi d’un acte institutionnel achevé. Elle rend aussi le système honnête sur le travail inachevé. « Livré » devrait signifier que la condition d’achèvement annoncée par le récepteur a été remplie. « Partiel » devrait désigner la partie manquante. « Refusé » devrait conserver le motif. « Contesté » devrait garder le reçu original tout en liant la contestation. La mémoire devient utile lorsqu’elle peut conserver un état non résolu sans réécrire l’histoire pour que le tableau de bord paraisse propre.</p>
+
+                <h2>La preuve préalable change le sens de la réussite</h2>
+
+                <p>Un Internet-Draft individuel de l’IETF, mis à jour le 26 octobre 2026, propose un enregistrement d’audit JSON avec des champs pour l’identité de l’agent, le mandant, la classification de l’action, le suivi du résultat, le niveau de confiance, l’enregistrement préalable à l’exécution, le chaînage détectant les altérations et l’export vers JSONL, Syslog ou CSV. Le document est en cours d’élaboration et ne bénéficie d’aucune approbation formelle de l’IETF. Sa direction de conception reste instructive : un dossier responsable commence avant l’action, enregistre l’autorité et l’opération prévue, puis demeure vérifiable lorsque le système est passé à autre chose.</p>
+
+                <p>Le moment de l’enregistrement compte. Si le reçu est écrit seulement après que l’agent a déclaré « terminé », il peut devenir un récit poli de la réussite. Un reçu préalable à l’exécution peut conserver le périmètre proposé, la décision de politique, les preuves requises et la condition qui comptera comme achèvement. Le système peut ensuite comparer la promesse et l’événement. L’écart entre les deux est l’endroit où une institution apprend si un fournisseur, un agent ou une politique locale a agi comme prévu.</p>
+
+                <p>L’enregistrement préalable soutient aussi le refus sûr. Un récepteur peut émettre un reçu indiquant que la demande a été comprise, que l’action proposée dépassait son autorité et que le dossier a été renvoyé à un mandant nommé. Ce refus constitue une sortie institutionnelle utile. Il empêche qu’un transfert perdu ressemble à une panne réseau et donne au prochain opérateur un point de reprise clair.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de contrôle des reçus d’interopérabilité</strong> : une infrastructure qui crée, signe, valide, conserve, interroge, exporte et corrige les reçus attachés aux transferts entre agents. Elle se situe entre les runtimes protocolaires et les registres institutionnels. Elle se distingue d’un registre de services, d’un fournisseur d’identité, d’un tableau d’observabilité, d’un moteur de workflow, d’un label de provenance ou d’un registre comptable, car son unité de valeur est l’échange borné et l’obligation qui évolue.</p>
+
+                <ul>
+                    <li><strong>Contrats de reçu :</strong> schémas qui définissent ce qui doit être enregistré avant l’acceptation, pendant l’exécution et à la clôture d’un type de transfert agentique ;</li>
+                    <li><strong>Services de reçus indépendants :</strong> enregistreurs qui restent à l’extérieur de l’agent agissant afin qu’un système ne puisse pas réécrire silencieusement ses propres preuves ;</li>
+                    <li><strong>Vérificateurs de conformité :</strong> outils qui testent si les champs de message, d’autorité, de preuve et de résultat d’un fournisseur respectent le contrat de l’institution réceptrice ;</li>
+                    <li><strong>Rails de contestation et de correction :</strong> systèmes qui conservent l’échange initial tout en y attachant une contestation, une correction, une expiration, une inversion ou une décision humaine ;</li>
+                    <li><strong>Magasins de reçus portables :</strong> dossiers exportables capables de franchir fournisseurs, langues, juridictions et plans de contrôle locaux sans perdre leurs liens sémantiques.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par le reçu, et non par la démonstration. Le client peut-il montrer le périmètre exact accepté à la frontière ? Un second opérateur peut-il déterminer quelles preuves soutenaient le résultat sans ouvrir la console privée du fournisseur ? Le récepteur peut-il prouver quelle politique et quelle autorité il a utilisées ? Les parties peuvent-elles être en désaccord sans détruire le dossier original ? Une personne ou une institution touchée peut-elle trouver le chemin de correction ? Le reçu peut-il être exporté vers une archive locale et vérifié sans connexion active au fournisseur ?</p>
+
+                <p>Ces capacités transforment l’interopérabilité en métrique opérationnelle. Un acheteur peut mesurer le pourcentage de transferts dont le périmètre préalable est complet, le temps nécessaire pour reconstruire un résultat contesté, le taux de reçus clôturés avec des champs non résolus, la part des corrections qui conservent les preuves originales et le coût de migration du dossier vers un autre fournisseur. Ces mesures sont plus proches de la valeur d’une infrastructure durable que le simple nombre d’appels d’agents.</p>
+
+                <h2>L’Afrique a besoin de reçus qui restent sous contrôle africain</h2>
+
+                <p>La dimension africaine est concrète. Un article publié le 3 novembre dans <em>Biometric Update</em> décrit l’infrastructure publique numérique comme un fondement de l’adoption de l’IA et identifie l’identité numérique, les paiements et l’échange sécurisé de données comme des piliers courants. L’article rapporte également que 22 pays africains avaient publié une stratégie nationale d’IA et que 21 autres en rédigeaient une, en citant le suivi de l’African AI Governance Index. Ces chiffres décrivent une activité politique. La question plus difficile est de savoir si les institutions peuvent conserver les dossiers qui rendent les services médiés par machine responsables.</p>
+
+                <p>Une université, un hôpital, un éditeur, un opérateur télécom, une archive ou une agence publique peut utiliser un agent externe pour franchir une frontière tout en conservant la responsabilité du résultat. Si le reçu ne vit que dans le tableau de bord d’un fournisseur, l’institution locale ne peut pas pleinement enseigner la transaction, auditer la décision, prouver une correction ou transporter l’historique vers un autre fournisseur. Le résultat reproduit une dépendance familière : les institutions locales reçoivent la capacité tandis que la plateforme externe conserve la mémoire de l’autorité.</p>
+
+                <p>La souveraineté opérationnelle commence lorsque l’institution peut conserver le reçu dans sa propre archive, définir les champs dans les langues comprises par ses agents, fixer les règles de conservation et de recours, puis vérifier un transfert sans demander l’autorisation du fournisseur. Il ne s’agit pas de s’isoler des protocoles mondiaux. Il s’agit de garder localement les preuves qui transforment un échange protocolaire en acte gouvernable.</p>
+
+                <h2>Émettre le reçu avant d’élargir la frontière</h2>
+
+                <p>Choisissez un transfert récurrent entre deux agents ou entre un agent et une institution humaine. Rédigez la condition d’acceptation avant d’écrire l’automatisation. Nommez le mandant, le périmètre, l’autorité, les preuves, la langue, la juridiction, l’expiration, l’état d’achèvement et le chemin de correction. Enregistrez la proposition avant l’exécution. Testez ensuite la frontière avec une demande incomplète, une autorité révoquée, un changement de fournisseur, un désaccord sur l’achèvement et une correction après clôture.</p>
+
+                <p>La conception tient lorsqu’un opérateur absent de l’échange peut reconstruire ce que chaque partie croyait faire, ce que l’institution a accepté, quelles preuves soutiennent le résultat et qui peut encore modifier l’état. Un protocole transporte le travail à travers la distance. Le reçu transporte la responsabilité à travers le temps.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/how-a2a-is-building-a-world-of-collaborative-agents/" target="_blank" rel="noopener">Google Developers Blog, « How A2A is Building a World of Collaborative Agents » (18 juin 2026). Décrit la collaboration dynamique entre agents, les transferts sécurisés en boîte noire, la distribution des tâches, les questions de clarification et le besoin d’un langage commun entre agents.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">Équipe stratégique du W3C, « W3C and the State of the Web in the AI Era » (finalisé le 20 octobre 2026). Examine l’action des agents sur le Web, le consentement, la délégation, la vie privée, la responsabilité, la provenance, le passage à un humain et la coexistence des navigateurs et des agents.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/29-webai-minutes.html" target="_blank" rel="noopener">Groupe d’intérêt Web et IA du W3C, procès-verbal de la réunion TPAC 2026 (29 octobre 2026). Distingue identité, authentification et autorisation, et consigne les discussions sur les ancres de confiance, la délégation, le contrôle humain et l’interaction des agents sur le Web.</a></li>
+                    <li><a href="https://datatracker.ietf.org/doc/draft-sharif-agent-audit-trail/" target="_blank" rel="noopener">Raza Sharif, « Agent Audit Trail: A Standard Logging Format for Autonomous AI Systems », Internet-Draft draft-sharif-agent-audit-trail-09 (mis à jour le 26 octobre 2026). Document en cours, sans approbation de l’IETF ; propose des dossiers liés au mandant, un enregistrement préalable à l’exécution, des résultats, une chaîne à évidence de falsification et des formats d’export portables.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Agent Standards Initiative » (mise à jour du 14 août 2026). Décrit les standards, les protocoles ouverts, la recherche sur l’authentification et l’identité des agents, ainsi que les évaluations de sécurité destinées à une interopérabilité digne de confiance.</a></li>
+                    <li><a href="https://www.biometricupdate.com/202611/africas-ai-ambitions-depend-on-stronger-digital-public-infrastructure-expert-says" target="_blank" rel="noopener">Biometric Update, « Africa’s AI ambitions depend on stronger digital public infrastructure, expert says » (3 novembre 2026). Rapporte une discussion sur la gouvernance africaine de l’IA reliant son adoption à l’identité numérique, aux paiements, à l’échange sécurisé des données, à la connectivité, à l’électricité, au calcul et à la capacité institutionnelle.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
