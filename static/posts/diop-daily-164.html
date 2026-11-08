@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>What the Student Can Prove — Diop Research</title>
+    <meta name="description" content="As AI enters education and early-career work, the scarce asset is credible evidence of human capability: how a learner frames a problem, uses tools, checks a result, and revises under constraint. The investable layer is a portable capability record that makes judgment visible without turning education into surveillance."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry164">Diop Daily #164 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 8, 2026</time>
+                    <span>·</span>
+                    <span data-rt="8">8 min read</span>
+                    <span>·</span>
+                    <span>capability evidence · AI education · portable proof</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">What the Student Can Prove</h1>
+
+                <p><em>Field note, November 8, 2026.</em> The transcript is losing its monopoly as the public proof of learning. As machines become capable of drafting, coding, searching and explaining, a degree or course grade carries less information about how a person thinks under real conditions. The question moving through universities and employers is therefore precise: what can the learner prove that survived the tool?</p>
+
+                <p>The answer will shape the next education market. A student who can produce a polished answer with an AI assistant has demonstrated access to a tool. A student who can define a problem, choose evidence, expose uncertainty, direct a machine, inspect its output, correct a failure and explain the trade-off has demonstrated a capability that can travel into work. That distinction is the basis for a new institutional object: a portable capability record.</p>
+
+                <blockquote>
+                    <p>The useful credential is the part of the work that remains intelligible after the tool has changed.</p>
+                </blockquote>
+
+                <h2>AI changes what a grade is allowed to mean</h2>
+
+                <p>The World Economic Forum’s June 2026 report on entry-level work describes a labour market in which early-career roles are exposed to faster skill change than more senior roles. Its findings connect AI adoption to a difficult trade-off: organizations can gain short-term productivity while weakening the work through which people ordinarily build judgment. The report calls for capability-based talent development and closer alignment between employers, educators and policy-makers.</p>
+
+                <p>OpenAI’s November account of Australian universities describes a related transition from the campus side. Its survey of more than 1,000 Australian university students found frequent AI use, strong interest in real-world projects and substantial demand for opportunities to work with advanced tools. The article also describes universities developing rules for AI in learning and assessment, including decisions about when students should rely on their own judgment.</p>
+
+                <p>These are institutional signals, not proof that one model of education has won. They do establish a design pressure. If the tool can produce the visible surface of an assignment, assessment must move closer to the decisions that produced the assignment. The learner must be able to show how a claim was scoped, which sources were rejected, where the machine was corrected, and what changed between the first attempt and the submitted work.</p>
+
+                <h2>A capability record follows the decisions</h2>
+
+                <p>UNESCO’s AI Competency Framework for Students gives this shift a useful public vocabulary. It organizes twelve competency blocks across a human-centred mindset, ethics of AI, AI techniques and applications, and AI system design, with progression from Understand to Apply to Create. The framework also stresses critical judgment, human accountability, inclusive design and the ability to connect AI concepts to real problems.</p>
+
+                <p>The framework is a curriculum reference. The capability record is the evidence layer that lets a curriculum become legible beyond the classroom. It should preserve the decisions that make a piece of work trustworthy:</p>
+
+                <ul>
+                    <li><strong>Problem framing:</strong> what the learner was asked to solve, what constraints mattered, and why AI was appropriate for only part of the task;</li>
+                    <li><strong>Evidence selection:</strong> which sources, data, experiments or observations were used, with enough provenance for another person to inspect the choice;</li>
+                    <li><strong>Tool direction:</strong> what the learner asked a model or software system to do, which permissions were granted, and which outputs were treated as suggestions rather than conclusions;</li>
+                    <li><strong>Human judgment:</strong> the points at which the learner accepted, rejected, corrected or reframed a machine contribution;</li>
+                    <li><strong>Revision under pressure:</strong> what failed, how the failure was diagnosed, and whether the final result became more accurate or merely more polished;</li>
+                    <li><strong>Transfer:</strong> how the learner would adapt the method to a new domain, language, audience or resource constraint.</li>
+                </ul>
+
+                <p>This record is not a demand for an exhaustive surveillance log. A school does not need to capture every keystroke, and an employer does not need to own every draft. The record should preserve the smallest set of decisions required to make the capability credible. It should be inspectable by the learner, explainable to a reviewer, exportable across institutions and correctable when the evidence has been misunderstood.</p>
+
+                <h2>The learner must own the proof</h2>
+
+                <p>Ownership is the line between a capability record and a new form of institutional extraction. If the record exists only in a university platform or an employer’s assessment vendor, the learner receives a score while the platform retains the history of how the score was made. That arrangement makes mobility fragile. A person changing countries, languages, institutions or industries may have to begin again because the evidence of their work cannot leave the system that graded it.</p>
+
+                <p>A portable record changes the relationship. It can carry a project brief, a selected evidence set, a revision history, an evaluator’s bounded claim, and the learner’s own explanation of the decision. It can expose uncertainty instead of manufacturing a single confidence number. It can preserve multiple languages and local context. It can also keep private material out of the public record while retaining a verifiable claim that a supervised task was completed.</p>
+
+                <p>This matters especially for African education systems and diasporic learners who move across linguistic, institutional and labour-market boundaries. A certificate that travels only as a name and date asks the receiving institution to trust a distant label. A capability record lets the learner carry evidence of work in French, English, Wolof, Arabic or another local language, then show how the method transfers. Intellectual sovereignty begins in this practical form: people retain the right to carry the proof of what they know and can do.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is a <strong>capability evidence layer</strong> for education and early-career work. It sits between learning environments, assessment systems and employers. Its unit of value is a bounded, reviewable proof of a human capability, rather than a model call, a course completion badge or a database of student activity.</p>
+
+                <ul>
+                    <li><strong>Evidence workspaces:</strong> environments that capture problem framing, sources, tool use, revisions and reviewer comments without storing more personal data than the claim requires;</li>
+                    <li><strong>Portable assessment packages:</strong> signed, exportable bundles that let a learner present a project and its evidence to another university, employer or public programme;</li>
+                    <li><strong>Capability evaluators:</strong> tools that assess reasoning, evidence handling, communication, technical execution and correction under a declared rubric, with human review where the claim is consequential;</li>
+                    <li><strong>Multilingual proof systems:</strong> records and assessment interfaces that preserve meaning across languages instead of treating English fluency as a proxy for general capability;</li>
+                    <li><strong>Institutional adapters:</strong> connectors that translate a school’s curriculum, a university’s assessment policy or an employer’s role profile into evidence requirements without forcing every institution into one vendor’s taxonomy.</li>
+                </ul>
+
+                <p>These businesses will be judged by harder measures than the number of learners enrolled. A serious buyer will ask whether a reviewer can reproduce the claim, whether the learner can correct an inaccurate interpretation, whether the record survives a provider change, whether assessment quality remains stable across languages and whether the system rewards independent judgment instead of fluent dependence on a model. The revenue-bearing infrastructure will be the part that lowers the cost of making a capability trustworthy.</p>
+
+                <h2>Build the smallest honest proof</h2>
+
+                <p>An institution can begin with one recurring project rather than redesigning its entire curriculum. Define the capability to be observed. Give the learner a problem with real constraints. Permit specified AI assistance. Require the learner to disclose the tool’s role, cite the evidence, identify one uncertainty and show one revision after critique. Let a reviewer inspect the work through a stable rubric. Give the learner the resulting package in a format they can keep.</p>
+
+                <p>The first test is simple: can a person who was absent from the classroom understand what the learner decided, what the machine contributed, what evidence supports the result and where judgment entered the chain? The second test is more political: can the learner take that proof elsewhere without asking a platform for permission? A capability that cannot travel remains dependent on the institution that named it.</p>
+
+                <p>Education will continue to issue degrees. Employers will continue to use titles. Those labels remain useful as social and institutional signals. Their meaning becomes stronger when they are accompanied by evidence that a learner can reason, build, verify and recover in conditions where tools are available but authority still belongs to a person.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.weforum.org/publications/artificial-intelligence-and-the-future-of-entry-level-work-a-framework-for-safeguarding-and-reinventing-early-career-pathways" target="_blank" rel="noopener">World Economic Forum, “Artificial Intelligence and the Future of Entry-Level Work: A Framework for Safeguarding and Reinventing Early Career Pathways” (June 22, 2026). Reports faster skill change in AI-exposed entry-level work and calls for capability-based talent development and stronger education–employer alignment.</a></li>
+                    <li><a href="https://openai.com/index/australian-universities-ai-native-graduates/" target="_blank" rel="noopener">OpenAI, “Australian universities are creating AI-native graduates” (2026). Describes university collaborations, real-world AI projects, assessment frameworks and a survey of more than 1,000 Australian university students on AI use and career readiness.</a></li>
+                    <li><a href="https://www.unesco.org/en/articles/ai-competency-framework-students" target="_blank" rel="noopener">UNESCO, “AI competency framework for students.” Defines twelve competencies across human-centred mindset, ethics of AI, AI techniques and applications, and AI system design, with progression from Understand to Apply to Create.</a></li>
+                    <li><a href="https://unesdoc.unesco.org/ark:/48223/pf0000391105/PDF/391105eng.pdf.multi" target="_blank" rel="noopener">UNESCO, <em>AI competency framework for students</em> (full text). Specifies competency-based assessment, local adaptation, human accountability, critical evaluation of AI tools and inclusive, sustainable design.</a></li>
+                </ul>
+
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Ce que l’étudiant peut prouver</h1>
+
+                <p><em>Note de terrain, 8 novembre 2026.</em> Le relevé de notes perd son monopole comme preuve publique de l’apprentissage. À mesure que les machines deviennent capables de rédiger, coder, chercher et expliquer, un diplôme ou une note de cours renseigne moins sur la manière dont une personne pense dans des conditions réelles. La question qui traverse les universités et les employeurs devient donc précise : que peut prouver l’apprenant après le passage de l’outil ?</p>
+
+                <p>La réponse dessinera le prochain marché de l’éducation. Un étudiant qui produit une réponse soignée avec un assistant IA a démontré l’accès à un outil. Un étudiant qui sait définir un problème, choisir des preuves, exposer l’incertitude, diriger une machine, inspecter son résultat, corriger une erreur et expliquer un compromis a démontré une capacité transportable vers le travail. Cette distinction fonde un nouvel objet institutionnel : un dossier portable de capacités.</p>
+
+                <blockquote>
+                    <p>Le diplôme utile est la part du travail qui reste intelligible après le changement d’outil.</p>
+                </blockquote>
+
+                <h2>L’IA change ce qu’une note peut signifier</h2>
+
+                <p>Le rapport du Forum économique mondial publié en juin 2026 sur le travail en début de carrière décrit un marché du travail où les postes de débutants sont exposés à une évolution des compétences plus rapide que les postes plus avancés. Ses conclusions relient l’adoption de l’IA à un compromis difficile : une organisation peut obtenir une productivité immédiate tout en affaiblissant le travail par lequel les personnes construisent ordinairement leur jugement. Le rapport appelle à un développement des talents fondé sur les capacités et à un rapprochement entre employeurs, établissements éducatifs et responsables publics.</p>
+
+                <p>Le bilan publié par OpenAI en novembre sur les universités australiennes décrit une transition analogue du côté des campus. Son enquête auprès de plus de 1 000 étudiants universitaires australiens révèle un usage fréquent de l’IA, un intérêt marqué pour les projets réels et une forte demande d’occasions de travailler avec des outils avancés. L’article décrit aussi des universités qui élaborent des règles pour l’IA dans l’apprentissage et l’évaluation, notamment pour déterminer les moments où les étudiants doivent s’appuyer sur leur propre jugement.</p>
+
+                <p>Ces éléments sont des signaux institutionnels, non la preuve qu’un modèle d’éducation a gagné. Ils établissent une pression de conception. Si l’outil peut produire la surface visible d’un devoir, l’évaluation doit se rapprocher des décisions qui ont produit ce devoir. L’apprenant doit pouvoir montrer comment une affirmation a été délimitée, quelles sources ont été écartées, où la machine a été corrigée et ce qui a changé entre la première tentative et le travail remis.</p>
+
+                <h2>Un dossier de capacités suit les décisions</h2>
+
+                <p>Le Cadre de compétences en IA pour les élèves de l’UNESCO donne à cette évolution un vocabulaire public utile. Il organise douze blocs de compétences autour d’une approche centrée sur l’humain, de l’éthique de l’IA, des techniques et applications de l’IA et de la conception des systèmes d’IA, avec une progression de Comprendre à Appliquer puis Créer. Le cadre insiste également sur le jugement critique, la responsabilité humaine, la conception inclusive et la capacité à relier les concepts de l’IA à des problèmes réels.</p>
+
+                <p>Le cadre est une référence curriculaire. Le dossier de capacités est la couche de preuve qui rend un programme lisible au-delà de la salle de classe. Il devrait conserver les décisions qui rendent un travail digne de confiance :</p>
+
+                <ul>
+                    <li><strong>Formulation du problème :</strong> ce que l’apprenant devait résoudre, les contraintes importantes et la raison pour laquelle l’IA ne convenait qu’à une partie de la tâche ;</li>
+                    <li><strong>Sélection des preuves :</strong> les sources, données, expériences ou observations utilisées, avec une provenance suffisante pour qu’une autre personne puisse examiner le choix ;</li>
+                    <li><strong>Direction de l’outil :</strong> ce que l’apprenant a demandé à un modèle ou à un logiciel, les permissions accordées et les résultats traités comme des suggestions plutôt que comme des conclusions ;</li>
+                    <li><strong>Jugement humain :</strong> les moments où l’apprenant a accepté, rejeté, corrigé ou reformulé une contribution de la machine ;</li>
+                    <li><strong>Révision sous contrainte :</strong> ce qui a échoué, la manière dont l’échec a été diagnostiqué et la question de savoir si le résultat final est devenu plus exact ou seulement plus poli ;</li>
+                    <li><strong>Transfert :</strong> la manière dont l’apprenant adapterait la méthode à un nouveau domaine, une autre langue, un autre public ou une contrainte de ressources différente.</li>
+                </ul>
+
+                <p>Ce dossier n’exige pas un journal de surveillance exhaustif. Une école n’a pas besoin de capturer chaque frappe, et un employeur n’a pas besoin de posséder chaque brouillon. Le dossier doit conserver le plus petit ensemble de décisions nécessaire pour rendre la capacité crédible. Il doit être inspectable par l’apprenant, explicable à un évaluateur, exportable entre institutions et corrigeable lorsqu’une preuve a été mal comprise.</p>
+
+                <h2>L’apprenant doit posséder la preuve</h2>
+
+                <p>La propriété sépare le dossier de capacités d’une nouvelle forme d’extraction institutionnelle. Si le dossier existe seulement dans une plateforme universitaire ou chez un prestataire d’évaluation utilisé par l’employeur, l’apprenant reçoit une note tandis que la plateforme conserve l’histoire de sa fabrication. Cette organisation rend la mobilité fragile. Une personne qui change de pays, de langue, d’établissement ou de secteur peut devoir recommencer parce que les preuves de son travail ne peuvent pas quitter le système qui l’a évaluée.</p>
+
+                <p>Un dossier portable change cette relation. Il peut contenir un énoncé de projet, un ensemble de preuves sélectionnées, un historique des révisions, l’affirmation bornée d’un évaluateur et l’explication que l’apprenant donne de sa décision. Il peut exposer l’incertitude au lieu de fabriquer un chiffre unique de confiance. Il peut préserver plusieurs langues et le contexte local. Il peut aussi maintenir les éléments privés hors du registre public tout en conservant une affirmation vérifiable selon laquelle une tâche encadrée a été accomplie.</p>
+
+                <p>Cette question est particulièrement concrète pour les systèmes éducatifs africains et les apprenants de la diaspora qui traversent des frontières linguistiques, institutionnelles et professionnelles. Un certificat qui ne voyage que comme un nom et une date demande à l’établissement d’accueil de croire une étiquette lointaine. Un dossier de capacités permet à l’apprenant de transporter la preuve d’un travail en français, en anglais, en wolof, en arabe ou dans une autre langue locale, puis de montrer comment la méthode se transfère. La souveraineté intellectuelle commence sous cette forme pratique : les personnes conservent le droit d’emporter la preuve de ce qu’elles savent et savent faire.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est une <strong>couche de preuve des capacités</strong> pour l’éducation et le début des carrières. Elle se place entre les environnements d’apprentissage, les systèmes d’évaluation et les employeurs. Son unité de valeur est une preuve délimitée et révisable d’une capacité humaine, plutôt qu’un appel de modèle, un badge de fin de cours ou une base d’activité étudiante.</p>
+
+                <ul>
+                    <li><strong>Espaces de travail probants :</strong> environnements qui capturent la formulation du problème, les sources, l’usage des outils, les révisions et les commentaires des évaluateurs sans stocker plus de données personnelles que ne l’exige l’affirmation ;</li>
+                    <li><strong>Paquets d’évaluation portables :</strong> ensembles signés et exportables permettant à un apprenant de présenter un projet et ses preuves à une autre université, à un employeur ou à un programme public ;</li>
+                    <li><strong>Évaluateurs de capacités :</strong> outils qui évaluent le raisonnement, le traitement des preuves, la communication, l’exécution technique et la correction selon une grille déclarée, avec une revue humaine lorsque l’affirmation est importante ;</li>
+                    <li><strong>Systèmes de preuve multilingues :</strong> dossiers et interfaces d’évaluation qui préservent le sens entre les langues au lieu de traiter l’aisance en anglais comme un substitut à la capacité générale ;</li>
+                    <li><strong>Adaptateurs institutionnels :</strong> connecteurs qui traduisent le programme d’une école, la politique d’évaluation d’une université ou le profil d’un poste en exigences de preuve sans forcer chaque institution à adopter la taxonomie d’un seul fournisseur.</li>
+                </ul>
+
+                <p>Ces entreprises seront jugées par des mesures plus difficiles que le nombre d’apprenants inscrits. Un acheteur sérieux demandera si un évaluateur peut reproduire l’affirmation, si l’apprenant peut corriger une interprétation inexacte, si le dossier survit à un changement de fournisseur, si la qualité de l’évaluation reste stable entre les langues et si le système récompense le jugement indépendant plutôt qu’une dépendance fluide au modèle. L’infrastructure génératrice de revenus sera celle qui réduit le coût nécessaire pour rendre une capacité digne de confiance.</p>
+
+                <h2>Construire la plus petite preuve honnête</h2>
+
+                <p>Une institution peut commencer par un projet récurrent au lieu de refondre tout son programme. Définissez la capacité à observer. Donnez à l’apprenant un problème soumis à de vraies contraintes. Autorisez une assistance IA déterminée. Demandez à l’apprenant de déclarer le rôle de l’outil, de citer les preuves, d’identifier une incertitude et de montrer une révision après critique. Laissez un évaluateur examiner le travail au moyen d’une grille stable. Remettez à l’apprenant le paquet obtenu dans un format qu’il peut conserver.</p>
+
+                <p>Le premier test est simple : une personne absente de la salle de classe peut-elle comprendre ce que l’apprenant a décidé, ce que la machine a apporté, quelles preuves soutiennent le résultat et où le jugement est entré dans la chaîne ? Le second test est plus politique : l’apprenant peut-il emporter cette preuve ailleurs sans demander la permission d’une plateforme ? Une capacité qui ne voyage pas reste dépendante de l’institution qui l’a nommée.</p>
+
+                <p>L’éducation continuera à délivrer des diplômes. Les employeurs continueront à utiliser des intitulés. Ces labels restent utiles comme signaux sociaux et institutionnels. Leur sens devient plus fort lorsqu’ils sont accompagnés de preuves qu’un apprenant sait raisonner, construire, vérifier et récupérer dans des conditions où les outils sont disponibles mais où l’autorité appartient encore à une personne.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.weforum.org/publications/artificial-intelligence-and-the-future-of-entry-level-work-a-framework-for-safeguarding-and-reinventing-early-career-pathways" target="_blank" rel="noopener">Forum économique mondial, « Artificial Intelligence and the Future of Entry-Level Work: A Framework for Safeguarding and Reinventing Early Career Pathways » (22 juin 2026). Décrit l’évolution plus rapide des compétences dans les postes de début de carrière exposés à l’IA et appelle à un développement des talents fondé sur les capacités ainsi qu’à un meilleur alignement entre éducation et employeurs.</a></li>
+                    <li><a href="https://openai.com/index/australian-universities-ai-native-graduates/" target="_blank" rel="noopener">OpenAI, « Australian universities are creating AI-native graduates » (2026). Décrit des collaborations universitaires, des projets IA réels, des cadres d’évaluation et une enquête auprès de plus de 1 000 étudiants universitaires australiens sur l’usage de l’IA et la préparation professionnelle.</a></li>
+                    <li><a href="https://www.unesco.org/en/articles/ai-competency-framework-students" target="_blank" rel="noopener">UNESCO, « AI competency framework for students ». Définit douze compétences autour d’une approche centrée sur l’humain, de l’éthique de l’IA, des techniques et applications de l’IA et de la conception des systèmes d’IA, avec une progression de Comprendre à Appliquer puis Créer.</a></li>
+                    <li><a href="https://unesdoc.unesco.org/ark:/48223/pf0000391105/PDF/391105eng.pdf.multi" target="_blank" rel="noopener">UNESCO, <em>AI competency framework for students</em> (texte intégral). Précise l’évaluation fondée sur les compétences, l’adaptation locale, la responsabilité humaine, l’évaluation critique des outils IA et une conception inclusive et durable.</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

@@ -193,6 +193,7 @@
         'article.entry162':     { en: 'Diop Daily #162 — November 2026', fr: 'Diop Quotidien n°162 — Novembre 2026' },
         'article.entry158':     { en: 'Diop Daily #158 — November 2026', fr: 'Diop Quotidien n°158 — Novembre 2026' },
         'article.entry157':     { en: 'Diop Daily #157 — November 2026', fr: 'Diop Quotidien n°157 — Novembre 2026' },
+        'article.entry164':     { en: 'Diop Daily #164 — November 2026', fr: 'Diop Quotidien n°164 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -205,6 +206,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-164': {
+        title: {
+            en: 'What the Student Can Prove',
+            fr: 'Ce que l’étudiant peut prouver'
+        },
+        excerpt: {
+            en: 'As AI enters education and early-career work, the scarce asset is credible evidence of human capability: how a learner frames a problem, uses tools, checks a result, and revises under constraint. The investable layer is a portable capability record that makes judgment visible without turning education into surveillance.',
+            fr: 'À mesure que l’IA entre dans l’éducation et le début des carrières, l’actif rare devient la preuve crédible d’une capacité humaine : la manière dont l’apprenant formule un problème, utilise des outils, vérifie un résultat et révise sous contrainte. La couche d’investissement est un dossier portable de capacités qui rend le jugement visible sans transformer l’éducation en surveillance.'
+        }
+    },
     'diop-daily-163': {
         title: {
             en: 'A Handshake Needs a Receipt',
