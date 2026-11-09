@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Model Needs a Site Plan — Diop Research</title>
+    <meta name="description" content="AI readiness is becoming a question of where computation can stand: the electricity, cooling, connectivity, local data, and recovery conditions that let a model serve an institution. The investable layer is an AI-ready site plane for modular, grid-aware, locally governable compute."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry165">Diop Daily #165 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 9, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>AI infrastructure · modular compute · African sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Model Needs a Site Plan</h1>
+
+                <p><em>Field note, November 9, 2026.</em> The next AI bottleneck is geographic. A model may be available through an API, a public endpoint, or a rented GPU, yet deployment still depends on a place that can absorb its electricity draw, cool its hardware, carry its data, preserve its latency, and recover when one of those conditions fails. The site plan is becoming part of the AI product.</p>
+
+                <p>Recent public evidence makes the shift visible. The International Energy Agency’s 2026 analysis says data-centre electricity use rose 17% in 2025, while AI-focused centres grew faster than global electricity demand. It expects total data-centre consumption to double by 2030 and notes that energy-intensive uses, including AI agents, are increasing even as power per task falls. The World Bank’s October digital strategy reports that Sub-Saharan Africa holds 18% of the world’s population but only 0.6% of global data-centre capacity, with 5% of those facilities AI-ready. A United Nations Economic Commission for Africa account of an April ministerial roundtable connects local processing and “AI factories” with reliable energy, long-term finance, and shared data infrastructure.</p>
+
+                <blockquote>
+                    <p>A model’s intelligence is portable; its operating conditions are not.</p>
+                </blockquote>
+
+                <h2>The site is part of the model</h2>
+
+                <p>AI infrastructure is often described as a stack that ends at the model endpoint. That description hides the material boundary where intelligence becomes service. A production workload meets a power envelope, a cooling system, a network path, a storage regime, a jurisdiction, a maintenance team, and a recovery plan. Each condition changes what the model can safely do.</p>
+
+                <p>Consider a multilingual public-service assistant operating in a region with intermittent connectivity. Its quality depends on more than model weights. The system needs a local cache for approved knowledge, a queue for delayed requests, a way to preserve the user’s language, and a fallback model that can run when the preferred route is unavailable. A hospital support tool needs power quality and maintenance discipline. A research laboratory needs data locality, reproducible environments, and a record of which hardware and software produced a result. A publisher needs enough capacity to render, translate, archive, and distribute work without making every local operation dependent on a remote console.</p>
+
+                <p>The site therefore carries semantics. It tells an institution where data is processed, which obligations apply, how quickly a task can respond, what happens during an outage, and which operator can intervene. Location functions as a runtime parameter, and the site plan records it before deployment.</p>
+
+                <h2>Scale is the wrong first question</h2>
+
+                <p>The public conversation often begins with the size of the data centre or the number of GPUs. For many African institutions, the more useful question is whether a smaller, shared, properly governed site can make a specific class of work reliable. The World Bank’s new AI Infrastructure and Readiness Initiative proposes shared, pay-as-you-go GPU infrastructure for emerging markets, with an initial focus on Africa and Latin America. Its design recognizes a practical fact: access to useful compute can begin through shared capacity rather than a standalone national facility.</p>
+
+                <p>The AfDB’s KOAFEC action plan points in a related direction through modular data centres tailored to local conditions. Modularity changes the investment object. A site can be expanded as demand, power, and skills become available; it can be placed near a university, hospital, public agency, or industrial corridor; and it can be connected to regional capacity when local hardware reaches its limit. The goal is a chain of sites that can cooperate, not one monument that concentrates every expectation.</p>
+
+                <p>Four site questions should be answered before a workload is called deployable:</p>
+
+                <ul>
+                    <li><strong>Power:</strong> what sustained and peak load can the site carry, and how does the workload behave when the grid or generator changes state?</li>
+                    <li><strong>Connectivity:</strong> which operations require the wide network, which can run locally, and how are requests queued when the link is impaired?</li>
+                    <li><strong>Locality:</strong> which data, language resources, policies, and logs must remain under local or regional control?</li>
+                    <li><strong>Recovery:</strong> which models, caches, storage copies, operators, and neighboring sites can keep the service useful after a component fails?</li>
+                </ul>
+
+                <p>These questions turn infrastructure from a procurement category into a capability claim. A site that answers them can be compared, improved, and financed. A site that cannot answer them leaves the institution underwriting a slogan.</p>
+
+                <h2>African readiness is a physical and institutional design problem</h2>
+
+                <p>The World Bank’s October regional analysis describes Africa’s AI-readiness gap through data-centre capacity, AI-ready facilities, offline populations, electricity, connectivity, devices, local-language data, and regional cooperation. The figures do not imply that African institutions should imitate the largest technology markets. They point toward a different design priority: make useful computation fit the conditions in which African institutions actually operate.</p>
+
+                <p>The United Nations Economic Commission for Africa has framed data sovereignty in similar practical terms. Its Africa Renewal account of the April ministerial roundtable describes local processing, “AI factories,” reliable energy, long-term finance, and shared “data embassies” as parts of a digital independence agenda. Such language can become vague if it remains at the level of aspiration. A site plan gives it an engineering test. Which workloads are local? Which datasets are governed by which authority? Which languages are served without a distant translation bottleneck? Which regional facility can receive the workload when a local node is down? Which public institution holds the recovery keys?</p>
+
+                <p>This is where African intellectual sovereignty becomes material. A language model trained elsewhere may still be useful. Sovereignty grows when an institution can decide where its local corpus is processed, which versions are approved, how a service degrades, and whether its operational history can leave the supplier. The question is less about purity of origin than about control of the conditions of use.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is an <strong>AI-ready site plane</strong>: infrastructure that qualifies locations, maps workloads to power and connectivity envelopes, packages modular compute, integrates storage and cooling, measures service quality, and keeps local operators in control of deployment and recovery. It sits between cloud capacity and physical infrastructure. A power ledger prices and allocates capacity; a compute settlement rail moves payment and entitlement; a site plane proves that a particular workload can run, remain governed, and recover in a particular place.</p>
+
+                <ul>
+                    <li><strong>Modular compute sites:</strong> right-sized GPU and storage nodes that can be placed near institutions and expanded without waiting for a hyperscale buildout;</li>
+                    <li><strong>Grid-aware runtime systems:</strong> schedulers that shift workloads, preserve service tiers, and coordinate batteries or backup generation without silently dropping critical work;</li>
+                    <li><strong>Site qualification and benchmarking:</strong> independent tests for power quality, thermal performance, network behavior, data locality, language support, and recovery time;</li>
+                    <li><strong>Regional capacity exchanges:</strong> shared pools that let universities, public agencies, and small firms reserve compute across neighboring sites while keeping policy and evidence locally legible;</li>
+                    <li><strong>Local control planes:</strong> interfaces for identity, retention, model approval, audit, and incident recovery that do not require surrendering the institution’s operating memory to a foreign provider.</li>
+                </ul>
+
+                <p>Underwriting should begin with the workload and the site together. Can the operator state the power envelope required by each service tier? Can the system continue useful work during a connectivity interruption? Can a customer verify where its data and logs were processed? Can the site accept a new model without losing the old one needed for recovery? Can the operator export the configuration, evidence, and service history to a neighboring facility? Can the financial model survive an energy-price shock without turning essential public or educational services into luxury access?</p>
+
+                <p>The measurable value lies in operational capacity: shorter recovery time, fewer abandoned jobs, lower dependence on long-distance links, clearer energy exposure, better use of spare capacity, and a smaller gap between policy ambition and a service that actually runs. This is infrastructure that can be inspected before capital is committed. The investor is underwriting a site’s ability to carry institutional work, not merely a rack’s theoretical throughput.</p>
+
+                <h2>Write the site plan before buying the machine</h2>
+
+                <p>An institution can start with one recurring workload. Define its latency, language, privacy, availability, and recovery requirements. Measure the local power and network conditions over time rather than using a single nominal specification. Separate the tasks that require a frontier model from those that can run on a smaller local model or a cached workflow. Record which data may leave the site and which must remain. Then test the service through a power transition, a broken link, a model replacement, a full local cache, and the absence of the primary operator.</p>
+
+                <p>The result should be a portable site package: workload profiles, power assumptions, network measurements, model and data manifests, operator procedures, recovery keys, and evidence that the service met its declared conditions. A second site should be able to inspect the package and determine what it can host. That is how modularity becomes institutional memory rather than a vendor’s marketing adjective.</p>
+
+                <p>AI will continue to improve in the abstract. Institutions will still meet the concrete world: a transformer, a fibre cut, a hot room, a missing technician, an unaffordable data link, a language that the default model handles poorly. The next serious AI infrastructure will be built by treating those conditions as part of the intelligence being deployed. Before the model is asked to serve a people, someone must decide where it can stand.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.iea.org/reports/key-questions-on-energy-and-ai" target="_blank" rel="noopener">International Energy Agency, <em>Key Questions on Energy and AI</em> (2026). Examines the growth of data-centre electricity demand, AI-intensive workloads, grid and supply-chain bottlenecks, flexible data centres, storage, and energy affordability.</a></li>
+                    <li><a href="https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions" target="_blank" rel="noopener">International Energy Agency, “Data centre electricity use surged in 2025, even with tightening bottlenecks driving a scramble for solutions” (2026). Reports 17% growth in data-centre electricity use in 2025, faster growth in AI-focused centres, and the role of flexible data centres and storage.</a></li>
+                    <li><a href="https://www.worldbank.org/en/news/press-release/2026/10/20/world-bank-group-launches-first-digital-strategy-to-expand-access-and-create-jobs" target="_blank" rel="noopener">World Bank Group, “World Bank Group Launches First Digital Strategy to Expand Access and Create Jobs” (October 20, 2026). Announces an AI Infrastructure and Readiness Initiative using shared, pay-as-you-go GPU infrastructure, initially focused on Africa and Latin America.</a></li>
+                    <li><a href="https://blogs.worldbank.org/en/developmenttalk/the-ai-wave-is-global--readiness-is-not--here-s-what-the-latest-" target="_blank" rel="noopener">World Bank, “The AI wave is global. Readiness is not” (October 13, 2026). Reports Sub-Saharan Africa’s 0.6% share of global data-centre capacity, the 5% AI-ready share of those facilities, and the need for electricity, connectivity, local-language data, and regional cooperation.</a></li>
+                    <li><a href="https://africarenewal.un.org/en/magazine/africa-pushes-data-sovereignty-and-digital-independence" target="_blank" rel="noopener">United Nations Economic Commission for Africa, “Africa pushes for data sovereignty and digital independence” (May 11, 2026). Records regional arguments for local processing, AI factories, reliable energy, long-term finance, and shared data infrastructure.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Le modèle a besoin d’un plan d’implantation</h1>
+
+                <p><em>Note de terrain, 9 novembre 2026.</em> Le prochain goulot d’étranglement de l’IA est géographique. Un modèle peut être disponible par une API, un endpoint public ou un GPU loué, mais son déploiement dépend encore d’un lieu capable d’absorber sa demande électrique, de refroidir son matériel, de transporter ses données, de préserver sa latence et de reprendre le service lorsque l’une de ces conditions échoue. Le plan d’implantation devient une partie du produit IA.</p>
+
+                <p>Les preuves publiques récentes rendent ce déplacement visible. L’analyse 2026 de l’Agence internationale de l’énergie indique que la consommation électrique des centres de données a augmenté de 17 % en 2025, tandis que celle des centres consacrés à l’IA progressait plus vite que la demande mondiale d’électricité. Elle prévoit un doublement de la consommation totale des centres de données d’ici 2030 et constate que les usages énergivores, notamment les agents IA, augmentent alors même que l’électricité par tâche diminue. La stratégie numérique publiée en octobre par la Banque mondiale indique que l’Afrique subsaharienne rassemble 18 % de la population mondiale mais seulement 0,6 % de la capacité mondiale des centres de données, dont 5 % seulement sont prêts pour l’IA. Un compte rendu de la Commission économique des Nations Unies pour l’Afrique consacré à une table ronde ministérielle d’avril relie le traitement local et les « usines d’IA » à une énergie fiable, au financement de long terme et aux infrastructures de données partagées.</p>
+
+                <blockquote>
+                    <p>L’intelligence d’un modèle est portable ; ses conditions d’exploitation ne le sont pas.</p>
+                </blockquote>
+
+                <h2>Le site fait partie du modèle</h2>
+
+                <p>L’infrastructure de l’IA est souvent décrite comme une pile qui s’arrête à l’endpoint du modèle. Cette description dissimule la frontière matérielle où l’intelligence devient un service. Une charge de production rencontre une enveloppe électrique, un système de refroidissement, un chemin réseau, un régime de stockage, une juridiction, une équipe de maintenance et un plan de reprise. Chaque condition modifie ce que le modèle peut faire de manière sûre.</p>
+
+                <p>Imaginons un assistant de service public multilingue opérant dans une région où la connectivité est intermittente. Sa qualité dépend de davantage que des poids du modèle. Le système a besoin d’un cache local pour les connaissances approuvées, d’une file d’attente pour les demandes retardées, d’un moyen de préserver la langue de l’usager et d’un modèle de secours capable de fonctionner lorsque la route privilégiée est indisponible. Un outil d’aide hospitalière a besoin d’une qualité électrique et d’une discipline de maintenance. Un laboratoire de recherche a besoin de la localité des données, d’environnements reproductibles et d’un dossier indiquant quel matériel et quel logiciel ont produit un résultat. Un éditeur a besoin de capacités suffisantes pour mettre en page, traduire, archiver et distribuer le travail sans rendre chaque opération locale dépendante d’une console distante.</p>
+
+                <p>Le site porte donc une sémantique. Il indique à une institution où les données sont traitées, quelles obligations s’appliquent, à quelle vitesse une tâche peut répondre, ce qui se passe pendant une panne et quel opérateur peut intervenir. Le lieu fonctionne comme un paramètre du runtime, et le plan d’implantation l’enregistre avant le déploiement.</p>
+
+                <h2>L’échelle est la mauvaise première question</h2>
+
+                <p>La conversation publique commence souvent par la taille du centre de données ou le nombre de GPU. Pour de nombreuses institutions africaines, la question la plus utile est de savoir si un site plus petit, partagé et correctement gouverné peut rendre fiable une classe précise de travaux. La nouvelle initiative de la Banque mondiale pour l’infrastructure et la préparation à l’IA propose une infrastructure GPU partagée et facturée à l’usage pour les marchés émergents, avec un premier déploiement en Afrique et en Amérique latine. Sa conception reconnaît un fait pratique : l’accès à un calcul utile peut commencer par une capacité partagée plutôt que par une installation nationale autonome.</p>
+
+                <p>Le plan d’action KOAFEC de la BAD pointe dans une direction voisine avec des centres de données modulaires adaptés aux conditions locales. La modularité change l’objet de l’investissement. Un site peut s’agrandir à mesure que la demande, l’électricité et les compétences deviennent disponibles ; il peut être placé près d’une université, d’un hôpital, d’une agence publique ou d’un corridor industriel ; il peut être relié à une capacité régionale lorsque le matériel local atteint sa limite. Le but est une chaîne de sites capables de coopérer, non un monument qui concentre toutes les attentes.</p>
+
+                <p>Quatre questions liées au site doivent recevoir une réponse avant qu’une charge soit déclarée déployable :</p>
+
+                <ul>
+                    <li><strong>Électricité :</strong> quelle charge soutenue et quel pic le site peut-il supporter, et comment la charge réagit-elle lorsque le réseau ou le groupe électrogène change d’état ?</li>
+                    <li><strong>Connectivité :</strong> quelles opérations exigent le réseau étendu, lesquelles peuvent s’exécuter localement et comment les demandes sont-elles mises en file lorsque la liaison est dégradée ?</li>
+                    <li><strong>Localité :</strong> quelles données, ressources linguistiques, politiques et traces doivent rester sous contrôle local ou régional ?</li>
+                    <li><strong>Reprise :</strong> quels modèles, caches, copies de stockage, opérateurs et sites voisins peuvent maintenir le service utile après la défaillance d’un composant ?</li>
+                </ul>
+
+                <p>Ces questions transforment l’infrastructure d’une catégorie d’achat en affirmation de capacité. Un site qui y répond peut être comparé, amélioré et financé. Un site qui n’y répond pas laisse l’institution souscrire à un slogan.</p>
+
+                <h2>La préparation africaine est un problème matériel et institutionnel</h2>
+
+                <p>L’analyse régionale de la Banque mondiale publiée en octobre décrit l’écart de préparation de l’Afrique à l’IA par la capacité des centres de données, la proportion de sites prêts pour l’IA, le nombre de personnes hors ligne, l’électricité, la connectivité, les appareils, les données en langues locales et la coopération régionale. Ces chiffres ne signifient pas que les institutions africaines doivent imiter les plus grands marchés technologiques. Ils indiquent une autre priorité de conception : faire entrer un calcul utile dans les conditions où les institutions africaines fonctionnent réellement.</p>
+
+                <p>La Commission économique des Nations Unies pour l’Afrique a formulé la souveraineté des données dans des termes pratiques comparables. Le compte rendu d’Africa Renewal sur la table ronde ministérielle d’avril décrit le traitement local, les « usines d’IA », l’énergie fiable, le financement de long terme et les « ambassades de données » partagées comme des éléments d’un programme d’indépendance numérique. Ce langage peut rester vague s’il demeure au niveau de l’aspiration. Un plan d’implantation lui donne une épreuve d’ingénierie. Quelles charges sont locales ? Quelles données relèvent de quelle autorité ? Quelles langues sont servies sans goulot d’étranglement de traduction distant ? Quelle installation régionale reçoit la charge lorsqu’un nœud local est indisponible ? Quelle institution publique détient les clés de reprise ?</p>
+
+                <p>C’est ici que la souveraineté intellectuelle africaine devient matérielle. Un modèle de langage entraîné ailleurs peut rester utile. La souveraineté progresse lorsqu’une institution peut décider où son corpus local est traité, quelles versions sont approuvées, comment un service se dégrade et si son historique opérationnel peut quitter le fournisseur. La question porte moins sur la pureté de l’origine que sur le contrôle des conditions d’usage.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de contrôle des sites prêts pour l’IA</strong> : une infrastructure qui qualifie les lieux, associe les charges aux enveloppes d’électricité et de connectivité, conditionne le calcul modulaire, intègre le stockage et le refroidissement, mesure la qualité du service et maintient le contrôle des opérateurs locaux sur le déploiement et la reprise. Cette couche se situe entre la capacité cloud et l’infrastructure physique. Un registre énergétique tarife et répartit la capacité ; un rail de règlement du calcul déplace le paiement et le droit d’accès ; le plan de contrôle des sites prouve qu’une charge donnée peut fonctionner, rester gouvernée et reprendre dans un lieu donné.</p>
+
+                <ul>
+                    <li><strong>Sites de calcul modulaires :</strong> nœuds GPU et stockage dimensionnés au besoin, installables près des institutions et extensibles sans attendre une construction hyperscale ;</li>
+                    <li><strong>Runtimes sensibles au réseau :</strong> ordonnanceurs qui déplacent les charges, préservent les niveaux de service et coordonnent les batteries ou la production de secours sans abandonner silencieusement les travaux critiques ;</li>
+                    <li><strong>Qualification et étalonnage des sites :</strong> tests indépendants de la qualité électrique, de la performance thermique, du comportement réseau, de la localité des données, du soutien linguistique et du temps de reprise ;</li>
+                    <li><strong>Échanges régionaux de capacité :</strong> pools partagés permettant aux universités, agences publiques et petites entreprises de réserver du calcul entre sites voisins tout en gardant les politiques et les preuves lisibles localement ;</li>
+                    <li><strong>Plans de contrôle locaux :</strong> interfaces pour l’identité, la conservation, l’approbation des modèles, l’audit et la reprise après incident, sans céder la mémoire opérationnelle de l’institution à un fournisseur étranger.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par la charge et le site ensemble. L’opérateur peut-il déclarer l’enveloppe électrique requise par chaque niveau de service ? Le système peut-il poursuivre un travail utile pendant une interruption de connectivité ? Le client peut-il vérifier où ses données et ses traces ont été traitées ? Le site peut-il accepter un nouveau modèle sans perdre l’ancien nécessaire à la reprise ? L’opérateur peut-il exporter la configuration, les preuves et l’historique du service vers une installation voisine ? Le modèle financier peut-il absorber un choc de prix de l’énergie sans transformer les services publics ou éducatifs essentiels en accès de luxe ?</p>
+
+                <p>La valeur mesurable réside dans la capacité opérationnelle : un temps de reprise plus court, moins de tâches abandonnées, une dépendance moindre aux liaisons longues, une exposition énergétique plus claire, un meilleur usage de la capacité disponible et un écart réduit entre l’ambition politique et un service qui fonctionne réellement. Cette infrastructure peut être inspectée avant l’engagement du capital. L’investisseur souscrit à la capacité d’un site à porter le travail institutionnel, non au seul débit théorique d’une baie.</p>
+
+                <h2>Écrire le plan d’implantation avant d’acheter la machine</h2>
+
+                <p>Une institution peut commencer par une charge récurrente. Définissez ses exigences de latence, de langue, de confidentialité, de disponibilité et de reprise. Mesurez les conditions locales de puissance et de réseau dans le temps au lieu d’utiliser une seule spécification nominale. Séparez les tâches qui exigent un modèle de frontière de celles qui peuvent fonctionner avec un modèle local plus petit ou un workflow mis en cache. Notez quelles données peuvent sortir du site et lesquelles doivent y rester. Testez ensuite le service pendant une transition électrique, une rupture de liaison, un remplacement de modèle, un cache local saturé et l’absence de l’opérateur principal.</p>
+
+                <p>Le résultat devrait être un paquet de site portable : profils de charge, hypothèses électriques, mesures réseau, manifestes de modèles et de données, procédures opérateur, clés de reprise et preuves que le service a respecté ses conditions déclarées. Un second site devrait pouvoir inspecter le paquet et déterminer ce qu’il peut héberger. C’est ainsi que la modularité devient une mémoire institutionnelle plutôt qu’un adjectif publicitaire du fournisseur.</p>
+
+                <p>L’IA continuera de progresser dans l’abstrait. Les institutions continueront de rencontrer le monde concret : un transformateur, une coupure de fibre, une salle trop chaude, un technicien absent, une liaison de données inabordable, une langue mal traitée par le modèle par défaut. La prochaine infrastructure sérieuse de l’IA sera construite en considérant ces conditions comme une partie de l’intelligence déployée. Avant de demander à un modèle de servir un peuple, il faut décider où il peut tenir.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.iea.org/reports/key-questions-on-energy-and-ai" target="_blank" rel="noopener">Agence internationale de l’énergie, <em>Key Questions on Energy and AI</em> (2026). Examine la croissance de la consommation électrique des centres de données, les charges intensives en IA, les goulots d’étranglement des réseaux et des chaînes d’approvisionnement, les centres flexibles, le stockage et l’accessibilité de l’énergie.</a></li>
+                    <li><a href="https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions" target="_blank" rel="noopener">Agence internationale de l’énergie, « Data centre electricity use surged in 2025, even with tightening bottlenecks driving a scramble for solutions » (2026). Rapporte une hausse de 17 % de la consommation électrique des centres de données en 2025, une progression plus rapide des centres consacrés à l’IA et le rôle des centres flexibles et du stockage.</a></li>
+                    <li><a href="https://www.worldbank.org/en/news/press-release/2026/10/20/world-bank-group-launches-first-digital-strategy-to-expand-access-and-create-jobs" target="_blank" rel="noopener">Groupe de la Banque mondiale, « World Bank Group Launches First Digital Strategy to Expand Access and Create Jobs » (20 octobre 2026). Annonce une initiative d’infrastructure et de préparation à l’IA fondée sur une infrastructure GPU partagée et facturée à l’usage, d’abord orientée vers l’Afrique et l’Amérique latine.</a></li>
+                    <li><a href="https://blogs.worldbank.org/en/developmenttalk/the-ai-wave-is-global--readiness-is-not--here-s-what-the-latest-" target="_blank" rel="noopener">Banque mondiale, « The AI wave is global. Readiness is not » (13 octobre 2026). Rapporte la part de 0,6 % de l’Afrique subsaharienne dans la capacité mondiale des centres de données, la part de 5 % de sites prêts pour l’IA et le besoin d’électricité, de connectivité, de données en langues locales et de coopération régionale.</a></li>
+                    <li><a href="https://africarenewal.un.org/en/magazine/africa-pushes-data-sovereignty-and-digital-independence" target="_blank" rel="noopener">Commission économique des Nations Unies pour l’Afrique, « Africa pushes for data sovereignty and digital independence » (11 mai 2026). Rapporte les arguments régionaux en faveur du traitement local, des usines d’IA, d’une énergie fiable, du financement à long terme et d’infrastructures de données partagées.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

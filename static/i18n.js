@@ -194,6 +194,7 @@
         'article.entry158':     { en: 'Diop Daily #158 — November 2026', fr: 'Diop Quotidien n°158 — Novembre 2026' },
         'article.entry157':     { en: 'Diop Daily #157 — November 2026', fr: 'Diop Quotidien n°157 — Novembre 2026' },
         'article.entry164':     { en: 'Diop Daily #164 — November 2026', fr: 'Diop Quotidien n°164 — Novembre 2026' },
+        'article.entry165':     { en: 'Diop Daily #165 — November 2026', fr: 'Diop Quotidien n°165 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -206,6 +207,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-165': {
+        title: {
+            en: 'The Model Needs a Site Plan',
+            fr: 'Le modèle a besoin d’un plan d’implantation'
+        },
+        excerpt: {
+            en: 'AI readiness is becoming a question of where computation can stand: the electricity, cooling, connectivity, local data, and recovery conditions that let a model serve an institution. The investable layer is an AI-ready site plane for modular, grid-aware, locally governable compute.',
+            fr: 'La préparation à l’IA devient une question de lieu : l’électricité, le refroidissement, la connectivité, les données locales et les conditions de reprise qui permettent à un modèle de servir une institution. La couche d’investissement est un plan de contrôle des sites prêts pour l’IA, destiné à un calcul modulaire, sensible au réseau et gouvernable localement.'
+        }
+    },
     'diop-daily-164': {
         title: {
             en: 'What the Student Can Prove',
