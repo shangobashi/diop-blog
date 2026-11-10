@@ -195,6 +195,7 @@
         'article.entry157':     { en: 'Diop Daily #157 — November 2026', fr: 'Diop Quotidien n°157 — Novembre 2026' },
         'article.entry164':     { en: 'Diop Daily #164 — November 2026', fr: 'Diop Quotidien n°164 — Novembre 2026' },
         'article.entry165':     { en: 'Diop Daily #165 — November 2026', fr: 'Diop Quotidien n°165 — Novembre 2026' },
+        'article.entry166':     { en: 'Diop Daily #166 — November 2026', fr: 'Diop Quotidien n°166 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -207,6 +208,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-166': {
+        title: {
+            en: 'Name the Thing Before the Agent Buys It',
+            fr: 'Nommer la chose avant que l’agent ne l’achète'
+        },
+        excerpt: {
+            en: 'Agentic commerce is acquiring protocols for discovery, checkout, payment, and recovery, yet the harder boundary is semantic: whether an agent, merchant, and payment rail mean the same thing by a product, offer, identity, mandate, and exception. The investable layer is a multilingual commerce vocabulary and conformance plane.',
+            fr: 'Le commerce agentique acquiert des protocoles de découverte, de paiement, d’exécution et de recours, mais sa frontière la plus difficile est sémantique : savoir si l’agent, le commerçant et le rail de paiement donnent le même sens au produit, à l’offre, à l’identité, au mandat et à l’exception. La couche d’investissement est un plan multilingue de vocabulaire commercial et de conformité.'
+        }
+    },
     'diop-daily-165': {
         title: {
             en: 'The Model Needs a Site Plan',

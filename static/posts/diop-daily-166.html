@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Name the Thing Before the Agent Buys It — Diop Research</title>
+    <meta name="description" content="Agentic commerce is acquiring protocols for discovery, checkout, payment, and recovery, yet the harder boundary is semantic: whether an agent, merchant, and payment rail mean the same thing by a product, offer, identity, mandate, and exception. The investable layer is a multilingual commerce vocabulary and conformance plane."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="19.78" x2="18.36" y2="18.36"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry166">Diop Daily #166 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 10, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>agentic commerce · semantic infrastructure · African markets</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Name the Thing Before the Agent Buys It</h1>
+
+                <p><em>Field note, November 10, 2026.</em> A shopping agent can find a product, compare an offer, request payment, and send an order to a merchant. The difficult question arrives earlier: do the systems involved mean the same thing by the product, the seller, the quantity, the warranty, the delivery promise, the mandate, and the exception? Commerce becomes machine-readable only when its terms remain stable as they cross languages, platforms, jurisdictions, and human decisions.</p>
+
+                <p>Recent standards work makes this boundary visible. A September W3C and GS1 workshop on e-commerce for humans and AI agents treated product semantics, identity, protocols, payments, and trust as one connected design problem. A presentation from the W3C AI Knowledge Representation Community Group stated the issue plainly: shared terms support trust and reliability, while divergent terms make agents guess and cause silent failure. FIDO’s agentic-payment work frames a related requirement around user intent: a payment system must verify the approved scope and authenticate the particular transaction on a deterministic surface. GS1’s web guidance shows how identifiers, linksets, resolvers, and a shared vocabulary can connect a thing to authoritative information without forcing every participant into one central database.</p>
+
+                <blockquote>
+                    <p>An agent cannot negotiate a meaning that the market has never agreed to represent.</p>
+                </blockquote>
+
+                <h2>Protocols carry action; vocabularies carry consequence</h2>
+
+                <p>The public conversation has concentrated on the protocol layer. Agentic Commerce Protocol, Universal Commerce Protocol, payment mandates, and discovery mechanisms describe how a request moves. That motion matters. A merchant needs a way to publish a capability, a shopping agent needs a way to discover it, a payment rail needs a way to receive authorization, and a fulfillment system needs a way to acknowledge the order.</p>
+
+                <p>Yet an exchange can be technically successful while remaining semantically unstable. Imagine a buyer asking for a “locally made, refillable water filter under a stated budget.” One system may classify “locally made” by the seller’s registered address, another by the production site, and a third by the origin of the components. “Refillable” may mean a replaceable cartridge, a washable membrane, or a manufacturer’s marketing label. “Under budget” may include shipping and tax in one channel and exclude them in another. The agent can complete every API call and still misrepresent the buyer’s intent.</p>
+
+                <p>This is why the vocabulary layer deserves independent attention. It defines the entities, properties, relations, units, statuses, and evidence types that protocols transport. A protocol can tell a merchant that an agent is asking for an offer. A vocabulary determines whether “offer” includes price validity, currency, quantity limits, region, tax treatment, stock, delivery conditions, return rights, and the identity of the party making the promise.</p>
+
+                <p>Meaning becomes a runtime dependency when software acts on behalf of a person. A human can stop and ask whether “organic,” “available,” “same-day,” or “made in Senegal” carries the intended sense. A machine needs the terms and their resolution path before it commits an action.</p>
+
+                <h2>The commerce object has several lives</h2>
+
+                <p>GS1’s Digital Link model offers a practical design lesson. A stable identifier names the thing, while a resolver and linkset connect that identifier to different resources: product information, instructions, certification, traceability, sustainability data, or a service endpoint. The identity of the thing and the location of its descriptions remain distinct. Data owners can maintain their own authoritative information while software discovers it through common web conventions.</p>
+
+                <p>Agentic commerce needs the same separation for the claims that surround a product. A product record, an offer, a payment mandate, a shipment, and a return are related objects with different authorities and lifecycles. Collapsing them into a single conversational description makes the transaction easy to narrate and difficult to verify. Preserving them as linked objects lets an agent ask sharper questions:</p>
+
+                <ul>
+                    <li><strong>Identity:</strong> which product, seller, location, payment instrument, or shipment is being discussed?</li>
+                    <li><strong>Meaning:</strong> which controlled term, measurement, classification, or language expression describes the claim?</li>
+                    <li><strong>Freshness:</strong> when was the price, stock status, certification, or delivery promise valid?</li>
+                    <li><strong>Authority:</strong> who issued the claim, who may change it, and who can challenge it?</li>
+                    <li><strong>Constraint:</strong> which budget, geography, substitution rule, privacy condition, or approval limit applies?</li>
+                    <li><strong>Remedy:</strong> what happens when the product is unavailable, the description is wrong, the payment is disputed, or the delivery fails?</li>
+                </ul>
+
+                <p>The terms are more valuable when they connect to evidence. “Certified” should resolve to a credential or issuing authority. “Available” should carry a time and a source. “Made in” should identify the relevant claim and its jurisdiction. “Under 100” should expose the currency, included costs, and validity window. A machine can then compare like with like, show uncertainty when the claims diverge, and request human judgment when the semantic gap carries material risk.</p>
+
+                <h2>Language is infrastructure at the point of sale</h2>
+
+                <p>The vocabulary problem is also a language problem. African commerce is conducted across languages, currencies, informal and formal businesses, regional corridors, mobile payment systems, and product categories that do not always fit imported taxonomies. A translation layer that only changes words leaves the governing concept untouched. A semantic layer must preserve the meaning of a quantity, quality, origin, obligation, and remedy in the language in which a buyer or seller actually makes a decision.</p>
+
+                <p>This matters for intellectual sovereignty because representation determines discoverability. If a producer’s goods are legible only through an external platform’s categories, the platform becomes the interpreter of the market. The producer may own the product and the customer relationship while another system decides whether the product exists in machine-readable form, which attributes count, and which language describes them.</p>
+
+                <p>A locally governed vocabulary can remain compatible with global standards while carrying regional terms and institutional authority. A cooperative of farmers can publish product identities and provenance through identifiers it controls. A marketplace can expose Wolof, French, Arabic, English, or other language expressions that resolve to the same structured claim. A payment provider can bind authorization to the product and merchant identifiers actually used in the order. A public agency can define which certifications and origin claims are recognized for a programme. The common layer is semantic custody: the right to maintain the meaning of what enters a transaction.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is a <strong>commerce vocabulary and conformance plane</strong>: infrastructure that maps product, party, offer, intent, payment, fulfillment, and remedy terms across agent protocols while preserving authoritative sources and local language. It sits below the shopping interface and beside payment rails. Its unit of value is a machine-actionable claim that can be discovered, compared, verified, and challenged.</p>
+
+                <ul>
+                    <li><strong>Semantic crosswalks:</strong> maintained mappings between merchant, marketplace, GS1, payment, public-sector, and regional vocabularies, with explicit treatment of terms that only appear equivalent;</li>
+                    <li><strong>Machine-readable claim services:</strong> endpoints that expose product attributes, provenance, availability, certification, delivery, and return conditions with source, date, language, and authority;</li>
+                    <li><strong>Conformance harnesses:</strong> tests that reveal whether a protocol preserves product identity, price meaning, currency, consent, scope, and remedy across handoffs;</li>
+                    <li><strong>Multilingual commerce layers:</strong> interfaces and data models that let local terms resolve to structured concepts without forcing one language to act as the hidden master;</li>
+                    <li><strong>Intent-to-payment bindings:</strong> evidence chains connecting what the person approved, what the agent selected, what the merchant confirmed, and what the payment rail authorized.</li>
+                </ul>
+
+                <p>Underwriting should begin with semantic failure. Can a buyer reproduce why a product was recommended? Can a seller see which claim caused the agent to include or exclude an item? Can a payment provider determine that the authorized item, merchant, amount, and currency match the structured order? Can a local authority correct a category or certification without waiting for a foreign platform to revise its taxonomy? Can a merchant export its claims and continue serving agents if an intermediary changes its protocol?</p>
+
+                <p>The measurable value is a reduction in expensive ambiguity: fewer wrong substitutions, fewer disputed orders, clearer compliance evidence, lower integration cost, better discovery for small producers, and faster correction when a claim changes. The infrastructure can also be tested before capital scales it. A serious customer can measure claim completeness, cross-language equivalence, freshness, conformance failures, dispute reconstruction time, and the percentage of product knowledge that remains under the merchant’s control.</p>
+
+                <h2>Build the dictionary before widening the delegation</h2>
+
+                <p>An institution can start with one commerce journey and one class of consequential claims. Define the product identity, the relevant offer terms, the buyer’s constraints, the merchant’s authority, the payment scope, the fulfillment states, and the remedy. Write the definitions in the languages used by the participants. Link every material claim to its source, issuer, date, and correction path. Then run the journey through an agent that must compare two similar products, handle an unavailable item, explain a price change, and stop when the user’s intent becomes unclear.</p>
+
+                <p>The test is whether another operator can reconstruct the decision from the terms and evidence rather than from the model’s prose. A merchant should be able to understand what the agent saw. A buyer should be able to understand what the agent assumed. A payment system should be able to verify what was authorized. A regional institution should be able to preserve its own categories and recourse rules while participating in global commerce.</p>
+
+                <p>The next commercial frontier will be presented as a collection of protocols, assistants, and checkout experiences. Beneath those surfaces, the durable contest is over who names the world that machines are allowed to act upon. Before an agent buys a thing, the thing must have an identity, a meaning, an authority, and a remedy that can survive the journey.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/2026/09/ecommerce-agents/slides/Paola_Di_Maio.pdf" target="_blank" rel="noopener">Paola Di Maio, W3C / GS1 Workshop on E-commerce for Humans and AI Agents, “Ecommerce AI Agents — Ontology and Vocabularies for Protocols and Standards” (September 8, 2026). Explains why shared, human- and machine-readable vocabularies support trust and reliability, and why divergent terms make agents guess.</a></li>
+                    <li><a href="https://www.w3.org/2026/09/ecommerce-agents/slides/Jean_Luc_Di_Manno_FIDO.pdf" target="_blank" rel="noopener">FIDO Alliance, W3C / GS1 Workshop on E-commerce for Humans and AI Agents, “AI ecommerce workshop” (September 2026). Describes agentic-payment requirements around user intent, approved scope, deterministic authentication, verifiable intent, and interoperable payment evidence.</a></li>
+                    <li><a href="https://ref.gs1.org/sme-guidance/online-technologies/" target="_blank" rel="noopener">GS1, “GS1 online technologies: how they fit together.” Describes GS1 Digital Link URIs, linksets, link types, resolvers, and the GS1 Web Vocabulary as a distributed way to make product and asset information discoverable, understandable, and source-controlled by data owners.</a></li>
+                    <li><a href="https://openai.com/index/buy-it-in-chatgpt/" target="_blank" rel="noopener">OpenAI, “Buy it in ChatGPT: Instant Checkout and the Agentic Commerce Protocol” (September 29, 2025). Describes an agentic-commerce protocol connecting people, AI agents, merchants, payments, fulfillment, returns, and customer relationships; cited here as a protocol-direction signal, not as proof of universal adoption.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Nommer la chose avant que l’agent ne l’achète</h1>
+
+                <p><em>Note de terrain, 10 novembre 2026.</em> Un agent d’achat peut trouver un produit, comparer une offre, demander un paiement et transmettre une commande à un commerçant. La question difficile arrive plus tôt : les systèmes concernés donnent-ils le même sens au produit, au vendeur, à la quantité, à la garantie, à la promesse de livraison, au mandat et à l’exception ? Le commerce devient lisible pour les machines seulement lorsque ses termes restent stables à travers les langues, les plateformes, les juridictions et les décisions humaines.</p>
+
+                <p>Les travaux récents de normalisation rendent cette frontière visible. Un atelier W3C et GS1 de septembre sur le commerce électronique pour les humains et les agents IA a traité la sémantique des produits, l’identité, les protocoles, les paiements et la confiance comme un seul problème de conception relié. Une présentation du groupe communautaire W3C sur la représentation des connaissances en IA formule clairement l’enjeu : des termes partagés soutiennent la confiance et la fiabilité, tandis que des termes divergents obligent les agents à deviner et provoquent des échecs silencieux. Les travaux de la FIDO sur les paiements agentiques formulent une exigence voisine autour de l’intention de l’utilisateur : le système de paiement doit vérifier le périmètre approuvé et authentifier la transaction particulière sur une surface déterministe. Les recommandations web de GS1 montrent comment des identifiants, des ensembles de liens, des résolveurs et un vocabulaire commun peuvent relier une chose à des informations faisant autorité sans contraindre chaque participant à utiliser une base centrale.</p>
+
+                <blockquote>
+                    <p>Un agent ne peut pas négocier un sens que le marché n’a jamais accepté de représenter.</p>
+                </blockquote>
+
+                <h2>Les protocoles transportent l’action ; les vocabulaires transportent la conséquence</h2>
+
+                <p>La conversation publique s’est concentrée sur la couche protocolaire. Agentic Commerce Protocol, Universal Commerce Protocol, mandats de paiement et mécanismes de découverte décrivent le déplacement d’une demande. Ce mouvement compte. Un commerçant a besoin de publier une capacité, un agent d’achat doit pouvoir la découvrir, un rail de paiement doit pouvoir recevoir une autorisation et un système d’exécution doit pouvoir accuser réception de la commande.</p>
+
+                <p>Pourtant, un échange peut réussir techniquement tout en restant sémantiquement instable. Imaginons un acheteur qui demande un « filtre à eau fabriqué localement, rechargeable, sous un budget déterminé ». Un système peut définir « fabriqué localement » par l’adresse enregistrée du vendeur, un autre par le lieu de production et un troisième par l’origine des composants. « Rechargeable » peut désigner une cartouche remplaçable, une membrane lavable ou une étiquette commerciale du fabricant. « Sous le budget » peut inclure la livraison et les taxes dans un canal, puis les exclure dans un autre. L’agent peut terminer chaque appel d’API tout en déformant l’intention de l’acheteur.</p>
+
+                <p>C’est pourquoi la couche des vocabulaires mérite une attention indépendante. Elle définit les entités, propriétés, relations, unités, statuts et types de preuve que les protocoles transportent. Un protocole peut indiquer à un commerçant qu’un agent demande une offre. Un vocabulaire détermine si « offre » comprend la durée de validité du prix, la monnaie, les limites de quantité, la région, le traitement fiscal, le stock, les conditions de livraison, les droits de retour et l’identité de la partie qui fait la promesse.</p>
+
+                <p>Le sens devient une dépendance du runtime lorsque le logiciel agit au nom d’une personne. Un humain peut s’arrêter et demander si « biologique », « disponible », « le jour même » ou « fabriqué au Sénégal » porte le sens attendu. Une machine a besoin des termes et de leur chemin de résolution avant de s’engager.</p>
+
+                <h2>L’objet commercial a plusieurs vies</h2>
+
+                <p>Le modèle Digital Link de GS1 fournit une leçon de conception pratique. Un identifiant stable nomme la chose, tandis qu’un résolveur et un ensemble de liens relient cet identifiant à différentes ressources : informations produit, instructions, certification, traçabilité, données de durabilité ou endpoint de service. L’identité de la chose et le lieu de ses descriptions restent distincts. Les détenteurs des données peuvent maintenir leurs informations faisant autorité tout en permettant aux logiciels de les découvrir au moyen de conventions web communes.</p>
+
+                <p>Le commerce agentique a besoin de la même séparation pour les affirmations qui entourent un produit. Une fiche produit, une offre, un mandat de paiement, une expédition et un retour sont des objets liés, dotés d’autorités et de cycles de vie différents. Les fondre dans une seule description conversationnelle rend la transaction facile à raconter et difficile à vérifier. Les conserver comme des objets liés permet à un agent de poser des questions plus précises :</p>
+
+                <ul>
+                    <li><strong>Identité :</strong> de quel produit, vendeur, lieu, instrument de paiement ou envoi parle-t-on ?</li>
+                    <li><strong>Sens :</strong> quel terme contrôlé, quelle mesure, quelle classification ou quelle expression linguistique décrit l’affirmation ?</li>
+                    <li><strong>Actualité :</strong> à quel moment le prix, le stock, la certification ou la promesse de livraison était-il valide ?</li>
+                    <li><strong>Autorité :</strong> qui a émis l’affirmation, qui peut la modifier et qui peut la contester ?</li>
+                    <li><strong>Contrainte :</strong> quel budget, quelle géographie, quelle règle de substitution, quelle condition de confidentialité ou quelle limite d’approbation s’applique ?</li>
+                    <li><strong>Recours :</strong> que se passe-t-il lorsque le produit est indisponible, que la description est fausse, que le paiement est contesté ou que la livraison échoue ?</li>
+                </ul>
+
+                <p>Les termes gagnent de la valeur lorsqu’ils se relient à des preuves. « Certifié » devrait renvoyer à un justificatif ou à une autorité émettrice. « Disponible » devrait porter une date et une source. « Fabriqué à » devrait identifier l’affirmation pertinente et sa juridiction. « Moins de 100 » devrait exposer la monnaie, les coûts inclus et la fenêtre de validité. La machine peut alors comparer des éléments comparables, montrer l’incertitude lorsque les affirmations divergent et demander un jugement humain lorsque l’écart sémantique porte un risque important.</p>
+
+                <h2>La langue est une infrastructure au point de vente</h2>
+
+                <p>Le problème des vocabulaires est aussi un problème de langue. Le commerce africain se déroule entre plusieurs langues, monnaies, entreprises informelles et formelles, corridors régionaux, systèmes de paiement mobile et catégories de produits qui n’entrent pas toujours dans des taxonomies importées. Une couche de traduction qui ne fait que changer les mots laisse le concept directeur intact. Une couche sémantique doit préserver le sens d’une quantité, d’une qualité, d’une origine, d’une obligation et d’un recours dans la langue où l’acheteur ou le vendeur prend réellement sa décision.</p>
+
+                <p>Cette question touche à la souveraineté intellectuelle parce que la représentation détermine la découvrabilité. Si les biens d’un producteur ne sont lisibles qu’à travers les catégories d’une plateforme extérieure, la plateforme devient l’interprète du marché. Le producteur peut posséder le produit et la relation client tandis qu’un autre système décide si le produit existe sous une forme lisible par les machines, quels attributs comptent et quelle langue les décrit.</p>
+
+                <p>Un vocabulaire gouverné localement peut rester compatible avec les standards mondiaux tout en portant des termes régionaux et une autorité institutionnelle. Une coopérative agricole peut publier les identités et la provenance de ses produits au moyen d’identifiants qu’elle contrôle. Une place de marché peut exposer des expressions en wolof, en français, en arabe, en anglais ou dans d’autres langues, toutes résolues vers la même affirmation structurée. Un prestataire de paiement peut lier l’autorisation aux identifiants du produit et du commerçant effectivement utilisés dans la commande. Une agence publique peut définir les certifications et les affirmations d’origine reconnues pour un programme. La couche commune est une garde sémantique : le droit de maintenir le sens de ce qui entre dans une transaction.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de contrôle des vocabulaires et de la conformité commerciale</strong> : une infrastructure qui fait correspondre les termes du produit, de la partie, de l’offre, de l’intention, du paiement, de l’exécution et du recours entre les protocoles d’agents tout en préservant les sources faisant autorité et la langue locale. Cette couche se place sous l’interface d’achat et à côté des rails de paiement. Son unité de valeur est une affirmation actionnable par une machine, qui peut être découverte, comparée, vérifiée et contestée.</p>
+
+                <ul>
+                    <li><strong>Passerelles sémantiques :</strong> correspondances maintenues entre les vocabulaires des commerçants, places de marché, standards GS1, paiements, services publics et régions, avec un traitement explicite des termes qui semblent équivalents sans l’être ;</li>
+                    <li><strong>Services d’affirmations lisibles par les machines :</strong> endpoints exposant les attributs produit, la provenance, la disponibilité, la certification, la livraison et les retours avec source, date, langue et autorité ;</li>
+                    <li><strong>Harnais de conformité :</strong> tests révélant si un protocole préserve l’identité du produit, le sens du prix, la monnaie, le consentement, le périmètre et le recours au fil des transferts ;</li>
+                    <li><strong>Couches commerciales multilingues :</strong> interfaces et modèles de données permettant aux termes locaux de se résoudre vers des concepts structurés sans faire d’une langue le maître caché ;</li>
+                    <li><strong>Liaisons entre intention et paiement :</strong> chaînes de preuve reliant ce que la personne a approuvé, ce que l’agent a sélectionné, ce que le commerçant a confirmé et ce que le rail de paiement a autorisé.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par l’échec sémantique. Un acheteur peut-il reproduire la raison pour laquelle un produit a été recommandé ? Un vendeur peut-il voir quelle affirmation a conduit l’agent à inclure ou exclure un article ? Un prestataire de paiement peut-il déterminer que l’article, le commerçant, le montant et la monnaie autorisés correspondent à la commande structurée ? Une autorité locale peut-elle corriger une catégorie ou une certification sans attendre qu’une plateforme étrangère révise sa taxonomie ? Un commerçant peut-il exporter ses affirmations et continuer à servir les agents si un intermédiaire change de protocole ?</p>
+
+                <p>La valeur mesurable est une réduction de l’ambiguïté coûteuse : moins de substitutions erronées, moins de commandes contestées, des preuves de conformité plus claires, un coût d’intégration plus faible, une meilleure découvrabilité pour les petits producteurs et une correction plus rapide lorsqu’une affirmation change. Cette infrastructure peut aussi être testée avant qu’elle ne soit déployée à grande échelle. Un client sérieux peut mesurer la complétude des affirmations, l’équivalence entre langues, l’actualité, les échecs de conformité, le temps de reconstruction d’un litige et la part des connaissances produit qui reste sous le contrôle du commerçant.</p>
+
+                <h2>Construire le dictionnaire avant d’élargir la délégation</h2>
+
+                <p>Une institution peut commencer par un parcours commercial et une classe d’affirmations importantes. Définissez l’identité du produit, les conditions de l’offre, les contraintes de l’acheteur, l’autorité du commerçant, le périmètre du paiement, les états d’exécution et le recours. Rédigez les définitions dans les langues utilisées par les participants. Reliez chaque affirmation importante à sa source, son émetteur, sa date et son chemin de correction. Faites ensuite passer le parcours par un agent qui doit comparer deux produits proches, gérer une indisponibilité, expliquer une variation de prix et s’arrêter lorsque l’intention de l’utilisateur devient incertaine.</p>
+
+                <p>Le test consiste à vérifier si un autre opérateur peut reconstruire la décision à partir des termes et des preuves, plutôt qu’à partir de la prose du modèle. Le commerçant doit pouvoir comprendre ce que l’agent a vu. L’acheteur doit pouvoir comprendre ce que l’agent a supposé. Le système de paiement doit pouvoir vérifier ce qui a été autorisé. Une institution régionale doit pouvoir préserver ses propres catégories et règles de recours tout en participant au commerce mondial.</p>
+
+                <p>La prochaine frontière commerciale sera présentée comme une collection de protocoles, d’assistants et d’expériences de paiement. Sous ces surfaces, la lutte durable porte sur ceux qui nomment le monde sur lequel les machines sont autorisées à agir. Avant qu’un agent n’achète une chose, cette chose doit avoir une identité, un sens, une autorité et un recours capables de survivre au trajet.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/2026/09/ecommerce-agents/slides/Paola_Di_Maio.pdf" target="_blank" rel="noopener">Paola Di Maio, atelier W3C / GS1 sur le commerce électronique pour les humains et les agents IA, « Ecommerce AI Agents — Ontology and Vocabularies for Protocols and Standards » (8 septembre 2026). Explique pourquoi des vocabulaires partagés, lisibles par les humains et les machines, soutiennent la confiance et la fiabilité, et pourquoi les termes divergents obligent les agents à deviner.</a></li>
+                    <li><a href="https://www.w3.org/2026/09/ecommerce-agents/slides/Jean_Luc_Di_Manno_FIDO.pdf" target="_blank" rel="noopener">FIDO Alliance, atelier W3C / GS1 sur le commerce électronique pour les humains et les agents IA, « AI ecommerce workshop » (septembre 2026). Décrit les exigences des paiements agentiques autour de l’intention de l’utilisateur, du périmètre approuvé, de l’authentification déterministe, de l’intention vérifiable et de preuves de paiement interopérables.</a></li>
+                    <li><a href="https://ref.gs1.org/sme-guidance/online-technologies/" target="_blank" rel="noopener">GS1, « GS1 online technologies: how they fit together ». Décrit les URI Digital Link de GS1, les ensembles de liens, les types de liens, les résolveurs et le vocabulaire web GS1 comme une méthode distribuée pour rendre les informations sur les produits et les actifs découvrables, compréhensibles et contrôlées à leur source par les détenteurs des données.</a></li>
+                    <li><a href="https://openai.com/index/buy-it-in-chatgpt/" target="_blank" rel="noopener">OpenAI, « Buy it in ChatGPT: Instant Checkout and the Agentic Commerce Protocol » (29 septembre 2025). Décrit un protocole de commerce agentique reliant les personnes, les agents IA, les commerçants, les paiements, l’exécution, les retours et la relation client ; il est cité ici comme signal d’orientation protocolaire, et non comme preuve d’une adoption universelle.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
