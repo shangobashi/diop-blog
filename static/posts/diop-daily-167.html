@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Machine Needs a Responsible Address — Diop Research</title>
+    <meta name="description" content="As agents move from reading web resources to acting on them, institutions need a machine-readable way to state identity, purpose, constraints, authority, and correction. The investable layer is a responsible-address plane for agent-ready institutions, with particular value for African operators preserving local control."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry167">Diop Daily #167 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 11, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>agent-ready institutions · authority · African sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Machine Needs a Responsible Address</h1>
+
+                <p><em>Field note, November 11, 2026.</em> The web was built for a person who could look at a page, infer its purpose, notice its limits, and decide whether to proceed. An agent arrives with a different problem. It can read a page, call a service, move information, and act on a user’s behalf, yet the resource may never state in machine-readable form what it is, who is responsible for it, what the agent may do, or which conditions must stop the interaction.</p>
+
+                <p>This missing introduction is becoming an infrastructure problem. The agent does not need another slogan about being intelligent. It needs a responsible address: a discoverable declaration of identity, purpose, constraints, authority, language, and correction. The declaration belongs to the institution or resource being approached, not only to the model doing the approaching.</p>
+
+                <blockquote>
+                    <p>Before a machine can respect a boundary, the boundary must be able to introduce itself.</p>
+                </blockquote>
+
+                <h2>The resource has been speaking to the wrong audience</h2>
+
+                <p>W3C’s October 2026 Strategy Team paper on the Web in the AI era describes a change from agents reading the Web to agents interacting with it. That movement brings consent, delegation, privacy, liability, provenance, and human handoff into the standards conversation. The paper also observes that existing web mechanisms do not yet provide a systematic equivalent of the human expectation that content providers can describe how their material may be used and under which conditions.</p>
+
+                <p>A page can publish an API schema and still leave the important questions unanswered. OpenAPI can describe the shape of an endpoint. JSON Schema can describe fields. A certificate can establish control of a domain. A robots file can express a limited negative instruction. None of these alone tells an agent what the resource exists to do, who answers for it, what context it requires, which operations are consequential, or how a mistaken interpretation should be corrected.</p>
+
+                <p>The W3C Introduction Layer Community Group gives this gap a precise formulation. Its stated mission is to let a web resource declare its identity, purpose, constraints, and responsible party to agents in a discoverable, machine-native way. This is a community-group proposal, not a finished standard, so its exact form remains open. The direction matters because it treats context as a first-class interface rather than leaving the agent to infer context from prose.</p>
+
+                <h2>A charter sits before the handshake</h2>
+
+                <p>Recent entries in this journal have examined the receipt after an agent handoff and the vocabulary that lets a commerce system mean the same thing by a product, offer, and remedy. The responsible address comes earlier. It is the institutional charter that tells an arriving system what kind of place it has reached before a request becomes a transaction.</p>
+
+                <p>Consider a public archive that exposes records in several languages. The archive needs to state which collections it holds, which descriptions are authoritative, which users may request access, which data requires human review, what reuse conditions apply, and which institution receives a correction. A model can extract a beautifully formatted answer from the archive while violating the archive’s purpose if those conditions remain implicit.</p>
+
+                <p>Consider a small producer, university, clinic, or civic office in Africa. Its public web surface may be approached by a global agent whose categories, language assumptions, and default permissions were designed elsewhere. If the institution has no machine-readable way to describe itself, the external platform becomes the interpreter of its authority. It decides whether the institution is a seller, source, service, dataset, or merely a page to be summarized.</p>
+
+                <p>A responsible address should therefore make several claims explicit:</p>
+
+                <ul>
+                    <li><strong>Identity:</strong> what resource, institution, service, or collection is being addressed, and which identifiers resolve to it;</li>
+                    <li><strong>Purpose:</strong> what the resource exists to provide, preserve, sell, teach, administer, or refuse;</li>
+                    <li><strong>Authority:</strong> who operates it, which party can change its declarations, and which claims come from another issuer;</li>
+                    <li><strong>Constraints:</strong> what an agent may read, request, store, transform, purchase, or publish, including language and jurisdictional limits;</li>
+                    <li><strong>State:</strong> when the declaration was issued, which version is active, and which conditions expire or require revalidation;</li>
+                    <li><strong>Correction:</strong> how a person or institution can challenge a representation, revoke a permission, or correct an agent’s interpretation.</li>
+                </ul>
+
+                <p>The declaration should be small enough to resolve quickly and rich enough to prevent a consequential guess. It can point to detailed policies, catalogues, credentials, human contact routes, and language-specific explanations. The point is separation: the address introduces the resource, while other systems carry the deeper evidence and execute the permitted work.</p>
+
+                <h2>Identity without purpose is a polished dependency</h2>
+
+                <p>NIST’s Agent Standards Initiative, updated November 9, 2026, places open protocols, agent authentication and identity infrastructure, and security evaluations inside a trusted and interoperable agent ecosystem. Those are necessary foundations. An authenticated agent can still approach the wrong service, use a permitted capability for the wrong purpose, or carry a true identity into a context whose constraints it has not understood.</p>
+
+                <p>This is why the responsible address should be treated as a control-plane object. It links identity to purpose, authority to action, and capability to conditions. It tells the receiving system what must be checked before the runtime proceeds. It also gives a human operator a stable object to inspect when the model’s interpretation is disputed.</p>
+
+                <p>GS1’s resolver model supplies a useful precedent, even outside commerce. A persistent identifier can name an entity while a resolver connects it to multiple human- and machine-readable resources. The identity remains stable as information changes, and different authorities can maintain their own linked descriptions. An institutional address can apply the same principle to a service, archive, school, cooperative, or public office: keep the identity and the changing statements related without collapsing them into one vendor-owned profile.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is a <strong>responsible-address plane</strong>: infrastructure that helps institutions publish, resolve, validate, localize, version, and correct the declarations agents need before interaction. It sits between domain identity, policy, web content, agent runtimes, and human oversight. Its unit of value is a machine-readable context claim that prevents an expensive or unjustified inference.</p>
+
+                <ul>
+                    <li><strong>Context manifests:</strong> compact declarations for identity, purpose, authority, language, jurisdiction, operating hours, data classes, and permitted agent actions;</li>
+                    <li><strong>Policy resolvers:</strong> services that connect a stable institutional identifier to current policies, credentials, catalogues, public notices, and human escalation routes;</li>
+                    <li><strong>Conformance gateways:</strong> tests that determine whether an agent can discover and respect a resource’s declarations before it reads, writes, purchases, or republishes;</li>
+                    <li><strong>Local-language control planes:</strong> tools that let institutions maintain equivalent declarations in French, English, Wolof, Arabic, and other languages without appointing one external taxonomy as the hidden master;</li>
+                    <li><strong>Correction and revocation services:</strong> records that preserve what an agent saw, expose the active version, and make a changed purpose or withdrawn permission propagate to the right consumers.</li>
+                </ul>
+
+                <p>Underwriting should begin with the failure the plane prevents. Can an agent identify the responsible institution before it acts? Can it distinguish a source of record from a commentary page? Can the operator prove which purpose and constraints were visible at the time of the request? Can a local institution correct a category or permission without waiting for a platform to retrain its model? Can the declaration survive a provider change and remain useful to a smaller local runtime?</p>
+
+                <p>These questions produce measurable operating metrics: time to resolve an institution’s context, percentage of agent sessions that began with a valid declaration, rate of actions blocked by a stated constraint, correction propagation time, language parity, and the cost of exporting the control plane. The value is not a larger prompt. It is less ambiguity at the moment when software crosses into institutional space.</p>
+
+                <h2>African institutions should publish their own introductions</h2>
+
+                <p>The United Nations Development Programme’s September 2026 study of country-hosted AI compute in Kenya, Malawi, Rwanda, South Africa, Togo, and Zambia makes a related point about physical infrastructure. Compute alone does not create sustained national capability. Effective use depends on accessible data, skilled operators, clear institutional responsibilities, governance, cybersecurity, sustainable financing, and concrete public-interest applications. The strongest progress appeared where compute was connected to ownership and use.</p>
+
+                <p>The responsible address is the web-side expression of that same principle. A local institution needs the ability to declare what it is, what it protects, which languages it serves, which data it governs, and where an agent must yield to a person. This does not require isolation from global standards. It requires participation without surrendering the right to define the institution’s public meaning.</p>
+
+                <p>A cooperative should be able to state how its products are identified and which claims require verification. A university should be able to expose its admissions, research, and archive services with their separate authorities. A clinic should be able to identify information that an agent may explain and information that requires a qualified professional. A public office should be able to publish service conditions and an appeal route in the languages its residents use. These declarations turn visibility into governed presence.</p>
+
+                <h2>Write the introduction before widening the action</h2>
+
+                <p>An institution can begin with one resource and one consequential agent journey. Write the declaration in human language, bind its material claims to stable identifiers, express the same conditions in a machine-readable form, and assign an owner for each field. Test an agent with an ambiguous request, an expired permission, a language mismatch, a changed policy, and a demand that exceeds the resource’s purpose. Give a human operator a way to inspect the exact declaration that shaped the result.</p>
+
+                <p>The test is simple: can an agent arrive without guessing what kind of place it has reached, and can the institution prove what it told the agent before the action began? A protocol can carry a request. A receipt can preserve the handoff. A responsible address gives the institution a voice before either one occurs.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">W3C Strategy Team, “W3C and the State of the Web in the AI Era” (finalized October 20, 2026). Discusses agents interacting with the Web, consent, delegation, privacy, liability, provenance, human handoff, and the need for standards that keep people at the centre.</a></li>
+                    <li><a href="https://www.w3.org/groups/cg/intro-layer/" target="_blank" rel="noopener">W3C Introduction Layer Community Group. States a mission to let web resources declare identity, purpose, constraints, and responsible party to agents in a discoverable, machine-native way. This is a community-group proposal, not a finished standard.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “SI Agent Standards Initiative” (updated November 9, 2026). Describes open protocols, agent authentication and identity research, and security evaluations for trusted interoperability.</a></li>
+                    <li><a href="https://ref.gs1.org/standards/resolver/" target="_blank" rel="noopener">GS1, “GS1-Conformant Resolver Standard.” Describes persistent entity identifiers connected to multiple human- and machine-readable resources through a distributed, interoperable resolver model.</a></li>
+                    <li><a href="https://www.undp.org/africa/publications/local-ai-compute-infrastructure-africa-lessons-six-country-hosted-deployments-governance-and-effective-use" target="_blank" rel="noopener">United Nations Development Programme, “Local AI compute infrastructure in Africa: Lessons from six country-hosted deployments on governance and effective use” (September 17, 2026). Draws lessons from deployments in six African countries and connects effective use to institutional ownership, usable data, skills, governance, and concrete applications.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Une machine a besoin d’une adresse responsable</h1>
+
+                <p><em>Note de terrain, 11 novembre 2026.</em> Le Web a été conçu pour une personne capable de regarder une page, d’en déduire la fonction, d’en remarquer les limites et de décider si elle devait poursuivre. Un agent arrive avec un autre problème. Il peut lire une page, appeler un service, déplacer des informations et agir au nom d’un utilisateur, alors que la ressource ne dit peut-être jamais sous une forme lisible par une machine ce qu’elle est, qui en répond, ce que l’agent peut faire ou quelles conditions doivent arrêter l’interaction.</p>
+
+                <p>Cette introduction manquante devient un problème d’infrastructure. L’agent n’a pas besoin d’un nouveau slogan sur son intelligence. Il lui faut une adresse responsable : une déclaration découvrable de l’identité, de la fonction, des contraintes, de l’autorité, de la langue et de la correction. Cette déclaration appartient à l’institution ou à la ressource approchée, et non seulement au modèle qui l’approche.</p>
+
+                <blockquote>
+                    <p>Avant qu’une machine puisse respecter une frontière, cette frontière doit pouvoir se présenter.</p>
+                </blockquote>
+
+                <h2>La ressource s’adresse depuis longtemps au mauvais public</h2>
+
+                <p>Le document de l’équipe stratégique du W3C sur le Web à l’ère de l’IA, finalisé en octobre 2026, décrit le passage d’agents qui lisent le Web à des agents qui interagissent avec lui. Ce déplacement fait entrer le consentement, la délégation, la vie privée, la responsabilité, la provenance et le passage à un humain dans la conversation sur les standards. Le document observe aussi que les mécanismes web actuels ne donnent pas encore d’équivalent systématique à l’attente humaine selon laquelle un fournisseur de contenu peut expliquer comment son matériel peut être utilisé et dans quelles conditions.</p>
+
+                <p>Une page peut publier un schéma d’API tout en laissant sans réponse les questions essentielles. OpenAPI peut décrire la forme d’un endpoint. JSON Schema peut décrire des champs. Un certificat peut établir le contrôle d’un domaine. Un fichier robots peut exprimer une instruction négative limitée. Aucun de ces éléments ne dit à lui seul à un agent à quoi sert la ressource, qui en répond, quel contexte elle exige, quelles opérations sont lourdes de conséquences ou comment corriger une interprétation erronée.</p>
+
+                <p>Le groupe communautaire Introduction Layer du W3C formule précisément cette lacune. Sa mission déclarée consiste à permettre à une ressource web de déclarer son identité, sa fonction, ses contraintes et sa partie responsable aux agents, d’une manière découvrable et native pour les machines. Il s’agit d’une proposition de groupe communautaire, et non d’un standard achevé ; sa forme exacte reste donc ouverte. L’orientation compte parce qu’elle traite le contexte comme une interface de premier ordre au lieu de laisser l’agent le déduire de la prose.</p>
+
+                <h2>Une charte se place avant la poignée de main</h2>
+
+                <p>Les entrées récentes de ce journal ont examiné le reçu après un transfert entre agents et le vocabulaire qui permet à un système commercial de donner le même sens au produit, à l’offre et au recours. L’adresse responsable arrive plus tôt. Elle constitue la charte institutionnelle qui indique à un système entrant quel type de lieu il vient d’atteindre, avant qu’une demande ne devienne une transaction.</p>
+
+                <p>Imaginons une archive publique qui expose des dossiers dans plusieurs langues. L’archive doit indiquer quelles collections elle conserve, quelles descriptions font autorité, quels utilisateurs peuvent demander un accès, quelles données exigent un examen humain, quelles conditions de réutilisation s’appliquent et quelle institution reçoit une correction. Un modèle peut extraire une réponse parfaitement mise en forme tout en violant la fonction de l’archive si ces conditions restent implicites.</p>
+
+                <p>Imaginons un petit producteur, une université, une clinique ou un service public en Afrique. Sa présence web peut être abordée par un agent mondial dont les catégories, les présupposés linguistiques et les permissions par défaut ont été conçus ailleurs. Si l’institution ne dispose d’aucun moyen lisible par une machine pour se décrire, la plateforme extérieure devient l’interprète de son autorité. Elle décide si l’institution est un vendeur, une source, un service, un jeu de données ou simplement une page à résumer.</p>
+
+                <p>Une adresse responsable devrait donc expliciter plusieurs affirmations :</p>
+
+                <ul>
+                    <li><strong>Identité :</strong> quelle ressource, institution, service ou collection est abordée, et quels identifiants y renvoient ;</li>
+                    <li><strong>Fonction :</strong> ce que la ressource existe pour fournir, préserver, vendre, enseigner, administrer ou refuser ;</li>
+                    <li><strong>Autorité :</strong> qui l’exploite, quelle partie peut modifier ses déclarations et quelles affirmations viennent d’un autre émetteur ;</li>
+                    <li><strong>Contraintes :</strong> ce qu’un agent peut lire, demander, conserver, transformer, acheter ou publier, y compris les limites de langue et de juridiction ;</li>
+                    <li><strong>État :</strong> la date d’émission de la déclaration, la version active et les conditions qui expirent ou doivent être revérifiées ;</li>
+                    <li><strong>Correction :</strong> la manière dont une personne ou une institution peut contester une représentation, révoquer une permission ou corriger l’interprétation d’un agent.</li>
+                </ul>
+
+                <p>La déclaration doit être assez courte pour être résolue rapidement et assez riche pour empêcher une déduction lourde de conséquences. Elle peut renvoyer vers des politiques détaillées, des catalogues, des justificatifs, des contacts humains et des explications propres à chaque langue. La séparation est essentielle : l’adresse présente la ressource, tandis que d’autres systèmes portent les preuves détaillées et exécutent le travail autorisé.</p>
+
+                <h2>Une identité sans fonction produit une dépendance bien présentée</h2>
+
+                <p>L’Initiative de NIST sur les standards des agents, mise à jour le 9 novembre 2026, place les protocoles ouverts, la recherche sur l’authentification et l’identité des agents ainsi que les évaluations de sécurité au cœur d’un écosystème d’agents fiable et interopérable. Ces fondations sont nécessaires. Un agent authentifié peut encore s’adresser au mauvais service, employer une capacité autorisée pour une mauvaise finalité ou transporter une identité vraie dans un contexte dont il n’a pas compris les contraintes.</p>
+
+                <p>C’est pourquoi l’adresse responsable doit être traitée comme un objet du plan de contrôle. Elle relie l’identité à la fonction, l’autorité à l’action et la capacité aux conditions. Elle indique au système récepteur ce qui doit être vérifié avant que le runtime ne poursuive. Elle fournit aussi à l’opérateur humain un objet stable à examiner lorsque l’interprétation du modèle est contestée.</p>
+
+                <p>Le modèle de résolveur de GS1 fournit un précédent utile, même hors du commerce. Un identifiant persistant peut nommer une entité tandis qu’un résolveur la relie à plusieurs ressources lisibles par les humains et les machines. L’identité reste stable pendant que l’information évolue, et différentes autorités peuvent maintenir leurs propres descriptions liées. Une adresse institutionnelle peut appliquer le même principe à un service, une archive, une école, une coopérative ou un bureau public : conserver l’identité et les déclarations changeantes dans des relations explicites sans les fondre dans un profil détenu par un fournisseur.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de contrôle des adresses responsables</strong> : une infrastructure qui aide les institutions à publier, résoudre, valider, localiser, versionner et corriger les déclarations dont les agents ont besoin avant toute interaction. Elle se situe entre l’identité de domaine, la politique, le contenu web, les runtimes agentiques et la supervision humaine. Son unité de valeur est une affirmation contextuelle lisible par une machine qui évite une déduction coûteuse ou injustifiée.</p>
+
+                <ul>
+                    <li><strong>Manifestes de contexte :</strong> déclarations compactes sur l’identité, la fonction, l’autorité, la langue, la juridiction, les horaires, les classes de données et les actions permises aux agents ;</li>
+                    <li><strong>Résolveurs de politiques :</strong> services qui relient un identifiant institutionnel stable aux politiques actuelles, justificatifs, catalogues, avis publics et voies d’escalade humaine ;</li>
+                    <li><strong>Passerelles de conformité :</strong> tests qui déterminent si un agent peut découvrir et respecter les déclarations d’une ressource avant de lire, écrire, acheter ou republier ;</li>
+                    <li><strong>Plans de contrôle en langues locales :</strong> outils permettant aux institutions de maintenir des déclarations équivalentes en français, anglais, wolof, arabe et dans d’autres langues sans faire d’une taxonomie extérieure le maître caché ;</li>
+                    <li><strong>Services de correction et de révocation :</strong> dossiers qui conservent ce qu’un agent a vu, exposent la version active et font parvenir une nouvelle fonction ou une permission retirée aux bons consommateurs.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par l’échec que le plan empêche. Un agent peut-il identifier l’institution responsable avant d’agir ? Peut-il distinguer une source de référence d’une page de commentaire ? L’opérateur peut-il prouver quelle fonction et quelles contraintes étaient visibles au moment de la demande ? Une institution locale peut-elle corriger une catégorie ou une permission sans attendre qu’une plateforme réentraîne son modèle ? La déclaration survit-elle à un changement de fournisseur et reste-t-elle utile à un runtime local plus petit ?</p>
+
+                <p>Ces questions produisent des indicateurs opérationnels mesurables : délai de résolution du contexte d’une institution, pourcentage de sessions d’agents commencées avec une déclaration valide, taux d’actions bloquées par une contrainte déclarée, délai de propagation d’une correction, parité entre les langues et coût d’exportation du plan de contrôle. La valeur ne réside pas dans un prompt plus grand. Elle réside dans une ambiguïté moindre au moment où le logiciel entre dans l’espace institutionnel.</p>
+
+                <h2>Les institutions africaines doivent publier leur propre présentation</h2>
+
+                <p>L’étude du Programme des Nations Unies pour le développement publiée en septembre 2026 sur le calcul IA hébergé dans les pays au Kenya, au Malawi, au Rwanda, en Afrique du Sud, au Togo et en Zambie fait ressortir un principe voisin pour l’infrastructure physique. Le calcul seul ne crée pas une capacité nationale durable. L’usage effectif dépend de données accessibles, d’opérateurs compétents, de responsabilités institutionnelles claires, de la gouvernance, de la cybersécurité, d’un financement soutenable et d’applications publiques concrètes. Les progrès les plus solides apparaissent lorsque le calcul est relié à la propriété institutionnelle et à l’usage.</p>
+
+                <p>L’adresse responsable est l’expression web de ce même principe. Une institution locale doit pouvoir déclarer ce qu’elle est, ce qu’elle protège, les langues qu’elle sert, les données qu’elle gouverne et le moment où un agent doit céder la place à une personne. Cela ne demande pas un isolement vis-à-vis des standards mondiaux. Cela demande une participation sans abandonner le droit de définir le sens public de l’institution.</p>
+
+                <p>Une coopérative doit pouvoir indiquer comment ses produits sont identifiés et quelles affirmations exigent une vérification. Une université doit pouvoir exposer ses services d’admission, de recherche et d’archive avec leurs autorités distinctes. Une clinique doit pouvoir identifier les informations qu’un agent peut expliquer et celles qui exigent un professionnel qualifié. Un service public doit pouvoir publier les conditions d’un service et une voie d’appel dans les langues de ses résidents. Ces déclarations transforment la visibilité en présence gouvernée.</p>
+
+                <h2>Écrire la présentation avant d’élargir l’action</h2>
+
+                <p>Une institution peut commencer avec une ressource et un parcours agentique important. Rédigez la déclaration en langage humain, liez ses affirmations importantes à des identifiants stables, exprimez les mêmes conditions sous une forme lisible par une machine et désignez un responsable pour chaque champ. Testez un agent avec une demande ambiguë, une permission expirée, un décalage de langue, une politique modifiée et une demande qui dépasse la fonction de la ressource. Donnez à un opérateur humain un moyen d’examiner la déclaration exacte qui a orienté le résultat.</p>
+
+                <p>Le test est simple : un agent peut-il arriver sans deviner quel type de lieu il a atteint, et l’institution peut-elle prouver ce qu’elle lui a dit avant le début de l’action ? Un protocole transporte une demande. Un reçu conserve le transfert. Une adresse responsable donne une voix à l’institution avant que l’un ou l’autre n’existe.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">Équipe stratégique du W3C, « W3C and the State of the Web in the AI Era » (finalisé le 20 octobre 2026). Examine l’interaction des agents avec le Web, le consentement, la délégation, la vie privée, la responsabilité, la provenance, le passage à un humain et la nécessité de standards qui gardent les personnes au centre.</a></li>
+                    <li><a href="https://www.w3.org/groups/cg/intro-layer/" target="_blank" rel="noopener">Groupe communautaire Introduction Layer du W3C. Déclare une mission permettant aux ressources web de présenter leur identité, leur fonction, leurs contraintes et leur responsable aux agents sous une forme découvrable et native pour les machines. Il s’agit d’une proposition de groupe, et non d’un standard achevé.</a></li>
+                    <li><a href="https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « SI Agent Standards Initiative » (mise à jour le 9 novembre 2026). Décrit les protocoles ouverts, la recherche sur l’authentification et l’identité des agents ainsi que les évaluations de sécurité pour une interopérabilité digne de confiance.</a></li>
+                    <li><a href="https://ref.gs1.org/standards/resolver/" target="_blank" rel="noopener">GS1, « GS1-Conformant Resolver Standard ». Décrit des identifiants persistants d’entités reliés à plusieurs ressources lisibles par les humains et les machines au moyen d’un modèle de résolveur distribué et interopérable.</a></li>
+                    <li><a href="https://www.undp.org/africa/publications/local-ai-compute-infrastructure-africa-lessons-six-country-hosted-deployments-governance-and-effective-use" target="_blank" rel="noopener">Programme des Nations Unies pour le développement, « Local AI compute infrastructure in Africa: Lessons from six country-hosted deployments on governance and effective use » (17 septembre 2026). Tire des leçons de déploiements dans six pays africains et relie l’usage effectif à la propriété institutionnelle, aux données utilisables, aux compétences, à la gouvernance et aux applications concrètes.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

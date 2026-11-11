@@ -196,6 +196,7 @@
         'article.entry164':     { en: 'Diop Daily #164 — November 2026', fr: 'Diop Quotidien n°164 — Novembre 2026' },
         'article.entry165':     { en: 'Diop Daily #165 — November 2026', fr: 'Diop Quotidien n°165 — Novembre 2026' },
         'article.entry166':     { en: 'Diop Daily #166 — November 2026', fr: 'Diop Quotidien n°166 — Novembre 2026' },
+        'article.entry167':     { en: 'Diop Daily #167 — November 2026', fr: 'Diop Quotidien n°167 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -208,6 +209,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-167': {
+        title: {
+            en: 'A Machine Needs a Responsible Address',
+            fr: 'Une machine a besoin d’une adresse responsable'
+        },
+        excerpt: {
+            en: 'As agents move from reading web resources to acting on them, institutions need a machine-readable way to state identity, purpose, constraints, authority, and correction. The investable layer is a responsible-address plane for agent-ready institutions, with particular value for African operators preserving local control.',
+            fr: 'À mesure que les agents passent de la lecture des ressources web à l’action sur celles-ci, les institutions ont besoin d’un moyen lisible par les machines d’énoncer leur identité, leur fonction, leurs contraintes, leur autorité et leur voie de correction. La couche d’investissement est un plan de contrôle des adresses responsables pour les institutions prêtes à recevoir des agents, particulièrement utile aux opérateurs africains qui préservent leur contrôle local.'
+        }
+    },
     'diop-daily-166': {
         title: {
             en: 'Name the Thing Before the Agent Buys It',
