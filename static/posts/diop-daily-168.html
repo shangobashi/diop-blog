@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Creative Work Needs a Release Ledger — Diop Research</title>
+    <meta name="description" content="As creative work moves through models, platforms, languages, and automated distribution, the commercial unit is becoming the governed edition: a release package that carries identity, rights, transformations, permissions, and correction. The investable layer is a release-ledger plane for inheritable creative IP."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry168">Diop Daily #168 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 12, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>creative IP · release infrastructure · machine distribution</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Creative Work Needs a Release Ledger</h1>
+
+                <p><em>Field note, November 12, 2026.</em> A creative work now travels through more states than its author can see. A manuscript becomes an edited book, a translated edition, an audiobook, a quoted passage, a classroom extract, a model input, a synthetic adaptation, a storefront listing, and an answer returned by an agent. Each state can carry a different permission, language, price, audience, and responsibility.</p>
+
+                <p>The file is too small a unit for this journey. A file can hold words or pixels while leaving the commercial and institutional conditions of release outside its boundaries. The durable unit is the governed edition: a release package that identifies the work, records its ingredients and transformations, states what may happen next, names the responsible party, and gives a reader, platform, or agent a route to correction.</p>
+
+                <blockquote>
+                    <p>A work becomes an institution when its history can travel with its use.</p>
+                </blockquote>
+
+                <h2>Provenance records the road; an edition sets the terms</h2>
+
+                <p>Current standards work gives the first half of this argument a technical foundation. The C2PA Content Credentials specification describes cryptographically verifiable information about an asset, its creation, its changes, and its ingredients. Its purpose is to preserve provenance across a workflow so that a consumer can assess the history of what they are seeing. The C2PA FAQ is explicit about the boundary: Content Credentials support transparency and integrity, while access control and rights restriction belong to other systems.</p>
+
+                <p>That boundary creates the next design problem. A signed history can show that a translation was made from a source manuscript, that an image passed through an editing tool, or that several ingredients were composed into a new asset. It does not, by itself, answer whether a platform may train on the work, whether an agent may quote it commercially, whether a translated edition carries the same rights as the original, which markets may receive it, or who approves a correction.</p>
+
+                <p>The European Union’s Code of Practice on Transparency of AI-generated Content makes the surrounding obligation more concrete. Article 50 transparency requirements apply from August 2, 2026, and the code describes machine-readable marking, detection, and labelling duties for providers and deployers. The code is a compliance instrument, while C2PA is a technical provenance standard. Their coexistence shows why a release needs more than a signature: a machine must be able to interpret the status of an asset and the institution must be able to prove how that status was established.</p>
+
+                <p>The W3C Strategy Team’s October paper on the Web in the AI era adds the distribution pressure. Agents are moving from reading web content to interacting with it, while publishers still lack a systematic equivalent of the human-facing contract that says how content may be consumed, reused, or compensated. W3C also points toward machine-readable descriptions, provenance, identity, consent, delegation, and human handoff. The web is acquiring a new class of reader that can also transform and redistribute what it encounters.</p>
+
+                <h2>The edition is a governed release object</h2>
+
+                <p>Provenance answers “what happened to this asset?” A release ledger answers “what is this edition, and what may happen to it now?” The distinction matters for books, research, software documentation, music, film, visual art, educational material, and public information. The work may have one underlying identity while its editions differ by language, territory, format, price, licence, review status, accessibility treatment, and permitted machine use.</p>
+
+                <p>A serious release ledger should make the following fields inspectable:</p>
+
+                <ul>
+                    <li><strong>Work identity:</strong> the stable work, edition, contributor, and ingredient identifiers that let related releases remain connected;</li>
+                    <li><strong>Editorial state:</strong> draft, reviewed, corrected, withdrawn, translated, adapted, or superseded, with the authority that changed the state;</li>
+                    <li><strong>Transformation record:</strong> the tools, people, models, source materials, and material changes that shaped this release;</li>
+                    <li><strong>Permission surface:</strong> reading, quotation, translation, training, adaptation, resale, classroom use, and automated redistribution conditions;</li>
+                    <li><strong>Distribution terms:</strong> territory, language, format, price, audience, channel, attribution, and revenue-sharing obligations;</li>
+                    <li><strong>Correction path:</strong> the person or institution that receives a challenge, the evidence required, and the way an accepted correction propagates;</li>
+                    <li><strong>Expiry and withdrawal:</strong> the conditions under which a release must be revalidated, replaced, or removed from a particular channel.</li>
+                </ul>
+
+                <p>This is a ledger in the institutional sense. It does not need to expose private contracts or turn every reader into a compliance officer. It needs to expose the claims that another system must know before it acts. An agent selecting material for a course should be able to distinguish an authorised excerpt from a training permission. A marketplace should be able to distinguish an edition licensed for sale in Senegal from one intended for a different territory. A publisher should be able to tell which translation is current without asking a model to infer the answer from scattered pages.</p>
+
+                <h2>Machine distribution changes the meaning of an edition</h2>
+
+                <p>Human distribution usually gives the work a visible container: a book, an album, a broadcast, a classroom packet, a magazine issue. Machine distribution breaks the container into retrievals, summaries, recommendations, transformations, and actions. A passage can leave the edition while its title, source, licence, language, and correction path disappear.</p>
+
+                <p>That loss creates costs for every participant. Readers cannot tell whether a generated summary is current. Creators cannot see which version entered a downstream system. Platforms cannot demonstrate that their labels and rights checks refer to the same asset. Investors cannot distinguish a library of reusable work from a pile of files whose ownership and obligations must be reconstructed by hand.</p>
+
+                <p>The practical answer is to make the edition portable across surfaces. The ledger can point to the human-readable work, the signed provenance manifest, the licence, the language version, the distribution record, and the correction notice without forcing every surface to reproduce every detail. The machine receives a compact release object. The person receives an intelligible explanation. The institution keeps the authority to update the object.</p>
+
+                <h2>Local-language editions are sovereign objects</h2>
+
+                <p>Language makes this architecture political. A translation is often treated as a presentation layer applied after the “real” work exists. For machine distribution, that assumption is costly. A French, Wolof, Arabic, or English edition may carry different examples, legal references, cultural terms, and correction needs. The language version can also be the first edition encountered by a reader, a public institution, or an agent.</p>
+
+                <p>African publishers, researchers, educators, artists, and public agencies need release ledgers that let them maintain these editions as authoritative objects. Global standards can provide interoperable structures without deciding which language is the hidden master. A local institution should be able to say which translation it approves, which terms require a regional gloss, which extracts may circulate, and where a challenge should be sent. That capacity is a form of intellectual sovereignty because it keeps public meaning attached to institutions that know the language and accept responsibility for its use.</p>
+
+                <p>The principle extends beyond African publishing. Every community loses control when its work is machine-readable only after another platform has classified it. A release ledger gives the creator or institution a place to state what the work is before discovery, ranking, summarisation, and transformation begin.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is a <strong>release-ledger plane for creative IP</strong>: infrastructure that packages an edition’s identity, provenance, rights, language, distribution, and correction state so the work can survive automated reuse. It sits between authoring tools, archives, rights systems, marketplaces, model pipelines, and public interfaces. Its value is a governed release that another operator can inspect, license, localise, sell, transform, or withdraw without reconstructing the institution from fragments.</p>
+
+                <ul>
+                    <li><strong>Edition registries:</strong> durable identifiers and relationship graphs for works, translations, formats, contributors, and superseded releases;</li>
+                    <li><strong>Rights and permission resolvers:</strong> machine-readable answers to whether an agent may quote, translate, train, adapt, sell, or redistribute a specific edition;</li>
+                    <li><strong>Provenance-to-policy bridges:</strong> systems that connect C2PA-style history to licences, editorial states, territory, language, and human approval;</li>
+                    <li><strong>Release conformance services:</strong> tests that verify whether an edition carries the required source, status, attribution, label, and correction fields across channels;</li>
+                    <li><strong>Local-language publishing control planes:</strong> tools that let regional institutions author, approve, update, and export equivalent release records without surrendering their taxonomy to a platform.</li>
+                </ul>
+
+                <p>Underwriting should begin with the failure the ledger prevents. Can a downstream operator identify the exact edition it received? Can a creator see which transformation produced the derivative? Can a platform show that its AI label refers to the same asset whose provenance was validated? Can a school or marketplace obtain permission in a language its staff understand? Can a correction reach every active derivative without erasing the history that explains why the earlier version existed?</p>
+
+                <p>These questions produce measurable operating capacity: time to resolve a release, percentage of derivatives carrying a valid edition identifier, correction propagation time, licence-decision accuracy, language parity, re-use auditability, and export cost. The investable surface becomes clearer when a customer can price the reduction in rights ambiguity, takedown labour, duplicate editorial work, and untraceable machine reuse.</p>
+
+                <h2>Release the work as an institution</h2>
+
+                <p>A creator or laboratory can begin with one work that already crosses formats or languages. Assign a stable work identifier, define the edition boundary, attach the source materials and transformation record, state the permissions in plain language, and connect each claim to an authority. Publish a compact machine-readable release record beside the human-facing edition. Test a model, marketplace, archive, and reader interface against the same object.</p>
+
+                <p>Then test change. Correct a paragraph. Replace a translation. Withdraw one territory. Add an audiobook. Change the licence for commercial quotation. The system should preserve the earlier state, expose the active state, and show which downstream records require attention. That is the difference between a file repository and an institutional publishing system.</p>
+
+                <p>Creative work will continue to move through machines. The question is whether each movement leaves the work more legible to its rightful stewards or less. A release ledger gives an edition a memory, a boundary, and a future. It lets a book, a study, a song, or a film enter the machine economy without surrendering the terms by which it can be recognised.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://spec.c2pa.org/specifications/specifications/2.5/specs/ContentCredentials.html" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, <em>Content Credentials 2.5</em>. Defines cryptographically verifiable provenance information, manifests, ingredients, signatures, and the preservation of an asset’s history across changes.</a></li>
+                    <li><a href="https://c2pa.org/faqs/" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, <em>C2PA FAQ</em>. Explains the distinction between provenance and DRM, the role of conformance evaluation and trust lists, ingredient metadata, durable credentials, and offline workflows.</a></li>
+                    <li><a href="https://spec.c2pa.org/conformance-explorer/" target="_blank" rel="noopener">C2PA, <em>Conformance Explorer</em>. Publishes a live catalogue of conformant generator and validator products, their assurance levels, media types, and conformance dates.</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content" target="_blank" rel="noopener">European Commission, <em>Code of Practice on Transparency of AI-generated Content</em> (last updated October 19, 2026). Describes Article 50 transparency obligations, machine-readable marking and detection, labelling, deployer duties, and the relationship between a voluntary code and legal requirements.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">W3C Strategy Team, <em>W3C and the State of the Web in the AI Era</em> (finalized October 20, 2026). Examines agents interacting with web content, the missing contract between content providers and AI systems, machine-readable descriptions, provenance, consent, delegation, and human handoff.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Une œuvre créative a besoin d’un registre de publication</h1>
+
+                <p><em>Note de terrain, 12 novembre 2026.</em> Une œuvre créative traverse désormais plus d’états que son auteur ne peut en voir. Un manuscrit devient un livre édité, une édition traduite, un livre audio, un passage cité, un extrait pédagogique, une donnée d’entrée pour un modèle, une adaptation synthétique, une fiche de boutique et une réponse rendue par un agent. Chaque état peut porter une permission, une langue, un prix, un public et une responsabilité différents.</p>
+
+                <p>Le fichier est une unité trop petite pour ce voyage. Il peut contenir des mots ou des pixels tout en laissant hors de ses frontières les conditions commerciales et institutionnelles de la publication. L’unité durable est l’édition gouvernée : un paquet de publication qui identifie l’œuvre, enregistre ses composants et ses transformations, indique ce qui peut arriver ensuite, nomme la partie responsable et donne au lecteur, à la plateforme ou à l’agent un chemin de correction.</p>
+
+                <blockquote>
+                    <p>Une œuvre devient une institution lorsque son histoire peut voyager avec son usage.</p>
+                </blockquote>
+
+                <h2>La provenance enregistre le chemin ; l’édition fixe les conditions</h2>
+
+                <p>Les travaux actuels de normalisation donnent un fondement technique à la première moitié de cet argument. La spécification Content Credentials de la C2PA décrit des informations vérifiables cryptographiquement sur un actif, sa création, ses changements et ses composants. Son objectif est de préserver la provenance au cours d’un workflow afin qu’une personne puisse évaluer l’histoire de ce qu’elle voit. La FAQ de la C2PA est claire sur la limite : les Content Credentials soutiennent la transparence et l’intégrité, tandis que le contrôle de l’accès et la restriction des droits appartiennent à d’autres systèmes.</p>
+
+                <p>Cette limite crée le problème de conception suivant. Une histoire signée peut montrer qu’une traduction vient d’un manuscrit source, qu’une image est passée par un outil de retouche ou que plusieurs composants ont été assemblés dans un nouvel actif. Elle ne dit pas, à elle seule, si une plateforme peut entraîner un modèle sur l’œuvre, si un agent peut la citer à des fins commerciales, si une édition traduite porte les mêmes droits que l’original, quels marchés peuvent la recevoir ou qui approuve une correction.</p>
+
+                <p>Le Code de pratique de l’Union européenne sur la transparence des contenus générés par l’IA rend l’obligation environnante plus concrète. Les exigences de transparence de l’article 50 s’appliquent depuis le 2 août 2026, et le code décrit des obligations de marquage lisible par machine, de détection et d’étiquetage pour les fournisseurs et les déployeurs. Le code est un instrument de conformité, tandis que la C2PA est une norme technique de provenance. Leur coexistence montre pourquoi une publication a besoin de plus qu’une signature : une machine doit pouvoir interpréter l’état d’un actif et l’institution doit pouvoir prouver comment cet état a été établi.</p>
+
+                <p>Le document stratégique du W3C consacré au Web à l’ère de l’IA, publié en octobre, ajoute la pression de la distribution. Les agents passent de la lecture des contenus web à l’interaction avec eux, alors que les éditeurs ne disposent toujours pas d’un équivalent systématique du contrat destiné aux humains qui indiquerait comment un contenu peut être consommé, réutilisé ou rémunéré. Le W3C pointe aussi vers des descriptions lisibles par machine, la provenance, l’identité, le consentement, la délégation et le passage à un humain. Le Web accueille une nouvelle classe de lecteurs capables de transformer et de redistribuer ce qu’ils rencontrent.</p>
+
+                <h2>L’édition est un objet de publication gouverné</h2>
+
+                <p>La provenance répond à la question « qu’est-il arrivé à cet actif ? ». Un registre de publication répond à la question « quelle est cette édition et que peut-on lui faire maintenant ? ». Cette distinction compte pour les livres, la recherche, la documentation logicielle, la musique, le cinéma, les arts visuels, les supports pédagogiques et l’information publique. L’œuvre peut conserver une identité fondamentale tandis que ses éditions diffèrent par la langue, le territoire, le format, le prix, la licence, l’état éditorial, l’accessibilité et l’usage machine autorisé.</p>
+
+                <p>Un registre sérieux devrait rendre les champs suivants inspectables :</p>
+
+                <ul>
+                    <li><strong>Identité de l’œuvre :</strong> les identifiants stables de l’œuvre, de l’édition, des contributeurs et des composants, afin de relier les publications associées ;</li>
+                    <li><strong>État éditorial :</strong> brouillon, révisé, corrigé, retiré, traduit, adapté ou remplacé, avec l’autorité qui a modifié cet état ;</li>
+                    <li><strong>Historique des transformations :</strong> les outils, personnes, modèles, matériaux sources et changements substantiels qui ont façonné cette publication ;</li>
+                    <li><strong>Surface des permissions :</strong> les conditions de lecture, citation, traduction, entraînement, adaptation, revente, usage pédagogique et redistribution automatisée ;</li>
+                    <li><strong>Conditions de distribution :</strong> le territoire, la langue, le format, le prix, le public, le canal, l’attribution et les obligations de partage de revenus ;</li>
+                    <li><strong>Chemin de correction :</strong> la personne ou l’institution qui reçoit une contestation, les preuves nécessaires et la manière dont une correction acceptée se propage ;</li>
+                    <li><strong>Expiration et retrait :</strong> les conditions dans lesquelles une publication doit être revalidée, remplacée ou retirée d’un canal déterminé.</li>
+                </ul>
+
+                <p>Il s’agit d’un registre au sens institutionnel. Il n’a pas besoin de révéler des contrats privés ni de transformer chaque lecteur en contrôleur de conformité. Il doit exposer les affirmations qu’un autre système doit connaître avant d’agir. Un agent qui sélectionne des documents pour un cours doit pouvoir distinguer un extrait autorisé d’une permission d’entraînement. Une place de marché doit pouvoir distinguer une édition autorisée à la vente au Sénégal d’une édition destinée à un autre territoire. Un éditeur doit pouvoir reconnaître la traduction actuelle sans demander à un modèle de l’inférer à partir de pages dispersées.</p>
+
+                <h2>La distribution machine change le sens d’une édition</h2>
+
+                <p>La distribution humaine donne généralement à l’œuvre un contenant visible : un livre, un album, une émission, un dossier pédagogique ou un numéro de revue. La distribution machine brise ce contenant en récupérations, résumés, recommandations, transformations et actions. Un passage peut quitter l’édition tandis que son titre, sa source, sa licence, sa langue et son chemin de correction disparaissent.</p>
+
+                <p>Cette perte crée des coûts pour chaque participant. Les lecteurs ne savent plus si un résumé généré est à jour. Les créateurs ne voient pas quelle version est entrée dans un système en aval. Les plateformes ne peuvent pas démontrer que leurs labels et leurs contrôles de droits concernent le même actif. Les investisseurs ne peuvent pas distinguer une bibliothèque d’œuvres réutilisables d’un amas de fichiers dont la propriété et les obligations doivent être reconstruites à la main.</p>
+
+                <p>La réponse pratique consiste à rendre l’édition portable entre les surfaces. Le registre peut renvoyer vers l’œuvre lisible par les humains, le manifeste de provenance signé, la licence, la version linguistique, le dossier de distribution et l’avis de correction sans obliger chaque surface à reproduire tous les détails. La machine reçoit un objet de publication compact. La personne reçoit une explication intelligible. L’institution conserve l’autorité nécessaire pour mettre à jour l’objet.</p>
+
+                <h2>Les éditions en langues locales sont des objets souverains</h2>
+
+                <p>La langue rend cette architecture politique. Une traduction est souvent traitée comme une couche de présentation appliquée après l’existence de l’œuvre « réelle ». Pour la distribution machine, cette hypothèse coûte cher. Une édition française, wolof, arabe ou anglaise peut porter des exemples, des références juridiques, des termes culturels et des besoins de correction différents. La version linguistique peut aussi être la première édition rencontrée par un lecteur, une institution publique ou un agent.</p>
+
+                <p>Les éditeurs, chercheurs, enseignants, artistes et administrations africains ont besoin de registres de publication qui leur permettent de maintenir ces éditions comme des objets faisant autorité. Les standards mondiaux peuvent fournir des structures interopérables sans décider quelle langue sera le maître caché. Une institution locale doit pouvoir indiquer quelle traduction elle approuve, quels termes exigent une note régionale, quels extraits peuvent circuler et où adresser une contestation. Cette capacité relève de la souveraineté intellectuelle parce qu’elle rattache le sens public à des institutions qui connaissent la langue et assument la responsabilité de son usage.</p>
+
+                <p>Le principe dépasse l’édition africaine. Toute communauté perd du contrôle lorsque son travail n’est lisible par les machines qu’après avoir été classé par une autre plateforme. Un registre de publication donne au créateur ou à l’institution un lieu où dire ce qu’est l’œuvre avant que commencent la découverte, le classement, le résumé et la transformation.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de contrôle des registres de publication pour la propriété intellectuelle créative</strong> : une infrastructure qui rassemble l’identité, la provenance, les droits, la langue, la distribution et l’état de correction d’une édition afin que l’œuvre survive à la réutilisation automatisée. Cette couche se situe entre les outils d’auteur, les archives, les systèmes de droits, les places de marché, les pipelines de modèles et les interfaces publiques. Sa valeur est une publication gouvernée qu’un autre opérateur peut inspecter, concéder, localiser, vendre, transformer ou retirer sans reconstruire l’institution à partir de fragments.</p>
+
+                <ul>
+                    <li><strong>Registres d’éditions :</strong> identifiants durables et graphes de relations pour les œuvres, traductions, formats, contributeurs et publications remplacées ;</li>
+                    <li><strong>Résolveurs de droits et de permissions :</strong> réponses lisibles par machine à la question de savoir si un agent peut citer, traduire, entraîner, adapter, vendre ou redistribuer une édition précise ;</li>
+                    <li><strong>Ponts entre provenance et politique :</strong> systèmes reliant une histoire de type C2PA aux licences, états éditoriaux, territoires, langues et approbations humaines ;</li>
+                    <li><strong>Services de conformité des publications :</strong> tests vérifiant qu’une édition conserve la source, l’état, l’attribution, le label et les champs de correction requis entre les canaux ;</li>
+                    <li><strong>Plans de contrôle éditoriaux en langues locales :</strong> outils permettant aux institutions régionales de rédiger, approuver, mettre à jour et exporter des registres équivalents sans céder leur taxonomie à une plateforme.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par l’échec que le registre empêche. Un opérateur en aval peut-il identifier l’édition exacte qu’il a reçue ? Un créateur peut-il voir quelle transformation a produit le dérivé ? Une plateforme peut-elle montrer que son label IA se rapporte au même actif dont la provenance a été validée ? Une école ou une place de marché peut-elle obtenir une permission dans une langue comprise par son équipe ? Une correction peut-elle atteindre chaque dérivé actif sans effacer l’histoire qui explique l’existence de la version précédente ?</p>
+
+                <p>Ces questions produisent une capacité opérationnelle mesurable : délai de résolution d’une publication, pourcentage de dérivés portant un identifiant d’édition valide, délai de propagation d’une correction, exactitude des décisions de licence, parité entre les langues, auditabilité de la réutilisation et coût d’exportation. La surface d’investissement devient plus claire lorsqu’un client peut chiffrer la réduction de l’ambiguïté des droits, du travail de retrait, des doublons éditoriaux et des réutilisations machine impossibles à retracer.</p>
+
+                <h2>Publier l’œuvre comme une institution</h2>
+
+                <p>Un créateur ou un laboratoire peut commencer par une œuvre qui traverse déjà plusieurs formats ou plusieurs langues. Attribuez un identifiant stable à l’œuvre, définissez la frontière de l’édition, joignez les matériaux sources et l’historique des transformations, énoncez les permissions en langage clair et reliez chaque affirmation à une autorité. Publiez un registre de diffusion compact et lisible par machine à côté de l’édition destinée aux humains. Testez un modèle, une place de marché, une archive et une interface de lecture contre le même objet.</p>
+
+                <p>Testez ensuite le changement. Corrigez un paragraphe. Remplacez une traduction. Retirez un territoire. Ajoutez un livre audio. Modifiez la licence pour la citation commerciale. Le système doit conserver l’état précédent, exposer l’état actif et indiquer quels dossiers en aval exigent une attention. C’est la différence entre un dépôt de fichiers et un système institutionnel de publication.</p>
+
+                <p>Les œuvres créatives continueront de circuler dans les machines. La question est de savoir si chaque déplacement les rend plus lisibles pour leurs gardiens légitimes ou moins. Un registre de publication donne à une édition une mémoire, une frontière et un avenir. Il permet à un livre, une étude, une chanson ou un film d’entrer dans l’économie des machines sans abandonner les conditions qui permettent de le reconnaître.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://spec.c2pa.org/specifications/specifications/2.5/specs/ContentCredentials.html" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, <em>Content Credentials 2.5</em>. Définit des informations de provenance vérifiables cryptographiquement, les manifestes, les composants, les signatures et la conservation de l’histoire d’un actif à travers ses transformations.</a></li>
+                    <li><a href="https://c2pa.org/faqs/" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, <em>FAQ C2PA</em>. Explique la différence entre provenance et DRM, le rôle de l’évaluation de conformité et des listes de confiance, les métadonnées de composants, les identifiants durables et les workflows hors ligne.</a></li>
+                    <li><a href="https://spec.c2pa.org/conformance-explorer/" target="_blank" rel="noopener">C2PA, <em>Conformance Explorer</em>. Publie un catalogue vivant de produits générateurs et validateurs conformes, leurs niveaux d’assurance, leurs types de médias et leurs dates de conformité.</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content" target="_blank" rel="noopener">Commission européenne, <em>Code de pratique sur la transparence des contenus générés par l’IA</em> (dernière mise à jour le 19 octobre 2026). Décrit les obligations de transparence de l’article 50, le marquage et la détection lisibles par machine, l’étiquetage, les devoirs des déployeurs et le rapport entre code volontaire et exigences juridiques.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">Équipe stratégique du W3C, <em>W3C and the State of the Web in the AI Era</em> (finalisé le 20 octobre 2026). Examine l’interaction des agents avec les contenus web, le contrat manquant entre fournisseurs de contenu et systèmes IA, les descriptions lisibles par machine, la provenance, le consentement, la délégation et le passage à un humain.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

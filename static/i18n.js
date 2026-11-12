@@ -197,6 +197,7 @@
         'article.entry165':     { en: 'Diop Daily #165 — November 2026', fr: 'Diop Quotidien n°165 — Novembre 2026' },
         'article.entry166':     { en: 'Diop Daily #166 — November 2026', fr: 'Diop Quotidien n°166 — Novembre 2026' },
         'article.entry167':     { en: 'Diop Daily #167 — November 2026', fr: 'Diop Quotidien n°167 — Novembre 2026' },
+        'article.entry168':     { en: 'Diop Daily #168 — November 2026', fr: 'Diop Quotidien n°168 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -209,6 +210,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-168': {
+        title: {
+            en: 'A Creative Work Needs a Release Ledger',
+            fr: 'Une œuvre créative a besoin d’un registre de publication'
+        },
+        excerpt: {
+            en: 'As creative work moves through models, platforms, languages, and automated distribution, the durable unit is becoming the governed edition: a release package that carries identity, rights, transformations, permissions, and correction. The investable layer is a release-ledger plane for creative IP that lets work survive machine reuse without surrendering its terms.',
+            fr: 'À mesure que les œuvres créatives traversent les modèles, les plateformes, les langues et la distribution automatisée, l’unité durable devient l’édition gouvernée : un paquet de publication qui porte l’identité, les droits, les transformations, les permissions et la correction. La couche d’investissement est un plan de contrôle des registres de publication pour une propriété intellectuelle créative capable de survivre à la réutilisation machine sans abandonner ses conditions.'
+        }
+    },
     'diop-daily-167': {
         title: {
             en: 'A Machine Needs a Responsible Address',
