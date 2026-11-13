@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Who Maintains the Language? — Diop Research</title>
+    <meta name="description" content="African-language AI is moving from isolated datasets toward shared regional infrastructure. The durable commercial object is a language-maintenance plane that keeps terms, speech data, benchmarks, evaluation, and correction under accountable local stewardship."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry169">Diop Daily #169 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 13, 2026</time>
+                    <span>·</span>
+                    <span data-rt="8">8 min read</span>
+                    <span>·</span>
+                    <span>language infrastructure · African AI · evaluation</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Who Maintains the Language?</h1>
+
+                <p><em>Field note, November 13, 2026.</em> An AI system can produce fluent words and still fail the institution that needs those words to carry a place, a memory, a legal distinction, or a shared obligation. The failure often appears as a translation error, yet the deeper problem is maintenance. Who decides which expression is current? Who records a proverb, a pronunciation, a technical term, or a change in public usage? Who tests whether a model has preserved the meaning after an update?</p>
+
+                <p>African-language AI is entering a new phase. The work is moving from individual datasets and isolated demonstrations toward regional collaboration, shared expertise, local applications, and infrastructure that can keep improving after a model launch. That shift changes the commercial object. The durable layer is a <strong>language-maintenance plane</strong>: an institutional system for collecting speech and text, defining terms, documenting variation, evaluating models, recording corrections, and deciding who may reuse the resulting language assets.</p>
+
+                <blockquote>
+                    <p>A language enters the machine age with dignity when its stewards can correct the machine in public.</p>
+                </blockquote>
+
+                <h2>The data gap is also a maintenance gap</h2>
+
+                <p>The UNESCO Courier described African languages as a blind spot of current AI systems in April 2026. Its account cited poor performance on Hausa and Zulu, including a report that ChatGPT recognised only a minority of written Hausa sentences despite the language’s large speaker population. The article also described African Next Voices, a project that digitised 9,000 hours of spoken languages from Kenya, South Africa, and Nigeria for model development.</p>
+
+                <p>These facts matter, yet a corpus is only a beginning. Speech recorded once can become outdated, mislabelled, inaccessible to the communities that produced it, or detached from the context that gives an expression its force. A translation benchmark can expose a weak model while leaving nobody responsible for updating the benchmark when public language changes. A terminology list can be useful for one ministry and wrong for another region. Language work needs a living institution around the data.</p>
+
+                <p>The maintenance question has several parts:</p>
+                <ul>
+                    <li><strong>Collection:</strong> which speakers, texts, oral traditions, domains, and varieties enter the record?</li>
+                    <li><strong>Description:</strong> who supplies transcription, translation, pronunciation, cultural context, and uncertainty?</li>
+                    <li><strong>Evaluation:</strong> which tasks represent useful performance for education, health, commerce, public administration, or research?</li>
+                    <li><strong>Correction:</strong> how does a speaker or institution challenge an output, and how does the correction reach future versions?</li>
+                    <li><strong>Permission:</strong> which material may be used for research, training, commercial products, or public services?</li>
+                </ul>
+
+                <p>These are governance questions expressed through technical work. If they remain implicit, the platform that owns the model will quietly become the authority over the language. If they are explicit, data and models can remain connected to the communities and institutions that make their meaning legible.</p>
+
+                <h2>Regional collaboration is a beginning, not a substitute for custody</h2>
+
+                <p>In July, GSMA announced ATLAS Umoja AI with governments, researchers, industry partners, and African technology organisations. The initiative is intended to share expertise, datasets, and best practice so that African-language AI reflects local languages, cultures, and development priorities. The announcement linked language AI to meaningful connectivity: a service is difficult to call inclusive when the people it is meant to reach must first abandon their language.</p>
+
+                <p>UNDP and GSMA extended that direction in October through a partnership focused on African-led AI innovation. The announcement connected African-language solutions with access to compute, local talent, practical applications, and routes from promising pilots toward sustainable services. This is an important move because language capability requires more than a model checkpoint. It needs operators who can maintain data, run evaluation, fund correction, and place the technology inside institutions that can answer for its use.</p>
+
+                <p>Collaboration does not erase the question of custody. A regional initiative can distribute knowledge while a vendor retains the decisive assets: the taxonomy, the evaluation set, the correction history, and the right to determine which language behaviour counts as acceptable. African participation becomes durable when institutions can export their own language records, audit model performance, reject a harmful normalization, and keep serving users when a supplier changes its product.</p>
+
+                <p>That is why a language-maintenance plane should separate several layers:</p>
+                <ul>
+                    <li>a community record for speech, text, terminology, and cultural context;</li>
+                    <li>a versioned language map that records dialect, domain, region, pronunciation, and accepted variation;</li>
+                    <li>evaluation suites that test comprehension, generation, translation, speech, safety, and cultural fit;</li>
+                    <li>a correction register that links a reported failure to evidence, a responsible reviewer, a model version, and a resolution;</li>
+                    <li>a permission and export layer that preserves institutional control across models, providers, and applications.</li>
+                </ul>
+
+                <h2>Quality is a local question with a portable answer</h2>
+
+                <p>The OECD’s April 2026 case study on AI governance in Africa places locally developed language models alongside agriculture and regulatory frameworks. Its central lesson is practical: policy objectives become real only when they are translated into technical, institutional, and human systems that can implement them. Infrastructure gaps, data governance, and institutional capacity shape what responsible AI can mean in practice.</p>
+
+                <p>Language evaluation should follow the same discipline. A single score hides the decisions that matter. A model may translate a sentence accurately while flattening a social distinction. It may recognise a spoken word in a quiet recording and fail in the acoustic conditions of a classroom or clinic. It may answer a factual question while using a term that a local authority has retired. Evaluation must therefore be task-specific, place-aware, and open to review by people who understand the language as lived practice.</p>
+
+                <p>A portable evaluation record can carry the test set version, language variety, domain, annotator authority, model version, error categories, and correction status. A ministry, school, publisher, or health service can then compare systems without accepting a vendor’s score as the whole truth. The record also makes improvement visible: the question is not whether a model is “good at” a language in the abstract, but whether it performs a defined public task under stated conditions and improves when its errors are corrected.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is a <strong>language-maintenance plane</strong> that sits between communities, data owners, model builders, public institutions, and applications. It is closer to an operating layer than a translation feature. Its job is to preserve the language assets and evaluation evidence that let multiple models and services improve without taking ownership of meaning away from the institutions that maintain it.</p>
+
+                <ul>
+                    <li><strong>Language asset registries:</strong> identifiers, lineage, licences, dialect metadata, and community authorities for speech, text, terms, and recordings;</li>
+                    <li><strong>Evaluation and red-teaming services:</strong> task suites for local languages, cultural context, safety, speech conditions, and domain-specific use;</li>
+                    <li><strong>Correction operations:</strong> workflows that turn reported failures into reviewed annotations, benchmark changes, model tests, and public release notes;</li>
+                    <li><strong>Model portability layers:</strong> exportable adapters, retrieval assets, terminology controls, and evaluation records that survive a provider change;</li>
+                    <li><strong>Institutional language consoles:</strong> tools for schools, publishers, clinics, agencies, and cooperatives to approve terms, manage permissions, and inspect performance in the languages they use.</li>
+                </ul>
+
+                <p>Underwriting should begin with the failure this plane prevents. Can a school prove which language version its tutor used? Can a health service identify the terms that were tested and the reviewer who approved them? Can a publisher correct a phrase without waiting for a global model retraining cycle? Can a community withdraw a recording from a commercial pipeline while preserving an accountable public record? Can a local operator move its language assets and evaluation history to another model?</p>
+
+                <p>Those questions yield measurable capacity: correction time, benchmark coverage by language variety, percentage of outputs linked to an approved terminology source, evaluator diversity, permission resolution time, export completeness, and performance parity across deployment conditions. Capital can then assess a system by the work it keeps possible, not by the number of languages listed on a model card.</p>
+
+                <h2>African language technology should compound locally</h2>
+
+                <p>The strategic question is not whether African institutions should collaborate with global model providers. They should use every useful instrument available. The question is whether each collaboration leaves behind local capacity: curated records, trained evaluators, language engineers, public benchmarks, correction procedures, and institutions able to set terms for reuse.</p>
+
+                <p>A language-maintenance plane makes that accumulation visible. A university can contribute a corpus while retaining a clear licence and a correction authority. A public agency can publish terminology for a service and revise it when policy changes. A media organisation can preserve regional expressions instead of allowing a generic translation layer to erase them. A small application builder can use shared evaluation evidence without rebuilding a language programme from zero.</p>
+
+                <p>Begin with one language, one public task, and one accountable institution. Define the community and domain boundaries. Record the source and permission for each asset. Build an evaluation set with local reviewers. Publish the known failure modes. Create a correction route that reaches the next release. Then test whether another model can use the same assets without asking the original institution to surrender its authority.</p>
+
+                <p>When a language can be measured, corrected, exported, and governed by its speakers, it becomes more than input to a model. It becomes infrastructure that a people can carry into education, commerce, public service, and scientific work. The future of African-language AI will be decided by the systems that maintain meaning after the launch announcement has passed.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.gsma.com/newsroom/all-documents/gsma-welcomes-abuja-declaration-on-meaningful-connectivity-for-africa-and-joins-partners-to-launch-atlas-umoja/" target="_blank" rel="noopener">GSMA, “GSMA Welcomes Abuja Declaration on Meaningful Connectivity for Africa and Joins Partners to Launch ATLAS Umoja” (July 24, 2026). Announces ATLAS Umoja AI, a pan-African initiative to share expertise, datasets, and practice for African-language AI.</a></li>
+                    <li><a href="https://www.undp.org/africa/press-releases/undp-and-gsma-partner-scale-african-led-ai-innovation" target="_blank" rel="noopener">United Nations Development Programme and GSMA, “UNDP and GSMA partner to scale African-led AI innovation” (October 2, 2026). Connects African-language solutions with compute access, local talent, practical applications, and sustainable scale.</a></li>
+                    <li><a href="https://courier.unesco.org/en/articles/african-languages-blind-spot-ai" target="_blank" rel="noopener">UNESCO Courier, James Maisiri, “African languages, the blind spot of AI” (April 2, 2026; updated April 6, 2026). Reports performance and data constraints affecting African-language AI and describes the African Next Voices speech-data project.</a></li>
+                    <li><a href="https://www.oecd.org/en/publications/oecd-artificial-intelligence-case-studies_c517fcf5-en/ai-governance-in-africa_1ff55135-en.html" target="_blank" rel="noopener">OECD, “AI governance in Africa: Insights from a policy dialogue with 12 countries” (April 30, 2026). Examines locally developed language models alongside infrastructure, data governance, institutional capacity, and implementation.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Qui entretient la langue ?</h1>
+
+                <p><em>Note de terrain, 13 novembre 2026.</em> Un système d’IA peut produire des mots fluides tout en échouant auprès de l’institution qui a besoin que ces mots portent un lieu, une mémoire, une distinction juridique ou une obligation partagée. L’échec apparaît souvent comme une erreur de traduction, mais le problème plus profond concerne la maintenance. Qui décide quelle expression est actuelle ? Qui enregistre un proverbe, une prononciation, un terme technique ou une évolution de l’usage public ? Qui vérifie qu’un modèle a conservé le sens après une mise à jour ?</p>
+
+                <p>L’IA en langues africaines entre dans une nouvelle phase. Le travail passe de jeux de données isolés et de démonstrations ponctuelles à une collaboration régionale, une expertise partagée, des applications locales et une infrastructure capable de progresser après le lancement d’un modèle. Ce déplacement change l’objet commercial. La couche durable est un <strong>plan de maintenance linguistique</strong> : un système institutionnel qui collecte la parole et les textes, définit les termes, documente les variations, évalue les modèles, enregistre les corrections et décide qui peut réutiliser les ressources linguistiques ainsi produites.</p>
+
+                <blockquote>
+                    <p>Une langue entre dignement dans l’ère des machines lorsque ses gardiens peuvent corriger publiquement la machine.</p>
+                </blockquote>
+
+                <h2>Le déficit de données est aussi un déficit de maintenance</h2>
+
+                <p>Le Courrier de l’UNESCO a décrit les langues africaines comme un angle mort des systèmes d’IA actuels en avril 2026. Son article a rapporté de faibles performances en haoussa et en zoulou, notamment une reconnaissance par ChatGPT d’une minorité de phrases écrites en haoussa malgré le grand nombre de locuteurs. L’article a aussi décrit African Next Voices, un projet ayant numérisé 9 000 heures de langues parlées au Kenya, en Afrique du Sud et au Nigeria pour le développement de modèles.</p>
+
+                <p>Ces faits comptent, mais un corpus n’est qu’un commencement. Une parole enregistrée une seule fois peut devenir obsolète, être mal étiquetée, devenir inaccessible aux communautés qui l’ont produite ou être séparée du contexte qui lui donne sa force. Un benchmark de traduction peut révéler la faiblesse d’un modèle tout en laissant personne responsable de sa mise à jour lorsque la langue publique évolue. Une liste terminologique peut être utile à un ministère et fausse pour une autre région. Le travail linguistique a besoin d’une institution vivante autour des données.</p>
+
+                <p>La question de la maintenance comporte plusieurs volets :</p>
+                <ul>
+                    <li><strong>Collecte :</strong> quels locuteurs, textes, traditions orales, domaines et variétés entrent dans le corpus ?</li>
+                    <li><strong>Description :</strong> qui fournit la transcription, la traduction, la prononciation, le contexte culturel et l’incertitude ?</li>
+                    <li><strong>Évaluation :</strong> quelles tâches représentent une performance utile pour l’éducation, la santé, le commerce, l’administration ou la recherche ?</li>
+                    <li><strong>Correction :</strong> comment un locuteur ou une institution conteste-t-il une sortie, et comment la correction atteint-elle les versions futures ?</li>
+                    <li><strong>Permission :</strong> quels contenus peuvent être utilisés pour la recherche, l’entraînement, les produits commerciaux ou les services publics ?</li>
+                </ul>
+
+                <p>Ce sont des questions de gouvernance exprimées par le travail technique. Si elles restent implicites, la plateforme qui possède le modèle devient discrètement l’autorité sur la langue. Si elles sont explicites, les données et les modèles restent reliés aux communautés et aux institutions qui rendent leur sens intelligible.</p>
+
+                <h2>La collaboration régionale est un commencement, pas un substitut à la garde</h2>
+
+                <p>En juillet, la GSMA a annoncé ATLAS Umoja AI avec des gouvernements, des chercheurs, des partenaires industriels et des organisations technologiques africaines. L’initiative doit partager l’expertise, les jeux de données et les bonnes pratiques afin que l’IA en langues africaines reflète les langues, les cultures et les priorités de développement locales. L’annonce reliait l’IA linguistique à la connectivité significative : un service est difficile à qualifier d’inclusif lorsque les personnes qu’il doit atteindre doivent d’abord abandonner leur langue.</p>
+
+                <p>Le PNUD et la GSMA ont prolongé cette orientation en octobre avec un partenariat consacré à l’innovation en IA dirigée par des acteurs africains. L’annonce a relié les solutions en langues africaines à l’accès au calcul, aux talents locaux, aux applications concrètes et aux chemins qui permettent de passer de projets prometteurs à des services durables. C’est un déplacement important, car une capacité linguistique demande davantage qu’un point de contrôle de modèle. Elle demande des opérateurs capables de maintenir les données, d’exécuter les évaluations, de financer les corrections et d’inscrire la technologie dans des institutions qui peuvent répondre de son usage.</p>
+
+                <p>La collaboration ne supprime pas la question de la garde. Une initiative régionale peut distribuer le savoir tandis qu’un fournisseur conserve les actifs décisifs : la taxonomie, le jeu d’évaluation, l’historique des corrections et le droit de décider quel comportement linguistique est acceptable. La participation africaine devient durable lorsque les institutions peuvent exporter leurs propres corpus linguistiques, auditer la performance des modèles, refuser une normalisation nuisible et continuer à servir les utilisateurs lorsqu’un fournisseur modifie son produit.</p>
+
+                <p>C’est pourquoi un plan de maintenance linguistique doit séparer plusieurs couches :</p>
+                <ul>
+                    <li>un registre communautaire de la parole, des textes, de la terminologie et du contexte culturel ;</li>
+                    <li>une carte linguistique versionnée qui enregistre le dialecte, le domaine, la région, la prononciation et les variations acceptées ;</li>
+                    <li>des suites d’évaluation qui testent la compréhension, la génération, la traduction, la parole, la sécurité et l’adéquation culturelle ;</li>
+                    <li>un registre de corrections reliant un échec signalé aux preuves, à un réviseur responsable, à une version du modèle et à une résolution ;</li>
+                    <li>une couche de permissions et d’exportation qui préserve le contrôle institutionnel entre les modèles, les fournisseurs et les applications.</li>
+                </ul>
+
+                <h2>La qualité est une question locale dont la réponse doit rester portable</h2>
+
+                <p>L’étude de l’OCDE publiée en avril 2026 sur la gouvernance de l’IA en Afrique place les modèles linguistiques développés localement aux côtés de l’agriculture et des cadres réglementaires. Sa leçon centrale est pratique : les objectifs politiques deviennent réels seulement lorsqu’ils sont traduits en systèmes techniques, institutionnels et humains capables de les mettre en œuvre. Les déficits d’infrastructure, la gouvernance des données et la capacité institutionnelle façonnent ce que l’IA responsable peut signifier dans la pratique.</p>
+
+                <p>L’évaluation linguistique doit suivre la même discipline. Un score unique masque les décisions qui comptent. Un modèle peut traduire correctement une phrase tout en effaçant une distinction sociale. Il peut reconnaître un mot parlé dans un enregistrement calme et échouer dans les conditions acoustiques d’une salle de classe ou d’une clinique. Il peut répondre à une question factuelle tout en employant un terme qu’une autorité locale a retiré. L’évaluation doit donc être liée à une tâche, attentive au lieu et ouverte à l’examen de personnes qui comprennent la langue comme une pratique vécue.</p>
+
+                <p>Un dossier d’évaluation portable peut conserver la version du jeu de tests, la variété linguistique, le domaine, l’autorité des annotateurs, la version du modèle, les catégories d’erreurs et l’état des corrections. Un ministère, une école, un éditeur ou un service de santé peut alors comparer des systèmes sans accepter le score d’un fournisseur comme vérité complète. Le dossier rend aussi l’amélioration visible : la question n’est pas de savoir si un modèle est « bon » dans une langue en général, mais s’il accomplit une tâche publique définie dans des conditions déclarées et s’améliore lorsque ses erreurs sont corrigées.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de maintenance linguistique</strong> situé entre les communautés, les détenteurs de données, les constructeurs de modèles, les institutions publiques et les applications. Il se rapproche davantage d’une couche opératoire que d’une fonction de traduction. Son rôle consiste à préserver les ressources linguistiques et les preuves d’évaluation qui permettent à plusieurs modèles et services de progresser sans retirer aux institutions qui les entretiennent la maîtrise du sens.</p>
+
+                <ul>
+                    <li><strong>Registres de ressources linguistiques :</strong> identifiants, filiation, licences, métadonnées dialectales et autorités communautaires pour la parole, les textes, les termes et les enregistrements ;</li>
+                    <li><strong>Services d’évaluation et de red team :</strong> suites de tâches pour les langues locales, le contexte culturel, la sécurité, les conditions de parole et les usages spécialisés ;</li>
+                    <li><strong>Opérations de correction :</strong> workflows transformant les échecs signalés en annotations révisées, changements de benchmarks, tests de modèles et notes de publication ;</li>
+                    <li><strong>Couches de portabilité des modèles :</strong> adaptateurs exportables, ressources de récupération, contrôles terminologiques et dossiers d’évaluation qui survivent à un changement de fournisseur ;</li>
+                    <li><strong>Consoles linguistiques institutionnelles :</strong> outils permettant aux écoles, éditeurs, cliniques, agences et coopératives d’approuver les termes, de gérer les permissions et d’inspecter la performance dans leurs langues.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par l’échec que ce plan empêche. Une école peut-elle prouver quelle version linguistique son tuteur a utilisée ? Un service de santé peut-il identifier les termes évalués et le réviseur qui les a approuvés ? Un éditeur peut-il corriger une expression sans attendre un cycle mondial de réentraînement ? Une communauté peut-elle retirer un enregistrement d’une chaîne commerciale tout en conservant un dossier public responsable ? Un opérateur local peut-il déplacer ses ressources linguistiques et son historique d’évaluation vers un autre modèle ?</p>
+
+                <p>Ces questions produisent une capacité mesurable : délai de correction, couverture des benchmarks par variété linguistique, pourcentage de sorties reliées à une source terminologique approuvée, diversité des évaluateurs, délai de résolution des permissions, complétude de l’exportation et parité de performance entre les conditions de déploiement. Le capital peut alors évaluer un système par le travail qu’il permet de poursuivre, plutôt que par le nombre de langues affichées sur une fiche de modèle.</p>
+
+                <h2>La technologie linguistique africaine doit se renforcer localement</h2>
+
+                <p>La question stratégique n’est pas de savoir si les institutions africaines doivent collaborer avec des fournisseurs mondiaux de modèles. Elles doivent utiliser tout instrument utile. La question est de savoir si chaque collaboration laisse derrière elle une capacité locale : des corpus organisés, des évaluateurs formés, des ingénieurs linguistiques, des benchmarks publics, des procédures de correction et des institutions capables de fixer les conditions de réutilisation.</p>
+
+                <p>Un plan de maintenance linguistique rend cette accumulation visible. Une université peut contribuer un corpus tout en conservant une licence claire et une autorité de correction. Une administration peut publier la terminologie d’un service et la réviser lorsque la politique change. Une organisation médiatique peut préserver des expressions régionales au lieu de laisser une couche de traduction générique les effacer. Un petit constructeur d’application peut utiliser des preuves d’évaluation partagées sans reconstruire un programme linguistique depuis zéro.</p>
+
+                <p>Commencez par une langue, une tâche publique et une institution responsable. Définissez les limites communautaires et le domaine. Enregistrez la source et la permission de chaque ressource. Construisez un jeu d’évaluation avec des réviseurs locaux. Publiez les modes d’échec connus. Créez un chemin de correction qui atteint la version suivante. Testez ensuite si un autre modèle peut utiliser les mêmes ressources sans demander à l’institution d’origine d’abandonner son autorité.</p>
+
+                <p>Lorsqu’une langue peut être mesurée, corrigée, exportée et gouvernée par ses locuteurs, elle devient davantage qu’une entrée de modèle. Elle devient une infrastructure qu’un peuple peut porter dans l’éducation, le commerce, les services publics et le travail scientifique. L’avenir de l’IA en langues africaines sera décidé par les systèmes qui entretiennent le sens après la fin de l’annonce de lancement.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.gsma.com/newsroom/all-documents/gsma-welcomes-abuja-declaration-on-meaningful-connectivity-for-africa-and-joins-partners-to-launch-atlas-umoja/" target="_blank" rel="noopener">GSMA, « GSMA Welcomes Abuja Declaration on Meaningful Connectivity for Africa and Joins Partners to Launch ATLAS Umoja » (24 juillet 2026). Annonce ATLAS Umoja AI, une initiative panafricaine destinée à partager l’expertise, les jeux de données et les pratiques pour l’IA en langues africaines.</a></li>
+                    <li><a href="https://www.undp.org/africa/press-releases/undp-and-gsma-partner-scale-african-led-ai-innovation" target="_blank" rel="noopener">Programme des Nations Unies pour le développement et GSMA, « UNDP and GSMA partner to scale African-led AI innovation » (2 octobre 2026). Relie les solutions en langues africaines à l’accès au calcul, aux talents locaux, aux applications concrètes et à une croissance durable.</a></li>
+                    <li><a href="https://courier.unesco.org/en/articles/african-languages-blind-spot-ai" target="_blank" rel="noopener">Courrier de l’UNESCO, James Maisiri, « African languages, the blind spot of AI » (2 avril 2026 ; mise à jour le 6 avril 2026). Rapporte les contraintes de performance et de données qui touchent l’IA en langues africaines et décrit le projet de données vocales African Next Voices.</a></li>
+                    <li><a href="https://www.oecd.org/en/publications/oecd-artificial-intelligence-case-studies_c517fcf5-en/ai-governance-in-africa_1ff55135-en.html" target="_blank" rel="noopener">OCDE, « AI governance in Africa: Insights from a policy dialogue with 12 countries » (30 avril 2026). Examine les modèles linguistiques développés localement avec l’infrastructure, la gouvernance des données, la capacité institutionnelle et la mise en œuvre.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

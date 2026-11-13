@@ -198,6 +198,7 @@
         'article.entry166':     { en: 'Diop Daily #166 — November 2026', fr: 'Diop Quotidien n°166 — Novembre 2026' },
         'article.entry167':     { en: 'Diop Daily #167 — November 2026', fr: 'Diop Quotidien n°167 — Novembre 2026' },
         'article.entry168':     { en: 'Diop Daily #168 — November 2026', fr: 'Diop Quotidien n°168 — Novembre 2026' },
+        'article.entry169':     { en: 'Diop Daily #169 — November 2026', fr: 'Diop Quotidien n°169 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -210,6 +211,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-169': {
+        title: {
+            en: 'Who Maintains the Language?',
+            fr: 'Qui entretient la langue ?'
+        },
+        excerpt: {
+            en: 'African-language AI is moving from isolated datasets toward shared regional infrastructure, but a model launch does not maintain a language. The investable layer is a language-maintenance plane for data custody, evaluation, correction, and local institutional control.',
+            fr: 'L’IA en langues africaines passe de jeux de données isolés à une infrastructure régionale partagée, mais le lancement d’un modèle n’entretient pas une langue. La couche d’investissement est un plan de maintenance linguistique pour la garde des données, l’évaluation, la correction et le contrôle institutionnel local.'
+        }
+    },
     'diop-daily-168': {
         title: {
             en: 'A Creative Work Needs a Release Ledger',
