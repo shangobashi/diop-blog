@@ -199,6 +199,7 @@
         'article.entry167':     { en: 'Diop Daily #167 — November 2026', fr: 'Diop Quotidien n°167 — Novembre 2026' },
         'article.entry168':     { en: 'Diop Daily #168 — November 2026', fr: 'Diop Quotidien n°168 — Novembre 2026' },
         'article.entry169':     { en: 'Diop Daily #169 — November 2026', fr: 'Diop Quotidien n°169 — Novembre 2026' },
+        'article.entry170':     { en: 'Diop Daily #170 — November 2026', fr: 'Diop Quotidien n°170 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -211,6 +212,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-170': {
+        title: {
+            en: 'Before the Agent Acts, Set the Meter',
+            fr: 'Avant que l’agent agisse, fixons le compteur'
+        },
+        excerpt: {
+            en: 'Agents are acquiring observability, identity, and governance layers, but a production action also needs a bounded economic envelope. The investable layer is an execution-budget plane that measures cost, latency, authority, and recovery per task before autonomy becomes unbounded consumption.',
+            fr: 'Les agents acquièrent des couches d’observabilité, d’identité et de gouvernance, mais une action en production a aussi besoin d’une enveloppe économique bornée. La couche d’investissement est un plan de contrôle du budget d’exécution qui mesure le coût, la latence, l’autorité et la reprise par tâche avant que l’autonomie ne devienne une consommation sans limite.'
+        }
+    },
     'diop-daily-169': {
         title: {
             en: 'Who Maintains the Language?',

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Before the Agent Acts, Set the Meter — Diop Research</title>
+    <meta name="description" content="Agents are acquiring observability, identity, and governance layers, but a production action also needs a bounded economic envelope. The investable surface is an execution-budget plane that measures cost, latency, energy, authority, and recovery per task."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry170">Diop Daily #170 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 14, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>agent economics · observability · African infrastructure</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Before the Agent Acts, Set the Meter</h1>
+
+                <p><em>Field note, November 14, 2026.</em> An agent can authenticate, discover a tool, retrieve context, call a service, inspect the result, retry, and hand the work to another agent. Each step can be useful. Each step can also consume money, time, energy, authority, and attention before a person sees the final answer. Production autonomy therefore needs an operating envelope: a declared limit on what a task may spend, how long it may run, which resources it may touch, and when it must stop.</p>
+
+                <p>The current infrastructure signals point toward this missing layer. Google Cloud’s November 13 announcement joins agent telemetry, evaluation, token consumption, query spend, and action traces in one operational view. NIST’s October design tenets for agent identity connect distinct agent identities with bounded delegation, least privilege, and evidence that remains verifiable after an agent retires. The W3C’s October account of the agentic Web describes rising machine traffic and a web economy that still lacks a systematic contract for how agents consume and transform resources. These are related facts. Together they imply that an agent’s economic boundary must become a first-class object.</p>
+
+                <blockquote>
+                    <p>An autonomous system becomes accountable when its work can be stopped before its appetite becomes an external cost.</p>
+                </blockquote>
+
+                <h2>The unit of value is a bounded task</h2>
+
+                <p>Most AI pricing still begins with a model call. That is convenient for an API invoice and inadequate for an institution. A task may contain ten model calls, two retrieval passes, a browser session, a database query, a human approval, a failed tool invocation, and a second attempt after the agent misunderstood a response. The buyer experiences one piece of work. The system records a chain of resource events.</p>
+
+                <p>This changes what should be measured. A report-generation task has a quality requirement, a deadline, a source boundary, a maximum number of revisions, and an owner. A customer-support resolution has a permitted data class, an escalation threshold, a response-time promise, and a cost ceiling. A multilingual public-service request has a language requirement, a local knowledge source, and a rule for when the system must yield to a person. The model is one component inside each task envelope.</p>
+
+                <p>Without a task boundary, the system confuses activity with progress. More context can look like diligence while it increases latency. More retries can look like persistence while they multiply spend. A larger model can look like quality while it hides a poor retrieval route. An agent can return a polished paragraph after exceeding the value of the work it was meant to complete.</p>
+
+                <h2>Telemetry is evidence, not a budget</h2>
+
+                <p>Google Cloud’s new observability framework is significant because it treats agent operation as a traceable process. Its announcement describes telemetry from first-party and custom agents, governed storage in BigQuery, dashboards for usage and latency, evaluation before changes reach users, and controls such as byte-scan caps and daily token quotas. The practical lesson is clear: operators need to see what an agent did, what it touched, and what it cost.</p>
+
+                <p>Visibility alone does not create discipline. A dashboard can show that a task consumed four times its normal token budget after the fact. A log can preserve the sequence of tool calls while nobody has authority to terminate the run. A finance team can receive a precise invoice that still cannot be mapped to the customer outcome that generated it. The meter must sit inside execution, where it can change routing and stop conditions before the cost escapes.</p>
+
+                <p>A useful execution record joins four kinds of evidence:</p>
+                <ul>
+                    <li><strong>Work:</strong> the task identity, requested outcome, quality test, owner, and completion state;</li>
+                    <li><strong>Consumption:</strong> model calls, tokens, retrieval volume, query bytes, GPU time, network transfer, and human review time;</li>
+                    <li><strong>Authority:</strong> the identity, delegation scope, data classes, tools, jurisdictions, and approvals available at each step;</li>
+                    <li><strong>Recovery:</strong> the stopping event, partial result, retry reason, fallback route, correction, and cost still exposed after failure.</li>
+                </ul>
+
+                <p>This record lets an operator ask a more serious question than “what did the agent say?” The question becomes: what work was authorized, what resources were consumed, which boundary was approached, and what remains recoverable?</p>
+
+                <h2>A budget is a control surface</h2>
+
+                <p>NIST’s agent-identity guidance gives the security side of the envelope a precise vocabulary. An agent should have a distinct identity tied to a workload and approved configuration. Delegated scopes should attenuate as work moves to downstream agents. Idle agents should hold no standing privilege. Historical evidence should remain verifiable after credential rotation, expiry, or retirement.</p>
+
+                <p>Economic limits should follow the same structure. A child agent should inherit a smaller budget and a narrower tool set than its parent. A task that crosses a jurisdiction should require an explicit transfer of both authority and cost responsibility. A retry should consume from the same task envelope rather than disappear into a new accounting category. A model upgrade should be evaluated against the work and cost profile it changes, not only against a benchmark score.</p>
+
+                <p>The execution-budget plane can therefore enforce several boundaries before the runtime proceeds:</p>
+                <ul>
+                    <li>maximum spend by task, customer, language, site, or institution;</li>
+                    <li>latency and wall-clock limits for interactive, scheduled, and background work;</li>
+                    <li>token, retrieval, query-byte, network, and GPU-hour ceilings;</li>
+                    <li>maximum retry depth, tool fan-out, and delegated sub-agent count;</li>
+                    <li>energy or locality constraints for workloads that must remain near a site or within a region;</li>
+                    <li>human approval thresholds when the remaining budget, authority, or uncertainty changes materially.</li>
+                </ul>
+
+                <p>The point is not to make every task cheap. A research task may deserve a larger budget than a lookup. The point is to make the trade visible before the institution has paid for it. A bounded task can spend more deliberately because its owner can explain what the additional spend buys.</p>
+
+                <h2>African infrastructure needs economic legibility</h2>
+
+                <p>UNDP’s September study of country-hosted AI compute in Kenya, Malawi, Rwanda, South Africa, Togo, and Zambia reaches a related conclusion from the physical side. Compute capacity becomes useful through accessible data, skilled operators, clear institutional responsibility, governance, cybersecurity, sustainable financing, and defined paths from priority applications to operational services. Hardware without an operating model leaves a country with capacity that cannot reliably carry public work.</p>
+
+                <p>The same principle applies to agent runtime. A local institution needs to know what a service costs under its own power, connectivity, language, staffing, and data conditions. A school may need a low-bandwidth route whose quality is measured against a smaller budget. A clinic may reserve expensive inference for cases that meet a clinical escalation rule. A publisher may use local models for translation and spend remote capacity on difficult review. A cooperative may share a regional runtime while keeping its task records and permissions locally inspectable.</p>
+
+                <p>Economic sovereignty is therefore more precise than owning a model. It means being able to set the unit of work, choose the service tier, observe the cost, interrupt the run, export the record, and compare another provider without losing the institution’s operating memory. A budget that only exists inside a foreign dashboard is a dependency disguised as efficiency.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is an <strong>execution-budget plane</strong>: infrastructure that attaches a cost, latency, resource, authority, and recovery envelope to a task before an agent acts. It sits between agent runtimes, model routers, observability systems, cloud and local compute, finance operations, and human approval. Its unit of value is a completed task whose resource use and failure exposure can be reconstructed.</p>
+
+                <ul>
+                    <li><strong>Task-cost ledgers:</strong> records that allocate model, retrieval, query, network, GPU, energy, and human-review costs to a defined outcome;</li>
+                    <li><strong>Budget-aware routers:</strong> systems that choose a model, site, cache, or fallback route against quality, latency, locality, and spend limits;</li>
+                    <li><strong>Runtime circuit breakers:</strong> controls that stop loops, retries, tool fan-out, and delegated work when a declared boundary is reached;</li>
+                    <li><strong>Agent FinOps and evaluation:</strong> services that connect cost anomalies to task quality, policy changes, prompt changes, and model versions;</li>
+                    <li><strong>Portable operating records:</strong> exports that let a public institution or regional operator carry its budgets, traces, task definitions, and recovery evidence across providers.</li>
+                </ul>
+
+                <p>Underwriting should begin with the failure this plane prevents. Can a customer price a completed task instead of guessing from token volume? Can an operator stop a runaway loop before it consumes the month’s capacity? Can a funder see whether local compute is carrying useful institutional work or merely producing utilization? Can a regulator reconstruct the authority, cost, and data path of a consequential action? Can a smaller African operator move the task envelope to another runtime without rebuilding its accounting from memory?</p>
+
+                <p>These questions produce measurable capacity: cost per accepted task, budget-overrun rate, quality per unit of spend, median and tail latency, retry waste, percentage of tasks with complete authority records, recovery time, locality compliance, and export completeness. They also change the investor’s object of attention. A runtime is more defensible when it can show that additional model capability becomes additional completed work rather than unbounded consumption.</p>
+
+                <h2>Set the meter before widening autonomy</h2>
+
+                <p>An institution can begin with one recurring task and write its envelope in plain language. Define the outcome, owner, quality test, time limit, data boundary, approved tools, maximum spend, escalation rule, and recovery record. Run the task under normal conditions, then deliberately introduce a slow tool, a missing source, a language mismatch, a failed model route, and a human timeout. Measure what the system spends and what it preserves.</p>
+
+                <p>Then compare providers and sites using the same task definition. Keep the model choice separate from the task identity. Keep the task record separate from the invoice. Keep the authorization separate from the prompt. This separation lets an institution change a component without losing the evidence that explains the work.</p>
+
+                <p>The next serious AI systems will be judged by more than their ability to produce an answer. They will be judged by whether they can complete a defined task inside a declared boundary, expose the cost of doing so, and stop without leaving the institution blind. Before an agent is given more autonomy, give its work a meter that the institution controls.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://cloud.google.com/blog/products/data-analytics/enterprise-ai-agent-observability-with-bigquery-and-looker" target="_blank" rel="noopener">Google Cloud, “New AI agent observability and governance across BigQuery and Looker” (November 13, 2026). Describes unified telemetry for first-party and custom agents, visibility into performance, cost, actions, evaluation, token consumption, query spend, and cost guardrails.</a></li>
+                    <li><a href="https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems" target="_blank" rel="noopener">National Institute of Standards and Technology, “Design Tenets for Agent Identity Management Systems” (October 27, 2026). Sets out distinct agent identification, attenuated delegation, least or zero standing privilege, and verifiable historical evidence as design principles.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">W3C Strategy Team, “W3C and the State of the Web in the AI Era” (finalized October 20, 2026). Examines agents interacting with the Web, rising machine traffic, resource costs, consent, privacy, liability, and the missing contract between content providers and AI systems.</a></li>
+                    <li><a href="https://www.undp.org/africa/publications/local-ai-compute-infrastructure-africa-lessons-six-country-hosted-deployments-governance-and-effective-use" target="_blank" rel="noopener">United Nations Development Programme, “Local AI compute infrastructure in Africa: Lessons from six country-hosted deployments on governance and effective use” (September 17, 2026). Connects useful compute to data, skills, institutional responsibility, governance, cybersecurity, sustainable financing, and operational applications.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Avant que l’agent agisse, fixons le compteur</h1>
+
+                <p><em>Note de terrain, 14 novembre 2026.</em> Un agent peut s’authentifier, découvrir un outil, récupérer du contexte, appeler un service, examiner le résultat, recommencer et transmettre le travail à un autre agent. Chaque étape peut être utile. Chaque étape peut aussi consommer de l’argent, du temps, de l’énergie, de l’autorité et de l’attention avant qu’une personne ne voie la réponse finale. L’autonomie en production a donc besoin d’une enveloppe opérationnelle : une limite déclarée de ce qu’une tâche peut dépenser, de sa durée, des ressources qu’elle peut toucher et du moment où elle doit s’arrêter.</p>
+
+                <p>Les signaux actuels de l’infrastructure indiquent cette couche manquante. Dans son annonce du 13 novembre, Google Cloud réunit la télémétrie des agents, l’évaluation, la consommation de tokens, les dépenses de requêtes et les traces d’action dans une même vue opérationnelle. Les principes de conception publiés en octobre par le NIST pour l’identité des agents relient les identités distinctes à une délégation bornée, au moindre privilège et à des preuves qui restent vérifiables après le retrait d’un agent. Le document d’octobre du W3C sur le Web agentique décrit l’augmentation du trafic machine et une économie du Web qui ne possède toujours pas de contrat systématique sur la manière dont les agents consomment et transforment les ressources. Ces faits se répondent. Ensemble, ils indiquent que la frontière économique d’un agent doit devenir un objet de première classe.</p>
+
+                <blockquote>
+                    <p>Un système autonome devient responsable lorsque son travail peut être arrêté avant que son appétit ne devienne un coût extérieur.</p>
+                </blockquote>
+
+                <h2>L’unité de valeur est une tâche bornée</h2>
+
+                <p>La tarification de l’IA commence encore souvent par l’appel à un modèle. C’est pratique pour une facture d’API et insuffisant pour une institution. Une tâche peut contenir dix appels de modèle, deux passages de récupération, une session de navigateur, une requête de base de données, une validation humaine, un appel d’outil échoué et une seconde tentative après une mauvaise compréhension. L’acheteur fait l’expérience d’un seul travail. Le système enregistre une chaîne d’événements de ressources.</p>
+
+                <p>Cette situation change ce qu’il faut mesurer. Une tâche de rédaction de rapport possède une exigence de qualité, une échéance, une limite de sources, un nombre maximal de révisions et un responsable. Une résolution de support client possède une classe de données autorisée, un seuil d’escalade, un délai de réponse et un plafond de coût. Une demande de service public multilingue possède une exigence de langue, une source de connaissance locale et une règle qui indique quand le système doit céder la place à une personne. Le modèle est un composant de chaque enveloppe de tâche.</p>
+
+                <p>Sans limite de tâche, le système confond activité et progrès. Davantage de contexte peut ressembler à de la rigueur tout en augmentant la latence. Davantage de tentatives peut ressembler à de la persévérance tout en multipliant la dépense. Un modèle plus grand peut sembler améliorer la qualité tout en masquant une mauvaise route de récupération. Un agent peut renvoyer un paragraphe élégant après avoir dépassé la valeur du travail demandé.</p>
+
+                <h2>La télémétrie est une preuve, pas un budget</h2>
+
+                <p>La nouvelle infrastructure d’observabilité de Google Cloud est importante parce qu’elle traite l’opération agentique comme un processus traçable. Son annonce décrit la télémétrie d’agents propriétaires et personnalisés, un stockage gouverné dans BigQuery, des tableaux de bord pour l’usage et la latence, une évaluation avant que les changements n’atteignent les utilisateurs, ainsi que des contrôles comme les plafonds de lecture d’octets et les quotas quotidiens de tokens. La leçon pratique est nette : les opérateurs doivent voir ce que l’agent a fait, ce qu’il a touché et ce que cela a coûté.</p>
+
+                <p>La visibilité seule ne crée pas la discipline. Un tableau de bord peut montrer après coup qu’une tâche a consommé quatre fois son budget habituel. Un journal peut préserver la suite des appels d’outils sans que personne n’ait le pouvoir d’arrêter l’exécution. Une équipe financière peut recevoir une facture précise sans pouvoir la relier au résultat client qui l’a produite. Le compteur doit se trouver dans l’exécution, là où il peut modifier le routage et les conditions d’arrêt avant que la dépense ne s’échappe.</p>
+
+                <p>Un dossier d’exécution utile réunit quatre types de preuves :</p>
+                <ul>
+                    <li><strong>Travail :</strong> l’identifiant de la tâche, le résultat demandé, le test de qualité, le responsable et l’état d’achèvement ;</li>
+                    <li><strong>Consommation :</strong> appels de modèles, tokens, volume de récupération, octets interrogés, temps GPU, transfert réseau et temps de revue humaine ;</li>
+                    <li><strong>Autorité :</strong> identité, périmètre de délégation, classes de données, outils, juridictions et validations disponibles à chaque étape ;</li>
+                    <li><strong>Reprise :</strong> événement d’arrêt, résultat partiel, raison de la nouvelle tentative, route de repli, correction et coût encore exposé après l’échec.</li>
+                </ul>
+
+                <p>Ce dossier permet à l’opérateur de poser une question plus sérieuse que « qu’a dit l’agent ? ». Il peut demander quel travail était autorisé, quelles ressources ont été consommées, quelle limite a été approchée et ce qui reste récupérable.</p>
+
+                <h2>Un budget est une surface de contrôle</h2>
+
+                <p>Les recommandations du NIST sur l’identité des agents donnent au versant sécuritaire de l’enveloppe un vocabulaire précis. Un agent devrait avoir une identité distincte, liée à une charge de travail et à une configuration approuvée. Les périmètres délégués devraient se réduire lorsque le travail passe à des agents en aval. Les agents inactifs ne devraient conserver aucun privilège permanent. Les preuves historiques devraient rester vérifiables après la rotation, l’expiration ou le retrait d’un identifiant.</p>
+
+                <p>Les limites économiques devraient suivre la même structure. Un agent enfant devrait recevoir un budget plus petit et un ensemble d’outils plus étroit que son parent. Une tâche qui franchit une juridiction devrait exiger un transfert explicite de l’autorité et de la responsabilité financière. Une nouvelle tentative devrait être imputée à la même enveloppe de tâche au lieu de disparaître dans une nouvelle catégorie comptable. Une mise à niveau de modèle devrait être évaluée selon le profil de travail et de coût qu’elle modifie, et pas seulement selon un score de benchmark.</p>
+
+                <p>Le plan de contrôle du budget d’exécution peut donc imposer plusieurs limites avant que le runtime ne poursuive son travail :</p>
+                <ul>
+                    <li>dépense maximale par tâche, client, langue, site ou institution ;</li>
+                    <li>limites de latence et de durée pour le travail interactif, planifié ou en arrière-plan ;</li>
+                    <li>plafonds de tokens, de récupération, d’octets interrogés, de réseau et d’heures GPU ;</li>
+                    <li>profondeur maximale des nouvelles tentatives, nombre d’outils appelés et nombre d’agents délégués ;</li>
+                    <li>contraintes d’énergie ou de localisation pour les charges qui doivent rester proches d’un site ou dans une région ;</li>
+                    <li>seuils de validation humaine lorsque le budget, l’autorité ou l’incertitude restante change fortement.</li>
+                </ul>
+
+                <p>Le but n’est pas de rendre chaque tâche bon marché. Une tâche de recherche peut mériter un budget supérieur à une recherche ponctuelle. Il s’agit de rendre l’arbitrage visible avant que l’institution ne le paie. Une tâche bornée peut dépenser davantage de manière délibérée, parce que son responsable peut expliquer ce que cette dépense supplémentaire achète.</p>
+
+                <h2>L’infrastructure africaine a besoin de lisibilité économique</h2>
+
+                <p>L’étude publiée en septembre par le PNUD sur les capacités de calcul hébergées au Kenya, au Malawi, au Rwanda, en Afrique du Sud, au Togo et en Zambie arrive à une conclusion voisine depuis le versant physique. Une capacité de calcul devient utile grâce à des données accessibles, des opérateurs compétents, des responsabilités institutionnelles claires, la gouvernance, la cybersécurité, un financement durable et des chemins définis entre les applications prioritaires et les services opérationnels. Du matériel sans modèle d’exploitation laisse un pays avec une capacité incapable de porter régulièrement le travail public.</p>
+
+                <p>Le même principe s’applique au runtime agentique. Une institution locale doit connaître le coût d’un service selon ses propres conditions d’électricité, de connectivité, de langue, de personnel et de données. Une école peut avoir besoin d’une route à faible bande passante dont la qualité est mesurée par rapport à un budget plus petit. Une clinique peut réserver l’inférence coûteuse aux cas qui satisfont une règle d’escalade. Un éditeur peut utiliser des modèles locaux pour la traduction et réserver une capacité distante à une revue difficile. Une coopérative peut partager un runtime régional tout en gardant ses dossiers de tâches et ses permissions inspectables localement.</p>
+
+                <p>La souveraineté économique est donc plus précise que la possession d’un modèle. Elle signifie pouvoir définir l’unité de travail, choisir le niveau de service, observer le coût, interrompre l’exécution, exporter le dossier et comparer un autre fournisseur sans perdre la mémoire opérationnelle de l’institution. Un budget qui n’existe que dans le tableau de bord d’un fournisseur étranger est une dépendance présentée comme une efficacité.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de contrôle du budget d’exécution</strong> : une infrastructure qui attache à une tâche une enveloppe de coût, de latence, de ressources, d’autorité et de reprise avant que l’agent n’agisse. Cette couche se place entre les runtimes agentiques, les routeurs de modèles, les systèmes d’observabilité, le calcul cloud ou local, les opérations financières et la validation humaine. Son unité de valeur est une tâche achevée dont l’usage des ressources et l’exposition à l’échec peuvent être reconstruits.</p>
+
+                <ul>
+                    <li><strong>Registres de coût par tâche :</strong> répartition des coûts de modèle, de récupération, de requête, de réseau, de GPU, d’énergie et de revue humaine entre un résultat défini ;</li>
+                    <li><strong>Routeurs sensibles au budget :</strong> choix d’un modèle, d’un site, d’un cache ou d’une route de repli selon les limites de qualité, de latence, de localisation et de dépense ;</li>
+                    <li><strong>Disjoncteurs de runtime :</strong> contrôles qui arrêtent les boucles, les tentatives, la multiplication des outils et le travail délégué lorsqu’une limite déclarée est atteinte ;</li>
+                    <li><strong>FinOps et évaluation agentiques :</strong> services reliant les anomalies de coût à la qualité de la tâche, aux changements de politique, aux modifications de prompts et aux versions de modèles ;</li>
+                    <li><strong>Dossiers d’exploitation portables :</strong> exports permettant à une institution publique ou à un opérateur régional de transporter ses budgets, traces, définitions de tâches et preuves de reprise entre fournisseurs.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par l’échec que ce plan empêche. Un client peut-il tarifer une tâche achevée au lieu de deviner à partir du volume de tokens ? Un opérateur peut-il arrêter une boucle incontrôlée avant qu’elle ne consomme la capacité du mois ? Un financeur peut-il voir si le calcul local porte un travail institutionnel utile ou produit seulement de l’utilisation ? Un régulateur peut-il reconstruire l’autorité, le coût et le chemin des données d’une action importante ? Un opérateur africain de taille réduite peut-il déplacer l’enveloppe de tâche vers un autre runtime sans reconstruire sa comptabilité de mémoire ?</p>
+
+                <p>Ces questions produisent une capacité mesurable : coût par tâche acceptée, taux de dépassement du budget, qualité par unité de dépense, latence médiane et de queue, gaspillage des tentatives, pourcentage de tâches dotées d’un dossier d’autorité complet, délai de reprise, conformité de localisation et complétude de l’export. Elles modifient aussi l’objet que l’investisseur doit regarder. Un runtime est plus défendable lorsqu’il peut montrer qu’une capacité de modèle supplémentaire devient un travail achevé supplémentaire plutôt qu’une consommation sans borne.</p>
+
+                <h2>Fixer le compteur avant d’élargir l’autonomie</h2>
+
+                <p>Une institution peut commencer par une tâche récurrente et rédiger son enveloppe en langage clair. Définissez le résultat, le responsable, le test de qualité, la limite de temps, la frontière des données, les outils approuvés, la dépense maximale, la règle d’escalade et le dossier de reprise. Exécutez la tâche dans des conditions normales, puis introduisez volontairement un outil lent, une source absente, un décalage de langue, une route de modèle défaillante et un délai humain. Mesurez ce que le système dépense et ce qu’il préserve.</p>
+
+                <p>Comparez ensuite les fournisseurs et les sites avec la même définition de tâche. Gardez le choix du modèle séparé de l’identité de la tâche. Gardez le dossier de tâche séparé de la facture. Gardez l’autorisation séparée du prompt. Cette séparation permet de changer un composant sans perdre les preuves qui expliquent le travail.</p>
+
+                <p>Les systèmes d’IA sérieux seront jugés par davantage que leur capacité à produire une réponse. Ils seront jugés sur leur aptitude à achever une tâche définie dans une limite déclarée, à exposer le coût de cette réalisation et à s’arrêter sans laisser l’institution dans l’aveuglement. Avant de donner plus d’autonomie à un agent, donnons à son travail un compteur que l’institution contrôle.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://cloud.google.com/blog/products/data-analytics/enterprise-ai-agent-observability-with-bigquery-and-looker" target="_blank" rel="noopener">Google Cloud, « New AI agent observability and governance across BigQuery and Looker » (13 novembre 2026). Décrit une télémétrie unifiée pour les agents propriétaires et personnalisés, la visibilité sur la performance, le coût, les actions, l’évaluation, la consommation de tokens, les dépenses de requêtes et les garde-fous de coût.</a></li>
+                    <li><a href="https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems" target="_blank" rel="noopener">National Institute of Standards and Technology, « Design Tenets for Agent Identity Management Systems » (27 octobre 2026). Présente l’identification distincte des agents, la délégation atténuée, le moindre privilège permanent ou nul et les preuves historiques vérifiables comme principes de conception.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">Équipe stratégique du W3C, « W3C and the State of the Web in the AI Era » (finalisé le 20 octobre 2026). Examine l’interaction des agents avec le Web, la hausse du trafic machine, les coûts des ressources, le consentement, la vie privée, la responsabilité et le contrat manquant entre fournisseurs de contenus et systèmes d’IA.</a></li>
+                    <li><a href="https://www.undp.org/africa/publications/local-ai-compute-infrastructure-africa-lessons-six-country-hosted-deployments-governance-and-effective-use" target="_blank" rel="noopener">Programme des Nations unies pour le développement, « Local AI compute infrastructure in Africa: Lessons from six country-hosted deployments on governance and effective use » (17 septembre 2026). Relie le calcul utile aux données, aux compétences, à la responsabilité institutionnelle, à la gouvernance, à la cybersécurité, au financement durable et aux applications opérationnelles.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
