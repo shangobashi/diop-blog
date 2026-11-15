@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Trust Begins at the Sentence — Diop Research</title>
+    <meta name="description" content="AI systems are gaining stronger evaluation and provenance tools, but institutions still need evidence at the level of each consequential claim. The investable layer is a claim-evidence plane that binds outputs to sources, tests, authorities, corrections, and local context."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry171">Diop Daily #171 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 15, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>claim evidence · AI evaluation · African institutions</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Trust Begins at the Sentence</h1>
+
+                <p><em>Field note, November 15, 2026.</em> An institution rarely pays for an entire model output as one undivided object. It pays for the consequences of particular claims: a dosage, a price, a legal interpretation, a translation, a risk classification, a historical statement, a sentence in a report that someone will sign. The useful unit of trust is therefore smaller than the response. It is the claim and the evidence that lets a responsible person decide what to do with it.</p>
+
+                <p>Recent public work is moving evaluation and provenance toward greater precision. NIST’s August 2026 TEVV-Athlon framework proposes customized assessments built from organizational objectives, events, tools, and measured blocks. NIST’s 2026 GenAI program runs adversarial evaluations across text, code, image, audio, video, and multimodal systems. C2PA’s implementation guidance describes machine-readable disclosure, localized AI modifications, generation recipes, and action histories. The European Commission’s Article 50 code connects machine-readable marking and labelling to legal transparency duties.</p>
+
+                <blockquote>
+                    <p>A system earns trust when each consequential sentence can show what would make it change.</p>
+                </blockquote>
+
+                <h2>A system-level score is too large for a public claim</h2>
+
+                <p>Model evaluations are necessary because institutions need evidence about capability, safety, and failure. A score can reveal that one system performs better than another on a defined task. It can inform procurement, release decisions, and the design of a human review process. Its meaning depends on the fixture: the dataset, prompt, language, environment, metric, evaluator, and date that gave the number its boundaries.</p>
+
+                <p>The institution’s problem begins after the benchmark. A model may perform well on a test suite and still produce one unsupported sentence in a public briefing. A content credential may prove that a file was edited by a particular tool while leaving the claim inside that file without a source. A label may disclose that an image was generated with AI while saying nothing about whether its caption is accurate. A dashboard can show aggregate quality while the person approving a decision needs to know which assertion failed and whether the failure was corrected.</p>
+
+                <p>This is a question of granularity. A model card describes a system. An evaluation report describes a test. A provenance manifest describes an asset. A consequential decision often rests on a much smaller object: one claim inside the asset, one extracted fact inside a workflow, or one translation choice inside a public service. If the evidence stops at a larger container, the institution must perform the final attribution by hand. That is where trust becomes slow, expensive, and easy to counterfeit.</p>
+
+                <h2>The claim needs its own record</h2>
+
+                <p>A claim-evidence record should be compact enough for a machine to carry and intelligible enough for a person to challenge. It should preserve the conditions under which the sentence is allowed to travel without turning every sentence into a courtroom exhibit.</p>
+
+                <p>A serious record can include:</p>
+                <ul>
+                    <li><strong>Claim identity:</strong> a stable identifier for the assertion, its language, its scope, and the output or edition in which it appeared;</li>
+                    <li><strong>Evidence links:</strong> the source passages, measurements, tool results, documents, or observations that support the assertion;</li>
+                    <li><strong>Test context:</strong> the evaluation suite, fixture version, model version, prompt or procedure, date, and deployment conditions;</li>
+                    <li><strong>Authority:</strong> the institution or reviewer permitted to approve, qualify, reject, or withdraw the claim;</li>
+                    <li><strong>Uncertainty and boundaries:</strong> what the evidence does not establish, which population or jurisdiction it covers, and when it must be revisited;</li>
+                    <li><strong>Correction path:</strong> the challenge, counter-evidence, decision, active version, and downstream outputs that require review.</li>
+                </ul>
+
+                <p>The record changes the question asked of an AI system. Instead of asking whether the response is reliable in general, an operator can ask whether this claim is supported under this language, task, source boundary, and date. Instead of treating a correction as an edit to prose, the institution can propagate it through reports, translations, search indexes, training examples, and public interfaces.</p>
+
+                <h2>Provenance becomes useful when it reaches the interior</h2>
+
+                <p>C2PA’s July implementation guide is valuable because it moves beyond a binary statement that content is artificial or human-made. Its guidance describes a dedicated AI disclosure assertion, precise regions of an asset affected by AI, generation ingredients such as prompts and reference images, and action records that distinguish creation, opening, and editing. Those fields make a media object more inspectable.</p>
+
+                <p>The same design principle applies to text and institutional work. A report may contain a human-authored table, an AI-assisted translation, a model-generated paragraph, and a manually corrected conclusion. The report-level signature is helpful, but the reader also needs to know which parts changed and which claims were reviewed. A machine-readable action history can establish the route through which a passage travelled; a claim-evidence record adds the reason an institution is willing to stand behind the passage.</p>
+
+                <p>The European Commission’s transparency code makes the operational pressure plain. Article 50 obligations apply from August 2, 2026, and the code addresses marking and detection of AI-generated or manipulated content as well as labelling duties. A compliant label answers one question about the content’s production. It does not answer every question about truth, jurisdiction, source authority, or currentness. The next layer must connect disclosure to the evidence and responsibility attached to the claim.</p>
+
+                <h2>Evidence has a geography and a language</h2>
+
+                <p>Evidence is never only a technical object. It belongs to a place, a language, an institution, and a time. A health instruction translated into a regional language may require a local terminology authority. A land record may be valid inside one administrative jurisdiction and misleading outside it. A public explanation may cite a national policy whose latest amendment is absent from a global corpus. A model can produce fluent language while carrying evidence from the wrong legal or cultural context.</p>
+
+                <p>This is where African intellectual sovereignty becomes a practical architecture rather than a declaration. The UNDP and GSMA partnership announced in October 2026 connects African-led AI solutions with compute access, local talent, real-world applications, and African-language systems. Those ambitions require an evidence layer that local institutions can inspect and correct. A language community should be able to identify an unsupported translation, a public agency should be able to revise a term, and a regional operator should be able to export the claim history when a model or provider changes.</p>
+
+                <p>Local custody does not require isolation. Institutions can use global models, standards, and evaluation tools while preserving the authority to define the relevant source, approve the translation, set the jurisdiction, and decide when a claim has expired. The portable object is the evidence record, not merely the model endpoint. That distinction lets collaboration increase capacity without turning the supplier into the permanent interpreter of local reality.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is a <strong>claim-evidence plane</strong>: infrastructure that binds a consequential assertion to its source, test conditions, authority, uncertainty, correction state, and permitted distribution. It sits between model runtimes, evaluation systems, content provenance, knowledge repositories, public institutions, and the interfaces where people act on machine outputs. Its unit of value is an evidence-bearing claim that can be accepted, qualified, challenged, corrected, and exported.</p>
+
+                <ul>
+                    <li><strong>Claim ledgers:</strong> stable identifiers and relationship graphs connecting assertions to sources, versions, translations, and derivative outputs;</li>
+                    <li><strong>Evidence resolvers:</strong> services that retrieve the relevant passage, measurement, test result, or authority before a claim enters a report, transaction, or public answer;</li>
+                    <li><strong>Review and correction operations:</strong> workflows that route challenges to qualified reviewers and propagate accepted changes to every active surface;</li>
+                    <li><strong>Conformance and disclosure bridges:</strong> tools that join provenance manifests, AI labels, evaluation evidence, and institutional policy without confusing one with another;</li>
+                    <li><strong>Local-language evidence services:</strong> registries, evaluators, and terminology authorities that preserve regional context while allowing models and applications to interoperate.</li>
+                </ul>
+
+                <p>Underwriting should begin with the failure the plane prevents. Can a public institution show why a sentence was published? Can a buyer distinguish a verified product attribute from a model’s plausible completion? Can a publisher correct one translated claim across every edition without withdrawing the entire work? Can a regulator reconstruct the source, model, reviewer, and jurisdiction behind a consequential answer? Can a smaller African operator carry its evidence history to another provider without asking the new model to trust an opaque archive?</p>
+
+                <p>These questions yield measurable capacity: percentage of consequential claims with complete evidence, time to resolve a challenge, correction propagation time, source freshness, reviewer coverage by language and domain, unsupported-claim rate, export completeness, and the share of outputs whose evidence remains inspectable after a model change. A company that reduces these costs is selling more than a citation feature. It is selling a way for institutions to remain answerable while machine production grows.</p>
+
+                <h2>Build the smallest honest proof</h2>
+
+                <p>An institution can test this architecture without annotating its entire archive. Choose one recurring task where a wrong sentence has a visible cost. Define the claim types that require evidence, the approved source classes, the reviewer authority, the expiry rule, and the correction route. Attach a record to each claim in one small output. Then introduce a missing source, a stale document, a translation disagreement, a model change, and a reviewer rejection.</p>
+
+                <p>The useful test asks whether a person can trace a claim, understand the boundary of its support, challenge it in the right language, and see the correction reach the surfaces that depend on it; producing more citations is secondary. The test should also measure what the institution preserves when the model is replaced. If the answer disappears with the provider, the institution rented confidence instead of building it.</p>
+
+                <p>AI will continue to produce fluent wholes. Institutions will continue to bear the cost of particular words. The durable trust layer begins where a sentence can name its evidence, its authority, and its route back to correction. That is the scale at which machine language becomes accountable to human history.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.200-2.ipd.pdf" target="_blank" rel="noopener">National Institute of Standards and Technology, <em>The TEVV-Athlon Framework for Evaluating AI Systems</em> (Initial Public Draft, August 2026). Proposes a four-stage method for customized AI assessments based on organizational objectives, Events, Tools, and measured Blocks.</a></li>
+                    <li><a href="https://ai-challenges.nist.gov/genai" target="_blank" rel="noopener">National Institute of Standards and Technology, <em>NIST GenAI</em> (2026 program page). Describes dynamic, adversarial evaluation of generative systems across text, code, image, audio, video, and multimodal capabilities, including the 2026 text and image challenges.</a></li>
+                    <li><a href="https://c2pa.org/a-new-implementation-guide-for-content-credentials/" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, “A New Implementation Guide for Content Credentials” (July 31, 2026; updated August 11, 2026). Describes AI disclosure assertions, localized AI modifications, generation recipes, action histories, and deployment guidance for producers and validators.</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content" target="_blank" rel="noopener">European Commission, <em>Code of Practice on Transparency of AI-generated Content</em> (last updated October 19, 2026). Explains Article 50 transparency obligations, machine-readable marking, detection, and labelling of AI-generated or manipulated content.</a></li>
+                    <li><a href="https://www.undp.org/africa/press-releases/undp-and-gsma-partner-scale-african-led-ai-innovation" target="_blank" rel="noopener">United Nations Development Programme and GSMA, “UNDP and GSMA partner to scale African-led AI innovation” (October 2, 2026). Connects African-led AI, African-language systems, compute access, local talent, real-world applications, and pathways toward sustainable services.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La confiance commence à la phrase</h1>
+
+                <p><em>Note de terrain, 15 novembre 2026.</em> Une institution paie rarement le résultat complet d’un modèle comme un objet indivisible. Elle paie les conséquences de certaines affirmations : une posologie, un prix, une interprétation juridique, une traduction, une classification de risque, une assertion historique, une phrase d’un rapport que quelqu’un va signer. L’unité utile de la confiance est donc plus petite que la réponse. C’est l’affirmation et la preuve qui permettent à une personne responsable de décider quoi en faire.</p>
+
+                <p>Les travaux publics récents donnent davantage de précision à l’évaluation et à la provenance. Le cadre TEVV-Athlon du NIST, publié en août 2026, propose des évaluations personnalisées construites à partir d’objectifs organisationnels, d’événements, d’outils et de blocs mesurés. Le programme GenAI 2026 du NIST conduit des évaluations adversariales sur le texte, le code, l’image, l’audio, la vidéo et les systèmes multimodaux. Le guide de mise en œuvre de la C2PA décrit la divulgation lisible par machine, la localisation des modifications produites par l’IA, les recettes de génération et les historiques d’actions. Le code de la Commission européenne consacré à l’article 50 relie le marquage lisible par machine et l’étiquetage à des obligations légales de transparence.</p>
+
+                <blockquote>
+                    <p>Un système mérite la confiance lorsque chaque phrase décisive peut montrer ce qui la ferait changer.</p>
+                </blockquote>
+
+                <h2>Un score au niveau du système est trop grand pour une affirmation publique</h2>
+
+                <p>Les évaluations de modèles sont nécessaires parce que les institutions ont besoin de preuves sur la capacité, la sécurité et les échecs. Un score peut révéler qu’un système réussit mieux qu’un autre sur une tâche définie. Il peut éclairer un achat, une décision de publication et la conception d’un processus de revue humaine. Son sens dépend de la fixture : le jeu de données, le prompt, la langue, l’environnement, la métrique, l’évaluateur et la date qui ont donné au nombre ses limites.</p>
+
+                <p>Le problème institutionnel commence après le benchmark. Un modèle peut réussir une suite de tests et produire malgré tout une phrase non étayée dans une note publique. Une attestation de contenu peut prouver qu’un fichier a été modifié par un outil déterminé sans fournir la source de l’affirmation qu’il contient. Un label peut indiquer qu’une image a été générée avec l’IA sans dire si sa légende est exacte. Un tableau de bord peut montrer une qualité agrégée alors que la personne qui approuve une décision doit savoir quelle assertion a échoué et si l’échec a été corrigé.</p>
+
+                <p>Il s’agit d’une question de granularité. Une fiche de modèle décrit un système. Un rapport d’évaluation décrit un test. Un manifeste de provenance décrit un actif. Une décision importante repose souvent sur un objet beaucoup plus petit : une affirmation dans l’actif, un fait extrait dans un workflow ou un choix de traduction dans un service public. Si la preuve s’arrête à un conteneur plus grand, l’institution doit faire l’attribution finale à la main. C’est à cet endroit que la confiance devient lente, coûteuse et facile à contrefaire.</p>
+
+                <h2>L’affirmation a besoin de son propre dossier</h2>
+
+                <p>Un dossier de preuve d’une affirmation doit être assez compact pour qu’une machine puisse le transporter et assez intelligible pour qu’une personne puisse le contester. Il n’a pas besoin de transformer chaque phrase en pièce de procès. Il doit conserver les conditions dans lesquelles la phrase peut continuer à circuler.</p>
+
+                <p>Un dossier sérieux peut contenir :</p>
+                <ul>
+                    <li><strong>Identité de l’affirmation :</strong> un identifiant stable pour l’assertion, sa langue, son périmètre et le résultat ou l’édition dans lesquels elle apparaît ;</li>
+                    <li><strong>Liens vers les preuves :</strong> les passages sources, mesures, résultats d’outils, documents ou observations qui soutiennent l’assertion ;</li>
+                    <li><strong>Contexte du test :</strong> la suite d’évaluation, la version de la fixture, la version du modèle, le prompt ou la procédure, la date et les conditions de déploiement ;</li>
+                    <li><strong>Autorité :</strong> l’institution ou le réviseur habilité à approuver, qualifier, rejeter ou retirer l’affirmation ;</li>
+                    <li><strong>Incertitude et limites :</strong> ce que la preuve n’établit pas, la population ou la juridiction couverte et le moment où il faut la réexaminer ;</li>
+                    <li><strong>Chemin de correction :</strong> la contestation, la preuve contraire, la décision, la version active et les résultats en aval qui exigent une revue.</li>
+                </ul>
+
+                <p>Le dossier change la question posée à un système d’IA. Au lieu de demander si la réponse est fiable en général, l’opérateur peut demander si cette affirmation est étayée dans cette langue, pour cette tâche, avec cette frontière de sources et à cette date. Au lieu de traiter une correction comme une modification de prose, l’institution peut la propager dans les rapports, les traductions, les index de recherche, les exemples d’entraînement et les interfaces publiques.</p>
+
+                <h2>La provenance devient utile lorsqu’elle atteint l’intérieur</h2>
+
+                <p>Le guide de mise en œuvre de la C2PA publié en juillet est utile parce qu’il dépasse l’affirmation binaire selon laquelle un contenu serait artificiel ou humain. Il décrit une assertion dédiée à la divulgation de l’IA, la localisation précise des zones d’un actif touchées par l’IA, les composants de génération comme les prompts et les images de référence, ainsi que des historiques d’actions qui distinguent la création, l’ouverture et la modification. Ces champs rendent un objet média plus inspectable.</p>
+
+                <p>Le même principe s’applique au texte et au travail institutionnel. Un rapport peut contenir un tableau écrit par une personne, une traduction assistée par l’IA, un paragraphe produit par un modèle et une conclusion corrigée manuellement. La signature du rapport est utile, mais le lecteur doit aussi savoir quelles parties ont changé et quelles affirmations ont été examinées. Un historique d’actions lisible par machine peut établir le chemin parcouru par un passage ; un dossier de preuve ajoute la raison pour laquelle une institution accepte de répondre de ce passage.</p>
+
+                <p>Le code de transparence de la Commission européenne rend la pression opérationnelle claire. Les obligations de l’article 50 s’appliquent depuis le 2 août 2026, et le code traite du marquage et de la détection des contenus générés ou manipulés par l’IA ainsi que des devoirs d’étiquetage. Un label conforme répond à une question sur la production du contenu. Il ne répond pas à toutes les questions sur la vérité, la juridiction, l’autorité de la source ou l’actualité. La couche suivante doit relier la divulgation aux preuves et à la responsabilité attachées à l’affirmation.</p>
+
+                <h2>La preuve a une géographie et une langue</h2>
+
+                <p>La preuve n’est jamais seulement un objet technique. Elle appartient à un lieu, une langue, une institution et un moment. Une consigne de santé traduite dans une langue régionale peut exiger une autorité terminologique locale. Un registre foncier peut être valide dans une juridiction administrative et trompeur au-delà de celle-ci. Une explication publique peut citer une politique nationale dont la dernière modification est absente d’un corpus mondial. Un modèle peut produire une langue fluide tout en portant une preuve issue du mauvais contexte juridique ou culturel.</p>
+
+                <p>C’est ici que la souveraineté intellectuelle africaine devient une architecture concrète plutôt qu’une déclaration. Le partenariat annoncé en octobre 2026 par le PNUD et la GSMA relie les solutions d’IA dirigées par des acteurs africains à l’accès au calcul, aux talents locaux, aux applications réelles et aux systèmes en langues africaines. Ces ambitions ont besoin d’une couche de preuve que les institutions locales peuvent inspecter et corriger. Une communauté linguistique doit pouvoir repérer une traduction non étayée, une administration doit pouvoir réviser un terme et un opérateur régional doit pouvoir exporter l’historique d’une affirmation lorsqu’un modèle ou un fournisseur change.</p>
+
+                <p>La garde locale n’exige pas l’isolement. Les institutions peuvent utiliser des modèles, des standards et des outils d’évaluation mondiaux tout en conservant l’autorité de définir la source pertinente, d’approuver la traduction, de fixer la juridiction et de décider lorsqu’une affirmation a expiré. L’objet portable est le dossier de preuve, et pas seulement le point d’accès au modèle. Cette distinction permet à la coopération d’augmenter la capacité sans faire du fournisseur l’interprète permanent de la réalité locale.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de contrôle des preuves par affirmation</strong> : une infrastructure qui relie une assertion importante à sa source, à ses conditions de test, à son autorité, à son incertitude, à son état de correction et à ses conditions de diffusion. Cette couche se place entre les runtimes de modèles, les systèmes d’évaluation, la provenance des contenus, les dépôts de connaissances, les institutions publiques et les interfaces où les personnes agissent sur des sorties machine. Son unité de valeur est une affirmation porteuse de preuves, qui peut être acceptée, qualifiée, contestée, corrigée et exportée.</p>
+
+                <ul>
+                    <li><strong>Registres d’affirmations :</strong> identifiants stables et graphes reliant les assertions aux sources, aux versions, aux traductions et aux résultats dérivés ;</li>
+                    <li><strong>Résolveurs de preuves :</strong> services qui récupèrent le passage, la mesure, le résultat de test ou l’autorité pertinents avant l’entrée d’une affirmation dans un rapport, une transaction ou une réponse publique ;</li>
+                    <li><strong>Opérations de revue et de correction :</strong> workflows qui adressent les contestations à des réviseurs qualifiés et propagent les changements acceptés vers chaque surface active ;</li>
+                    <li><strong>Ponts entre conformité et divulgation :</strong> outils qui relient les manifestes de provenance, les labels IA, les preuves d’évaluation et la politique institutionnelle sans les confondre ;</li>
+                    <li><strong>Services de preuve en langues locales :</strong> registres, évaluateurs et autorités terminologiques qui préservent le contexte régional tout en permettant l’interopérabilité des modèles et des applications.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par l’échec que ce plan empêche. Une institution publique peut-elle montrer pourquoi une phrase a été publiée ? Un acheteur peut-il distinguer une caractéristique de produit vérifiée d’une complétion plausible du modèle ? Un éditeur peut-il corriger une affirmation traduite dans toutes les éditions sans retirer l’œuvre entière ? Un régulateur peut-il reconstruire la source, le modèle, le réviseur et la juridiction d’une réponse importante ? Un opérateur africain de taille réduite peut-il transporter son historique de preuves vers un autre fournisseur sans demander au nouveau modèle de faire confiance à une archive opaque ?</p>
+
+                <p>Ces questions produisent une capacité mesurable : pourcentage d’affirmations importantes dotées d’une preuve complète, délai de résolution d’une contestation, délai de propagation d’une correction, fraîcheur des sources, couverture des réviseurs par langue et par domaine, taux d’affirmations non étayées, complétude de l’export et part des sorties dont les preuves restent inspectables après un changement de modèle. Une entreprise qui réduit ces coûts vend davantage qu’une fonction de citation. Elle vend une manière pour les institutions de rester responsables pendant que la production machine augmente.</p>
+
+                <h2>Construire la plus petite preuve honnête</h2>
+
+                <p>Une institution peut tester cette architecture sans annoter toute son archive. Choisissez une tâche récurrente dans laquelle une phrase erronée a un coût visible. Définissez les types d’affirmations qui exigent une preuve, les classes de sources approuvées, l’autorité du réviseur, la règle d’expiration et le chemin de correction. Attachez un dossier à chaque affirmation dans un petit résultat. Introduisez ensuite une source absente, un document obsolète, un désaccord de traduction, un changement de modèle et un rejet du réviseur.</p>
+
+                <p>Le test utile ne consiste pas à produire davantage de citations. Il consiste à vérifier qu’une personne peut suivre une affirmation, comprendre la limite de son soutien, la contester dans la bonne langue et voir la correction atteindre les surfaces qui en dépendent. Il faut aussi mesurer ce que l’institution conserve lorsque le modèle est remplacé. Si la réponse disparaît avec le fournisseur, l’institution a loué de la confiance au lieu de la construire.</p>
+
+                <p>L’IA continuera à produire des ensembles de mots fluides. Les institutions continueront à porter le coût de mots particuliers. La couche durable de confiance commence lorsqu’une phrase peut nommer sa preuve, son autorité et son chemin de retour vers la correction. C’est à cette échelle que le langage machine devient responsable devant l’histoire humaine.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.200-2.ipd.pdf" target="_blank" rel="noopener">National Institute of Standards and Technology, <em>The TEVV-Athlon Framework for Evaluating AI Systems</em> (projet public initial, août 2026). Propose une méthode en quatre étapes pour des évaluations d’IA personnalisées selon les objectifs organisationnels, les événements, les outils et les blocs mesurés.</a></li>
+                    <li><a href="https://ai-challenges.nist.gov/genai" target="_blank" rel="noopener">National Institute of Standards and Technology, <em>NIST GenAI</em> (programme 2026). Décrit l’évaluation dynamique et adversariale de systèmes génératifs dans le texte, le code, l’image, l’audio, la vidéo et les capacités multimodales, notamment les défis texte et image de 2026.</a></li>
+                    <li><a href="https://c2pa.org/a-new-implementation-guide-for-content-credentials/" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity, « A New Implementation Guide for Content Credentials » (31 juillet 2026 ; mise à jour le 11 août 2026). Décrit les assertions de divulgation de l’IA, les modifications localisées, les recettes de génération, les historiques d’actions et les conseils de déploiement destinés aux producteurs et aux validateurs.</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content" target="_blank" rel="noopener">Commission européenne, <em>Code de pratique sur la transparence des contenus générés par l’IA</em> (dernière mise à jour le 19 octobre 2026). Explique les obligations de transparence de l’article 50, le marquage lisible par machine, la détection et l’étiquetage des contenus générés ou manipulés par l’IA.</a></li>
+                    <li><a href="https://www.undp.org/africa/press-releases/undp-and-gsma-partner-scale-african-led-ai-innovation" target="_blank" rel="noopener">Programme des Nations Unies pour le développement et GSMA, « UNDP and GSMA partner to scale African-led AI innovation » (2 octobre 2026). Relie l’IA dirigée par des acteurs africains, les systèmes en langues africaines, l’accès au calcul, les talents locaux, les applications réelles et les chemins vers des services durables.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

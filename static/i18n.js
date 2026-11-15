@@ -200,6 +200,7 @@
         'article.entry168':     { en: 'Diop Daily #168 — November 2026', fr: 'Diop Quotidien n°168 — Novembre 2026' },
         'article.entry169':     { en: 'Diop Daily #169 — November 2026', fr: 'Diop Quotidien n°169 — Novembre 2026' },
         'article.entry170':     { en: 'Diop Daily #170 — November 2026', fr: 'Diop Quotidien n°170 — Novembre 2026' },
+        'article.entry171':     { en: 'Diop Daily #171 — November 2026', fr: 'Diop Quotidien n°171 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -212,6 +213,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-171': {
+        title: {
+            en: 'Trust Begins at the Sentence',
+            fr: 'La confiance commence à la phrase'
+        },
+        excerpt: {
+            en: 'AI systems are gaining stronger evaluation and provenance tools, but institutions still need evidence at the level of each consequential claim. The investable layer is a claim-evidence plane that binds outputs to sources, tests, authorities, corrections, and local context.',
+            fr: 'Les systèmes d’IA acquièrent des outils d’évaluation et de provenance plus précis, mais les institutions ont encore besoin de preuves au niveau de chaque affirmation décisive. La couche d’investissement est un plan de contrôle des preuves par affirmation qui relie les sorties aux sources, aux tests, aux autorités, aux corrections et au contexte local.'
+        }
+    },
     'diop-daily-170': {
         title: {
             en: 'Before the Agent Acts, Set the Meter',
