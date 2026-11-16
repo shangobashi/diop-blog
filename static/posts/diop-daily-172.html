@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Give the Agent a Name the Internet Can Check — Diop Research</title>
+    <meta name="description" content="As agents cross organizational boundaries, identity must become discoverable before it becomes authoritative. The investable layer is a public naming and discovery plane that lets institutions publish, verify, revoke, and carry their agents across providers and regions."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry172">Diop Daily #172 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 16, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>agent identity · discovery infrastructure · African sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Give the Agent a Name the Internet Can Check</h1>
+
+                <p><em>Field note, November 16, 2026.</em> An agent may be capable, authorized, and carefully evaluated, yet another system still needs a first answer before it can decide whether to engage: who is this actor, and where can I find the record that names it? In human institutions, a name is a handle for responsibility. On the network, it must also be a resolvable route to evidence.</p>
+
+                <p>A current standards signal has made this boundary concrete. On November 10, the Linux Foundation announced Agent Name Service as an open project for domain-anchored naming, registration, DNS publication, public-log auditing, integrity monitoring, and agent-to-agent authentication. The W3C’s October analysis of the Web in the AI era identifies discovery, identity, delegated authority, consent, and human handoff as connected standards problems. An IETF Internet-Draft on DNS for AI Discovery describes cacheable discovery through existing DNS service records, with optional DNSSEC and TLSA support. NIST’s Agent Standards Initiative places authentication and identity infrastructure among the research required for secure human-agent and multi-agent interaction.</p>
+
+                <blockquote>
+                    <p>A machine can be introduced by a sentence, but it becomes findable through a name that another system can resolve and challenge.</p>
+                </blockquote>
+
+                <h2>The network cannot trust an unnamed actor</h2>
+
+                <p>Agent systems are often described as if discovery were a search problem. A model looks for a tool, reads a capability card, and chooses a service. That description leaves out the institutional question underneath: what entity owns the capability, what agent is actually answering, and what evidence binds the endpoint to that entity?</p>
+
+                <p>A directory can list thousands of agents and still provide weak trust. A marketplace can rank a service without showing who controls the record. A protocol can carry a message while leaving the recipient unable to distinguish an official agent from a convincing substitute. Discovery without identity creates a faster route to an unknown actor.</p>
+
+                <p>Names do several jobs at once:</p>
+                <ul>
+                    <li><strong>Resolution:</strong> they let a requester locate the service without depending on a private platform directory;</li>
+                    <li><strong>Continuity:</strong> they let a provider rotate hosts, models, or runtime components without silently changing the institution represented;</li>
+                    <li><strong>Verification:</strong> they give a requester a public anchor against which identity, version, status, and integrity can be checked;</li>
+                    <li><strong>Revocation:</strong> they provide a place to state that an agent is retired, compromised, suspended, or no longer authorized to represent the owner;</li>
+                    <li><strong>Accountability:</strong> they connect a machine participant to a domain, organization, or responsible authority that can answer for its operation.</li>
+                </ul>
+
+                <p>This is a narrower object than a general agent profile. A profile describes what an agent can do. A name makes the described actor addressable across boundaries. A credential can prove a fact about an actor. A naming plane makes the fact discoverable before a relationship begins.</p>
+
+                <h2>DNS is a public memory for institutional presence</h2>
+
+                <p>The important design choice in ANS and DNS-AID is their use of infrastructure that organizations already control. DNS is a public naming and routing system with delegation, caching, signatures, expiry, and operational practice, although it cannot guarantee honest behavior by every actor. Those properties give an institution a place to publish its machine presence without asking one model vendor to become the permanent registry of its relationships.</p>
+
+                <p>The IETF draft is careful about the boundary. DNS-AID can transport agent metadata and provide deterministic, cacheable discovery; it does not guarantee that an agent will behave predictably after it receives that metadata. That distinction should remain central. The name answers “which endpoint and record should I inspect?” while questions about capability, permission, safety, and truth require additional records. That separation also makes change legible.</p>
+
+                <p>An institution may change a model provider, move from a hosted runtime to a regional operator, or replace a tool while keeping the public name stable. It may publish a new version, set a short expiry, revoke a compromised record, or redirect a retired service. The history of those changes becomes part of the institution’s machine-readable presence.</p>
+
+                <p>For African institutions, this is a question of sovereignty as much as engineering. A university, publisher, public agency, cooperative, or health service should be able to publish the names of its agents under a domain it can govern. If a regional operator is discoverable only through a vendor-owned directory, the vendor controls the first interpretation of the institution’s presence. Domain-anchored naming cannot solve every dependency, but it can preserve one important right: the right to state, in an open namespace, which machines speak for the institution.</p>
+
+                <h2>Discovery must carry boundaries</h2>
+
+                <p>A name becomes useful when the record around it tells another system how cautious to be. An agent record should make the boundary of the relationship visible before a call is made. It can point to capability descriptions, authentication methods, supported languages, operating jurisdictions, service versions, contact routes, status, and policy documents. Those references need their own freshness and integrity rules.</p>
+
+                <p>The W3C’s analysis places this work inside a larger web settlement. Agents are becoming web user agents, while people must retain control over consequential actions. Identity therefore has to connect to delegated authority and human approval without collapsing them into one token. A name tells the web who to look up. A permission system tells it what the actor may do. A consent record tells it whether the person approved this action. A receipt records what happened afterward.</p>
+
+                <p>Keeping these objects separate prevents a familiar category error. Possessing a valid name should not be treated as permission to purchase, publish, access private data, or speak for a community. Conversely, a narrow authorization should not force every counterparty to rediscover the agent through a closed marketplace. Public naming and local authorization can coexist when their interfaces are explicit.</p>
+
+                <p>The operational record around a name should answer at least these questions:</p>
+                <ul>
+                    <li>Which domain or authority published the record, and how was control verified?</li>
+                    <li>Which agent version, endpoint, protocol, and supported language does the name resolve to?</li>
+                    <li>What evidence shows that the record has not been altered or silently redirected?</li>
+                    <li>When does the record expire, and how quickly can a compromised identity be withdrawn?</li>
+                    <li>Which other records describe the agent’s capabilities, delegated authority, human escalation, and correction route?</li>
+                </ul>
+
+                <p>These are infrastructure questions. They do not require a grand theory of autonomous intelligence. They require disciplined naming, lifecycle operations, and verification at the point where one institution decides whether to open a channel to another machine.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is a <strong>public agent-naming plane</strong>: infrastructure that lets organizations publish, resolve, verify, monitor, version, and revoke machine identities across providers and networks. It sits between DNS operators, certificate systems, agent directories, protocol runtimes, enterprise security, public institutions, and the applications that select an agent. Its unit of value is a verified route to a responsible machine participant.</p>
+
+                <ul>
+                    <li><strong>Domain-anchored registries:</strong> services that bind agent names to organizational control, version history, operating status, and revocation evidence;</li>
+                    <li><strong>Resolvers and conformance tools:</strong> software that checks whether published names resolve correctly across public and private networks and whether the records satisfy an open specification;</li>
+                    <li><strong>Identity monitoring:</strong> systems that detect unauthorized changes, stale records, endpoint drift, certificate problems, and suspicious substitutions;</li>
+                    <li><strong>Directory bridges:</strong> interoperable layers that let capability directories consume verifiable names without making one marketplace the exclusive gatekeeper;</li>
+                    <li><strong>Regional and language-aware registries:</strong> services that help African institutions publish agents with local-language descriptions, jurisdictional boundaries, and operators that can answer for the record.</li>
+                </ul>
+
+                <p>Underwriting should begin with the failure this plane prevents. Can an institution prove that the agent contacted by a partner is the one it published? Can a buyer tell whether a service has moved providers without losing its public identity? Can a security team revoke a compromised agent and measure how quickly the change reaches resolvers? Can a smaller African operator be found directly by counterparties without surrendering discovery to a foreign platform? Can a public directory verify identity without becoming the owner of the institution’s machine presence?</p>
+
+                <p>These questions produce measurable capacity: verified-resolution rate, time from publication to discoverability, revocation propagation time, stale-record rate, cross-network conformance, percentage of agents with public lifecycle histories, direct-resolution share, and coverage by language and jurisdiction. A naming provider that improves these measures is selling an admission rail for machine relationships. The defensible layer is the public record and its operating discipline, not a decorative badge attached to an agent card.</p>
+
+                <h2>Publish the name before expanding the fleet</h2>
+
+                <p>An institution can test this architecture with one agent and one narrow responsibility. Register the name under a domain it controls. Publish the endpoint, protocol, version, supported language, operating jurisdiction, owner, contact route, and expiry policy. Sign or otherwise protect the record according to the chosen standard. Test resolution from a second network. Rotate the endpoint without changing the institutional name. Then simulate a compromise and measure revocation.</p>
+
+                <p>Next, separate the name from the authority it carries. Give the agent a small mandate, a human escalation path, and a receipt for each consequential interaction. Ask a second institution to discover and verify the agent without using a private directory. If the test fails, the failure should identify the missing layer: naming, resolution, authentication, authorization, consent, or post-action evidence.</p>
+
+                <p>Names are political instruments because they decide who can be recognized. In the agentic Web, recognition will be performed by machines before it is experienced by people. African institutions should enter that system with names they can publish, correct, withdraw, and carry across providers. A machine that can be found under accountable ownership has taken its first step toward becoming an institution’s instrument rather than an unnamed dependency.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.linuxfoundation.org/press/linux-foundation-welcomes-agent-name-service-to-bring-verifiable-identity-and-discovery-to-ai-agents" target="_blank" rel="noopener">Linux Foundation, “Linux Foundation Welcomes Agent Name Service to Bring Verifiable Identity and Discovery to AI Agents” (November 10, 2026). Announces ANS as an open project for domain-anchored naming, registration, DNS publication, public-log auditing, integrity monitoring, and agent-to-agent authentication.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">W3C Strategy Team, “W3C and the State of the Web in the AI Era” (finalized October 20, 2026). Connects agent discovery and identity with delegated authority, consent, human control, provenance, and interoperable Web standards.</a></li>
+                    <li><a href="https://www.ietf.org/archive/id/draft-mozleywilliams-dnsop-dnsaid-02.html" target="_blank" rel="noopener">IETF Internet-Draft, “DNS for AI Discovery” (published May 27, 2026; expires November 28, 2026). Describes DNS-based discovery through SVCB and DNS-SD records, with optional DNSSEC and TLSA support, while distinguishing verifiable metadata transport from behavioral guarantees.</a></li>
+                    <li><a href="https://www.nist.gov/super-intelligence/si-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “SI Agent Standards Initiative” (updated November 9, 2026). Describes industry-led standards, community protocols, and research into agent authentication and identity infrastructure for secure human-agent and multi-agent interactions.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Donnez à l’agent un nom que l’Internet peut vérifier</h1>
+
+                <p><em>Note de terrain, 16 novembre 2026.</em> Un agent peut être capable, autorisé et soigneusement évalué, mais un autre système a tout de même besoin d’une première réponse avant de décider s’il doit entrer en relation : qui est cet acteur et où trouver le dossier qui le désigne ? Dans les institutions humaines, un nom est une prise pour la responsabilité. Sur le réseau, il doit aussi être une route résoluble vers des preuves.</p>
+
+                <p>Un signal actuel des travaux de normalisation a rendu cette frontière concrète. Le 10 novembre, la Linux Foundation a annoncé l’Agent Name Service comme projet ouvert consacré à la dénomination ancrée dans les domaines, à l’enregistrement, à la publication DNS, à l’audit des journaux publics, à la surveillance de l’intégrité et à l’authentification entre agents. L’analyse publiée en octobre par le W3C sur le Web à l’ère de l’IA identifie la découverte, l’identité, l’autorité déléguée, le consentement et le relais humain comme des problèmes de normalisation liés. Un projet d’Internet-Draft de l’IETF sur la découverte des agents par DNS décrit une découverte mémorisable au moyen des enregistrements de service DNS existants, avec un soutien facultatif de DNSSEC et de TLSA. L’initiative du NIST consacrée aux standards des agents place l’authentification et l’infrastructure d’identité parmi les travaux nécessaires à des interactions sûres entre humains et agents ainsi qu’entre agents.</p>
+
+                <blockquote>
+                    <p>Une machine peut être présentée par une phrase, mais elle devient trouvable grâce à un nom qu’un autre système peut résoudre et contester.</p>
+                </blockquote>
+
+                <h2>Le réseau ne peut pas faire confiance à un acteur sans nom</h2>
+
+                <p>Les systèmes d’agents sont souvent décrits comme si la découverte était un problème de recherche. Un modèle cherche un outil, lit une fiche de capacité et choisit un service. Cette description laisse de côté la question institutionnelle sous-jacente : quelle entité possède cette capacité, quel agent répond réellement et quelle preuve relie le point d’accès à cette entité ?</p>
+
+                <p>Un annuaire peut lister des milliers d’agents tout en offrant une confiance faible. Une place de marché peut classer un service sans montrer qui contrôle la fiche. Un protocole peut transporter un message tout en laissant le destinataire incapable de distinguer un agent officiel d’un substitut convaincant. La découverte sans identité crée une route plus rapide vers un acteur inconnu.</p>
+
+                <p>Les noms remplissent plusieurs fonctions à la fois :</p>
+                <ul>
+                    <li><strong>Résolution :</strong> ils permettent à un demandeur de localiser le service sans dépendre d’un annuaire privé de plateforme ;</li>
+                    <li><strong>Continuité :</strong> ils permettent à un fournisseur de changer d’hébergeur, de modèle ou de composant de runtime sans modifier silencieusement l’institution représentée ;</li>
+                    <li><strong>Vérification :</strong> ils donnent au demandeur un ancrage public pour contrôler l’identité, la version, l’état et l’intégrité ;</li>
+                    <li><strong>Révocation :</strong> ils fournissent un lieu où déclarer qu’un agent est retiré, compromis, suspendu ou n’est plus autorisé à représenter son propriétaire ;</li>
+                    <li><strong>Responsabilité :</strong> ils relient un participant machine à un domaine, une organisation ou une autorité responsable capable de répondre de son fonctionnement.</li>
+                </ul>
+
+                <p>Il s’agit d’un objet plus étroit qu’un profil général d’agent. Un profil décrit ce qu’un agent peut faire. Un nom rend l’acteur décrit adressable au-delà des frontières. Un justificatif peut prouver un fait concernant l’acteur. Un plan de dénomination rend ce fait découvrable avant le début de la relation.</p>
+
+                <h2>Le DNS est une mémoire publique de la présence institutionnelle</h2>
+
+                <p>Le choix de conception important de l’ANS et de DNS-AID consiste à utiliser une infrastructure que les organisations contrôlent déjà. Le DNS est un système public de dénomination et de routage doté de délégation, de mise en cache, de signatures, d’expiration et de pratiques opérationnelles, sans pouvoir garantir le comportement honnête de tous les acteurs. Ces propriétés donnent à une institution un lieu où publier sa présence machine sans demander à un fournisseur de modèles de devenir le registre permanent de ses relations.</p>
+
+                <p>Le projet de l’IETF est précis sur cette limite. DNS-AID peut transporter des métadonnées d’agent et fournir une découverte déterministe et mémorisable ; il ne garantit pas qu’un agent se comportera de manière prévisible après avoir reçu ces métadonnées. Cette distinction doit rester centrale. Le nom répond à la question « quel point d’accès et quel dossier dois-je inspecter ? ». Il ne répond pas à toutes les questions sur la capacité, la permission, la sécurité ou la vérité.</p>
+
+                <p>Cette séparation rend aussi le changement lisible. Une institution peut changer de fournisseur de modèles, passer d’un runtime hébergé à un opérateur régional ou remplacer un outil tout en conservant le même nom public. Elle peut publier une nouvelle version, définir une expiration courte, révoquer un enregistrement compromis ou rediriger un service retiré. L’histoire de ces changements devient une partie de sa présence lisible par les machines.</p>
+
+                <p>Pour les institutions africaines, il s’agit autant de souveraineté que d’ingénierie. Une université, un éditeur, une administration, une coopérative ou un service de santé doit pouvoir publier les noms de ses agents sous un domaine qu’il gouverne. Si un opérateur régional n’est découvrable que par un annuaire appartenant à un fournisseur, ce fournisseur contrôle la première interprétation de la présence de l’institution. La dénomination ancrée dans un domaine ne résout pas toutes les dépendances, mais elle peut préserver un droit important : celui d’indiquer, dans un espace de noms ouvert, quelles machines parlent au nom de l’institution.</p>
+
+                <h2>La découverte doit porter des limites</h2>
+
+                <p>Un nom devient utile lorsque le dossier qui l’entoure indique à un autre système la prudence à adopter. Un enregistrement d’agent doit rendre visible la limite de la relation avant l’appel. Il peut renvoyer vers des descriptions de capacités, des méthodes d’authentification, des langues prises en charge, des juridictions d’exploitation, des versions de service, des voies de contact, un état et des documents de politique. Ces références ont besoin de leurs propres règles de fraîcheur et d’intégrité.</p>
+
+                <p>L’analyse du W3C inscrit ce travail dans un accord plus large sur le Web. Les agents deviennent des agents utilisateurs du Web, tandis que les personnes doivent conserver le contrôle des actions importantes. L’identité doit donc se relier à l’autorité déléguée et à l’approbation humaine sans les réduire à un seul jeton. Un nom indique au Web qui rechercher. Un système de permissions indique ce que l’acteur peut faire. Un enregistrement de consentement indique si la personne a approuvé cette action. Un reçu enregistre ce qui s’est passé ensuite.</p>
+
+                <p>La séparation de ces objets évite une erreur familière. Posséder un nom valide ne doit pas être traité comme une permission d’acheter, de publier, d’accéder à des données privées ou de parler au nom d’une communauté. De même, une autorisation étroite ne doit pas obliger chaque contrepartie à redécouvrir l’agent par l’intermédiaire d’une place de marché fermée. La dénomination publique et l’autorisation locale peuvent coexister lorsque leurs interfaces sont explicites.</p>
+
+                <p>Le dossier opérationnel autour d’un nom devrait répondre au moins aux questions suivantes :</p>
+                <ul>
+                    <li>Quel domaine ou quelle autorité a publié l’enregistrement, et comment son contrôle a-t-il été vérifié ?</li>
+                    <li>Vers quelle version d’agent, quel point d’accès, quel protocole et quelle langue prise en charge le nom résout-il ?</li>
+                    <li>Quelle preuve montre que l’enregistrement n’a pas été modifié ou redirigé silencieusement ?</li>
+                    <li>Quand l’enregistrement expire-t-il, et à quelle vitesse une identité compromise peut-elle être retirée ?</li>
+                    <li>Quels autres dossiers décrivent les capacités de l’agent, son autorité déléguée, son relais humain et sa voie de correction ?</li>
+                </ul>
+
+                <p>Ce sont des questions d’infrastructure. Elles n’exigent pas une théorie grandiose de l’intelligence autonome. Elles exigent une dénomination disciplinée, des opérations de cycle de vie et une vérification au moment où une institution décide d’ouvrir un canal vers une autre machine.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan public de dénomination des agents</strong> : une infrastructure qui permet aux organisations de publier, résoudre, vérifier, surveiller, versionner et révoquer des identités machine entre fournisseurs et réseaux. Cette couche se situe entre les opérateurs DNS, les systèmes de certificats, les annuaires d’agents, les runtimes protocolaires, la sécurité d’entreprise, les institutions publiques et les applications qui sélectionnent un agent. Son unité de valeur est une route vérifiée vers un participant machine responsable.</p>
+
+                <ul>
+                    <li><strong>Registres ancrés dans les domaines :</strong> services qui relient les noms d’agents au contrôle organisationnel, à l’historique des versions, à l’état opérationnel et aux preuves de révocation ;</li>
+                    <li><strong>Résolveurs et outils de conformité :</strong> logiciels qui vérifient que les noms publiés se résolvent correctement sur les réseaux publics et privés et que les dossiers respectent une spécification ouverte ;</li>
+                    <li><strong>Surveillance des identités :</strong> systèmes qui détectent les changements non autorisés, les enregistrements obsolètes, les dérives de points d’accès, les problèmes de certificats et les substitutions suspectes ;</li>
+                    <li><strong>Ponts entre annuaires :</strong> couches interopérables qui permettent aux annuaires de capacités d’utiliser des noms vérifiables sans faire d’une seule place de marché le gardien exclusif ;</li>
+                    <li><strong>Registres régionaux et sensibles aux langues :</strong> services qui aident les institutions africaines à publier des agents avec des descriptions en langues locales, des limites juridictionnelles et des opérateurs capables de répondre du dossier.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par l’échec que ce plan empêche. Une institution peut-elle prouver que l’agent contacté par un partenaire est celui qu’elle a publié ? Un acheteur peut-il voir qu’un service a changé de fournisseur sans perdre son identité publique ? Une équipe de sécurité peut-elle révoquer un agent compromis et mesurer le délai d’arrivée de la modification chez les résolveurs ? Un petit opérateur africain peut-il être trouvé directement par ses contreparties sans abandonner la découverte à une plateforme étrangère ? Un annuaire public peut-il vérifier l’identité sans devenir le propriétaire de la présence machine de l’institution ?</p>
+
+                <p>Ces questions produisent une capacité mesurable : taux de résolution vérifiée, délai entre la publication et la découvrabilité, délai de propagation d’une révocation, taux d’enregistrements obsolètes, conformité entre réseaux, pourcentage d’agents dotés d’un historique public de cycle de vie, part des résolutions directes et couverture par langue et par juridiction. Un fournisseur de dénomination qui améliore ces mesures vend un rail d’admission pour les relations machine. La couche défendable est le dossier public et la discipline opérationnelle qui l’entoure, pas un badge décoratif attaché à une fiche d’agent.</p>
+
+                <h2>Publier le nom avant d’élargir la flotte</h2>
+
+                <p>Une institution peut tester cette architecture avec un agent et une responsabilité étroite. Enregistrez le nom sous un domaine qu’elle contrôle. Publiez le point d’accès, le protocole, la version, la langue prise en charge, la juridiction d’exploitation, le propriétaire, la voie de contact et la politique d’expiration. Signez ou protégez l’enregistrement selon la norme choisie. Testez la résolution depuis un second réseau. Faites tourner le point d’accès sans modifier le nom institutionnel. Simulez ensuite une compromission et mesurez la révocation.</p>
+
+                <p>Séparez ensuite le nom de l’autorité qu’il porte. Donnez à l’agent un mandat limité, une voie d’escalade humaine et un reçu pour chaque interaction importante. Demandez à une seconde institution de découvrir et de vérifier l’agent sans utiliser d’annuaire privé. Si le test échoue, l’échec doit désigner la couche manquante : dénomination, résolution, authentification, autorisation, consentement ou preuve après l’action.</p>
+
+                <p>Les noms sont des instruments politiques parce qu’ils décident qui peut être reconnu. Dans le Web agentique, la reconnaissance sera effectuée par des machines avant d’être vécue par les personnes. Les institutions africaines doivent entrer dans ce système avec des noms qu’elles peuvent publier, corriger, retirer et transporter entre fournisseurs. Une machine trouvable sous une propriété responsable a fait son premier pas pour devenir un instrument de l’institution plutôt qu’une dépendance sans nom.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.linuxfoundation.org/press/linux-foundation-welcomes-agent-name-service-to-bring-verifiable-identity-and-discovery-to-ai-agents" target="_blank" rel="noopener">Linux Foundation, « Linux Foundation Welcomes Agent Name Service to Bring Verifiable Identity and Discovery to AI Agents » (10 novembre 2026). Annonce l’ANS comme projet ouvert consacré à la dénomination ancrée dans les domaines, à l’enregistrement, à la publication DNS, à l’audit des journaux publics, à la surveillance de l’intégrité et à l’authentification entre agents.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">Équipe stratégique du W3C, « W3C and the State of the Web in the AI Era » (finalisé le 20 octobre 2026). Relie la découverte et l’identité des agents à l’autorité déléguée, au consentement, au contrôle humain, à la provenance et à des standards Web interopérables.</a></li>
+                    <li><a href="https://www.ietf.org/archive/id/draft-mozleywilliams-dnsop-dnsaid-02.html" target="_blank" rel="noopener">Internet-Draft de l’IETF, « DNS for AI Discovery » (publié le 27 mai 2026 ; expiration le 28 novembre 2026). Décrit la découverte par DNS au moyen des enregistrements SVCB et DNS-SD, avec un soutien facultatif de DNSSEC et TLSA, tout en distinguant le transport de métadonnées vérifiables des garanties de comportement.</a></li>
+                    <li><a href="https://www.nist.gov/super-intelligence/si-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « SI Agent Standards Initiative » (mise à jour le 9 novembre 2026). Décrit les standards dirigés par l’industrie, les protocoles communautaires et la recherche sur l’authentification et l’infrastructure d’identité pour des interactions sûres entre humains et agents ainsi qu’entre agents.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

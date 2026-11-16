@@ -201,6 +201,7 @@
         'article.entry169':     { en: 'Diop Daily #169 — November 2026', fr: 'Diop Quotidien n°169 — Novembre 2026' },
         'article.entry170':     { en: 'Diop Daily #170 — November 2026', fr: 'Diop Quotidien n°170 — Novembre 2026' },
         'article.entry171':     { en: 'Diop Daily #171 — November 2026', fr: 'Diop Quotidien n°171 — Novembre 2026' },
+        'article.entry172':     { en: 'Diop Daily #172 — November 2026', fr: 'Diop Quotidien n°172 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -213,6 +214,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-172': {
+        title: {
+            en: 'Give the Agent a Name the Internet Can Check',
+            fr: 'Donnez à l’agent un nom que l’Internet peut vérifier'
+        },
+        excerpt: {
+            en: 'As agents cross organizational boundaries, identity must become discoverable before it becomes authoritative. The investable layer is a public naming and discovery plane that lets institutions publish, verify, revoke, and carry their agents across providers and regions.',
+            fr: 'À mesure que les agents franchissent les frontières organisationnelles, leur identité doit être découvrable avant de devenir une autorité. La couche d’investissement est un plan public de dénomination et de découverte qui permet aux institutions de publier, vérifier, révoquer et transporter leurs agents entre fournisseurs et régions.'
+        }
+    },
     'diop-daily-171': {
         title: {
             en: 'Trust Begins at the Sentence',
