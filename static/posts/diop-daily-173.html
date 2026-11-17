@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Task Should Leave a Packet — Diop Research</title>
+    <meta name="description" content="Agents are moving from single prompts to work that pauses, delegates, and resumes across people and systems. The investable layer is a portable work-packet plane that carries state, evidence, authority, pending decisions, and recovery through every handoff."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry173">Diop Daily #173 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 17, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>work packets · durable handoffs · institutional capacity</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Task Should Leave a Packet</h1>
+
+                <p><em>Field note, November 17, 2026.</em> A serious task rarely ends when one model returns a paragraph. It may wait for a signature, cross a team boundary, call a specialist, pause for a document, or resume after the machine that started it has disappeared. The institution still needs the work to move forward, with its state and obligations intact.</p>
+
+                <p>Several recent product and standards signals describe this change from different directions. OpenAI’s September Business release notes describe Codex Cloud as reusable task environments that persist across devices, and team tasks that let authorized teammates review results and update instructions together. Google’s guidance for long-running agents shows a workflow that pauses for days, resumes from durable state, delegates provisioning, and tests the pause gate before a real process reaches production. Google’s ADK for Go 2.0 makes graph execution, human input, durable pause-and-resume, retries, and telemetry part of the same runtime. NIST’s Agent Standards Initiative treats open protocols, authentication, identity, and security evaluation as conditions for interoperable agent systems.</p>
+
+                <blockquote>
+                    <p>A handoff is complete when the next responsible party can continue the work without reconstructing its history from memory.</p>
+                </blockquote>
+
+                <h2>The conversation is a poor unit of custody</h2>
+
+                <p>Conversation history feels like continuity because it preserves words in sequence. Operational work needs a different kind of continuity. It needs a compact account of what has been decided, what remains open, which evidence supports the current state, who may change it, and what event should wake the task again.</p>
+
+                <p>A long transcript mixes decisions with discarded possibilities, tool output with interpretation, and old instructions with current authority. It asks the next model to infer the state of the institution from a pile of language. That is an expensive and fragile form of custody. The task may resume with fluent prose while carrying a false assumption about an approval, a source, a deadline, or the person responsible for the next action.</p>
+
+                <p>The work packet is a better unit. It is a bounded record that travels with the task and can be inspected by a human, a model, a service, or an auditor. It should contain:</p>
+                <ul>
+                    <li><strong>Purpose and acceptance:</strong> the outcome requested, the quality test, the owner, and the condition that counts as complete;</li>
+                    <li><strong>Current state:</strong> the last confirmed checkpoint, completed steps, blocked steps, pending events, and the next permitted transition;</li>
+                    <li><strong>Evidence:</strong> source references, tool results, decisions, versions, language, jurisdiction, and the time at which each fact was checked;</li>
+                    <li><strong>Authority:</strong> the mandate, data boundary, tools, budget, human approvals, and delegation scope available to the next actor;</li>
+                    <li><strong>Recovery:</strong> the partial result, unresolved questions, rollback route, expiration condition, and person or institution to contact when the task cannot continue.</li>
+                </ul>
+
+                <p>This structure does more than improve memory. It turns a vague instruction into an object that can be transferred, paused, priced, evaluated, corrected, and closed. The packet carries the work’s meaning while the runtime, model, employee, or provider changes around it.</p>
+
+                <h2>Durable state makes waiting part of the design</h2>
+
+                <p>Google’s long-running agent example is useful because it treats waiting as a normal state rather than a failed request. A new-hire onboarding flow may send a welcome packet, wait for signed documents, delegate account provisioning, wait for hardware delivery, and then produce a day-one schedule. The process spans days and several responsible parties. A useful implementation stores named checkpoints, persists them outside volatile process memory, wakes on an external event, and verifies that the agent cannot skip a required gate.</p>
+
+                <p>The lesson reaches beyond onboarding. An invoice dispute waits for a supplier response. A clinic referral waits for a result. A public-service request waits for a document from a resident. A publishing workflow waits for rights confirmation. A software repair waits for a test environment. In each case, the idle interval is part of the task’s state. The institution needs to know whether it is waiting, blocked, expired, rejected, or ready for the next actor.</p>
+
+                <p>That distinction changes the economics of autonomy. A request-based system treats every wake-up as a new interaction. A packet-based system treats wake-ups as transitions in one accountable piece of work. It can measure time spent waiting, the cost of rehydration, the number of times a human had to restate context, the evidence lost at handoff, and the percentage of tasks completed without reopening a prior decision.</p>
+
+                <h2>Handoffs are institutional acts</h2>
+
+                <p>ADK for Go 2.0 places graphs and human-in-the-loop controls inside a common execution model. That is useful engineering, yet the institutional consequence matters more. When work moves from one node to another, the receiving node inherits a condition of responsibility. It needs to know which fields it may change, which evidence it must preserve, and which decision still belongs to a person.</p>
+
+                <p>A handoff therefore needs a contract. The contract can be narrow:</p>
+                <ul>
+                    <li>the sending actor identifies the packet version and the reason for transfer;</li>
+                    <li>the receiving actor confirms which fields it accepts and which it disputes;</li>
+                    <li>the authority boundary narrows or changes explicitly rather than through prompt implication;</li>
+                    <li>the next transition has a test, an expiry, and a route to human review;</li>
+                    <li>the completed action returns a receipt and an updated packet state.</li>
+                </ul>
+
+                <p>This is different from an orchestration graph. The graph describes how work can flow. The packet records what a particular piece of work means as it flows. A graph can be rebuilt by another runtime; a packet lets that runtime decide whether it has enough state and authority to continue. The distinction protects institutions from confusing topology with responsibility.</p>
+
+                <h2>African institutions need handoffs they can own</h2>
+
+                <p>In many African institutions, the most important constraint is continuity across uneven infrastructure, languages, staffing, and providers. A work packet gives a university, cooperative, publisher, clinic, public office, or regional operator a portable object for that continuity. The institution can keep the task identity, local terminology, evidence, decisions, and correction history even when the model endpoint is remote or the next actor is located elsewhere.</p>
+
+                <p>This is a practical form of intellectual sovereignty. The institution remains able to state what the task was, which local source governed it, who approved a translation, which jurisdiction applied, and what remains unresolved. A foreign runtime may supply computation. It should not become the only place where the institution can reconstruct its own work.</p>
+
+                <p>Language makes the problem sharper. A packet for a public-health instruction may need a local term authority, a region-specific source, and an escalation route that a generic workflow cannot infer. A packet for a cultural archive may need rights and naming decisions that survive translation. A packet for a small business may need a low-bandwidth representation that can be resumed without repeating the entire request. Local control enters the architecture through the fields that must survive the handoff.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is a <strong>work-packet plane</strong>: infrastructure that packages task identity, state, evidence, authority, pending decisions, and recovery into a portable record that can move across agents, people, runtimes, and providers. Its unit of value is a handoff that preserves responsibility without forcing the next actor to replay the whole history.</p>
+
+                <ul>
+                    <li><strong>Packet stores and schemas:</strong> systems that represent durable task state, versions, evidence, languages, jurisdictions, and acceptance tests in formats that different runtimes can read;</li>
+                    <li><strong>Handoff gateways:</strong> services that validate the sender, narrow authority, request acknowledgement, and refuse a transfer when required fields or evidence are missing;</li>
+                    <li><strong>Resume and wake infrastructure:</strong> event-driven systems that rehydrate a task after approvals, messages, deliveries, or external records arrive;</li>
+                    <li><strong>Packet observability:</strong> tools that show where work waits, where context is rewritten, which decisions are reopened, and how much loss occurs at each boundary;</li>
+                    <li><strong>Regional and language-aware custody:</strong> operators that preserve local terminology, evidence, permissions, and correction routes while connecting institutions to wider model and service networks.</li>
+                </ul>
+
+                <p>Underwriting should begin with the failure this plane prevents. Can a new operator continue a case without asking the customer to repeat it? Can an institution show which approval allowed the next transition? Can a model provider change without erasing task history? Can a public service expose a local-language correction route? Can a buyer measure how many tasks die in the gap between two systems?</p>
+
+                <p>These questions produce operating metrics: packet completeness, successful handoff rate, rework caused by lost context, time to resume, percentage of transitions with explicit acknowledgement, authority violations prevented, unresolved-state age, export completeness, and recovery time after runtime failure. A product that improves these measures is selling continuity as infrastructure. It is closer to the accounting and control layer of work than to another assistant interface.</p>
+
+                <h2>Build one packet before building a fleet</h2>
+
+                <p>An institution can test the architecture with one recurring process. Choose a task that already crosses a person, a system, or a waiting period. Define its packet fields, checkpoint vocabulary, evidence rules, authority boundary, acceptance test, expiry condition, and correction route. Interrupt the process at each transition. Remove the original operator. Change the model. Introduce a late document and a disputed decision. Then ask whether the next actor can proceed without inventing missing history.</p>
+
+                <p>Keep the packet separate from the transcript, the invoice, the credential, and the model prompt. Those objects support the work, but they do not carry the whole responsibility of the task. A packet should be readable enough for a person to challenge and structured enough for a machine to validate. It should leave the institution with an inheritance rather than a replay.</p>
+
+                <p>Autonomous systems will earn durable authority through the work they can carry across time and custody. The agent may change. The responsible work should remain legible.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes" target="_blank" rel="noopener">OpenAI Help Center, “ChatGPT Business release notes” (updated November 2026; September 29, 2026 entry). Describes Codex Cloud reusable task environments, approved team connections, recurring team tasks, shared review, and collaborative instruction updates.</a></li>
+                    <li><a href="https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/" target="_blank" rel="noopener">Google Developers Blog, “Build Long-running AI agents that pause, resume, and never lose context with ADK” (May 12, 2026). Demonstrates durable state machines, event-driven resumption, multi-agent delegation, human approval gates, and simulated golden evaluations.</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog, “Build reliable multi-agent applications with ADK Go 2.0” (June 30, 2026). Describes graph workflows, durable pause-and-resume, human-in-the-loop handoff and re-entry, retries, concurrency controls, and unified telemetry.</a></li>
+                    <li><a href="https://www.nist.gov/super-intelligence/si-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “SI Agent Standards Initiative” (updated November 9, 2026). Sets out industry-led standards, community protocols, authentication and identity research, and security evaluation for interoperable agent systems.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">W3C Strategy Team, “W3C and the State of the Web in the AI Era” (finalized October 20, 2026). Examines agents as Web user agents, cross-context data flows, human control, observability, consent, and the need for standards around agent interaction.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Une tâche doit laisser un dossier</h1>
+
+                <p><em>Note de terrain, 17 novembre 2026.</em> Une tâche sérieuse ne s’achève presque jamais lorsqu’un modèle renvoie un paragraphe. Elle peut attendre une signature, franchir la frontière d’une équipe, appeler un spécialiste, faire une pause pour un document ou reprendre après la disparition de la machine qui l’a commencée. L’institution doit continuer à faire avancer le travail, avec son état et ses obligations intacts.</p>
+
+                <p>Plusieurs signaux récents de produits et de normalisation décrivent ce changement depuis des angles différents. Les notes de version Business d’OpenAI publiées en septembre décrivent Codex Cloud comme des environnements de tâches réutilisables qui persistent entre les appareils, ainsi que des tâches d’équipe permettant à des collègues autorisés d’examiner les résultats et de mettre à jour les instructions ensemble. Le guide de Google consacré aux agents de longue durée montre un workflow qui s’arrête pendant plusieurs jours, reprend à partir d’un état durable, délègue le provisionnement et teste la barrière de pause avant qu’un processus réel n’entre en production. ADK for Go 2.0 de Google place l’exécution en graphe, l’intervention humaine, la pause et la reprise durables, les nouvelles tentatives et la télémétrie dans le même runtime. L’initiative du NIST consacrée aux standards des agents traite les protocoles ouverts, l’authentification, l’identité et l’évaluation de la sécurité comme des conditions de systèmes d’agents interopérables.</p>
+
+                <blockquote>
+                    <p>Un transfert est achevé lorsque le prochain responsable peut poursuivre le travail sans reconstruire son histoire de mémoire.</p>
+                </blockquote>
+
+                <h2>La conversation est une mauvaise unité de garde</h2>
+
+                <p>L’historique d’une conversation donne une impression de continuité parce qu’il conserve des mots dans l’ordre. Le travail opérationnel a besoin d’une autre forme de continuité. Il a besoin d’un compte rendu compact de ce qui a été décidé, de ce qui reste ouvert, des preuves qui soutiennent l’état courant, de ceux qui peuvent le modifier et de l’événement qui doit réveiller la tâche.</p>
+
+                <p>Un long transcript mélange les décisions avec les possibilités abandonnées, les sorties d’outils avec leur interprétation et les anciennes instructions avec l’autorité actuelle. Il demande au modèle suivant d’inférer l’état de l’institution à partir d’un tas de langage. Cette forme de garde est coûteuse et fragile. La tâche peut reprendre avec une prose fluide tout en conservant une hypothèse fausse sur une validation, une source, une échéance ou la personne responsable de l’action suivante.</p>
+
+                <p>Le dossier de travail est une meilleure unité. C’est un enregistrement borné qui voyage avec la tâche et qu’une personne, un modèle, un service ou un auditeur peut inspecter. Il devrait contenir :</p>
+                <ul>
+                    <li><strong>Fonction et acceptation :</strong> le résultat demandé, le test de qualité, le responsable et la condition qui définit l’achèvement ;</li>
+                    <li><strong>État courant :</strong> le dernier point de contrôle confirmé, les étapes terminées, les étapes bloquées, les événements en attente et la prochaine transition permise ;</li>
+                    <li><strong>Preuves :</strong> références sources, résultats d’outils, décisions, versions, langue, juridiction et moment où chaque fait a été vérifié ;</li>
+                    <li><strong>Autorité :</strong> le mandat, la frontière des données, les outils, le budget, les validations humaines et le périmètre de délégation disponibles pour l’acteur suivant ;</li>
+                    <li><strong>Reprise :</strong> le résultat partiel, les questions non résolues, la voie de retour, la condition d’expiration et la personne ou l’institution à contacter lorsque la tâche ne peut pas continuer.</li>
+                </ul>
+
+                <p>Cette structure améliore la mémoire et transforme aussi une instruction vague en objet transférable, suspendable, tarifable, évaluable, corrigeable et clôturable. Le dossier porte le sens du travail tandis que le runtime, le modèle, l’employé ou le fournisseur change autour de lui.</p>
+
+                <h2>L’état durable fait de l’attente un élément de conception</h2>
+
+                <p>L’exemple de Google consacré aux agents de longue durée est utile parce qu’il traite l’attente comme un état normal plutôt que comme une requête échouée. Un parcours d’intégration peut envoyer un dossier d’accueil, attendre les documents signés, déléguer le provisionnement des comptes, attendre la livraison du matériel puis produire un programme pour le premier jour. Le processus s’étend sur plusieurs jours et plusieurs responsables. Une implémentation utile enregistre des points de contrôle nommés, les conserve hors de la mémoire volatile du processus, se réveille sur un événement externe et vérifie que l’agent ne peut pas franchir une étape obligatoire.</p>
+
+                <p>La leçon dépasse l’intégration. Un litige de facture attend la réponse d’un fournisseur. Une orientation médicale attend un résultat. Une demande de service public attend un document envoyé par un résident. Un workflow éditorial attend la confirmation des droits. Une réparation logicielle attend un environnement de test. Dans chaque cas, l’intervalle d’inactivité fait partie de l’état de la tâche. L’institution doit savoir si elle attend, si elle est bloquée, expirée, rejetée ou prête pour l’acteur suivant.</p>
+
+                <p>Cette distinction change l’économie de l’autonomie. Un système fondé sur les requêtes traite chaque réveil comme une nouvelle interaction. Un système fondé sur les dossiers traite les réveils comme des transitions d’un même travail responsable. Il peut mesurer le temps d’attente, le coût de la réhydratation, le nombre de fois où une personne a dû reformuler le contexte, les preuves perdues lors d’un transfert et la part des tâches achevées sans rouvrir une décision antérieure.</p>
+
+                <h2>Les transferts sont des actes institutionnels</h2>
+
+                <p>ADK for Go 2.0 place les graphes et les contrôles avec intervention humaine dans un modèle d’exécution commun. C’est une avancée d’ingénierie utile, mais sa conséquence institutionnelle compte davantage. Lorsque le travail passe d’un nœud à un autre, le nœud receveur hérite d’une responsabilité. Il doit savoir quels champs il peut modifier, quelles preuves il doit préserver et quelle décision appartient encore à une personne.</p>
+
+                <p>Un transfert a donc besoin d’un contrat. Ce contrat peut rester étroit :</p>
+                <ul>
+                    <li>l’acteur émetteur identifie la version du dossier et la raison du transfert ;</li>
+                    <li>l’acteur receveur confirme les champs qu’il accepte et ceux qu’il conteste ;</li>
+                    <li>la frontière d’autorité se resserre ou change explicitement, au lieu de dépendre d’une implication du prompt ;</li>
+                    <li>la prochaine transition possède un test, une expiration et une voie de revue humaine ;</li>
+                    <li>l’action terminée renvoie un reçu et un état de dossier mis à jour.</li>
+                </ul>
+
+                <p>Cette logique diffère d’un graphe d’orchestration. Le graphe décrit la manière dont le travail peut circuler. Le dossier enregistre ce qu’un travail particulier signifie pendant cette circulation. Un autre runtime peut reconstruire le graphe ; le dossier lui permet de décider s’il possède assez d’état et d’autorité pour continuer. Cette distinction protège les institutions contre la confusion entre topologie et responsabilité.</p>
+
+                <h2>Les institutions africaines doivent posséder leurs transferts</h2>
+
+                <p>Dans de nombreuses institutions africaines, la contrainte principale est la continuité à travers des infrastructures, des langues, des équipes et des fournisseurs inégaux. Un dossier de travail donne à une université, une coopérative, un éditeur, une clinique, une administration ou un opérateur régional un objet portable pour cette continuité. L’institution peut conserver l’identité de la tâche, la terminologie locale, les preuves, les décisions et l’historique des corrections même lorsque le point d’accès au modèle est distant ou que l’acteur suivant se trouve ailleurs.</p>
+
+                <p>Il s’agit d’une forme pratique de souveraineté intellectuelle. L’institution reste capable d’indiquer ce qu’était la tâche, quelle source locale la gouvernait, qui a approuvé une traduction, quelle juridiction s’appliquait et ce qui reste irrésolu. Un runtime étranger peut fournir du calcul. Il ne devrait pas devenir le seul endroit où l’institution peut reconstruire son propre travail.</p>
+
+                <p>La langue rend le problème plus net. Un dossier destiné à une consigne de santé publique peut avoir besoin d’une autorité terminologique locale, d’une source propre à la région et d’une voie d’escalade qu’un workflow générique ne peut pas déduire. Un dossier destiné à une archive culturelle peut avoir besoin de décisions sur les droits et les noms qui survivent à la traduction. Un dossier destiné à une petite entreprise peut avoir besoin d’une représentation adaptée à une faible bande passante, reprenable sans répéter la demande entière. Le contrôle local entre dans l’architecture par les champs qui doivent survivre au transfert.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de contrôle des dossiers de travail</strong> : une infrastructure qui rassemble l’identité de la tâche, son état, ses preuves, son autorité, ses décisions en attente et sa reprise dans un enregistrement portable capable de circuler entre agents, personnes, runtimes et fournisseurs. Son unité de valeur est un transfert qui préserve la responsabilité sans obliger l’acteur suivant à rejouer toute l’histoire.</p>
+
+                <ul>
+                    <li><strong>Stockages et schémas de dossiers :</strong> systèmes qui représentent l’état durable d’une tâche, ses versions, ses preuves, ses langues, ses juridictions et ses tests d’acceptation dans des formats lisibles par plusieurs runtimes ;</li>
+                    <li><strong>Passerelles de transfert :</strong> services qui valident l’émetteur, resserrent l’autorité, demandent un accusé de réception et refusent le transfert lorsque des champs ou des preuves nécessaires manquent ;</li>
+                    <li><strong>Infrastructure de reprise et de réveil :</strong> systèmes événementiels qui réhydratent une tâche après l’arrivée d’une validation, d’un message, d’une livraison ou d’un dossier externe ;</li>
+                    <li><strong>Observabilité des dossiers :</strong> outils qui montrent où le travail attend, où le contexte est réécrit, quelles décisions sont rouvertes et quelle perte apparaît à chaque frontière ;</li>
+                    <li><strong>Garde régionale et linguistique :</strong> opérateurs qui préservent la terminologie locale, les preuves, les permissions et les voies de correction tout en reliant les institutions à des réseaux plus larges de modèles et de services.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par l’échec que ce plan empêche. Un nouvel opérateur peut-il poursuivre un dossier sans demander au client de le répéter ? Une institution peut-elle montrer quelle validation a permis la transition suivante ? Un fournisseur de modèles peut-il changer sans effacer l’historique de la tâche ? Un service public peut-il exposer une voie de correction dans la langue locale ? Un acheteur peut-il mesurer combien de tâches meurent dans l’espace entre deux systèmes ?</p>
+
+                <p>Ces questions produisent des mesures d’exploitation : complétude du dossier, taux de transferts réussis, reprise causée par la perte de contexte, délai de réveil, part des transitions dotées d’un accusé explicite, violations d’autorité empêchées, âge des états irrésolus, complétude de l’export et délai de reprise après une panne du runtime. Un produit qui améliore ces mesures vend la continuité comme infrastructure. Il se rapproche de la couche comptable et de contrôle du travail plutôt que d’une interface d’assistant supplémentaire.</p>
+
+                <h2>Construire un dossier avant de bâtir une flotte</h2>
+
+                <p>Une institution peut tester cette architecture avec un seul processus récurrent. Choisissez une tâche qui traverse déjà une personne, un système ou une période d’attente. Définissez ses champs, son vocabulaire de points de contrôle, ses règles de preuve, sa frontière d’autorité, son test d’acceptation, sa condition d’expiration et sa voie de correction. Interrompez le processus à chaque transition. Retirez l’opérateur initial. Changez le modèle. Introduisez un document tardif et une décision contestée. Demandez ensuite si l’acteur suivant peut avancer sans inventer l’histoire manquante.</p>
+
+                <p>Gardez le dossier séparé du transcript, de la facture, du justificatif et du prompt du modèle. Ces objets soutiennent le travail, mais ils ne portent pas toute la responsabilité de la tâche. Un dossier doit être assez lisible pour qu’une personne le conteste et assez structuré pour qu’une machine le valide. Il doit laisser à l’institution un héritage plutôt qu’une relecture.</p>
+
+                <p>Les systèmes autonomes gagneront une autorité durable par le travail qu’ils savent transporter à travers le temps et la garde. L’agent peut changer. Le travail responsable doit rester lisible.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes" target="_blank" rel="noopener">Centre d’aide OpenAI, « ChatGPT Business release notes » (mis à jour en novembre 2026 ; entrée du 29 septembre 2026). Décrit les environnements de tâches réutilisables de Codex Cloud, les connexions d’équipe approuvées, les tâches récurrentes, la revue partagée et la mise à jour collaborative des instructions.</a></li>
+                    <li><a href="https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/" target="_blank" rel="noopener">Google Developers Blog, « Build Long-running AI agents that pause, resume, and never lose context with ADK » (12 mai 2026). Présente les machines à états durables, la reprise événementielle, la délégation multi-agents, les validations humaines et les évaluations simulées.</a></li>
+                    <li><a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog, « Build reliable multi-agent applications with ADK Go 2.0 » (30 juin 2026). Décrit les workflows en graphe, la pause et la reprise durables, le transfert et la réentrée avec intervention humaine, les nouvelles tentatives, les contrôles de concurrence et la télémétrie unifiée.</a></li>
+                    <li><a href="https://www.nist.gov/super-intelligence/si-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « SI Agent Standards Initiative » (mise à jour le 9 novembre 2026). Présente les standards dirigés par l’industrie, les protocoles communautaires, la recherche sur l’authentification et l’identité ainsi que l’évaluation de sécurité pour des systèmes d’agents interopérables.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">Équipe stratégique du W3C, « W3C and the State of the Web in the AI Era » (finalisé le 20 octobre 2026). Examine les agents comme agents utilisateurs du Web, les flux de données entre contextes, le contrôle humain, l’observabilité, le consentement et le besoin de standards pour les interactions agentiques.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

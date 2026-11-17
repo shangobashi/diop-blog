@@ -201,6 +201,7 @@
         'article.entry169':     { en: 'Diop Daily #169 — November 2026', fr: 'Diop Quotidien n°169 — Novembre 2026' },
         'article.entry170':     { en: 'Diop Daily #170 — November 2026', fr: 'Diop Quotidien n°170 — Novembre 2026' },
         'article.entry171':     { en: 'Diop Daily #171 — November 2026', fr: 'Diop Quotidien n°171 — Novembre 2026' },
+        'article.entry173':     { en: 'Diop Daily #173 — November 2026', fr: 'Diop Quotidien n°173 — Novembre 2026' },
         'article.entry172':     { en: 'Diop Daily #172 — November 2026', fr: 'Diop Quotidien n°172 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
@@ -214,6 +215,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-173': {
+        title: {
+            en: 'A Task Should Leave a Packet',
+            fr: 'Une tâche doit laisser un dossier'
+        },
+        excerpt: {
+            en: 'Agents are moving from single prompts to work that pauses, delegates, and resumes across people and systems. The investable layer is a portable work-packet plane that carries state, evidence, authority, pending decisions, and recovery through every handoff.',
+            fr: 'Les agents passent des prompts isolés à un travail qui s’interrompt, se délègue et reprend entre personnes et systèmes. La couche d’investissement est un plan portable de dossiers de travail qui transporte l’état, les preuves, l’autorité, les décisions en attente et la reprise à chaque transfert.'
+        }
+    },
     'diop-daily-172': {
         title: {
             en: 'Give the Agent a Name the Internet Can Check',
