@@ -202,6 +202,7 @@
         'article.entry170':     { en: 'Diop Daily #170 — November 2026', fr: 'Diop Quotidien n°170 — Novembre 2026' },
         'article.entry171':     { en: 'Diop Daily #171 — November 2026', fr: 'Diop Quotidien n°171 — Novembre 2026' },
         'article.entry173':     { en: 'Diop Daily #173 — November 2026', fr: 'Diop Quotidien n°173 — Novembre 2026' },
+        'article.entry174':     { en: 'Diop Daily #174 — November 2026', fr: 'Diop Quotidien n°174 — Novembre 2026' },
         'article.entry172':     { en: 'Diop Daily #172 — November 2026', fr: 'Diop Quotidien n°172 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
@@ -215,6 +216,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-174': {
+        title: {
+            en: 'After the Cart, the Record',
+            fr: 'Après le panier, le registre'
+        },
+        excerpt: {
+            en: 'Agentic commerce is assembling carts and authorizing actions, but the durable commercial object begins after checkout: a settlement record that binds intent, authority, terms, payment, execution, receipt, and recourse.',
+            fr: 'Le commerce agentique compose des paniers et autorise des actions, mais l’objet commercial durable commence après le paiement : un registre de règlement qui relie l’intention, l’autorité, les conditions, le paiement, l’exécution, le reçu et le recours.'
+        }
+    },
     'diop-daily-173': {
         title: {
             en: 'A Task Should Leave a Packet',

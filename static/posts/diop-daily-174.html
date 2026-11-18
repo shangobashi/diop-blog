@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>After the Cart, the Record — Diop Research</title>
+    <meta name="description" content="Agentic commerce is assembling carts and authorizing actions, but the durable commercial object begins after checkout: a settlement record that binds intent, authority, terms, payment, execution, receipt, and recourse."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry174">Diop Daily #174 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 18, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>settlement records · agentic commerce · recourse</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">After the Cart, the Record</h1>
+
+                <p><em>Field note, November 18, 2026.</em> A shopping agent can discover a product, compare offers, assemble a cart, and ask for permission to pay. The commercial problem begins when the screen says that the order is complete. At that moment, several parties need more than a successful API response: the buyer needs to know what was authorized, the merchant needs evidence of the mandate, the payment network needs a bounded instruction, and everyone needs a route for correction when the delivered reality differs from the agreed one.</p>
+
+                <p>Recent public work is assembling the front half of this system. Google’s conversational-commerce prototype separates message ingress from session and cart state, uses deterministic financial tools, and keeps tokenized payment references away from the language model. The W3C’s September workshop on e-commerce for humans and AI agents presents the Universal Commerce Protocol as a common language for commerce interactions across businesses, platforms, and payment providers. Its sessions on KYA-Pay, delegated payments, merchant evidence, and agent identity show that authorization and accountability are still being defined together. The European Commission’s AI Act FAQ also treats agents as configurations covered by existing AI-system and general-purpose-model rules, with transparency and risk obligations attached to their use.</p>
+
+                <blockquote>
+                    <p>A cart records what someone hoped to buy. A settlement record must show what an authorized actor actually caused to happen.</p>
+                </blockquote>
+
+                <h2>The cart is a promise, not a completed transaction</h2>
+
+                <p>A cart is useful because it gives an agent a working memory for a purchase. It holds items, quantities, substitutions, delivery preferences, and a running total. Google’s prototype makes the operational point plainly: a conversational channel is stateless, so a separate session and cart layer must reconstruct the customer’s context when a message arrives hours later. The design keeps payment references tokenized and gives the financial tool a deterministic boundary.</p>
+
+                <p>That architecture solves continuity inside the shopping journey. It does not yet answer the questions that appear after the order crosses a financial boundary. Which product version did the buyer approve? Which price, tax, delivery window, substitution rule, and service fee were visible at authorization? Which agent acted, under whose mandate, with which payment credential? What did the merchant accept? What was actually captured, fulfilled, substituted, returned, refunded, or disputed?</p>
+
+                <p>These questions belong to a different object. The cart is mutable and exploratory. The settlement record is a time-bound account of an event that can affect money, goods, rights, and reputation. Its purpose is not to preserve every conversational turn. Its purpose is to preserve the facts needed to allocate responsibility.</p>
+
+                <h2>Four boundaries must survive the handoff to money</h2>
+
+                <p>Agentic commerce often compresses several decisions into one friendly sentence: “Find the best option and order it.” A responsible system must expand that sentence into records that another party can inspect. At minimum, a purchase needs four connected boundaries:</p>
+
+                <ul>
+                    <li><strong>Principal and mandate:</strong> the person or institution represented, the agent identity, the permitted category, spending limit, currency, duration, and escalation rule;</li>
+                    <li><strong>Offer and terms:</strong> the product identifier, version, seller, price, tax, fees, delivery promise, substitution policy, cancellation terms, and the moment those facts were accepted;</li>
+                    <li><strong>Execution and settlement:</strong> the payment credential, authorization event, capture, fulfillment state, partial delivery, refund, reversal, or failure, each tied to an immutable transaction reference;</li>
+                    <li><strong>Recourse and evidence:</strong> the receipt, human contact route, dispute window, relevant logs, consent record, and correction path that allow a party to challenge the result.</li>
+                </ul>
+
+                <p>These boundaries should connect without collapsing into one token. A valid agent identity does not prove that the agent was authorized to buy a particular item. A payment credential does not prove that the buyer accepted a substitution. A merchant receipt does not prove that the delivered product matched the product described by the agent. The settlement layer has to carry the joins.</p>
+
+                <h2>Authorization is only the beginning of accountability</h2>
+
+                <p>The W3C workshop exposes a useful distinction. KYA-Pay proposals describe signed credentials that can carry verified agent identity and payment authority. Merchant-facing discussions go further: a transaction may be authenticated at authorization and still become disputed later. The merchant therefore needs evidence of the agent’s identity, the authenticated consumer, the payment credential, and the specific action that was authorized.</p>
+
+                <p>This is the difference between a permission check and a settlement record. The permission check asks whether the system may proceed. The settlement record asks what proceeded, under which terms, with which evidence, and what happens when the parties disagree. The first is a gate. The second is an institutional memory of the gate being crossed.</p>
+
+                <p>In a human checkout, some of this evidence is distributed across a receipt, a card-network message, merchant logs, fulfillment records, and a customer-support case. An agentic system will create more handoffs, more automated substitutions, and more machine-generated explanations. If the evidence remains scattered across each agent’s private trace, the buyer may be unable to reconstruct the transaction and the merchant may be unable to defend a legitimate action. The system will have optimized execution while weakening recourse.</p>
+
+                <p>For that reason, the durable unit of agentic commerce is not the conversational order. It is the settlement record: a portable, bounded, machine-readable account of intent, authority, terms, execution, outcome, and recourse.</p>
+
+                <h2>African commerce needs records that can cross uneven rails</h2>
+
+                <p>The case for this layer is especially strong where commerce already crosses many kinds of infrastructure. A customer may discover a product through messaging, authorize payment through mobile money, receive a delivery from a local operator, and resolve a dispute through a human intermediary. The transaction can cross currencies, languages, networks, and levels of connectivity without becoming less deserving of a coherent record.</p>
+
+                <p>Settlement evidence must therefore survive interruption. A low-bandwidth channel may confirm an authorization before it can receive a rich receipt. A cooperative may share fulfillment responsibility with a regional distributor. A buyer may need the transaction translated into a local language while the underlying identifiers remain stable. A cross-border payment may require the record to state which currency, jurisdiction, fees, and refund rules applied.</p>
+
+                <p>This is an architectural route toward sovereignty. Local institutions do not need to reject global payment networks or model providers to own the meaning of their transactions. They need a record they can inspect, export, correct, and present to a customer or regulator when the remote platform changes. The external rail can move value. It should not be the only place where the institution can explain what value moved and why.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is a <strong>settlement-and-recourse plane for agents</strong>: infrastructure that binds an agent’s mandate to the exact offer, authorization, payment event, fulfillment outcome, receipt, and dispute path. It sits after discovery and checkout, between agent runtimes, merchants, payment providers, logistics systems, customer support, and regulators. Its unit of value is a transaction that remains explainable when the happy path ends.</p>
+
+                <ul>
+                    <li><strong>Settlement record systems:</strong> append-only ledgers that join agent identity, principal consent, offer terms, payment events, fulfillment changes, and receipts without storing raw payment secrets;</li>
+                    <li><strong>Mandate and spend-policy services:</strong> tools that turn a human instruction into bounded category, amount, time, currency, substitution, and escalation rules;</li>
+                    <li><strong>Merchant evidence gateways:</strong> adapters that present verifiable agent and authorization evidence to existing checkout, payment, and fraud systems;</li>
+                    <li><strong>Reconciliation and dispute infrastructure:</strong> systems that connect payment events to delivery, return, refund, chargeback, and human-review workflows;</li>
+                    <li><strong>Regional trust and language services:</strong> operators that preserve local receipts, terminology, currency, jurisdiction, and correction routes while connecting to global rails.</li>
+                </ul>
+
+                <p>Underwriting should begin with the failure this plane prevents. Can a buyer show exactly what the agent was allowed to purchase? Can a merchant distinguish a genuine delegated action from an agent that merely possessed a payment token? Can a payment provider reconcile a partial fulfillment with the original terms? Can a public authority inspect the relevant evidence without receiving a model’s entire private memory? Can a smaller African operator carry the record when a platform, model, or payment provider changes?</p>
+
+                <p>Those questions produce operating measures: percentage of transactions with complete mandate evidence, time to reconstruct an order, mismatch rate between authorized and fulfilled terms, refund and dispute resolution time, receipt availability in the customer’s language, export completeness, fraud prevented through mandate checks, and the share of transactions that remain legible after a provider change. These are underwriting metrics because they reveal whether automation reduces administrative uncertainty or merely moves it into a less visible system.</p>
+
+                <h2>Build the smallest honest settlement</h2>
+
+                <p>An institution can test this architecture with one narrow purchase flow. Choose an item that can be substituted, delivered in parts, refunded, or disputed. Define the principal, the agent, the spending mandate, the offer snapshot, the payment reference, the fulfillment events, the receipt, the expiry rules, and the human escalation route. Run the flow with a changed price, a late delivery, a rejected substitution, a duplicated webhook, and a partial refund.</p>
+
+                <p>The test should not ask whether the agent completed the order. It should ask whether a buyer, merchant, payment operator, and reviewer can independently reconstruct the same event from the record. If they cannot, the system has automated the purchase without institutionalizing its consequences.</p>
+
+                <p>The next commercial frontier of agentic commerce is therefore quieter than the shopping demo. It is the record that remains after the cart disappears: evidence that lets money move without making responsibility disappear.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/building-conversational-commerce-with-multi-agent-swarms-on-gcp-a-working-prototype/" target="_blank" rel="noopener">Google Developers Blog, “Building Conversational Commerce with Multi-Agent Swarms on GCP: A Working Prototype” (October 27, 2026). Describes separated ingress, session and cart state, deterministic financial tools, asynchronous webhooks, and tokenized payment references.</a></li>
+                    <li><a href="https://www.w3.org/2026/ecommerce-agents/agenda.html" target="_blank" rel="noopener">W3C, “Workshop: E-Commerce for humans and AI Agents” agenda (September 8–9, 2026). Describes UCP, delegated payments, KYA-Pay, merchant evidence, agent identity, and interoperability across commerce and payment systems.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">W3C Strategy Team, “W3C and the State of the Web in the AI Era” (finalized October 20, 2026). Identifies agentic commerce, consent for consequential actions, identity, provenance, and concrete agentic-payment work items as open Web questions.</a></li>
+                    <li><a href="https://ai-act-service-desk.ec.europa.eu/en/faq" target="_blank" rel="noopener">European Commission AI Act Service Desk, “Frequently Asked Questions,” AI agents section (accessed November 18, 2026). Explains that agents are not a separate legal category but are generally covered through existing AI-system and GPAI-model rules, including transparency and risk obligations.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Après le panier, le registre</h1>
+
+                <p><em>Note de terrain, 18 novembre 2026.</em> Un agent d’achat peut découvrir un produit, comparer des offres, composer un panier et demander l’autorisation de payer. Le problème commercial commence lorsque l’écran annonce que la commande est terminée. À cet instant, plusieurs parties ont besoin de davantage qu’une réponse d’API réussie : l’acheteur doit savoir ce qui a été autorisé, le commerçant a besoin de la preuve du mandat, le réseau de paiement a besoin d’une instruction bornée et chacun doit disposer d’une voie de correction lorsque la réalité livrée diffère de ce qui avait été convenu.</p>
+
+                <p>Les travaux publics récents assemblent la première moitié de ce système. Le prototype de commerce conversationnel de Google sépare l’arrivée des messages de l’état de session et du panier, utilise des outils financiers déterministes et maintient les références de paiement tokenisées hors de portée du modèle de langage. L’atelier du W3C consacré en septembre au commerce électronique pour les humains et les agents d’IA présente l’Universal Commerce Protocol comme un langage commun pour les interactions commerciales entre entreprises, plateformes et fournisseurs de paiement. Ses sessions sur KYA-Pay, les paiements délégués, les preuves demandées par les commerçants et l’identité des agents montrent que l’autorisation et la responsabilité restent à définir ensemble. La FAQ de la Commission européenne sur l’AI Act traite également les agents comme des configurations couvertes par les règles existantes applicables aux systèmes d’IA et aux modèles d’IA à usage général, avec des obligations de transparence et de gestion des risques liées à leur usage.</p>
+
+                <blockquote>
+                    <p>Un panier enregistre ce que quelqu’un espérait acheter. Un registre de règlement doit montrer ce qu’un acteur autorisé a effectivement provoqué.</p>
+                </blockquote>
+
+                <h2>Le panier est une promesse, pas une transaction achevée</h2>
+
+                <p>Le panier est utile parce qu’il donne à un agent une mémoire de travail pour l’achat. Il contient les articles, les quantités, les substitutions, les préférences de livraison et un total provisoire. Le prototype de Google expose clairement le point opérationnel : un canal conversationnel est sans état, donc une couche distincte de session et de panier doit reconstruire le contexte du client lorsqu’un message arrive plusieurs heures plus tard. La conception conserve les références de paiement sous forme tokenisée et donne à l’outil financier une frontière déterministe.</p>
+
+                <p>Cette architecture résout la continuité au sein du parcours d’achat. Elle ne répond pas encore aux questions qui apparaissent lorsque la commande franchit une frontière financière. Quelle version du produit l’acheteur a-t-il approuvée ? Quel prix, quelle taxe, quel délai de livraison, quelle règle de substitution et quels frais de service étaient visibles lors de l’autorisation ? Quel agent a agi, sous quel mandat et avec quelle référence de paiement ? Qu’est-ce que le commerçant a accepté ? Qu’est-ce qui a réellement été capturé, livré, remplacé, retourné, remboursé ou contesté ?</p>
+
+                <p>Ces questions appartiennent à un autre objet. Le panier est mutable et exploratoire. Le registre de règlement est le compte rendu daté d’un événement capable d’affecter l’argent, les biens, les droits et la réputation. Il ne sert pas à conserver chaque tour de conversation. Il sert à préserver les faits nécessaires à l’attribution de la responsabilité.</p>
+
+                <h2>Quatre frontières doivent survivre au passage vers l’argent</h2>
+
+                <p>Le commerce agentique comprime souvent plusieurs décisions dans une phrase aimable : « Trouve la meilleure option et commande-la. » Un système responsable doit déployer cette phrase en dossiers qu’une autre partie peut inspecter. Au minimum, un achat a besoin de quatre frontières reliées :</p>
+
+                <ul>
+                    <li><strong>Principal et mandat :</strong> la personne ou l’institution représentée, l’identité de l’agent, la catégorie permise, la limite de dépense, la devise, la durée et la règle d’escalade ;</li>
+                    <li><strong>Offre et conditions :</strong> l’identifiant et la version du produit, le vendeur, le prix, les taxes, les frais, la promesse de livraison, la politique de substitution, les conditions d’annulation et le moment où ces faits ont été acceptés ;</li>
+                    <li><strong>Exécution et règlement :</strong> la référence de paiement, l’événement d’autorisation, la capture, l’état de livraison, la livraison partielle, le remboursement, l’annulation ou l’échec, chacun relié à une référence de transaction immuable ;</li>
+                    <li><strong>Recours et preuves :</strong> le reçu, le moyen de contact humain, le délai de contestation, les journaux pertinents, l’enregistrement du consentement et la voie de correction qui permettent à une partie de contester le résultat.</li>
+                </ul>
+
+                <p>Ces frontières doivent être reliées sans se fondre dans un seul jeton. Une identité d’agent valide ne prouve pas que l’agent était autorisé à acheter un article particulier. Une référence de paiement ne prouve pas que l’acheteur a accepté une substitution. Un reçu du commerçant ne prouve pas que le produit livré correspondait à celui décrit par l’agent. La couche de règlement doit porter les jointures entre ces faits.</p>
+
+                <h2>L’autorisation n’est que le début de la responsabilité</h2>
+
+                <p>L’atelier du W3C met en lumière une distinction utile. Les propositions KYA-Pay décrivent des justificatifs signés capables de porter une identité d’agent vérifiée et une autorité de paiement. Les discussions tournées vers les commerçants vont plus loin : une transaction peut être authentifiée au moment de l’autorisation et devenir contestée ensuite. Le commerçant a donc besoin de preuves sur l’identité de l’agent, le consommateur authentifié, la référence de paiement et l’action précise qui a été autorisée.</p>
+
+                <p>C’est la différence entre un contrôle de permission et un registre de règlement. Le contrôle de permission demande si le système peut continuer. Le registre de règlement demande ce qui a continué, selon quelles conditions, avec quelles preuves et ce qui doit se passer lorsque les parties ne sont pas d’accord. Le premier est une barrière. Le second est une mémoire institutionnelle du franchissement de cette barrière.</p>
+
+                <p>Dans un paiement humain, une partie de ces preuves est répartie entre un reçu, un message du réseau de cartes, les journaux du commerçant, les dossiers de livraison et un dossier de support client. Un système agentique créera davantage de transferts, de substitutions automatisées et d’explications produites par des machines. Si les preuves restent dispersées dans la trace privée de chaque agent, l’acheteur risque de ne plus pouvoir reconstruire la transaction et le commerçant de ne plus pouvoir défendre une action légitime. Le système aura optimisé l’exécution tout en affaiblissant le recours.</p>
+
+                <p>Pour cette raison, l’unité durable du commerce agentique n’est pas la commande conversationnelle. C’est le registre de règlement : un compte rendu portable, borné et lisible par machine de l’intention, de l’autorité, des conditions, de l’exécution, du résultat et du recours.</p>
+
+                <h2>Le commerce africain a besoin de registres capables de franchir des rails inégaux</h2>
+
+                <p>L’argument en faveur de cette couche est particulièrement fort là où le commerce traverse déjà plusieurs infrastructures. Un client peut découvrir un produit par messagerie, autoriser un paiement par mobile money, recevoir une livraison d’un opérateur local et résoudre un litige avec un intermédiaire humain. La transaction peut traverser des devises, des langues, des réseaux et des niveaux de connectivité différents sans perdre le droit à un dossier cohérent.</p>
+
+                <p>Les preuves de règlement doivent donc survivre à l’interruption. Un canal à faible débit peut confirmer une autorisation avant de recevoir un reçu détaillé. Une coopérative peut partager la responsabilité de la livraison avec un distributeur régional. Un acheteur peut avoir besoin d’une traduction du dossier dans une langue locale alors que les identifiants sous-jacents restent stables. Un paiement transfrontalier peut exiger que le registre indique la devise, la juridiction, les frais et les règles de remboursement applicables.</p>
+
+                <p>C’est une voie architecturale vers la souveraineté. Les institutions locales n’ont pas besoin de rejeter les réseaux mondiaux de paiement ou les fournisseurs de modèles pour posséder le sens de leurs transactions. Elles ont besoin d’un registre qu’elles peuvent inspecter, exporter, corriger et présenter à un client ou à un régulateur lorsque la plateforme distante change. Le rail externe peut déplacer la valeur. Il ne devrait pas être le seul endroit où l’institution peut expliquer quelle valeur a circulé et pourquoi.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de règlement et de recours pour les agents</strong> : une infrastructure qui relie le mandat d’un agent à l’offre exacte, à l’autorisation, à l’événement de paiement, au résultat de livraison, au reçu et au chemin de contestation. Elle se situe après la découverte et le paiement, entre les runtimes d’agents, les commerçants, les fournisseurs de paiement, les systèmes logistiques, le support client et les régulateurs. Son unité de valeur est une transaction qui reste explicable lorsque le parcours idéal s’arrête.</p>
+
+                <ul>
+                    <li><strong>Systèmes de registres de règlement :</strong> grands livres append-only qui relient l’identité de l’agent, le consentement du principal, les conditions de l’offre, les événements de paiement, les changements de livraison et les reçus sans stocker les secrets de paiement bruts ;</li>
+                    <li><strong>Services de mandat et de politique de dépense :</strong> outils qui transforment une instruction humaine en règles bornées de catégorie, de montant, de durée, de devise, de substitution et d’escalade ;</li>
+                    <li><strong>Passerelles de preuves pour commerçants :</strong> adaptateurs qui présentent des preuves vérifiables d’identité de l’agent et d’autorisation aux systèmes existants de paiement, de contrôle et de lutte contre la fraude ;</li>
+                    <li><strong>Infrastructure de rapprochement et de litige :</strong> systèmes qui relient les événements de paiement à la livraison, au retour, au remboursement, à la rétrofacturation et à la revue humaine ;</li>
+                    <li><strong>Services régionaux de confiance et de langue :</strong> opérateurs qui préservent les reçus locaux, la terminologie, la devise, la juridiction et les voies de correction tout en se connectant aux rails mondiaux.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par l’échec que ce plan empêche. Un acheteur peut-il montrer exactement ce que l’agent avait le droit d’acheter ? Un commerçant peut-il distinguer une action déléguée réelle d’un agent qui ne possédait qu’un jeton de paiement ? Un fournisseur de paiement peut-il rapprocher une livraison partielle des conditions initiales ? Une autorité publique peut-elle inspecter les preuves pertinentes sans recevoir toute la mémoire privée d’un modèle ? Un opérateur africain de taille réduite peut-il emporter le registre lorsqu’une plateforme, un modèle ou un fournisseur de paiement change ?</p>
+
+                <p>Ces questions produisent des mesures d’exploitation : pourcentage de transactions disposant de preuves complètes du mandat, délai de reconstruction d’une commande, taux de divergence entre les conditions autorisées et celles exécutées, délai de remboursement et de résolution d’un litige, disponibilité du reçu dans la langue du client, complétude de l’export, fraude évitée grâce aux contrôles de mandat et part des transactions qui restent lisibles après un changement de fournisseur. Ce sont des mesures utiles pour la souscription parce qu’elles indiquent si l’automatisation réduit l’incertitude administrative ou la déplace vers un système moins visible.</p>
+
+                <h2>Construire le règlement honnête le plus petit</h2>
+
+                <p>Une institution peut tester cette architecture avec un seul parcours d’achat étroit. Choisissez un article qui peut être remplacé, livré en plusieurs fois, remboursé ou contesté. Définissez le principal, l’agent, le mandat de dépense, l’instantané de l’offre, la référence de paiement, les événements de livraison, le reçu, les règles d’expiration et la voie d’escalade humaine. Exécutez le parcours avec un prix modifié, une livraison tardive, une substitution refusée, un webhook dupliqué et un remboursement partiel.</p>
+
+                <p>Le test ne doit pas demander si l’agent a terminé la commande. Il doit demander si l’acheteur, le commerçant, l’opérateur de paiement et le réviseur peuvent reconstruire indépendamment le même événement à partir du registre. S’ils ne le peuvent pas, le système a automatisé l’achat sans institutionnaliser ses conséquences.</p>
+
+                <p>La prochaine frontière commerciale du commerce agentique est donc plus silencieuse que la démonstration d’achat. C’est le registre qui reste après la disparition du panier : la preuve qui permet à l’argent de circuler sans faire disparaître la responsabilité.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/building-conversational-commerce-with-multi-agent-swarms-on-gcp-a-working-prototype/" target="_blank" rel="noopener">Google Developers Blog, « Building Conversational Commerce with Multi-Agent Swarms on GCP: A Working Prototype » (27 octobre 2026). Décrit la séparation entre l’arrivée des messages, l’état de session et du panier, les outils financiers déterministes, les webhooks asynchrones et les références de paiement tokenisées.</a></li>
+                    <li><a href="https://www.w3.org/2026/ecommerce-agents/agenda.html" target="_blank" rel="noopener">W3C, « Workshop: E-Commerce for humans and AI Agents », programme des 8 et 9 septembre 2026. Décrit l’UCP, les paiements délégués, KYA-Pay, les preuves demandées par les commerçants, l’identité des agents et l’interopérabilité des systèmes commerciaux et de paiement.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">Équipe stratégique du W3C, « W3C and the State of the Web in the AI Era » (finalisé le 20 octobre 2026). Identifie le commerce agentique, le consentement pour les actions importantes, l’identité, la provenance et les travaux concrets sur les paiements agentiques comme des questions ouvertes du Web.</a></li>
+                    <li><a href="https://ai-act-service-desk.ec.europa.eu/en/faq" target="_blank" rel="noopener">AI Act Service Desk de la Commission européenne, « Frequently Asked Questions », section consacrée aux agents d’IA (consultée le 18 novembre 2026). Explique que les agents ne constituent pas une catégorie juridique distincte mais qu’ils sont généralement couverts par les règles existantes relatives aux systèmes d’IA et aux modèles d’IA à usage général, notamment les obligations de transparence et de gestion des risques.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
