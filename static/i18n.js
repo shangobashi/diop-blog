@@ -203,6 +203,7 @@
         'article.entry171':     { en: 'Diop Daily #171 — November 2026', fr: 'Diop Quotidien n°171 — Novembre 2026' },
         'article.entry173':     { en: 'Diop Daily #173 — November 2026', fr: 'Diop Quotidien n°173 — Novembre 2026' },
         'article.entry174':     { en: 'Diop Daily #174 — November 2026', fr: 'Diop Quotidien n°174 — Novembre 2026' },
+        'article.entry175':     { en: 'Diop Daily #175 — November 2026', fr: 'Diop Quotidien n°175 — Novembre 2026' },
         'article.entry172':     { en: 'Diop Daily #172 — November 2026', fr: 'Diop Quotidien n°172 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
@@ -216,6 +217,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-175': {
+        title: {
+            en: 'The Machine Room Needs a Constitution',
+            fr: 'La salle des machines a besoin d’une constitution'
+        },
+        excerpt: {
+            en: "Africa's AI infrastructure debate is moving from hardware scarcity to institutional design. The investable layer is a compute-governance plane that connects capacity to ownership, access, data, skills, applications, and sustainable financing.",
+            fr: 'Le débat africain sur l’infrastructure de l’IA passe de la rareté du matériel à la conception institutionnelle. La couche d’investissement est un plan de gouvernance du calcul qui relie la capacité à la propriété, à l’accès, aux données, aux compétences, aux applications et au financement durable.'
+        }
+    },
     'diop-daily-174': {
         title: {
             en: 'After the Cart, the Record',

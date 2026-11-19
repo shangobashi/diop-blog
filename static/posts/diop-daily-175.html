@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Machine Room Needs a Constitution — Diop Research</title>
+    <meta name="description" content="Africa's AI infrastructure debate is moving from hardware scarcity to institutional design. The investable layer is a compute-governance plane that connects capacity to ownership, access, data, skills, applications, and sustainable financing."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry175">Diop Daily #175 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 19, 2026</time>
+                    <span>·</span>
+                    <span data-rt="8">8 min read</span>
+                    <span>·</span>
+                    <span>compute governance · African infrastructure · institutional capacity</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Machine Room Needs a Constitution</h1>
+
+                <p><em>Field note, November 19, 2026.</em> The African AI conversation is acquiring a more serious object: the machine room. Data centres, GPUs, networks, cooling systems, and local storage are becoming conditions for participation in the next digital economy. Yet a machine room does not become a national capability when the racks are powered on. It becomes capability when an institution can decide who receives access, which work has priority, where the data may travel, how the skills are maintained, and what public value the capacity must return.</p>
+
+                <p>Recent evidence points to this distinction. A September UNDP study of country-hosted compute deployments in Kenya, Malawi, Rwanda, South Africa, Togo, and Zambia says that infrastructure alone does not create sustained capability; accessible data, skilled operators, institutional responsibility, governance, cybersecurity, financing, and pathways from priority applications to operational services must surround it. In October, UNDP and the GSMA announced a partnership linking African talent and language systems to compute access and real-world pilots. An October policy brief from the African Center for Economic Transformation describes the hard ceiling created by energy deficits, data costs, local infrastructure gaps, and weak execution. The Africa Data Centres Association’s 2026 economic report places power, latency, local hosting, data sovereignty, skills, and business models inside the same strategic question.</p>
+
+                <blockquote>
+                    <p>Compute is a productive asset only when an institution can govern its use, account for its value, and carry its knowledge beyond the facility that produced it.</p>
+                </blockquote>
+
+                <h2>A server is not a capability</h2>
+
+                <p>The inherited infrastructure story is easy to tell. A country lacks capacity; investors build a facility; servers arrive; the gap narrows. This story measures concrete inputs while leaving the institutional conversion unexplained. A GPU cluster can sit idle because the data is inaccessible, the operators are missing, the procurement rules exclude local users, the power contract is unstable, or no public agency has authority to allocate time. A connected data centre can serve imported workloads while local universities, firms, and public institutions remain unable to use it.</p>
+
+                <p>UNDP’s six-country evidence is valuable because it follows the deployment beyond procurement. It asks how capacity is activated, who operates it, which applications justify it, and how financing continues after the launch event. The lesson is practical: the scarce object is not simply compute capacity. It is reliable access to compute capacity under rules that make the capacity useful.</p>
+
+                <p>This changes the vocabulary of investment. Megawatts and accelerator counts still matter, but they describe potential. Capability appears in utilization by priority users, time to provision a research job, data-access latency, operator retention, reproducibility of a run, cost per useful result, and the number of local services that survive after a grant or pilot ends. A facility becomes part of an economy when these measures improve together.</p>
+
+                <h2>The scarce resource is governed access</h2>
+
+                <p>Access is often treated as a pricing problem. Let the market set a cloud price, and capable users will appear. That assumption fails where the productive ecosystem is young, income is uneven, foreign exchange is constrained, and the highest-value datasets sit inside public institutions or regulated sectors. A purely commercial queue can allocate scarce compute to the users who already know how to buy it. It may leave the institutions that would create local capability outside the system.</p>
+
+                <p>A compute-governance layer needs a more deliberate allocation logic. It should distinguish research, public service, commercial experimentation, education, and emergency use. It should publish eligibility, quotas, data boundaries, security obligations, and review procedures. It should record who received time, for which purpose, under which terms, and what was learned. The point is not to create a bureaucracy around every training run. The point is to make priority and exclusion visible enough to be corrected.</p>
+
+                <p>The African Continental Artificial Intelligence Strategy already places continental cooperation, data governance, capacity building, research, infrastructure, and ethical development in one policy frame. The practical question is how those commitments become operating systems. A regional compute pool needs a scheduler, but it also needs an institution that can define priority across languages, borders, universities, businesses, and public missions. A national cluster needs cybersecurity, but it also needs a public record of access and a route for contesting an allocation that systematically excludes local users.</p>
+
+                <h2>From hardware to institutional utility</h2>
+
+                <p>The UNDP–GSMA partnership makes the missing bridge explicit: compute access is being connected to African-language AI, local talent, university innovation hubs, and priority applications. This is more consequential than a hardware donation because it links infrastructure to a learning loop. A team uses the capacity, produces a service, measures adoption, improves the data, trains more operators, and returns a better case for the next allocation.</p>
+
+                <p>That loop needs a durable record. Each funded workload should leave evidence of its purpose, data permissions, model version, compute consumed, result, limitations, and next responsible owner. The record can be lightweight. Its function is to prevent the institution from repeatedly paying to rediscover what a prior pilot already learned. It also protects local knowledge from disappearing into a vendor dashboard or a consultant’s final presentation.</p>
+
+                <p>Language makes the design political. A local-language system cannot be judged only by whether it runs on imported hardware. Its vocabulary, evaluation set, corrections, and deployment context must remain available to the institutions that maintain the language. Compute gives a project force; governance determines whether that force strengthens a community’s capacity to name, measure, and improve its own world.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is a <strong>compute-governance plane</strong>: infrastructure and services that connect physical capacity to institutional ownership, allocation, data rights, skills, application pathways, measurement, and sustainable financing. It sits between data-centre operators, cloud providers, universities, public agencies, funders, local firms, and the communities whose data and languages supply the work. Its unit of value is governed compute that produces reusable capability rather than isolated utilization.</p>
+
+                <ul>
+                    <li><strong>Capacity allocation systems:</strong> schedulers and policy layers that assign scarce compute by mission, eligibility, data sensitivity, priority, and measurable outcomes;</li>
+                    <li><strong>Institutional cloud cooperatives:</strong> shared services that let universities, public bodies, and smaller firms pool demand while retaining clear ownership and exportable records;</li>
+                    <li><strong>Compute observability:</strong> tools that report utilization, energy, latency, job failure, cost per result, operator workload, and the distribution of access across regions and languages;</li>
+                    <li><strong>Data-and-model custody services:</strong> systems that bind a workload to permissions, local data stewardship, model versions, evaluation evidence, and correction routes;</li>
+                    <li><strong>Workforce and maintenance layers:</strong> operators, training systems, regional support, and financing instruments that keep infrastructure useful after the inaugural deployment.</li>
+                </ul>
+
+                <p>Underwriting should begin with conversion, not spectacle. How much installed capacity is available to local institutions? How long does an approved user wait for a job? Which share of workloads produces a service, dataset, publication, or trained operator that another institution can reuse? Can the operator explain energy and water costs? Can the data steward export the records when a provider changes? Does the allocation system make room for a small language community or only for the largest buyer?</p>
+
+                <p>These questions generate investable measures: utilization by user class, time to provision, repeat-use rate, cost per reproducible result, local operator retention, share of workloads with complete provenance, public-interest output per unit of energy, and the percentage of services that remain portable across providers. A compute project with strong numbers here has a stronger claim to long-term value than one that merely advertises a large cluster.</p>
+
+                <h2>Write the charter before expanding the cluster</h2>
+
+                <p>An institution can begin with a small charter. Name the owner of the capacity. Define who may request time and how priorities are decided. Set data-residency and security boundaries. Require every workload to declare its purpose, expected output, responsible operator, and exit condition. Publish the appeals route. Reserve capacity for education, public-interest research, and local-language maintenance. Review the results quarterly and change the rules when the evidence shows that access is producing no durable capability.</p>
+
+                <p>This is a constitutional act in a precise sense. It states how a scarce productive resource is held, distributed, audited, and inherited. The machine room remains physical, but its economic meaning becomes institutional. African sovereignty in AI will not be secured by ownership of hardware alone. It will be secured when the institutions using that hardware can set priorities, preserve knowledge, train successors, and coordinate across borders without surrendering the terms of participation.</p>
+
+                <p>The next stage of the AI infrastructure race will therefore be decided in places that look less dramatic than a new cluster: allocation offices, university labs, energy contracts, language teams, public procurement rules, maintenance budgets, and records of what the machines made possible. A machine room becomes sovereign when its capacity can be governed into a future.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.undp.org/africa/publications/local-ai-compute-infrastructure-africa-lessons-six-country-hosted-deployments-governance-and-effective-use" target="_blank" rel="noopener">United Nations Development Programme, “Local AI compute infrastructure in Africa: Lessons from six country-hosted deployments on governance and effective use” (September 17, 2026). Draws on deployments in Kenya, Malawi, Rwanda, South Africa, Togo, and Zambia and identifies data, skills, institutional responsibility, governance, cybersecurity, financing, and application pathways as conditions for effective use.</a></li>
+                    <li><a href="https://www.gsma.com/newsroom/press-release/undp-and-gsma-partner-to-scale-african-led-ai-innovation/" target="_blank" rel="noopener">GSMA and UNDP, “UNDP and GSMA partner to scale African-led AI innovation” (October 2, 2026). Describes a partnership connecting African talent, African-language AI, compute infrastructure, university innovation networks, and real-world pilots.</a></li>
+                    <li><a href="https://acetforafrica.org/knowledge-hub/insights-ideas/policy-briefs/unlocking-africas-digital-potential-through-institutional-agility-infrastructure-and-platform-led-formalization/" target="_blank" rel="noopener">African Center for Economic Transformation, “Unlocking Africa’s Digital Potential Through Institutional Agility, Infrastructure, and Platform-led Formalization” (October 29, 2026). Discusses energy, data costs, local infrastructure, institutional execution, and the conditions for converting digital infrastructure into adoption and economic participation.</a></li>
+                    <li><a href="https://africadca.org/wp-content/uploads/2026/02/DataCentresInAfrica2026-EN.pdf" target="_blank" rel="noopener">Africa Data Centres Association, “Data Centres in Africa: The Economic Report 2026.” Examines local hosting, latency, power, data sovereignty, skills, investment, and AI-ready facilities as connected parts of the continent’s digital infrastructure.</a></li>
+                    <li><a href="https://au.int/en/documents/20240809/continental-artificial-intelligence-strategy" target="_blank" rel="noopener">African Union, “Continental Artificial Intelligence Strategy” (2024). Provides the continental policy frame for cooperation, infrastructure, capacity building, data governance, research, and ethical AI development.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La salle des machines a besoin d’une constitution</h1>
+
+                <p><em>Note de terrain, 19 novembre 2026.</em> Le débat africain sur l’IA acquiert un objet plus sérieux : la salle des machines. Les centres de données, les GPU, les réseaux, les systèmes de refroidissement et le stockage local deviennent des conditions de participation à la prochaine économie numérique. Pourtant, une salle des machines ne devient pas une capacité nationale lorsque les baies sont simplement alimentées. Elle devient une capacité lorsqu’une institution peut décider qui reçoit l’accès, quel travail est prioritaire, où les données peuvent circuler, comment les compétences sont entretenues et quelle valeur publique cette capacité doit produire en retour.</p>
+
+                <p>Les éléments récents convergent vers cette distinction. Une étude du PNUD publiée en septembre sur des déploiements de calcul hébergés localement au Kenya, au Malawi, au Rwanda, en Afrique du Sud, au Togo et en Zambie affirme que l’infrastructure seule ne crée pas une capacité durable ; des données accessibles, des opérateurs compétents, des responsabilités institutionnelles, une gouvernance, une cybersécurité, un financement et des chemins reliant les applications prioritaires aux services opérationnels doivent l’entourer. En octobre, le PNUD et la GSMA ont annoncé un partenariat reliant les talents africains et les systèmes linguistiques à l’accès au calcul et à des projets pilotes réels. Une note de politique du Centre africain pour la transformation économique décrit en octobre le plafond formé par les déficits énergétiques, le coût des données, les lacunes d’infrastructure locale et la faiblesse de l’exécution. Le rapport économique 2026 de l’Africa Data Centres Association place l’énergie, la latence, l’hébergement local, la souveraineté des données, les compétences et les modèles économiques dans une même question stratégique.</p>
+
+                <blockquote>
+                    <p>Le calcul est un actif productif seulement lorsqu’une institution peut en gouverner l’usage, en rendre compte et transporter son savoir au-delà du site qui l’a produit.</p>
+                </blockquote>
+
+                <h2>Un serveur n’est pas une capacité</h2>
+
+                <p>Le récit infrastructurel hérité est facile à raconter. Un pays manque de capacité ; des investisseurs construisent une installation ; les serveurs arrivent ; l’écart se réduit. Ce récit mesure les apports matériels tout en laissant inexpliquée leur conversion institutionnelle. Un cluster de GPU peut rester inutilisé parce que les données sont inaccessibles, que les opérateurs manquent, que les règles d’achat excluent les utilisateurs locaux, que le contrat d’électricité est instable ou qu’aucune agence publique n’a le pouvoir d’attribuer le temps de calcul. Un centre de données connecté peut servir des charges importées tandis que les universités, les entreprises et les institutions publiques locales ne peuvent toujours pas l’utiliser.</p>
+
+                <p>L’étude du PNUD dans six pays est utile parce qu’elle suit le déploiement au-delà de l’achat. Elle demande comment la capacité est activée, qui l’exploite, quelles applications la justifient et comment le financement se poursuit après l’événement de lancement. La leçon est pratique : l’objet rare n’est pas seulement la capacité de calcul. C’est l’accès fiable à cette capacité selon des règles qui la rendent utile.</p>
+
+                <p>Cela change le vocabulaire de l’investissement. Les mégawatts et le nombre d’accélérateurs restent importants, mais ils décrivent un potentiel. La capacité apparaît dans l’utilisation par les utilisateurs prioritaires, le délai de mise à disposition d’un travail de recherche, la latence d’accès aux données, la rétention des opérateurs, la reproductibilité d’une exécution, le coût d’un résultat utile et le nombre de services locaux qui survivent après la fin d’une subvention ou d’un pilote. Une installation devient une partie de l’économie lorsque ces mesures progressent ensemble.</p>
+
+                <h2>La ressource rare est l’accès gouverné</h2>
+
+                <p>L’accès est souvent traité comme une question de prix. Le cloud fixe un tarif et les utilisateurs capables apparaissent. Cette hypothèse échoue lorsque l’écosystème productif est jeune, que les revenus sont inégaux, que les devises étrangères sont limitées et que les jeux de données les plus précieux se trouvent dans des institutions publiques ou des secteurs réglementés. Une file d’attente purement commerciale peut attribuer le calcul rare aux utilisateurs qui savent déjà l’acheter. Elle peut laisser à l’extérieur les institutions qui créeraient la capacité locale.</p>
+
+                <p>Une couche de gouvernance du calcul a besoin d’une logique d’allocation plus délibérée. Elle doit distinguer la recherche, le service public, l’expérimentation commerciale, l’éducation et l’usage d’urgence. Elle doit publier les critères d’éligibilité, les quotas, les limites de données, les obligations de sécurité et les procédures de revue. Elle doit enregistrer qui a reçu du temps, pour quelle finalité, selon quelles conditions et avec quels apprentissages. L’objectif n’est pas de créer une bureaucratie autour de chaque entraînement. Il est de rendre les priorités et les exclusions assez visibles pour pouvoir les corriger.</p>
+
+                <p>La Stratégie continentale de l’Union africaine pour l’intelligence artificielle place déjà la coopération continentale, la gouvernance des données, le renforcement des capacités, la recherche, l’infrastructure et le développement éthique dans un même cadre politique. La question pratique est de savoir comment ces engagements deviennent des systèmes d’exploitation. Un pool régional de calcul a besoin d’un ordonnanceur, mais aussi d’une institution capable de définir les priorités entre les langues, les frontières, les universités, les entreprises et les missions publiques. Un cluster national a besoin de cybersécurité, mais aussi d’un registre public des accès et d’une voie pour contester une allocation qui exclurait systématiquement les utilisateurs locaux.</p>
+
+                <h2>Du matériel à l’utilité institutionnelle</h2>
+
+                <p>Le partenariat entre le PNUD et la GSMA rend le pont manquant explicite : l’accès au calcul est relié à l’IA dans les langues africaines, aux talents locaux, aux pôles universitaires d’innovation et aux applications prioritaires. Cela compte davantage qu’un don de matériel parce que l’infrastructure entre dans une boucle d’apprentissage. Une équipe utilise la capacité, produit un service, mesure son adoption, améliore les données, forme davantage d’opérateurs et apporte un meilleur dossier pour l’allocation suivante.</p>
+
+                <p>Cette boucle a besoin d’un registre durable. Chaque charge financée devrait laisser la preuve de sa finalité, de ses permissions de données, de sa version de modèle, du calcul consommé, du résultat, de ses limites et du prochain responsable. Le registre peut rester léger. Sa fonction est d’empêcher l’institution de payer plusieurs fois pour redécouvrir ce qu’un pilote précédent avait déjà appris. Il protège aussi le savoir local contre sa disparition dans le tableau de bord d’un fournisseur ou dans la présentation finale d’un consultant.</p>
+
+                <p>La langue rend cette conception politique. Un système dans une langue locale ne peut pas être évalué seulement selon sa capacité à fonctionner sur du matériel importé. Son vocabulaire, son jeu d’évaluation, ses corrections et son contexte de déploiement doivent rester disponibles pour les institutions qui entretiennent la langue. Le calcul donne une force à un projet ; la gouvernance décide si cette force renforce la capacité d’une communauté à nommer, mesurer et améliorer son propre monde.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de gouvernance du calcul</strong> : une infrastructure et des services qui relient la capacité physique à la propriété institutionnelle, à l’allocation, aux droits sur les données, aux compétences, aux parcours d’application, à la mesure et au financement durable. Cette couche se situe entre les opérateurs de centres de données, les fournisseurs de cloud, les universités, les agences publiques, les bailleurs, les entreprises locales et les communautés dont les données et les langues fournissent le travail. Son unité de valeur est un calcul gouverné qui produit une capacité réutilisable plutôt qu’une utilisation isolée.</p>
+
+                <ul>
+                    <li><strong>Systèmes d’allocation de capacité :</strong> ordonnanceurs et couches de politique qui attribuent le calcul rare selon la mission, l’éligibilité, la sensibilité des données, la priorité et les résultats mesurables ;</li>
+                    <li><strong>Coopératives institutionnelles de cloud :</strong> services partagés permettant aux universités, aux organismes publics et aux petites entreprises de mutualiser la demande tout en conservant une propriété claire et des registres exportables ;</li>
+                    <li><strong>Observabilité du calcul :</strong> outils qui rapportent l’utilisation, l’énergie, la latence, les échecs de tâches, le coût par résultat, la charge des opérateurs et la répartition de l’accès entre régions et langues ;</li>
+                    <li><strong>Services de garde des données et des modèles :</strong> systèmes qui relient une charge aux permissions, à la gestion locale des données, aux versions de modèles, aux preuves d’évaluation et aux voies de correction ;</li>
+                    <li><strong>Couches de main-d’œuvre et de maintenance :</strong> opérateurs, systèmes de formation, soutien régional et instruments de financement qui maintiennent l’utilité de l’infrastructure après le déploiement initial.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par la conversion, non par le spectacle. Quelle part de la capacité installée est accessible aux institutions locales ? Combien de temps un utilisateur approuvé attend-il un travail ? Quelle proportion des charges produit un service, un jeu de données, une publication ou un opérateur formé qu’une autre institution peut réutiliser ? L’opérateur peut-il expliquer les coûts d’énergie et d’eau ? Le responsable des données peut-il exporter les registres lorsqu’un fournisseur change ? Le système d’allocation réserve-t-il une place à une petite communauté linguistique ou seulement au plus gros acheteur ?</p>
+
+                <p>Ces questions produisent des mesures investissables : utilisation par catégorie d’utilisateur, délai de mise à disposition, taux de réutilisation, coût par résultat reproductible, rétention des opérateurs locaux, part des charges dotées d’une provenance complète, résultat d’intérêt public par unité d’énergie et pourcentage des services qui restent portables entre fournisseurs. Un projet de calcul qui affiche de bons chiffres sur ces dimensions a une prétention plus solide à la valeur durable qu’un projet qui annonce seulement la taille d’un cluster.</p>
+
+                <h2>Écrire la charte avant d’agrandir le cluster</h2>
+
+                <p>Une institution peut commencer par une petite charte. Nommer le propriétaire de la capacité. Définir qui peut demander du temps et comment les priorités sont décidées. Fixer les limites de résidence et de sécurité des données. Exiger que chaque charge déclare sa finalité, son résultat attendu, son opérateur responsable et sa condition de sortie. Publier la voie de recours. Réserver une capacité à l’éducation, à la recherche d’intérêt public et à la maintenance des langues locales. Examiner les résultats chaque trimestre et modifier les règles lorsque les preuves montrent que l’accès ne produit aucune capacité durable.</p>
+
+                <p>Il s’agit d’un acte constitutionnel au sens précis. La charte indique comment une ressource productive rare est détenue, distribuée, auditée et transmise. La salle des machines reste physique, mais sa signification économique devient institutionnelle. La souveraineté africaine en IA ne sera pas assurée par la seule possession du matériel. Elle le sera lorsque les institutions qui utilisent ce matériel pourront fixer les priorités, préserver le savoir, former leurs successeurs et coordonner leurs efforts au-delà des frontières sans céder les conditions de leur participation.</p>
+
+                <p>La prochaine étape de la course aux infrastructures d’IA sera donc décidée dans des lieux moins spectaculaires qu’un nouveau cluster : bureaux d’allocation, laboratoires universitaires, contrats énergétiques, équipes linguistiques, règles de commande publique, budgets de maintenance et registres de ce que les machines ont rendu possible. Une salle des machines devient souveraine lorsque sa capacité peut être gouvernée vers un avenir.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.undp.org/africa/publications/local-ai-compute-infrastructure-africa-lessons-six-country-hosted-deployments-governance-and-effective-use" target="_blank" rel="noopener">Programme des Nations Unies pour le développement, « Local AI compute infrastructure in Africa: Lessons from six country-hosted deployments on governance and effective use » (17 septembre 2026). S’appuie sur des déploiements au Kenya, au Malawi, au Rwanda, en Afrique du Sud, au Togo et en Zambie et identifie les données, les compétences, la responsabilité institutionnelle, la gouvernance, la cybersécurité, le financement et les parcours d’application comme des conditions d’un usage efficace.</a></li>
+                    <li><a href="https://www.gsma.com/newsroom/press-release/undp-and-gsma-partner-to-scale-african-led-ai-innovation/" target="_blank" rel="noopener">GSMA et PNUD, « UNDP and GSMA partner to scale African-led AI innovation » (2 octobre 2026). Décrit un partenariat reliant les talents africains, l’IA dans les langues africaines, l’infrastructure de calcul, les réseaux universitaires d’innovation et des projets pilotes réels.</a></li>
+                    <li><a href="https://acetforafrica.org/knowledge-hub/insights-ideas/policy-briefs/unlocking-africas-digital-potential-through-institutional-agility-infrastructure-and-platform-led-formalization/" target="_blank" rel="noopener">Centre africain pour la transformation économique, « Unlocking Africa’s Digital Potential Through Institutional Agility, Infrastructure, and Platform-led Formalization » (29 octobre 2026). Analyse l’énergie, le coût des données, l’infrastructure locale, l’exécution institutionnelle et les conditions permettant de convertir l’infrastructure numérique en adoption et en participation économique.</a></li>
+                    <li><a href="https://africadca.org/wp-content/uploads/2026/02/DataCentresInAfrica2026-EN.pdf" target="_blank" rel="noopener">Africa Data Centres Association, « Data Centres in Africa: The Economic Report 2026 ». Examine l’hébergement local, la latence, l’énergie, la souveraineté des données, les compétences, l’investissement et les installations prêtes pour l’IA comme parties liées de l’infrastructure numérique du continent.</a></li>
+                    <li><a href="https://au.int/en/documents/20240809/continental-artificial-intelligence-strategy" target="_blank" rel="noopener">Union africaine, « Continental Artificial Intelligence Strategy » (2024). Fournit le cadre continental pour la coopération, l’infrastructure, le renforcement des capacités, la gouvernance des données, la recherche et le développement éthique de l’IA.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
