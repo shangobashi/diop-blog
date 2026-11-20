@@ -204,6 +204,7 @@
         'article.entry173':     { en: 'Diop Daily #173 — November 2026', fr: 'Diop Quotidien n°173 — Novembre 2026' },
         'article.entry174':     { en: 'Diop Daily #174 — November 2026', fr: 'Diop Quotidien n°174 — Novembre 2026' },
         'article.entry175':     { en: 'Diop Daily #175 — November 2026', fr: 'Diop Quotidien n°175 — Novembre 2026' },
+        'article.entry176':     { en: 'Diop Daily #176 — November 2026', fr: 'Diop Quotidien n°176 — Novembre 2026' },
         'article.entry172':     { en: 'Diop Daily #172 — November 2026', fr: 'Diop Quotidien n°172 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
@@ -217,6 +218,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-176': {
+        title: {
+            en: 'A Permission Is a Clock',
+            fr: 'Une permission est une horloge'
+        },
+        excerpt: {
+            en: 'Agent identity is becoming a foundation for autonomous systems, but identity alone cannot govern action. The investable layer is an authority-lease plane that makes permissions time-bound, audience-specific, revocable, and locally accountable.',
+            fr: 'L’identité des agents devient une fondation des systèmes autonomes, mais l’identité seule ne gouverne pas l’action. La couche d’investissement est un plan de contrôle des baux d’autorité qui rend les permissions limitées dans le temps, destinées à un public précis, révocables et responsables localement.'
+        }
+    },
     'diop-daily-175': {
         title: {
             en: 'The Machine Room Needs a Constitution',

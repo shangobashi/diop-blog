@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Permission Is a Clock — Diop Research</title>
+    <meta name="description" content="Agent identity is becoming a foundation for autonomous systems, but identity alone cannot govern action. The investable layer is an authority-lease plane that makes permissions time-bound, audience-specific, revocable, and locally accountable."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry176">Diop Daily #176 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 20, 2026</time>
+                    <span>·</span>
+                    <span data-rt="8">8 min read</span>
+                    <span>·</span>
+                    <span>authority leases · agent security · African institutions</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Permission Is a Clock</h1>
+
+                <p><em>Field note, November 20, 2026.</em> An autonomous system can carry a name, a credential, and a mandate into a transaction. The difficult question begins after recognition: how long does the authority last, who may receive it, which conditions can change it, and what proves that it was revoked before the next action? A permission is therefore a clock as much as it is a key.</p>
+
+                <p>Recent institutional work is making this temporal dimension explicit. NIST’s October design tenets for agent identity systems call for distinct agent identities, linked delegation with attenuation, zero standing privilege, and short-lived, dynamic, revocable authorization. Its November update on the SI Agent Standards Initiative places authentication, identity infrastructure, open protocols, and security evaluation inside the same standards programme. The W3C’s Identity &amp; the Web report describes identity as a technical and governance problem whose effects reach privacy, security, human rights, and interoperability. UNDP’s September assessment of African AI readiness adds the institutional question: who has authority to lead, procure, supervise, finance, and measure systems once adoption begins?</p>
+
+                <blockquote>
+                    <p>A credential can identify an actor. Only a live authority record can say whether that actor may act now.</p>
+                </blockquote>
+
+                <h2>Identity answers who; authority answers when</h2>
+
+                <p>Identity and authority are related records with different jobs. Identity binds an action to a software component, a human principal, or an institution. Authority describes the permitted action, resource, audience, purpose, duration, and conditions. The distinction becomes material when an agent works across several services and delegates a portion of its task to another agent.</p>
+
+                <p>Consider a procurement agent instructed to source laboratory equipment. Its identity may remain valid for months. Its authority should be narrower: a named category, a spending ceiling, a supplier region, a delivery window, and an escalation rule for substitutions. A downstream service that compares offers should receive an even smaller scope. The service may inspect catalogues and rank products, while the authority to place an order remains with another actor. Delegation must reduce power as it travels.</p>
+
+                <p>Static credentials blur these boundaries. A bearer token can remain technically valid after the context that justified it has changed. A user may have cancelled the task, a supplier may have been removed, a budget may have closed, or the agent’s operating environment may have changed. A system that checks validity only at login preserves yesterday’s permission inside today’s action.</p>
+
+                <h2>The lease is the unit of control</h2>
+
+                <p>The useful abstraction is an authority lease: a signed, inspectable grant that becomes valid for a defined audience, purpose, and time window, with an explicit revocation and renewal path. The lease should carry enough structure for a runtime to make a decision without asking a language model to interpret an open-ended paragraph.</p>
+
+                <ul>
+                    <li><strong>Principal and chain:</strong> the person or institution represented, the initiating agent, the downstream actor, and the links that preserve accountability;</li>
+                    <li><strong>Scope and audience:</strong> the resource, operation, jurisdiction, tool, data boundary, and receiving service for which the grant applies;</li>
+                    <li><strong>Clock and state:</strong> issuance time, expiry, renewal condition, current status, freshness requirement, and the event that can suspend or revoke the lease;</li>
+                    <li><strong>Risk conditions:</strong> spending limits, separation of duties, human approval gates, environmental checks, and the signals that require re-authorization;</li>
+                    <li><strong>Evidence and receipt:</strong> the decision record, action reference, observed state, refusal reason, and historical proof that remains verifiable after credential rotation.</li>
+                </ul>
+
+                <p>This record turns permission into an operating object. A runtime can request a lease for one operation, verify its audience and expiry, perform a bounded action, and return a receipt. A reviewer can inspect the decision later without requiring the original agent to remain online. A provider can change while the institution retains the history of what was authorized and what was refused.</p>
+
+                <h2>Revocation belongs inside execution</h2>
+
+                <p>Many systems treat revocation as an administrative event that occurs outside the action path. An administrator changes a policy, invalidates a token, or closes an account. The agent continues with the credential it already holds until a later request happens to check again. That gap is where a legitimate task can become an unauthorized one.</p>
+
+                <p>Continuous verification does not require every system to consult a remote service before every low-risk operation. It requires the system to state its freshness policy and match that policy to the consequence of the action. Reading a public document, opening a regulated record, changing a payment instruction, and publishing on behalf of an institution deserve different clocks. A lease for a high-impact action may need a fresh status check and a human confirmation. A lower-risk action may rely on a short cache with a declared maximum age.</p>
+
+                <p>The refusal is part of the product. If a lease has expired, the system should return a reason that distinguishes expiration, revocation, audience mismatch, scope violation, unavailable status, and insufficient evidence. That distinction gives operators a recovery path. It also prevents a model from smoothing a hard boundary into a plausible explanation that hides the actual control decision.</p>
+
+                <p>Historical proof requires a second clock. Current validity asks whether an action may happen now. Historical attribution asks whether a later reviewer can establish which authority was valid when an earlier action occurred. The two questions should survive credential rotation, agent retirement, and provider migration. A local institution needs to preserve both the present decision and the past record.</p>
+
+                <h2>African institutions need clocks they can set</h2>
+
+                <p>Temporal authority has a direct sovereignty dimension. African institutions will continue to use global models, cloud services, payment rails, and identity systems. Their strategic position improves when the terms of authority remain legible and adjustable locally. A ministry, university, cooperative, publisher, or regional business should be able to define who may act, for which public or commercial purpose, under which language and jurisdiction, with what expiry, and through which human route an error can be corrected.</p>
+
+                <p>UNDP’s account of readiness is useful here because it connects AI adoption to operating authority, procurement capability, vendor management, performance evaluation, accountability, and local language inclusion. Those are clocks in institutional form. A procurement mandate expires with a budget period. A public-service permission may require a resident’s renewed consent. A language-data grant may need review when the community changes its naming or privacy conditions. If the foreign platform is the only place where those changes can be expressed, local adoption has imported a dependency deeper than the model endpoint.</p>
+
+                <p>Local control also requires graceful refusal. A system should be able to say that an operation cannot proceed because its authority is stale, its evidence is incomplete, or its audience is wrong. That answer protects the institution’s right to deliberate. Autonomy without a local refusal mechanism is delegated power without a constitutional boundary.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is an <strong>authority-lease plane</strong>: infrastructure that issues, attenuates, verifies, refreshes, revokes, and records machine permissions across agents, people, tools, providers, and jurisdictions. Its unit of value is a consequential action that remains bounded in time and explainable after the actor, credential, or platform changes.</p>
+
+                <ul>
+                    <li><strong>Lease and delegation services:</strong> systems that mint task-specific grants, reduce scope for downstream actors, and bind authority to a principal and audience;</li>
+                    <li><strong>Freshness and revocation infrastructure:</strong> status services, short-lived credentials, policy caches, and runtime checks that enforce different clocks for different risks;</li>
+                    <li><strong>Authorization observability:</strong> tools that show who granted power, which actions were attempted, why a request was refused, and where stale authority remains in a system;</li>
+                    <li><strong>Evidence preservation:</strong> records that retain verifiable historical attribution after key rotation, provider migration, agent retirement, or policy change;</li>
+                    <li><strong>Regional policy and language adapters:</strong> services that let local institutions express jurisdiction, terminology, consent, escalation, and redress without surrendering control to a remote platform.</li>
+                </ul>
+
+                <p>Underwriting should begin with the clock. What is the maximum age of authorization before a high-impact action is refused? Can the operator prove that delegation narrowed as it crossed a boundary? How quickly does revocation reach every relevant runtime? Can a reviewer reconstruct the state of authority at the moment of action? Can a local institution change the policy without waiting for a vendor release? These measures expose whether a security product governs real action or merely decorates a login screen.</p>
+
+                <p>Useful operating metrics include time-to-revoke, stale-authority exposure, percentage of actions carrying an explicit audience, attenuation failures prevented, refusal-reason completeness, historical-evidence recovery rate, policy-change latency, and the share of high-impact actions requiring fresh authorization. The numbers describe containment and recoverability, which are more durable underwriting questions than the number of identities a platform has issued.</p>
+
+                <h2>Run the expiry test before scaling autonomy</h2>
+
+                <p>An institution can test the architecture with one recurring process. Grant an agent permission to perform a bounded action. Change the budget, revoke the mandate, alter the audience, interrupt the status service, rotate the credential, and restart the runtime at different points in the task. Require the system to return a structured decision and a receipt for every attempt. Then ask a person who was absent from the original event to reconstruct what the agent could do at each moment.</p>
+
+                <p>The goal is a system whose authority can be inspected while it is alive and understood after it has ended. A name may travel across the Internet. A permission must travel with its purpose, its clock, and its route home. That is how autonomous action becomes institutionally survivable.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems" target="_blank" rel="noopener">National Institute of Standards and Technology, “Design Tenets for Agent Identity Management Systems” (October 27, 2026). Proposes distinct agent identification, delegation with attenuation, zero standing privilege, and short-lived, dynamic, revocable authorization.</a></li>
+                    <li><a href="https://www.nist.gov/super-intelligence/si-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “SI Agent Standards Initiative” (updated November 9, 2026). Describes work on open protocols, agent authentication and identity infrastructure, and security evaluation for interoperable systems.</a></li>
+                    <li><a href="https://www.w3.org/reports/identity-web-impact/" target="_blank" rel="noopener">World Wide Web Consortium, “Identity &amp; the Web” (June 19, 2026). Frames digital identity as a combined technical, governance, privacy, security, human-rights, and interoperability problem.</a></li>
+                    <li><a href="https://www.undp.org/africa/blog/africas-ai-crossroads-readiness-public-value" target="_blank" rel="noopener">United Nations Development Programme, “Africa’s AI Crossroads: From Readiness to Public Value” (September 24, 2026). Connects African AI adoption to operating authority, procurement, vendor oversight, local capability, language inclusion, trust, safety, and measurable public value.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Une permission est une horloge</h1>
+
+                <p><em>Note de terrain, 20 novembre 2026.</em> Un système autonome peut porter un nom, un justificatif et un mandat dans une transaction. La question difficile commence après la reconnaissance : combien de temps l’autorité dure-t-elle, qui peut la recevoir, quelles conditions peuvent la modifier et quelle preuve établit sa révocation avant l’action suivante ? Une permission est donc une horloge autant qu’une clé.</p>
+
+                <p>Les travaux institutionnels récents rendent cette dimension temporelle explicite. Les principes de conception publiés en octobre par le NIST pour les systèmes d’identité des agents demandent des identités distinctes, une délégation liée et atténuée, un privilège permanent nul ainsi qu’une autorisation courte, dynamique et révocable. La mise à jour de novembre de son initiative sur les standards des agents d’IA place l’authentification, l’infrastructure d’identité, les protocoles ouverts et l’évaluation de la sécurité dans un même programme. Le rapport du W3C consacré à l’identité et au Web décrit l’identité comme un problème technique et politique dont les effets touchent la vie privée, la sécurité, les droits humains et l’interopérabilité. L’évaluation publiée en septembre par le PNUD sur la préparation africaine à l’IA ajoute la question institutionnelle : qui possède l’autorité pour diriger, acheter, superviser, financer et mesurer les systèmes une fois l’adoption commencée ?</p>
+
+                <blockquote>
+                    <p>Un justificatif peut identifier un acteur. Seul un registre d’autorité vivant peut dire si cet acteur peut agir maintenant.</p>
+                </blockquote>
+
+                <h2>L’identité répond à qui ; l’autorité répond à quand</h2>
+
+                <p>L’identité et l’autorité sont des registres liés qui remplissent des fonctions différentes. L’identité rattache une action à un composant logiciel, à un principal humain ou à une institution. L’autorité décrit l’action permise, la ressource, le public destinataire, la finalité, la durée et les conditions. La distinction devient concrète lorsqu’un agent travaille entre plusieurs services et délègue une partie de sa tâche à un autre agent.</p>
+
+                <p>Imaginons un agent d’achat chargé de trouver du matériel de laboratoire. Son identité peut rester valide pendant des mois. Son autorité doit être plus étroite : une catégorie précise, un plafond de dépense, une région de fournisseurs, un délai de livraison et une règle d’escalade pour les substitutions. Un service en aval qui compare les offres doit recevoir un périmètre encore plus réduit. Il peut consulter les catalogues et classer les produits, tandis que l’autorité de passer la commande reste à un autre acteur. La délégation doit réduire le pouvoir à mesure qu’elle circule.</p>
+
+                <p>Les justificatifs statiques brouillent ces frontières. Un jeton porteur peut rester techniquement valide après la disparition du contexte qui le justifiait. L’utilisateur peut avoir annulé la tâche, un fournisseur peut avoir été retiré, un budget peut être clos ou l’environnement d’exécution de l’agent peut avoir changé. Un système qui vérifie la validité uniquement lors de la connexion conserve la permission d’hier dans l’action d’aujourd’hui.</p>
+
+                <h2>Le bail est l’unité de contrôle</h2>
+
+                <p>L’abstraction utile est celle d’un bail d’autorité : une autorisation signée et inspectable, valide pour un public, une finalité et une période définis, avec une voie explicite de révocation et de renouvellement. Le bail doit porter une structure suffisante pour qu’un runtime prenne une décision sans demander à un modèle de langage d’interpréter un paragraphe ouvert.</p>
+
+                <ul>
+                    <li><strong>Principal et chaîne :</strong> la personne ou l’institution représentée, l’agent initiateur, l’acteur en aval et les liens qui préservent la responsabilité ;</li>
+                    <li><strong>Périmètre et public :</strong> la ressource, l’opération, la juridiction, l’outil, la frontière de données et le service destinataire auxquels l’autorisation s’applique ;</li>
+                    <li><strong>Horloge et état :</strong> l’émission, l’expiration, la condition de renouvellement, le statut courant, l’exigence de fraîcheur et l’événement capable de suspendre ou de révoquer le bail ;</li>
+                    <li><strong>Conditions de risque :</strong> plafonds de dépense, séparation des fonctions, validations humaines, contrôles de l’environnement et signaux exigeant une nouvelle autorisation ;</li>
+                    <li><strong>Preuve et reçu :</strong> le registre de décision, la référence de l’action, l’état observé, le motif du refus et la preuve historique qui reste vérifiable après la rotation des justificatifs.</li>
+                </ul>
+
+                <p>Ce registre transforme la permission en objet opérationnel. Un runtime peut demander un bail pour une opération, en vérifier le public et l’expiration, exécuter une action bornée puis renvoyer un reçu. Un réviseur peut examiner la décision plus tard sans que l’agent initial reste en ligne. Un fournisseur peut changer tandis que l’institution conserve l’histoire de ce qui a été autorisé et refusé.</p>
+
+                <h2>La révocation appartient à l’exécution</h2>
+
+                <p>De nombreux systèmes traitent la révocation comme un événement administratif situé en dehors du chemin d’action. Un administrateur modifie une politique, invalide un jeton ou ferme un compte. L’agent poursuit avec le justificatif qu’il détient déjà jusqu’à une prochaine requête qui vérifiera par hasard l’état. Cet intervalle permet à une tâche légitime de devenir une tâche non autorisée.</p>
+
+                <p>La vérification continue n’oblige pas chaque système à consulter un service distant avant chaque opération à faible risque. Elle exige que le système énonce sa politique de fraîcheur et l’accorde à la conséquence de l’action. Lire un document public, ouvrir un dossier réglementé, modifier une instruction de paiement et publier au nom d’une institution méritent des horloges différentes. Un bail pour une action à fort impact peut exiger une vérification récente et une confirmation humaine. Une action moins risquée peut s’appuyer sur un cache court dont l’âge maximal est déclaré.</p>
+
+                <p>Le refus fait partie du produit. Lorsqu’un bail est expiré, le système doit distinguer l’expiration, la révocation, le mauvais public, la violation de périmètre, l’indisponibilité du statut et l’insuffisance de preuves. Cette distinction donne aux opérateurs un chemin de reprise. Elle empêche aussi un modèle de transformer une frontière ferme en explication plausible qui dissimulerait la décision de contrôle réelle.</p>
+
+                <p>La preuve historique possède une seconde horloge. La validité actuelle demande si une action peut avoir lieu maintenant. L’attribution historique demande si un réviseur pourra établir quelle autorité était valide lors d’une action antérieure. Ces deux questions doivent survivre à la rotation des justificatifs, au retrait d’un agent et à la migration d’un fournisseur. Une institution locale doit conserver la décision présente et le registre passé.</p>
+
+                <h2>Les institutions africaines ont besoin d’horloges qu’elles règlent</h2>
+
+                <p>L’autorité temporelle possède une dimension directe de souveraineté. Les institutions africaines continueront d’utiliser des modèles mondiaux, des services cloud, des rails de paiement et des systèmes d’identité. Leur position stratégique s’améliore lorsque les conditions de l’autorité restent lisibles et ajustables localement. Un ministère, une université, une coopérative, un éditeur ou une entreprise régionale devrait pouvoir définir qui peut agir, pour quelle finalité publique ou commerciale, selon quelle langue et quelle juridiction, avec quelle expiration et par quelle voie humaine une erreur peut être corrigée.</p>
+
+                <p>L’analyse du PNUD sur la préparation est utile parce qu’elle relie l’adoption de l’IA à l’autorité opérationnelle, à la capacité d’achat, à la gestion des fournisseurs, à l’évaluation des performances, à la responsabilité et à l’inclusion linguistique locale. Ces éléments sont des horloges sous forme institutionnelle. Un mandat d’achat expire avec une période budgétaire. Une permission de service public peut exiger le consentement renouvelé d’un résident. Un financement consacré aux données linguistiques peut devoir être réexaminé lorsque la communauté modifie ses règles de dénomination ou de confidentialité. Si la plateforme étrangère est le seul lieu où ces changements peuvent être exprimés, l’adoption locale a importé une dépendance plus profonde que le point d’accès au modèle.</p>
+
+                <p>Le contrôle local exige aussi un refus praticable. Un système doit pouvoir dire qu’une opération ne peut pas continuer parce que son autorité est périmée, que ses preuves sont incomplètes ou que son public est incorrect. Cette réponse protège le droit de l’institution à délibérer. L’autonomie sans mécanisme local de refus est un pouvoir délégué sans frontière constitutionnelle.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de contrôle des baux d’autorité</strong> : une infrastructure qui émet, atténue, vérifie, actualise, révoque et enregistre les permissions machine entre agents, personnes, outils, fournisseurs et juridictions. Son unité de valeur est une action décisive qui reste bornée dans le temps et explicable après le changement d’acteur, de justificatif ou de plateforme.</p>
+
+                <ul>
+                    <li><strong>Services de bail et de délégation :</strong> systèmes qui créent des autorisations propres à une tâche, réduisent le périmètre des acteurs en aval et relient l’autorité à un principal et à un public ;</li>
+                    <li><strong>Infrastructure de fraîcheur et de révocation :</strong> services de statut, justificatifs courts, caches de politiques et contrôles runtime qui appliquent des horloges différentes selon les risques ;</li>
+                    <li><strong>Observabilité des autorisations :</strong> outils qui montrent qui a accordé le pouvoir, quelles actions ont été tentées, pourquoi une requête a été refusée et où une autorité périmée reste présente ;</li>
+                    <li><strong>Préservation des preuves :</strong> registres qui conservent l’attribution historique vérifiable après une rotation de clés, une migration de fournisseur, le retrait d’un agent ou une modification de politique ;</li>
+                    <li><strong>Adaptateurs régionaux de politique et de langue :</strong> services permettant aux institutions locales d’exprimer la juridiction, la terminologie, le consentement, l’escalade et le recours sans céder le contrôle à une plateforme distante.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par l’horloge. Quel est l’âge maximal d’une autorisation avant le refus d’une action à fort impact ? L’opérateur peut-il prouver que la délégation s’est réduite en franchissant une frontière ? À quelle vitesse la révocation atteint-elle chaque runtime concerné ? Un réviseur peut-il reconstruire l’état de l’autorité au moment de l’action ? Une institution locale peut-elle modifier la politique sans attendre une nouvelle version du fournisseur ? Ces mesures montrent si un produit de sécurité gouverne l’action réelle ou décore seulement un écran de connexion.</p>
+
+                <p>Les mesures utiles comprennent le délai de révocation, l’exposition à une autorité périmée, le pourcentage d’actions portant un public explicite, les violations d’atténuation empêchées, la complétude des motifs de refus, le taux de récupération des preuves historiques, le délai de changement de politique et la part des actions à fort impact qui exigent une autorisation fraîche. Ces chiffres décrivent le confinement et la capacité de reprise, des questions de souscription plus durables que le nombre d’identités émises par une plateforme.</p>
+
+                <h2>Tester l’expiration avant d’étendre l’autonomie</h2>
+
+                <p>Une institution peut tester cette architecture avec un seul processus récurrent. Accordez à un agent la permission d’exécuter une action bornée. Modifiez le budget, révoquez le mandat, changez le public, interrompez le service de statut, faites tourner le justificatif et redémarrez le runtime à différents moments de la tâche. Exigez une décision structurée et un reçu pour chaque tentative. Demandez ensuite à une personne absente de l’événement initial de reconstruire ce que l’agent pouvait faire à chaque instant.</p>
+
+                <p>Le but est un système dont l’autorité peut être inspectée pendant sa vie et comprise après sa fin. Un nom peut circuler sur l’Internet. Une permission doit voyager avec sa finalité, son horloge et son chemin de retour. C’est ainsi que l’action autonome devient institutionnellement survivable.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems" target="_blank" rel="noopener">National Institute of Standards and Technology, « Design Tenets for Agent Identity Management Systems » (27 octobre 2026). Propose une identification distincte des agents, une délégation avec atténuation, un privilège permanent nul et une autorisation courte, dynamique et révocable.</a></li>
+                    <li><a href="https://www.nist.gov/super-intelligence/si-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « SI Agent Standards Initiative » (mise à jour le 9 novembre 2026). Décrit les travaux sur les protocoles ouverts, l’authentification et l’infrastructure d’identité des agents ainsi que l’évaluation de la sécurité des systèmes interopérables.</a></li>
+                    <li><a href="https://www.w3.org/reports/identity-web-impact/" target="_blank" rel="noopener">World Wide Web Consortium, « Identity &amp; the Web » (19 juin 2026). Présente l’identité numérique comme un problème technique, politique, lié à la vie privée, à la sécurité, aux droits humains et à l’interopérabilité.</a></li>
+                    <li><a href="https://www.undp.org/africa/blog/africas-ai-crossroads-readiness-public-value" target="_blank" rel="noopener">Programme des Nations Unies pour le développement, « Africa’s AI Crossroads: From Readiness to Public Value » (24 septembre 2026). Relie l’adoption africaine de l’IA à l’autorité opérationnelle, aux achats, à la supervision des fournisseurs, aux capacités locales, à l’inclusion linguistique, à la confiance, à la sécurité et à la valeur publique mesurable.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
