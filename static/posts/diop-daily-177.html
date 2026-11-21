@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Public Service Needs a Witness — Diop Research</title>
+    <meta name="description" content="Public-sector AI needs a civic operator that preserves case continuity, human responsibility, local language, portable evidence, and resident recourse across changing models and vendors."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry177">Diop Daily #177 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 21, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>civic operators · public authority · African digital infrastructure</span>
+                </div>
+            </header>
+
+
+                <div class="article__body" data-lang-body="en">
+                    <h1 class="article__title">A Public Service Needs a Witness</h1>
+
+                    <p><em>Field note, November 21, 2026.</em> When an AI system enters public administration, its first duty is continuity. A resident asks a question, submits a document, receives an instruction, or waits for a decision. The institution must be able to show what happened to that case, which rule governed the next step, which human or machine handled it, and where the resident can correct the record. The useful product is therefore a civic operator: a service layer that keeps public authority, administrative knowledge, evidence, and recourse connected while the underlying models and vendors change.</p>
+
+                    <p>Recent institutional signals make this object easier to see. On November 20, UNDP and the SMART Zambia Institute announced a partnership for inclusive, interoperable, secure, and citizen-centred digital public infrastructure, framed through the Africa Accelerator for Digital Public Infrastructure. UNDP’s Africa policy work describes DPI as shared infrastructure that must be designed, governed, financed, and scaled, rather than left as a collection of isolated pilots. The W3C’s October paper on the Web in the AI era asks how agents should expose what they did, preserve consent, manage cross-context data, and hand a person back into a consequential interaction. NIST’s AI Risk Management Framework supplies a vocabulary of govern, map, measure, and manage for turning those concerns into repeatable institutional practice.</p>
+
+                    <blockquote>
+                        <p>A public algorithm becomes accountable when a person who was absent from the computation can still find the case, the rule, the evidence, and the next remedy.</p>
+                    </blockquote>
+
+                    <h2>The resident encounters a case, not a model</h2>
+
+                    <p>Public-service discussions often begin with the model: which system can summarize a regulation, classify an application, translate a notice, or answer a question. The resident encounters a different unit. She encounters a case with a status, a deadline, a responsible office, a set of documents, and consequences for her life. A model may assist inside that case; the case record must outlive a prompt, a session, a provider, and the employee who first opened it.</p>
+
+                    <p>This distinction changes system design. A civic operator needs to retrieve the current rule for the relevant jurisdiction, identify the version that applied when the request arrived, associate the resident’s evidence with the permitted purpose, and record the action that followed. If the system asks for clarification, the unanswered question belongs in the case. If a human overrides an automated suggestion, the reason belongs in the case. If a translation changes a phrase with legal force, the original and the approved rendering must remain connected.</p>
+
+                    <p>Continuity is also a form of fairness. A resident should not need to restate a situation because the agency changed models. A small municipality should not lose institutional memory because a contractor’s dashboard disappeared. A local-language request should not become invisible because the upstream system only indexes a dominant language. These are operational failures with political consequences: they decide whose testimony survives the administrative process.</p>
+
+                    <h2>What the civic operator must hold together</h2>
+
+                    <p>The civic operator sits between general-purpose intelligence and public authority. It supports the civil servant, the elected institution, and the resident’s right to challenge a decision while giving each participant a legible path through the work. A useful case object should carry at least these fields:</p>
+
+                    <ul>
+                        <li><strong>Jurisdiction and mandate:</strong> the office responsible, the legal or policy basis, the service level, the language context, and the human role that can make or review the decision;</li>
+                        <li><strong>Case state:</strong> the request, current status, deadlines, missing information, next action, dependencies, and the conditions that can pause or close the case;</li>
+                        <li><strong>Evidence and version:</strong> submitted records, source documents, policy versions, model or tool contributions, translations, confidence limits, and the provenance of each consequential claim;</li>
+                        <li><strong>Handoff and responsibility:</strong> the actor that acted, the actor that must act next, the unresolved question, the time of transfer, and the reason a human review was required;</li>
+                        <li><strong>Notice and recourse:</strong> what the resident was told, how it was delivered, what can be appealed or corrected, by when, and through which accessible channel.</li>
+                    </ul>
+
+                    <p>This is more structured than a conversation transcript and more humane than a database that only records a final status. It gives the model a bounded role. The model can help retrieve, translate, compare, draft, or route. The civic operator decides what must be preserved, what may be acted upon, and how the institution can answer later. That separation protects public authority from becoming an accidental property of a vendor interface.</p>
+
+                    <h2>Human handoff is an architectural feature</h2>
+
+                    <p>The W3C’s current work is useful because it pairs agent requirements with human requirements. Discovery, tool description, state across navigation, and handoff points belong beside consent, visibility, and the choice of agent. In public administration, a handoff must identify why the case crossed the boundary, what evidence has already been assembled, what decision remains open, and which office owns the next step.</p>
+
+                    <p>A human reviewer also needs a manageable surface. Dumping an entire prompt history onto a civil servant transfers the burden without transferring understanding. The operator should produce a case brief: the resident’s request in the approved language, the governing rule and version, the evidence considered, the system actions, the uncertainty, the proposed next step, and the specific question requiring judgment. The reviewer can then accept, amend, refuse, or return the case with a reason that becomes part of the institutional record.</p>
+
+                    <p>Recourse must work when the model is unavailable. An agency may lose a provider connection, suspend a deployment, or discover that a translation or classifier needs correction. The case should remain readable, exportable, and actionable through a simpler route. Resilience here is a civic property. It keeps a temporary technical failure from becoming a permanent denial of service.</p>
+
+                    <h2>African sovereignty begins with the case record</h2>
+
+                    <p>African digital sovereignty is often described through infrastructure ownership, local data, language models, or regional connectivity. Those foundations matter. The case record adds a more precise question: who can inspect, correct, translate, export, and inherit the meaning of an interaction between an institution and a person?</p>
+
+                    <p>UNDP’s Zambia announcement places interoperability, security, inclusion, citizen-centred design, and sovereign public infrastructure in the same frame. That combination matters for AI because the model is only one component in a larger public system. If the durable case state lives inside a foreign platform, local institutions may be able to call an AI service while remaining unable to explain a decision, preserve a language correction, or transfer a resident’s history to another provider. The endpoint is available; the institution is not in possession of its own administrative memory.</p>
+
+                    <p>Local control does not mean building every model locally. It means retaining the authority to define the record, set the retention and access rules, maintain terminology, select the escalation route, and change providers without losing the case. A ministry, university, clinic, cooperative, or municipality should be able to decide which fields are mandatory, which languages are supported, which actions need human approval, and which evidence a resident can obtain. Those are constitutional choices expressed through software.</p>
+
+                    <h2>Where the investable surface is widening</h2>
+
+                    <p>The commercial object is a <strong>civic-operator plane</strong>: software and services that connect public administrative knowledge to case continuity, human responsibility, resident communication, correction, and portable evidence. It sits between model providers, government systems, local-language services, records managers, civil servants, and the people seeking a public outcome. Its unit of value is a case that reaches a legitimate next step without losing the reason, responsibility, or route of appeal.</p>
+
+                    <ul>
+                        <li><strong>Case continuity systems:</strong> platforms that preserve state, deadlines, documents, policy versions, and ownership across model and staff changes;</li>
+                        <li><strong>Administrative knowledge layers:</strong> jurisdiction-aware retrieval and rule services that expose source versions, effective dates, exceptions, and citation-ready evidence;</li>
+                        <li><strong>Human-handoff workbenches:</strong> review surfaces that compress an agent’s work into an auditable brief and capture the reviewer’s decision, amendment, or refusal;</li>
+                        <li><strong>Language and accessibility services:</strong> translation, terminology, speech, and low-bandwidth channels that let residents participate without abandoning the official record;</li>
+                        <li><strong>Recourse and portability infrastructure:</strong> notice, appeal, correction, export, retention, and migration services that preserve the case when a model or contractor changes.</li>
+                    </ul>
+
+                    <p>Underwriting should begin with the resident’s next legitimate action. Can a person see the current state of a case in a language they understand? Can an operator show which rule and evidence produced a notice? Can a reviewer reconstruct the system’s contribution without trusting a hidden transcript? Can the agency continue service when the preferred model is offline? Can the case be exported with enough meaning for another institution to accept responsibility?</p>
+
+                    <p>Useful measures include time to find the responsible office, percentage of cases with complete policy and evidence links, successful handoff rate, correction latency, language parity for notices and appeals, export completeness, human-review load per case, unresolved-case age, and the share of decisions that remain reproducible after a provider change. These measures describe administrative capacity. They expose whether an AI deployment improves public service or merely adds an impressive interface to an opaque queue.</p>
+
+                    <h2>Build one service that can answer for itself</h2>
+
+                    <p>An institution can begin with one bounded service: a permit, a benefits inquiry, a public-information request, or a licensing renewal. Map the case from intake to closure. Name the responsible office. Capture the source rule and its effective date. Keep the resident’s original language alongside the approved translation. Record every automated contribution and every human decision. Interrupt the preferred model, change the policy version, introduce an ambiguous document, and ask a reviewer who did not witness the original interaction to reconstruct the next step.</p>
+
+                    <p>The test is simple to state. A resident, an operator, a reviewer, and an auditor should be able to describe the same case without consulting the model that assisted it. When that condition holds, AI becomes part of institutional memory rather than a substitute for it. Public trust grows through this mundane capacity to answer: what happened, under which rule, with whose responsibility, and what can be done now?</p>
+
+                    <p>The most consequential AI system in a public institution may therefore be the one that makes a case impossible to lose. A witness is infrastructure: it carries memory, authority, language, and remedy across the changing machinery of automation.</p>
+
+                    <h2>Sources</h2>
+                    <ul>
+                        <li><a href="https://www.undp.org/zambia/press-releases/undp-and-smart-zambia-institute-sign-strategic-partnership-accelerate-zambias-digital-transformation" target="_blank" rel="noopener">United Nations Development Programme, “UNDP and SMART Zambia Institute Sign Strategic Partnership to Accelerate Zambia’s Digital Transformation” (November 20, 2026). Describes a partnership for inclusive, interoperable, secure, citizen-centred, and sovereign digital public infrastructure.</a></li>
+                        <li><a href="https://www.undp.org/sites/g/files/zskgke326/files/2026-06/undp-africa-dpi-full_report-digital-version-v2.3_compr2.pdf" target="_blank" rel="noopener">United Nations Development Programme, “Digital Public Infrastructure in Africa” (2026). Frames DPI as shared, secure, interoperable infrastructure that must be designed, governed, financed, and scaled across national and continental systems.</a></li>
+                        <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">World Wide Web Consortium, “W3C and the State of the Web in the AI Era” (finalized October 20, 2026). Discusses agent discovery, state, human handoff, consent for consequential actions, visibility of agent activity, and cross-context data flows.</a></li>
+                        <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology, “AI Risk Management Framework” (accessed November 21, 2026). Provides the Govern, Map, Measure, and Manage vocabulary for incorporating trustworthiness into the design, development, use, and evaluation of AI systems.</a></li>
+                    </ul>
+                </div>
+
+                <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                    <h1 class="article__title">Un service public a besoin d’un témoin</h1>
+
+                    <p><em>Note de terrain, 21 novembre 2026.</em> Lorsqu’un système d’IA entre dans l’administration publique, son premier devoir est la continuité. Une personne pose une question, transmet un document, reçoit une instruction ou attend une décision. L’institution doit pouvoir montrer ce qui est arrivé à ce dossier, quelle règle a gouverné l’étape suivante, quelle personne ou quelle machine l’a traité et où la personne peut corriger le registre. Le produit utile est donc un opérateur civique : une couche de service qui maintient ensemble l’autorité publique, le savoir administratif, les preuves et le recours tandis que les modèles et les fournisseurs changent.</p>
+
+                    <p>Les signaux institutionnels récents rendent cet objet plus visible. Le 20 novembre, le PNUD et le SMART Zambia Institute ont annoncé un partenariat pour une infrastructure publique numérique inclusive, interopérable, sûre et centrée sur les citoyens, dans le cadre de l’Africa Accelerator for Digital Public Infrastructure. Les travaux du PNUD sur l’Afrique décrivent l’IPN comme une infrastructure partagée qui doit être conçue, gouvernée, financée et déployée à grande échelle, au lieu de rester une collection de projets pilotes isolés. Dans son document d’octobre sur le Web à l’ère de l’IA, le W3C demande comment les agents doivent exposer ce qu’ils ont fait, préserver le consentement, gérer les données entre contextes et rendre la main à une personne lors d’une interaction importante. Le cadre de gestion des risques liés à l’IA du NIST fournit le vocabulaire « gouverner, cartographier, mesurer, gérer » pour transformer ces préoccupations en pratiques institutionnelles répétables.</p>
+
+                    <blockquote>
+                        <p>Un algorithme public devient responsable lorsqu’une personne absente du calcul peut encore trouver le dossier, la règle, les preuves et le prochain recours.</p>
+                    </blockquote>
+
+                    <h2>La personne rencontre un dossier, pas un modèle</h2>
+
+                    <p>Les discussions sur les services publics commencent souvent par le modèle : quel système peut résumer un règlement, classer une demande, traduire une notification ou répondre à une question ? La personne rencontre une autre unité. Elle rencontre un dossier avec un statut, une échéance, un bureau responsable, un ensemble de documents et des conséquences sur sa vie. Un modèle peut aider à l’intérieur de ce dossier ; le registre doit survivre à un prompt, à une session, à un fournisseur et à l’agent administratif qui l’a ouvert.</p>
+
+                    <p>Cette distinction modifie la conception du système. Un opérateur civique doit retrouver la règle en vigueur pour la juridiction concernée, identifier la version applicable à l’arrivée de la demande, associer les preuves de la personne à la finalité autorisée et enregistrer l’action qui a suivi. Si le système demande une précision, la question sans réponse appartient au dossier. Si une personne modifie une suggestion automatisée, la raison appartient au dossier. Si une traduction change une formule ayant une portée juridique, l’original et la formulation approuvée doivent rester liés.</p>
+
+                    <p>La continuité est aussi une forme d’équité. Une personne ne devrait pas avoir à raconter de nouveau sa situation parce que l’agence a changé de modèle. Une petite municipalité ne devrait pas perdre sa mémoire institutionnelle parce que le tableau de bord d’un prestataire a disparu. Une demande dans une langue locale ne devrait pas devenir invisible parce que le système amont n’indexe qu’une langue dominante. Ce sont des défaillances opérationnelles aux conséquences politiques : elles décident quels témoignages survivent au processus administratif.</p>
+
+                    <h2>Ce que l’opérateur civique doit maintenir ensemble</h2>
+
+                    <p>L’opérateur civique se situe entre l’intelligence polyvalente et l’autorité publique. Il soutient le fonctionnaire, l’institution élue et le droit de la personne à contester une décision, tout en donnant à chaque participant un chemin lisible dans le travail. Un objet de dossier utile devrait porter au moins les éléments suivants :</p>
+
+                    <ul>
+                        <li><strong>Juridiction et mandat :</strong> le bureau responsable, le fondement juridique ou politique, le niveau de service, le contexte linguistique et le rôle humain qui peut prendre ou réviser la décision ;</li>
+                        <li><strong>État du dossier :</strong> la demande, le statut actuel, les échéances, les informations manquantes, l’action suivante, les dépendances et les conditions qui peuvent suspendre ou clore le dossier ;</li>
+                        <li><strong>Preuves et version :</strong> les documents transmis, les sources, les versions des politiques, les contributions des modèles ou des outils, les traductions, les limites de confiance et la provenance de chaque affirmation décisive ;</li>
+                        <li><strong>Transfert et responsabilité :</strong> l’acteur qui a agi, celui qui doit agir ensuite, la question non résolue, le moment du transfert et la raison pour laquelle un examen humain était nécessaire ;</li>
+                        <li><strong>Notification et recours :</strong> ce qui a été communiqué à la personne, le mode de transmission, ce qui peut être contesté ou corrigé, dans quel délai et par quel canal accessible.</li>
+                    </ul>
+
+                    <p>Cette structure est plus précise qu’une transcription de conversation et plus humaine qu’une base de données qui n’enregistre qu’un statut final. Elle donne au modèle un rôle borné. Le modèle peut aider à retrouver, traduire, comparer, rédiger ou orienter. L’opérateur civique décide ce qui doit être conservé, ce qui peut produire une action et comment l’institution pourra répondre plus tard. Cette séparation protège l’autorité publique contre sa transformation accidentelle en propriété d’une interface de fournisseur.</p>
+
+                    <h2>Le transfert humain est une fonction d’architecture</h2>
+
+                    <p>Les travaux actuels du W3C sont utiles parce qu’ils associent les exigences des agents aux exigences des personnes. La découverte, la description des outils, l’état entre les navigations et les points de transfert doivent être pensés avec le consentement, la visibilité et le choix de l’agent. Dans l’administration publique, un transfert doit indiquer pourquoi le dossier a franchi la frontière, quelles preuves ont déjà été rassemblées, quelle décision reste ouverte et quel bureau possède l’étape suivante.</p>
+
+                    <p>La personne chargée de l’examen a aussi besoin d’une surface praticable. Lui déposer tout l’historique des prompts transfère la charge sans transférer la compréhension. L’opérateur doit produire une fiche de dossier : la demande de la personne dans la langue approuvée, la règle applicable et sa version, les preuves examinées, les actions du système, l’incertitude, l’étape proposée et la question précise qui demande un jugement. La personne responsable peut alors accepter, modifier, refuser ou renvoyer le dossier avec une raison qui devient partie du registre institutionnel.</p>
+
+                    <p>Le recours doit fonctionner lorsque le modèle est indisponible. Une agence peut perdre la connexion à un fournisseur, suspendre un déploiement ou découvrir qu’une traduction ou un classificateur doit être corrigé. Le dossier doit rester lisible, exportable et exploitable par une voie plus simple. La résilience est ici une propriété civique. Elle empêche une panne technique temporaire de devenir un refus permanent de service.</p>
+
+                    <h2>La souveraineté africaine commence par le dossier</h2>
+
+                    <p>La souveraineté numérique africaine est souvent décrite par la possession d’infrastructures, les données locales, les modèles linguistiques ou la connectivité régionale. Ces fondations comptent. Le dossier ajoute une question plus précise : qui peut inspecter, corriger, traduire, exporter et transmettre le sens d’une interaction entre une institution et une personne ?</p>
+
+                    <p>L’annonce du PNUD en Zambie place l’interopérabilité, la sécurité, l’inclusion, la conception centrée sur les citoyens et l’infrastructure publique souveraine dans un même cadre. Cette combinaison compte pour l’IA parce que le modèle n’est qu’un élément d’un système public plus large. Si l’état durable du dossier vit dans une plateforme étrangère, les institutions locales peuvent appeler un service d’IA tout en étant incapables d’expliquer une décision, de conserver une correction linguistique ou de transférer l’historique d’une personne à un autre fournisseur. Le point d’accès fonctionne ; l’institution ne possède pas sa propre mémoire administrative.</p>
+
+                    <p>Le contrôle local ne signifie pas qu’il faut construire chaque modèle sur place. Il signifie que l’institution conserve le pouvoir de définir le registre, de fixer les règles de conservation et d’accès, d’entretenir la terminologie, de choisir la voie d’escalade et de changer de fournisseur sans perdre le dossier. Un ministère, une université, une clinique, une coopérative ou une municipalité devrait pouvoir décider quels champs sont obligatoires, quelles langues sont prises en charge, quelles actions exigent une approbation humaine et quelles preuves la personne peut obtenir. Ce sont des choix constitutionnels exprimés par le logiciel.</p>
+
+                    <h2>Là où la surface d’investissement s’élargit</h2>
+
+                    <p>L’objet commercial est un <strong>plan d’opérateur civique</strong> : des logiciels et des services qui relient le savoir administratif public à la continuité des dossiers, à la responsabilité humaine, à la communication avec les citoyens, à la correction et à des preuves portables. Cette couche se situe entre les fournisseurs de modèles, les systèmes publics, les services linguistiques locaux, les responsables des archives, les fonctionnaires et les personnes qui cherchent un résultat public. Son unité de valeur est un dossier qui atteint une étape légitime sans perdre sa raison, sa responsabilité ou sa voie de recours.</p>
+
+                    <ul>
+                        <li><strong>Systèmes de continuité des dossiers :</strong> plateformes qui préservent l’état, les échéances, les documents, les versions des politiques et la responsabilité malgré les changements de modèles ou d’agents ;</li>
+                        <li><strong>Couches de savoir administratif :</strong> services de recherche et de règles sensibles à la juridiction qui exposent les sources, les dates d’effet, les exceptions et les preuves prêtes à être citées ;</li>
+                        <li><strong>Ateliers de transfert humain :</strong> interfaces qui condensent le travail d’un agent en une fiche vérifiable et enregistrent la décision, la modification ou le refus du réviseur ;</li>
+                        <li><strong>Services linguistiques et d’accessibilité :</strong> traduction, terminologie, voix et canaux à faible débit permettant aux personnes de participer sans abandonner le registre officiel ;</li>
+                        <li><strong>Infrastructure de recours et de portabilité :</strong> services de notification, d’appel, de correction, d’exportation, de conservation et de migration qui préservent le dossier lorsqu’un modèle ou un prestataire change.</li>
+                    </ul>
+
+                    <p>La souscription devrait commencer par l’étape légitime suivante pour la personne. Peut-elle voir l’état actuel du dossier dans une langue qu’elle comprend ? Un opérateur peut-il montrer quelle règle et quelles preuves ont produit une notification ? Un réviseur peut-il reconstruire la contribution du système sans faire confiance à une transcription cachée ? L’agence peut-elle continuer le service lorsque le modèle préféré est hors ligne ? Le dossier peut-il être exporté avec assez de sens pour qu’une autre institution accepte la responsabilité ?</p>
+
+                    <p>Les mesures utiles comprennent le délai pour trouver le bureau responsable, le pourcentage de dossiers avec des liens complets vers les politiques et les preuves, le taux de transfert réussi, le délai de correction, la parité linguistique des notifications et des recours, la complétude des exportations, la charge d’examen humain par dossier, l’âge des dossiers non résolus et la part des décisions qui restent reproductibles après un changement de fournisseur. Ces mesures décrivent la capacité administrative. Elles montrent si un déploiement d’IA améliore le service public ou ajoute seulement une interface impressionnante à une file d’attente opaque.</p>
+
+                    <h2>Construire un service capable de répondre de lui-même</h2>
+
+                    <p>Une institution peut commencer par un service borné : un permis, une demande d’information, une question sur une prestation ou un renouvellement de licence. Cartographiez le dossier de l’entrée à la clôture. Nommez le bureau responsable. Enregistrez la règle source et sa date d’effet. Conservez la langue originale de la personne à côté de la traduction approuvée. Notez chaque contribution automatisée et chaque décision humaine. Interrompez le modèle préféré, changez la version de la politique, introduisez un document ambigu et demandez à une personne absente de l’interaction initiale de reconstruire l’étape suivante.</p>
+
+                    <p>Le test se formule simplement. La personne, l’opérateur, le réviseur et l’auditeur doivent pouvoir décrire le même dossier sans consulter le modèle qui l’a aidé. Lorsque cette condition est satisfaite, l’IA devient une partie de la mémoire institutionnelle plutôt qu’un substitut. La confiance publique grandit grâce à cette capacité ordinaire de répondre : que s’est-il passé, selon quelle règle, sous quelle responsabilité et que peut-on faire maintenant ?</p>
+
+                    <p>Le système d’IA le plus décisif d’une institution publique est peut-être celui qui rend impossible la perte d’un dossier. Un témoin est une infrastructure : il transporte la mémoire, l’autorité, la langue et le recours à travers les machines changeantes de l’automatisation.</p>
+
+                    <h2>Sources</h2>
+                    <ul>
+                        <li><a href="https://www.undp.org/zambia/press-releases/undp-and-smart-zambia-institute-sign-strategic-partnership-accelerate-zambias-digital-transformation" target="_blank" rel="noopener">Programme des Nations Unies pour le développement, « UNDP and SMART Zambia Institute Sign Strategic Partnership to Accelerate Zambia’s Digital Transformation » (20 novembre 2026). Décrit un partenariat pour une infrastructure publique numérique inclusive, interopérable, sûre, centrée sur les citoyens et souveraine.</a></li>
+                        <li><a href="https://www.undp.org/sites/g/files/zskgke326/files/2026-06/undp-africa-dpi-full_report-digital-version-v2.3_compr2.pdf" target="_blank" rel="noopener">Programme des Nations Unies pour le développement, « Digital Public Infrastructure in Africa » (2026). Présente l’IPN comme une infrastructure partagée, sûre et interopérable qui doit être conçue, gouvernée, financée et déployée dans les systèmes nationaux et continentaux.</a></li>
+                        <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">World Wide Web Consortium, « W3C and the State of the Web in the AI Era » (finalisé le 20 octobre 2026). Analyse la découverte des agents, l’état, le transfert humain, le consentement pour les actions importantes, la visibilité de l’activité des agents et les flux de données entre contextes.</a></li>
+                        <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">National Institute of Standards and Technology, « AI Risk Management Framework » (consulté le 21 novembre 2026). Fournit le vocabulaire « Govern, Map, Measure, Manage » pour intégrer la fiabilité dans la conception, le développement, l’usage et l’évaluation des systèmes d’IA.</a></li>
+                    </ul>
+                </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

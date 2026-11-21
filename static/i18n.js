@@ -205,6 +205,7 @@
         'article.entry174':     { en: 'Diop Daily #174 — November 2026', fr: 'Diop Quotidien n°174 — Novembre 2026' },
         'article.entry175':     { en: 'Diop Daily #175 — November 2026', fr: 'Diop Quotidien n°175 — Novembre 2026' },
         'article.entry176':     { en: 'Diop Daily #176 — November 2026', fr: 'Diop Quotidien n°176 — Novembre 2026' },
+        'article.entry177':     { en: 'Diop Daily #177 — November 2026', fr: 'Diop Quotidien n°177 — Novembre 2026' },
         'article.entry172':     { en: 'Diop Daily #172 — November 2026', fr: 'Diop Quotidien n°172 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
@@ -218,6 +219,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-177': {
+        title: {
+            en: 'A Public Service Needs a Witness',
+            fr: 'Un service public a besoin d’un témoin'
+        },
+        excerpt: {
+            en: 'Public-sector AI needs a civic operator that keeps cases, rules, evidence, human responsibility, local language, and resident recourse connected as models and vendors change. The investable layer is portable administrative capacity delivered through an accountable interface.',
+            fr: 'L’IA publique a besoin d’un opérateur civique qui maintient les dossiers, les règles, les preuves, la responsabilité humaine, la langue locale et le recours des citoyens tandis que les modèles et les fournisseurs changent. La couche d’investissement est une capacité administrative portable portée par une interface responsable.'
+        }
+    },
     'diop-daily-176': {
         title: {
             en: 'A Permission Is a Clock',
