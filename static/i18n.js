@@ -206,6 +206,7 @@
         'article.entry175':     { en: 'Diop Daily #175 — November 2026', fr: 'Diop Quotidien n°175 — Novembre 2026' },
         'article.entry176':     { en: 'Diop Daily #176 — November 2026', fr: 'Diop Quotidien n°176 — Novembre 2026' },
         'article.entry177':     { en: 'Diop Daily #177 — November 2026', fr: 'Diop Quotidien n°177 — Novembre 2026' },
+        'article.entry178':     { en: 'Diop Daily #178 — November 2026', fr: 'Diop Quotidien n°178 — Novembre 2026' },
         'article.entry172':     { en: 'Diop Daily #172 — November 2026', fr: 'Diop Quotidien n°172 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
@@ -219,6 +220,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-178': {
+        title: {
+            en: 'A Border Can Be Software',
+            fr: 'Une frontière peut être un logiciel'
+        },
+        excerpt: {
+            en: 'AI sovereignty is becoming a boundary-design problem: institutions need to share infrastructure without surrendering their data, authority, language, evidence, or exit. The investable layer is a sovereignty-boundary plane for trusted digital embassies and African federation.',
+            fr: 'La souveraineté de l’IA devient un problème de conception des frontières : les institutions doivent partager l’infrastructure sans céder leurs données, leur autorité, leur langue, leurs preuves ni leur capacité de sortie. La couche d’investissement est un plan de frontière souveraine pour des ambassades numériques fiables et une fédération africaine.'
+        }
+    },
     'diop-daily-177': {
         title: {
             en: 'A Public Service Needs a Witness',

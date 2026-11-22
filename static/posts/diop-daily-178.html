@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Border Can Be Software — Diop Research</title>
+    <meta name="description" content="AI sovereignty is becoming a boundary-design problem. Trusted digital embassies, regional infrastructure, and portable governance can let African institutions cooperate across borders without surrendering the terms of participation."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry178">Diop Daily #178 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 22, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>distributed sovereignty · digital embassies · African federation</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Border Can Be Software</h1>
+
+                <p><em>Field note, November 22, 2026.</em> Sovereignty is often drawn as a line around a territory. AI infrastructure asks for a more exact picture: a boundary is also a set of rules describing who may enter, what may cross, which records remain visible, whose law governs the exchange, and how an institution can leave without losing its history. A border can therefore be software. It can be designed as a portable agreement between institutions that need to cooperate without placing their memory, authority, or future entirely inside another institution’s platform.</p>
+
+                <p>Three recent public signals sharpen this argument. A Nature Computational Science article published on November 19 argues for “distributed sovereignty” in Africa: cooperative infrastructure designed for African conditions, rather than a forced choice between expensive national self-sufficiency and dependence on foreign providers. A World Economic Forum white paper from May describes a sovereignty spectrum that combines trusted international partnerships with selective domestic control, and proposes “digital embassies” as a framework for extending access to infrastructure across borders. At the ITU’s AI for Good Global Summit, a roundtable reported on October 28 connected regional computing pools, shared infrastructure, data embassies, portable consent, audit trails, provenance, and human accountability.</p>
+
+                <blockquote>
+                    <p>Strategic interdependence becomes sovereignty when the terms of dependence are visible, enforceable, and reversible.</p>
+                </blockquote>
+
+                <h2>The old choice is too small</h2>
+
+                <p>Policy debates often present two options. A state can build a complete national stack, or it can rent capacity from a foreign provider. The first option can exceed local capital, energy, skills, and maintenance capacity. The second can make critical decisions about data, service continuity, model access, and pricing dependent on an external platform. The binary hides the institutional work between ownership and dependence.</p>
+
+                <p>Distributed sovereignty offers a more useful unit of analysis. A country, university, public agency, cooperative, or regional network can retain control over selected layers while using shared services for others. It can own the rules for sensitive data, local terminology, identity, procurement, incident response, and public accountability while drawing compute, storage, models, or connectivity from trusted partners. The arrangement succeeds when those choices are recorded as operating rights rather than left as diplomatic assurances.</p>
+
+                <p>This is a boundary-design problem. The boundary must specify the data that may cross it, the transformations permitted while the data is away, the evidence that must return, the actors authorized to inspect the work, the time for which the arrangement applies, and the remedy available when a partner changes its terms. The interface between institutions becomes as important as the hardware inside either institution.</p>
+
+                <h2>A digital embassy is a governed room</h2>
+
+                <p>The phrase “digital embassy” can sound like a metaphor for a data centre placed abroad. Its stronger meaning is institutional. An embassy is a protected arrangement in which a principal retains a relationship to its records, representatives, and rules while operating through another geography. A digital version needs the same discipline. It should state what is hosted, who may access it, which jurisdiction applies to each operation, how the host proves its behaviour, and how the principal can recover its assets.</p>
+
+                <p>The World Economic Forum’s framework is useful because it treats sovereignty as a spectrum of deliberate choices. Most economies will combine domestic ownership with trusted external partnerships. The question is not whether a system is entirely local. The question is which capabilities must remain locally controlled for the institution to set policy, maintain service, protect rights, and change providers without surrendering its operating memory.</p>
+
+                <p>A digital embassy should therefore carry a compact constitutional record:</p>
+
+                <ul>
+                    <li><strong>Mandate and jurisdiction:</strong> the institution represented, the purposes allowed, the applicable law, the responsible authority, and the decisions that cannot be delegated;</li>
+                    <li><strong>Data and language:</strong> the records that may be stored or processed, the approved transformations, the local terminology, retention rules, and community or sector permissions;</li>
+                    <li><strong>Service boundary:</strong> the compute, storage, model, network, or identity service supplied by the partner, together with freshness, availability, and performance obligations;</li>
+                    <li><strong>Evidence and inspection:</strong> the logs, provenance, evaluations, security attestations, human review records, and independent access needed to reconstruct consequential operations;</li>
+                    <li><strong>Exit and remedy:</strong> export formats, migration assistance, correction routes, suspension rights, dispute procedures, and the recovery state available when the relationship ends.</li>
+                </ul>
+
+                <p>The record changes the commercial relationship. A provider is no longer selling an opaque endpoint whose hidden conditions are accepted by default. It is supplying a bounded capability inside a negotiated institutional perimeter. The buyer can compare partners by the quality of their evidence, portability, recovery time, local adaptation, and respect for the principal’s authority.</p>
+
+                <h2>Federation requires a common grammar</h2>
+
+                <p>Cooperation fails when each participant uses a different meaning for the same boundary. One institution calls a dataset “shared” when another means “licensed for a single purpose.” One provider treats an audit log as an internal diagnostic while a public agency treats it as evidence. One partner promises residency while its support, backups, or model-improvement pipeline moves the record elsewhere.</p>
+
+                <p>Federation therefore needs a common grammar for institutional exchange. The grammar must describe identity, authority, data purpose, jurisdiction, evidence, service levels, correction, and exit. It must be machine-readable enough for a runtime to enforce and human-readable enough for a procurement officer, language steward, auditor, or resident to contest. Standards bodies have an important role because a boundary that only one vendor can interpret is another form of dependency.</p>
+
+                <p>This is where African coordination can become an architectural advantage. Continental and regional institutions do not need to reproduce every component of the global AI stack. They can define the terms under which components interoperate across borders. A regional language corpus can be hosted by several partners while retaining a shared stewardship record. A public-interest compute pool can draw capacity from several facilities while applying one allocation charter. A university network can move workloads between providers while carrying its data permissions, evaluation fixtures, and correction history with the work.</p>
+
+                <p>Such arrangements require patience because the difficult work is administrative. Someone must maintain the vocabulary, publish conformance tests, inspect changes, negotiate the exit clause, and fund the operators who keep the boundary alive. That work is precisely where sovereignty becomes material. A federation is not a flag placed above rented infrastructure. It is a repeatable capacity to coordinate, verify, and change course.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is a <strong>sovereignty-boundary plane</strong>: software, services, and institutional contracts that let organizations share AI infrastructure while preserving defined control over data, authority, evidence, language, policy, and exit. Its unit of value is a cross-border capability that remains governable when a provider, jurisdiction, model, or financing arrangement changes.</p>
+
+                <ul>
+                    <li><strong>Digital-embassy control planes:</strong> systems that register hosted assets, enforce purpose and jurisdiction, expose service obligations, and preserve the principal’s administrative view;</li>
+                    <li><strong>Federated policy and consent services:</strong> machine-readable agreements that carry data permissions, local-language conditions, sector rules, and human approval across participating institutions;</li>
+                    <li><strong>Portable evidence and conformance:</strong> shared logs, evaluation fixtures, provenance records, attestations, and tests that let a buyer compare a partner’s behaviour with the agreed boundary;</li>
+                    <li><strong>Regional recovery and migration:</strong> export, replication, escrow, switching, and reconstitution services that make institutional exit operational rather than rhetorical;</li>
+                    <li><strong>Boundary operations:</strong> specialist teams that maintain terminology, inspect partners, respond to incidents, update contracts, and train the people responsible for the shared system.</li>
+                </ul>
+
+                <p>Underwriting should begin with the boundary rather than the brand. Can the institution list every record and operation that crosses into a partner environment? Can it prove which rules were active when a model handled the data? Can it move the service without losing language corrections, evaluation history, or public obligations? Can a smaller African institution participate on terms it can understand and contest? Can the shared arrangement survive a change in government, provider ownership, currency, or energy availability?</p>
+
+                <p>Useful measures include time to produce a complete export, percentage of cross-border operations with a declared purpose, recovery time after partner failure, conformance-test coverage, local-language correction latency, share of services with an independent inspection path, concentration of critical dependencies, and the percentage of institutional knowledge that remains usable after migration. These measures describe the strength of a relationship. They reveal whether cooperation has created capacity or merely moved the dependency to a more elegant location.</p>
+
+                <h2>Build the boundary before the dependency</h2>
+
+                <p>An institution can begin with one service that genuinely needs outside capacity. Define the records, the permitted transformations, the jurisdiction, the evidence returned, and the authority that can suspend the exchange. Test the arrangement with an ambiguous instruction, a changed policy, a provider outage, a language correction, a disputed result, and a forced migration. Ask an operator who did not design the agreement to reconstruct what crossed the boundary and what the institution can still control.</p>
+
+                <p>The result should be legible to several audiences. A technical team should be able to enforce it. A procurement team should be able to compare it. A public authority should be able to defend it. A language community should be able to correct it. A successor institution should be able to inherit it. When all five conditions hold, shared infrastructure becomes a federation of capabilities rather than a chain of invisible concessions.</p>
+
+                <p>Africa’s strategic task is therefore larger than building local substitutes. It is to build the constitutional and technical boundaries that make cooperation safe, useful, and reversible. The future will contain many dependencies. Sovereignty will belong to the institutions that can name them, govern them, and leave them with their memory intact.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.nature.com/articles/s43588-026-01084-9" target="_blank" rel="noopener">Matthew L. Smith et al., “An alternative path for artificial intelligence in Africa,” <em>Nature Computational Science</em> (published November 19, 2026). Argues for distributed sovereignty through cooperative infrastructure designed for African conditions.</a></li>
+                    <li><a href="https://reports.weforum.org/docs/WEF_AI_Infrastructure_in_the_Age_of_Sovereignty_Requirements_Strategies_and_a_Trusted_Framework_for_Digital_Embassies_2026.pdf" target="_blank" rel="noopener">World Economic Forum and Bain &amp; Company, “AI Infrastructure in the Age of Sovereignty: Requirements, Strategies and a Trusted Framework for Digital Embassies” (May 2026). Describes sovereignty as a spectrum combining trusted international partnerships with domestic control and proposes a framework for trusted digital embassies.</a></li>
+                    <li><a href="https://aiforgood.itu.int/building-the-foundations-for-ai-infrastructure-and-trust/" target="_blank" rel="noopener">International Telecommunication Union, “Building the foundations for AI infrastructure and trust” (October 28, 2026). Reports discussion of regional computing pools, shared infrastructure, data embassies, portable consent, audit trails, provenance, and institutional accountability.</a></li>
+                    <li><a href="https://www.undp.org/africa/blog/africas-ai-crossroads-readiness-public-value" target="_blank" rel="noopener">United Nations Development Programme, “Africa’s AI Crossroads: From Readiness to Public Value” (September 24, 2026). Connects African AI readiness to authority, procurement, provider oversight, local capability, language inclusion, safeguards, and measurable public value.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Une frontière peut être un logiciel</h1>
+
+                <p><em>Note de terrain, 22 novembre 2026.</em> La souveraineté est souvent dessinée comme une ligne autour d’un territoire. L’infrastructure de l’IA demande une image plus précise : une frontière est aussi un ensemble de règles qui décrit qui peut entrer, ce qui peut traverser, quels registres restent visibles, quel droit gouverne l’échange et comment une institution peut partir sans perdre son histoire. Une frontière peut donc être un logiciel. Elle peut être conçue comme un accord portable entre des institutions qui doivent coopérer sans placer leur mémoire, leur autorité ou leur avenir entièrement dans la plateforme d’une autre institution.</p>
+
+                <p>Trois signaux publics récents précisent cet argument. Un article de <em>Nature Computational Science</em> publié le 19 novembre défend une « souveraineté distribuée » en Afrique : une infrastructure coopérative conçue pour les conditions africaines, au lieu d’un choix forcé entre l’autosuffisance nationale coûteuse et la dépendance envers des fournisseurs étrangers. Un livre blanc du Forum économique mondial publié en mai décrit un spectre de souveraineté qui combine des partenariats internationaux de confiance avec un contrôle national sélectif, et propose les « ambassades numériques » comme cadre pour étendre l’accès à l’infrastructure au-delà des frontières. Lors d’une table ronde du Sommet mondial AI for Good de l’UIT, rapportée le 28 octobre, les participants ont relié les pools régionaux de calcul, l’infrastructure partagée, les ambassades de données, le consentement portable, les pistes d’audit, la provenance et la responsabilité humaine.</p>
+
+                <blockquote>
+                    <p>L’interdépendance stratégique devient souveraine lorsque les conditions de la dépendance sont visibles, opposables et réversibles.</p>
+                </blockquote>
+
+                <h2>L’ancien choix est trop étroit</h2>
+
+                <p>Les débats politiques présentent souvent deux options. Un État peut construire une pile nationale complète, ou louer sa capacité à un fournisseur étranger. La première option peut dépasser les capacités locales en capital, en énergie, en compétences et en maintenance. La seconde peut rendre les décisions critiques sur les données, la continuité du service, l’accès aux modèles et les prix dépendantes d’une plateforme externe. Ce cadre binaire masque le travail institutionnel qui se situe entre la propriété et la dépendance.</p>
+
+                <p>La souveraineté distribuée propose une unité d’analyse plus utile. Un pays, une université, une agence publique, une coopérative ou un réseau régional peut conserver le contrôle de certaines couches tout en utilisant des services partagés pour d’autres. Il peut posséder les règles relatives aux données sensibles, à la terminologie locale, à l’identité, aux achats, à la réponse aux incidents et à la responsabilité publique, tout en tirant le calcul, le stockage, les modèles ou la connectivité de partenaires de confiance. L’accord réussit lorsque ces choix sont inscrits comme des droits opérationnels et non laissés au rang de garanties diplomatiques.</p>
+
+                <p>Il s’agit d’un problème de conception de frontière. La frontière doit préciser les données qui peuvent la traverser, les transformations permises pendant leur absence, les preuves qui doivent revenir, les acteurs autorisés à inspecter le travail, la durée de l’accord et le recours disponible lorsqu’un partenaire modifie ses conditions. L’interface entre les institutions devient aussi importante que le matériel situé à l’intérieur de chacune d’elles.</p>
+
+                <h2>Une ambassade numérique est une pièce gouvernée</h2>
+
+                <p>L’expression « ambassade numérique » peut sembler désigner un centre de données placé à l’étranger. Son sens institutionnel est plus fort. Une ambassade est un arrangement protégé dans lequel un État conserve un lien avec ses registres, ses représentants et ses règles tout en agissant dans une autre géographie. Une version numérique exige la même discipline. Elle doit préciser ce qui est hébergé, qui peut y accéder, quelle juridiction s’applique à chaque opération, comment l’hôte prouve son comportement et comment le principal peut récupérer ses actifs.</p>
+
+                <p>Le cadre du Forum économique mondial est utile parce qu’il traite la souveraineté comme une série de choix délibérés. La plupart des économies combineront la propriété nationale avec des partenariats externes de confiance. La question n’est pas de savoir si un système est entièrement local. Il faut déterminer quelles capacités doivent rester sous contrôle local pour que l’institution puisse fixer sa politique, maintenir le service, protéger les droits et changer de fournisseur sans abandonner sa mémoire opérationnelle.</p>
+
+                <p>Une ambassade numérique devrait donc porter un registre constitutionnel compact :</p>
+
+                <ul>
+                    <li><strong>Mandat et juridiction :</strong> l’institution représentée, les finalités autorisées, le droit applicable, l’autorité responsable et les décisions qui ne peuvent pas être déléguées ;</li>
+                    <li><strong>Données et langue :</strong> les registres qui peuvent être conservés ou traités, les transformations approuvées, la terminologie locale, les règles de conservation et les permissions de la communauté ou du secteur ;</li>
+                    <li><strong>Frontière de service :</strong> le service de calcul, de stockage, de modèle, de réseau ou d’identité fourni par le partenaire, avec les obligations de fraîcheur, de disponibilité et de performance ;</li>
+                    <li><strong>Preuves et inspection :</strong> les journaux, la provenance, les évaluations, les attestations de sécurité, les registres d’examen humain et l’accès indépendant nécessaires pour reconstituer les opérations importantes ;</li>
+                    <li><strong>Sortie et recours :</strong> les formats d’exportation, l’assistance à la migration, les voies de correction, les droits de suspension, les procédures de litige et l’état de récupération disponible à la fin de la relation.</li>
+                </ul>
+
+                <p>Ce registre modifie la relation commerciale. Un fournisseur ne vend plus un point d’accès opaque dont les conditions cachées sont acceptées par défaut. Il fournit une capacité bornée à l’intérieur d’un périmètre institutionnel négocié. L’acheteur peut comparer les partenaires selon la qualité de leurs preuves, leur portabilité, leur délai de reprise, leur adaptation locale et leur respect de l’autorité du principal.</p>
+
+                <h2>Une fédération a besoin d’une grammaire commune</h2>
+
+                <p>La coopération échoue lorsque chaque participant donne un sens différent à la même frontière. Une institution appelle un jeu de données « partagé » alors qu’une autre entend « autorisé pour une seule finalité ». Un fournisseur traite un journal d’audit comme un diagnostic interne tandis qu’une agence publique le considère comme une preuve. Un partenaire promet la résidence des données alors que son support, ses sauvegardes ou son pipeline d’amélioration des modèles déplace le registre ailleurs.</p>
+
+                <p>La fédération a donc besoin d’une grammaire commune pour les échanges institutionnels. Cette grammaire doit décrire l’identité, l’autorité, la finalité des données, la juridiction, les preuves, les niveaux de service, la correction et la sortie. Elle doit être lisible par une machine afin qu’un runtime puisse l’appliquer et lisible par une personne afin qu’un responsable des achats, un gardien de la langue, un auditeur ou un citoyen puisse la contester. Les organismes de normalisation ont ici un rôle important : une frontière qu’un seul fournisseur peut interpréter constitue une autre forme de dépendance.</p>
+
+                <p>C’est là que la coordination africaine peut devenir un avantage architectural. Les institutions continentales et régionales n’ont pas besoin de reproduire chaque composant de la pile mondiale de l’IA. Elles peuvent définir les conditions d’interopérabilité des composants au-delà des frontières. Un corpus linguistique régional peut être hébergé par plusieurs partenaires tout en conservant un registre commun de gestion. Un pool de calcul d’intérêt public peut tirer sa capacité de plusieurs installations tout en appliquant une charte d’allocation unique. Un réseau universitaire peut déplacer des charges entre fournisseurs en emportant avec le travail ses permissions de données, ses jeux d’évaluation et son historique de correction.</p>
+
+                <p>Ces arrangements demandent de la patience parce que le travail difficile est administratif. Quelqu’un doit entretenir le vocabulaire, publier les tests de conformité, inspecter les changements, négocier la clause de sortie et financer les opérateurs qui maintiennent la frontière. C’est précisément là que la souveraineté devient concrète. Une fédération n’est pas un drapeau posé au-dessus d’une infrastructure louée. C’est une capacité répétable de coordonner, de vérifier et de changer de direction.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de frontière souveraine</strong> : des logiciels, des services et des contrats institutionnels qui permettent de partager une infrastructure d’IA tout en préservant un contrôle défini sur les données, l’autorité, les preuves, la langue, la politique et la sortie. Son unité de valeur est une capacité transfrontalière qui reste gouvernable lorsqu’un fournisseur, une juridiction, un modèle ou un montage financier change.</p>
+
+                <ul>
+                    <li><strong>Plans de contrôle des ambassades numériques :</strong> systèmes qui enregistrent les actifs hébergés, appliquent la finalité et la juridiction, exposent les obligations de service et préservent la vue administrative du principal ;</li>
+                    <li><strong>Services fédérés de politique et de consentement :</strong> accords lisibles par les machines qui transportent les permissions de données, les conditions linguistiques locales, les règles sectorielles et les validations humaines entre les institutions participantes ;</li>
+                    <li><strong>Preuves portables et conformité :</strong> journaux partagés, jeux d’évaluation, registres de provenance, attestations et tests qui permettent à un acheteur de comparer le comportement d’un partenaire à la frontière convenue ;</li>
+                    <li><strong>Reprise et migration régionales :</strong> services d’exportation, de réplication, de séquestre, de changement de fournisseur et de reconstitution qui rendent la sortie opérationnelle plutôt que rhétorique ;</li>
+                    <li><strong>Opérations de frontière :</strong> équipes spécialisées qui entretiennent la terminologie, inspectent les partenaires, répondent aux incidents, mettent à jour les contrats et forment les personnes responsables du système partagé.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par la frontière plutôt que par la marque. L’institution peut-elle dresser la liste de chaque registre et de chaque opération qui entre dans l’environnement d’un partenaire ? Peut-elle prouver quelles règles étaient actives lorsqu’un modèle a traité les données ? Peut-elle déplacer le service sans perdre les corrections linguistiques, l’historique d’évaluation ou les obligations publiques ? Une petite institution africaine peut-elle participer selon des conditions qu’elle comprend et qu’elle peut contester ? L’accord partagé peut-il survivre à un changement de gouvernement, de propriétaire, de monnaie ou de disponibilité énergétique ?</p>
+
+                <p>Les mesures utiles comprennent le délai pour produire une exportation complète, le pourcentage d’opérations transfrontalières dotées d’une finalité déclarée, le délai de reprise après la défaillance d’un partenaire, la couverture des tests de conformité, le délai de correction dans les langues locales, la part des services disposant d’un chemin d’inspection indépendant, la concentration des dépendances critiques et le pourcentage du savoir institutionnel qui reste utilisable après une migration. Ces mesures décrivent la force d’une relation. Elles montrent si la coopération a créé une capacité ou simplement déplacé la dépendance vers un endroit plus élégant.</p>
+
+                <h2>Construire la frontière avant la dépendance</h2>
+
+                <p>Une institution peut commencer par un service qui a réellement besoin d’une capacité externe. Définissez les registres, les transformations autorisées, la juridiction, les preuves renvoyées et l’autorité qui peut suspendre l’échange. Testez l’accord avec une instruction ambiguë, une politique modifiée, une panne du fournisseur, une correction linguistique, un résultat contesté et une migration forcée. Demandez à un opérateur qui n’a pas conçu l’accord de reconstruire ce qui a traversé la frontière et ce que l’institution contrôle encore.</p>
+
+                <p>Le résultat doit être lisible par plusieurs publics. Une équipe technique doit pouvoir l’appliquer. Une équipe d’achat doit pouvoir le comparer. Une autorité publique doit pouvoir le défendre. Une communauté linguistique doit pouvoir le corriger. Une institution successorale doit pouvoir en hériter. Lorsque ces cinq conditions sont réunies, l’infrastructure partagée devient une fédération de capacités plutôt qu’une chaîne de concessions invisibles.</p>
+
+                <p>La tâche stratégique de l’Afrique dépasse donc la construction de substituts locaux. Il faut aussi bâtir les frontières constitutionnelles et techniques qui rendent la coopération sûre, utile et réversible. L’avenir contiendra de nombreuses dépendances. La souveraineté appartiendra aux institutions capables de les nommer, de les gouverner et de les quitter avec leur mémoire intacte.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://www.nature.com/articles/s43588-026-01084-9" target="_blank" rel="noopener">Matthew L. Smith et al., « An alternative path for artificial intelligence in Africa », <em>Nature Computational Science</em> (publié le 19 novembre 2026). Défend une souveraineté distribuée fondée sur une infrastructure coopérative conçue pour les conditions africaines.</a></li>
+                    <li><a href="https://reports.weforum.org/docs/WEF_AI_Infrastructure_in_the_Age_of_Sovereignty_Requirements_Strategies_and_a_Trusted_Framework_for_Digital_Embassies_2026.pdf" target="_blank" rel="noopener">Forum économique mondial et Bain &amp; Company, « AI Infrastructure in the Age of Sovereignty: Requirements, Strategies and a Trusted Framework for Digital Embassies » (mai 2026). Décrit la souveraineté comme un spectre combinant des partenariats internationaux de confiance et un contrôle national, et propose un cadre pour des ambassades numériques fiables.</a></li>
+                    <li><a href="https://aiforgood.itu.int/building-the-foundations-for-ai-infrastructure-and-trust/" target="_blank" rel="noopener">Union internationale des télécommunications, « Building the foundations for AI infrastructure and trust » (28 octobre 2026). Rend compte d’une discussion sur les pools régionaux de calcul, l’infrastructure partagée, les ambassades de données, le consentement portable, les pistes d’audit, la provenance et la responsabilité institutionnelle.</a></li>
+                    <li><a href="https://www.undp.org/africa/blog/africas-ai-crossroads-readiness-public-value" target="_blank" rel="noopener">Programme des Nations Unies pour le développement, « Africa’s AI Crossroads: From Readiness to Public Value » (24 septembre 2026). Relie la préparation africaine à l’autorité, aux achats, à la supervision des fournisseurs, aux capacités locales, à l’inclusion linguistique, aux garanties et à une valeur publique mesurable.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
