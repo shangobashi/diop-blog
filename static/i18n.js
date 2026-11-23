@@ -206,6 +206,7 @@
         'article.entry175':     { en: 'Diop Daily #175 — November 2026', fr: 'Diop Quotidien n°175 — Novembre 2026' },
         'article.entry176':     { en: 'Diop Daily #176 — November 2026', fr: 'Diop Quotidien n°176 — Novembre 2026' },
         'article.entry177':     { en: 'Diop Daily #177 — November 2026', fr: 'Diop Quotidien n°177 — Novembre 2026' },
+        'article.entry179':     { en: 'Diop Daily #179 — November 2026', fr: 'Diop Quotidien n°179 — Novembre 2026' },
         'article.entry178':     { en: 'Diop Daily #178 — November 2026', fr: 'Diop Quotidien n°178 — Novembre 2026' },
         'article.entry172':     { en: 'Diop Daily #172 — November 2026', fr: 'Diop Quotidien n°172 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
@@ -220,6 +221,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-179': {
+        title: {
+            en: 'The Frontend Is a Firewall',
+            fr: 'L’interface est un pare-feu'
+        },
+        excerpt: {
+            en: 'As agents begin to generate interfaces and propose actions across trust boundaries, the application-owned renderer becomes a control surface. The investable layer is an interface-governance plane that binds agent output to approved components, policy checks, telemetry, and human confirmation.',
+            fr: 'À mesure que les agents génèrent des interfaces et proposent des actions entre des frontières de confiance, le moteur de rendu possédé par l’application devient une surface de contrôle. La couche d’investissement est un plan de gouvernance des interfaces qui relie les sorties des agents aux composants approuvés, aux contrôles de politique, à la télémétrie et à la confirmation humaine.'
+        }
+    },
     'diop-daily-178': {
         title: {
             en: 'A Border Can Be Software',

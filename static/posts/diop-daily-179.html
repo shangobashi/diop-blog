@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Frontend Is a Firewall — Diop Research</title>
+    <meta name="description" content="As agents begin to generate interfaces and propose actions across trust boundaries, the application-owned renderer becomes a control surface. The investable layer is an interface-governance plane that binds agent output to approved components, policy checks, telemetry, and human confirmation."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry179">Diop Daily #179 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 23, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>agent interfaces · semantic governance · African institutions</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Frontend Is a Firewall</h1>
+
+                <p><em>Field note, November 23, 2026.</em> An agent that can only speak in paragraphs leaves the user to translate intention into action. An agent that can propose a form, a comparison view, a confirmation screen, or a bounded control changes the relationship between language and execution. The moment an interface becomes generative, its rendering path becomes part of the security architecture.</p>
+
+                <p>Recent public work makes the shift concrete. Google’s A2UI 1.0, released on November 11, describes an open protocol through which an agent sends a structured interface while the host application renders it with native components. Google’s semantic governance policies, announced on November 20, place an enforcement point beside the agent so proposed tool calls are checked against plain-language rules and the user’s original intent before execution. Its Agent Anomaly Detection work uses traces and logs to identify behavioural drift across agents running on other clouds. NIST’s November workshop report on super-intelligence incident management names reasoning-layer telemetry, non-human identity governance, scoped containment, evidentiary schemas, and coordinated responsibility as operational needs.</p>
+
+                <blockquote>
+                    <p>The safest interface is the one that lets the agent describe the choice while the institution retains the power to render, constrain, and refuse it.</p>
+                </blockquote>
+
+                <h2>Text has reached its operational limit</h2>
+
+                <p>Text is an excellent medium for explanation. It is a poor control surface for a sequence of interdependent decisions. A person comparing delivery windows, approving a budget, reviewing a translation, or selecting among exceptions needs the relevant state visible at the same time. A long answer can describe those options, yet the reader still has to recover the structure and decide whether the described action matches the requested one.</p>
+
+                <p>Generative UI changes the unit of interaction. The agent can assemble a view from approved components: a date selector, a price comparison, a map, a warning, a document preview, or a confirmation step. The application can bind sensitive values on the server and display them through its own design system. A remote agent can contribute a recommendation without receiving permission to inject code, rewrite the page, or redefine the visual language of the institution.</p>
+
+                <p>This separation matters because the agent and the application have different responsibilities. The agent interprets a task and proposes a useful arrangement. The host owns the component catalogue, data bindings, accessibility behaviour, styling, state transitions, and submission rules. A protocol such as A2UI gives them a common message format, while the host preserves the final authority over what can appear and what can be activated.</p>
+
+                <h2>The renderer owns the boundary</h2>
+
+                <p>A remote agent should speak in a vocabulary the receiving application can inspect. It can request a card, a field, a table, a warning, or a button with declared properties. The client decides whether those components exist, whether their parameters are valid, whether the current user can see them, and whether the next transition is permitted. That is a different architecture from accepting arbitrary HTML or executable JavaScript from an untrusted source.</p>
+
+                <p>The component catalogue becomes a small constitutional document. It states which actions the interface can expose and which conditions must hold before a state change. A payment button may require a fresh mandate and a second confirmation. A public-service form may require an approved language and a visible appeal route. A research dashboard may show a result only when its source, timestamp, and uncertainty are attached. The interface carries institutional policy into the moment when a person is about to act.</p>
+
+                <ul>
+                    <li><strong>Declared components:</strong> the agent can ask for registered primitives rather than shipping executable behaviour;</li>
+                    <li><strong>Bound data:</strong> sensitive values, permissions, and current state remain under the application’s control;</li>
+                    <li><strong>Visible intent:</strong> the user can see what action is proposed, which information supports it, and what will happen after confirmation;</li>
+                    <li><strong>Constrained transitions:</strong> the host can refuse a component, field, tool call, or state change when policy or context fails;</li>
+                    <li><strong>Portable receipts:</strong> the system can record the rendered decision, the confirmation, the responsible actor, and the result.</li>
+                </ul>
+
+                <p>The interface therefore becomes a policy surface rather than a decorative layer. Its value lies in the distance between a remote proposal and a local act. That distance is where an institution can validate meaning, apply jurisdiction, preserve language, ask for confirmation, and create evidence.</p>
+
+                <h2>Governance must sit before the click</h2>
+
+                <p>Permission answers whether an agent may call a tool. It does not answer whether a particular call follows the purpose of the task. Google’s semantic governance example makes this distinction explicit: an employee may have access to financial files and email, while a proposed message to a personal address still violates a rule about unreleased results. The policy enforcement point evaluates the proposed call against the written rule and the user’s request before the call runs.</p>
+
+                <p>This is the correct location for a difficult decision. A model can be persuaded by a system instruction, a user’s urgency, or a document containing an indirect prompt injection. A permission layer alone can allow the capability while missing the deviation. A policy check outside the agent can inspect the proposed action, return a denial, and record the verdict and rationale. The model remains useful, but it no longer gets to be the sole interpreter of its own boundary.</p>
+
+                <p>The same principle applies to the rendered interface. A confirmation screen should be generated from a declared action, not used to launder an ambiguous tool call into a friendly button. The user should see the recipient, amount, jurisdiction, data purpose, or irreversible consequence that matters. If the policy engine denies the action, the interface should explain the refusal and provide a legitimate recovery path instead of inviting the user to rephrase until the boundary disappears.</p>
+
+                <h2>Telemetry turns the surface into evidence</h2>
+
+                <p>A governed interface produces more than a visual result. It produces a trace of what the agent proposed, what the renderer accepted, which policy was evaluated, what the user confirmed, and what the system finally did. This trace must remain useful when the agent runs in another cloud, the model changes, or the original session is no longer available.</p>
+
+                <p>Google’s cross-cloud anomaly work shows the practical direction. Its detection system reads OpenTelemetry-compatible traces and logs from agents running outside Google Cloud, then examines whole conversations for patterns such as systematic scraping, cascading failures, or resource exhaustion. NIST’s incident-management report extends the requirement beyond ordinary request logs: advanced autonomous systems need reasoning-layer telemetry, non-human identity governance, authorization-scoped containment, and evidence that can support coordinated response.</p>
+
+                <p>For a serious institution, the visible screen and the hidden trace must correspond. The receipt should be able to answer:</p>
+
+                <ul>
+                    <li>Which agent proposed the view or action, under whose authority, and with which task context?</li>
+                    <li>Which component definitions, data versions, policies, and model contributions shaped the result?</li>
+                    <li>What did the user confirm, amend, decline, or never see?</li>
+                    <li>Which enforcement decision allowed or stopped the next operation?</li>
+                    <li>Can another operator reconstruct the state without trusting the original model or provider?</li>
+                </ul>
+
+                <p>That is an evidence problem, not a logging checkbox. The trace must preserve enough semantic structure for a reviewer to distinguish a harmless layout change from a changed authority, a stale value, or an action that exceeded its purpose.</p>
+
+                <h2>African institutions need local grammars of action</h2>
+
+                <p>The sovereignty question appears inside the component catalogue. A remote agent may be available through a global platform, yet the receiving institution should retain control over the vocabulary of legitimate action. A ministry, university, clinic, publisher, cooperative, or regional business needs to define which labels, languages, approvals, data boundaries, and forms correspond to its own obligations.</p>
+
+                <p>This is especially important where language carries legal or social force. A local-language interface is not complete when the text has merely been translated. The component should preserve the original expression, the approved terminology, the responsible authority, the route for correction, and the conditions under which an action can proceed. A renderer owned by the institution can carry those choices across models. A remote chat surface usually leaves them inside a vendor’s presentation layer.</p>
+
+                <p>Local grammars also make participation possible for smaller institutions. They can adopt shared models and interoperable agent protocols while keeping the component definitions, policy rules, audit vocabulary, and recovery procedures that express their own authority. This is a practical form of intellectual sovereignty: the institution does not need to manufacture every model, but it must be able to name and govern the actions that models can help propose.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is an <strong>interface-governance plane</strong>: the layer that translates agent proposals into approved, native, inspectable interactions. It combines declarative UI protocols, component catalogues, server-side data binding, policy enforcement, human confirmation, telemetry, and portable receipts. Its unit of value is a consequential interaction that remains understandable and controllable when the agent, model, provider, language, or device changes.</p>
+
+                <ul>
+                    <li><strong>Trusted renderers and component registries:</strong> runtimes that accept structured agent messages while keeping execution, styling, accessibility, and data binding under host control;</li>
+                    <li><strong>Pre-action policy enforcement:</strong> gateways that evaluate proposed tool calls and state transitions against user intent, business rules, jurisdiction, and current evidence;</li>
+                    <li><strong>Interaction observability:</strong> telemetry systems that connect prompts, proposals, rendered states, confirmations, refusals, and outcomes across clouds and vendors;</li>
+                    <li><strong>Institutional design-system adapters:</strong> services that preserve local language, terminology, accessibility, approval paths, and sector-specific obligations inside agentic interfaces;</li>
+                    <li><strong>Receipts and recovery:</strong> records that let a reviewer reconstruct what was shown and authorized, then continue or correct the work through another provider or a simpler channel.</li>
+                </ul>
+
+                <p>Underwriting should begin with the refusal path. Can the host prove that an unapproved component never executed? Can a policy officer change a rule without rewriting the agent? Can a user distinguish a recommendation from a committed action? Can an auditor connect the screen to the tool call and the final receipt? Can the same institution render the interaction in another language, on another device, or through a lower-bandwidth channel without surrendering the governing logic?</p>
+
+                <p>Useful measures include the percentage of agent output rendered from registered components, policy-decision coverage for consequential actions, false-allow and false-deny rates, time to revoke a component or policy, receipt completeness, reconstruction success after provider migration, language-parity coverage, and the share of high-impact actions that require explicit confirmation. These measures describe control at the point where intention becomes execution.</p>
+
+                <h2>Build one surface that can refuse</h2>
+
+                <p>An institution can begin with one workflow that contains a real consequence: a purchase approval, a public notice, a research submission, or a service request. Define the component catalogue. Separate model suggestions from server-bound values. Put policy evaluation before the tool call. Record the rendered state and the user’s response. Then introduce an ambiguous instruction, an expired permission, a changed language term, a provider outage, and a component that the host has withdrawn.</p>
+
+                <p>Ask a reviewer who did not witness the original interaction to reconstruct what the user saw, what the agent proposed, why the system allowed or refused the next step, and how the institution can recover. When the answer survives that test, the frontend has become more than a surface for intelligence. It has become a firewall between a probabilistic proposal and an accountable act.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/a2ui-10-build-delightful-fast-reliable-agentic-experiences/" target="_blank" rel="noopener">Google Developers Blog, “A2UI 1.0: Build delightful, fast, reliable, agentic experiences” (November 11, 2026). Describes a stable generative-UI protocol in which agents describe interfaces and host applications render them through native, registered components.</a></li>
+                    <li><a href="https://developers.googleblog.com/check-what-your-ai-agents-do-before-they-do-it-with-semantic-governance-policies/" target="_blank" rel="noopener">Google Developers Blog, “Check what your AI agents do before they do it, with Semantic governance policies” (November 20, 2026). Describes an enforcement point that checks proposed tool calls against plain-language rules and user intent before execution, with verdicts and rationales recorded.</a></li>
+                    <li><a href="https://developers.googleblog.com/agent-anomaly-detection-safeguarding-agents-across-other-clouds/" target="_blank" rel="noopener">Google Developers Blog, “Agent Anomaly Detection: Safeguarding agents across other clouds” (November 20, 2026). Describes cross-cloud monitoring from traces and logs, including detection of systematic scraping, cascading failures, and resource exhaustion.</a></li>
+                    <li><a href="https://nvlpubs.nist.gov/nistpubs/ir/2026/NIST.IR.8621.pdf" target="_blank" rel="noopener">National Institute of Standards and Technology, “NIST Workshop on SI Incident Management” (November 2026). Synthesizes operational needs including reasoning-layer telemetry, non-human identity governance, authorization-scoped containment, evidentiary schemas, and coordinated responsibility.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L’interface est un pare-feu</h1>
+
+                <p><em>Note de terrain, 23 novembre 2026.</em> Un agent qui ne sait parler qu’en paragraphes laisse à l’utilisateur le soin de traduire l’intention en action. Un agent capable de proposer un formulaire, une vue comparative, un écran de confirmation ou un contrôle borné modifie la relation entre le langage et l’exécution. Dès qu’une interface devient générative, son chemin de rendu devient une partie de l’architecture de sécurité.</p>
+
+                <p>Les travaux publics récents rendent ce déplacement concret. A2UI 1.0, publié par Google le 11 novembre, décrit un protocole ouvert grâce auquel un agent envoie une interface structurée tandis que l’application hôte la rend avec des composants natifs. Les politiques de gouvernance sémantique de Google, annoncées le 20 novembre, placent un point d’application à côté de l’agent afin que les appels d’outils proposés soient vérifiés au regard de règles en langage clair et de l’intention initiale de l’utilisateur avant leur exécution. Le travail de Google sur la détection des anomalies des agents utilise des traces et des journaux pour repérer les dérives comportementales d’agents exécutés sur d’autres clouds. Le rapport de novembre du NIST sur la gestion des incidents liés à la super-intelligence cite la télémétrie du raisonnement, la gouvernance des identités non humaines, le confinement borné par l’autorisation, les schémas de preuve et la responsabilité coordonnée parmi les besoins opérationnels.</p>
+
+                <blockquote>
+                    <p>L’interface la plus sûre est celle qui permet à l’agent de décrire le choix tandis que l’institution conserve le pouvoir de le rendre, de le limiter et de le refuser.</p>
+                </blockquote>
+
+                <h2>Le texte a atteint sa limite opérationnelle</h2>
+
+                <p>Le texte est un excellent moyen d’expliquer. Il constitue une mauvaise surface de contrôle pour une suite de décisions interdépendantes. Une personne qui compare des délais de livraison, approuve un budget, vérifie une traduction ou choisit entre plusieurs exceptions doit voir l’état pertinent au même moment. Une longue réponse peut décrire ces options, mais le lecteur doit encore en reconstruire la structure et déterminer si l’action décrite correspond à la demande.</p>
+
+                <p>L’interface générative modifie l’unité d’interaction. L’agent peut assembler une vue à partir de composants approuvés : sélecteur de date, comparaison de prix, carte, avertissement, aperçu de document ou étape de confirmation. L’application peut lier les valeurs sensibles sur le serveur et les afficher à travers son propre système de conception. Un agent distant peut apporter une recommandation sans recevoir la permission d’injecter du code, de réécrire la page ou de redéfinir le langage visuel de l’institution.</p>
+
+                <p>Cette séparation compte parce que l’agent et l’application ont des responsabilités différentes. L’agent interprète une tâche et propose une organisation utile. L’hôte possède le catalogue de composants, les liaisons de données, les règles d’accessibilité, le style, les transitions d’état et les règles de soumission. Un protocole comme A2UI leur fournit un format commun de messages, tandis que l’hôte conserve l’autorité finale sur ce qui peut apparaître et sur ce qui peut être activé.</p>
+
+                <h2>Le moteur de rendu possède la frontière</h2>
+
+                <p>Un agent distant devrait parler dans un vocabulaire que l’application destinataire peut inspecter. Il peut demander une carte, un champ, un tableau, un avertissement ou un bouton avec des propriétés déclarées. Le client décide si ces composants existent, si leurs paramètres sont valides, si l’utilisateur actuel peut les voir et si la transition suivante est autorisée. Cette architecture diffère de l’acceptation de HTML arbitraire ou de JavaScript exécutable provenant d’une source non fiable.</p>
+
+                <p>Le catalogue de composants devient un petit document constitutionnel. Il énonce les actions que l’interface peut exposer et les conditions à réunir avant un changement d’état. Un bouton de paiement peut exiger un mandat récent et une seconde confirmation. Un formulaire de service public peut exiger une langue approuvée et une voie de recours visible. Un tableau de recherche peut afficher un résultat seulement lorsque sa source, sa date et son incertitude lui sont attachées. L’interface transporte la politique institutionnelle jusqu’au moment où une personne s’apprête à agir.</p>
+
+                <ul>
+                    <li><strong>Composants déclarés :</strong> l’agent demande des primitives enregistrées au lieu d’envoyer un comportement exécutable ;</li>
+                    <li><strong>Données liées :</strong> les valeurs sensibles, les permissions et l’état courant restent sous le contrôle de l’application ;</li>
+                    <li><strong>Intention visible :</strong> l’utilisateur voit l’action proposée, les informations qui la soutiennent et ce qui arrivera après la confirmation ;</li>
+                    <li><strong>Transitions contraintes :</strong> l’hôte peut refuser un composant, un champ, un appel d’outil ou un changement d’état lorsque la politique ou le contexte échoue ;</li>
+                    <li><strong>Reçus portables :</strong> le système peut enregistrer la décision rendue, la confirmation, l’acteur responsable et le résultat.</li>
+                </ul>
+
+                <p>L’interface devient donc une surface de politique et non une couche décorative. Sa valeur réside dans la distance entre une proposition distante et un acte local. C’est dans cet espace qu’une institution peut valider le sens, appliquer la juridiction, préserver la langue, demander une confirmation et produire une preuve.</p>
+
+                <h2>La gouvernance doit se placer avant le clic</h2>
+
+                <p>La permission indique si un agent peut appeler un outil. Elle n’indique pas si un appel précis respecte la finalité de la tâche. L’exemple de gouvernance sémantique de Google rend cette distinction explicite : un employé peut avoir accès à des fichiers financiers et au courrier électronique, tandis qu’un message proposé vers une adresse personnelle viole tout de même une règle concernant des résultats non publiés. Le point d’application évalue l’appel proposé au regard de la règle écrite et de la demande de l’utilisateur avant l’exécution.</p>
+
+                <p>C’est l’emplacement correct pour une décision difficile. Un modèle peut être influencé par une instruction système, l’urgence invoquée par un utilisateur ou un document contenant une injection indirecte. Une couche de permissions peut autoriser la capacité tout en manquant la dérive. Un contrôle de politique extérieur à l’agent peut inspecter l’action proposée, renvoyer un refus et enregistrer la décision ainsi que sa justification. Le modèle reste utile, mais il ne devient plus l’unique interprète de sa propre frontière.</p>
+
+                <p>Le même principe s’applique à l’interface rendue. Un écran de confirmation doit être produit à partir d’une action déclarée, et non servir à transformer un appel d’outil ambigu en bouton rassurant. L’utilisateur doit voir le destinataire, le montant, la juridiction, la finalité des données ou la conséquence irréversible qui compte. Si le moteur de politique refuse l’action, l’interface doit expliquer le refus et fournir une voie légitime de reprise au lieu d’inviter l’utilisateur à reformuler jusqu’à la disparition de la frontière.</p>
+
+                <h2>La télémétrie transforme la surface en preuve</h2>
+
+                <p>Une interface gouvernée produit plus qu’un résultat visuel. Elle produit une trace de ce que l’agent a proposé, de ce que le moteur a accepté, de la politique évaluée, de ce que l’utilisateur a confirmé et de ce que le système a finalement exécuté. Cette trace doit rester utile lorsque l’agent s’exécute sur un autre cloud, que le modèle change ou que la session initiale n’est plus disponible.</p>
+
+                <p>Le travail de Google sur les anomalies inter-cloud montre la direction pratique. Son système de détection lit des traces et des journaux compatibles avec OpenTelemetry provenant d’agents exécutés hors de Google Cloud, puis examine des conversations entières à la recherche de comportements tels que l’extraction systématique, les défaillances en cascade ou l’épuisement des ressources. Le rapport du NIST sur la gestion des incidents élargit l’exigence au-delà des journaux ordinaires : les systèmes autonomes avancés ont besoin d’une télémétrie du raisonnement, d’une gouvernance des identités non humaines, d’un confinement lié aux autorisations et de preuves capables de soutenir une réponse coordonnée.</p>
+
+                <p>Pour une institution sérieuse, l’écran visible et la trace cachée doivent correspondre. Le reçu devrait pouvoir répondre aux questions suivantes :</p>
+
+                <ul>
+                    <li>Quel agent a proposé la vue ou l’action, sous quelle autorité et avec quel contexte de tâche ?</li>
+                    <li>Quelles définitions de composants, versions de données, politiques et contributions du modèle ont façonné le résultat ?</li>
+                    <li>Qu’a confirmé, modifié ou refusé l’utilisateur, et que n’a-t-il jamais vu ?</li>
+                    <li>Quelle décision de contrôle a autorisé ou arrêté l’opération suivante ?</li>
+                    <li>Un autre opérateur peut-il reconstruire l’état sans faire confiance au modèle ou au fournisseur initial ?</li>
+                </ul>
+
+                <p>Il s’agit d’un problème de preuve et non d’une case à cocher dans un système de journalisation. La trace doit conserver une structure sémantique suffisante pour qu’un réviseur distingue une modification de mise en page sans conséquence d’un changement d’autorité, d’une valeur périmée ou d’une action qui a dépassé sa finalité.</p>
+
+                <h2>Les institutions africaines ont besoin de grammaires locales de l’action</h2>
+
+                <p>La question de la souveraineté apparaît à l’intérieur du catalogue de composants. Un agent distant peut être disponible à travers une plateforme mondiale, mais l’institution destinataire devrait conserver le contrôle du vocabulaire de l’action légitime. Un ministère, une université, une clinique, un éditeur, une coopérative ou une entreprise régionale doit définir les libellés, les langues, les validations, les frontières de données et les formulaires qui correspondent à ses obligations.</p>
+
+                <p>Cela compte particulièrement lorsque la langue porte une force juridique ou sociale. Une interface en langue locale n’est pas complète parce que le texte a simplement été traduit. Le composant doit préserver l’expression originale, la terminologie approuvée, l’autorité responsable, la voie de correction et les conditions permettant à l’action de continuer. Un moteur de rendu possédé par l’institution peut transporter ces choix entre les modèles. Une surface de dialogue distante les laisse généralement dans la couche de présentation du fournisseur.</p>
+
+                <p>Les grammaires locales rendent aussi la participation possible pour les petites institutions. Elles peuvent adopter des modèles partagés et des protocoles d’agents interopérables tout en conservant les définitions de composants, les règles de politique, le vocabulaire d’audit et les procédures de reprise qui expriment leur propre autorité. C’est une forme pratique de souveraineté intellectuelle : l’institution n’a pas besoin de fabriquer chaque modèle, mais elle doit pouvoir nommer et gouverner les actions que les modèles aident à proposer.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de gouvernance des interfaces</strong> : la couche qui transforme les propositions d’agents en interactions approuvées, natives et inspectables. Elle réunit les protocoles d’interface déclaratifs, les catalogues de composants, la liaison de données côté serveur, l’application des politiques, la confirmation humaine, la télémétrie et les reçus portables. Son unité de valeur est une interaction décisive qui reste compréhensible et contrôlable lorsque l’agent, le modèle, le fournisseur, la langue ou l’appareil change.</p>
+
+                <ul>
+                    <li><strong>Moteurs de rendu fiables et registres de composants :</strong> runtimes qui acceptent des messages structurés d’agents tout en laissant l’exécution, le style, l’accessibilité et la liaison de données sous le contrôle de l’hôte ;</li>
+                    <li><strong>Application des politiques avant l’action :</strong> passerelles qui évaluent les appels d’outils et les transitions d’état au regard de l’intention de l’utilisateur, des règles métier, de la juridiction et des preuves disponibles ;</li>
+                    <li><strong>Observabilité de l’interaction :</strong> systèmes de télémétrie qui relient prompts, propositions, états rendus, confirmations, refus et résultats entre clouds et fournisseurs ;</li>
+                    <li><strong>Adaptateurs de systèmes de conception institutionnels :</strong> services qui préservent la langue locale, la terminologie, l’accessibilité, les voies de validation et les obligations sectorielles dans les interfaces agentiques ;</li>
+                    <li><strong>Reçus et reprise :</strong> registres qui permettent à un réviseur de reconstruire ce qui a été montré et autorisé, puis de poursuivre ou corriger le travail avec un autre fournisseur ou un canal plus simple.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par la voie de refus. L’hôte peut-il prouver qu’un composant non approuvé n’a jamais été exécuté ? Un responsable des politiques peut-il modifier une règle sans réécrire l’agent ? L’utilisateur peut-il distinguer une recommandation d’une action engagée ? Un auditeur peut-il relier l’écran à l’appel d’outil et au reçu final ? La même institution peut-elle rendre l’interaction dans une autre langue, sur un autre appareil ou dans un canal à plus faible débit sans abandonner la logique de gouvernance ?</p>
+
+                <p>Les mesures utiles comprennent le pourcentage de sorties d’agents rendues à partir de composants enregistrés, la couverture des décisions de politique pour les actions importantes, les taux de faux accords et de faux refus, le délai de révocation d’un composant ou d’une politique, la complétude des reçus, la réussite de la reconstruction après une migration de fournisseur, la couverture de la parité linguistique et la part des actions à fort impact qui exigent une confirmation explicite. Ces mesures décrivent le contrôle au point où l’intention devient exécution.</p>
+
+                <h2>Construire une surface capable de refuser</h2>
+
+                <p>Une institution peut commencer par un flux qui comporte une conséquence réelle : approbation d’un achat, notification publique, dépôt de recherche ou demande de service. Définissez le catalogue de composants. Séparez les suggestions du modèle des valeurs liées au serveur. Placez l’évaluation de politique avant l’appel d’outil. Enregistrez l’état rendu et la réponse de l’utilisateur. Introduisez ensuite une instruction ambiguë, une permission expirée, un terme linguistique modifié, une panne du fournisseur et un composant retiré par l’hôte.</p>
+
+                <p>Demandez à un réviseur absent de l’interaction initiale de reconstruire ce que l’utilisateur a vu, ce que l’agent a proposé, pourquoi le système a autorisé ou refusé l’étape suivante et comment l’institution peut reprendre le travail. Lorsque la réponse résiste à ce test, l’interface est devenue plus qu’une surface d’intelligence. Elle est devenue un pare-feu entre une proposition probabiliste et un acte responsable.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/a2ui-10-build-delightful-fast-reliable-agentic-experiences/" target="_blank" rel="noopener">Google Developers Blog, « A2UI 1.0: Build delightful, fast, reliable, agentic experiences » (11 novembre 2026). Décrit un protocole stable d’interface générative dans lequel les agents décrivent des interfaces et les applications hôtes les rendent avec des composants natifs enregistrés.</a></li>
+                    <li><a href="https://developers.googleblog.com/check-what-your-ai-agents-do-before-they-do-it-with-semantic-governance-policies/" target="_blank" rel="noopener">Google Developers Blog, « Check what your AI agents do before they do it, with Semantic governance policies » (20 novembre 2026). Décrit un point d’application qui vérifie les appels d’outils proposés au regard de règles en langage clair et de l’intention de l’utilisateur avant l’exécution, avec enregistrement des décisions et justifications.</a></li>
+                    <li><a href="https://developers.googleblog.com/agent-anomaly-detection-safeguarding-agents-across-other-clouds/" target="_blank" rel="noopener">Google Developers Blog, « Agent Anomaly Detection: Safeguarding agents across other clouds » (20 novembre 2026). Décrit une surveillance inter-cloud à partir de traces et de journaux, notamment la détection de l’extraction systématique, des défaillances en cascade et de l’épuisement des ressources.</a></li>
+                    <li><a href="https://nvlpubs.nist.gov/nistpubs/ir/2026/NIST.IR.8621.pdf" target="_blank" rel="noopener">National Institute of Standards and Technology, « NIST Workshop on SI Incident Management » (novembre 2026). Synthétise des besoins opérationnels comprenant la télémétrie du raisonnement, la gouvernance des identités non humaines, le confinement lié aux autorisations, les schémas de preuve et la responsabilité coordonnée.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
