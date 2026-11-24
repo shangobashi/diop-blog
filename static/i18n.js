@@ -209,6 +209,7 @@
         'article.entry179':     { en: 'Diop Daily #179 — November 2026', fr: 'Diop Quotidien n°179 — Novembre 2026' },
         'article.entry178':     { en: 'Diop Daily #178 — November 2026', fr: 'Diop Quotidien n°178 — Novembre 2026' },
         'article.entry172':     { en: 'Diop Daily #172 — November 2026', fr: 'Diop Quotidien n°172 — Novembre 2026' },
+        'article.entry180':     { en: 'Diop Daily #180 — November 2026', fr: 'Diop Quotidien n°180 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -221,6 +222,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-180': {
+        title: {
+            en: 'Who Signed the State Change?',
+            fr: 'Qui a signé le changement d’état ?'
+        },
+        excerpt: {
+            en: 'Agent identity and permission are incomplete when a machine changes durable state. The investable layer is a signed-transition plane that binds the acting agent, delegated authority, policy, payload, result, and correction path into a portable institutional record.',
+            fr: 'L’identité d’un agent et sa permission restent incomplètes lorsqu’une machine modifie un état durable. La couche d’investissement est un plan de transitions signées qui relie l’agent agissant, l’autorité déléguée, la politique, la charge utile, le résultat et la voie de correction dans un registre institutionnel portable.'
+        }
+    },
     'diop-daily-179': {
         title: {
             en: 'The Frontend Is a Firewall',

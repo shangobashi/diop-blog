@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Who Signed the State Change? — Diop Research</title>
+    <meta name="description" content="Agent identity and permission are incomplete at the moment a machine changes durable state. A signed-transition plane can bind the acting agent, delegated authority, policy, payload, resource, and result into a portable institutional record."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry180">Diop Daily #180 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 24, 2026</time>
+                    <span>·</span>
+                    <span data-rt="8">8 min read</span>
+                    <span>·</span>
+                    <span>signed transitions · machine accountability · African institutions</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">Who Signed the State Change?</h1>
+
+                <p><em>Field note, November 24, 2026.</em> An agent can have a name, a credential, and a temporary permission to use a tool. The institution still faces a harder question when a durable record changes: which machine produced this exact mutation, under whose authority, with which policy, and from which input? Trust becomes operational at the write boundary, where a recommendation becomes a row, a payment, a document, a case status, or a message that another system will treat as fact.</p>
+
+                <p>Recent public work points toward this boundary. Google’s August guide to zero-trust agents proposes cryptographic signatures for every state-changing write, hardware-backed keys, isolated execution, and deterministic gateways outside the model context. NIST’s October design tenets for agent identity systems call for distinct, cryptographically verifiable agent identities tied to a workload, environment, and approved configuration, with a lifecycle separate from human principals. The W3C’s October paper on the web in the AI era separates identity, authentication, authorization, provenance, and human control while describing a web where agents act across domains.</p>
+
+                <blockquote>
+                    <p>The question after an autonomous action is not only whether the system was allowed to act. It is whether the institution can prove which actor changed the world.</p>
+                </blockquote>
+
+                <h2>Permission ends at the door</h2>
+
+                <p>Authorization tells a service that an action may proceed. It often stops before the durable mutation. A token grants access to an endpoint; a role permits a database operation; a delegated credential establishes a bounded relationship. These controls are necessary, but the record that follows can still lose the precise connection between actor and outcome.</p>
+
+                <p>Shared service accounts make this weakness ordinary. Several workers may connect through one pool. A human may authorize a workflow that invokes several agents. A model may select a tool, generate parameters, ask another agent to transform them, and send the final request through a gateway. The final database row can show that a trusted application wrote it while hiding the chain that led to the write.</p>
+
+                <p>A signed transition treats the mutation as an evidence-bearing event. Before committing, the receiving system verifies a signature over a canonical payload. The payload can include the resource, operation, previous state, proposed state, task identifier, acting agent, represented principal, policy version, timestamp, expiry, and relevant evidence references. The signature establishes which authorized process accepted responsibility for this exact transition; it records the actor and payload without claiming that the decision was wise.</p>
+
+                <h2>Identity becomes useful when it touches state</h2>
+
+                <p>NIST’s design tenets are valuable because they place agent identity inside a lifecycle rather than treating it as a label. An agent should be distinguishable from a human user and a generic service account. Its identity should connect to the workload and configuration that produced an action. Delegation should be visible. Authority should be attenuated. Credentials should be rotated, revoked, and assessed according to the risk of the transaction.</p>
+
+                <p>The write boundary gives those principles a place to operate. The database, ledger, case system, or document store can ask whether the presented key belongs to the declared agent, whether the agent represents the named principal, whether the authority was active for the resource and operation, and whether the payload matches the signed digest. A later auditor can then inspect the same facts without reconstructing the original model conversation.</p>
+
+                <p>This is an important distinction for institutions that use external models. The provider may change, the orchestration framework may change, and the agent may be rebuilt from a new image. The institutional record should still distinguish the principal, the agent deployment, the policy decision, and the state transition. Portability begins when the evidence format survives the runtime that produced it.</p>
+
+                <h2>A signature is a beginning, not a verdict</h2>
+
+                <p>Cryptographic proof can be overpraised. A signed action can be authorized and still be wrong. A compromised agent can sign harmful instructions with a valid key. A policy can be incomplete. A user can confirm a screen without understanding a hidden consequence. The signature therefore belongs inside a larger control loop that checks the action’s meaning, scope, and result.</p>
+
+                <p>A serious transition record should answer several questions:</p>
+
+                <ul>
+                    <li><strong>Actor:</strong> which agent instance, workload, configuration, and key signed the event?</li>
+                    <li><strong>Principal:</strong> which person, institution, or service did the agent represent, and what delegation connected them?</li>
+                    <li><strong>Purpose:</strong> which task, user intent, resource, and policy version bounded the action?</li>
+                    <li><strong>Payload:</strong> what exact input, previous state, proposed state, and evidence references were signed?</li>
+                    <li><strong>Outcome:</strong> what did the receiving system commit, reject, amend, or roll back, and who can correct the record?</li>
+                </ul>
+
+                <p>The record also needs a correction path. If a signed write contains a wrong address, translation, amount, classification, or public notice, the institution should append a governed correction rather than silently rewriting history. The original event remains visible, the correction names its authority and reason, and dependent systems receive a machine-readable update. Accountability requires a memory of error as well as a memory of action.</p>
+
+                <h2>The ledger is where institutions meet</h2>
+
+                <p>Agent systems become difficult to govern when their boundaries are drawn around models rather than transactions. The model is a contributor to the action. The institution owns the consequences. A signed-transition plane moves the governing boundary to the systems that commit durable state: the payment ledger, the public case record, the archive, the inventory system, the publishing pipeline, or the regional data exchange.</p>
+
+                <p>This matters for African institutions working with shared infrastructure. A university network, cooperative, ministry, clinic, or publisher may use models and hosting supplied by several partners. Its authority should not disappear into a provider’s internal logs. The institution can keep a local or federated record of who acted, what was delegated, what was signed, which language or jurisdiction applied, and how a successor operator can verify the history.</p>
+
+                <p>That arrangement supports cooperation without demanding that every institution build every model. It gives the participants a common fact at the point of exchange. A partner may provide compute. Another may provide translation. A third may provide a workflow agent. The receiving institution can accept each contribution through a verifiable transition and retain the ability to inspect, correct, suspend, or replace the contributor.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is a <strong>signed-transition plane</strong>: infrastructure that binds machine identity, delegated authority, canonical payloads, policy decisions, signatures, results, and corrections at the point where an agent changes durable state. Its unit of value is a state change that remains attributable and reconstructable across models, providers, clouds, languages, and institutional handoffs.</p>
+
+                <ul>
+                    <li><strong>Write-verification gateways:</strong> ingress services that canonicalize payloads, verify signatures, check authority, and refuse mutations whose evidence or scope fails;</li>
+                    <li><strong>Agent key and workload registries:</strong> systems that bind cryptographic keys to approved deployments, configurations, represented principals, rotation events, and revocation status;</li>
+                    <li><strong>Transition ledgers:</strong> append-only or versioned records that connect proposed state, committed state, policy verdicts, human approvals, reversals, and correction events;</li>
+                    <li><strong>Cross-provider evidence adapters:</strong> portable formats that let institutions preserve attribution and verification when an agent, model, hosting partner, or orchestration runtime changes;</li>
+                    <li><strong>Institutional audit operations:</strong> services that test signatures, investigate anomalous transitions, maintain local terminology, and train reviewers to read machine evidence.</li>
+                </ul>
+
+                <p>Underwriting should begin with a simple test: can an independent operator take one consequential record and reconstruct the chain from human intent to machine proposal to policy decision to signed write to final outcome? The test should include a rotated key, an expired delegation, a changed policy, a provider outage, a disputed translation, and an attempted direct database edit. A system that only produces green authentication checks has not yet demonstrated institutional accountability.</p>
+
+                <p>Useful measures include the percentage of consequential writes carrying verifiable signatures, the share linked to an explicit principal and task, time to revoke a compromised workload, correction latency, reconstruction success after provider migration, false-allow and false-deny rates at the ingress boundary, and the proportion of records whose language and jurisdiction metadata remain intact. These are capital-relevant measures because they expose whether a system can contain failure, preserve evidence, and keep operating knowledge under the institution’s control.</p>
+
+                <h2>Make the record answerable</h2>
+
+                <p>An institution can begin with one workflow whose outcome matters: a payment approval, a license decision, a research submission, a public notice, or a catalog change. Define the canonical transition. Assign the acting workload a distinct key. Bind the action to its principal, purpose, policy, and evidence. Verify the signature before the state changes. Store the result and the correction route. Then test the system with a valid signature attached to an invalid scope, a valid scope attached to a stale policy, and a correctly signed action that a human later disputes.</p>
+
+                <p>The goal is a record that can speak after the model is gone. A resident, auditor, successor operator, or partner institution should be able to ask who acted, for whom, under which rule, with what evidence, and what happened next. When the answer lives in the durable record rather than inside a provider’s private trace, machine action becomes part of institutional memory. A signature then does its most important work: it gives an institution a durable author for the changes it must be prepared to defend.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/build-zero-trust-ai-agents-with-googles-agent-development-kit/" target="_blank" rel="noopener">Google Developers Blog, “Build zero-trust AI agents with Google’s Agent Development Kit” (August 17, 2026). Proposes cryptographic write signatures, hardware-backed keys, kernel-level isolation, and deterministic gateways outside the model context.</a></li>
+                    <li><a href="https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems" target="_blank" rel="noopener">National Institute of Standards and Technology, “Design Tenets for Agent Identity Management Systems” (October 27, 2026). Describes distinct, cryptographically verifiable agent identities, workload and configuration binding, delegation, attenuation, and risk-based identity lifecycles.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">World Wide Web Consortium, “W3C and the State of the Web in the AI Era” (finalized October 20, 2026). Discusses agent identity, authentication, authorization, provenance, human control, consent, and trust infrastructure for agents acting across the web.</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-office" target="_blank" rel="noopener">European Commission, “European AI Office” (last updated October 29, 2026). Describes the office’s role in developing evaluation tools and benchmarks, monitoring general-purpose AI compliance, and enforcing AI Act rules.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Qui a signé le changement d’état ?</h1>
+
+                <p><em>Note de terrain, 24 novembre 2026.</em> Un agent peut avoir un nom, un identifiant et une permission temporaire pour utiliser un outil. L’institution doit encore répondre à une question plus difficile lorsqu’un registre durable change : quelle machine a produit cette mutation précise, sous quelle autorité, avec quelle politique et à partir de quelle entrée ? La confiance devient opérationnelle à la frontière de l’écriture, là où une recommandation devient une ligne, un paiement, un document, un état de dossier ou un message qu’un autre système traitera comme un fait.</p>
+
+                <p>Les travaux publics récents indiquent cette frontière. Le guide de Google sur les agents zero trust, publié en août, propose des signatures cryptographiques pour chaque écriture qui modifie l’état, des clés protégées par le matériel, une exécution isolée et des passerelles déterministes situées en dehors du contexte du modèle. Les principes de conception du NIST pour les systèmes d’identité des agents, publiés en octobre, demandent des identités d’agents distinctes et vérifiables cryptographiquement, liées à une charge de travail, un environnement et une configuration approuvée, avec un cycle de vie séparé de celui des acteurs humains. Le document du W3C sur le Web à l’ère de l’IA, finalisé en octobre, sépare l’identité, l’authentification, l’autorisation, la provenance et le contrôle humain tout en décrivant un Web où les agents agissent entre plusieurs domaines.</p>
+
+                <blockquote>
+                    <p>Après une action autonome, la question ne porte pas seulement sur l’autorisation d’agir. L’institution doit pouvoir prouver quel acteur a changé le monde.</p>
+                </blockquote>
+
+                <h2>La permission s’arrête à la porte</h2>
+
+                <p>L’autorisation indique à un service qu’une action peut continuer. Elle s’arrête souvent avant la mutation durable. Un jeton accorde l’accès à un point d’entrée ; un rôle permet une opération de base de données ; un identifiant délégué établit une relation bornée. Ces contrôles sont nécessaires, mais le registre qui suit peut perdre le lien précis entre l’acteur et le résultat.</p>
+
+                <p>Les comptes de service partagés rendent cette faiblesse ordinaire. Plusieurs travailleurs peuvent se connecter par le même pool. Une personne peut autoriser un flux qui appelle plusieurs agents. Un modèle peut choisir un outil, produire ses paramètres, demander à un autre agent de les transformer, puis envoyer la requête finale par une passerelle. La ligne finale de la base de données peut montrer qu’une application de confiance l’a écrite tout en masquant la chaîne qui a conduit à cette écriture.</p>
+
+                <p>Une transition signée traite la mutation comme un événement porteur de preuves. Avant la validation, le système destinataire vérifie une signature portant sur une charge utile canonique. Celle-ci peut inclure la ressource, l’opération, l’état précédent, l’état proposé, l’identifiant de la tâche, l’agent agissant, le principal représenté, la version de la politique, l’horodatage, l’expiration et les références aux preuves pertinentes. La signature établit quel processus autorisé a accepté la responsabilité de cette transition précise ; elle enregistre l’acteur et la charge utile sans prétendre que la décision était judicieuse.</p>
+
+                <h2>L’identité devient utile lorsqu’elle touche l’état</h2>
+
+                <p>Les principes de conception du NIST sont précieux parce qu’ils placent l’identité de l’agent dans un cycle de vie au lieu de la traiter comme une étiquette. Un agent doit être distinguable d’un utilisateur humain et d’un compte de service générique. Son identité doit être reliée à la charge de travail et à la configuration qui ont produit l’action. La délégation doit être visible. L’autorité doit être atténuée. Les identifiants doivent être renouvelés, révoqués et évalués selon le risque de la transaction.</p>
+
+                <p>La frontière de l’écriture donne à ces principes un lieu d’application. La base de données, le registre, le dossier administratif ou le stockage documentaire peut vérifier si la clé présentée appartient à l’agent déclaré, si l’agent représente le principal nommé, si l’autorité était active pour la ressource et l’opération et si la charge utile correspond au condensat signé. Un auditeur ultérieur peut alors examiner les mêmes faits sans reconstruire la conversation initiale du modèle.</p>
+
+                <p>Cette distinction compte pour les institutions qui utilisent des modèles externes. Le fournisseur peut changer, le cadre d’orchestration peut changer et l’agent peut être reconstruit à partir d’une nouvelle image. Le registre institutionnel doit continuer à distinguer le principal, le déploiement de l’agent, la décision de politique et la transition d’état. La portabilité commence lorsque le format de preuve survit au runtime qui l’a produit.</p>
+
+                <h2>Une signature est un commencement, pas un verdict</h2>
+
+                <p>La preuve cryptographique peut être surestimée. Une action signée peut être autorisée tout en étant erronée. Un agent compromis peut signer une instruction nuisible avec une clé valide. Une politique peut être incomplète. Une personne peut confirmer un écran sans comprendre une conséquence cachée. La signature doit donc appartenir à une boucle de contrôle plus large qui vérifie le sens, le périmètre et le résultat de l’action.</p>
+
+                <p>Une transition sérieuse devrait répondre à plusieurs questions :</p>
+
+                <ul>
+                    <li><strong>Acteur :</strong> quelle instance d’agent, quelle charge de travail, quelle configuration et quelle clé ont signé l’événement ?</li>
+                    <li><strong>Principal :</strong> quelle personne, institution ou service l’agent représentait-il, et quelle délégation les reliait ?</li>
+                    <li><strong>Finalité :</strong> quelle tâche, intention de l’utilisateur, ressource et version de politique bornaient l’action ?</li>
+                    <li><strong>Charge utile :</strong> quelles entrée exacte, état précédent, état proposé et références aux preuves ont été signés ?</li>
+                    <li><strong>Résultat :</strong> qu’est-ce que le système destinataire a validé, rejeté, modifié ou annulé, et qui peut corriger le registre ?</li>
+                </ul>
+
+                <p>Le registre a aussi besoin d’une voie de correction. Si une écriture signée contient une adresse, une traduction, un montant, une classification ou un avis public erroné, l’institution devrait ajouter une correction gouvernée plutôt que réécrire silencieusement l’histoire. L’événement original reste visible, la correction nomme son autorité et sa raison, et les systèmes dépendants reçoivent une mise à jour lisible par les machines. La responsabilité exige une mémoire de l’erreur autant qu’une mémoire de l’action.</p>
+
+                <h2>Le registre est le lieu où les institutions se rencontrent</h2>
+
+                <p>Les systèmes d’agents deviennent difficiles à gouverner lorsque leurs frontières sont dessinées autour des modèles plutôt qu’autour des transactions. Le modèle contribue à l’action. L’institution porte les conséquences. Un plan de transitions signées déplace la frontière de gouvernance vers les systèmes qui valident un état durable : registre de paiement, dossier public, archive, système d’inventaire, chaîne éditoriale ou échange régional de données.</p>
+
+                <p>Cela compte pour les institutions africaines qui travaillent avec une infrastructure partagée. Un réseau universitaire, une coopérative, un ministère, une clinique ou un éditeur peut utiliser des modèles et un hébergement fournis par plusieurs partenaires. Son autorité ne devrait pas disparaître dans les journaux internes d’un fournisseur. L’institution peut conserver un registre local ou fédéré indiquant qui a agi, ce qui a été délégué, ce qui a été signé, quelle langue ou juridiction s’appliquait et comment un opérateur successeur peut vérifier l’histoire.</p>
+
+                <p>Cette organisation soutient la coopération sans exiger que chaque institution construise chaque modèle. Elle donne aux participants un fait commun au point d’échange. Un partenaire peut fournir le calcul, un autre la traduction et un troisième un agent de workflow. L’institution destinataire peut accepter chaque contribution au moyen d’une transition vérifiable tout en gardant la possibilité d’inspecter, de corriger, de suspendre ou de remplacer le contributeur.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de transitions signées</strong> : une infrastructure qui relie l’identité machine, l’autorité déléguée, les charges utiles canoniques, les décisions de politique, les signatures, les résultats et les corrections au moment où un agent modifie un état durable. Son unité de valeur est un changement d’état qui reste attribuable et reconstructible entre modèles, fournisseurs, clouds, langues et transferts institutionnels.</p>
+
+                <ul>
+                    <li><strong>Passerelles de vérification des écritures :</strong> services d’entrée qui canoniquent les charges utiles, vérifient les signatures, contrôlent l’autorité et refusent les mutations dont les preuves ou le périmètre échouent ;</li>
+                    <li><strong>Registres de clés d’agents et de charges de travail :</strong> systèmes qui relient les clés cryptographiques aux déploiements approuvés, aux configurations, aux principaux représentés, aux renouvellements et aux révocations ;</li>
+                    <li><strong>Registres de transitions :</strong> enregistrements append-only ou versionnés qui relient l’état proposé, l’état validé, les verdicts de politique, les approbations humaines, les annulations et les corrections ;</li>
+                    <li><strong>Adaptateurs de preuves entre fournisseurs :</strong> formats portables permettant aux institutions de préserver l’attribution et la vérification lorsqu’un agent, un modèle, un partenaire d’hébergement ou un runtime d’orchestration change ;</li>
+                    <li><strong>Opérations d’audit institutionnel :</strong> services qui testent les signatures, enquêtent sur les transitions anormales, entretiennent les terminologies locales et forment les réviseurs à lire les preuves machine.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par un test simple : un opérateur indépendant peut-il prendre un registre important et reconstruire la chaîne qui va de l’intention humaine à la proposition de la machine, puis à la décision de politique, à l’écriture signée et au résultat final ? Le test doit inclure une clé renouvelée, une délégation expirée, une politique modifiée, une panne du fournisseur, une traduction contestée et une tentative de modification directe de la base de données. Un système qui produit seulement des contrôles d’authentification positifs n’a pas encore démontré sa responsabilité institutionnelle.</p>
+
+                <p>Les mesures utiles comprennent le pourcentage d’écritures importantes portant des signatures vérifiables, la part liée à un principal et à une tâche explicites, le délai de révocation d’une charge de travail compromise, le délai de correction, la réussite de la reconstruction après une migration de fournisseur, les taux de faux accords et de faux refus à la frontière d’entrée et la proportion de registres dont les métadonnées linguistiques et juridictionnelles restent intactes. Ce sont des mesures pertinentes pour le capital parce qu’elles révèlent si un système peut contenir l’échec, préserver les preuves et maintenir le savoir opérationnel sous le contrôle de l’institution.</p>
+
+                <h2>Rendre le registre capable de répondre</h2>
+
+                <p>Une institution peut commencer par un flux dont le résultat compte : approbation d’un paiement, décision de licence, dépôt de recherche, avis public ou modification d’un catalogue. Définissez la transition canonique. Donnez à la charge de travail agissante une clé distincte. Liez l’action à son principal, sa finalité, sa politique et ses preuves. Vérifiez la signature avant le changement d’état. Conservez le résultat et la voie de correction. Testez ensuite le système avec une signature valide attachée à un périmètre invalide, un périmètre valide lié à une politique périmée et une action correctement signée qu’une personne conteste plus tard.</p>
+
+                <p>Le but est un registre capable de parler après la disparition du modèle. Une personne, un auditeur, un opérateur successeur ou une institution partenaire doit pouvoir demander qui a agi, pour qui, selon quelle règle, avec quelles preuves et avec quel résultat. Lorsque la réponse vit dans le registre durable plutôt que dans la trace privée d’un fournisseur, l’action machine devient une partie de la mémoire institutionnelle. La signature accomplit alors son travail le plus important : elle donne à l’institution un auteur durable pour les changements qu’elle doit être prête à défendre.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/build-zero-trust-ai-agents-with-googles-agent-development-kit/" target="_blank" rel="noopener">Google Developers Blog, « Build zero-trust AI agents with Google’s Agent Development Kit » (17 août 2026). Propose des signatures cryptographiques des écritures, des clés protégées par le matériel, l’isolation au niveau du noyau et des passerelles déterministes en dehors du contexte du modèle.</a></li>
+                    <li><a href="https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems" target="_blank" rel="noopener">National Institute of Standards and Technology, « Design Tenets for Agent Identity Management Systems » (27 octobre 2026). Décrit des identités d’agents distinctes et vérifiables cryptographiquement, la liaison aux charges de travail et aux configurations, la délégation, l’atténuation et les cycles de vie fondés sur le risque.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">World Wide Web Consortium, « W3C and the State of the Web in the AI Era » (finalisé le 20 octobre 2026). Analyse l’identité des agents, l’authentification, l’autorisation, la provenance, le contrôle humain, le consentement et l’infrastructure de confiance pour les agents qui agissent sur le Web.</a></li>
+                    <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-office" target="_blank" rel="noopener">Commission européenne, « European AI Office » (dernière mise à jour le 29 octobre 2026). Décrit le rôle du bureau dans l’élaboration d’outils et de bancs d’évaluation, le suivi de la conformité des modèles d’IA à usage général et l’application des règles de l’AI Act.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
