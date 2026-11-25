@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Protocol Needs a Test City — Diop Research</title>
+    <meta name="description" content="Open agent protocols reduce integration work, but interoperability becomes real only when implementations can be tested against shared semantics, failure cases, language conditions, and recovery obligations. The investable layer is a conformance plane for agents that must work across institutions."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry181">Diop Daily #181 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 25, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>agent interoperability · conformance · African institutions</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Protocol Needs a Test City</h1>
+
+                <p><em>Field note, November 25, 2026.</em> An open protocol creates a possibility. A conformance test creates a working relationship. The distinction matters because agents are moving from isolated demonstrations into institutional networks where a task can cross languages, frameworks, clouds, jurisdictions, and teams before a person sees the result.</p>
+
+                <p>Google’s public material gives the current protocol stack a practical shape. Its March guide places MCP, A2A, commerce protocols, interface protocols, and agent runtimes in one supply-chain example. Its June cross-language tutorial connects a Python extraction agent to a Go validation agent through A2A and describes discovery through Agent Cards, communication over JSON-RPC, and task states such as submitted, working, completed, and failed. NIST’s Agent Standards Initiative, updated November 9, names open protocols, industry-led standards, and security evaluations as separate pillars. W3C’s October Web and AI discussions extend the question into browsers, payments, accessibility, consent, and trust anchors.</p>
+
+                <blockquote>
+                    <p>Interoperability begins when a second institution can test the first institution’s promises without reading its source code.</p>
+                </blockquote>
+
+                <h2>A protocol reduces code; it does not settle meaning</h2>
+
+                <p>A shared message format removes a class of duplicated integration work. An agent can publish a card that describes its skills and endpoint. A caller can submit a task without importing the remote service’s implementation language. A state machine can make asynchronous work visible. These are real gains. They reduce the cost of assembling a network of specialized capabilities.</p>
+
+                <p>The difficult questions arrive after the first successful request. Does “completed” mean that the remote agent produced an answer, that a human accepted it, or that a downstream system committed a change? Does “failed” preserve the partial result, the evidence that led to it, and the correct retry boundary? When a task crosses from a Python service to a Go service, which timestamps, identifiers, language labels, and policy conditions must survive? If the network disappears while a task is working, who owns the state when the connection returns?</p>
+
+                <p>A protocol specification can describe fields and transitions while leaving these institutional meanings open. Two implementations may both satisfy the visible schema and still disagree about whether a duplicate task is safe to replay, whether an empty result is a valid completion, or whether a translated instruction retains the same authority. Syntax makes messages travel. Conformance makes them dependable.</p>
+
+                <h2>The test city</h2>
+
+                <p>Imagine a small city built for protocols. It has roads, addresses, customs offices, hospitals, markets, courts, and power failures. Every visiting agent receives the same public map and must demonstrate how it behaves at each boundary. The city does not ask whether an implementation resembles a reference demo. It asks whether another institution can use the service without guessing.</p>
+
+                <p>For an agent protocol, the test city is a reproducible conformance environment. It contains fixtures, reference agents, contract cases, adversarial inputs, network faults, clock changes, language variants, permission changes, and recovery drills. A service enters with its Agent Card and exits with evidence about what it supports, what it refuses, what it preserves, and what it cannot guarantee.</p>
+
+                <p>A serious test city should exercise at least these conditions:</p>
+
+                <ul>
+                    <li><strong>Discovery:</strong> the published capability, endpoint, version, authentication requirement, and supported formats match the behaviour encountered at runtime;</li>
+                    <li><strong>Task semantics:</strong> submitted, working, completed, and failed states carry stable meanings, identifiers, timestamps, partial results, and retry rules;</li>
+                    <li><strong>Boundary behaviour:</strong> the service handles expired credentials, unsupported skills, malformed data, oversized inputs, duplicate requests, and a remote dependency that stops responding;</li>
+                    <li><strong>Evidence:</strong> an independent operator can connect the request, intermediate events, output, refusal, and final state without relying on private model traces;</li>
+                    <li><strong>Human and language conditions:</strong> the interaction preserves approved terminology, accessibility requirements, user confirmation, jurisdictional notices, and the route for correction.</li>
+                </ul>
+
+                <p>This is a different object from a certification badge placed on a website. The valuable result is a machine-readable evidence pack that a procurement team, platform operator, auditor, or partner institution can compare. The test should expose the exact fixture, protocol version, implementation version, date, environment, result, and known limitations. A green mark without its test conditions is a logo.</p>
+
+                <h2>Task states are institutional commitments</h2>
+
+                <p>The task lifecycle deserves particular attention because it is where agent networks become temporal. A synchronous API can return a value and close the interaction. An agent task may remain open for minutes, days, or a human review cycle. The words used for its states therefore become commitments between organizations.</p>
+
+                <p>“Working” should identify where the task lives, which lease or authority remains active, and when the next update is due. “Failed” should distinguish invalid input from policy refusal, provider outage, expired authority, and an implementation defect. “Completed” should say whether the result is provisional, reviewed, committed, or merely available for collection. These distinctions determine whether a caller retries, escalates, pays, archives, or tells a resident that a case is closed.</p>
+
+                <p>A conformance lab can turn these meanings into executable questions. Submit the same task twice. Interrupt the service after the remote agent accepts it. Change the policy while the task is working. Translate the request into another approved language. Rotate the credential before completion. Ask for the result from a second operator. Each test reveals whether the protocol carries a durable state or only a successful conversation.</p>
+
+                <h2>Standards need a local grammar</h2>
+
+                <p>The global protocol conversation often begins in the vocabulary of platforms with abundant bandwidth, stable identity services, and large engineering teams. African institutions will use the same protocols under different conditions. A regional university network may need intermittent connectivity and a local-language correction path. A clinic may need a human escalation that remains available when the remote model is not. A cooperative may need a shared agent to operate across currencies, legal forms, and uneven device access.</p>
+
+                <p>Conformance must therefore test the conditions that institutions actually inherit. The question is not whether a protocol has been translated at the interface. The question is whether the task’s authority, uncertainty, terminology, consent, and correction route survive translation. A service that works in English but drops the responsible office or appeal instruction in Wolof, French, Amharic, or Kiswahili has failed an institutional test even if every JSON field is valid.</p>
+
+                <p>This is where sovereignty becomes practical. Institutions do not need to build every model or own every transport. They do need the ability to define the fixtures against which a service is accepted. A regional standards body, university consortium, public-interest laboratory, or federation of publishers can maintain test cases for its languages, sectors, data duties, and operating constraints. The protocol remains open; the meaning of acceptable participation becomes locally governable.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is an <strong>agent-conformance plane</strong>: the infrastructure that tests whether an agent, protocol implementation, or institutional adapter behaves consistently across discovery, task state, authority, failure, language, evidence, and recovery. Its unit of value is a cross-organizational interaction that another party can adopt without writing a private interpretation of the protocol.</p>
+
+                <ul>
+                    <li><strong>Conformance harnesses:</strong> executable suites that test protocol messages, task lifecycles, authentication boundaries, retries, idempotency, and version compatibility;</li>
+                    <li><strong>Reference environments:</strong> neutral sandboxes containing sample agents, synthetic institutional records, fault injection, clock manipulation, bandwidth constraints, and replayable scenarios;</li>
+                    <li><strong>Evidence and certification services:</strong> signed test reports, implementation profiles, limitations, regression history, and procurement-ready comparisons;</li>
+                    <li><strong>Semantic and language adapters:</strong> tools that test whether terminology, consent, jurisdiction, accessibility, and correction instructions remain intact across agent handoffs;</li>
+                    <li><strong>Interoperability operations:</strong> teams that maintain fixtures, publish change notices, reproduce partner failures, and coordinate updates when a protocol or implementation evolves.</li>
+                </ul>
+
+                <p>Capital should approach this layer through measurable exposure. What percentage of task states have executable tests? How many partner implementations pass the same fixtures? What is the median time to reproduce a disputed result? How much evidence survives a provider migration? How quickly can a broken adapter be isolated without taking the entire network offline? Which languages and jurisdictions have their own acceptance tests? These questions describe the capacity to participate in a network, not merely the capacity to announce compatibility.</p>
+
+                <p>The buyer may be a platform, a regulated enterprise, a public agency, a standards consortium, or a regional infrastructure operator. The product can begin as a testing service and mature into a shared trust market: implementations publish their supported profile, institutions select the evidence they require, and every upgrade runs through a known set of cross-boundary cases. This reduces the hidden tax of bespoke integration while giving smaller institutions a way to judge a powerful partner without reproducing its entire engineering organization.</p>
+
+                <h2>Build the city before the highway fills</h2>
+
+                <p>An institution can start with two agents and one consequential workflow. Choose a task that crosses a real boundary: contract review, research intake, a public-service request, a procurement comparison, or a language-mediated handoff. Write the contract in plain language. Define the states and the evidence. Add one failure at a time: duplicate submission, expired authority, missing translation, interrupted network, changed policy, and human correction. Invite a second implementation to run the same fixtures.</p>
+
+                <p>Then publish the result with its limits. A conformance report should be useful to the engineer who fixes the adapter, the procurement officer who compares providers, the language steward who corrects a term, and the institution that must defend an outcome months later. The test city earns trust through this ordinary discipline: the same street, the same fault, the same question, and a record of what each visitor did.</p>
+
+                <p>Open protocols can lower the walls between institutions. Conformance determines whether the new roads are safe to cross. For Africa, that distinction carries a political weight: participation in a global network becomes stronger when local institutions can define the tests, preserve their languages, and refuse a service whose promises cannot be inspected.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/developers-guide-to-ai-agent-protocols/" target="_blank" rel="noopener">Google Developers Blog, “Developer’s Guide to AI Agent Protocols” (March 18, 2026). Describes MCP, A2A, commerce and interface protocols in a multi-step agent workflow, including Agent Cards and cross-protocol composition.</a></li>
+                    <li><a href="https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a/" target="_blank" rel="noopener">Google Developers Blog, “Build Cross-Language Multi-Agent Team with Google’s Agent Development Kit and A2A” (June 22, 2026). Demonstrates Python and Go agents collaborating through discovery, JSON-RPC communication, and a task lifecycle with submitted, working, completed, and failed states.</a></li>
+                    <li><a href="https://www.nist.gov/super-intelligence/si-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, “SI Agent Standards Initiative” (updated November 9, 2026). Identifies industry-led standards, community-led protocols, and security evaluations as strategic pillars for trusted and interoperable agents.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/29-webai-minutes.html" target="_blank" rel="noopener">World Wide Web Consortium, “Web &amp; AI IG — TPAC 2026” (October 29, 2026). Records discussion of agentic Web coordination, consent, human involvement, accessibility, payments, identity, and trust anchors.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Un protocole a besoin d’une ville d’essai</h1>
+
+                <p><em>Note de terrain, 25 novembre 2026.</em> Un protocole ouvert crée une possibilité. Un test de conformité crée une relation de travail. La distinction compte parce que les agents passent des démonstrations isolées à des réseaux institutionnels où une tâche peut traverser des langues, des frameworks, des clouds, des juridictions et des équipes avant qu’une personne n’en voie le résultat.</p>
+
+                <p>Les documents publics de Google donnent une forme pratique à la pile actuelle des protocoles. Son guide de mars place MCP, A2A, les protocoles du commerce, les protocoles d’interface et les runtimes d’agents dans un même exemple de chaîne d’approvisionnement. Son tutoriel de juin relie un agent d’extraction en Python à un agent de validation en Go par l’intermédiaire d’A2A et décrit la découverte au moyen d’Agent Cards, la communication sur JSON-RPC et des états de tâche tels que soumis, en cours, terminé et échoué. L’Agent Standards Initiative du NIST, mise à jour le 9 novembre, distingue les protocoles ouverts, les normes pilotées par l’industrie et les évaluations de sécurité comme trois piliers. Les discussions du W3C sur le Web et l’IA en octobre étendent la question aux navigateurs, aux paiements, à l’accessibilité, au consentement et aux ancres de confiance.</p>
+
+                <blockquote>
+                    <p>L’interopérabilité commence lorsqu’une seconde institution peut tester les promesses de la première sans lire son code source.</p>
+                </blockquote>
+
+                <h2>Un protocole réduit le code ; il ne fixe pas le sens</h2>
+
+                <p>Un format de message partagé supprime une partie du travail d’intégration répété. Un agent peut publier une fiche qui décrit ses compétences et son point d’accès. Un appelant peut soumettre une tâche sans importer le langage d’implémentation du service distant. Une machine à états peut rendre visible le travail asynchrone. Ces gains sont réels. Ils réduisent le coût d’assemblage d’un réseau de capacités spécialisées.</p>
+
+                <p>Les questions difficiles arrivent après la première requête réussie. « Terminé » signifie-t-il que l’agent distant a produit une réponse, qu’une personne l’a acceptée ou qu’un système en aval a validé une modification ? « Échoué » conserve-t-il le résultat partiel, les preuves qui y ont conduit et la bonne frontière de nouvelle tentative ? Lorsqu’une tâche passe d’un service Python à un service Go, quels horodatages, identifiants, étiquettes de langue et conditions de politique doivent survivre ? Si le réseau disparaît pendant l’exécution, qui possède l’état lorsque la connexion revient ?</p>
+
+                <p>Une spécification peut décrire des champs et des transitions tout en laissant ouvertes ces significations institutionnelles. Deux implémentations peuvent respecter le même schéma visible et diverger sur la sécurité d’une tâche dupliquée, la validité d’un résultat vide ou la conservation de l’autorité après la traduction d’une instruction. La syntaxe fait circuler les messages. La conformité les rend fiables.</p>
+
+                <h2>La ville d’essai</h2>
+
+                <p>Imaginons une petite ville construite pour les protocoles. Elle possède des routes, des adresses, des bureaux de douane, des hôpitaux, des marchés, des tribunaux et des pannes d’électricité. Chaque agent visiteur reçoit la même carte publique et doit montrer comment il se comporte à chaque frontière. La ville ne demande pas si une implémentation ressemble à une démonstration de référence. Elle demande si une autre institution peut utiliser le service sans deviner.</p>
+
+                <p>Pour un protocole d’agents, la ville d’essai est un environnement de conformité reproductible. Elle contient des jeux de données, des agents de référence, des cas contractuels, des entrées adversariales, des pannes réseau, des changements d’horloge, des variantes linguistiques, des changements de permission et des exercices de reprise. Un service y entre avec son Agent Card et en sort avec des preuves sur ce qu’il prend en charge, ce qu’il refuse, ce qu’il préserve et ce qu’il ne peut pas garantir.</p>
+
+                <p>Une ville d’essai sérieuse devrait vérifier au moins les conditions suivantes :</p>
+
+                <ul>
+                    <li><strong>Découverte :</strong> la capacité publiée, le point d’accès, la version, les exigences d’authentification et les formats pris en charge correspondent au comportement observé au runtime ;</li>
+                    <li><strong>Sémantique des tâches :</strong> les états soumis, en cours, terminé et échoué portent des significations stables, des identifiants, des horodatages, des résultats partiels et des règles de nouvelle tentative ;</li>
+                    <li><strong>Comportement aux frontières :</strong> le service traite les identifiants expirés, les compétences non prises en charge, les données mal formées, les entrées trop volumineuses, les requêtes dupliquées et une dépendance distante qui cesse de répondre ;</li>
+                    <li><strong>Preuves :</strong> un opérateur indépendant peut relier la requête, les événements intermédiaires, la sortie, le refus et l’état final sans dépendre de traces privées du modèle ;</li>
+                    <li><strong>Conditions humaines et linguistiques :</strong> l’interaction préserve la terminologie approuvée, l’accessibilité, la confirmation de l’utilisateur, les avis juridictionnels et la voie de correction.</li>
+                </ul>
+
+                <p>Il s’agit d’un objet différent d’un badge de certification placé sur un site. Le résultat utile est un dossier de preuves lisible par une machine, que peuvent comparer une équipe d’achat, un opérateur de plateforme, un auditeur ou une institution partenaire. Le test doit exposer le jeu de données, la version du protocole, la version de l’implémentation, la date, l’environnement, le résultat et les limites connues. Une marque verte sans conditions de test n’est qu’un logo.</p>
+
+                <h2>Les états de tâche sont des engagements institutionnels</h2>
+
+                <p>Le cycle de vie d’une tâche mérite une attention particulière parce qu’il introduit le temps dans les réseaux d’agents. Une API synchrone peut renvoyer une valeur et fermer l’interaction. Une tâche agentique peut rester ouverte pendant quelques minutes, plusieurs jours ou un cycle d’examen humain. Les mots employés pour ses états deviennent donc des engagements entre organisations.</p>
+
+                <p>« En cours » devrait indiquer où se trouve la tâche, quelle autorisation ou quel bail reste actif et quand la prochaine mise à jour est attendue. « Échoué » devrait distinguer une entrée invalide d’un refus de politique, d’une panne de fournisseur, d’une autorité expirée et d’un défaut d’implémentation. « Terminé » devrait préciser si le résultat est provisoire, révisé, engagé dans un système ou simplement disponible pour récupération. Ces distinctions déterminent si l’appelant réessaie, transmet, paie, archive ou annonce à un usager que son dossier est clos.</p>
+
+                <p>Un laboratoire de conformité peut transformer ces significations en questions exécutables. Soumettez deux fois la même tâche. Interrompez le service après son acceptation par l’agent distant. Modifiez la politique pendant l’exécution. Traduisez la demande dans une autre langue approuvée. Renouvelez l’identifiant avant la fin. Demandez le résultat à un second opérateur. Chaque test révèle si le protocole transporte un état durable ou seulement une conversation réussie.</p>
+
+                <h2>Les normes ont besoin d’une grammaire locale</h2>
+
+                <p>La conversation mondiale sur les protocoles commence souvent dans le vocabulaire de plateformes qui disposent d’une bande passante abondante, de services d’identité stables et de grandes équipes d’ingénierie. Les institutions africaines utiliseront les mêmes protocoles dans d’autres conditions. Un réseau universitaire régional peut avoir besoin d’une connectivité intermittente et d’une voie de correction en langue locale. Une clinique peut avoir besoin d’une escalade humaine qui reste disponible lorsque le modèle distant ne l’est plus. Une coopérative peut devoir faire fonctionner un agent partagé entre plusieurs monnaies, formes juridiques et niveaux d’accès aux appareils.</p>
+
+                <p>La conformité doit donc tester les conditions que les institutions héritent réellement. La question n’est pas de savoir si l’interface a été traduite. Il faut vérifier si l’autorité de la tâche, l’incertitude, la terminologie, le consentement et la voie de correction survivent à la traduction. Un service qui fonctionne en anglais mais supprime le bureau responsable ou l’instruction de recours en wolof, en français, en amharique ou en kiswahili a échoué à un test institutionnel même si chaque champ JSON est valide.</p>
+
+                <p>C’est ici que la souveraineté devient pratique. Les institutions n’ont pas besoin de construire chaque modèle ni de posséder chaque transport. Elles doivent pouvoir définir les jeux de tests selon lesquels un service est accepté. Un organisme régional de normalisation, un consortium universitaire, un laboratoire d’intérêt public ou une fédération d’éditeurs peut maintenir des cas pour ses langues, ses secteurs, ses devoirs liés aux données et ses contraintes d’exploitation. Le protocole reste ouvert ; le sens d’une participation acceptable devient gouvernable localement.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de conformité des agents</strong> : l’infrastructure qui teste si un agent, une implémentation de protocole ou un adaptateur institutionnel se comporte de manière cohérente pour la découverte, les états de tâche, l’autorité, l’échec, la langue, les preuves et la reprise. Son unité de valeur est une interaction entre organisations qu’une autre partie peut adopter sans réécrire une interprétation privée du protocole.</p>
+
+                <ul>
+                    <li><strong>Harnais de conformité :</strong> suites exécutables qui testent les messages, les cycles de vie, les frontières d’authentification, les nouvelles tentatives, l’idempotence et la compatibilité des versions ;</li>
+                    <li><strong>Environnements de référence :</strong> bacs à sable neutres contenant des agents d’exemple, des dossiers institutionnels synthétiques, l’injection de pannes, la manipulation de l’horloge, des contraintes de bande passante et des scénarios rejouables ;</li>
+                    <li><strong>Services de preuve et de certification :</strong> rapports de test signés, profils d’implémentation, limites, historique de régression et comparaisons utilisables pour les achats ;</li>
+                    <li><strong>Adaptateurs sémantiques et linguistiques :</strong> outils qui vérifient la conservation de la terminologie, du consentement, de la juridiction, de l’accessibilité et des instructions de correction entre les transferts d’agents ;</li>
+                    <li><strong>Opérations d’interopérabilité :</strong> équipes qui entretiennent les jeux de tests, publient les changements, reproduisent les défaillances des partenaires et coordonnent les mises à jour d’un protocole ou d’une implémentation.</li>
+                </ul>
+
+                <p>Le capital doit aborder cette couche par l’exposition mesurable. Quel pourcentage des états de tâche possède des tests exécutables ? Combien d’implémentations partenaires réussissent les mêmes jeux de tests ? Quel est le délai médian pour reproduire un résultat contesté ? Quelle quantité de preuves survit à une migration de fournisseur ? À quelle vitesse un adaptateur défaillant peut-il être isolé sans mettre hors ligne tout le réseau ? Quelles langues et juridictions possèdent leurs propres tests d’acceptation ? Ces questions décrivent la capacité à participer à un réseau, et non la simple capacité à annoncer une compatibilité.</p>
+
+                <p>L’acheteur peut être une plateforme, une entreprise réglementée, une agence publique, un consortium de normalisation ou un opérateur d’infrastructure régionale. Le produit peut commencer comme un service de test puis devenir un marché commun de confiance : les implémentations publient leur profil pris en charge, les institutions choisissent les preuves exigées et chaque mise à niveau passe par un ensemble connu de cas transfrontaliers. Cette organisation réduit la taxe cachée de l’intégration sur mesure et donne aux petites institutions un moyen d’évaluer un partenaire puissant sans reproduire toute son organisation d’ingénierie.</p>
+
+                <h2>Construire la ville avant que l’autoroute ne se remplisse</h2>
+
+                <p>Une institution peut commencer avec deux agents et un workflow important. Choisissez une tâche qui traverse une frontière réelle : examen de contrat, réception d’une recherche, demande de service public, comparaison d’achats ou transfert médié par une langue. Écrivez le contrat en langage clair. Définissez les états et les preuves. Ajoutez une défaillance à la fois : soumission dupliquée, autorité expirée, traduction manquante, réseau interrompu, politique modifiée et correction humaine. Invitez une seconde implémentation à exécuter les mêmes jeux de tests.</p>
+
+                <p>Publiez ensuite le résultat avec ses limites. Un rapport de conformité doit être utile à l’ingénieur qui corrige l’adaptateur, au responsable des achats qui compare les fournisseurs, au gardien de la langue qui corrige un terme et à l’institution qui devra défendre un résultat plusieurs mois plus tard. La ville d’essai gagne la confiance par cette discipline ordinaire : la même rue, la même panne, la même question et un registre de ce que chaque visiteur a fait.</p>
+
+                <p>Les protocoles ouverts peuvent abaisser les murs entre les institutions. La conformité détermine si les nouvelles routes peuvent être empruntées sans danger. Pour l’Afrique, cette distinction a un poids politique : la participation à un réseau mondial devient plus forte lorsque les institutions locales peuvent définir les tests, préserver leurs langues et refuser un service dont les promesses ne peuvent pas être inspectées.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/developers-guide-to-ai-agent-protocols/" target="_blank" rel="noopener">Google Developers Blog, « Developer’s Guide to AI Agent Protocols » (18 mars 2026). Décrit MCP, A2A, les protocoles du commerce et de l’interface dans un workflow d’agents, notamment les Agent Cards et la composition entre protocoles.</a></li>
+                    <li><a href="https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a/" target="_blank" rel="noopener">Google Developers Blog, « Build Cross-Language Multi-Agent Team with Google’s Agent Development Kit and A2A » (22 juin 2026). Montre la collaboration d’agents Python et Go par la découverte, la communication JSON-RPC et un cycle de tâches avec les états soumis, en cours, terminé et échoué.</a></li>
+                    <li><a href="https://www.nist.gov/super-intelligence/si-agent-standards-initiative" target="_blank" rel="noopener">National Institute of Standards and Technology, « SI Agent Standards Initiative » (mise à jour le 9 novembre 2026). Identifie les normes pilotées par l’industrie, les protocoles portés par la communauté et les évaluations de sécurité comme des piliers stratégiques pour des agents fiables et interopérables.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/29-webai-minutes.html" target="_blank" rel="noopener">World Wide Web Consortium, « Web &amp; AI IG — TPAC 2026 » (29 octobre 2026). Consigne les discussions sur la coordination du Web agentique, le consentement, l’intervention humaine, l’accessibilité, les paiements, l’identité et les ancres de confiance.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

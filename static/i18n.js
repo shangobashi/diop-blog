@@ -210,6 +210,7 @@
         'article.entry178':     { en: 'Diop Daily #178 — November 2026', fr: 'Diop Quotidien n°178 — Novembre 2026' },
         'article.entry172':     { en: 'Diop Daily #172 — November 2026', fr: 'Diop Quotidien n°172 — Novembre 2026' },
         'article.entry180':     { en: 'Diop Daily #180 — November 2026', fr: 'Diop Quotidien n°180 — Novembre 2026' },
+        'article.entry181':     { en: 'Diop Daily #181 — November 2026', fr: 'Diop Quotidien n°181 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -222,6 +223,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-181': {
+        title: {
+            en: 'The Protocol Needs a Test City',
+            fr: 'Un protocole a besoin d’une ville d’essai'
+        },
+        excerpt: {
+            en: 'Open agent protocols reduce integration work, but interoperability becomes real only when implementations can be tested against shared semantics, failure cases, language conditions, and recovery obligations. The investable layer is an agent-conformance plane for institutions that must work across boundaries.',
+            fr: 'Les protocoles ouverts pour agents réduisent le travail d’intégration, mais l’interopérabilité devient réelle lorsque les implémentations sont testées sur des sémantiques communes, des échecs, des conditions linguistiques et des obligations de reprise. La couche d’investissement est un plan de conformité des agents pour les institutions qui doivent travailler au-delà des frontières.'
+        }
+    },
     'diop-daily-180': {
         title: {
             en: 'Who Signed the State Change?',
