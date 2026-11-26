@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Clock Is Part of the Agent — Diop Research</title>
+    <meta name="description" content="Long-running agents expose a missing infrastructure layer: temporal governance that knows when a record, permission, model route, task, or recovery action is still valid. The investable object is a clock-aware control plane for institutional AI."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry182">Diop Daily #182 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 26, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>temporal governance · durable state · institutional AI</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Clock Is Part of the Agent</h1>
+
+                <p><em>Field note, November 26, 2026.</em> An autonomous system can produce the right answer and still act at the wrong time. A permission can expire between planning and execution. A record can be valid at retrieval and stale at commitment. A model route can be available while the institution’s authority to use it has ended. Once work stretches across pauses, approvals, retries, provider changes, and human schedules, time stops being metadata and becomes part of the action itself.</p>
+
+                <p>Recent public engineering and standards work points toward this problem from different directions. Google’s guide to long-running agents describes workflows that sleep for days, persist explicit checkpoints, resume after container restarts, and use event-driven dormancy rather than blocked threads. The W3C’s October paper on the Web in the AI era asks how long consent lasts for delegated actions and how agents should carry information across sites, sessions, and memory. NIST’s study of deployed AI monitoring treats cadence, responsibility, scope, purpose, and method as open operational questions. Together, these sources describe a system that needs more than logs. It needs a way to decide whether a fact, authority, route, or obligation is still live when the next step arrives.</p>
+
+                <blockquote>
+                    <p>A timestamp records when something happened. Temporal governance decides whether that fact still has the right to act.</p>
+                </blockquote>
+
+                <h2>Long-running work changes the meaning of state</h2>
+
+                <p>A short request can hide a long process. A university may ask an agent to assemble a research intake, wait for a supervisor, check a revised attachment, and prepare a record for a committee. A cooperative may ask for a supplier comparison, pause for prices, and resume after a member confirms the budget. A public office may receive a case in one language, request a document, wait for a response, and then apply a rule whose effective date has changed.</p>
+
+                <p>In each example, the agent needs a state that survives dormancy. Google’s long-running-agent pattern makes the implementation concrete: explicit state schemas replace the assumption that a full conversation transcript is a reliable memory; durable session storage survives restarts; event-driven resumption avoids wasting resources on polling. The architecture is sound, yet a durable checkpoint alone does not answer the temporal question. It tells the system where the work stopped. It does not tell the system whether the world that awaits the work is still the same.</p>
+
+                <p>A checkpoint should therefore carry validity conditions with the state it preserves. The record may need the source version, policy version, authority window, expected response time, data freshness requirement, model route, jurisdiction, and next review deadline. When the agent wakes, it evaluates those conditions before it continues. Resumption becomes a decision, not a blind jump back into the previous step.</p>
+
+                <h2>Every institution has more than one clock</h2>
+
+                <p>Institutional AI operates across clocks that do not advance together:</p>
+
+                <ul>
+                    <li><strong>Record time:</strong> when a document, price, identity attribute, or case fact was created, updated, superseded, or withdrawn;</li>
+                    <li><strong>Authority time:</strong> when a delegation, consent, credential, lease, mandate, or approval begins and ends;</li>
+                    <li><strong>Service time:</strong> when a response, appeal, payment, delivery, review, or escalation is due;</li>
+                    <li><strong>Model time:</strong> which model, policy bundle, tool version, and evaluation state produced a recommendation;</li>
+                    <li><strong>Recovery time:</strong> how long the institution can pause, replay, correct, or replace a step before the outcome becomes unsafe or impossible.</li>
+                </ul>
+
+                <p>These clocks create different failure modes. A permission may remain syntactically valid while its business purpose has expired. A cached translation may be linguistically correct but no longer reflect the institution’s approved terminology. A supplier quote may be accurate at 09:00 and unusable at 16:00. A model can resume from an intact checkpoint after a restart while relying on a policy that was withdrawn during its sleep.</p>
+
+                <p>Most software records these facts separately. Temporal governance joins them at the moment of decision. The question becomes: given the current time, event history, source versions, authority, and recovery budget, may this transition proceed? The answer may be yes, no, or “ask a person.” Each outcome should preserve the evidence that made it reasonable.</p>
+
+                <h2>Freshness is a policy, not a feeling</h2>
+
+                <p>Teams often describe data as fresh when it has been retrieved recently. Retrieval time is only one dimension. A record can be recent and still invalid for the purpose at hand. A policy can be old and still authoritative. A medical instruction, legal form, exchange rate, inventory count, or public notice has a domain-specific validity rule. The agent needs that rule before it decides whether to use the record.</p>
+
+                <p>Temporal controls can be simple. A supplier quote may carry a valid-until time. A delegated action may require a new confirmation after twenty-four hours. A public notice may become effective at midnight in a named jurisdiction. A research source may be acceptable only if its version is cited and its correction history is visible. A model route may be permitted for low-risk summarization but require a fresh evaluation before it handles a new class of transaction.</p>
+
+                <p>The important design move is to make the rule executable and visible. A human reviewer should see why the agent considered a record current, which deadline it applied, and what changed when the decision was delayed. An institution should be able to alter a validity policy without rewriting every agent prompt. The clock belongs in the control plane where it can be tested, audited, and governed.</p>
+
+                <h2>Recovery is a temporal promise</h2>
+
+                <p>Recovery plans usually describe where data is stored and how a service restarts. Institutional recovery also needs to describe when a previous decision can still be trusted. A resumed task may have crossed a deadline, lost a human approval, encountered a changed policy, or passed the period in which a downstream party could safely accept the result.</p>
+
+                <p>A proper resume path asks the following:</p>
+
+                <ul>
+                    <li>Which facts and approvals were valid at the last checkpoint, and which have since expired?</li>
+                    <li>Which external events arrived during dormancy, and can the system prove their order?</li>
+                    <li>Which model, tool, policy, and language resources are still authorized for the next step?</li>
+                    <li>What is the last safe point for automatic action before a human or successor operator must decide?</li>
+                    <li>Can the institution replay the decision with the evidence available at that historical moment?</li>
+                </ul>
+
+                <p>This is where temporal governance meets institutional memory. The archive must preserve both the fact and its validity interval. A later operator should be able to distinguish “the agent knew this at the time” from “the agent should still act on this now.” Without that distinction, a durable system merely preserves stale confidence.</p>
+
+                <h2>African institutions need clocks they can govern</h2>
+
+                <p>Time is also a sovereignty question. Imported platforms often assume uniform connectivity, centralized identity, one dominant language, and business hours that fit their own operating environment. Institutions across Africa work through different calendars of administration, network availability, public holidays, currencies, languages, and authority structures. A workflow that pauses overnight in one system may pause through a connectivity gap, a local review practice, or a community decision in another.</p>
+
+                <p>Local control does not require rejecting shared infrastructure. It requires the ability to define the temporal rules that make participation safe. A university consortium can decide how long a research consent remains valid. A regional publisher can define when a correction supersedes a translation. A clinic can preserve an escalation deadline during intermittent connectivity. A cooperative can set approval windows that reflect its members’ meeting cycles rather than a vendor’s default timeout.</p>
+
+                <p>Those rules should be represented as portable policy and evidence. The institution should retain the authority to pause an agent, extend a mandate, reject a stale record, or appoint a human successor. This is practical intellectual sovereignty: the right to decide which past facts remain usable and which future actions remain permitted.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is a <strong>temporal control plane</strong>: infrastructure that evaluates the validity of records, permissions, model routes, task states, deadlines, and recovery actions at the moment of execution. Its unit of value is a consequential transition that occurs within the right authority window, using evidence that was current for its purpose, with a replayable explanation of what the system knew.</p>
+
+                <ul>
+                    <li><strong>Validity engines:</strong> policy services that calculate freshness, expiry, effective dates, jurisdiction, and permitted use for records and decisions;</li>
+                    <li><strong>Clock-aware workflow runtimes:</strong> systems that pause, wake, escalate, and resume long-running work while preserving event order and checkpoint conditions;</li>
+                    <li><strong>Temporal evidence stores:</strong> append-only records that retain source versions, authority windows, policy changes, model routes, and the facts available at each decision;</li>
+                    <li><strong>Deadline and consent services:</strong> infrastructure for renewals, revocations, human approvals, appeal periods, payment windows, and service obligations;</li>
+                    <li><strong>Federated institutional calendars:</strong> locally governed policy layers that let universities, public agencies, publishers, clinics, and cooperatives participate in shared agent networks without surrendering their clocks.</li>
+                </ul>
+
+                <p>Underwriting should begin with temporal failure, not feature count. Can the system show why an action was valid at the time it ran? Can it prevent a resumed task from using an expired mandate? Can it distinguish a late event from an out-of-order event? Can a policy owner change a validity window without editing the agent? Can a successor operator reconstruct the decision using the records that were available then? Can the same rules operate across languages, providers, and intermittent networks?</p>
+
+                <p>Useful measures include stale-action prevention, deadline-miss detection, time-to-revoke, successful replay at a historical timestamp, percentage of state transitions carrying validity intervals, recovery decisions escalated before their safe window closes, and the share of local policies preserved during provider migration. These metrics describe whether an institution controls time as an operating resource. That is a deeper capability than uptime alone.</p>
+
+                <h2>Give the agent a calendar of truth</h2>
+
+                <p>An institution can begin with one process that crosses a pause: a grant review, a procurement comparison, a public-service case, a research submission, or a payment approval. List every fact and authority the next step will require. Give each one a validity rule. Persist the checkpoint with the rule, source version, policy version, and expected deadline. Introduce a delayed response, an expired approval, an out-of-order event, a changed policy, and a provider restart. Then ask a reviewer to explain why the resumed action was allowed or stopped.</p>
+
+                <p>The goal is a machine that can remember the past without confusing it with the present. An agent earns institutional trust when it knows what it knew, when that knowledge was valid, which authority made action possible, and when it must ask again. The clock is part of the agent because every responsible act has a time in which it is true.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/" target="_blank" rel="noopener">Google Developers Blog, “Build Long-running AI agents that pause, resume, and never lose context with ADK” (May 12, 2026). Describes durable state schemas, persistent sessions, event-driven dormancy, checkpoints, and resumption for workflows that run across days or weeks.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">World Wide Web Consortium, “W3C and the State of the Web in the AI Era” (finalized October 20, 2026). Discusses consent duration for delegated actions, data moving across sites, sessions and agent memory, model-run location, identity, and human control.</a></li>
+                    <li><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-4.pdf" target="_blank" rel="noopener">National Institute of Standards and Technology, “Challenges to the Monitoring of Deployed AI Systems” (March 2026). Organizes post-deployment monitoring questions around responsibility, scope, cadence, purpose, methods, visibility, drift, and changing contexts.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">L’horloge fait partie de l’agent</h1>
+
+                <p><em>Note de terrain, 26 novembre 2026.</em> Un système autonome peut produire la bonne réponse et agir pourtant au mauvais moment. Une permission peut expirer entre la planification et l’exécution. Un dossier peut être valide lors de sa récupération et périmé au moment de sa validation. Une route de modèle peut être disponible alors que l’autorité de l’institution pour l’utiliser a pris fin. Lorsque le travail s’étend sur des pauses, des validations, des nouvelles tentatives, des changements de fournisseur et des horaires humains, le temps cesse d’être une métadonnée pour devenir une partie de l’action elle-même.</p>
+
+                <p>Des travaux publics récents d’ingénierie et de normalisation abordent ce problème depuis plusieurs directions. Le guide de Google consacré aux agents de longue durée décrit des workflows qui dorment pendant plusieurs jours, conservent des points de contrôle explicites, reprennent après le redémarrage d’un conteneur et utilisent une mise en sommeil pilotée par les événements plutôt que des threads bloqués. Le document du W3C d’octobre sur le Web à l’ère de l’IA demande combien de temps dure le consentement pour une action déléguée et comment les agents doivent transporter l’information entre les sites, les sessions et la mémoire. L’étude du NIST sur la surveillance des systèmes d’IA déployés traite la cadence, la responsabilité, le périmètre, la finalité et la méthode comme des questions opérationnelles ouvertes. Ensemble, ces sources décrivent un système qui a besoin de plus que de journaux. Il lui faut un moyen de décider si un fait, une autorité, une route ou une obligation est encore actif lorsque l’étape suivante arrive.</p>
+
+                <blockquote>
+                    <p>Un horodatage indique quand quelque chose s’est produit. La gouvernance temporelle décide si ce fait possède encore le droit d’agir.</p>
+                </blockquote>
+
+                <h2>Le travail de longue durée change le sens de l’état</h2>
+
+                <p>Une demande brève peut dissimuler un processus long. Une université peut demander à un agent de préparer une réception de recherche, d’attendre un responsable, de vérifier une pièce jointe révisée et de préparer un dossier pour un comité. Une coopérative peut demander une comparaison de fournisseurs, attendre les prix et reprendre après la confirmation du budget par un membre. Un service public peut recevoir un dossier dans une langue, demander un document, attendre une réponse, puis appliquer une règle dont la date d’effet a changé.</p>
+
+                <p>Dans chacun de ces exemples, l’agent a besoin d’un état qui survit à la mise en sommeil. Le modèle d’agent de longue durée de Google rend l’implémentation concrète : des schémas d’état explicites remplacent l’hypothèse selon laquelle une transcription complète serait une mémoire fiable ; un stockage durable des sessions survit aux redémarrages ; la reprise pilotée par les événements évite de gaspiller des ressources dans l’interrogation répétée. L’architecture est solide, mais un point de contrôle durable ne répond pas à la question temporelle. Il indique où le travail s’est arrêté. Il n’indique pas si le monde qui attend le travail est encore le même.</p>
+
+                <p>Un point de contrôle devrait donc conserver les conditions de validité avec l’état qu’il préserve. Le dossier peut nécessiter la version de la source, la version de la politique, la fenêtre d’autorité, le délai de réponse attendu, l’exigence de fraîcheur des données, la route de modèle, la juridiction et la prochaine échéance de revue. Lorsque l’agent se réveille, il évalue ces conditions avant de continuer. La reprise devient une décision, et non un retour aveugle à l’étape précédente.</p>
+
+                <h2>Chaque institution possède plusieurs horloges</h2>
+
+                <p>L’IA institutionnelle fonctionne avec des horloges qui n’avancent pas ensemble :</p>
+
+                <ul>
+                    <li><strong>Temps du dossier :</strong> moment où un document, un prix, un attribut d’identité ou un fait de dossier a été créé, mis à jour, remplacé ou retiré ;</li>
+                    <li><strong>Temps de l’autorité :</strong> moment où une délégation, un consentement, un identifiant, un mandat ou une approbation commence et se termine ;</li>
+                    <li><strong>Temps du service :</strong> moment où une réponse, un recours, un paiement, une livraison, une revue ou une escalade est exigible ;</li>
+                    <li><strong>Temps du modèle :</strong> modèle, politique, version d’outil et état d’évaluation qui ont produit une recommandation ;</li>
+                    <li><strong>Temps de reprise :</strong> durée pendant laquelle l’institution peut suspendre, rejouer, corriger ou remplacer une étape avant que le résultat ne devienne dangereux ou impossible.</li>
+                </ul>
+
+                <p>Ces horloges créent des modes d’échec différents. Une permission peut rester syntaxiquement valide alors que sa finalité métier a expiré. Une traduction en cache peut être linguistiquement correcte tout en ne reflétant plus la terminologie approuvée de l’institution. Une offre de fournisseur peut être exacte à 9 heures et inutilisable à 16 heures. Un modèle peut reprendre depuis un point de contrôle intact après un redémarrage tout en utilisant une politique retirée pendant son sommeil.</p>
+
+                <p>La plupart des logiciels enregistrent ces faits séparément. La gouvernance temporelle les réunit au moment de la décision. La question devient : compte tenu de l’heure courante, de l’historique des événements, des versions des sources, de l’autorité et du budget de reprise, cette transition peut-elle continuer ? La réponse peut être oui, non ou « demander à une personne ». Chaque issue devrait préserver les éléments qui la rendent raisonnable.</p>
+
+                <h2>La fraîcheur est une politique, pas une impression</h2>
+
+                <p>Les équipes décrivent souvent une donnée comme fraîche parce qu’elle a été récupérée récemment. Le moment de récupération n’est qu’une dimension. Un dossier peut être récent et rester invalide pour le but visé. Une politique peut être ancienne et demeurer officielle. Une instruction médicale, un formulaire juridique, un taux de change, un inventaire ou un avis public possède une règle de validité propre à son domaine. L’agent a besoin de cette règle avant de décider d’utiliser le dossier.</p>
+
+                <p>Les contrôles temporels peuvent rester simples. Une offre de fournisseur peut porter une date d’expiration. Une action déléguée peut exiger une nouvelle confirmation après vingt-quatre heures. Un avis public peut prendre effet à minuit dans une juridiction déterminée. Une source de recherche peut être acceptable seulement si sa version est citée et son historique de correction visible. Une route de modèle peut être permise pour un résumé à faible risque mais exiger une nouvelle évaluation lorsqu’elle traite une autre classe de transaction.</p>
+
+                <p>Le mouvement décisif consiste à rendre la règle exécutable et visible. Un réviseur humain devrait voir pourquoi l’agent a considéré un dossier comme actuel, quelle échéance il a appliquée et ce qui a changé lorsque la décision a été retardée. Une institution devrait pouvoir modifier une politique de validité sans réécrire chaque prompt d’agent. L’horloge appartient au plan de contrôle, où elle peut être testée, auditée et gouvernée.</p>
+
+                <h2>La reprise est une promesse temporelle</h2>
+
+                <p>Les plans de reprise décrivent généralement où les données sont stockées et comment un service redémarre. La reprise institutionnelle doit aussi indiquer à quel moment une décision précédente peut encore être considérée comme fiable. Une tâche reprise peut avoir dépassé une échéance, perdu une validation humaine, rencontré une politique modifiée ou franchi la période pendant laquelle une partie en aval pouvait accepter le résultat sans danger.</p>
+
+                <p>Une bonne voie de reprise pose les questions suivantes :</p>
+
+                <ul>
+                    <li>Quels faits et quelles approbations étaient valides au dernier point de contrôle, et lesquels ont expiré depuis ?</li>
+                    <li>Quels événements externes sont arrivés pendant la mise en sommeil, et le système peut-il prouver leur ordre ?</li>
+                    <li>Quels modèles, outils, politiques et ressources linguistiques restent autorisés pour l’étape suivante ?</li>
+                    <li>Quel est le dernier point sûr pour une action automatique avant qu’une personne ou un opérateur successeur ne doive décider ?</li>
+                    <li>L’institution peut-elle rejouer la décision avec les preuves disponibles à ce moment historique ?</li>
+                </ul>
+
+                <p>C’est ici que la gouvernance temporelle rencontre la mémoire institutionnelle. L’archive doit préserver le fait et son intervalle de validité. Un opérateur ultérieur doit pouvoir distinguer « l’agent savait cela à ce moment-là » de « l’agent doit encore agir sur cette information maintenant ». Sans cette distinction, un système durable ne fait que préserver une confiance périmée.</p>
+
+                <h2>Les institutions africaines ont besoin d’horloges gouvernables</h2>
+
+                <p>Le temps est aussi une question de souveraineté. Les plateformes importées supposent souvent une connectivité uniforme, une identité centralisée, une langue dominante et des horaires d’activité adaptés à leur propre environnement. Les institutions africaines travaillent avec d’autres calendriers administratifs, disponibilités réseau, jours fériés, monnaies, langues et structures d’autorité. Un workflow qui s’interrompt une nuit dans un système peut s’interrompre pendant une rupture de connectivité, une pratique locale de revue ou une décision communautaire dans un autre.</p>
+
+                <p>Le contrôle local n’exige pas le rejet d’une infrastructure partagée. Il exige la capacité de définir les règles temporelles qui rendent la participation sûre. Un consortium universitaire peut décider combien de temps un consentement de recherche reste valide. Un éditeur régional peut définir le moment où une correction remplace une traduction. Une clinique peut conserver un délai d’escalade pendant une connectivité intermittente. Une coopérative peut fixer des fenêtres d’approbation qui correspondent aux cycles de réunion de ses membres plutôt qu’au délai par défaut d’un fournisseur.</p>
+
+                <p>Ces règles devraient être représentées comme une politique et des preuves portables. L’institution devrait conserver le pouvoir de suspendre un agent, de prolonger un mandat, de rejeter un dossier périmé ou de nommer un successeur humain. C’est une forme pratique de souveraineté intellectuelle : le droit de décider quels faits du passé restent utilisables et quelles actions futures restent permises.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de contrôle temporel</strong> : une infrastructure qui évalue la validité des dossiers, des permissions, des routes de modèle, des états de tâche, des échéances et des actions de reprise au moment de l’exécution. Son unité de valeur est une transition importante qui se produit dans la bonne fenêtre d’autorité, à partir de preuves actuelles pour sa finalité, avec une explication rejouable de ce que le système savait.</p>
+
+                <ul>
+                    <li><strong>Moteurs de validité :</strong> services de politique qui calculent la fraîcheur, l’expiration, les dates d’effet, la juridiction et l’usage permis des dossiers et des décisions ;</li>
+                    <li><strong>Runtimes de workflow sensibles à l’horloge :</strong> systèmes qui suspendent, réveillent, escaladent et reprennent le travail de longue durée en préservant l’ordre des événements et les conditions des points de contrôle ;</li>
+                    <li><strong>Stockages de preuves temporelles :</strong> registres append-only qui conservent les versions des sources, les fenêtres d’autorité, les changements de politique, les routes de modèle et les faits disponibles à chaque décision ;</li>
+                    <li><strong>Services d’échéance et de consentement :</strong> infrastructures pour les renouvellements, révocations, validations humaines, périodes de recours, fenêtres de paiement et obligations de service ;</li>
+                    <li><strong>Calendriers institutionnels fédérés :</strong> couches de politique gouvernées localement qui permettent aux universités, agences publiques, éditeurs, cliniques et coopératives de participer à des réseaux d’agents partagés sans céder leurs horloges.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par l’échec temporel et non par le nombre de fonctionnalités. Le système peut-il montrer pourquoi une action était valide au moment où elle a été exécutée ? Peut-il empêcher une tâche reprise d’utiliser un mandat expiré ? Peut-il distinguer un événement tardif d’un événement arrivé dans le désordre ? Un responsable de politique peut-il modifier une fenêtre de validité sans éditer l’agent ? Un opérateur successeur peut-il reconstruire la décision à partir des dossiers alors disponibles ? Les mêmes règles fonctionnent-elles entre les langues, les fournisseurs et les réseaux intermittents ?</p>
+
+                <p>Les mesures utiles comprennent la prévention des actions périmées, la détection des échéances manquées, le délai de révocation, la réussite d’une relecture à un horodatage historique, le pourcentage de transitions portant des intervalles de validité, les décisions de reprise escaladées avant la fermeture de leur fenêtre sûre et la part des politiques locales conservées lors d’une migration de fournisseur. Ces métriques décrivent si une institution contrôle le temps comme une ressource d’exploitation. C’est une capacité plus profonde que la seule disponibilité.</p>
+
+                <h2>Donner à l’agent un calendrier du vrai</h2>
+
+                <p>Une institution peut commencer par un processus qui traverse une pause : examen de subvention, comparaison d’achats, dossier de service public, dépôt de recherche ou approbation de paiement. Énumérez chaque fait et chaque autorité nécessaires à l’étape suivante. Donnez à chacun une règle de validité. Conservez le point de contrôle avec la règle, la version de la source, la version de la politique et l’échéance attendue. Introduisez une réponse tardive, une approbation expirée, un événement désordonné, une politique modifiée et un redémarrage du fournisseur. Demandez ensuite à un réviseur d’expliquer pourquoi l’action reprise a été autorisée ou arrêtée.</p>
+
+                <p>Le but est une machine capable de se souvenir du passé sans le confondre avec le présent. Un agent gagne la confiance institutionnelle lorsqu’il sait ce qu’il savait, à quel moment cette connaissance était valide, quelle autorité rendait l’action possible et quand il doit demander à nouveau. L’horloge fait partie de l’agent parce que tout acte responsable possède un moment où il est vrai.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/" target="_blank" rel="noopener">Google Developers Blog, « Build Long-running AI agents that pause, resume, and never lose context with ADK » (12 mai 2026). Décrit les schémas d’état durables, les sessions persistantes, la mise en sommeil pilotée par les événements, les points de contrôle et la reprise de workflows qui durent plusieurs jours ou semaines.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html" target="_blank" rel="noopener">World Wide Web Consortium, « W3C and the State of the Web in the AI Era » (finalisé le 20 octobre 2026). Analyse la durée du consentement pour les actions déléguées, le déplacement des données entre sites, sessions et mémoire d’agent, le lieu d’exécution des modèles, l’identité et le contrôle humain.</a></li>
+                    <li><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-4.pdf" target="_blank" rel="noopener">National Institute of Standards and Technology, « Challenges to the Monitoring of Deployed AI Systems » (mars 2026). Organise les questions de surveillance après déploiement autour de la responsabilité, du périmètre, de la cadence, de la finalité, des méthodes, de la visibilité, de la dérive et des contextes changeants.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

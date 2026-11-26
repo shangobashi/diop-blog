@@ -211,6 +211,7 @@
         'article.entry172':     { en: 'Diop Daily #172 — November 2026', fr: 'Diop Quotidien n°172 — Novembre 2026' },
         'article.entry180':     { en: 'Diop Daily #180 — November 2026', fr: 'Diop Quotidien n°180 — Novembre 2026' },
         'article.entry181':     { en: 'Diop Daily #181 — November 2026', fr: 'Diop Quotidien n°181 — Novembre 2026' },
+        'article.entry182':     { en: 'Diop Daily #182 — November 2026', fr: 'Diop Quotidien n°182 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
         'article.back':         { en: 'Back to Journal', fr: 'Retour au journal' },
@@ -223,6 +224,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-182': {
+        title: {
+            en: 'The Clock Is Part of the Agent',
+            fr: 'L’horloge fait partie de l’agent'
+        },
+        excerpt: {
+            en: 'Long-running agents expose a missing infrastructure layer: temporal governance that knows when a record, permission, model route, task, or recovery action is still valid. The investable object is a clock-aware control plane for institutional AI.',
+            fr: 'Les agents de longue durée exposent une couche d’infrastructure manquante : une gouvernance temporelle qui sait quand un dossier, une permission, une route de modèle, une tâche ou une action de reprise reste valide. L’objet d’investissement est un plan de contrôle sensible à l’horloge pour l’IA institutionnelle.'
+        }
+    },
     'diop-daily-181': {
         title: {
             en: 'The Protocol Needs a Test City',
