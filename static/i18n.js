@@ -211,6 +211,7 @@
         'article.entry172':     { en: 'Diop Daily #172 — November 2026', fr: 'Diop Quotidien n°172 — Novembre 2026' },
         'article.entry180':     { en: 'Diop Daily #180 — November 2026', fr: 'Diop Quotidien n°180 — Novembre 2026' },
         'article.entry181':     { en: 'Diop Daily #181 — November 2026', fr: 'Diop Quotidien n°181 — Novembre 2026' },
+        'article.entry183':     { en: 'Diop Daily #183 — November 2026', fr: 'Diop Quotidien n°183 — Novembre 2026' },
         'article.entry182':     { en: 'Diop Daily #182 — November 2026', fr: 'Diop Quotidien n°182 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
@@ -224,6 +225,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-183': {
+        title: {
+            en: 'The Trace Must Travel',
+            fr: 'La trace doit voyager'
+        },
+        excerpt: {
+            en: 'Agents now run across clouds, runtimes, and vendors, but a useful trace must follow the whole session rather than a single call. The investable layer is a portable behavioral-evidence plane that lets institutions detect drift, contain misuse, and keep the record under their own jurisdiction.',
+            fr: 'Les agents circulent désormais entre clouds, runtimes et fournisseurs, mais une trace utile doit suivre la session entière plutôt qu’un seul appel. La couche d’investissement est un plan de preuves comportementales portables qui permet aux institutions de détecter la dérive, de contenir les abus et de conserver le registre sous leur propre juridiction.'
+        }
+    },
     'diop-daily-182': {
         title: {
             en: 'The Clock Is Part of the Agent',

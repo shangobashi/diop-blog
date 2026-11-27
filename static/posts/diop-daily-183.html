@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Trace Must Travel — Diop Research</title>
+    <meta name="description" content="Agents now run across clouds, runtimes, and vendors, but a useful trace must follow the whole session rather than a single call. The investable layer is a portable behavioral-evidence plane that lets institutions detect drift, contain misuse, and keep the record under their own jurisdiction."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry183">Diop Daily #183 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 27, 2026</time>
+                    <span>·</span>
+                    <span data-rt="9">9 min read</span>
+                    <span>·</span>
+                    <span>behavioral evidence · cross-cloud observability · institutional sovereignty</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">The Trace Must Travel</h1>
+
+                <p><em>Field note, November 27, 2026.</em> An agent can leave a perfect log and still leave an institution blind. The log may show a tool call, a response code, and a timestamp while hiding the sequence that gave the action its meaning. A useful trace has to travel with the work across models, runtimes, clouds, teams, and jurisdictions. It must remain intelligible when the service that produced one span is no longer the service that owns the consequence.</p>
+
+                <p>Recent public signals make this problem concrete. Google’s November 20 description of Agent Anomaly Detection extends analysis to agents running on AWS Lambda and Microsoft Foundry through OpenTelemetry-compatible traces and logs. Its examples show why a single call is a weak unit: a scraper can use an allowed inventory function repeatedly until the session reveals systematic extraction, and an order note can steer an otherwise valid refund tool toward an unsafe result. NIST’s work on monitoring deployed AI systems describes open questions around visibility, responsibility, cadence, methods, drift, and changing contexts. The OpenTelemetry project explains the underlying principle: traces connect spans across a distributed request so an operator can ask why a system behaved as it did.</p>
+
+                <blockquote>
+                    <p>A log remembers an event. A travelling trace preserves the relationship between events when responsibility crosses a boundary.</p>
+                </blockquote>
+
+                <h2>A trace is not a log</h2>
+
+                <p>Logs are valuable because they provide durable observations. They become inadequate when they are treated as the whole story. A tool log may say that <code>issue_refund</code> was called with a particular amount. It may omit the user request, the retrieved order note, the policy that should have constrained the amount, the previous failed attempt, and the model’s route through the tool chain. Each record is locally true. The session can still be institutionally false if the relationships between records disappear.</p>
+
+                <p>Distributed tracing gives software a way to retain those relationships. A trace has a root request, child spans, timing information, attributes, and events. In an agent system, the root may be a resident’s question, a purchase request, a research task, or a public notice. Its children may include retrieval, translation, model inference, tool selection, approval, payment, and correction. The point is not to preserve every private thought. The point is to preserve the accountable path from a request to an outcome.</p>
+
+                <p>This distinction changes what an institution should ask its vendors. “Do you have logs?” is a storage question. “Can we reconstruct the behavior that produced this consequence?” is a governance question. The second question requires correlation identifiers, stable actor names, policy versions, tool arguments, model and deployment identifiers, redaction rules, outcome states, and a route for linking a later correction to the original event.</p>
+
+                <h2>Behavior hides in the session</h2>
+
+                <p>Agent risk often appears as a shape across time rather than as a single forbidden instruction. A routine inventory request can become systematic extraction through repetition. A customer-support exchange can drift from order lookup into unauthorized refunds. A research assistant can begin with a bounded corpus and gradually expand retrieval until it crosses a privacy or cost boundary. Every individual call may be syntactically valid. The session carries the evidence of the change.</p>
+
+                <p>Google’s cross-cloud examples are vendor-reported and the feature remains in private preview, so they establish a product direction rather than a general measurement of agent incidents. Their architectural claim is still useful: behavioral analysis can operate from traces and logs without moving the agent’s model and tool execution into the monitoring provider’s runtime. That separation matters. An institution may choose one cloud for inference, another for data, and a local operator for accountability. The trace must cross those arrangements without making any one provider the unquestioned owner of institutional memory.</p>
+
+                <p>A session-level trace should therefore carry more than a waterfall of calls. It should preserve the conditions that allow an independent reviewer to distinguish ordinary variation from drift:</p>
+
+                <ul>
+                    <li><strong>Intent and purpose:</strong> the declared task, represented principal, permitted audience, and business or public purpose;</li>
+                    <li><strong>Behavioral sequence:</strong> the order, repetition, branching, and escalation pattern of retrievals, tool calls, refusals, approvals, and retries;</li>
+                    <li><strong>Boundary context:</strong> the model route, tool version, policy bundle, jurisdiction, language, deployment, and authority window;</li>
+                    <li><strong>Outcome and exposure:</strong> the state changed, data touched, cost incurred, human intervention, and unresolved uncertainty;</li>
+                    <li><strong>Correction path:</strong> the event that challenged the action, the decision that followed, and the evidence preserved for learning.</li>
+                </ul>
+
+                <h2>The cloud boundary is a governance boundary</h2>
+
+                <p>Cloud architecture often divides responsibility by infrastructure: one provider runs the model, another hosts the database, a third supplies the agent framework, and a fourth stores the monitoring data. That arrangement can be efficient. It can also divide the evidence until no participant can explain the whole action.</p>
+
+                <p>The trace is the object that joins the boundary. A span from an AWS workload must be correlatable with the policy decision in a regional system, the retrieval event in a separate data service, and the human approval recorded by an institution. The correlation does not mean that every party should receive every field. Privacy, jurisdiction, and commercial confidentiality still require selective disclosure. It means the parties must agree on enough shared identifiers and event semantics to answer a dispute.</p>
+
+                <p>This is where OpenTelemetry’s general observability model becomes a foundation rather than a finished solution. Its traces, metrics, and logs provide common transport and correlation patterns. Agent systems add harder questions: how should a delegated purpose be represented, how should a tool invocation show the authority behind it, how should a translated instruction link to its source, and which parts of a model interaction can be retained without turning the trace into an uncontrolled copy of sensitive data?</p>
+
+                <p>A portable trace is therefore a policy object. It should specify who may read a field, how long the field remains useful, which institution owns the retention decision, and what must remain available for a correction or appeal. Portability without these rules produces a new form of leakage, while custody without portability produces a new form of dependency.</p>
+
+                <h2>African institutions need custody of the trace</h2>
+
+                <p>For African institutions, this is more than a cloud-operations concern. A trace records how an institution’s categories become machine action. It can show which language was recognized, which identity was accepted, which office was treated as authoritative, which exception was escalated, and which local rule disappeared at a system boundary. Whoever controls that record can eventually shape how the institution understands its own operations.</p>
+
+                <p>Imported platforms often centralize telemetry in the provider’s console. The arrangement is convenient for the vendor and opaque to the institution. A university, clinic, publisher, cooperative, or public office needs a local or federated copy that can be searched, redacted, exported, and interpreted under its own law and terminology. The institution should be able to invite a provider to analyze a bounded trace while keeping the durable operational memory under institutional custody.</p>
+
+                <p>This is practical sovereignty. It does not require rejecting common protocols or shared clouds. It requires refusing the idea that interoperability means surrendering the record of what happened. A regional research network could define its own trace fields for language, consent, authorship, and correction. A public-service consortium could maintain trace fixtures that test whether an escalation remains visible when the handoff crosses a vendor. A publisher could preserve the chain from source document to translated claim to public correction.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is a <strong>portable behavioral-evidence plane</strong>: infrastructure that carries correlated traces across agent runtimes and institutional boundaries while preserving enough context to detect drift, investigate misuse, limit exposure, and support correction. Its unit of value is a consequential session that remains explainable when its components are distributed.</p>
+
+                <ul>
+                    <li><strong>Cross-runtime trace relays:</strong> gateways that normalize agent events across clouds without forcing execution or custody into one provider;</li>
+                    <li><strong>Session graph stores:</strong> systems that connect requests, spans, tools, policies, identities, data access, outcomes, and corrections for review;</li>
+                    <li><strong>Behavioral detection engines:</strong> services that identify repetition, escalation, resource exhaustion, privilege abuse, and unusual sequences across complete sessions;</li>
+                    <li><strong>Privacy and jurisdiction controls:</strong> field-level redaction, retention, selective disclosure, local-language metadata, and export rules governed by the institution;</li>
+                    <li><strong>Trace-based response operations:</strong> teams and tooling that turn an observed pattern into containment, notification, remediation, and a test that prevents recurrence.</li>
+                </ul>
+
+                <p>Underwriting should begin with a reconstruction exercise. Give an independent reviewer one consequential session and ask for the chain from request to final state. Then remove the primary cloud, rotate the monitoring provider, redact a sensitive field, introduce a translated instruction, and replay the disputed branch. The system should preserve enough evidence to explain what happened without preserving everything indiscriminately. Useful measures include reconstruction success across providers, time to detect a session-level anomaly, time to contain a risky tool, percentage of traces with complete actor and policy context, redaction coverage, retention-policy compliance, and correction latency.</p>
+
+                <p>The strongest products in this layer will be judged by what they allow an institution to do after an anomaly appears. Can a university suspend one workload without silencing every research agent? Can a clinic show which records were touched without exposing unrelated patients? Can a publisher prove which source and translation produced a disputed sentence? Can a regional operator keep investigating when one cloud is unavailable? Observability becomes infrastructure when it changes the institution’s options.</p>
+
+                <h2>Build the smallest travelling trace</h2>
+
+                <p>An institution can begin with one workflow whose failure would matter: a refund, a research intake, a procurement decision, a public-service case, or a publishing correction. Define the root request and the consequential outcome. Give every handoff a correlation identifier. Record the agent, deployment, policy, language, tool, data boundary, authority, and result. Test a repeated call, a translated instruction, a provider interruption, an attempted privilege escalation, and a human correction.</p>
+
+                <p>Then keep the trace under a governed custody model. Decide which fields remain local, which may cross a boundary, who may inspect them, when they expire, and how an affected person can challenge the interpretation. The aim is a record that travels far enough to preserve responsibility and stays close enough to remain answerable to the institution that bears the consequence.</p>
+
+                <p>An agent that crosses clouds without carrying its trace carries capability without memory. The future will belong to institutions that can let intelligence move while keeping the evidence of movement in their own hands.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/agent-anomaly-detection-safeguarding-agents-across-other-clouds/" target="_blank" rel="noopener">Google Developers Blog, “Agent Anomaly Detection: Safeguarding agents across other clouds” (November 20, 2026). Describes private-preview analysis of agents running on AWS Lambda and Microsoft Foundry through OpenTelemetry-compatible telemetry, including session-level findings for scraping, resource exhaustion, privilege abuse, and tool misuse.</a></li>
+                    <li><a href="https://opentelemetry.io/docs/concepts/observability-primer/" target="_blank" rel="noopener">OpenTelemetry, “Observability primer” (last modified April 23, 2026). Defines telemetry, traces, spans, logs, and distributed tracing as mechanisms for understanding behavior across complex systems and investigating novel problems.</a></li>
+                    <li><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-4.pdf" target="_blank" rel="noopener">National Institute of Standards and Technology, “Challenges to the Monitoring of Deployed AI Systems” (March 2026). Organizes post-deployment monitoring challenges around visibility, responsibility, scope, cadence, purpose, methods, drift, changing contexts, and resource requirements.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/29-webai-minutes.html" target="_blank" rel="noopener">World Wide Web Consortium, “Web &amp; AI IG — TPAC 2026” (October 29, 2026). Records discussions about agents acting on the Web, human involvement, consent, privacy, accessibility, trust anchors, and evaluation of retrieval quality, latency, cost, and multilingual answers.</a></li>
+                </ul>
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">La trace doit voyager</h1>
+
+                <p><em>Note de terrain, 27 novembre 2026.</em> Un agent peut laisser un journal parfait et laisser malgré tout une institution aveugle. Le journal peut montrer un appel d’outil, un code de réponse et un horodatage tout en masquant la séquence qui donnait son sens à l’action. Une trace utile doit voyager avec le travail entre modèles, runtimes, clouds, équipes et juridictions. Elle doit rester intelligible lorsque le service qui a produit un segment n’est plus celui qui porte la conséquence.</p>
+
+                <p>Des signaux publics récents rendent ce problème concret. La description publiée par Google le 20 novembre sur Agent Anomaly Detection étend l’analyse aux agents exécutés sur AWS Lambda et Microsoft Foundry au moyen de traces et de journaux compatibles avec OpenTelemetry. Ses exemples montrent pourquoi un appel isolé constitue une unité faible : un outil d’inventaire autorisé peut être répété jusqu’à ce que la session révèle une extraction systématique, et une note de commande peut pousser un outil de remboursement pourtant valide vers un résultat dangereux. Les travaux du NIST sur la surveillance des systèmes d’IA déployés décrivent des questions ouvertes concernant la visibilité, la responsabilité, la cadence, les méthodes, la dérive et les contextes changeants. Le projet OpenTelemetry expose le principe sous-jacent : les traces relient les segments d’une requête distribuée afin de permettre à un opérateur de demander pourquoi un système s’est comporté ainsi.</p>
+
+                <blockquote>
+                    <p>Un journal se souvient d’un événement. Une trace voyageuse préserve la relation entre les événements lorsque la responsabilité franchit une frontière.</p>
+                </blockquote>
+
+                <h2>Une trace n’est pas un journal</h2>
+
+                <p>Les journaux sont précieux parce qu’ils fournissent des observations durables. Ils deviennent insuffisants lorsqu’on les traite comme toute l’histoire. Un journal d’outil peut indiquer que <code>issue_refund</code> a été appelé avec un certain montant. Il peut omettre la demande de l’utilisateur, la note de commande récupérée, la politique qui devait limiter le montant, la tentative précédente et le chemin suivi par le modèle entre les outils. Chaque registre est localement vrai. La session peut rester institutionnellement fausse si les relations entre les registres disparaissent.</p>
+
+                <p>La traçabilité distribuée donne au logiciel un moyen de conserver ces relations. Une trace possède une requête racine, des segments enfants, des informations temporelles, des attributs et des événements. Dans un système d’agents, la racine peut être la question d’un usager, une demande d’achat, une tâche de recherche ou un avis public. Ses enfants peuvent comprendre la récupération, la traduction, l’inférence du modèle, la sélection d’un outil, la validation, le paiement et la correction. Il ne s’agit pas de conserver chaque pensée privée. Il s’agit de préserver le chemin responsable qui va d’une demande à un résultat.</p>
+
+                <p>Cette distinction change les questions qu’une institution doit poser à ses fournisseurs. « Avez-vous des journaux ? » est une question de stockage. « Pouvez-vous reconstruire le comportement qui a produit cette conséquence ? » est une question de gouvernance. La seconde exige des identifiants de corrélation, des noms d’acteurs stables, des versions de politiques, des arguments d’outils, des identifiants de modèles et de déploiements, des règles de rédaction, des états de résultat et une voie permettant de relier une correction ultérieure à l’événement original.</p>
+
+                <h2>Le comportement se cache dans la session</h2>
+
+                <p>Le risque agentique apparaît souvent comme une forme qui se déploie dans le temps plutôt que comme une instruction unique interdite. Une demande d’inventaire ordinaire peut devenir une extraction systématique par répétition. Un échange avec le service client peut passer de la consultation d’une commande à des remboursements non autorisés. Un assistant de recherche peut commencer avec un corpus délimité puis élargir progressivement la récupération jusqu’à franchir une frontière de confidentialité ou de coût. Chaque appel individuel peut être syntaxiquement valide. La session contient la preuve du changement.</p>
+
+                <p>Les exemples transcloud de Google sont déclarés par le fournisseur et la fonctionnalité reste en aperçu privé ; ils indiquent donc une direction de produit plutôt qu’une mesure générale des incidents d’agents. Leur affirmation architecturale reste utile : l’analyse comportementale peut fonctionner à partir des traces et des journaux sans déplacer l’exécution du modèle et des outils vers le runtime du fournisseur de surveillance. Cette séparation compte. Une institution peut choisir un cloud pour l’inférence, un autre pour les données et un opérateur local pour la responsabilité. La trace doit traverser ces arrangements sans faire d’un fournisseur le propriétaire incontesté de la mémoire institutionnelle.</p>
+
+                <p>Une trace de session doit donc transporter davantage qu’une cascade d’appels :</p>
+
+                <ul>
+                    <li><strong>Intention et finalité :</strong> tâche déclarée, principal représenté, public autorisé et finalité métier ou publique ;</li>
+                    <li><strong>Séquence comportementale :</strong> ordre, répétition, embranchements et escalades des récupérations, appels d’outils, refus, validations et nouvelles tentatives ;</li>
+                    <li><strong>Contexte de frontière :</strong> route du modèle, version de l’outil, ensemble de politiques, juridiction, langue, déploiement et fenêtre d’autorité ;</li>
+                    <li><strong>Résultat et exposition :</strong> état modifié, données consultées, coût engagé, intervention humaine et incertitude non résolue ;</li>
+                    <li><strong>Voie de correction :</strong> événement ayant contesté l’action, décision qui a suivi et preuves conservées pour l’apprentissage.</li>
+                </ul>
+
+                <h2>La frontière du cloud est une frontière de gouvernance</h2>
+
+                <p>Les architectures cloud répartissent souvent la responsabilité selon l’infrastructure : un fournisseur exécute le modèle, un autre héberge la base de données, un troisième fournit le framework d’agents et un quatrième conserve les données de surveillance. Cette organisation peut être efficace. Elle peut aussi diviser les preuves jusqu’à ce qu’aucun participant ne puisse expliquer l’action complète.</p>
+
+                <p>La trace est l’objet qui relie la frontière. Un segment provenant d’une charge de travail AWS doit pouvoir être corrélé avec la décision de politique d’un système régional, l’événement de récupération d’un service de données distinct et la validation humaine enregistrée par une institution. La corrélation ne signifie pas que chaque partie doit recevoir chaque champ. La vie privée, la juridiction et la confidentialité commerciale exigent toujours une divulgation sélective. Elle signifie que les parties doivent convenir d’assez d’identifiants partagés et de sémantiques d’événements pour répondre à une contestation.</p>
+
+                <p>C’est là que le modèle général d’observabilité d’OpenTelemetry devient une fondation plutôt qu’une solution achevée. Ses traces, métriques et journaux fournissent des schémas communs de transport et de corrélation. Les systèmes d’agents ajoutent des questions plus difficiles : comment représenter une finalité déléguée, comment montrer l’autorité derrière une invocation d’outil, comment relier une instruction traduite à sa source et quelles parties d’une interaction avec un modèle peuvent être conservées sans transformer la trace en copie incontrôlée de données sensibles ?</p>
+
+                <p>Une trace portable est donc un objet de politique. Elle devrait préciser qui peut lire un champ, pendant combien de temps ce champ reste utile, quelle institution possède la décision de conservation et ce qui doit rester disponible pour une correction ou un recours. La portabilité sans ces règles crée une nouvelle forme de fuite, tandis que la garde sans portabilité crée une nouvelle forme de dépendance.</p>
+
+                <h2>Les institutions africaines ont besoin de la garde de la trace</h2>
+
+                <p>Pour les institutions africaines, cette question dépasse l’exploitation du cloud. Une trace enregistre la manière dont les catégories d’une institution deviennent une action machine. Elle peut montrer quelle langue a été reconnue, quelle identité a été acceptée, quel bureau a été considéré comme compétent, quelle exception a été escaladée et quelle règle locale a disparu à une frontière système. Celui qui contrôle ce registre peut finir par façonner la manière dont l’institution comprend ses propres opérations.</p>
+
+                <p>Les plateformes importées centralisent souvent la télémétrie dans la console du fournisseur. Cette organisation est commode pour le fournisseur et opaque pour l’institution. Une université, une clinique, un éditeur, une coopérative ou un service public a besoin d’une copie locale ou fédérée qui puisse être recherchée, expurgée, exportée et interprétée selon son propre droit et sa propre terminologie. L’institution devrait pouvoir inviter un fournisseur à analyser une trace délimitée tout en conservant la mémoire opérationnelle durable sous sa propre garde.</p>
+
+                <p>C’est une souveraineté pratique. Elle n’exige pas le rejet des protocoles communs ni des clouds partagés. Elle exige de refuser l’idée que l’interopérabilité implique de céder le registre de ce qui s’est produit. Un réseau régional de recherche peut définir ses propres champs de trace pour la langue, le consentement, l’auteur et la correction. Un consortium de services publics peut maintenir des jeux de traces qui vérifient si une escalade reste visible lorsque le transfert franchit un fournisseur. Un éditeur peut conserver la chaîne qui va du document source à l’affirmation traduite puis à la correction publique.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan de preuves comportementales portables</strong> : une infrastructure qui transporte des traces corrélées entre runtimes d’agents et frontières institutionnelles tout en conservant assez de contexte pour détecter la dérive, enquêter sur les abus, limiter l’exposition et soutenir la correction. Son unité de valeur est une session importante qui reste explicable lorsque ses composants sont distribués.</p>
+
+                <ul>
+                    <li><strong>Relais de traces entre runtimes :</strong> passerelles qui normalisent les événements d’agents entre clouds sans imposer l’exécution ou la garde à un seul fournisseur ;</li>
+                    <li><strong>Stockages en graphe des sessions :</strong> systèmes qui relient demandes, segments, outils, politiques, identités, accès aux données, résultats et corrections pour l’examen ;</li>
+                    <li><strong>Moteurs de détection comportementale :</strong> services qui repèrent répétition, escalade, épuisement des ressources, abus de privilèges et séquences inhabituelles sur des sessions complètes ;</li>
+                    <li><strong>Contrôles de vie privée et de juridiction :</strong> expurgation au niveau du champ, conservation, divulgation sélective, métadonnées en langue locale et règles d’exportation gouvernées par l’institution ;</li>
+                    <li><strong>Opérations de réponse fondées sur les traces :</strong> équipes et outils qui transforment un motif observé en confinement, notification, remédiation et test empêchant sa répétition.</li>
+                </ul>
+
+                <p>La souscription devrait commencer par un exercice de reconstruction. Donnez à un réviseur indépendant une session importante et demandez-lui la chaîne qui va de la demande à l’état final. Retirez ensuite le cloud principal, changez le fournisseur de surveillance, expurgez un champ sensible, introduisez une instruction traduite et rejouez la branche contestée. Le système doit conserver assez de preuves pour expliquer ce qui s’est passé sans tout conserver indistinctement. Les mesures utiles comprennent la réussite de la reconstruction entre fournisseurs, le délai de détection d’une anomalie de session, le délai de confinement d’un outil risqué, le pourcentage de traces portant un contexte complet d’acteur et de politique, la couverture de l’expurgation, le respect des politiques de conservation et le délai de correction.</p>
+
+                <p>Les produits les plus solides de cette couche seront jugés par ce qu’ils permettent à une institution de faire après l’apparition d’une anomalie. Une université peut-elle suspendre une seule charge de travail sans réduire au silence tous ses agents de recherche ? Une clinique peut-elle montrer quels dossiers ont été consultés sans exposer les autres patients ? Un éditeur peut-il prouver quelle source et quelle traduction ont produit une phrase contestée ? Un opérateur régional peut-il continuer l’enquête lorsqu’un cloud est indisponible ? L’observabilité devient une infrastructure lorsqu’elle modifie les options de l’institution.</p>
+
+                <h2>Construire la plus petite trace voyageuse</h2>
+
+                <p>Une institution peut commencer par un workflow dont l’échec aurait des conséquences : remboursement, réception d’une recherche, décision d’achat, dossier de service public ou correction éditoriale. Définissez la demande racine et le résultat important. Donnez à chaque transfert un identifiant de corrélation. Enregistrez l’agent, le déploiement, la politique, la langue, l’outil, la frontière de données, l’autorité et le résultat. Testez un appel répété, une instruction traduite, une interruption du fournisseur, une tentative d’escalade de privilèges et une correction humaine.</p>
+
+                <p>Conservez ensuite la trace selon un modèle de garde gouverné. Décidez quels champs restent locaux, lesquels peuvent franchir une frontière, qui peut les inspecter, quand ils expirent et comment une personne concernée peut contester l’interprétation. Le but est un registre qui voyage assez loin pour préserver la responsabilité et reste assez proche pour répondre à l’institution qui porte la conséquence.</p>
+
+                <p>Un agent qui traverse les clouds sans transporter sa trace transporte une capacité sans mémoire. L’avenir appartiendra aux institutions capables de laisser l’intelligence circuler tout en gardant dans leurs propres mains la preuve de ce déplacement.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://developers.googleblog.com/agent-anomaly-detection-safeguarding-agents-across-other-clouds/" target="_blank" rel="noopener">Google Developers Blog, « Agent Anomaly Detection: Safeguarding agents across other clouds » (20 novembre 2026). Décrit l’analyse, en aperçu privé, d’agents exécutés sur AWS Lambda et Microsoft Foundry grâce à une télémétrie compatible avec OpenTelemetry, avec des constats de session sur l’extraction, l’épuisement des ressources, l’abus de privilèges et le mauvais usage des outils.</a></li>
+                    <li><a href="https://opentelemetry.io/docs/concepts/observability-primer/" target="_blank" rel="noopener">OpenTelemetry, « Observability primer » (dernière mise à jour le 23 avril 2026). Définit la télémétrie, les traces, les segments, les journaux et la traçabilité distribuée comme des mécanismes pour comprendre le comportement de systèmes complexes et enquêter sur des problèmes nouveaux.</a></li>
+                    <li><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-4.pdf" target="_blank" rel="noopener">National Institute of Standards and Technology, « Challenges to the Monitoring of Deployed AI Systems » (mars 2026). Organise les difficultés de surveillance après déploiement autour de la visibilité, de la responsabilité, du périmètre, de la cadence, de la finalité, des méthodes, de la dérive, des contextes changeants et des ressources nécessaires.</a></li>
+                    <li><a href="https://www.w3.org/2026/10/29-webai-minutes.html" target="_blank" rel="noopener">World Wide Web Consortium, « Web &amp; AI IG — TPAC 2026 » (29 octobre 2026). Consigne les discussions sur les agents qui agissent sur le Web, l’intervention humaine, le consentement, la vie privée, l’accessibilité, les ancres de confiance et l’évaluation de la qualité, de la latence, du coût et du multilinguisme des réponses.</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>
