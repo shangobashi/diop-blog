@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Language Needs Its Own Jury — Diop Research</title>
+    <meta name="description" content="AI systems can speak more languages while remaining unsafe, inaccurate, or culturally misaligned in the places where people will rely on them. The investable layer is a community-governed evaluation plane that lets language communities define the tests, evidence, and red lines for systems used in their institutions."/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23b7a285'/><text x='16' y='22' text-anchor='middle' fill='%23141210' font-family='sans-serif' font-size='18' font-weight='bold'>D</text></svg>"/>
+    <link rel="stylesheet" href="../site.css"/>
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+        <a href="../index.html" class="nav__brand">
+            <img src="https://issalabs.xyz/assets/logo-nav.png" alt="ISSA LABS" class="nav__logo" loading="eager"/>
+        </a>
+        <div class="nav__links">
+            <a href="../index.html" class="nav__link" data-i18n="nav.journal">Journal</a>
+            <a href="https://issalabs.xyz" class="nav__link" target="_blank" rel="noopener"><span data-i18n="nav.labs">Labs</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;vertical-align:1px;flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a class="nav__link nav__link--coming" title="Coming soon"><span data-i18n="nav.brain">Brain</span></a>
+            <span id="lang-toggle-container"></span>
+            <button id="theme-toggle" class="nav__theme-btn" data-i18n-attr="aria-label|theme.toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme--sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/></svg></span>
+                <span class="theme-icon theme--moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+        </div>
+    </nav>
+
+    <article class="article">
+        <div class="article__inner">
+            <header class="article__header">
+                <div class="article__eyebrow" data-i18n="article.entry184">Diop Daily #184 — November 2026</div>
+                <div class="article__meta-line">
+                    <time>November 28, 2026</time>
+                    <span>·</span>
+                    <span data-rt="10">10 min read</span>
+                    <span>·</span>
+                    <span>language evaluation · African AI · community governance</span>
+                </div>
+            </header>
+
+            <div class="article__body" data-lang-body="en">
+                <h1 class="article__title">A Language Needs Its Own Jury</h1>
+
+                <p><em>Field note, November 28, 2026.</em> A language can be present in a model’s interface and absent from its judgment. The system may recognize familiar words, produce fluent sentences, and still misunderstand a health question, flatten a legal distinction, omit a route for appeal, or answer in a register that no local institution would approve. Fluency is a visible property. Fitness for public use is a social decision. That decision belongs beside the model, inside the institution that carries the consequence.</p>
+
+                <p>Recent research makes the gap measurable. The World Bank’s November 23 discussion of development benchmarks describes a health-line scenario in which a woman asks a medical question in Yoruba over a poor connection. Its argument is simple: a general benchmark cannot tell a buyer whether an AI service works under the language, device, institutional, and safety conditions of the people who will use it. A benchmark for that service needs native speakers, domain professionals, consented data, protected test items, and a way to count dangerous errors separately from ordinary variation.</p>
+
+                <p>The October African Languages AI Safety Readiness Report from researchers affiliated with Masakhane and Saarland University reaches the problem from the safety side. It combines resource availability, policy support, benchmark performance, speaker population, and interviews with native speakers to classify the readiness of African languages for safety evaluation. The report does not pretend that one score can settle every language. It provides a method for deciding where evidence is thin and where investment should begin.</p>
+
+                <blockquote>
+                    <p>A language community should be able to judge the machine that speaks in its name.</p>
+                </blockquote>
+
+                <h2>Presence is not readiness</h2>
+
+                <p>Counting language support creates a misleading comfort. A product page may list Hausa, Wolof, Yoruba, Zulu, or Kiswahili while the underlying system has little tested competence in the contexts that matter. UNESCO’s Coalition for Linguistic Diversity in AI notes that most systems cover only a small fraction of the world’s more than 7,000 spoken or signed languages. It also identifies the missing infrastructure: language data, practical guidance for sourcing and licensing it, shared repositories, and benchmarks that measure linguistic diversity.</p>
+
+                <p>The distinction is important for procurement. A buyer does not need a model that can generate a greeting in a language. The buyer needs a system that can preserve intent when a resident describes a problem, distinguish a warning from a request, recognize uncertainty, and route the case to the responsible office. A school needs explanations that fit its curriculum and the learner’s language. A clinic needs an answer that respects local care pathways. A publisher needs a translation that keeps names, concepts, and correction obligations intact.</p>
+
+                <p>These are tests of institutional function. They cannot be inferred from a language dropdown or an aggregate multilingual score. The relevant question is whether the system remains reliable when language is joined to purpose, authority, domain knowledge, accent, code-switching, device constraints, and human recourse.</p>
+
+                <h2>The jury is part of the system</h2>
+
+                <p>Evaluation is often treated as a technical service that happens after model training. For underrepresented languages, it is closer to a civic institution. The people who define acceptable performance decide which errors count, which meanings deserve protection, which cases require escalation, and which uses should remain outside automation. Their work shapes the model market before a buyer signs a contract.</p>
+
+                <p>The World Bank’s development-benchmark proposal gives this principle an operational form. Tests should use real tasks and deployment conditions; local professionals should grade answers; sensitive cases should remain protected; and severe errors should be reported separately. The purpose is both selection and market formation. A benchmark can show whether a smaller model is sufficient, expose where a system fails, and give buyers a defensible basis for choosing among providers.</p>
+
+                <p>The jury needs a defined mandate. It should not become a vague committee that certifies whatever a vendor submits. A credible language evaluation body should publish its scope, conflict rules, version history, scoring method, and correction procedure. It should distinguish claims it directly measures from inferences it offers to buyers. It should also compensate the speakers and domain experts whose knowledge makes the evaluation possible.</p>
+
+                <p>A language jury can test several layers of behavior:</p>
+
+                <ul>
+                    <li><strong>Meaning:</strong> whether the system preserves the user’s intent, named entities, negation, uncertainty, politeness, and domain distinctions;</li>
+                    <li><strong>Safety:</strong> whether harmful requests receive an appropriate response, whether high-risk advice escalates, and whether safeguards hold across dialects and code-switching;</li>
+                    <li><strong>Institutional fit:</strong> whether the output follows local procedures, identifies the responsible authority, respects consent, and gives a person a usable correction or appeal route;</li>
+                    <li><strong>Speech and access:</strong> whether the system works with accents, noisy channels, low-bandwidth devices, orthographic variation, and voice-first interaction;</li>
+                    <li><strong>Ownership:</strong> whether the community can inspect the data terms, retain evaluation evidence, withdraw unsafe cases, and prevent its language resources from becoming an unaccountable extraction layer.</li>
+                </ul>
+
+                <h2>Data quality is a political technology</h2>
+
+                <p>The African Languages Lab’s ACL 2026 paper supplies a useful empirical correction to the assumption that only larger models can close language gaps. Its dataset combines expert-validated text and speech across dozens of African languages, and its experiments report substantial gains from targeted language data, including results in which a 1B-parameter model matched or surpassed Google Translate in several languages. The paper’s central finding is that data scarcity, rather than model size, is the primary bottleneck for many low-resource African languages.</p>
+
+                <p>This does not make data collection a neutral engineering task. The selection of speakers, genres, dialects, consent terms, transcriptions, spelling conventions, and evaluation prompts determines which version of a language becomes legible to the machine. A corpus can be large and still exclude women’s speech, rural vocabulary, informal commerce, religious practice, disability, age, or the forms of code-switching people use in daily life. Quality control must therefore include linguistic expertise and community authority, not only deduplication and token counts.</p>
+
+                <p>UNDP’s September analysis of African AI readiness makes the same institutional point at a wider scale. Its review of 26 country assessments treats readiness as an ongoing diagnostic rather than a stage completed before deployment. It connects local language partnerships with compute, data, procurement, governance, trust and safety, and public value. A language evaluation plane belongs inside that capability stack. It helps a ministry, university, health service, or publisher decide whether adaptation has produced usable capacity rather than a symbolic localization claim.</p>
+
+                <h2>Where the investable surface is widening</h2>
+
+                <p>The commercial object is a <strong>community-governed language evaluation plane</strong>: infrastructure that turns local language knowledge into protected tests, expert judgments, reproducible evidence, and procurement decisions for AI systems. Its unit of value is a consequential interaction that can be evaluated by people who understand both the language and the institution in which the system will operate.</p>
+
+                <ul>
+                    <li><strong>Language test repositories:</strong> secure, versioned collections of text and speech tasks covering public services, education, health, commerce, and everyday communication;</li>
+                    <li><strong>Expert-judgment networks:</strong> paid panels of native speakers, teachers, clinicians, legal practitioners, translators, and cultural stewards with documented review protocols;</li>
+                    <li><strong>Evaluation infrastructure:</strong> private test execution, dialect and code-switching analysis, severe-error taxonomies, red-team cases, and model-comparison reports;</li>
+                    <li><strong>Data and rights registries:</strong> records of consent, licensing, provenance, withdrawal, community permissions, and permitted uses for language resources;</li>
+                    <li><strong>Procurement interfaces:</strong> decision tools that convert language-specific evidence into deployment limits, renewal conditions, human-review requirements, and correction commitments.</li>
+                </ul>
+
+                <p>Capital should inspect the operating discipline of this layer. Who owns the test set? Who can alter a scoring rule? How quickly can a community withdraw an unsafe or improperly licensed item? Are severe errors visible rather than averaged away? Can a buyer compare two models on the same protected cases without giving either vendor the answers? Does the evidence survive a provider change? Can local experts see how their judgments changed a deployment decision?</p>
+
+                <p>The strongest products will sell evidence rather than a badge. Their customers may include governments, development institutions, universities, health networks, publishers, telecom operators, and model providers that need to establish fitness in markets where generic benchmarks are weak. Revenue can come from recurring evaluation, deployment monitoring, test maintenance, expert review, and procurement support. The defensible asset is the governed relationship between language communities, institutional tasks, protected cases, and longitudinal evidence.</p>
+
+                <h2>Build the jury before deploying the speaker</h2>
+
+                <p>An institution can begin with one workflow whose language failure would cause real harm: a health line, a benefits application, a school tutor, a cooperative purchase, or a public-information service. Define the user groups and the intended authority. Collect examples with consent. Invite native speakers and domain professionals to write and grade cases. Test meaning, safety, speech, procedure, and recourse separately. Keep the high-risk items private and publish the method, limitations, and aggregate results.</p>
+
+                <p>Then repeat the test after every meaningful model, prompt, retrieval, speech, policy, or vendor change. A language does not become safe because a model once passed a benchmark. The evaluation must remain a living institution with a memory of previous failures and a way to recognize new ones.</p>
+
+                <p>For African societies, this work is an exercise in intellectual sovereignty. It places the authority to define competence closer to the people whose names, laws, histories, and futures are being represented. The goal is not to isolate languages from global systems. It is to make participation conditional on evidence that the community can inspect, challenge, and carry forward.</p>
+
+                <p>A model may borrow a language. A responsible institution must earn the right to speak through it.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://blogs.worldbank.org/en/opendata/why-ai-needs-better-benchmarks-for-development" target="_blank" rel="noopener">World Bank Data Blog, “Why AI needs better benchmarks for development” (November 23, 2026). Argues for development-focused benchmarks using real tasks, local conditions, protected tests, local expert grading, and separate reporting of dangerous errors.</a></li>
+                    <li><a href="https://arxiv.org/html/2610.27269v1" target="_blank" rel="noopener">Azime et al., “African Languages AI Safety Readiness Report” (arXiv:2610.27269, October 19, 2026). Combines language resources, policy support, benchmark performance, speaker population, and native-speaker interviews to assess readiness for African-language safety benchmarks.</a></li>
+                    <li><a href="https://www.unesco.org/ethics-ai/en/coalition-linguistic-diversity-artificial-intelligence" target="_blank" rel="noopener">UNESCO, “Coalition for Linguistic Diversity in Artificial Intelligence.” Describes the underrepresentation of the world’s languages and calls for practical guidance, shared multilingual datasets, and benchmarks for linguistic diversity.</a></li>
+                    <li><a href="https://aclanthology.org/2026.acl-long.1965/" target="_blank" rel="noopener">Issaka et al., “The African Languages Lab: A Collaborative Approach to Advancing Low-Resource African NLP,” ACL 2026. Reports expert-validated multilingual data and evidence that targeted data can produce large gains without relying only on larger models.</a></li>
+                    <li><a href="https://www.undp.org/africa/blog/africas-ai-crossroads-readiness-public-value" target="_blank" rel="noopener">United Nations Development Programme, “Africa’s AI Crossroads: From Readiness to Public Value” (September 24, 2026). Connects local language partnerships, data, compute, governance, procurement, trust and safety, and institutional capacity in African AI readiness.</a></li>
+                </ul>
+
+            </div>
+
+            <div class="article__body" data-lang-body="fr" style="display:none;" aria-hidden="true">
+                <h1 class="article__title">Une langue a besoin de son propre jury</h1>
+
+                <p><em>Note de terrain, 28 novembre 2026.</em> Une langue peut être présente dans l’interface d’un modèle et absente de son jugement. Le système peut reconnaître des mots familiers, produire des phrases fluides et pourtant mal comprendre une question de santé, aplatir une distinction juridique, omettre une voie de recours ou répondre dans un registre qu’aucune institution locale n’approuverait. La fluidité est une propriété visible. L’aptitude à l’usage public est une décision sociale. Cette décision doit rester auprès du modèle, dans l’institution qui porte la conséquence.</p>
+
+                <p>Des travaux récents rendent cet écart mesurable. La discussion publiée par la Banque mondiale le 23 novembre sur les benchmarks du développement décrit le cas d’une ligne de santé où une femme pose en yoruba une question médicale sur une mauvaise connexion. Son argument est simple : un benchmark général ne peut pas dire à un acheteur si un service d’IA fonctionne dans les conditions linguistiques, matérielles, institutionnelles et de sécurité de ses utilisateurs. Un benchmark adapté à ce service exige des locuteurs natifs, des professionnels du domaine, des données recueillies avec consentement, des items de test protégés et une manière de compter séparément les erreurs dangereuses des variations ordinaires.</p>
+
+                <p>Le rapport African Languages AI Safety Readiness Report, publié en octobre par des chercheurs affiliés à Masakhane et à l’Université de la Sarre, aborde le problème du côté de la sécurité. Il combine la disponibilité des ressources, le soutien des politiques publiques, les performances aux benchmarks, la population de locuteurs et des entretiens avec des locuteurs natifs afin de classer la préparation des langues africaines à l’évaluation de la sécurité. Le rapport ne prétend pas qu’un score unique puisse régler chaque langue. Il propose une méthode pour repérer les preuves insuffisantes et orienter le premier investissement.</p>
+
+                <blockquote>
+                    <p>Une communauté linguistique doit pouvoir juger la machine qui parle en son nom.</p>
+                </blockquote>
+
+                <h2>La présence ne signifie pas la préparation</h2>
+
+                <p>Compter les langues prises en charge produit une assurance trompeuse. Une page produit peut afficher le haoussa, le wolof, le yoruba, le zoulou ou le kiswahili alors que le système possède peu de compétences vérifiées dans les contextes qui comptent. La Coalition de l’UNESCO pour la diversité linguistique dans l’IA rappelle que la plupart des systèmes ne couvrent qu’une petite fraction des plus de 7 000 langues parlées ou signées dans le monde. Elle identifie aussi les infrastructures manquantes : données linguistiques, conseils pratiques pour leur collecte et leur licence, dépôts partagés et benchmarks mesurant la diversité linguistique.</p>
+
+                <p>La distinction compte pour les achats. Un acheteur n’a pas besoin d’un modèle capable de produire une salutation dans une langue. Il a besoin d’un système qui préserve l’intention lorsqu’un usager décrit un problème, distingue un avertissement d’une demande, reconnaît l’incertitude et oriente le dossier vers le service responsable. Une école a besoin d’explications adaptées à son programme et à la langue de l’élève. Une clinique a besoin d’une réponse compatible avec les parcours de soins locaux. Un éditeur a besoin d’une traduction qui conserve les noms, les concepts et les obligations de correction.</p>
+
+                <p>Ces tests portent sur la fonction institutionnelle. Ils ne se déduisent ni d’un menu de langues ni d’un score multilingue agrégé. La question pertinente est de savoir si le système reste fiable lorsque la langue est liée à une finalité, une autorité, un domaine, un accent, un code-switching, des contraintes d’appareil et un recours humain.</p>
+
+                <h2>Le jury fait partie du système</h2>
+
+                <p>L’évaluation est souvent traitée comme un service technique qui intervient après l’entraînement du modèle. Pour les langues sous-représentées, elle ressemble davantage à une institution civique. Les personnes qui définissent la performance acceptable décident quelles erreurs comptent, quels sens doivent être protégés, quels cas exigent une escalade et quels usages doivent rester hors de l’automatisation. Leur travail façonne le marché des modèles avant la signature d’un contrat.</p>
+
+                <p>La proposition de benchmark de développement de la Banque mondiale donne une forme opérationnelle à ce principe. Les tests doivent utiliser des tâches réelles et des conditions de déploiement ; des professionnels locaux doivent noter les réponses ; les cas sensibles doivent rester protégés ; les erreurs graves doivent être rapportées séparément. Le but est à la fois la sélection et la formation du marché. Un benchmark peut montrer si un modèle plus petit suffit, révéler où un système échoue et donner aux acheteurs une base défendable pour choisir entre fournisseurs.</p>
+
+                <p>Le jury a besoin d’un mandat défini. Il ne doit pas devenir un comité vague qui certifie tout ce qu’un fournisseur présente. Un organisme crédible d’évaluation linguistique doit publier son périmètre, ses règles de conflit, son historique de versions, sa méthode de notation et sa procédure de correction. Il doit distinguer les affirmations qu’il mesure directement des inférences qu’il propose aux acheteurs. Il doit aussi rémunérer les locuteurs et les spécialistes dont le savoir rend l’évaluation possible.</p>
+
+                <p>Un jury linguistique peut examiner plusieurs couches de comportement :</p>
+
+                <ul>
+                    <li><strong>Sens :</strong> conservation de l’intention, des entités nommées, de la négation, de l’incertitude, de la politesse et des distinctions du domaine ;</li>
+                    <li><strong>Sécurité :</strong> réponse appropriée aux demandes dangereuses, escalade des conseils à haut risque et maintien des protections entre dialectes et dans le code-switching ;</li>
+                    <li><strong>Adéquation institutionnelle :</strong> respect des procédures locales, identification de l’autorité compétente, respect du consentement et fourniture d’une voie de correction ou de recours utilisable ;</li>
+                    <li><strong>Voix et accès :</strong> fonctionnement avec les accents, les canaux bruyants, les appareils à faible débit, les variations orthographiques et les interactions vocales ;</li>
+                    <li><strong>Propriété :</strong> capacité de la communauté à examiner les conditions de données, conserver les preuves d’évaluation, retirer les cas dangereux et empêcher que ses ressources linguistiques deviennent une couche d’extraction sans responsabilité.</li>
+                </ul>
+
+                <h2>La qualité des données est une technologie politique</h2>
+
+                <p>L’article de l’African Languages Lab publié à ACL 2026 apporte une correction empirique utile à l’idée selon laquelle seuls les modèles plus grands peuvent combler les écarts linguistiques. Son jeu de données réunit des textes et des paroles validés par des experts dans des dizaines de langues africaines, et ses expériences rapportent des gains importants grâce à des données ciblées, avec des résultats où un modèle de 1 milliard de paramètres égale ou dépasse Google Translate dans plusieurs langues. Sa conclusion centrale est que la rareté des données, plus que la taille du modèle, constitue le principal goulot d’étranglement de nombreuses langues africaines peu dotées.</p>
+
+                <p>Cela ne rend pas la collecte de données neutre. La sélection des locuteurs, des genres, des dialectes, des conditions de consentement, des transcriptions, des conventions orthographiques et des prompts d’évaluation détermine la version d’une langue que la machine pourra comprendre. Un corpus peut être vaste et exclure malgré tout la parole des femmes, le vocabulaire rural, le commerce informel, la pratique religieuse, le handicap, l’âge ou les formes de code-switching de la vie quotidienne. Le contrôle de qualité doit donc inclure l’expertise linguistique et l’autorité communautaire, et pas seulement la déduplication et le nombre de tokens.</p>
+
+                <p>L’analyse de l’UNDP sur la préparation africaine à l’IA, publiée en septembre, établit le même point à une échelle institutionnelle. Son examen de 26 évaluations nationales traite la préparation comme un diagnostic continu plutôt que comme une étape achevée avant le déploiement. Il relie les partenariats linguistiques locaux au calcul, aux données, aux achats, à la gouvernance, à la confiance, à la sécurité et à la valeur publique. Un plan d’évaluation linguistique appartient à cette pile de capacités. Il aide un ministère, une université, un service de santé ou un éditeur à déterminer si l’adaptation a produit une capacité utilisable plutôt qu’une simple promesse de localisation.</p>
+
+                <h2>Là où la surface d’investissement s’élargit</h2>
+
+                <p>L’objet commercial est un <strong>plan d’évaluation linguistique gouverné par les communautés</strong> : une infrastructure qui transforme le savoir local en tests protégés, jugements d’experts, preuves reproductibles et décisions d’achat pour les systèmes d’IA. Son unité de valeur est une interaction importante évaluée par des personnes qui comprennent à la fois la langue et l’institution où le système fonctionnera.</p>
+
+                <ul>
+                    <li><strong>Dépôts de tests linguistiques :</strong> collections sécurisées et versionnées de tâches textuelles et vocales couvrant les services publics, l’éducation, la santé, le commerce et la communication quotidienne ;</li>
+                    <li><strong>Réseaux de jugement expert :</strong> panels rémunérés de locuteurs natifs, enseignants, cliniciens, juristes, traducteurs et gardiens culturels avec des protocoles de revue documentés ;</li>
+                    <li><strong>Infrastructure d’évaluation :</strong> exécution privée des tests, analyse des dialectes et du code-switching, taxonomies d’erreurs graves, cas de red team et rapports comparatifs ;</li>
+                    <li><strong>Registres des données et des droits :</strong> traces du consentement, des licences, de la provenance, du retrait, des permissions communautaires et des usages autorisés ;</li>
+                    <li><strong>Interfaces d’achat :</strong> outils qui transforment les preuves linguistiques en limites de déploiement, conditions de renouvellement, exigences de revue humaine et engagements de correction.</li>
+                </ul>
+
+                <p>Le capital doit examiner la discipline opérationnelle de cette couche. Qui possède le jeu de tests ? Qui peut modifier une règle de notation ? Avec quelle rapidité une communauté peut-elle retirer un item dangereux ou mal licencié ? Les erreurs graves restent-elles visibles au lieu d’être noyées dans une moyenne ? Un acheteur peut-il comparer deux modèles sur les mêmes cas protégés sans donner les réponses aux fournisseurs ? Les preuves survivent-elles à un changement de fournisseur ? Les experts locaux voient-ils comment leurs jugements ont modifié une décision de déploiement ?</p>
+
+                <p>Les produits les plus solides vendront des preuves plutôt qu’un badge. Leurs clients pourront être des gouvernements, des institutions de développement, des universités, des réseaux de santé, des éditeurs, des opérateurs télécoms et des fournisseurs de modèles qui doivent établir l’aptitude de leurs systèmes dans des marchés où les benchmarks génériques sont faibles. Les revenus peuvent venir de l’évaluation récurrente, de la surveillance des déploiements, de la maintenance des tests, de la revue experte et du soutien aux achats. L’actif défendable est la relation gouvernée entre communautés linguistiques, tâches institutionnelles, cas protégés et preuves longitudinales.</p>
+
+                <h2>Construire le jury avant de déployer la voix</h2>
+
+                <p>Une institution peut commencer par un workflow dont l’échec linguistique causerait un dommage réel : ligne de santé, demande d’allocation, tuteur scolaire, achat coopératif ou service d’information publique. Définissez les groupes d’utilisateurs et l’autorité visée. Recueillez des exemples avec consentement. Invitez des locuteurs natifs et des spécialistes du domaine à écrire et à noter les cas. Testez séparément le sens, la sécurité, la voix, la procédure et le recours. Gardez privés les items à haut risque et publiez la méthode, les limites et les résultats agrégés.</p>
+
+                <p>Répétez ensuite le test après chaque changement important de modèle, de prompt, de récupération, de voix, de politique ou de fournisseur. Une langue ne devient pas sûre parce qu’un modèle a réussi un benchmark une fois. L’évaluation doit rester une institution vivante, dotée d’une mémoire des échecs précédents et d’un moyen de reconnaître les nouveaux.</p>
+
+                <p>Pour les sociétés africaines, ce travail est un exercice de souveraineté intellectuelle. Il rapproche l’autorité de définir la compétence des personnes dont les noms, les lois, les histoires et les futurs sont représentés. Il ne s’agit pas d’isoler les langues des systèmes mondiaux. Il s’agit de conditionner la participation à des preuves que la communauté peut inspecter, contester et transmettre.</p>
+
+                <p>Un modèle peut emprunter une langue. Une institution responsable doit mériter le droit de parler à travers elle.</p>
+
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://blogs.worldbank.org/en/opendata/why-ai-needs-better-benchmarks-for-development" target="_blank" rel="noopener">Banque mondiale, Data Blog, « Why AI needs better benchmarks for development » (23 novembre 2026). Défend des benchmarks de développement fondés sur des tâches réelles, des conditions locales, des tests protégés, la notation par des experts locaux et le signalement séparé des erreurs dangereuses.</a></li>
+                    <li><a href="https://arxiv.org/html/2610.27269v1" target="_blank" rel="noopener">Azime et al., « African Languages AI Safety Readiness Report » (arXiv:2610.27269, 19 octobre 2026). Combine ressources linguistiques, soutien des politiques, performances aux benchmarks, population de locuteurs et entretiens avec des locuteurs natifs pour évaluer la préparation aux benchmarks de sécurité en langues africaines.</a></li>
+                    <li><a href="https://www.unesco.org/ethics-ai/en/coalition-linguistic-diversity-artificial-intelligence" target="_blank" rel="noopener">UNESCO, « Coalition for Linguistic Diversity in Artificial Intelligence ». Décrit la sous-représentation des langues du monde et appelle à des conseils pratiques, des jeux de données multilingues partagés et des benchmarks pour la diversité linguistique.</a></li>
+                    <li><a href="https://aclanthology.org/2026.acl-long.1965/" target="_blank" rel="noopener">Issaka et al., « The African Languages Lab: A Collaborative Approach to Advancing Low-Resource African NLP », ACL 2026. Présente des données multilingues validées par des experts et montre que des données ciblées peuvent produire de grands gains sans dépendre uniquement de modèles plus grands.</a></li>
+                    <li><a href="https://www.undp.org/africa/blog/africas-ai-crossroads-readiness-public-value" target="_blank" rel="noopener">Programme des Nations unies pour le développement, « Africa’s AI Crossroads: From Readiness to Public Value » (24 septembre 2026). Relie les partenariats linguistiques locaux, les données, le calcul, la gouvernance, les achats, la confiance, la sécurité et les capacités institutionnelles dans la préparation africaine à l’IA.</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="https://issalabs.xyz" class="footer__logo" target="_blank" rel="noopener">
+                    <img src="https://issalabs.xyz/assets/logo-footer.png" alt="ISSA LABS" class="footer__logo-img" loading="lazy"/>
+                </a>
+                <span class="footer__tagline">Built by Diop.</span>
+            </div>
+            <div class="footer__meta">
+                <span data-i18n="footer.journal">Research journal</span>
+                <span class="footer__sep">·</span>
+                <span data-i18n="footer.independent">Independent research</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+</html>

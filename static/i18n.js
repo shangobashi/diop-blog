@@ -212,6 +212,7 @@
         'article.entry180':     { en: 'Diop Daily #180 — November 2026', fr: 'Diop Quotidien n°180 — Novembre 2026' },
         'article.entry181':     { en: 'Diop Daily #181 — November 2026', fr: 'Diop Quotidien n°181 — Novembre 2026' },
         'article.entry183':     { en: 'Diop Daily #183 — November 2026', fr: 'Diop Quotidien n°183 — Novembre 2026' },
+        'article.entry184':     { en: 'Diop Daily #184 — November 2026', fr: 'Diop Quotidien n°184 — Novembre 2026' },
         'article.entry182':     { en: 'Diop Daily #182 — November 2026', fr: 'Diop Quotidien n°182 — Novembre 2026' },
         'section.entriesTitle': { en: 'Entries',        fr: 'Entrées' },
         'section.entriesSub':   { en: 'Chronological research log. Updated daily.', fr: 'Journal de recherche chronologique. Mis à jour quotidiennement.' },
@@ -225,6 +226,16 @@
     };
 
     var postTranslations = {
+    'diop-daily-184': {
+        title: {
+            en: 'A Language Needs Its Own Jury',
+            fr: 'Une langue a besoin de son propre jury'
+        },
+        excerpt: {
+            en: 'A multilingual model can produce fluent sentences while failing the community that must live with its answer. The investable layer is a community-governed evaluation plane where speakers, institutions, and developers define the tests, evidence, and red lines for AI in local languages.',
+            fr: 'Un modèle multilingue peut produire des phrases fluides tout en échouant devant la communauté qui devra vivre avec sa réponse. La couche d’investissement est un plan d’évaluation gouverné par les communautés, où locuteurs, institutions et développeurs définissent les tests, les preuves et les lignes rouges de l’IA dans les langues locales.'
+        }
+    },
     'diop-daily-183': {
         title: {
             en: 'The Trace Must Travel',
